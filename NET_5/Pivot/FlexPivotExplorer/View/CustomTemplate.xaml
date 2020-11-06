@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="FlexPivotExplorer.CustomTemplate"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+            mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <c1:PivotResources x:Key="Resources" />
+        <Style x:Key="PivotPageStyle" TargetType="c1:FlexPivotPage">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="c1:FlexPivotPage">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid x:Name="Root">
+                                <!-- styles used for menu items and images -->
+                                <Grid.Resources>
+                                    <Style x:Key="menuItem" TargetType="c1:C1Tool">
+                                        <Setter Property="Padding" Value="3" />
+                                    </Style>
+                                </Grid.Resources>
+                                <!-- menu across the top, content below: panel, splitter, tab -->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <!-- menu across the top -->
+                                <c1:C1ToolStrip x:Name="MainMenu" Grid.ColumnSpan="3" >
+                                    <!-- open/save -->
+                                    <c1:C1ButtonTool x:Name="MenuOpen"  ToolTipService.ToolTip="{Binding Path=LoadViewFromFile, Source={StaticResource Resources}}">
+                                        <c1:C1ButtonTool.IconTemplate>
+                                            <c1:C1IconTemplate>
+                                                <c1:C1BitmapIcon Source="../Resources/open.png" ShowAsMonochrome="False" />
+                                            </c1:C1IconTemplate>
+                                        </c1:C1ButtonTool.IconTemplate>
+                                    </c1:C1ButtonTool>
+                                    <c1:C1ButtonTool x:Name="MenuSave" ToolTipService.ToolTip="{Binding Path=SaveViewToFile, Source={StaticResource Resources}}">
+                                        <c1:C1ButtonTool.IconTemplate>
+                                            <c1:C1IconTemplate>
+                                                <c1:C1BitmapIcon Source="../Resources/save.png" ShowAsMonochrome="False"  />
+                                            </c1:C1IconTemplate>
+                                        </c1:C1ButtonTool.IconTemplate>
+                                    </c1:C1ButtonTool>
+                                    <c1:C1ButtonTool x:Name="MenuExport" ToolTipService.ToolTip="{Binding Path=Export, Source={StaticResource Resources}}">
+                                        <c1:C1ButtonTool.IconTemplate>
+                                            <c1:C1IconTemplate>
+                                                <c1:C1BitmapIcon Source="../Resources/export.png" ShowAsMonochrome="False" />
+                                            </c1:C1IconTemplate>
+                                        </c1:C1ButtonTool.IconTemplate>
+                                    </c1:C1ButtonTool>
+                                    <!-- spacer -->
+                                    <c1:C1ToolSeparator />
+                                    <!-- undo/redo -->
+                                    <c1:C1ButtonTool x:Name="MenuUndo" ToolTipService.ToolTip="{Binding Path=Undo, Source={StaticResource Resources}}">
+                                        <c1:C1ButtonTool.IconTemplate>
+                                            <c1:C1IconTemplate>
+                                                <c1:C1BitmapIcon Source="../Resources/undo.png" ShowAsMonochrome="False" />
+                                            </c1:C1IconTemplate>
+                                        </c1:C1ButtonTool.IconTemplate>
+                                    </c1:C1ButtonTool>
+                                    <c1:C1ButtonTool x:Name="MenuRedo" ToolTipService.ToolTip="{Binding Path=Redo, Source={StaticResource Resources}}">
+                                        <c1:C1ButtonTool.IconTemplate>
+                                            <c1:C1IconTemplate>
+                                                <c1:C1BitmapIcon Source="../Resources/redo.png" ShowAsMonochrome="False" />
+                                            </c1:C1IconTemplate>
+                                        </c1:C1ButtonTool.IconTemplate>
+                                    </c1:C1ButtonTool>
+                                    <!-- spacer -->
+                                    <c1:C1ToolSeparator />
+                                    <!-- customize grid -->
+                                    <c1:C1MenuTool x:Name="_mnuView" Label="{Binding Path=Grid, Source={StaticResource Resources}}" VerticalAlignment="Center" ToolTipService.ToolTip="{Binding Path=CustomizeGridView, Source={StaticResource Resources}}">
+                                        <c1:C1MenuTool.IconTemplate>
+                                            <c1:C1IconTemplate>
+                                                <c1:C1BitmapIcon Source="../Resources/grid.png" ShowAsMonochrome="False"/>
+                                            </c1:C1IconTemplate>
+                                        </c1:C1MenuTool.IconTemplate>
+                                        <c1:C1MenuTool x:Name="_mnuTotalRows" Label="{Binding Path=TotalRows, Source={StaticResource Resources}}" Style="{StaticResource menuItem}">
+                                            <c1:C1MenuTool.IconTemplate>
+                                                <c1:C1IconTemplate>
+                                                    <c1:C1BitmapIcon Source="../Resources/totalRows.png" ShowAsMonochrome="False" />
+                                                </c1:C1IconTemplate>
+                                            </c1:C1MenuTool.IconTemplate>
+                                            <c1:C1ToggleButtonTool x:Name="MenuTRGrand" Label="{Binding Path=GrandTotals, Source={StaticResource Resources}}" IsChecked="True" />
+                                            <c1:C1ToggleButtonTool x:Name="MenuTRSub" Label="{Binding Path=Subtotals, Source={StaticResource Resources}}" />
+                                            <c1:C1ToggleButtonTool x:Name="MenuTRNone" Label="{Binding Path=None, Source={StaticResource Resources}}"  />
+                                        </c1:C1MenuTool>
+                                        <c1:C1MenuTool x:Name="_mnuTotalColumns" Label="{Binding Path=TotalColumns, Source={StaticResource Resources}}" Style="{StaticResource menuItem}">
+                                            <c1:C1MenuTool.IconTemplate>
+                                                <c1:C1IconTemplate>
+                                                    <c1:C1BitmapIcon Source="../Resources/totalColumns.png" ShowAsMonochrome="False" />
+                                                </c1:C1IconTemplate>
+                                            </c1:C1MenuTool.IconTemplate>
+                                            <c1:C1ToggleButtonTool x:Name="MenuTCGrand" Label="{Binding Path=GrandTotals, Source={StaticResource Resources}}" IsChecked="True" />
+                                            <c1:C1ToggleButtonTool x:Name="MenuTCSub" Label="{Binding Path=Subtotals, Source={StaticResource Resources}}" />
+                                            <c1:C1ToggleButtonTool x:Name="MenuTCNone" Label="{Binding Path=None, Source={StaticResource Resources}}" />
+                                        </c1:C1MenuTool>
+                                        <c1:C1ToolSeparator />
+                                        <c1:C1ToggleButtonTool x:Name="MenuZeros" Label="{Binding Path=ShowZeros, Source={StaticResource Resources}}" IsChecked="True" Style="{StaticResource menuItem}" />
+                                    </c1:C1MenuTool>
+                                    <!-- customize chart -->
+                                    <c1:C1MenuTool x:Name="_mnuChart" Label="{Binding Path=Chart, Source={StaticResource Resources}}" VerticalAlignment="Center" ToolTipService.ToolTip="Customize Chart view">
+                                        <c1:C1MenuTool.IconTemplate>
+                                            <c1:C1IconTemplate>
+                                                <c1:C1BitmapIcon Source="../Resources/chart.png" ShowAsMonochrome="False" />
+                                            </c1:C1IconTemplate>
+                                        </c1:C1MenuTool.IconTemplate>
+                                        <c1:C1MenuTool x:Name="MenuChartType" Label="{Binding Path=ChartType, Source={StaticResource Resources}}" Style="{StaticResource menuItem}" />
+                                        <c1:C1MenuTool x:Name="MenuPalette" Label="{Binding Path=Palette, Source={StaticResource Resources}}" Style="{StaticResource menuItem}" />
+                                        <c1:C1ToolSeparator />
+                                        <c1:C1ToggleButtonTool x:Name="MenuTitle" Label="{Binding Path=ShowTitle, Source={StaticResource Resources}}"  IsChecked="True" Style="{StaticResource menuItem}" />
+                                        <c1:C1ToggleButtonTool x:Name="MenuGridlines" Label="{Binding Path=ShowGridLines, Source={StaticResource Resources}}"  IsChecked="True" Style="{StaticResource menuItem}" />
+                                        <c1:C1ToggleButtonTool x:Name="MenuStacked" Label="{Binding Path=Stacked, Source={StaticResource Resources}}"  IsChecked="True" Style="{StaticResource menuItem}" />
+                                        <c1:C1ToggleButtonTool x:Name="MenuTotalsOnly" Label="{Binding Path=TotalsOnly, Source={StaticResource Resources}}" IsChecked="False" Style="{StaticResource menuItem}" />
+                                    </c1:C1MenuTool>
+                                    <!-- print -->
+                                    <c1:C1MenuTool x:Name="_mnuPrint" Label="{Binding Path=Report, Source={StaticResource Resources}}" VerticalAlignment="Center" ToolTipService.ToolTip="{Binding Path=GenerateReports, Source={StaticResource Resources}}">
+                                        <c1:C1MenuTool.IconTemplate>
+                                            <c1:C1IconTemplate>
+                                                <c1:C1BitmapIcon Source="../Resources/report.png" ShowAsMonochrome="False" />
+                                            </c1:C1IconTemplate>
+                                        </c1:C1MenuTool.IconTemplate>
+                                        <c1:C1ButtonTool x:Name="MenuPrint" Label="{Binding Path=Print, Source={StaticResource Resources}}" VerticalAlignment="Center">
+                                            <c1:C1ButtonTool.IconTemplate>
+                                                <c1:C1IconTemplate>
+                                                    <c1:C1BitmapIcon Source="../Resources/print.png" ShowAsMonochrome="False" />
+                                                </c1:C1IconTemplate>
+                                            </c1:C1ButtonTool.IconTemplate>
+                                        </c1:C1ButtonTool>
+                                        <c1:C1ToolSeparator />
+                                        <c1:C1ButtonTool x:Name="MenuPrintOptions" Label="{Binding Path=Options, Source={StaticResource Resources}}" VerticalAlignment="Center">
+                                            <c1:C1ButtonTool.IconTemplate>
+                                                <c1:C1IconTemplate>
+                                                    <c1:C1BitmapIcon Source="../Resources/options.png" ShowAsMonochrome="False" />
+                                                </c1:C1IconTemplate>
+                                            </c1:C1ButtonTool.IconTemplate>
+                                        </c1:C1ButtonTool>
+                                    </c1:C1MenuTool>
+                                </c1:C1ToolStrip>
+                                <!-- tab control on the left -->
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <c1:C1TabControl x:Name="Tab" Background="WhiteSmoke" Margin="4">
+                                        <c1:C1TabItem x:Name="TabGrid" Header="{Binding Path=FlexPivotGrid, Source={StaticResource Resources}}">
+                                            <c1:FlexPivotGrid x:Name="FlexPivotGrid" Background="WhiteSmoke" RowBackground="White" AlternatingRowBackground="#fffcfcff" />
+                                        </c1:C1TabItem>
+                                        <c1:C1TabItem x:Name="TabRawData" Header="{Binding Path=RawData, Source={StaticResource Resources}}">
+                                            <c1:FlexGrid x:Name="RawDataGrid" Background="WhiteSmoke" RowBackground="White" AlternatingRowBackground="#fffcfcff" />
+                                        </c1:C1TabItem>
+                                    </c1:C1TabControl>
+                                    <c1:FlexPivotChart x:Name="FlexPivotChart" Grid.Row="1" />
+                                </Grid>
+                                <!-- splitter in the middle -->
+                                <GridSplitter Grid.Column="1" Grid.Row="1" Width="5" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+                                <!-- olap panel on the right -->
+                                <c1:FlexPivotPanel x:Name="FlexPivotPanel" Grid.Row="1" Grid.Column="2" Margin="4 12 4 4" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <c1:FlexPivotPage x:Name="pivotPage" Style="{StaticResource PivotPageStyle}" />
+    </Grid>
+</UserControl>

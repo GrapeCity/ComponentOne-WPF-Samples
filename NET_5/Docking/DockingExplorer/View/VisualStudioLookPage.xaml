@@ -1,0 +1,796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="DockingExplorer.VisualStudioLookPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:local="clr-namespace:DockingExplorer">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DockingExplorer;component/CommonResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <Thickness x:Key="GeneralThickness">1</Thickness>
+            <SolidColorBrush x:Key="DisabledBrush" Color="#B2FFFFFF" />
+            <Style x:Key="DisabledStyle" TargetType="Border">
+                <Setter Property="Background" Value="{StaticResource DisabledBrush}" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Opacity" Value="0" />
+                <Setter Property="IsHitTestVisible" Value="False" />
+                <Setter Property="CornerRadius" Value="2" />
+            </Style>
+            <Style x:Key="TreeViewMouseOverStyle" TargetType="Border">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFFFFFF" />
+                            <GradientStop Color="#FFD4E9F1" Offset="0.5" />
+                            <GradientStop Color="#FFCFE6EF" Offset="1" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="BorderBrush" Value="#FF9AD6F0" />
+                <Setter Property="BorderThickness" Value="{StaticResource GeneralThickness}" />
+                <Setter Property="CornerRadius" Value="2" />
+                <Setter Property="IsHitTestVisible" Value="False" />
+                <Setter Property="Opacity" Value="0.7" />
+                <Setter Property="Grid.Column" Value="1" />
+                <Setter Property="Visibility" Value="Collapsed" />
+            </Style>
+            <Style x:Key="TreeViewSelectedStyle" TargetType="Border">
+                <Setter Property="Background" Value="#FFE2F0F5" />
+                <Setter Property="BorderBrush" Value="#FF9ACAF0" />
+                <Setter Property="BorderThickness" Value="{StaticResource GeneralThickness}" />
+                <Setter Property="CornerRadius" Value="2" />
+                <Setter Property="IsHitTestVisible" Value="False" />
+                <Setter Property="Opacity" Value="0.7" />
+                <Setter Property="Grid.Column" Value="1" />
+                <Setter Property="Visibility" Value="Collapsed" />
+            </Style>
+            <ControlTemplate x:Key="AlwaysExpandedTreeViewItemTemplate" TargetType="TreeViewItem">
+                <Grid>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="Disabled">
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.0" />
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectedStates">
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="FocusVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Unselected" />
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="ExpandedStates">
+                            <VisualState x:Name="Expanded">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ChildrenPanel" Storyboard.TargetProperty="Visibility" Duration="0">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Collapsed">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ChildrenPanel" Storyboard.TargetProperty="Visibility" Duration="0">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Collapsed</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="HeaderPanel" MinHeight="20" Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Rectangle x:Name="Background" Width="9" Height="9" Margin="0,0,2,0" VerticalAlignment="Center" Grid.Column="0" />
+                        <ToggleButton x:Name="ExpandButton" />
+                        <Border x:Name="MouseOverElement" Style="{StaticResource TreeViewMouseOverStyle}" />
+                        <Border x:Name="FocusVisualElement" Style="{StaticResource TreeViewSelectedStyle}" />
+                        <Grid Background="{TemplateBinding Background}" Margin="5 0 5 0 " Grid.Column="1">
+                            <ContentControl x:Name="PART_Header" Content="{TemplateBinding Header}" ContentTemplate="{TemplateBinding HeaderTemplate}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontStretch="{TemplateBinding FontStretch}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" Foreground="{TemplateBinding Foreground}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+
+                        </Grid>
+                        <Border x:Name="DisabledVisualElement" Style="{StaticResource DisabledStyle}" />
+                    </Grid>
+                    <Border Padding="15 0 0 0" Grid.Row="1">
+                        <ItemsPresenter x:Name="ChildrenPanel" Margin="-1,0,0,0" />
+                    </Border>
+                </Grid>
+            </ControlTemplate>
+            <Style x:Key="linkTextStyle" TargetType="TextBlock">
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter Property="FontWeight" Value="SemiBold" />
+                        <Setter Property="TextDecorations" Value="Underline" />
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Setter Property="Foreground" Value="Black" />
+                        <Setter Property="Margin" Value="0 1" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!-- Property Editors -->
+        <Border Visibility="Collapsed">
+            <WrapPanel ItemWidth="250">
+
+            </WrapPanel>
+        </Border>
+
+        <Border Grid.Row="1">
+            <Border Background="#FFE1E7ED" BorderBrush="#FFADADAD" BorderThickness="1">
+                <Border.Resources>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="Foreground" Value="Black" />
+                    </Style>
+                </Border.Resources>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="HiddenTabs" Visibility="Collapsed">
+                        <local:TabItem Header="App.xaml.cs" x:Name="App_xaml_cs" />
+                        <local:TabItem Header="C1RichTextBoxHtml.cs" x:Name="C1RichTextBoxHtml_cs" />
+                        <local:TabItem Header="MainPage.xaml" x:Name="MainPage_xaml" />
+                        <local:TabItem Header="MainPage.xaml.cs" x:Name="MainPage_xaml_cs" />
+                        <local:TabItem Header="Web.config" x:Name="Web_config" />
+                        <local:TabItem Header="Silverlight.js" x:Name="Silverlight_js" />
+                    </Grid>
+                    <c1:C1Menu Grid.Row="0" BorderThickness="0" Margin="2">
+                        <c1:C1MenuItem Header="File" >
+                            <c1:C1MenuItem Header="New">
+                                <c1:C1MenuItem Header="Docking..." Click="AddDocking_Click" />
+                                <c1:C1MenuItem Header="Sliding..." Click="AddSliding_Click" />
+                            </c1:C1MenuItem>
+                            <c1:C1MenuSeparator />
+                            <c1:C1MenuItem Header="Current">
+                                <c1:C1MenuItem Header="Toggle Window Mode" Click="ToggleWindowMode_Click" />
+                                <c1:C1MenuItem Header="Toggle tab strip placement" Click="ToggleTabStripPlacement_Click" />
+                            </c1:C1MenuItem>
+                        </c1:C1MenuItem>
+                        <c1:C1MenuItem Header="View" x:Name="ViewMenuItem"  />
+                        <c1:C1MenuItem Header="Window" x:Name="WindowMenuItem"  />
+                    </c1:C1Menu>
+
+                    <ToolBar Grid.Row="1" Margin="2">
+                        <Button ToolTipService.ToolTip="New Project">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/newproject.png" />
+                        </Button>
+                        <Button ToolTipService.ToolTip="Add New Item">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/addnewitem.png" />
+                        </Button>
+                        <Button ToolTipService.ToolTip="Open File">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/openfile.png" />
+                        </Button>
+                        <Button ToolTipService.ToolTip="Save">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/save.png" />
+                        </Button>
+                        <Button ToolTipService.ToolTip="Save All">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/saveall.png" />
+                        </Button>
+                        <c1:C1MenuSeparator />
+                        <Button ToolTipService.ToolTip="Preview Transformation">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/previewtransformation.png" />
+                        </Button>
+                        <c1:C1MenuSeparator />
+                        <Button ToolTipService.ToolTip="Cut">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/cut.png" />
+                        </Button>
+                        <Button ToolTipService.ToolTip="Copy">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/copy.png" />
+                        </Button>
+                        <Button ToolTipService.ToolTip="Paste">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/paste.png" />
+                        </Button>
+                        <c1:C1MenuSeparator />
+                        <Button ToolTipService.ToolTip="Undo">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/undo.png" />
+                        </Button>
+                        <Button ToolTipService.ToolTip="Redo" IsEnabled="False">
+                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/redo.png" />
+                        </Button>
+                    </ToolBar>
+
+                    <c1:C1DockControl Grid.Row="2" Margin="0" x:Name="dockControl" PickerLoading="dockControl_PickerLoading" ViewChanged="dockControl_ViewChanged">
+                        <c1:C1DockTabControl x:Name="sliding" DockMode="Sliding" Dock="Left">
+
+                            <local:TabItem Header="Server Explorer">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Border Background="#FFF3F3F3" BorderThickness="0 0 0 1" BorderBrush="#FFA0ACB7" />
+                                    <ToolBar>
+                                        <Button ToolTipService.ToolTip="Refresh">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/refresh.png" />
+                                        </Button>
+                                        <Button ToolTipService.ToolTip="Stop Refresh" IsEnabled="False">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/stop.png" />
+                                        </Button>
+                                        <c1:C1MenuSeparator />
+                                        <Button ToolTipService.ToolTip="Connect to Database">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/connecttodatabase.png" />
+                                        </Button>
+                                        <Button ToolTipService.ToolTip="Connect to Server">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/connecttoserver.png" />
+                                        </Button>
+                                    </ToolBar>
+                                    <TreeView BorderThickness="0" Grid.Row="1">
+                                        <TreeViewItem>
+                                            <TreeViewItem.Header>
+                                                <local:IconText Icon="/DockingExplorer;component/Resources/dataconnections.png" Text="Data Connections" />
+                                            </TreeViewItem.Header>
+                                        </TreeViewItem>
+                                        <TreeViewItem IsExpanded="True">
+                                            <TreeViewItem.Header>
+                                                <local:IconText Icon="/DockingExplorer;component/Resources/servers.png" Text="Servers" />
+                                            </TreeViewItem.Header>
+                                            <TreeViewItem>
+                                                <TreeViewItem.Header>
+                                                    <local:IconText Icon="/DockingExplorer;component/Resources/server.png" Text="nbk-lek" />
+                                                </TreeViewItem.Header>
+                                            </TreeViewItem>
+                                        </TreeViewItem>
+                                    </TreeView>
+                                </Grid>
+                            </local:TabItem>
+
+                            <!--<local:TabItem Header="Toolbox">
+                                <StackPanel>
+                                    <c1:C1Expander Header="Silverlight Controls" IsExpanded="True" Margin="3">
+                                        <ListBox BorderThickness="0">
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/pointer.png" Text="Pointer" />
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_chart.png" Text="Chart" />
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_accordion.png" Text="Accordion" />
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_datagrid.png" Text="DataGrid" />
+                                        </ListBox>
+                                    </c1:C1Expander>
+                                    <c1:C1Expander Header="WPF Controls" IsExpanded="True" Margin="2 0 2 2">
+                                        <ListBox BorderThickness="0">
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_chart.png" Text="Chart" />
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_datagrid.png" Text="DataGrid" />
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_book.png" Text="Book" />
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1winforms_chart3D_16.png" Text="3D Chart" />
+                                        </ListBox>
+                                    </c1:C1Expander>
+                                </StackPanel>
+                            </local:TabItem>-->
+                        </c1:C1DockTabControl>
+                        <c1:C1DockTabControl Dock="Left" DockWidth="220">
+                            <local:TabItem Header="Solution Explorer">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Border Background="#FFF3F3F3" BorderThickness="0 0 0 1" BorderBrush="#FFA0ACB7" />
+                                    <ToolBar>
+                                        <Button ToolTipService.ToolTip="Show All Files">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/showallfiles.png" />
+                                        </Button>
+                                        <Button ToolTipService.ToolTip="Refresh">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/refresh.png" />
+                                        </Button>
+                                    </ToolBar>
+                                    <TreeView BorderThickness="0" Grid.Row="1">
+                                        <TreeViewItem IsExpanded="True" Template="{StaticResource AlwaysExpandedTreeViewItemTemplate}">
+                                            <TreeViewItem.Header>
+                                                <local:IconText Icon="/DockingExplorer;component/Resources/solution.png" Text="Solution 'Docking'" />
+                                            </TreeViewItem.Header>
+                                            <TreeViewItem IsExpanded="True">
+                                                <TreeViewItem.Header>
+                                                    <local:IconText Icon="/DockingExplorer;component/Resources/solutionfolder.png" Text="SL" />
+                                                </TreeViewItem.Header>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/csharpproject.png" Text="C1.Silverlight" />
+                                                    </TreeViewItem.Header>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/properties.png" Text="Properties" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/references.png" Text="References" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/csharpproject.png" Text="C1.Silverlight.Docking" />
+                                                    </TreeViewItem.Header>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/properties.png" Text="Properties" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/references.png" Text="References" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/csharpproject.png" Text="C1.Silverlight.Extended" />
+                                                    </TreeViewItem.Header>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/properties.png" Text="Properties" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/references.png" Text="References" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/csharpproject.png" Text="C1.Silverlight.RichTextBox" />
+                                                    </TreeViewItem.Header>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/properties.png" Text="Properties" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/references.png" Text="References" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                </TreeViewItem>
+                                                <TreeViewItem IsExpanded="True">
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/csharpproject.png" Text="Docking" />
+                                                    </TreeViewItem.Header>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/properties.png" Text="Properties" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/references.png" Text="References" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/servicereferences.png" Text="Service References" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem MouseLeftButtonDown="File_Click">
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/xaml.png" Text="App.xaml" />
+                                                        </TreeViewItem.Header>
+                                                        <TreeViewItem MouseLeftButtonDown="File_Click">
+                                                            <TreeViewItem.Header>
+                                                                <local:IconText Icon="/DockingExplorer;component/Resources/dependent.png" Text="App.xaml.cs" />
+                                                            </TreeViewItem.Header>
+                                                        </TreeViewItem>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem MouseLeftButtonDown="File_Click">
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/csharpfile.png" Text="C1RichTextBoxHtml.cs" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem MouseLeftButtonDown="File_Click">
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/xaml.png" Text="MainPage.xaml" />
+                                                        </TreeViewItem.Header>
+                                                        <TreeViewItem MouseLeftButtonDown="File_Click">
+                                                            <TreeViewItem.Header>
+                                                                <local:IconText Icon="/DockingExplorer;component/Resources/dependent.png" Text="MainPage.xaml.cs" />
+                                                            </TreeViewItem.Header>
+                                                        </TreeViewItem>
+                                                    </TreeViewItem>
+                                                </TreeViewItem>
+                                                <TreeViewItem IsExpanded="True">
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/webproject.png" Text="Docking.Web" />
+                                                    </TreeViewItem.Header>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/properties.png" Text="Properties" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/references.png" Text="References" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/appdata.png" Text="App_Data" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem>
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/folder.png" Text="ClientBin" />
+                                                        </TreeViewItem.Header>
+                                                        <TreeViewItem>
+                                                            <TreeViewItem.Header>
+                                                                <local:IconText Icon="/DockingExplorer;component/Resources/xap.png" Text="Docking.xap" />
+                                                            </TreeViewItem.Header>
+                                                        </TreeViewItem>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem MouseLeftButtonDown="File_Click">
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/html.png" Text="Default.html" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem MouseLeftButtonDown="File_Click">
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/javascript.png" Text="Silverlight.js" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                    <TreeViewItem MouseLeftButtonDown="File_Click">
+                                                        <TreeViewItem.Header>
+                                                            <local:IconText Icon="/DockingExplorer;component/Resources/config.png" Text="Web.config" />
+                                                        </TreeViewItem.Header>
+                                                    </TreeViewItem>
+                                                </TreeViewItem>
+                                            </TreeViewItem>
+                                        </TreeViewItem>
+                                    </TreeView>
+                                </Grid>
+                            </local:TabItem>
+
+                            <local:TabItem Header="Class View">
+                                <TreeView BorderThickness="0">
+                                    <TreeViewItem Header="C1.Silverlight">
+                                        <TreeViewItem Header="Project References" />
+                                        <TreeViewItem Header="C1.Silverlight" />
+                                        <TreeViewItem Header="C1.Silverlight.Resources" />
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="C1.Silverlight.Docking">
+                                        <TreeViewItem Header="Project References" />
+                                        <TreeViewItem Header="C1.Silverlight.Docking" />
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="C1.Silverlight.Extended">
+                                        <TreeViewItem Header="Project References" />
+                                        <TreeViewItem Header="C1.Silverlight.Extended" />
+                                        <TreeViewItem Header="C1.Silverlight.Extended.Primitives" />
+                                        <TreeViewItem Header="C1.Silverlight.Extended.Resources" />
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="C1.Silverlight.RichTextBox">
+                                        <TreeViewItem Header="Project References" />
+                                        <TreeViewItem Header="C1.Silverlight.Extended.RichTextBox" />
+                                        <TreeViewItem Header="C1.Silverlight.Extended.RichTextBox.Documents" />
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Docking">
+                                        <TreeViewItem Header="Project References" />
+                                        <TreeViewItem Header="Docking" />
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Docking.Web">
+                                        <TreeViewItem Header="Project References" />
+                                    </TreeViewItem>
+                                </TreeView>
+                            </local:TabItem>
+                        </c1:C1DockTabControl>
+                        <c1:C1DockTabControl Dock="Right" DockMode="Sliding">
+
+                            <local:TabItem Header="Team Explorer">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Border Background="#FFF3F3F3" BorderThickness="0 0 0 1" BorderBrush="#FFA0ACB7" />
+                                    <ToolBar>
+                                        <Button ToolTipService.ToolTip="Refresh">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/refresh.png" />
+                                        </Button>
+                                        <Button ToolTipService.ToolTip="Stop">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/stop.png" />
+                                        </Button>
+                                        <c1:C1MenuSeparator />
+                                        <Button ToolTipService.ToolTip="Add Team Project">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/addteamproject.png" />
+                                        </Button>
+                                    </ToolBar>
+                                    <TreeView Grid.Row="1" BorderThickness="0">
+                                        <TreeViewItem IsExpanded="True" Template="{StaticResource AlwaysExpandedTreeViewItemTemplate}">
+                                            <TreeViewItem.Header>
+                                                <local:IconText Icon="/DockingExplorer;component/Resources/tfsserver.png" Text="tfs.server.com.80" />
+                                            </TreeViewItem.Header>
+                                            <TreeViewItem>
+                                                <TreeViewItem.Header>
+                                                    <local:IconText Icon="/DockingExplorer;component/Resources/myfavorites.png" Text="My Favorites" />
+                                                </TreeViewItem.Header>
+                                            </TreeViewItem>
+                                            <TreeViewItem IsExpanded="True">
+                                                <TreeViewItem.Header>
+                                                    <local:IconText Icon="/DockingExplorer;component/Resources/teamproject.png" Text="C1.Silverlight" />
+                                                </TreeViewItem.Header>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/folder.png" Text="Work Item Templates" />
+                                                    </TreeViewItem.Header>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/folder.png" Text="Work Item" />
+                                                    </TreeViewItem.Header>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/folder.png" Text="Documents" />
+                                                    </TreeViewItem.Header>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/folder.png" Text="Reports" />
+                                                    </TreeViewItem.Header>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/folder.png" Text="Builds" />
+                                                    </TreeViewItem.Header>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/teammembers.png" Text="Team Members" />
+                                                    </TreeViewItem.Header>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/alerts.png" Text="Alerts" />
+                                                    </TreeViewItem.Header>
+                                                </TreeViewItem>
+                                                <TreeViewItem>
+                                                    <TreeViewItem.Header>
+                                                        <local:IconText Icon="/DockingExplorer;component/Resources/sourcecontrol.png" Text="Source Control" />
+                                                    </TreeViewItem.Header>
+                                                </TreeViewItem>
+                                            </TreeViewItem>
+                                        </TreeViewItem>
+                                    </TreeView>
+                                </Grid>
+                            </local:TabItem>
+                        </c1:C1DockTabControl>
+                        <c1:C1DockTabControl Dock="Right" DockWidth="220">
+
+                            <local:TabItem Header="Properties">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Border Background="#FFF3F3F3" BorderThickness="0 0 0 1" BorderBrush="#FFA0ACB7" />
+                                    <ToolBar>
+                                        <Button ToolTipService.ToolTip="Categorized">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/categorized.png" />
+                                        </Button>
+                                        <Button ToolTipService.ToolTip="Alphabetical">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/sortascending.png" />
+                                        </Button>
+                                    </ToolBar>
+                                    <!--<c1:C1PropertyGrid Grid.Row="1" AutoGenerateProperties="False" SelectedObject="{Binding ElementName=docs, Path=SelectedItem.Content}" BorderThickness="0">
+                                        <c1:C1PropertyGrid.PropertyAttributes>
+                                            <c1:PropertyAttribute Browsable="True" MemberName="Background" />
+                                            <c1:PropertyAttribute Browsable="True" MemberName="FontFamily">
+                                                <c1:PropertyAttribute.Editor>
+                                                    <local:FontFamilyEditor />
+                                                </c1:PropertyAttribute.Editor>
+                                            </c1:PropertyAttribute>
+                                            <c1:PropertyAttribute Browsable="True" MemberName="FontSize" />
+                                            <c1:PropertyAttribute Browsable="True" MemberName="FontStyle">
+                                                <c1:PropertyAttribute.Editor>
+                                                    <local:FontStyleEditor />
+                                                </c1:PropertyAttribute.Editor>
+                                            </c1:PropertyAttribute>
+                                            <c1:PropertyAttribute Browsable="True" MemberName="FontWeight">
+                                                <c1:PropertyAttribute.Editor>
+                                                    <local:FontWeightEditor />
+                                                </c1:PropertyAttribute.Editor>
+                                            </c1:PropertyAttribute>
+                                        </c1:C1PropertyGrid.PropertyAttributes>
+                                    </c1:C1PropertyGrid>-->
+                                </Grid>
+                            </local:TabItem>
+                        </c1:C1DockTabControl>
+                        <c1:C1DockTabControl x:Name="docs" ItemsChanged="docs_ItemsChanged" TabStripPlacement="Top" TabStripMenuVisibility="Visible" ShowHeader="False" TabItemShape="Sloped" TabStripOverlap="5" TabItemClose="GlobalClose" TabItemClosed="docs_TabClosed" HorizontalFill="True" VerticalFill="True">
+                            <local:TabItem Header="Start Page">
+                                <Grid Background="#FFC4C8CD">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*" />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="0.2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Border CornerRadius="5" Grid.RowSpan="2" Background="#E1E7ED" BorderBrush="White" BorderThickness="2" />
+                                        <Border CornerRadius="3 3 0 0" Margin="2 2 2 0" Background="#1B608A">
+                                            <TextBlock Text="Recent Projects" Foreground="White" FontSize="11" Margin="10 2" />
+                                        </Border>
+                                        <StackPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 20 0 20">
+                                            <TextBlock Style="{StaticResource linkTextStyle}">Project 1</TextBlock> 
+                                            <TextBlock Style="{StaticResource linkTextStyle}">Project 2</TextBlock>
+                                            <TextBlock Style="{StaticResource linkTextStyle}">Project 3</TextBlock>
+                                            <StackPanel Orientation="Horizontal" Margin="2 15 1 1">
+                                                <TextBlock Text="Open:" Foreground="DarkBlue" FontSize="11" />
+                                                <TextBlock Style="{StaticResource linkTextStyle}">Project</TextBlock>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" Margin="2 1">
+                                                <TextBlock Text="Create:" Foreground="DarkBlue" FontSize="11" />
+                                                <TextBlock Style="{StaticResource linkTextStyle}">Project</TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                            </local:TabItem>
+
+                            <local:TabItem Header="App.xaml" x:Name="App_xaml" />
+
+                            <local:TabItem Header="Default.html" x:Name="Default_html" />
+                        </c1:C1DockTabControl>
+                        <c1:C1DockTabControl Dock="Bottom" DockMode="Sliding">
+
+                            <local:TabItem Header="Error List">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Border Background="#FFF3F3F3" BorderThickness="0 0 0 1" BorderBrush="#FFA0ACB7" />
+                                    <ToolBar>
+                                        <Button ToolTipService.ToolTip="0 Errors">
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/error.png" Text="0 Errors" />
+                                        </Button>
+                                        <c1:C1MenuSeparator />
+                                        <Button ToolTipService.ToolTip="0 Warning">
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/warning.png" Text="0 Warnings" />
+                                        </Button>
+                                        <c1:C1MenuSeparator />
+                                        <Button ToolTipService.ToolTip="0 Messages">
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/message.png" Text="0 Messages" />
+                                        </Button>
+                                    </ToolBar>
+                                    <Border Background="#7FE1E7ED" BorderThickness="0 0 0 1" BorderBrush="#7FA0ACB7" Grid.Row="1">
+                                        <TextBlock Text="Description" Margin="2" />
+                                    </Border>
+                                </Grid>
+                            </local:TabItem>
+
+                            <local:TabItem Header="Pending Changes">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Border Background="#FFF3F3F3" BorderThickness="0 0 0 1" BorderBrush="#FFA0ACB7" />
+                                    <ToolBar>
+                                        <Button ToolTipService.ToolTip="Check In">
+                                            <local:IconText Icon="/DockingExplorer;component/Resources/checkin.png" Text="Check In" />
+                                        </Button>
+                                    </ToolBar>
+                                </Grid>
+                            </local:TabItem>
+
+                            <local:TabItem Header="Output">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Border Background="#FFF3F3F3" BorderThickness="0 0 0 1" BorderBrush="#FFA0ACB7" />
+                                    <ToolBar Margin="0 2">
+                                        <TextBlock Text="Show output from: " VerticalAlignment="Center" />
+                                        <ComboBox Width="100" Margin="0 -2">
+                                            <sys:String>Build</sys:String>
+                                            <sys:String>Debug</sys:String>
+                                            <sys:String>General</sys:String>
+                                        </ComboBox>
+                                        <Separator />
+                                        <Button ToolTipService.ToolTip="Go to Previous Message">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/gotopreviousmessage.png" />
+                                        </Button>
+                                        <Button ToolTipService.ToolTip="Go to Next Message">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/gotonextmessage.png" />
+                                        </Button>
+                                        <Separator />
+                                        <Button ToolTipService.ToolTip="Clear All">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/clearall.png" />
+                                        </Button>
+                                        <Separator />
+                                        <Button ToolTipService.ToolTip="Toggle Word Wrap">
+                                            <Image Stretch="None" Source="/DockingExplorer;component/Resources/togglewordwrap.png" />
+                                        </Button>
+                                    </ToolBar>
+                                    <ScrollViewer Grid.Row="1" BorderThickness="0">
+                                        <TextBlock x:Name="txtOutput">
+	----- Build started: Project: VsDev9_2008.Web, Configuration: Debug Any CPU ------<LineBreak />
+	VsDev9_2008.Web -&gt; C:\Work\Silverlight\Development\Samples\SL\C1.Silverlight.Docking\VSDev9\VsDev9.Web\bin\VsDev9.Web.dll<LineBreak />
+	------ Build started: Project: VSDev9_2008, Configuration: Debug Any CPU ------<LineBreak />
+	C:\Windows\Microsoft.NET\Framework\v3.5\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:DEBUG;TRACE;SILVERLIGHT /reference:C:\Work\Silverlight\Development\Controls\C1.Silverlight\ClientBin\C1.Silverlight.dll /reference:C:\Work\Silverlight\Development\Controls\C1.Silverlight.Docking\Bin\Debug\C1.Silverlight.Docking.dll /reference:C:\Work\Silverlight\Development\Controls\C1.Silverlight.Extended\Bin\Debug\C1.Silverlight.Extended.dll /reference:C:\Work\Silverlight\Development\Controls\C1.Silverlight.RichTextBox\Bin\Debug\C1.Silverlight.RichTextBox.dll /reference:C:\Work\Silverlight\Development\Controls\C1.Silverlight.Toolbar\ClientBin\C1.Silverlight.Toolbar.dll /reference:"c:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Silverlight\v3.0\mscorlib.dll" /reference:"c:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Silverlight\v3.0\System.Core.dll" /reference:"c:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Silverlight\v3.0\system.dll" /reference:"c:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Silverlight\v3.0\System.Net.dll" /reference:"c:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Silverlight\v3.0\System.Windows.Browser.dll" /reference:"c:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Silverlight\v3.0\System.Windows.dll" /reference:"c:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Silverlight\v3.0\System.Xml.dll" /reference:C:\Work\Silverlight\Development\Controls\Bin\System.Xml.Linq.dll /debug+ /debug:full /optimize- /out:obj\Debug\VSDev9.dll /resource:obj\Debug\VSDev9.g.resources /target:library App.xaml.cs C1RichTextBoxHtml.cs IconText.xaml.cs MainPage.xaml.cs C:\Work\Silverlight\Development\Samples\SL\C1.Silverlight.Docking\VSDev9\VsDev9\obj\Debug\App.g.cs C:\Work\Silverlight\Development\Samples\SL\C1.Silverlight.Docking\VSDev9\VsDev9\obj\Debug\IconText.g.cs C:\Work\Silverlight\Development\Samples\SL\C1.Silverlight.Docking\VSDev9\VsDev9\obj\Debug\MainPage.g.cs<LineBreak />
+	C:\Work\Silverlight\Development\Samples\SL\C1.Silverlight.Docking\VSDev9\VsDev9\C1RichTextBoxHtml.cs(13,23): warning CS0169: The field 'VSDev9.C1RichTextBoxHtml._rtb' is never used<LineBreak />
+	<LineBreak />
+	Compile complete -- 0 errors, 1 warnings<LineBreak />
+	Begin application manifest generation<LineBreak />
+	No changes detected. Application manifest file is up to date<LineBreak />
+	Validating file names being packaged in the XAP<LineBreak />
+	VSDev9_2008 -&gt; C:\Work\Silverlight\Development\Samples\SL\C1.Silverlight.Docking\VSDev9\VsDev9\Bin\Debug\VSDev9.dll<LineBreak />
+	Begin Xap packaging<LineBreak />
+	Creating file VSDev9.xap<LineBreak />
+	Adding VSDev9.dll<LineBreak />
+	Adding C1.Silverlight.dll<LineBreak />
+	Adding C1.Silverlight.Docking.dll<LineBreak />
+	Adding C1.Silverlight.Extended.dll<LineBreak />
+	Adding C1.Silverlight.RichTextBox.dll<LineBreak />
+	Adding C1.Silverlight.Toolbar.dll<LineBreak />
+	Adding System.Xml.Linq.dll<LineBreak />
+	Adding System.ComponentModel.DataAnnotations.dll<LineBreak />
+	Adding AppManifest.xaml<LineBreak />
+	Xap packaging completed successfully<LineBreak />
+	Creating test page<LineBreak />
+	Test page created successfully<LineBreak />
+	========== Build: 2 succeeded, 0 failed, 5 up-to-date, 0 skipped ==========<LineBreak />
+                                        </TextBlock>
+                                    </ScrollViewer>
+                                </Grid>
+                            </local:TabItem>
+
+                            <local:TabItem Header="Find Symbol Results">
+                            </local:TabItem>
+
+                            <local:TabItem Header="Command Window">
+                                <TextBlock Text="&gt;" Margin="2" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                            </local:TabItem>
+                        </c1:C1DockTabControl>
+                    </c1:C1DockControl>
+                </Grid>
+            </Border>
+        </Border>
+    </Grid>
+</UserControl>

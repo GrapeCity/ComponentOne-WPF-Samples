@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="DockingExplorer.DockingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBlock" x:Key="titleStyle">
+                <Setter Property="FontFamily" Value="Calibri" />
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="Foreground" Value="SkyBlue" />
+                <Setter Property="Height" Value="50" />
+                <Setter Property="Margin" Value="20 30 20 5" />
+            </Style>
+            <Style TargetType="TextBlock" x:Key="descriptionStyle">
+                <Setter Property="FontFamily" Value="Calibri"/>
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextWrapping" Value="Wrap" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="Margin" Value="20"/>
+            </Style>
+            <Style TargetType="TextBlock" x:Key="captionStyle">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="Margin" Value="10 5" />
+                <Setter Property="Foreground" Value="Gray" />
+            </Style>
+            <Style TargetType="ListBox">
+                <Setter Property="SelectedIndex" Value="0" />
+                <Setter Property="ItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" Style="{StaticResource captionStyle}" />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbSamples" Width="200" ItemsSource="{Binding AllItems}" SelectionChanged="lbSamples_SelectionChanged" />
+        <Grid DataContext="{Binding ElementName=lbSamples, Path=SelectedValue}" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Border BorderBrush="LightGray" BorderThickness="0 1 0 0">
+                <TextBlock Text="{Binding Title}" Style="{StaticResource titleStyle}"/>
+            </Border>
+            <Expander Grid.Row="1" Style="{StaticResource ExpanderStyle}" BorderBrush="LightGray" BorderThickness="0 1 0 0">
+                <TextBlock Text="{Binding Description}" Style="{StaticResource descriptionStyle}" />
+            </Expander>
+            <Border Grid.Row="2">
+                <ContentControl Content="{Binding Sample}" />
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

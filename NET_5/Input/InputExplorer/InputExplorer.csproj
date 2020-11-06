@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="C1-ball.ico" />
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Expander.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Accordion">
+      <Version>5.0.20203.25</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ColorPicker">
+      <Version>5.0.20203.25</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>5.0.20203.25</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DateTimeEditors">
+      <Version>5.0.20203.25</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>5.0.20203.25</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Menu">
+      <Version>5.0.20203.25</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>
