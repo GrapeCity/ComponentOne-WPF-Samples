@@ -1,5 +1,5 @@
 ## CustomCellFactory
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Olap\CS\CustomCellFactory\CustomCellFactory)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Olap/CS/CustomCellFactory/CustomCellFactory)
 ____
 #### Shows how to apply conditional formatting to an OlapGrid control using the C1FlexGrid's CustomCellFactory feature.
 ____

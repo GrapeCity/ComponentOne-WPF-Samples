@@ -1,5 +1,5 @@
 ## CubeAnalysis
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Olap\CS\CubeAnalysis\CubeAnalysis)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Olap/CS/CubeAnalysis/CubeAnalysis)
 ____
 #### Shows how to use C1Olap to analyze Cube data.
 ____

@@ -1,5 +1,5 @@
 ## C1Scheduler Custom Grouping View
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Schedule\VB\CustomGroupingView)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Schedule/VB/CustomGroupingView)
 ____
 #### Demonstrates using of custom-defined Day/Working Week/Week C1Scheduler grouping styles instead of predefined ones.
 ____

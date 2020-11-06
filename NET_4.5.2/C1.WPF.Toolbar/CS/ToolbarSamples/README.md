@@ -1,5 +1,5 @@
 ## Toolbar Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Toolbar\CS\ToolbarSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Toolbar/CS/ToolbarSamples)
 ____
 #### Shows the main features of toolbars included in the C1.WPF.Toolbar library.
 ____

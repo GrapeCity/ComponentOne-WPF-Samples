@@ -1,5 +1,5 @@
 ## FlexChartExplorer
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_5\Chart\FlexChartExplorer)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Chart/FlexChartExplorer)
 ____
 #### Shows the main features of FlexChart.
 ____

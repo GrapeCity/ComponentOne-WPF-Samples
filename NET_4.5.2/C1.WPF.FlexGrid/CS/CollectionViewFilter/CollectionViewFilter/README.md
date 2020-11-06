@@ -1,5 +1,5 @@
 ## CollectionViewFilter
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\CollectionViewFilter\CollectionViewFilter)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/CollectionViewFilter/CollectionViewFilter)
 ____
 #### Shows an easy way to create ICollectionView filters based on string expressions.
 ____

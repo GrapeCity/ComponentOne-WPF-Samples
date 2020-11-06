@@ -1,5 +1,5 @@
 ## InputExplorer Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_5\Input\InputExplorer)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Input/InputExplorer)
 ____
 #### Shows main samples of the C1Input control.
 ____

@@ -1,5 +1,5 @@
 ## C1TreeView Drag Drop
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF\VB\C1TreeViewDragDropSample)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF/VB/C1TreeViewDragDropSample)
 ____
 #### Shows how to perform drag-drop operations within a C1TreeView control.
 ____

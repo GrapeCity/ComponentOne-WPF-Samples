@@ -1,5 +1,5 @@
 ## ChartPerformance
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Chart\CS\ChartPerformance)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Chart/CS/ChartPerformance)
 ____
 #### This sample shows the performance of the C1Chart with three 1,800 point series.
 ____

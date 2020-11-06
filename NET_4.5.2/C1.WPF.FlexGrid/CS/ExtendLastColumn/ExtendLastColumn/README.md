@@ -1,5 +1,5 @@
 ## ExtendLastColumn
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\ExtendLastColumn\ExtendLastColumn)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ExtendLastColumn/ExtendLastColumn)
 ____
 #### Shows how to implement ExtendLastCol functionality in the C1FlexGrid for SL/WPF.
 ____

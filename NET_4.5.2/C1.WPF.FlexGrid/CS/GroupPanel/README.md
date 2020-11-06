@@ -1,5 +1,5 @@
 ## GroupPanel
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\GroupPanel)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/GroupPanel)
 ____
 #### Shows how you can use the C1FlexGridGroupPanel to provide custom grouping to FlexGrid controls.
 ____

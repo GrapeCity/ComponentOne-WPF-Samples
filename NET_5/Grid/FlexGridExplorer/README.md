@@ -1,5 +1,5 @@
 ## FlexGridExplorer for WPF
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_5\Grid\FlexGridExplorer)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Grid/FlexGridExplorer)
 ____
 #### Shows samples of the Grid control.
 ____

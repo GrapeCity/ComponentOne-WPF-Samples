@@ -1,5 +1,5 @@
 ## ConditionalFormatting Olap
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Olap\CS\ConditionalFormatting\ConditionalFormatting)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Olap/CS/ConditionalFormatting/ConditionalFormatting)
 ____
 #### Shows how to apply conditional formatting to an OlapGrid control.
 ____

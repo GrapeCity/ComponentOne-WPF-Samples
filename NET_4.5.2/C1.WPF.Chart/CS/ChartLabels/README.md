@@ -1,5 +1,5 @@
 ## ChartLabels Sample
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Chart\CS\ChartLabels)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Chart/CS/ChartLabels)
 ____
 #### Shows custom chart layer that arranges chart labels to avoid overlapping.
 ____

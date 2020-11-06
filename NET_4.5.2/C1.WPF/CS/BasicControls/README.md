@@ -1,5 +1,5 @@
 ## Basic Library Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF\CS\BasicControls)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF/CS/BasicControls)
 ____
 #### Shows the controls belonging to the C1.WPF library.
 ____
