@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14644A84-952B-4C02-9F33-3BBEA099968B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinancialChartExplorer</RootNamespace>
+    <AssemblyName>FinancialChartExplorer.4</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Ext\TextBoxExt.cs" />
+    <Compile Include="EnumConverter.cs" />
+    <Compile Include="FinancialChartDemo.xaml.cs">
+      <DependentUpon>FinancialChartDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Annotation.cs" />
+    <Compile Include="Model\DataItem.cs" />
+    <Compile Include="Model\Sample.cs" />
+    <Compile Include="Services\DataService.cs" />
+    <Compile Include="ViewModel\SampleDataSource.cs" />
+    <Compile Include="View\ArmsCandleVolume.xaml.cs">
+      <DependentUpon>ArmsCandleVolume.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CandleVolume.xaml.cs">
+      <DependentUpon>CandleVolume.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EquiVolume.xaml.cs">
+      <DependentUpon>EquiVolume.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EventAnnotations.xaml.cs">
+      <DependentUpon>EventAnnotations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FibonacciTool.xaml.cs">
+      <DependentUpon>FibonacciTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HeikinAshi.xaml.cs">
+      <DependentUpon>HeikinAshi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Indicators.xaml.cs">
+      <DependentUpon>Indicators.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Kagi.xaml.cs">
+      <DependentUpon>Kagi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LineBreak.xaml.cs">
+      <DependentUpon>LineBreak.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Markers.xaml.cs">
+      <DependentUpon>Markers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MovingAverages.xaml.cs">
+      <DependentUpon>MovingAverages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Overlays.xaml.cs">
+      <DependentUpon>Overlays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RangeSelector.xaml.cs">
+      <DependentUpon>RangeSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PointAndFigure.xaml.cs">
+      <DependentUpon>PointAndFigure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Renko.xaml.cs">
+      <DependentUpon>Renko.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TrendLines.xaml.cs">
+      <DependentUpon>TrendLines.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ColumnVolume.xaml.cs">
+      <DependentUpon>ColumnVolume.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FinancialChartDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\ArmsCandleVolume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CandleVolume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EquiVolume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EventAnnotations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FibonacciTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HeikinAshi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Indicators.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Kagi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LineBreak.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Markers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MovingAverages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Overlays.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RangeSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PointAndFigure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Renko.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TrendLines.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ColumnVolume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="Resources\box.json" />
+    <EmbeddedResource Include="Resources\fb.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="C1.WPF.DX.4.5.2" />
+    <Reference Include="C1.WPF.FinancialChart.4.5.2" />
+    <Reference Include="C1.WPF.4.5.2" />
+    <Reference Include="C1.WPF.FlexChart.4.5.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\box-annotations.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

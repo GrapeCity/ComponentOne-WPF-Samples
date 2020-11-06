@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="FilterRow.FilterEditor" mc:Ignorable="d" d:DesignHeight="25" d:DesignWidth="100" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        
+        <!-- TextBox used to provide strings, numeric values, dates -->
+        <TextBox Name="_tbValue" BorderThickness="0" GotFocus="_tbValue_GotFocus" LostFocus="_tbValue_LostFocus" KeyDown="_tbValue_KeyDown" TextChanged="_tbValue_TextChanged" />
+
+        <!-- CheckBox used to provide Boolean values -->
+        <CheckBox Name="_cbValue" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="4 0 0 0" IsThreeState="True" GotFocus="_cbValue_GotFocus" LostFocus="_cbValue_LostFocus" Click="_cbValue_Click" />
+        
+        <!-- icon used to show and clear the filter -->
+        <Image Grid.Column="1" Name="_imgClear" Source="clearFilter.png" Stretch="None" Margin="4 0" Opacity=".4" MouseEnter="_imgClear_MouseEnter" MouseLeave="_imgClear_MouseLeave" MouseLeftButtonDown="_imgClear_MouseLeftButtonDown" />
+    </Grid>
+</UserControl>

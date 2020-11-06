@@ -1,0 +1,24 @@
+﻿<local:TextEditor x:Class="FlexChartShowcase.AnnotationEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FlexChartShowcase"
+             mc:Ignorable="d" BorderBrush="Green" BorderThickness="1"
+             >
+    <Grid>
+        <StackPanel Orientation="Horizontal" Background="Green" HorizontalAlignment="Center">
+            <TextBox x:Name="txtAnnotationContent" Height="25" Width="120" FontSize="14"></TextBox>
+            <Button x:Name="btnOk" Margin="0" Height="25" Width="30" Tag="Ok" Click="btnOkCancel_Click">
+                <Button.Content>
+                    <Image Source="/FlexChartShowcase;component/Resources/ok.png" Height="16"></Image>
+                </Button.Content>
+            </Button>
+            <Button x:Name="btnCancel" Margin="0" Height="25" Width="25" Tag="Cancel" Click="btnOkCancel_Click">
+                <Button.Content>
+                    <Image Source="/FlexChartShowcase;component/Resources/cancel.png" Height="16" ></Image>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </Grid>
+</local:TextEditor>

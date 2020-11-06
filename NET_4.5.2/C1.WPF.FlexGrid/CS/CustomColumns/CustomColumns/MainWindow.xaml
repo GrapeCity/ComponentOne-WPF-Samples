@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="CustomColumns.MainWindow" Title="CustomColumns Application" Height="350" Width="525" WindowState="Maximized" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Text="C1FlexGrid: Custom columns" FontSize="14" FontWeight="Bold" />
+        <c1:C1FlexGrid Name="_flex" Grid.Row="1" AutoGenerateColumns="False" AllowSorting="False">
+            <c1:C1FlexGrid.Columns>
+                <!-- add some bound columns as usual -->
+                <c1:Column Header="Line" Binding="{Binding Line}" />
+                <c1:Column Header="Name" Binding="{Binding Name}" />
+                <c1:Column Header="Color" Binding="{Binding Color}" />
+                <c1:Column Header="Price" Binding="{Binding Price, StringFormat=c}" HorizontalAlignment="Right" />
+                <c1:Column Header="Rating" Binding="{Binding Rating}" HorizontalAlignment="Right" />
+                <!-- add some unbound columns -->
+                <c1:Column ColumnName="ShowDetail">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Detail..." Click="ShowDetail_Click" />
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+                <c1:Column ColumnName="MoveUpDown">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button FontFamily="Wingdings" Content="&#xE1;" Click="MoveUp_Click" Width="20" VerticalAlignment="Center" />
+                                <Button FontFamily="Wingdings" Content="&#xE2;" Click="MoveDown_Click" Width="20" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+                <c1:Column ColumnName="DeleteRecord">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete..." Click="DeleteButton_Click" />
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+            </c1:C1FlexGrid.Columns>
+            
+        </c1:C1FlexGrid>
+    </Grid>
+</Window>

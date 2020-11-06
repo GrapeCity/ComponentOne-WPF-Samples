@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl mc:Ignorable="d" x:Class="BasicControls.SalesPerMonth" d:DesignWidth="133.338" d:DesignHeight="115.338" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:c1Chart="clr-namespace:C1.WPF.C1Chart;assembly=C1.WPF.C1Chart.4.5.2">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Border BorderBrush="#FFCBD2DB" BorderThickness="0,0,0,3">
+			<Border.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFE9ECF0" Offset="0" />
+        						<GradientStop Color="#FFDDE1E7" Offset="0.2" />
+        						<GradientStop Color="#FFCCD3DC" Offset="0.2" />
+        						<GradientStop Color="#FFFAFAFB" Offset="0.647" />
+				</LinearGradientBrush>
+			</Border.Background>
+		</Border>
+		<Grid HorizontalAlignment="Right" Margin="10,6,15,6" Width="38" Height="38">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.138*" />
+				<ColumnDefinition Width="0.862*" />
+			</Grid.ColumnDefinitions>
+			<Rectangle Stroke="Black" StrokeThickness="0" Margin="7,3,13,0" Grid.Column="1" Fill="#FF507494" />
+			<Rectangle Stroke="Black" StrokeThickness="0" HorizontalAlignment="Right" Width="13" Grid.Column="1" Height="15" VerticalAlignment="Bottom" Fill="#FF507494" />
+			<Rectangle Stroke="Black" StrokeThickness="0" HorizontalAlignment="Left" Margin="-5,12,0,0" Width="12" Grid.Column="1" Fill="#FF507494" />
+			<Rectangle Fill="White" Stroke="Black" StrokeThickness="0" Margin="-3,14,26,2" Grid.Column="1" d:LayoutOverrides="GridBox" />
+			<Rectangle Fill="White" Stroke="Black" StrokeThickness="0" Margin="9,5,15,2" Grid.Column="1" />
+			<Rectangle Fill="White" Stroke="Black" StrokeThickness="0" Height="11" HorizontalAlignment="Right" Margin="0,0,2,2" VerticalAlignment="Bottom" Width="11" Grid.Column="1" RenderTransformOrigin="0.317,0.491" />
+			<Rectangle Stroke="Black" StrokeThickness="0" Margin="-1,16,0,4" HorizontalAlignment="Left" Width="6" Grid.Column="1">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="0.791,0.899" StartPoint="0.056,0.085">
+						<GradientStop Color="#FFCD3D0B" Offset="0" />
+						<GradientStop Color="#FFC13B08" Offset="1" />
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle Stroke="Black" StrokeThickness="0" Margin="11,7,0,4" Grid.Column="1" HorizontalAlignment="Left" Width="5">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFCBEC05" Offset="0" />
+						<GradientStop Color="#FF5B9200" Offset="1" />
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle Stroke="Black" StrokeThickness="0" Height="7" HorizontalAlignment="Right" Margin="0,0,4,4" VerticalAlignment="Bottom" Width="7" Grid.Column="1">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF89B9E7" Offset="0" />
+						<GradientStop Color="#FF4775A9" Offset="1" />
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+		</Grid>
+		<TextBlock Margin="15,0,1,0" Text="Sales Per Month" TextWrapping="NoWrap" FontFamily="Trebuchet MS" FontSize="24" Foreground="#FF507494" HorizontalAlignment="Left" VerticalAlignment="Center" />
+		<c1Chart:C1Chart x:Name="salesChart" ChartType="ColumnStacked" Grid.Row="1" Theme="Office2003Royale" Margin="0" BorderThickness="0">
+                        <c1Chart:C1Chart.Data>
+                            <c1Chart:ChartData>
+                                <c1Chart:DataSeries Values="1 2 3 4" />
+                                <c1Chart:DataSeries Values="3 3 4 5" />
+								<c1Chart:DataSeries Values="2 1 3 5" />
+                            </c1Chart:ChartData>
+                        </c1Chart:C1Chart.Data>
+                    </c1Chart:C1Chart>
+	</Grid>
+</UserControl>

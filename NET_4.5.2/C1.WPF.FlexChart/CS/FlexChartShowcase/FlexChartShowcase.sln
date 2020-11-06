@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1145
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexChartShowcase", "FlexChartShowcase\FlexChartShowcase.csproj", "{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A7A61D-DB05-4642-97A1-1FB5E2F2977A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F427F685-DA8A-4822-A303-C0DE55C179E6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl mc:Ignorable="d" x:Class="TileViewSamples.SalesPerMonth" d:DesignWidth="133.338" d:DesignHeight="115.338" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:TileViewSamples" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:c1chart="clr-namespace:C1.WPF.C1Chart;assembly=C1.WPF.C1Chart.4.5.2">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <c1chart:C1Chart x:Name="salesChart" ChartType="ColumnStacked" Theme="Office2003Royale" Margin="0" BorderThickness="0">
+            <c1chart:C1Chart.View>
+                <c1chart:ChartView>
+                    <c1chart:ChartView.AxisY>
+                        <c1chart:Axis AnnoFormat="c0" Max="4000" />
+                    </c1chart:ChartView.AxisY>
+                </c1chart:ChartView>
+            </c1chart:C1Chart.View>
+            <c1chart:C1Chart.Data>
+                <c1chart:ChartData ItemNames="January February March April">
+                    <c1chart:DataSeries Values="1000 1500 110 1300" Label="Bikes" />
+                    <c1chart:DataSeries Values="700 650 610 600" Label="Mountain Bikes" />
+                    <c1chart:DataSeries Values="300 310 440 500" Label="Carrier Bikes" />
+                    <c1chart:DataSeries Values="250 300 400 500" Label="Motos" />
+                </c1chart:ChartData>
+            </c1chart:C1Chart.Data>
+        </c1chart:C1Chart>
+    </Grid>
+</UserControl>

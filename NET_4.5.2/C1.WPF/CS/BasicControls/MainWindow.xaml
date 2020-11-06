@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="BasicControls.MainWindow" Title="Basic controls sample" Height="600" Width="800" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:local="clr-namespace:BasicControls">
+    <Grid>
+        <c1:C1TabControl>
+            <c1:C1TabItem Header="Input handling">
+                <local:InputHandling />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="TreeView">
+                <local:DemoTreeView />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="BoundTreeView">
+                <local:DemoSimpleC1TreeView/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="TreeViewDragDrop">
+                <local:DemoTreeViewDragDrop />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="ListBox">
+                <local:ListBoxSample />
+            </c1:C1TabItem>
+            <!--<c1:C1TabItem Header="TileListBox">
+                <local:TileListBoxSample />
+            </c1:C1TabItem>-->
+            <c1:C1TabItem Header="DemoHyperPanel">
+                <local:DemoHyperPanel />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="ComboBox">
+                <local:DemoComboBox />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="DatePicker">
+                <local:DemoDatePicker />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="DateTimePicker">
+                <local:DemoDateTimePicker />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="DemoDropDown">
+                <local:DemoDropDown />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="MaskedTextBox">
+                <local:DemoMaskedTextBox />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="NumericBox">
+                <local:DemoNumericBox />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="RangeSlider">
+                <local:DemoRangeSlider />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="TimeEditor">
+                <local:DemoTimeEditor />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="TimePickerAdvanced">
+                <local:DateTimePickerAdvanced />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="TabControl">
+                <local:DemoTabControl />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Window">
+                <local:DemoWindow />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="DragDropManager">
+                <local:DemoDragDropManager />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="DemoListBox">
+                <local:DemoListBox />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="DemoRadialMenu">       
+                <local:DemoRadialMenu/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="DemoMenu">
+                <local:DemoMenu/>
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+      
+    </Grid>
+</Window>

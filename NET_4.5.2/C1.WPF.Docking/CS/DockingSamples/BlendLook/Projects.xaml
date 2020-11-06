@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="DockingSamples.BlendLook.Projects" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Rectangle Grid.ColumnSpan="2" Fill="#FF595959" />
+        <TextBox Grid.Row="0" Text="Search" FontStyle="Italic" Foreground="#FFB9B9B9" FontSize="11" Padding="0" BorderBrush="#FF595959" />
+        <c1:C1TreeView Grid.Row="1" BorderThickness="0">
+            <c1:C1TreeViewItem IsExpanded="True">
+                <c1:C1TreeViewItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Grid.Column="1" Source="../Resources/ico_project-solution.png" Stretch="Fill" Width="16" Height="16" Margin="0,0,5,0" />
+                        <TextBox Text="Solution &quot;Blend=&quot; (2 project(s))" BorderThickness="0" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                    </StackPanel>
+                </c1:C1TreeViewItem.Header>
+                <c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Grid.Column="1" Source="../Resources/ico_project.png" Stretch="Fill" Width="16" Height="16" Margin="0,0,5,0" />
+                            <TextBox Text="Blend" BorderThickness="0" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                        </StackPanel>
+                    </c1:C1TreeViewItem.Header>
+                    <c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Grid.Column="1" Source="../Resources/ico_project-folder.png" Stretch="Fill" Width="16" Height="16" Margin="0,0,5,0" />
+                                <TextBox Text="References" BorderThickness="0" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                            </StackPanel>
+                        </c1:C1TreeViewItem.Header>
+                    </c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Grid.Column="1" Source="../Resources/ico_project-folder.png" Stretch="Fill" Width="16" Height="16" Margin="0,0,5,0" />
+                                <TextBox Text="Properties" BorderThickness="0" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                            </StackPanel>
+                        </c1:C1TreeViewItem.Header>
+                    </c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Grid.Column="1" Source="../Resources/ico_project-file.png" Stretch="Fill" Width="16" Height="16" Margin="0,0,5,0" />
+                                <TextBox Text="App.xaml" BorderThickness="0" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                            </StackPanel>
+                        </c1:C1TreeViewItem.Header>
+                    </c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Grid.Column="1" Source="../Resources/ico_project-file.png" Stretch="Fill" Width="16" Height="16" Margin="0,0,5,0" />
+                                <TextBox Text="MainPage.xaml" BorderThickness="0" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                            </StackPanel>
+                        </c1:C1TreeViewItem.Header>
+                    </c1:C1TreeViewItem>
+                </c1:C1TreeViewItem>
+                <c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Grid.Column="1" Source="../Resources/ico_project.png" Stretch="Fill" Width="16" Height="16" Margin="0,0,5,0" />
+                            <TextBox Text="Blend.Web" BorderThickness="0" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                        </StackPanel>
+                    </c1:C1TreeViewItem.Header>
+                </c1:C1TreeViewItem>
+            </c1:C1TreeViewItem>
+        </c1:C1TreeView>
+    </Grid>
+</UserControl>

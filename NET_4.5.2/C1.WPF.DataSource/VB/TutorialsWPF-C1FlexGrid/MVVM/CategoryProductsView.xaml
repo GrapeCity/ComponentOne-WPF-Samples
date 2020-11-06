@@ -1,0 +1,20 @@
+﻿<Window x:Class="CategoryProductsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+        xmlns:local="clr-namespace:TutorialsWPF"
+        Title="CategoryProductsView" Height="507" Width="945">
+    <Grid>
+        <Grid.DataContext>
+            <!-- Create a view model for this view. -->
+            <local:CategoryProductsViewModel />
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!-- Create a view model for this view. -->
+        <ComboBox HorizontalAlignment="Left" Margin="5" Name="comboBox1" Width="221" ItemsSource="{Binding Categories}" DisplayMemberPath="CategoryName" />
+        <c1:C1FlexGrid Grid.Row="1" AutoGenerateColumns="True" Name="dataGrid1" ItemsSource="{Binding Products}"/>
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="ChartSamples.Elevation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Foreground="#FFF0F8FE"    >
+  <Border Padding="2" Background="#99071D2E" BorderBrush="#FF8FB4CC" BorderThickness="1">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+        <ColumnDefinition Width="auto"/>
+      </Grid.ColumnDefinitions>
+      <StackPanel Grid.Column="1" Orientation="Vertical" Width="300">
+        <TextBlock Margin="4" TextWrapping="Wrap" Text="Use left mouse to rotate chart. Move mouse over surface to see 3D coordinates."/>
+        <CheckBox Margin="4" Name="cbD3D" Content="Direct3D" Foreground="#FFF0F8FE" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
+      </StackPanel>
+
+      <Grid  >
+        <c1:C1Chart3D Name="chart3d" Background="Transparent" Loaded="chart3d_Loaded" ElevationAction="LeftMouseDrag" AzimuthAction="LeftMouseDrag" 
+                    MouseMove="chart3d_MouseMove"/>
+        <Canvas Name="canvas" IsHitTestVisible="False" >
+          <Border Name="bdr" BorderBrush="White" BorderThickness="1" Padding="3" Visibility="Collapsed" Background="#a0000000">
+            <TextBlock Name="label" />
+          </Border>
+        </Canvas>
+      </Grid>
+    </Grid>
+  </Border>
+</UserControl>

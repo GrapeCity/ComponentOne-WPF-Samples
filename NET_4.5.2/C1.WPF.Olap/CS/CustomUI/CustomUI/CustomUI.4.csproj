@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10960875-063E-48CB-B963-FCB781CBE5DC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomUI</RootNamespace>
+    <AssemblyName>CustomUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="UndoStack.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChartPalette.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="Resources\nwind.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="C1.WPF.C1Chart.4.5.2" />
+    <Reference Include="C1.WPF.Extended.4.5.2" />
+    <Reference Include="C1.WPF.FlexGrid.4.5.2" />
+    <Reference Include="C1.WPF.Olap.4.5.2" />
+    <Reference Include="C1.WPF.Zip.4.5.2" />
+    <Reference Include="C1.WPF.4.5.2" />
+    <Reference Include="C1.WPF.Docking.4.5.2" />
+    <Reference Include="C1.WPF.Theming.4.5.2" />
+    <Reference Include="C1.WPF.Theming.Office2013.4.5.2" />
+    <Reference Include="C1.WPF.Toolbar.4.5.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Toolbar\Chart-Area.png" />
+    <Resource Include="Resources\Toolbar\Chart-Bar.png" />
+    <Resource Include="Resources\Toolbar\Chart-Legend.png" />
+    <Resource Include="Resources\Toolbar\Chart-Line.png" />
+    <Resource Include="Resources\Toolbar\Chart-Pie.png" />
+    <Resource Include="Resources\Toolbar\Chart-Point.png" />
+    <Resource Include="Resources\Toolbar\Chart-Title.png" />
+    <Resource Include="Resources\Toolbar\Chart.png" />
+    <Resource Include="Resources\Toolbar\Collapse-All.png" />
+    <Resource Include="Resources\Toolbar\Colors-Change.png" />
+    <Resource Include="Resources\Toolbar\Expand-All.png" />
+    <Resource Include="Resources\Toolbar\Export-CSV.png" />
+    <Resource Include="Resources\Toolbar\Export-Excel.png" />
+    <Resource Include="Resources\Toolbar\Export-HTML.png" />
+    <Resource Include="Resources\Toolbar\Export-Text.png" />
+    <Resource Include="Resources\Toolbar\Filter-Currency.png" />
+    <Resource Include="Resources\Toolbar\Gridlines-Both.png" />
+    <Resource Include="Resources\Toolbar\Lock.png" />
+    <Resource Include="Resources\Toolbar\Open.png" />
+    <Resource Include="Resources\Toolbar\Print-Options.png" />
+    <Resource Include="Resources\Toolbar\Print.png" />
+    <Resource Include="Resources\Toolbar\Redo.png" />
+    <Resource Include="Resources\Toolbar\Save.png" />
+    <Resource Include="Resources\Toolbar\Show-Zeros.png" />
+    <Resource Include="Resources\Toolbar\Stack.png" />
+    <Resource Include="Resources\Toolbar\Sum.png" />
+    <Resource Include="Resources\Toolbar\Tab-Sheet.png" />
+    <Resource Include="Resources\Toolbar\Table-Column-Totals.png" />
+    <Resource Include="Resources\Toolbar\Table-Filter.png" />
+    <Resource Include="Resources\Toolbar\Table-Refresh.png" />
+    <Resource Include="Resources\Toolbar\Table-Row-Totals.png" />
+    <Resource Include="Resources\Toolbar\Table-View.png" />
+    <Resource Include="Resources\Toolbar\Undo.png" />
+    <Resource Include="Resources\Toolbar\Unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AnalysisServices.AdomdClient.retail.amd64">
+      <Version>19.12.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

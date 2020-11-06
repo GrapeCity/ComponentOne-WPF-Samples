@@ -1,0 +1,56 @@
+﻿<UserControl xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"  x:Class="ExtendedSamples.DemoCustomAnimation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid  Margin="3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Margin="3" Grid.Row="0" Grid.Column="0" BorderBrush="Gray"  BorderThickness="3" CornerRadius="5">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="1" Text="Mode:"></TextBlock>
+                <RadioButton Margin="1" Content="Continuous" IsChecked="True" Click="RadioButton_Click"></RadioButton>
+                <RadioButton Margin="1" Content="Synchronous" Click="RadioButton_Click"></RadioButton>
+            </StackPanel>
+        </Border>
+        <Border Margin="3" Grid.Row="0" Grid.Column="1" BorderBrush="Gray"  BorderThickness="3" CornerRadius="5">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="1" Text="Start from:"></TextBlock>
+                <RadioButton Margin="1" Content="First One" IsChecked="True" Click="RadioButton_Click"></RadioButton>
+                <RadioButton Margin="1" Content="Last One" Click="RadioButton_Click"></RadioButton>
+            </StackPanel>
+        </Border>
+        <Border Margin="3" BorderBrush="Gray" Grid.Row="1" Grid.Column="0" BorderThickness="3" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="Default Animation Type:"></TextBlock>
+                <c1:C1ComboBox Margin="5" x:Name="animationType" Grid.Row="1" SelectedIndexChanged="animationType_SelectedIndexChanged"/>
+                <c1:C1Rating Margin="5" x:Name="c1Rating" Foreground="#ff90cd97" HoveredBrush="#fffbb258" RatedBrush="#fffbb258" Grid.Row="2" DataContext="{x:Null}"/>
+            </Grid>
+        </Border>
+        <Border Margin="3" BorderBrush="Gray" Grid.Row="1" Grid.Column="2" BorderThickness="3" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="Custom Animation Type:"></TextBlock>
+                <c1:C1ComboBox Margin="5" x:Name="customAnimationType" Grid.Row="1" SelectedIndexChanged="customAnimationType_SelectedIndexChanged"/>
+                <c1:C1Rating Margin="5" Grid.Row="2" Foreground="#ff88bde6" HoveredBrush="#fffbb258" RatedBrush="#fffbb258" x:Name="customRating" DataContext="{x:Null}"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

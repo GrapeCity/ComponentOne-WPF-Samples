@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="TestWPF.OrgChartSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TestWPF"
+             xmlns:ext="clr-namespace:Util"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+
+        <!-- TemplateSelector: picks _tplDirector or _tlpOther -->
+        <local:PersonTemplateSelector x:Key="_personTplSelector" />
+
+        <!-- data template for Directors -->
+        <DataTemplate x:Key="_tplDirector" >
+
+            <!-- the margin defines the distance between nodes -->
+            <Border 
+                Background="#fffbb258" BorderBrush="Black" 
+                BorderThickness="2 2 4 4" CornerRadius="6"
+                Margin="40" MaxWidth="200" >
+
+                <!-- node content -->
+                <StackPanel Orientation="Vertical" >
+                    <Border CornerRadius="6 6 0 0" Background="Black" >
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="12" Height="12" Fill="#fffbb258" Margin="4" />
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" Foreground="#fffbb258" />
+                        </StackPanel>
+                    </Border>
+                    <TextBlock Text="{Binding Position}" Padding="6 0" FontSize="14" FontStyle="Italic" HorizontalAlignment="Right" />
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+        <!-- data template for everyone else -->
+        <DataTemplate x:Key="_tplOther" >
+
+            <!-- the margin defines the distance between nodes -->
+            <Border 
+                Background="#ff88bde6" BorderBrush="Black" 
+                BorderThickness="1 1 2 2" CornerRadius="6"
+                Margin="20" MaxWidth="200" >
+
+                <!-- node content -->
+                <StackPanel Orientation="Vertical" >
+                    <Border CornerRadius="6 6 0 0" Background="Black" >
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14" Foreground="#ff88bde6" Padding="4 0 0 0" />
+                    </Border>
+                    <TextBlock Text="{Binding Notes}" Padding="6 0" FontSize="9.5" TextWrapping="Wrap" />
+                    <TextBlock Text="{Binding Position}" Padding="6 0" FontSize="12" FontStyle="Italic" HorizontalAlignment="Right" />
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+            
+        <!-- control panel -->
+        <Grid Grid.Row="1" Margin="0,0,0,15" >
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition/>     	
+			</Grid.ColumnDefinitions>
+			<StackPanel Orientation="Horizontal">
+	            <Button Content="New Data" Padding="8 0" Click="Button_Click" Margin="0,0,5,0" />
+				<TextBlock Name="_tbTotal" VerticalAlignment="Center" />
+			</StackPanel>
+			<StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0">
+	            <TextBlock Text="  Zoom: " VerticalAlignment="Center" />
+	            <Slider x:Name="_sliderZoom" VerticalAlignment="Center" Minimum=".01" Maximum="1" Value="1" Width="200" />
+			</StackPanel>
+        </Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Grid.Row="2">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="Orientation: " VerticalAlignment="Center" />
+                <ComboBox 
+                    Width="100"
+                    SelectedValue="{Binding ElementName=_orgChart, Path=Orientation, Mode=TwoWay}" 
+                    ItemsSource="{Binding Source={ext:EnumerationExtension EnumType=Orientation}}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10,0" >
+                <TextBlock Text="  HorizontalContentAlignment: " VerticalAlignment="Center" />
+                <ComboBox 
+                    Width="80"
+                    SelectedValue="{Binding ElementName=_orgChart, Path=HorizontalContentAlignment, Mode=TwoWay}" 
+                    ItemsSource="{Binding Source={ext:EnumerationExtension EnumType=HorizontalAlignment}}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="  VerticalContentAlignment: " VerticalAlignment="Center" />
+                <ComboBox 
+                    Width="80"
+                    SelectedValue="{Binding ElementName=_orgChart, Path=VerticalContentAlignment, Mode=TwoWay}" 
+                    ItemsSource="{Binding Source={ext:EnumerationExtension EnumType=VerticalAlignment}}" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- org chart -->
+        <ScrollViewer Grid.Row="3" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <c1:C1OrgChart
+                x:Name="_orgChart"
+                Orientation="Horizontal"
+                ItemTemplateSelector="{StaticResource _personTplSelector}"
+                ConnectorStroke="Black" ConnectorThickness="2" >
+
+                <!-- scale transform bound to slider -->
+                <c1:C1OrgChart.RenderTransform>
+                    <ScaleTransform 
+                        ScaleX="{Binding Value, ElementName=_sliderZoom}"
+                        ScaleY="{Binding Value, ElementName=_sliderZoom}" />
+                </c1:C1OrgChart.RenderTransform>
+
+                <!-- template used to show tree nodes -->
+                <!-- not used in this sample since we are using a template selector -->
+                <!--<c1:C1OrgChart.ItemTemplate />-->
+            </c1:C1OrgChart>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

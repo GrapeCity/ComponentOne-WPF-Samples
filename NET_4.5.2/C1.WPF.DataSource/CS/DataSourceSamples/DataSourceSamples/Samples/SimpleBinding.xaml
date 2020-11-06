@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="DataSourceSamples.SimpleBinding"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+            xmlns:local="clr-namespace:DataSourceSamples"
+             mc:Ignorable="d">
+    <Grid>
+        <c1:C1DataSource x:Name="c1DataSource1" ContextType="local:NORTHWNDEntities">
+            <!-- A view source of Products. -->
+            <c1:EntityViewSource EntitySetName="Products">
+                <c1:EntityViewSource.FilterDescriptors>
+                    <!-- Display discontinued products only. Perform the filtering on the server. -->
+                    <c1:FilterDescriptor Operator="IsEqualTo" PropertyPath="Discontinued" Value="true" />
+                </c1:EntityViewSource.FilterDescriptors>
+                <c1:EntityViewSource.SortDescriptors>
+                    <!-- Sort the products by ProductID. -->
+                    <c1:SortDescriptor PropertyPath="ProductID" />
+                </c1:EntityViewSource.SortDescriptors>
+            </c1:EntityViewSource>
+        </c1:C1DataSource>
+
+        <!-- A C1DataGrid bound to the Products EntityViewSource defined above. -->
+        <c1:C1DataGrid AutoGenerateColumns="True" Margin="15" Name="dataGrid1" ItemsSource="{Binding ElementName=c1DataSource1, Path=Products}" >
+            <!-- This control handler converts navigation property columns, such as Category, to lookup columns. -->
+            <c1:C1DataSource.ControlHandler>
+                <c1:ControlHandler AutoLookup="True"/>
+            </c1:C1DataSource.ControlHandler>
+        </c1:C1DataGrid>
+    </Grid>
+</UserControl>

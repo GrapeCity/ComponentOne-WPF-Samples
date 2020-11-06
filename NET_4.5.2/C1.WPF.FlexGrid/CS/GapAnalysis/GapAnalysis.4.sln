@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GapAnalysis.4", "GapAnalysis\GapAnalysis.4.csproj", "{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCDebug|Mixed Platforms = GCDebug|Mixed Platforms
+		GCDebug|x86 = GCDebug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|Mixed Platforms = GCRelease|Mixed Platforms
+		GCRelease|x86 = GCRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+		ReleaseGC|Any CPU = ReleaseGC|Any CPU
+		ReleaseGC|Mixed Platforms = ReleaseGC|Mixed Platforms
+		ReleaseGC|x86 = ReleaseGC|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Debug|x86.ActiveCfg = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Debug|x86.Build.0 = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCDebug|Any CPU.ActiveCfg = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCDebug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCDebug|Mixed Platforms.Build.0 = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCDebug|x86.ActiveCfg = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCDebug|x86.Build.0 = Debug|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCRelease|Any CPU.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCRelease|Mixed Platforms.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCRelease|Mixed Platforms.Build.0 = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCRelease|x86.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.GCRelease|x86.Build.0 = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Release|Any CPU.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Release|x86.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.Release|x86.Build.0 = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.ReleaseGC|Any CPU.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.ReleaseGC|Mixed Platforms.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.ReleaseGC|Mixed Platforms.Build.0 = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.ReleaseGC|x86.ActiveCfg = Release|x86
+		{D82EA5BB-7EB5-40BC-922B-E31AA9F24A6A}.ReleaseGC|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92FB9CB2-6630-465C-B4A4-D2F121E22B40}
+	EndGlobalSection
+EndGlobal

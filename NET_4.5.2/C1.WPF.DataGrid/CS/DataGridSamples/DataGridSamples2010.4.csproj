@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25396FB6-A295-4141-94E9-35C5A787F455}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataGridSamples</RootNamespace>
+    <AssemblyName>DataGridSamples.4</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+<Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20901.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advanced\ConditionalFormat\ConditionalFormatPage.xaml.cs">
+      <DependentUpon>ConditionalFormatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\CustomColumns\CompositeColumn.cs" />
+    <Compile Include="Advanced\CustomColumns\CustomColumnsPage.xaml.cs">
+      <DependentUpon>CustomColumnsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\CustomColumns\DataGridColorColumn.cs" />
+    <Compile Include="Advanced\CustomColumns\DataGridCustomNumericColumn.cs" />
+    <Compile Include="Advanced\CustomColumns\DataGridMaskedTextColumn.cs" />
+    <Compile Include="Advanced\CustomColumns\DataGridMultiLineTextColumn.cs" />
+    <Compile Include="Advanced\CustomColumns\MyNavigationStrategy.cs" />
+    <Compile Include="Advanced\CustomRows\CustomRowsPage.xaml.cs">
+      <DependentUpon>CustomRowsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\DragAndDropRows\DragAndDropRows.xaml.cs">
+      <DependentUpon>DragAndDropRows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Hyperlinks.xaml.cs">
+      <DependentUpon>Hyperlinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Appearance\AppearancePage.xaml.cs">
+      <DependentUpon>AppearancePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="Converters\AlphabeticTextConverter.cs" />
+    <Compile Include="Converters\ImageSourceConverter.cs" />
+    <Compile Include="Converters\NumberRangeConverter.cs" />
+    <Compile Include="Converters\OutlookDateConverter.cs" />
+    <Compile Include="Converters\ProductConverter.cs" />
+    <Compile Include="CustomRows\DataGridTemplateRow.cs" />
+    <Compile Include="CustomRows\DataGridTemplateRowPresenter.cs" />
+    <Compile Include="DataGrid\DataGridPage.xaml.cs">
+      <DependentUpon>DataGridPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="DataInput\AddRemoveRows\AddRemoveRowsPage.xaml.cs">
+      <DependentUpon>AddRemoveRowsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataInput\Validation\Validation.xaml.cs">
+      <DependentUpon>Validation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dummies.cs" />
+    <Compile Include="ExportFormats\ExportFormatsPage.xaml.cs">
+      <DependentUpon>ExportFormatsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\AutoFilter\AutoFilterHelper.cs" />
+    <Compile Include="Filters\AutoFilter\AutoFilterPage.xaml.cs">
+      <DependentUpon>AutoFilterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\CustomFilters\CustomFilters.xaml.cs">
+      <DependentUpon>CustomFilters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\CustomFilters\DataGridDateRangeFilter.xaml.cs">
+      <DependentUpon>DataGridDateRangeFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\CustomFilters\DataGridHistogramFilter.xaml.cs">
+      <DependentUpon>DataGridHistogramFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\CustomFilters\DataGridNumericRangeFilter.xaml.cs">
+      <DependentUpon>DataGridNumericRangeFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\CustomFilters\DataGridTabFilters.xaml.cs">
+      <DependentUpon>DataGridTabFilters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\CustomFilters\DataGridToggleValuesFilter.cs" />
+    <Compile Include="Filters\CustomFilters\DataGridTreeViewFilter.xaml.cs">
+      <DependentUpon>DataGridTreeViewFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\DefaultFilter\DefaultFilterPage.xaml.cs">
+      <DependentUpon>DefaultFilterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\FilterRow\FilterRowPage.xaml.cs">
+      <DependentUpon>FilterRowPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\FullTextSearch\FullTextSearchPage.xaml.cs">
+      <DependentUpon>FullTextSearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grouping\GrandTotal\GrandTotalPage.xaml.cs">
+      <DependentUpon>GrandTotalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grouping\GroupSummary\GroupSummaryPage.xaml.cs">
+      <DependentUpon>GroupSummaryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\GetEnumMembersConverter.cs" />
+    <Compile Include="Helpers\ThicknessToStringConverter.cs" />
+    <Compile Include="Hierarchical\HierarchicalTasks\HierarchicalTasksPage.xaml.cs">
+      <DependentUpon>HierarchicalTasksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hierarchical\NestedGrids\DataGridHierarchicalNavigation.cs" />
+    <Compile Include="Hierarchical\NestedGrids\NestedGridsPage.xaml.cs">
+      <DependentUpon>NestedGridsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagingAndScrolling\DeferredScrolling\DeferredScrollingPage.xaml.cs">
+      <DependentUpon>DeferredScrollingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Performance\PerformancePage.xaml.cs">
+      <DependentUpon>PerformancePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Selection\SelectionPage.xaml.cs">
+      <DependentUpon>SelectionPage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Advanced\ConditionalFormat\ConditionalFormatPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Advanced\CustomColumns\CustomColumnsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Advanced\CustomRows\CustomRowsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Advanced\DragAndDropRows\DragAndDropRows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Advanced\Hyperlinks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Appearance\AppearancePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataGrid\DataGridPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataInput\AddRemoveRows\AddRemoveRowsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <DesignDataWithDesignTimeCreatableTypes Include="DesignData\SampleProducts.xaml">
+      <SubType>Designer</SubType>
+    </DesignDataWithDesignTimeCreatableTypes>
+    <Page Include="DataInput\Validation\Validation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <DesignDataWithDesignTimeCreatableTypes Include="DesignData\SamplePlayers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignDataWithDesignTimeCreatableTypes>
+    <Page Include="ExportFormats\ExportFormatsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Filters\AutoFilter\AutoFilterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Filters\CustomFilters\CustomFilters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Filters\CustomFilters\DataGridDateRangeFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Filters\CustomFilters\DataGridHistogramFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Filters\CustomFilters\DataGridNumericRangeFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Filters\CustomFilters\DataGridTabFilters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Filters\CustomFilters\DataGridTreeViewFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Filters\DefaultFilter\DefaultFilterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Filters\FilterRow\FilterRowPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Filters\FullTextSearch\FullTextSearchPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Grouping\GrandTotal\GrandTotalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grouping\GroupSummary\GroupSummaryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hierarchical\HierarchicalTasks\HierarchicalTasksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hierarchical\NestedGrids\NestedGridsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagingAndScrolling\DeferredScrolling\DeferredScrollingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Performance\PerformancePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Selection\SelectionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\dos.jpg" />
+    <Resource Include="Resources\tennis\andym.jpg" />
+    <Resource Include="Resources\tennis\andyr.jpg" />
+    <Resource Include="Resources\tennis\juandp.jpg" />
+    <Resource Include="Resources\tennis\nikolayd.jpg" />
+    <Resource Include="Resources\tennis\novakd.jpg" />
+    <Resource Include="Resources\tennis\rafaeln.jpg" />
+    <Resource Include="Resources\tennis\rogerf.jpg" />
+    <EmbeddedResource Include="Resources\tennis\tennis.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\1asp095.gif" />
+    <Resource Include="Resources\awc_jersey_male_small.jpg" />
+    <Resource Include="Resources\awc_tee_male_yellow_small.jpg" />
+    <Resource Include="Resources\bikepump_small.jpg" />
+    <Resource Include="Resources\bike_lock_small.jpg" />
+    <Resource Include="Resources\clipless_pedals_small.jpg" />
+    <Resource Include="Resources\docexcel.png" />
+    <Resource Include="Resources\double_headlight_small.jpg" />
+    <Resource Include="Resources\ExcelTemplate.xml" />
+    <Resource Include="Resources\fork_small.jpg" />
+    <Resource Include="Resources\frame_black_small.jpg" />
+    <Resource Include="Resources\frame_silver_small.jpg" />
+    <Resource Include="Resources\frame_small.jpg" />
+    <Resource Include="Resources\handlebar_small.jpg" />
+    <Resource Include="Resources\handpump_small.jpg" />
+    <Resource Include="Resources\hotrodbike_black_small.jpg" />
+    <Resource Include="Resources\hotrodbike_f_small.jpg" />
+    <Resource Include="Resources\hotrodbike_silver_small.jpg" />
+    <Resource Include="Resources\html.png" />
+    <Resource Include="Resources\ico-delete.png" />
+    <Resource Include="Resources\ImageBorder.png" />
+    <Resource Include="Resources\innertube_small.jpg" />
+    <Resource Include="Resources\julianax_r_02_blue_small.jpg" />
+    <Resource Include="Resources\julianax_r_02_yellow_small.jpg" />
+    <Resource Include="Resources\mb_tires_small.jpg" />
+    <Resource Include="Resources\new.png" />
+    <Resource Include="Resources\no_image_available_small.jpg" />
+    <Resource Include="Resources\pdf.png" />
+    <Resource Include="Resources\pedal_small.jpg" />
+    <Resource Include="Resources\print.png" />
+    <EmbeddedResource Include="Resources\products.xml" />
+    <Resource Include="Resources\racer02_yellow_f_small.jpg" />
+    <Resource Include="Resources\racer_black_small.jpg" />
+    <Resource Include="Resources\racer_red_small.jpg" />
+    <Resource Include="Resources\roadster_black_small.jpg" />
+    <Resource Include="Resources\roadster_red_small.jpg" />
+    <Resource Include="Resources\roadster_yellow_f_small.jpg" />
+    <Resource Include="Resources\saddle_small.jpg" />
+    <Resource Include="Resources\shorts_female_small.jpg" />
+    <Resource Include="Resources\shorts_male_small.jpg" />
+    <Resource Include="Resources\silver_chain_small.jpg" />
+    <Resource Include="Resources\single_headlight_small.jpg" />
+    <Resource Include="Resources\sprocket_small.jpg" />
+    <Resource Include="Resources\street_tires_small.jpg" />
+    <Resource Include="Resources\superlight_black_small.jpg" />
+    <Resource Include="Resources\superlight_red_small.jpg" />
+    <Resource Include="Resources\superlight_silver_small.jpg" />
+    <Resource Include="Resources\tail_lights_small.jpg" />
+    <Resource Include="Resources\tirepatch_kit_small.jpg" />
+    <Resource Include="Resources\water_bottle_cage_small.jpg" />
+    <Resource Include="Resources\water_bottle_small.jpg" />
+    <Resource Include="Resources\wheel_small.jpg" />
+    <Resource Include="Resources\XapOpIcoThAlert.png" />
+    <Resource Include="Resources\XapOpIcoThInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="C1.WPF.DataGrid.Filters.4.5.2" />
+    <Reference Include="C1.WPF.DataGrid.Summaries.4.5.2" />
+    <Reference Include="C1.WPF.DataGrid.4.5.2" />
+    <Reference Include="C1.WPF.DateTimeEditors.4.5.2" />
+    <Reference Include="C1.WPF.Extended.4.5.2" />
+    <Reference Include="C1.WPF.Toolbar.4.5.2" />
+    <Reference Include="C1.WPF.4.5.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Hyperlink-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

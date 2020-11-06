@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlapSamples.4", "OlapSamples\OlapSamples.4.csproj", "{1244B09F-C5B2-4A07-AD90-6C3007F69586}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

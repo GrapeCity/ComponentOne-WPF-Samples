@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="SchedulerSamples.WorkDaysEditorControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:System="clr-namespace:System;assembly=mscorlib">
+	<StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+		<CheckBox x:Name="chMonday" Checked="ch_Changed" Unchecked="ch_Changed" Margin="5" TextElement.Foreground="{DynamicResource text_Brush}">
+			<System:DayOfWeek>Monday</System:DayOfWeek>
+		</CheckBox>
+		<CheckBox x:Name="chTuesday" Checked="ch_Changed" Unchecked="ch_Changed" Margin="5" TextElement.Foreground="{DynamicResource text_Brush}">
+			<System:DayOfWeek>Tuesday</System:DayOfWeek>
+		</CheckBox>
+		<CheckBox x:Name="chWednesday" Checked="ch_Changed" Unchecked="ch_Changed" Margin="5" TextElement.Foreground="{DynamicResource text_Brush}">
+			<System:DayOfWeek>Wednesday</System:DayOfWeek>
+		</CheckBox>
+		<CheckBox x:Name="chThursday" Checked="ch_Changed" Unchecked="ch_Changed" Margin="5" TextElement.Foreground="{DynamicResource text_Brush}">
+			<System:DayOfWeek>Thursday</System:DayOfWeek>
+		</CheckBox>
+		<CheckBox x:Name="chFriday" Checked="ch_Changed" Unchecked="ch_Changed" Margin="5" TextElement.Foreground="{DynamicResource text_Brush}">
+			<System:DayOfWeek>Friday</System:DayOfWeek>
+		</CheckBox>
+		<CheckBox x:Name="chSaturday" Checked="ch_Changed" Unchecked="ch_Changed" Margin="5" TextElement.Foreground="{DynamicResource text_Brush}">
+			<System:DayOfWeek>Saturday</System:DayOfWeek>
+		</CheckBox>
+		<CheckBox x:Name="chSunday" Checked="ch_Changed" Unchecked="ch_Changed" Margin="5" TextElement.Foreground="{DynamicResource text_Brush}">
+			<System:DayOfWeek>Sunday</System:DayOfWeek>
+		</CheckBox>
+	</StackPanel>
+</UserControl>

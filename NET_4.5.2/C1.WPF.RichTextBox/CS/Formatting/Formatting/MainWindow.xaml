@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="Formatting.MainWindow" Title="RichTextBox Formatting Application" Height="350" Width="525" WindowState="Maximized" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot">
+        <c1:C1RichTextBox Name="rtb">
+            <c1:C1Document>
+                <c1:C1List MarkerStyle="Decimal">
+                    <c1:C1List.Children>
+                        <c1:C1ListItem FontSize="16">
+                            <c1:C1Paragraph>
+                                <c1:C1Run Text="Text formatting:" />
+                            </c1:C1Paragraph>
+                        </c1:C1ListItem>
+                        <c1:C1List FontSize="13" MarkerStyle="Disc">
+                            <c1:C1ListItem>
+                                <c1:C1Paragraph>
+                                    <c1:C1Run Text="Font" FontFamily="Times New Roman" />
+                                    <c1:C1Run Text=" " />
+                                    <c1:C1Run Text="families" FontFamily="Comic Sans MS" />
+                                </c1:C1Paragraph>
+                            </c1:C1ListItem>
+
+                            <c1:C1ListItem>
+                                <c1:C1Paragraph>
+                                    <c1:C1Run Text="Bold" FontWeight="Bold" />
+                                    <c1:C1Run Text=" and " />
+                                    <c1:C1Run Text="Italic" FontStyle="Italic" />
+                                </c1:C1Paragraph>
+                            </c1:C1ListItem>
+
+                            <c1:C1ListItem>
+                                <c1:C1Paragraph>
+                                    <c1:C1Run Text="Several" TextDecorations="Underline" />
+                                    <c1:C1Run Text=" " />
+                                    <c1:C1Run Text="text" TextDecorations="Strikethrough" />
+                                    <c1:C1Run Text=" " />
+                                    <c1:C1Run Text="decorations" TextDecorations="ErrorUnderline" />
+                                    <c1:C1Run Text=" " />
+                                    <c1:C1Run Text="available" TextDecorations="OverLine" />
+                                </c1:C1Paragraph>
+                            </c1:C1ListItem>
+
+                            <c1:C1ListItem>
+                                <c1:C1Paragraph>
+                                    <c1:C1Run Text="F" FontSize="19" />
+                                    <c1:C1Run Text="o" FontSize="16" />
+                                    <c1:C1Run Text="n" FontSize="13" />
+                                    <c1:C1Run Text="t" FontSize="10" />
+                                    <c1:C1Run Text=" " />
+                                    <c1:C1Run Text="s" FontSize="7" />
+                                    <c1:C1Run Text="i" FontSize="10" />
+                                    <c1:C1Run Text="z" FontSize="13" />
+                                    <c1:C1Run Text="e" FontSize="16" />
+                                    <c1:C1Run Text="s" FontSize="19" />
+                                </c1:C1Paragraph>
+                            </c1:C1ListItem>
+
+                            <c1:C1ListItem>
+                                <c1:C1Paragraph>
+                                    <c1:C1Run Text="Foreground" Foreground="Blue" />
+                                    <c1:C1Run Text=", " />
+                                    <c1:C1Run Text="round borders" BorderBrush="Green" BorderThickness="1" CornerRadius="4" />
+                                    <c1:C1Run Text=" and " />
+                                    <c1:C1Run Text="background" Background="Yellow" />
+                                </c1:C1Paragraph>
+                            </c1:C1ListItem>
+
+                            <c1:C1ListItem>
+                                <c1:C1Paragraph>
+                                    <c1:C1Run Text="Super" />
+                                    <c1:C1Run Text="script" VerticalAlignment="Super" FontSize="11" />
+                                    <c1:C1Run Text=" and " />
+                                    <c1:C1Run Text="Sub" />
+                                    <c1:C1Run Text="script" VerticalAlignment="Sub" FontSize="11" />
+                                </c1:C1Paragraph>
+                            </c1:C1ListItem>
+
+                            <c1:C1ListItem>
+                                <c1:C1Paragraph>
+                                    <c1:C1Run Text="Blur">
+                                        <c1:C1Run.TextEffect>
+                                            <BlurEffect Radius="3" />
+                                        </c1:C1Run.TextEffect>
+                                    </c1:C1Run>
+                                    <c1:C1Run Text=" and " />
+                                    <c1:C1Run Text="shadows">
+                                        <c1:C1Run.TextEffect>
+                                            <DropShadowEffect BlurRadius="2" Opacity="0.5" ShadowDepth="3" />
+                                        </c1:C1Run.TextEffect>
+                                    </c1:C1Run>
+                                </c1:C1Paragraph>
+                            </c1:C1ListItem>
+                        </c1:C1List>
+
+                        <c1:C1ListItem FontSize="16">
+                            <c1:C1Paragraph>
+                                <c1:C1Run Text="Paragraph formatting:" />
+                            </c1:C1Paragraph>
+                            <c1:C1List FontSize="13" MarkerStyle="Disc">
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Left, center, right and justify alignments:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Paragraph TextAlignment="Left" Margin="30 0 50 10">
+                                        <c1:C1Run Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Paragraph TextAlignment="Center" Margin="30 0 50 10">
+                                        <c1:C1Run Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Paragraph TextAlignment="Right" Margin="30 0 50 10">
+                                        <c1:C1Run Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Paragraph TextAlignment="Justify" Margin="30 0 50 10">
+                                        <c1:C1Run Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                                    </c1:C1Paragraph>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Margins, border, padding and background:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Paragraph Margin="30 0 50 10" Padding="30" BorderBrush="Blue" BorderThickness="5" Background="Beige">
+                                        <c1:C1Run Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                                    </c1:C1Paragraph>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Indent and line height:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Paragraph Margin="30 0 50 10" TextIndent="40" LineHeight="2">
+                                        <c1:C1Run Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                                    </c1:C1Paragraph>
+                                </c1:C1ListItem>
+
+                            </c1:C1List>
+                        </c1:C1ListItem>
+
+                        <c1:C1ListItem FontSize="16">
+                            <c1:C1Paragraph>
+                                <c1:C1Run Text="Table formatting:" />
+                            </c1:C1Paragraph>
+                            <c1:C1List FontSize="13" MarkerStyle="Disc">
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Collapsible borders:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1:C1TableRowGroup>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Blue" BorderThickness="6">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                        </c1:C1TableRowGroup>
+                                    </c1:C1Table>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Border spacing:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Table BorderSpacing="3 3" Margin="30 0 50 10">
+                                        <c1:C1TableRowGroup>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Blue" BorderThickness="6">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                        </c1:C1TableRowGroup>
+                                    </c1:C1Table>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Column and row spans:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1:C1TableRowGroup>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2" RowSpan="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2" ColumnSpan="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                        </c1:C1TableRowGroup>
+                                    </c1:C1Table>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Row and column backgrounds:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1:C1Table.Columns>
+                                            <c1:C1TableColumn />
+                                            <c1:C1TableColumn Background="Salmon" />
+                                        </c1:C1Table.Columns>
+                                        <c1:C1TableRowGroup>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                            <c1:C1TableRow Background="LightBlue">
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Cell" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                        </c1:C1TableRowGroup>
+                                    </c1:C1Table>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Column widths:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1:C1Table.Columns>
+                                            <c1:C1TableColumn Width="50%" />
+                                            <c1:C1TableColumn Width="50" />
+                                        </c1:C1Table.Columns>
+                                        <c1:C1TableRowGroup>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="50%" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="50px" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Auto" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                        </c1:C1TableRowGroup>
+                                    </c1:C1Table>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Vertical alignment:" />
+                                    </c1:C1Paragraph>
+                                    <c1:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1:C1TableRowGroup>
+                                            <c1:C1TableRow>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Top&#xA;&#xA;&#xA;&#xA;&#xA;" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2" VerticalAlignment="Middle">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Middle" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                                <c1:C1TableCell BorderBrush="Black" BorderThickness="2" VerticalAlignment="Bottom">
+                                                    <c1:C1Paragraph Margin="2">
+                                                        <c1:C1Run Text="Bottom" />
+                                                    </c1:C1Paragraph>
+                                                </c1:C1TableCell>
+                                            </c1:C1TableRow>
+                                        </c1:C1TableRowGroup>
+                                    </c1:C1Table>
+                                </c1:C1ListItem>
+
+                            </c1:C1List>
+                        </c1:C1ListItem>
+
+                        <c1:C1ListItem FontSize="16">
+                            <c1:C1Paragraph>
+                                <c1:C1Run Text="Miscellaneous:" />
+                            </c1:C1Paragraph>
+                            <c1:C1List FontSize="13" MarkerStyle="Disc">
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Inline" />
+                                        <c1:C1InlineUIContainer IsEditable="False">
+                                            <c1:C1InlineUIContainer.Child>
+                                                <Image Source="/Formatting.4;component/c1logo.png" />
+                                            </c1:C1InlineUIContainer.Child>
+                                        </c1:C1InlineUIContainer>
+                                        <c1:C1Run Text="images" />
+                                    </c1:C1Paragraph>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Element cursors" Id="cursorElement" />
+                                    </c1:C1Paragraph>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run Text="Tooltips" ToolTip="Here be tooltips" />
+                                    </c1:C1Paragraph>
+                                </c1:C1ListItem>
+
+                                <c1:C1ListItem>
+                                    <c1:C1Paragraph>
+                                        <c1:C1Run />
+                                        <c1:C1Run Text="Uneditable, but deletable, elements" IsEditable="False" />
+                                        <c1:C1Run />
+                                    </c1:C1Paragraph>
+                                </c1:C1ListItem>
+                            </c1:C1List>
+                        </c1:C1ListItem>
+                    </c1:C1List.Children>
+                </c1:C1List>
+            </c1:C1Document>
+        </c1:C1RichTextBox>
+    </Grid>
+</Window>

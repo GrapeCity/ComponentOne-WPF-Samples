@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="DataGridSamples.DataGridNumericRangeFilter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:DataGridSamples"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid Margin="6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" 
+                   Text="{Binding Path=LowerValueText}"/>
+        <TextBlock HorizontalAlignment="Right" 
+                   Text="{Binding Path=UpperValueText}"/>
+        <c1:C1RangeSlider Minimum="{Binding Minimum}" 
+                          Maximum="{Binding Maximum}" 
+                          LowerValue="{Binding LowerValue, Mode=TwoWay}"
+                          UpperValue="{Binding UpperValue, Mode=TwoWay}"
+                          Grid.Row="1"/>
+    </Grid>
+</UserControl>

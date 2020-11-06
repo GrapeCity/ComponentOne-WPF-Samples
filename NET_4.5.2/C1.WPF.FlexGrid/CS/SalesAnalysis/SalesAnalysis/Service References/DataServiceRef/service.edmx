@@ -1,0 +1,50 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="NORTHWNDModel" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+      <EntityType Name="Invoice">
+        <Key>
+          <PropertyRef Name="CustomerName" />
+          <PropertyRef Name="Salesperson" />
+          <PropertyRef Name="OrderID" />
+          <PropertyRef Name="ShipperName" />
+          <PropertyRef Name="ProductID" />
+          <PropertyRef Name="ProductName" />
+          <PropertyRef Name="UnitPrice" />
+          <PropertyRef Name="Quantity" />
+          <PropertyRef Name="Discount" />
+        </Key>
+        <Property Name="ShipName" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="ShipAddress" Type="Edm.String" Nullable="true" MaxLength="60" Unicode="true" FixedLength="false" />
+        <Property Name="ShipCity" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="ShipRegion" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="ShipPostalCode" Type="Edm.String" Nullable="true" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="ShipCountry" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="CustomerID" Type="Edm.String" Nullable="true" MaxLength="5" Unicode="true" FixedLength="true" />
+        <Property Name="CustomerName" Type="Edm.String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="Address" Type="Edm.String" Nullable="true" MaxLength="60" Unicode="true" FixedLength="false" />
+        <Property Name="City" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="Region" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="PostalCode" Type="Edm.String" Nullable="true" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="Country" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="Salesperson" Type="Edm.String" Nullable="false" MaxLength="31" Unicode="true" FixedLength="false" />
+        <Property Name="OrderID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="OrderDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="RequiredDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ShippedDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ShipperName" Type="Edm.String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="ProductID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ProductName" Type="Edm.String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="UnitPrice" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="Quantity" Type="Edm.Int16" Nullable="false" />
+        <Property Name="Discount" Type="Edm.Single" Nullable="false" />
+        <Property Name="ExtendedPrice" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="Freight" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="SalesAnalysis.Data" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+      <EntityContainer Name="NORTHWNDEntities" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Invoices" EntityType="NORTHWNDModel.Invoice" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

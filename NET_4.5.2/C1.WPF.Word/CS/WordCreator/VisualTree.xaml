@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="Word.Creator.VisualTree" Background="#FF374F5D" mc:Ignorable="d" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+	<UserControl.Resources>
+		<Style x:Key="stTextBlock" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="14" />
+			<Setter Property="FontFamily" Value="Trebuchet MS" />
+			<Setter Property="FontWeight" Value="Normal" />
+			<Setter Property="Foreground" Value="#FF2F4C70" />
+			<Setter Property="Margin" Value="2 20 0 5" />
+		</Style>
+	</UserControl.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!-- Toolbar -->
+		<c1:C1Toolbar Margin="0,0,0,10">
+			<c1:C1ToolbarGroup Header="Export">
+				<c1:C1ToolbarStrip>
+					<c1:C1ToolbarButton x:Name="btnWord" Click="Button_Click" Width="120" Height="30">
+						<StackPanel Orientation="Horizontal" Margin="4">
+                            <Image Source="/WordCreator.4;component/Resources/word.png" />
+							<TextBlock Text="Word" VerticalAlignment="Center" Margin="3 0 0 0" />
+						</StackPanel>
+					</c1:C1ToolbarButton>
+				</c1:C1ToolbarStrip>
+			</c1:C1ToolbarGroup>
+		</c1:C1Toolbar>
+		<Border x:Name="content" BorderBrush="#FFCBD5E1" BorderThickness="3" Grid.Row="1">
+			<ScrollViewer Padding="0" BorderThickness="0">
+				<Border BorderBrush="White" BorderThickness="1">
+					<Grid Background="White">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition />
+						</Grid.RowDefinitions>
+						<Border BorderBrush="#FFCBD2DB" BorderThickness="0,0,0,3" Height="50">
+							<Border.Background>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="#FFE9ECF0" Offset="0" />
+									<GradientStop Color="#FFDDE1E7" Offset="0.2" />
+									<GradientStop Color="#FFCCD3DC" Offset="0.2" />
+									<GradientStop Color="#FFFAFAFB" Offset="0.647" />
+								</LinearGradientBrush>
+							</Border.Background>
+						</Border>
+						<Border Grid.Row="1" Height="30" VerticalAlignment="Top" Margin="0,1,0,0">
+							<Border.Background>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="#FFE0E4EA" Offset="0" />
+									<GradientStop Color="White" Offset="1" />
+								</LinearGradientBrush>
+							</Border.Background>
+						</Border>
+						<!-- Logo -->
+						<!-- Header -->
+						<Rectangle Height="35" VerticalAlignment="Bottom" Grid.Row="1">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="#FFDBE3EB" Offset="0.8" />
+									<GradientStop Color="#FFC8D5E0" Offset="0.8" />
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+
+						<!-- Header -->
+
+						<StackPanel Grid.Row="1" Margin="20,0">
+
+							<!-- Hotel -->
+							<TextBlock Text="Hotel:" Style="{StaticResource stTextBlock}" />
+							<ComboBox SelectedIndex="0" Width="200" HorizontalAlignment="Left">
+								<ComboBoxItem Content="Pittsburgh Suites" />
+								<ComboBoxItem Content="Los Angeles Suites" />
+								<ComboBoxItem Content="San Francisco Suites" />
+							</ComboBox>
+
+							<!-- Services -->
+							<TextBlock Text="Inluded Services:" Style="{StaticResource stTextBlock}" />
+							<StackPanel>
+								<StackPanel Orientation="Horizontal">
+									<CheckBox Content="Breakfast" IsChecked="true" Margin="0 0 10 4" />
+									<CheckBox Content="Lunch" IsChecked="false" Margin="0 0 10 4" />
+									<CheckBox Content="Dinner" IsChecked="true" Margin="0 0 10 4" />
+								</StackPanel>
+								<StackPanel Orientation="Horizontal">
+									<CheckBox Content="Spa" IsChecked="false" Margin="0 0 10 4" />
+									<CheckBox Content="Parking" IsChecked="true" Margin="0 0 10 4" />
+									<CheckBox Content="WiFi" IsChecked="false" Margin="0 0 10 4" />
+								</StackPanel>
+							</StackPanel>
+
+							<!-- Room Type -->
+							<TextBlock Text="Room Type:" Style="{StaticResource stTextBlock}" />
+							<ListBox HorizontalAlignment="Left" Width="250">
+								<ListBoxItem Content="Single" />
+								<ListBoxItem Content="Double" />
+								<ListBoxItem Content="Suite" />
+							</ListBox>
+
+							<!-- Late CheckOut -->
+							<TextBlock Text="Late Check-out:" Style="{StaticResource stTextBlock}" />
+							<StackPanel Orientation="Horizontal">
+								<RadioButton Content="Yes, please" IsChecked="true" GroupName="checkout" Margin="0 0 10 4" />
+								<RadioButton Content="No, thanks" GroupName="checkout" Margin="0 0 10 4" />
+							</StackPanel>
+
+							<!-- Username & password -->
+							<TextBlock Text="Username &amp; Password:" Style="{StaticResource stTextBlock}" />
+							<StackPanel Orientation="Horizontal">
+								<TextBox Width="120" Text="username" Margin="0 0 10 4" />
+								<PasswordBox Width="120" Password="PasswordBox" Margin="0 0 10 4" />
+							</StackPanel>
+
+							<!-- Days -->
+							<TextBlock Text="How long will you stay here?:" Style="{StaticResource stTextBlock}" />
+							<Slider Width="200" Minimum="1" Maximum="10" Value="5" Orientation="Horizontal" HorizontalAlignment="Left" />
+
+							<!-- Privacy Policy -->
+							<c1:C1HyperlinkButton Content="Terms of Agreement" HorizontalAlignment="Center" Foreground="#FF45A3FF" Margin="10,20,10,10" />
+						</StackPanel>
+						<TextBlock Margin="20,0,0,0" Text="Hotel Reservation Form (Word Export)" TextWrapping="NoWrap" FontFamily="Trebuchet MS" FontSize="24" Foreground="#FF507494" HorizontalAlignment="Left" VerticalAlignment="Center" />
+						<Grid HorizontalAlignment="Right" Margin="10,6" Width="38" Height="38">
+							<Path Fill="#FF507494" Stretch="Fill" StrokeThickness="3" Margin="0,0,0,3" Data="M17,7.0000005 L18,7.0000005 L20,7.0000005 L21,7.0000005 C21.552284,7 22,7.4477153 22,8 C22,8.5522842 21.552284,9 21,9 L20,9 L20,11 L22,11 C22.552284,11 23,11.223858 23,11.5 C23,11.776142 22.552284,12 22,12 L21.755447,12 L21.832266,12.013522 C29.05521,13.384359 34.599033,19.905025 34.979179,27.873184 L34.983719,28 L35,28 C36.656853,28 38,29.343145 38,31 L38,32 C38,33.656853 36.656853,35 35,35 L3,35 C1.3431454,35 0,33.656853 0,32 L0,31 C0,29.343145 1.3431454,28 3,28 L3.016284,28 L3.0208187,27.873184 C3.4009666,19.905025 8.9447889,13.384359 16.167734,12.013522 L16.244553,12 L16,12 C15.447715,12 15,11.776142 15,11.5 C15,11.223858 15.447715,11 16,11 L18,11 L18,9 L17,9 C16.447716,9 16,8.5522842 16,8 C16,7.4477153 16.447716,7 17,7.0000005 z M25.970793,2.3955107 C26.226477,2.3844719 26.486372,2.470974 26.689873,2.6576319 C27.096878,3.0309491 27.124187,3.6635251 26.75087,4.0705304 L24.723019,6.2813711 C24.349701,6.6883759 23.717127,6.7156849 23.310122,6.3423681 C22.903118,5.9690509 22.875809,5.3364749 23.249125,4.9294701 L25.276978,2.7186289 C25.463634,2.5151272 25.715107,2.4065485 25.970793,2.3955107 z M12.029206,2.3955069 C12.28489,2.4065456 12.536364,2.5151234 12.723022,2.718626 L14.750873,4.9294677 C15.12419,5.3364725 15.096881,5.969048 14.689877,6.3423653 C14.282872,6.7156825 13.650296,6.6883731 13.276979,6.2813683 L11.249128,4.0705266 C10.875811,3.6635222 10.90312,3.0309467 11.310124,2.65763 C11.513627,2.4709711 11.773521,2.384469 12.029206,2.3955069 z M19,0 C19.552284,0 20,0.44771481 20,1 L20,4 C20,4.5522847 19.552284,5 19,5 C18.447716,5 18,4.5522847 18,4 L18,1 C18,0.44771481 18.447716,0 19,0 z" />
+							<Rectangle Fill="White" StrokeThickness="3" RadiusX="1" RadiusY="1" Height="3" Margin="2,0,2,5" VerticalAlignment="Bottom" />
+							<Path Fill="White" Stretch="Fill" StrokeThickness="3" Margin="4.573,13.71,4.759,7.697" Data="M32.428673,19.143429 C32.428673,19.143429 -0.64301759,19.143429 -0.64301759,19.143429 C-0.64301759,5.9211211 7.163444,0 16,0 C24.836555,0 32.428673,5.7067699 32.428673,19.143429 z" />
+							<Path Stretch="Fill" StrokeThickness="3" Margin="6,14.748,6,9.137" Data="M32,17 C32,17 0,17 0,17 C0,7.6111593 7.163444,0 16,0 C24.836555,0 32,7.6111593 32,17 z">
+								<Path.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF89B9E7" Offset="0" />
+										<GradientStop Color="#FF4775A9" Offset="1" />
+									</LinearGradientBrush>
+								</Path.Fill>
+							</Path>
+							<Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="2" Margin="3,0,3,6" VerticalAlignment="Bottom" Data="M3,0 L29,0 L29,1.000001 L32,1.000001 L32,2.000001 L0,2.000001 L0,1.000001 L3,1.000001 z">
+								<Path.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFCBEC05" Offset="0" />
+										<GradientStop Color="#FF5B9200" Offset="1" />
+									</LinearGradientBrush>
+								</Path.Fill>
+							</Path>
+						</Grid>
+					</Grid>
+				</Border>
+			</ScrollViewer>
+		</Border>
+	</Grid>
+</UserControl>

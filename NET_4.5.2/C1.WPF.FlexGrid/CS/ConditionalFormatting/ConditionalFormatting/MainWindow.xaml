@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="ConditionalFormatting.MainWindow" Title="ConditionalFormatting Application" Height="350" Width="525" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:ConditionalFormatting">
+    <Window.Resources>
+        <!--Converteer implmented in ForeGroundConverter.cs-->
+        <local:ForegroundConverter x:Key="ForegroundConverter" />
+        <!--Converter implemented in FontWeightConverter.cs-->
+        <local:FontWeightConverter x:Key="FontWeightConverter" />
+        <!-- converter ranges (implemented as Point values: 
+             X is the low value and Y is the high value) -->
+        <Point x:Key="PriceRange" X="500" Y="1500" />
+        <Point x:Key="WeightRange" X="200" Y="1000" />
+        <Point x:Key="CostRange" X="200" Y="1000" />
+        <Point x:Key="VolumeRange" X="2000" Y="6000" />
+    </Window.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <c1:C1FlexGrid Name="_flex" AutoGenerateColumns="False">
+            <c1:C1FlexGrid.Columns>
+                <c1:Column Binding="{Binding Line}" />
+                <c1:Column Binding="{Binding Color}" />
+                <c1:Column Binding="{Binding Name}" />
+                <c1:Column Binding="{Binding Price}">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Price, StringFormat=n0}" HorizontalAlignment="Right" Foreground="{Binding Price, Converter={StaticResource ForegroundConverter}, ConverterParameter={StaticResource PriceRange} }" FontWeight="{Binding Price, Converter={StaticResource FontWeightConverter}, ConverterParameter={StaticResource PriceRange} }" />
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+                <c1:Column Binding="{Binding Weight}">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Weight, StringFormat=n0}" HorizontalAlignment="Right" Foreground="{Binding Weight, Converter={StaticResource ForegroundConverter}, ConverterParameter={StaticResource WeightRange} }" FontWeight="{Binding Weight, Converter={StaticResource FontWeightConverter}, ConverterParameter={StaticResource WeightRange} }" />
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+                <c1:Column Binding="{Binding Cost}">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Cost, StringFormat=n0}" HorizontalAlignment="Right" Foreground="{Binding Cost, Converter={StaticResource ForegroundConverter}, ConverterParameter={StaticResource CostRange} }" FontWeight="{Binding Cost, Converter={StaticResource FontWeightConverter}, ConverterParameter={StaticResource CostRange} }" />
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+                <c1:Column Binding="{Binding Volume}">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Volume, StringFormat=n0}" HorizontalAlignment="Right" Foreground="{Binding Volume, Converter={StaticResource ForegroundConverter}, ConverterParameter={StaticResource VolumeRange} }" FontWeight="{Binding Volume, Converter={StaticResource FontWeightConverter}, ConverterParameter={StaticResource VolumeRange} }" />
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+                <c1:Column Binding="{Binding Discontinued}" />
+                <c1:Column Binding="{Binding Rating, StringFormat=n0}" HorizontalAlignment="Center" />
+            </c1:C1FlexGrid.Columns>
+        </c1:C1FlexGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="StockAnalysis.Partial.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:cc ="clr-namespace:StockAnalysis.Partial.CustomControls"
+        xmlns:local="clr-namespace:StockAnalysis.Partial"
+        mc:Ignorable="d"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize"
+        Background="{StaticResource PaperWhite1000}"
+        Height="320" Width="300" Title="{Binding Key}" DataContext="{Binding RelativeSource={RelativeSource Self}}" >
+    <StackPanel Margin="0, 15">
+        <!--<TextBlock Grid.Row="0" Text="{Binding Key}"
+                   FontWeight="Bold" FontSize="18"
+                   HorizontalAlignment="Center" Margin="0,0,0,15" />-->
+        <cc:SettingList ItemsSource="{Binding ItemSource}" VerticalAlignment="Top" SizeChanged="SettingList_SizeChanged" />
+        <cc:FlatButton Content="DONE"
+                       Margin="20, 5" HorizontalAlignment="Center" Padding="20, 5"
+            IsCancel="True" SnapsToDevicePixels="True" />
+    </StackPanel>
+</Window>

@@ -1,0 +1,54 @@
+﻿<local:MainViewModel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                          xmlns:local="clr-namespace:ControlExplorer">
+    <local:MainViewModel.Controls>
+        <local:ControlDescription Name="Accordion"/>
+        <local:ControlDescription Name="Bitmap"/>
+        <local:ControlDescription Name="Book"/>
+        <local:ControlDescription Name="Calendar"/>
+        <local:ControlDescription Name="Carousel"/>
+        <local:ControlDescription Name="Chart"/>
+        <local:ControlDescription Name="Chart3D"/>
+        <local:ControlDescription Name="ColorPicker"/>
+        <local:ControlDescription Name="ComboBox"/>
+        <local:ControlDescription Name="ContextMenu"/>
+        <local:ControlDescription Name="CoverFlow"/>
+        <local:ControlDescription Name="Data"/>
+        <local:ControlDescription Name="DataGrid" Description="Rich DataGrid with advanced features for displaying, analysing, and editing tabular data."/>
+        <local:ControlDescription Name="DateTime Editors"/>
+        <local:ControlDescription Name="DockControl"/>
+        <local:ControlDescription Name="DragDropManager"/>
+        <local:ControlDescription Name="DropDown"/>
+        <local:ControlDescription Name="Excel"/>
+        <local:ControlDescription Name="Expander"/>
+        <local:ControlDescription Name="FilePicker"/>
+        <local:ControlDescription Name="FlexGrid"/>
+        <local:ControlDescription Name="Gauges"/>
+        <local:ControlDescription Name="HtmlHost"/>
+        <local:ControlDescription Name="HyperPanel"/>
+        <local:ControlDescription Name="Image"/>
+        <local:ControlDescription Name="Layout Panels"/>
+        <local:ControlDescription Name="Maps"/>
+        <local:ControlDescription Name="MaskedTextBox"/>
+        <local:ControlDescription Name="MediaPlayer"/>
+        <local:ControlDescription Name="Menu"/>
+        <local:ControlDescription Name="NumericBox"/>
+        <local:ControlDescription Name="OutlookBar"/>
+        <local:ControlDescription Name="Pdf"/>
+        <local:ControlDescription Name="PdfViewer"/>
+        <local:ControlDescription Name="PropertyGrid"/>
+        <local:ControlDescription Name="RangeSlider"/>
+        <local:ControlDescription Name="Reflector"/>
+        <local:ControlDescription Name="ReportViewer"/>
+        <local:ControlDescription Name="RichTextBox"/>
+        <local:ControlDescription Name="Scheduler"/>
+        <local:ControlDescription Name="SpellChecker"/>
+        <local:ControlDescription Name="TabControl"/>
+        <local:ControlDescription Name="Toolbar"/>
+        <local:ControlDescription Name="Themes"/>
+        <local:ControlDescription Name="TileView"/>
+        <local:ControlDescription Name="TreeView"/>
+        <local:ControlDescription Name="Uploader"/>
+        <local:ControlDescription Name="Windows"/>
+    </local:MainViewModel.Controls>
+</local:MainViewModel>

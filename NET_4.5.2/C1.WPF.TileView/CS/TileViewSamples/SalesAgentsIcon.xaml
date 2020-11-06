@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="TileViewSamples.SalesAgentsIcon" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="400" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+
+    <Grid HorizontalAlignment="Right" Margin="10,6,15,6" Width="38" Height="38">
+        <Ellipse Fill="#FF507494" Stroke="Black" StrokeThickness="0" Height="20" Margin="9,-1,9,0" VerticalAlignment="Top" />
+        <Path Fill="#FF507494" Stretch="Fill" Stroke="Black" StrokeThickness="0" Margin="2,18.083,2,-1.031" Data="M32,18.5 C32,18.5 0,18.5 0,18.5 C0,8.282732 -5.2903476,0 16,0 C37.388386,0 32,8.282732 32,18.5 z" />
+        <Ellipse Fill="White" Stroke="Black" StrokeThickness="0" Height="16" Margin="11,1,11,0" VerticalAlignment="Top" />
+        <Ellipse Stroke="Black" StrokeThickness="0" Height="12" Margin="12,3,12,0" VerticalAlignment="Top" Width="12">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.7,0.528" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF4E3B6" Offset="0" />
+                    <GradientStop Color="#FFE6C29F" Offset="1" />
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Path Fill="White" Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="17" Margin="3.4,0,3.4,1" VerticalAlignment="Bottom" Data="M32,18.5 C32,18.5 0,18.5 0,18.5 C0,8.282732 -5.2903476,0 16,0 C37.388386,0 32,8.282732 32,18.5 z" />
+        <Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="12.75" Margin="5,0,4.973,3.208" VerticalAlignment="Bottom" Data="M32,18.5 C32,18.5 0,18.5 0,18.5 C0,8.282732 -5.2903476,0 16,0 C37.388386,0 32,8.282732 32,18.5 z">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.406,0.859" StartPoint="0.209,0.075">
+                    <GradientStop Color="#FF89B9E7" />
+                    <GradientStop Color="#FF4775A9" Offset="1" />
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Fill="White" Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="15.884" VerticalAlignment="Bottom" Data="M16.702024,21.451406 L14.94964,22.675219 L16.690578,25.907257 C16.690578,25.907257 12.926277,29.430058 14.676734,32.92128 C15.315234,34.194744 15.748629,35.272137 16.627508,36.051136 C16.627508,36.051136 19.120314,36.143234 19.120314,36.143234 C19.120314,36.143234 20.003286,35.099487 21.053705,32.837067 C22.670065,29.355713 19.188257,25.906961 19.188257,25.906961 L21.253296,22.716232 L19.47146,21.402668 z" Margin="14.194,0,14.312,2.062" />
+        <Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="14.7" Margin="16.053,0,15.988,3.208" VerticalAlignment="Bottom" Data="M19.21393,21.432089 L17.099844,22.882702 L18.840807,25.908079 C18.840807,25.908079 16.768415,28.353247 16.31225,29.347891 C15.939325,30.161036 15.910511,31.697802 16.60247,33.036366 C17.223873,34.238441 17.846062,35.02515 18.053305,35.149479 C18.260548,35.273804 19.918484,35.273815 20.04283,35.14949 C20.167175,35.025166 20.788828,34.113895 21.368925,32.912033 C21.955721,31.696293 22.363707,30.674082 21.576241,29.099228 C20.788774,27.524374 19.379684,25.908079 19.379684,25.908079 L21.369005,22.882702 z">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCBEC05" Offset="0" />
+                    <GradientStop Color="#FF5B9200" Offset="1" />
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+    </Grid>
+</UserControl>

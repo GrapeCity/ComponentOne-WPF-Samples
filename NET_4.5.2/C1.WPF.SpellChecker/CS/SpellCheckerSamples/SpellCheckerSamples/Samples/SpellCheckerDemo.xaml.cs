@@ -1,0 +1,294 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using C1.WPF.SpellChecker;
+using System.Reflection;
+using System.IO;
+using System.ComponentModel;
+using C1.WPF;
+using System.Net;
+
+namespace SpellCheckerSamples
+{
+    /// <summary>
+    /// Interaction logic for SpellCheckerDemo.xaml
+    /// </summary>
+    public partial class SpellCheckerDemo : UserControl
+    {
+        // declare the C1SpellChecker
+        C1SpellChecker _c1SpellChecker = new C1SpellChecker();
+
+        public SpellCheckerDemo()
+        {
+            InitializeComponent();
+            Loaded += Page_Loaded;
+            Unloaded += Page_Unloaded;
+        }
+
+        void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            // connect toolbar to C1RichTextBox
+            _rtbToolbar.RichTextBox = _richTextBox;
+            _richTextBox.SpellChecker = _c1SpellChecker;
+
+            // bind DataGrid
+            _dataGrid.ItemsSource = Beatle.GetBeatles();
+
+            // load sample text into text boxes
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SpellCheckerSamples.Resources.test.txt"))
+            using (var sr = new StreamReader(stream))
+            {
+                var text = sr.ReadToEnd();
+                _plainTextBox.Text = text;
+                _richTextBox.Text = text;
+            }
+
+            // set up ignore list
+            WordList il = _c1SpellChecker.IgnoreList;
+            il.Add("ComponentOne");
+            il.Add("Silverlight");
+
+            // monitor events
+            _c1SpellChecker.BadWordFound += _c1SpellChecker_BadWordFound;
+            _c1SpellChecker.CheckControlCompleted += _c1SpellChecker_CheckControlCompleted;
+
+            // load main dictionary
+            if (_c1SpellChecker.MainDictionary.State != DictionaryState.Loaded)
+                _c1SpellChecker.MainDictionary.Load(Application.GetResourceStream(new Uri("/" + new AssemblyName(Assembly.GetExecutingAssembly().FullName).Name + ";component/Resources/C1Spell_en-US.dct", UriKind.Relative)).Stream);
+            if (_c1SpellChecker.MainDictionary.State == DictionaryState.Loaded)
+            {
+                _btnBatch.IsEnabled = _btnModal.IsEnabled = true;
+                WriteLine("loaded main dictionary ({0:n0} words).", _c1SpellChecker.MainDictionary.WordCount);
+            }
+            else
+            {
+                WriteLine("failed to load dictionary: {0}", _c1SpellChecker.MainDictionary.State);                    
+            }
+            // load user dictionary
+            //UserDictionary ud = _c1SpellChecker.UserDictionary;
+            //ud.LoadFromIsolatedStorage("Custom.dct");
+
+            // save user dictionary when app exits
+            App.Current.Exit += App_Exit;
+
+            _cmbControl.SelectedIndex = 0;
+            // set focus to textbox
+            //_plainTextBox.Focus();
+        }
+
+        void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            _c1SpellChecker.BadWordFound -= _c1SpellChecker_BadWordFound;
+            _c1SpellChecker.CheckControlCompleted -= _c1SpellChecker_CheckControlCompleted;
+            
+        }
+
+        // app closing, save modified user dictionary into compressed isolated storage
+        void App_Exit(object sender, EventArgs e)
+        {
+            //UserDictionary ud = _c1SpellChecker.UserDictionary;
+            //ud.SaveToIsolatedStorage("Custom.dct");
+            
+        }
+
+        //------------------------------------------------------------
+        #region ** batch spell-checking
+
+        private void _btnBatch_Click(object sender, RoutedEventArgs e)
+        {
+            // check a word
+            foreach (string word in "yes;no;yesno;do;don't;ain't;aint".Split(';'))
+            {
+                WriteLine("CheckWord(\"{0}\") = {1}", word, _c1SpellChecker.CheckWord(word));
+            }
+
+            // check some text
+            var someText = "this text comtains two errrors.";
+            var errors = _c1SpellChecker.CheckText(someText);
+            WriteLine("CheckText(\"{0}\") =", someText);
+            foreach (var error in errors)
+            {
+                WriteLine("\t{0}, {1}-{2}", error.Text, error.Start, error.Length);
+                foreach (string suggestion in _c1SpellChecker.GetSuggestions(error.Text, 1000))
+                {
+                    WriteLine("\t\t{0}?", suggestion);
+                }
+            }
+
+            // get suggestions
+            var badWord = "traim";
+            WriteLine("GetSuggestions(\"{0}\")", badWord);
+            foreach (string suggestion in _c1SpellChecker.GetSuggestions(badWord, 1000))
+            {
+                WriteLine("\t{0}?", suggestion);
+            }
+        }
+
+        #endregion
+
+        //------------------------------------------------------------
+        #region ** modal spell-checking
+
+        private void _btnModal_Click(object sender, RoutedEventArgs e)
+        {
+            // select control to spell-check
+            object editor = null;
+            switch (_cmbControl.SelectedIndex)
+            {
+                case 0:
+                    editor = _plainTextBox;
+                    break;
+                case 1:
+                    editor = _richTextBox;
+                    break;
+                case 2:
+                    editor = new DataGridSpellWrapper(_dataGrid);
+                    break;
+            }
+
+            // select type of modal dialog to use
+            C1Window dialog = null;
+            switch (_cmbDialog.SelectedIndex)
+            {
+                // C1SpellChecker built-in dialog
+                case 0:
+                    dialog = new C1SpellDialog();
+                    break;
+
+                // Customized C1SpellChecker built-in dialog
+                case 1:
+                    dialog = new C1SpellDialog();
+                    dialog.Header = "Customized Caption!";
+                    break;
+
+                // Standard dialog
+                case 2:
+                    dialog = new StandardSpellDialog();
+                    break;
+
+                // Word-style dialog
+                case 3:
+                    dialog = new WordSpellDialog();
+                    break;
+            }
+
+            // spell-check the control
+            _c1SpellChecker.CheckControlAsync(editor, false, (ISpellDialog)dialog);
+        }
+
+        #endregion
+
+        //------------------------------------------------------------
+        #region ** event handlers
+
+        // select control being displayed/spell-checked
+        private void _cmbControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_cmbControl != null)
+            {
+                int index = _cmbControl.SelectedIndex;
+
+                // set visibility
+                _plainTextBox.Visibility = index == 0 ? Visibility.Visible : Visibility.Collapsed;
+                _richTextBoxPanel.Visibility = index == 1 ? Visibility.Visible : Visibility.Collapsed;
+                _dataGrid.Visibility = index == 2 ? Visibility.Visible : Visibility.Collapsed;
+
+                // set focus
+                switch (index)
+                {
+                    case 0:
+                        _plainTextBox.Focus();
+                        break;
+                    case 1:
+                        _richTextBox.Focus();
+                        break;
+                    case 2:
+                        _dataGrid.Focus();
+                        break;
+                }
+            }
+        }
+
+        // monitor spell-checker events
+        void _c1SpellChecker_CheckControlCompleted(object sender, CheckControlCompletedEventArgs e)
+        {
+            if (!e.Cancelled)
+            {
+                var msg = string.Format("Spell-check complete, {0} errors found.", e.ErrorCount);
+                C1MessageBox.Show(msg, "Spelling");
+            }
+            WriteLine("CheckControlCompleted: {0} errors found", e.ErrorCount);
+            if (e.Cancelled)
+            {
+                WriteLine("\t(cancelled...)");
+            }
+        }
+        void _c1SpellChecker_BadWordFound(object sender, BadWordEventArgs e)
+        {
+            WriteLine("BadWordFound: \"{0}\" {1}", e.BadWord.Text, e.BadWord.Duplicate ? "(duplicate)" : string.Empty);
+        }
+
+        // keep text selected while spell-checking dialog is open
+        private void _plainTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        #endregion
+
+        //------------------------------------------------------------
+        #region ** utilities
+
+        // trace execution
+        void WriteLine(string format, params object[] args)
+        {
+            WriteLine(string.Format(format, args));
+        }
+        void WriteLine(string text)
+        {
+            _outputTextBox.Text += text + "\r\n";
+        }
+
+        // helper class used for binding to the DataGrid
+        public class Beatle : INotifyPropertyChanged
+        {
+            string _name, _comments;
+
+
+            Beatle()
+            {
+            }
+            public string Name { get { return _name; } set { _name = value; if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Name")); } }
+            public string Comments { get { return _comments; } set { _comments = value; if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Comments")); } }
+            public static List<Beatle> GetBeatles()
+            {
+                var list = new List<Beatle>();
+                list.Add(new Beatle { Name = "Paul McCartney", Comments = "Great songriter, bass playier, singer" });
+                list.Add(new Beatle { Name = "John Lennon", Comments = "Great songriter, gitar playier, excelent singer" });
+                list.Add(new Beatle { Name = "Ringo Starr", Comments = "Great drummmer" });
+                list.Add(new Beatle { Name = "George Harrison", Comments = "Great guiter player, songriter, vocallist" });
+                return list;
+            }
+
+            #region INotifyPropertyChanged Members
+
+            public event PropertyChangedEventHandler PropertyChanged;
+
+            #endregion
+        }
+        #endregion
+
+        
+    }
+}

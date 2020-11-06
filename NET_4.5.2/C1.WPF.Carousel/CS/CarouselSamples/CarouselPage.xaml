@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="CarouselSamples.CarouselPage" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="400" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:c1car="clr-namespace:C1.WPF.Carousel;assembly=C1.WPF.Carousel.4.5.2">
+    <UserControl.Resources>
+        <!--<ItemsPanelTemplate x:Key="carouselPanelTemplate">
+            <c1car:C1CarouselPanel Background="Yellow" />
+        </ItemsPanelTemplate>-->
+        <ItemsPanelTemplate x:Key="carouselPanelTemplate">
+            <c1car:C1CarouselPanel Padding="0, 10, 50, 50" VerticalPathAlignment="Center" HorizontalItemAnchorOnPath="Center" VerticalItemAnchorOnPath="Center" />
+        </ItemsPanelTemplate>
+
+        <DataTemplate x:Key="carouselItemTemplate">
+            <Image Source="{Binding}" Stretch="None" />
+        </DataTemplate>
+        
+        <Style x:Key="circlePanelStyle" TargetType="ListBox">
+            <Setter Property="c1car:C1CarouselPanel.PathGeometry" Value="F1 M 466.829,27.2642C 635.339,35.6577 762.667,98.3819 762.667,173C 762.667,254.002 613.428,319.667 429.333,319.667C 245.238,319.667 96,254.002 96,173C 96,98.0584 224.402,35.1712 393.751,27.1714" />
+            <Setter Property="c1car:C1CarouselPanel.HorizontalPathAlignment" Value="Left" />
+            <Setter Property="c1car:C1CarouselPanel.VerticalPathAlignment" Value="Top" />
+            <Setter Property="c1car:C1CarouselPanel.PerspectiveAngle" Value="55" />
+            <Setter Property="c1car:C1CarouselPanel.PerspectiveFactor" Value="0.4" />
+        </Style>
+
+        <Style x:Key="parabolaPanelStyle" TargetType="ListBox">
+            <Setter Property="c1car:C1CarouselPanel.PathGeometry" Value="F1 M 164.564,73.0518C 201.647,164.183 238.73,255.315 284.817,323.23C 330.903,391.146 385.993,435.845 445.921,431.137C 505.849,426.43 570.614,372.315 614.53,304.361C 658.446,236.407 681.512,154.614 704.578,72.8207" />
+            <Setter Property="c1car:C1CarouselPanel.HorizontalPathAlignment" Value="Left" />
+            <Setter Property="c1car:C1CarouselPanel.VerticalPathAlignment" Value="Top" />
+            <Setter Property="c1car:C1CarouselPanel.PerspectiveAngle" Value="90" />
+            <Setter Property="c1car:C1CarouselPanel.PerspectiveFactor" Value="-0.317" />
+        </Style>
+
+        <Style x:Key="zigzagPanelStyle" TargetType="ListBox">
+            <Setter Property="c1car:C1CarouselPanel.PathGeometry" Value="F1 M 259.228,50.3333C 361.691,64.8311 464.153,79.3289 525.213,93.8267C 586.274,108.324 605.932,122.822 607.421,137.32C 608.911,151.818 592.231,166.316 566.913,176.05C 541.595,185.784 507.64,190.755 440.027,198.004C 372.413,205.252 271.142,214.78 216.039,226.171C 160.936,237.562 152,250.817 152,263.244C 152,275.67 160.936,287.268 191.615,299.281C 222.294,311.293 274.717,323.72 328.331,331.59C 381.945,339.46 436.75,342.774 492.449,346.916C 548.148,351.059 604.741,356.029 661.333,361" />
+            <Setter Property="c1car:C1CarouselPanel.HorizontalPathAlignment" Value="Left" />
+            <Setter Property="c1car:C1CarouselPanel.VerticalPathAlignment" Value="Top" />
+            <Setter Property="c1car:C1CarouselPanel.PerspectiveAngle" Value="31" />
+            <Setter Property="c1car:C1CarouselPanel.PerspectiveFactor" Value="1.08" />
+        </Style>
+
+        <Style x:Key="diagonalPanelStyle" TargetType="ListBox">
+            <Setter Property="c1car:C1CarouselPanel.PathGeometry" Value="M 216, 60 L 600, 390" />
+            <Setter Property="c1car:C1CarouselPanel.HorizontalPathAlignment" Value="Left" />
+            <Setter Property="c1car:C1CarouselPanel.VerticalPathAlignment" Value="Top" />
+            <Setter Property="c1car:C1CarouselPanel.PerspectiveAngle" Value="65" />
+            <Setter Property="c1car:C1CarouselPanel.PerspectiveFactor" Value="0.12" />
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Padding="5" Margin="0 0 0 10">
+    		<StackPanel Orientation="Horizontal">
+    			<TextBlock Grid.Column="0" Foreground="White" VerticalAlignment="Center" Margin="0,0,5,0"><Run Text="Select a predefined configuration:" /></TextBlock>
+    			<ComboBox x:Name="panelList" SelectedIndex="0" SelectionChanged="panelList_SelectionChanged" HorizontalAlignment="Left" MinWidth="150" MaxWidth="250" VerticalAlignment="Top">
+    				<ComboBoxItem Tag="circlePanelStyle" Content="Ellipse" />
+    				<ComboBoxItem Tag="parabolaPanelStyle" Content="Parabola" />
+    				<ComboBoxItem Tag="zigzagPanelStyle" Content="Zigzag" />
+    				<ComboBoxItem Tag="diagonalPanelStyle" Content="Diagonal" />
+    			</ComboBox>
+    		</StackPanel>
+    	</Border>
+        <ListBox Background="Transparent" x:Name="carouselListBox" Grid.Row="1" ItemsPanel="{StaticResource carouselPanelTemplate}" ItemTemplate="{StaticResource carouselItemTemplate}" Style="{StaticResource circlePanelStyle}" BorderThickness="0" />
+    </Grid>
+</UserControl>

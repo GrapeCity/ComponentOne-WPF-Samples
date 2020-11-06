@@ -1,0 +1,93 @@
+﻿<Window x:Class="ComboBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ComboBox"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="350" Width="800" >
+  
+  <Window.Resources>
+
+    <!-- our ViewModel -->
+    <local:ViewModel x:Key="_vm" />
+
+    <!-- flat combo style -->
+    <Style TargetType="{x:Type ComboBox}">
+      <Setter Property="HorizontalAlignment" Value="Stretch"/>
+      <Setter Property="VerticalAlignment" Value="Stretch"/>
+      <Setter Property="UIElement.SnapsToDevicePixels" Value="True"/>
+      <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+      <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+      <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+      <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}"/>
+      <Setter Property="BorderBrush" Value="Transparent"/>
+      <Setter Property="BorderThickness" Value="0" />
+      <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+  </Window.Resources>
+
+  <Grid DataContext="{StaticResource _vm}">
+    
+    <c1:C1FlexGrid
+      Name="_flex"
+      ItemsSource="{Binding Products}"
+      AutoGenerateColumns="False">
+      <c1:C1FlexGrid.Columns>
+        <c1:Column Header="Product Name" Binding="{Binding ProductName}" Width="200" />
+        
+        <!-- 
+          Category column uses a CellEditingTemplate with a ComboBox.
+          The ComboBox uses an ItemTemplate to show images and text.
+          The ComboBox has IsSynchronizedWithCurrentItem=false to keep it from 
+          changing the selected item in the single "Categories" collection.
+          -->
+        <c1:Column Header="Category" Width="200" >
+          <c1:Column.CellTemplate>
+            <DataTemplate>
+              <Grid Margin="4 0">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="25"/>
+                  <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Category.Picture}" />
+                <TextBlock Grid.Column="1" Margin="4 0 0 0" VerticalAlignment="Center" Text="{Binding Category.CategoryName}" />
+              </Grid>
+            </DataTemplate>
+          </c1:Column.CellTemplate>
+          <c1:Column.CellEditingTemplate>
+            <DataTemplate>
+              <ComboBox
+                ItemsSource="{Binding Categories, Source={StaticResource _vm}}"
+                SelectedValue="{Binding Category}"
+                IsSynchronizedWithCurrentItem="False" >
+                <ComboBox.ItemTemplate>
+                  <DataTemplate>
+                    <Grid>
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition />
+                      </Grid.ColumnDefinitions>
+                      <Image Source="{Binding Picture}" />
+                      <TextBlock Grid.Column="1" Margin="4 0 0 0" VerticalAlignment="Center" Text="{Binding CategoryName}" />
+                    </Grid>
+                  </DataTemplate>
+                </ComboBox.ItemTemplate>
+              </ComboBox>
+            </DataTemplate>
+          </c1:Column.CellEditingTemplate>
+        </c1:Column>
+
+        <!-- 
+          Show CategoryID column to demonstrate that the combo works 
+          and to allow sorting by category.
+          -->
+        <c1:Column Header="Category ID" Binding="{Binding CategoryID, Mode=OneWay}" HorizontalAlignment="Right"/>
+
+        <c1:Column Header="Quantity Per Unit" Binding="{Binding QuantityPerUnit}" Width="150"/>
+        <c1:Column Header="Unit Price" Binding="{Binding UnitPrice, StringFormat=n2}" HorizontalAlignment="Right"/>
+        <c1:Column Header="Discontinued" Binding="{Binding Discontinued}" />
+      </c1:C1FlexGrid.Columns>
+    </c1:C1FlexGrid>
+  </Grid>
+</Window>

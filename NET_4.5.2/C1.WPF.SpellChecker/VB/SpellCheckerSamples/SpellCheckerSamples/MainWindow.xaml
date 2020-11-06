@@ -1,0 +1,17 @@
+﻿<Window x:Class="SpellCheckerSamples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SpellCheckerSamples"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        Title="C1SpellChecker Samples" Height="500" Width="700">
+    <Grid>
+        <c1:C1TabControl UnselectedContentMode="OutsideVisualTree">
+            <c1:C1TabItem Header="See it in action">
+                <local:SpellCheckerDemo />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Multilanguage">
+                <local:MultiLanguageDemo />
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+    </Grid>
+</Window>

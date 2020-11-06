@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="MainTestApplication.SearchBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <Grid x:Name="LayoutRoot" >
+        <Border 
+            x:Name="_border"
+            Background="White"
+        BorderBrush="LightGray"
+        BorderThickness="1 1 2 2"
+            CornerRadius="8"
+            Padding="6 0" >
+            <StackPanel Orientation="Horizontal" >
+                <Image 
+                    x:Name="_imgSearch" 
+                    Source="resources/search.png" 
+                    Stretch="None" />
+                <TextBox 
+                    x:Name="_txtSearch" 
+                    Text="Search" 
+                    Width="160" 
+                    BorderThickness="0"
+                    VerticalContentAlignment="Center"
+                    TextChanged="_txtSearch_TextChanged" />
+                <Image 
+                    x:Name="_imgClear" 
+                    Source="resources/clear.png" 
+                    Stretch="None" 
+                    MouseLeftButtonDown="_imgClear_MouseLeftButtonDown" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

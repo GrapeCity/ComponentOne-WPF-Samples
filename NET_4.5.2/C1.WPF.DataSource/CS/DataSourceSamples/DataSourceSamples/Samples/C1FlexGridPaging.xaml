@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="DataSourceSamples.C1FlexGridPaging"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DataSourceSamples">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <c1:C1DataSource Name="c1DataSource1" ContextType="local:NORTHWNDEntities">
+            <!-- Setting the PageSize property value enables paging in an EntityViewSource. -->
+            <c1:EntityViewSource EntitySetName="Orders" PageSize="10"/>
+        </c1:C1DataSource>
+
+        <c1:C1FlexGrid AutoGenerateColumns="True" Name="dataGrid1" ItemsSource="{Binding ElementName=c1DataSource1, Path=Orders}" >
+            <!-- This control handler converts navigation property columns, such as Customer, to lookup columns. -->
+            <c1:C1DataSource.ControlHandler>
+                <c1:ControlHandler AutoLookup="True"/>
+            </c1:C1DataSource.ControlHandler>
+        </c1:C1FlexGrid>
+
+        <!-- Controls that display and change the current page index. -->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="2">
+            <Button Padding="10,0,10,0" Margin="1" Content="&lt;" Click="MoveToPrevPage"/>
+            <TextBlock VerticalAlignment="Center" Text="Page: "/>
+            <TextBlock VerticalAlignment="Center" x:Name="pageInfo"/>
+            <Button Padding="10,0,10,0" Margin="1"  Content="&gt;" Click="MoveToNextPage"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

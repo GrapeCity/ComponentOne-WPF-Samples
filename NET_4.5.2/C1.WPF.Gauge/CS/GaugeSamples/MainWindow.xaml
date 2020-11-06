@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="GaugeSamples.MainWindow" Title="MainWindow" WindowStartupLocation="CenterScreen" Height="600" Width="800" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:local="clr-namespace:GaugeSamples">
+    <Grid>
+        <c1:C1TabControl Name="c1TabControl1" UnselectedContentMode="Collapsed">
+            <c1:C1TabItem Header="C1Knob">
+                <local:C1KnobPage />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="C1RegionKnob">
+                <local:C1RegionKnobPage />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="C1LinearGauge">
+                <local:DemoLinearGauge />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="C1RulerGauge">
+                <local:C1RulerGaugePage />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="C1RadialGauge">
+                <local:DemoRadialGauge />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="C1SpeedometerGauge">
+                <local:C1SpeedometerGaugePage />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="C1VolumeGauge">
+                <local:C1VolumeGaugePage />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Clock">
+                <local:ClockPage />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Automobile">
+                <local:SpeedometersPage />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Rule">
+                <local:RuleUserControl />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Thermometer">
+                <local:ThermometerUserControl />
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+    </Grid>
+</Window>

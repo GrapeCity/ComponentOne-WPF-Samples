@@ -1,0 +1,69 @@
+﻿<UserControl  x:Class="ChartSamples.InteractiveChart"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Foreground="#FFF0F8FE">
+  <UserControl.Resources>
+    <SolidColorBrush x:Key="CE_SampleForeground" Color="#FFF0F8FE"/>
+    <Style x:Key="CE_SampleText" TargetType="TextBlock">
+      <Setter Property="VerticalAlignment" Value="Center" />
+      <Setter Property="TextWrapping" Value="Wrap" />
+      <Setter Property="Foreground" Value="#FFF0F8FE" />
+      <Setter Property="FontFamily" Value="Portable User Interface" />
+      <Setter Property="FontSize" Value="11" />
+    </Style>
+    <Style x:Key="CE_SampleChart" TargetType="c1:C1Chart">
+      <Setter Property="Foreground" Value="#FFF0F8FE" />
+      <Setter Property="Background" Value="#ff071D2E" />
+      <Setter Property="BorderBrush" Value="#FF8FB4CC" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="Padding" Value="10" />
+    </Style>
+  </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" >
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition />
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+        <StackPanel Margin="4" Orientation="Horizontal" VerticalAlignment="Center" >
+          <TextBlock VerticalAlignment="Center" Text="Axis:" Foreground="{StaticResource CE_SampleForeground}" Margin="4"/>
+          <RadioButton VerticalAlignment="Center" Margin="4" x:Name="rbX" Content="X" Checked="rb_Checked" />
+          <RadioButton VerticalAlignment="Center" Margin="4" x:Name="rbY" Content="Y" Checked="rb_Checked" />
+          <RadioButton VerticalAlignment="Center" Margin="4" x:Name="rbXY" Content="XY" Checked="rb_Checked" IsChecked="true" Foreground="{StaticResource CE_SampleForeground}" />
+          <Button VerticalAlignment="Center" Margin="16,4" Content="ZoomOut" Click="Button_Click" Foreground="Black" Height="20"/>
+        </StackPanel>
+      <c1:C1Chart Grid.Row="1" x:Name="c1chart" ChartType="Line" Palette="Flow" Style="{StaticResource CE_SampleChart}">
+        <c1:C1Chart.Actions>
+          <c1:ZoomAction Fill="#50ffffff" />
+          <c1:TranslateAction Modifiers="Shift" />
+          <c1:ScaleAction Modifiers="Control" />
+        </c1:C1Chart.Actions>
+      <c1:C1Chart.View>
+        <c1:ChartView Margin="50,10,10,50">
+          <c1:ChartView.AxisX>
+            <c1:Axis>
+              <c1:Axis.ScrollBar>
+                <c1:AxisScrollBar Visibility="Collapsed"/>
+              </c1:Axis.ScrollBar>
+            </c1:Axis>
+          </c1:ChartView.AxisX>
+          <c1:ChartView.AxisY>
+            <c1:Axis>
+              <c1:Axis.ScrollBar>
+                <c1:AxisScrollBar Visibility="Collapsed" />
+              </c1:Axis.ScrollBar>
+            </c1:Axis>
+          </c1:ChartView.AxisY>
+        </c1:ChartView>
+      </c1:C1Chart.View>
+        <c1:C1ChartLegend Grid.Row="1" x:Name="legend" Foreground="{StaticResource CE_SampleForeground}"/>
+      </c1:C1Chart>
+
+    <StackPanel Orientation="Vertical" Grid.Row="2" Margin="4" Cursor="Hand">
+      <TextBlock Style="{StaticResource CE_SampleText}">Mouse button - zoom </TextBlock>
+      <TextBlock Style="{StaticResource CE_SampleText}">Ctrl + Mouse button - scale </TextBlock>
+      <TextBlock Style="{StaticResource CE_SampleText}">Shift + Mouse button - translate(scroll) </TextBlock>
+    </StackPanel>
+  </Grid>
+</UserControl>

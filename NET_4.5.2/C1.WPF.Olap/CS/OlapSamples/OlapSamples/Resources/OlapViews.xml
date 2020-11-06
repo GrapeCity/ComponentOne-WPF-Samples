@@ -1,0 +1,307 @@
+﻿<OlapViews>
+  
+  <C1OlapPage id="Sales by Product and Country">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="ExtendedPrice" subtotal="Sum" format="c0" />
+        <Field name="Address" subtotal="Count" />
+        <Field name="City" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="CustomerID" subtotal="Count" />
+        <Field name="Customers.CompanyName" subtotal="Count" />
+        <Field name="Discount" subtotal="Count" />
+        <Field name="Freight" subtotal="Sum" />
+        <Field name="OrderDate" subtotal="Count" />
+        <Field name="OrderID" subtotal="Count" />
+        <Field name="PostalCode" subtotal="Count" />
+        <Field name="ProductID" subtotal="Count" />
+        <Field name="ProductName" subtotal="Count" />
+        <Field name="Quantity" subtotal="Sum" />
+        <Field name="Region" subtotal="Count" />
+        <Field name="RequiredDate" subtotal="Count" />
+        <Field name="Salesperson" subtotal="Count" />
+        <Field name="ShipAddress" subtotal="Count" />
+        <Field name="ShipCity" subtotal="Count" />
+        <Field name="ShipCountry" subtotal="Count" />
+        <Field name="ShipName" subtotal="Count" />
+        <Field name="ShippedDate" subtotal="Count" />
+        <Field name="Shippers.CompanyName" subtotal="Count" />
+        <Field name="ShipPostalCode" subtotal="Count" />
+        <Field name="ShipRegion" subtotal="Count" />
+        <Field name="UnitPrice" subtotal="Sum" />
+      </Fields>
+      <RowFields>
+        <Field name="ProductName" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="Country" />
+      </ColumnFields>
+      <ValueFields MaxItems="4">
+        <Field name="ExtendedPrice" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+
+  <C1OlapPage id="Sales by Person and Country">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="ExtendedPrice" subtotal="Sum" format="c0" />
+        <Field name="Address" subtotal="Count" />
+        <Field name="City" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="CustomerID" subtotal="Count" />
+        <Field name="Customers.CompanyName" subtotal="Count" />
+        <Field name="Discount" subtotal="Count" />
+        <Field name="Freight" subtotal="Sum" />
+        <Field name="OrderDate" subtotal="Count" />
+        <Field name="OrderID" subtotal="Count" />
+        <Field name="PostalCode" subtotal="Count" />
+        <Field name="ProductID" subtotal="Count" />
+        <Field name="ProductName" subtotal="Count" />
+        <Field name="Quantity" subtotal="Sum" />
+        <Field name="Region" subtotal="Count" />
+        <Field name="RequiredDate" subtotal="Count" />
+        <Field name="Salesperson" subtotal="Count" />
+        <Field name="ShipAddress" subtotal="Count" />
+        <Field name="ShipCity" subtotal="Count" />
+        <Field name="ShipCountry" subtotal="Count" />
+        <Field name="ShipName" subtotal="Count" />
+        <Field name="ShippedDate" subtotal="Count" />
+        <Field name="Shippers.CompanyName" subtotal="Count" />
+        <Field name="ShipPostalCode" subtotal="Count" />
+        <Field name="ShipRegion" subtotal="Count" />
+        <Field name="UnitPrice" subtotal="Sum" />
+      </Fields>
+      <RowFields>
+        <Field name="Salesperson" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="Country" />
+      </ColumnFields>
+      <ValueFields MaxItems="4">
+        <Field name="ExtendedPrice" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+
+  <C1OlapPage id="Sales by Person and Month">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="ExtendedPrice" subtotal="Sum" format="c0" />
+        <Field name="Address" subtotal="Count" />
+        <Field name="City" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="CustomerID" subtotal="Count" />
+        <Field name="Customers.CompanyName" subtotal="Count" />
+        <Field name="Discount" subtotal="Count" />
+        <Field name="Freight" subtotal="Sum" />
+        <Field name="OrderDate" subtotal="Count" format="MMMM"/>
+        <Field name="OrderID" subtotal="Count" />
+        <Field name="PostalCode" subtotal="Count" />
+        <Field name="ProductID" subtotal="Count" />
+        <Field name="ProductName" subtotal="Count" />
+        <Field name="Quantity" subtotal="Sum" />
+        <Field name="Region" subtotal="Count" />
+        <Field name="RequiredDate" subtotal="Count" />
+        <Field name="Salesperson" subtotal="Count" />
+        <Field name="ShipAddress" subtotal="Count" />
+        <Field name="ShipCity" subtotal="Count" />
+        <Field name="ShipCountry" subtotal="Count" />
+        <Field name="ShipName" subtotal="Count" />
+        <Field name="ShippedDate" subtotal="Count" />
+        <Field name="Shippers.CompanyName" subtotal="Count" />
+        <Field name="ShipPostalCode" subtotal="Count" />
+        <Field name="ShipRegion" subtotal="Count" />
+        <Field name="UnitPrice" subtotal="Sum" />
+      </Fields>
+      <RowFields>
+        <Field name="Salesperson" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="OrderDate" />
+      </ColumnFields>
+      <ValueFields MaxItems="4">
+        <Field name="ExtendedPrice" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+
+  <C1OlapPage id="Sales by Person and Year">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="ExtendedPrice" subtotal="Sum" format="c0" />
+        <Field name="Address" subtotal="Count" />
+        <Field name="City" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="CustomerID" subtotal="Count" />
+        <Field name="Customers.CompanyName" subtotal="Count" />
+        <Field name="Discount" subtotal="Count" />
+        <Field name="Freight" subtotal="Sum" />
+        <Field name="OrderDate" subtotal="Count" format="yyyy"/>
+        <Field name="OrderID" subtotal="Count" />
+        <Field name="PostalCode" subtotal="Count" />
+        <Field name="ProductID" subtotal="Count" />
+        <Field name="ProductName" subtotal="Count" />
+        <Field name="Quantity" subtotal="Sum" />
+        <Field name="Region" subtotal="Count" />
+        <Field name="RequiredDate" subtotal="Count" />
+        <Field name="Salesperson" subtotal="Count" />
+        <Field name="ShipAddress" subtotal="Count" />
+        <Field name="ShipCity" subtotal="Count" />
+        <Field name="ShipCountry" subtotal="Count" />
+        <Field name="ShipName" subtotal="Count" />
+        <Field name="ShippedDate" subtotal="Count" />
+        <Field name="Shippers.CompanyName" subtotal="Count" />
+        <Field name="ShipPostalCode" subtotal="Count" />
+        <Field name="ShipRegion" subtotal="Count" />
+        <Field name="UnitPrice" subtotal="Sum" />
+      </Fields>
+      <RowFields>
+        <Field name="Salesperson" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="OrderDate" />
+      </ColumnFields>
+      <ValueFields MaxItems="4">
+        <Field name="ExtendedPrice" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+
+  <C1OlapPage id="Sales by Country, Region and Person">
+    <C1OlapEngine ShowTotalsRows="Subtotals">
+      <Fields>
+        <Field name="ExtendedPrice" subtotal="Sum" format="c0" />
+        <Field name="Address" subtotal="Count" />
+        <Field name="City" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="CustomerID" subtotal="Count" />
+        <Field name="Customers.CompanyName" subtotal="Count" />
+        <Field name="Discount" subtotal="Count" />
+        <Field name="Freight" subtotal="Sum" />
+        <Field name="OrderDate" subtotal="Count" />
+        <Field name="OrderID" subtotal="Count" />
+        <Field name="PostalCode" subtotal="Count" />
+        <Field name="ProductID" subtotal="Count" />
+        <Field name="ProductName" subtotal="Count" />
+        <Field name="Quantity" subtotal="Sum" />
+        <Field name="Region" subtotal="Count" />
+        <Field name="RequiredDate" subtotal="Count" />
+        <Field name="Salesperson" subtotal="Count" />
+        <Field name="ShipAddress" subtotal="Count" />
+        <Field name="ShipCity" subtotal="Count" />
+        <Field name="ShipCountry" subtotal="Count" />
+        <Field name="ShipName" subtotal="Count" />
+        <Field name="ShippedDate" subtotal="Count" />
+        <Field name="Shippers.CompanyName" subtotal="Count" />
+        <Field name="ShipPostalCode" subtotal="Count" />
+        <Field name="ShipRegion" subtotal="Count" />
+        <Field name="UnitPrice" subtotal="Sum" />
+      </Fields>
+      <RowFields>
+        <Field name="Country" />
+        <Field name="Region" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="Salesperson" />
+      </ColumnFields>
+      <ValueFields MaxItems="4">
+        <Field name="ExtendedPrice" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>  
+  
+  <C1OlapPage id="Sales and Quantity by Country and Person">
+    <C1OlapEngine ShowTotalsRows="Subtotals">
+      <Fields>
+        <Field name="ExtendedPrice" subtotal="Sum" format="c0" />
+        <Field name="Address" subtotal="Count" />
+        <Field name="City" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="CustomerID" subtotal="Count" />
+        <Field name="Customers.CompanyName" subtotal="Count" />
+        <Field name="Discount" subtotal="Count" />
+        <Field name="Freight" subtotal="Sum" />
+        <Field name="OrderDate" subtotal="Count" />
+        <Field name="OrderID" subtotal="Count" />
+        <Field name="PostalCode" subtotal="Count" />
+        <Field name="ProductID" subtotal="Count" />
+        <Field name="ProductName" subtotal="Count" />
+        <Field name="Quantity" subtotal="Sum" >
+          <Style back="#59FDAD05" />
+        </Field>
+        <Field name="Region" subtotal="Count" />
+        <Field name="RequiredDate" subtotal="Count" />
+        <Field name="Salesperson" subtotal="Count" />
+        <Field name="ShipAddress" subtotal="Count" />
+        <Field name="ShipCity" subtotal="Count" />
+        <Field name="ShipCountry" subtotal="Count" />
+        <Field name="ShipName" subtotal="Count" />
+        <Field name="ShippedDate" subtotal="Count" />
+        <Field name="Shippers.CompanyName" subtotal="Count" />
+        <Field name="ShipPostalCode" subtotal="Count" />
+        <Field name="ShipRegion" subtotal="Count" />
+        <Field name="UnitPrice" subtotal="Sum" />
+      </Fields>
+      <RowFields>
+        <Field name="Country" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="Salesperson" />
+      </ColumnFields>
+      <ValueFields MaxItems="4">
+        <Field name="ExtendedPrice" />
+        <Field name="Quantity" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+  
+<C1OlapPage id="Quantity Shipped by Country and Company">
+    <C1OlapEngine ShowTotalsRows="Subtotals">
+      <Fields>
+        <Field name="ExtendedPrice" subtotal="Sum" format="c0" />
+        <Field name="Address" subtotal="Count" />
+        <Field name="City" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="CustomerID" subtotal="Count" />
+        <Field name="Customers.CompanyName" subtotal="Count" />
+        <Field name="Discount" subtotal="Count" />
+        <Field name="Freight" subtotal="Sum" />
+        <Field name="OrderDate" subtotal="Count" />
+        <Field name="OrderID" subtotal="Count" />
+        <Field name="PostalCode" subtotal="Count" />
+        <Field name="ProductID" subtotal="Count" />
+        <Field name="ProductName" subtotal="Count" />
+        <Field name="Quantity" subtotal="Sum" />
+        <Field name="Region" subtotal="Count" />
+        <Field name="RequiredDate" subtotal="Count" />
+        <Field name="Salesperson" subtotal="Count" />
+        <Field name="ShipAddress" subtotal="Count" />
+        <Field name="ShipCity" subtotal="Count" />
+        <Field name="ShipCountry" subtotal="Count" />
+        <Field name="ShipName" subtotal="Count" />
+        <Field name="ShippedDate" subtotal="Count" />
+        <Field name="Shippers.CompanyName" subtotal="Count" />
+        <Field name="ShipPostalCode" subtotal="Count" />
+        <Field name="ShipRegion" subtotal="Count" />
+        <Field name="UnitPrice" subtotal="Sum" />
+      </Fields>
+      <RowFields>
+        <Field name="Country" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="Shippers.CompanyName" />
+      </ColumnFields>
+      <ValueFields MaxItems="4">
+        <Field name="Quantity" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+</OlapViews>

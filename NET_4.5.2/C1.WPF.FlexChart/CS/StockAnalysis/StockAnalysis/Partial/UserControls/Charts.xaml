@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="StockAnalysis.Partial.UserControls.Charts"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:data="clr-namespace:StockAnalysis.Data;assembly=StockAnalysis.Data"
+             xmlns:chart="clr-namespace:C1.WPF.Chart;assembly=C1.WPF.FlexChart.4.5.2"
+             xmlns:fchart="clr-namespace:C1.WPF.Chart.Finance;assembly=C1.WPF.FinancialChart.4.5.2"
+             xmlns:charti="clr-namespace:C1.WPF.Chart.Interaction;assembly=C1.WPF.FlexChart.4.5.2"
+             xmlns:uc="clr-namespace:StockAnalysis.Partial.UserControls"
+             xmlns:ci="clr-namespace:StockAnalysis.Partial.CustomControls.CustomIndicator"
+             xmlns:cc ="clr-namespace:StockAnalysis.Partial.CustomControls"
+             xmlns:local="clr-namespace:StockAnalysis.Partial.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" DataContext="{Binding RelativeSource={RelativeSource Self}}"
+             Background="White">
+    <Grid Visibility="{Binding Model.IsLoaded, Converter={StaticResource Boolean2VisibilityConverter}}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <uc:IntegratedChart x:Name="integratedChart" 
+                Min="{Binding ElementName=rangeSelector, Path=LowerValue}"
+                Max="{Binding ElementName=rangeSelector, Path=UpperValue}" />
+
+            <fchart:C1FinancialChart x:Name="rangeChart" Grid.Row="1" PlotMargin="{StaticResource RangeSelectorChartMargin}" ItemsSource="{Binding Model.CurrectQuote.Data}" 
+                                 BindingX="Date" Foreground="#666666" 
+                                 RenderMode="{Binding Model.RenderMode}" >
+                <fchart:C1FinancialChart.ToolTip>
+                    <ToolTip Visibility="Collapsed" />
+                </fchart:C1FinancialChart.ToolTip>
+                <fchart:C1FinancialChart.AxisX>
+                    <chart:Axis Position="None" />
+                </fchart:C1FinancialChart.AxisX>
+                <fchart:C1FinancialChart.AxisY>
+                    <chart:Axis Position="None" />
+                </fchart:C1FinancialChart.AxisY>
+                <fchart:FinancialSeries Binding="Close">
+                    <fchart:FinancialSeries.Style>
+                        <chart:ChartStyle Fill="{StaticResource Blue500}" Stroke="{StaticResource Blue700}" StrokeThickness="1" />
+                    </fchart:FinancialSeries.Style>
+                </fchart:FinancialSeries>
+                <fchart:C1FinancialChart.Layers>
+                    <charti:C1RangeSelector x:Name="rangeSelector" LowerValue="{Binding Model.LowerValue, Mode=TwoWay}" UpperValue="{Binding Model.UpperValue, Mode=TwoWay}" />
+                </fchart:C1FinancialChart.Layers>
+            </fchart:C1FinancialChart>
+        </Grid>
+
+        <uc:KRChart x:Name="krChart" Visibility="Collapsed" Background="{StaticResource PaperWhite1000}" />
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="CubeAnalysis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowState="Maximized"
+        Title="MainWindow" Height="350" Width="525" xmlns:olap="clr-namespace:C1.WPF.Olap;assembly=C1.WPF.Olap.4.5.2" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
+            <TextBlock Text="C1.WPF.Olap: Cube Analysis" VerticalAlignment="Center" Margin="10,5" FontSize="18" FontWeight="Bold" />
+            <Button Content="Update" Margin="10,5" Width="80" Click="Button_Click" />
+            <Button Content="Cancel Update" Margin="10,5" Width="120" Click="Button_Click_1" />
+        </StackPanel>
+
+        <olap:C1OlapPage x:Name="_c1OlapPage" Grid.Row="1" />
+
+        <StackPanel x:Name="info" Grid.Row="1" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <c1:C1ProgressBar x:Name="progress" Width="250" Height="20" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" Text="Loading" Margin="0,4,4,0" FontSize="12" FontWeight="Bold"/>
+                <TextBlock x:Name="txt" HorizontalAlignment="Center" Margin="0,4,0,0" FontSize="12" FontWeight="Bold"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
+

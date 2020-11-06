@@ -1,0 +1,1082 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:chart="clr-namespace:C1.WPF.Chart;assembly=C1.WPF.FlexChart.4.5.2"
+    xmlns:fchart="clr-namespace:C1.WPF.Chart.Finance;assembly=C1.WPF.FinancialChart.4.5.2"
+    xmlns:local="clr-namespace:StockAnalysis"
+    xmlns:obj="clr-namespace:StockAnalysis.Object"
+    xmlns:cvt="clr-namespace:StockAnalysis.Converter"
+    xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.5.2"
+    xmlns:c1ext="clr-namespace:C1.WPF.Extended;assembly=C1.WPF.Extended.4.5.2"
+    xmlns:cc ="clr-namespace:StockAnalysis.Partial.CustomControls"
+    xmlns:ci="clr-namespace:StockAnalysis.Partial.CustomControls.CustomIndicator">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/StockAnalysis;component/Resources/ResourceDictionary.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="DropdownToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="ClickMode" Value="Press"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="templateRoot" Background="White" BorderBrush="White" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                        <Border x:Name="splitBorder" BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Right" SnapsToDevicePixels="True" Width="10.5" Height="6.3" Margin="8,0">
+                            <Path x:Name="Arrow" Data="F1 M 5.229,4.155 L 1.074,0.000 L 0.000,1.074 L 5.229,6.303 L 10.459,1.074 L 9.385,0.000 L 5.229,4.155 Z" Fill="#FF606060" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Stretch="Fill"/>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Fill" TargetName="Arrow" Value="#398dff"/>
+                        </Trigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ComboBox}}}" Value="true"/>
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="White"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FFABADB3"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="Transparent"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="Transparent"/>
+                        </MultiDataTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Fill" TargetName="Arrow" Value="Black"/>
+                        </MultiTrigger>
+                        
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ComboBox}}}" Value="false"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#F3F3F3" />
+                                    <!--<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                                                    <GradientStop Color="#FFECF4FC" Offset="0"/>
+                                                                    <GradientStop Color="#FFDCECFC" Offset="1"/>
+                                                                </LinearGradientBrush>-->
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FF7EB4EA"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ComboBox}}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="White"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FF7EB4EA"/>
+                            <Setter Property="Background" TargetName="splitBorder">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#F3F3F3" />
+                                    <!--<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                                                    <GradientStop Color="#FFEBF4FC" Offset="0"/>
+                                                                    <GradientStop Color="#FFDCECFC" Offset="1"/>
+                                                                </LinearGradientBrush>-->
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="#FF7EB4EA"/>
+                        </MultiDataTrigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Fill" TargetName="Arrow" Value="Black"/>
+                        </Trigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ComboBox}}}" Value="false"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#F3F3F3" />
+                                    <!--<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                                                    <GradientStop Color="#FFDAECFC" Offset="0"/>
+                                                                    <GradientStop Color="#FFC4E0FC" Offset="1"/>
+                                                                </LinearGradientBrush>-->
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FF569DE5"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ComboBox}}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="White"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FF569DE5"/>
+                            <Setter Property="Background" TargetName="splitBorder">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#F3F3F3" />
+                                    <!--<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                                                    <GradientStop Color="#FFDAEBFC" Offset="0"/>
+                                                                    <GradientStop Color="#FFC4E0FC" Offset="1"/>
+                                                                </LinearGradientBrush>-->
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="#FF569DE5"/>
+                        </MultiDataTrigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Fill" TargetName="Arrow" Value="#FFBFBFBF"/>
+                        </Trigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ComboBox}}}" Value="false"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="#FFF0F0F0"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FFD9D9D9"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ComboBox}}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="White"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FFBFBFBF"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="Transparent"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="Transparent"/>
+                        </MultiDataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:Title}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:Title}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Margin="10, 0, 0, 0" Source="{TemplateBinding IconSource}" Stretch="UniformToFill" Width="32" Height="32" VerticalAlignment="Center" SnapsToDevicePixels="True" />
+                        <ContentPresenter Grid.Column="1" VerticalAlignment="Center" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:ContentSchema}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:ContentSchema}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" MinWidth="240" MaxWidth="600" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0" Background="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="58" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Border Grid.Row="0" Background="White" BorderBrush="#E3E3E3" BorderThickness="0,0,0,1" />
+                            <ContentPresenter Grid.Row="1" Content="{TemplateBinding Nav}" />
+                        </Grid>
+                        <GridSplitter Grid.Column="0" HorizontalAlignment="Right" Width="1" Background="#E3E3E3" />
+
+                        <Grid Grid.Column="1" Background="#E3E3E3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="1" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="1" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <ContentPresenter Content="{TemplateBinding Settings}" Height="32"  />
+
+
+                            <ContentPresenter Grid.Row="2" Height="24" Content="{TemplateBinding AnnotitionsSettings}" />
+
+                            <ContentPresenter  Content="{TemplateBinding Chart}" Grid.Row="4" />
+                            
+                        </Grid>
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:DropdownMenu}">
+        <Setter Property="MaxDropDownHeight" Value="600" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="{x:Type ComboBoxItem}">
+                    <Setter Property="SnapsToDevicePixels" Value="True"/>
+                    <Setter Property="Padding" Value="15,7"/>
+                    <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}"/>
+                    <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}"/>
+                    <Setter Property="FocusVisualStyle">
+                        <Setter.Value>
+                            <Style>
+                                <Setter Property="Control.Template">
+                                    <Setter.Value>
+                                        <ControlTemplate>
+                                            <!--<Rectangle Margin="2" SnapsToDevicePixels="True" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>-->
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                                <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                                <!--<ControlTemplate.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter Property="TextElement.Foreground" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                    </Trigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="False"/>
+                                            <Condition Property="IsMouseOver" Value="True"/>
+                                            <Condition Property="IsKeyboardFocused" Value="False"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="Bd" Value="#1F26A0DA"/>
+                                        <Setter Property="BorderBrush" TargetName="Bd" Value="#A826A0DA"/>
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="True"/>
+                                            <Condition Property="IsMouseOver" Value="False"/>
+                                            <Condition Property="IsKeyboardFocused" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="Bd" Value="#3D26A0DA"/>
+                                        <Setter Property="BorderBrush" TargetName="Bd" Value="#FF26A0DA"/>
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="True"/>
+                                            <Condition Property="IsMouseOver" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="Bd" Value="#2E0080FF"/>
+                                        <Setter Property="BorderBrush" TargetName="Bd" Value="#99006CD9"/>
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="True"/>
+                                            <Condition Property="IsMouseOver" Value="False"/>
+                                            <Condition Property="IsKeyboardFocused" Value="False"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="Bd" Value="#3DDADADA"/>
+                                        <Setter Property="BorderBrush" TargetName="Bd" Value="#FFDADADA"/>
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="False"/>
+                                            <Condition Property="IsMouseOver" Value="False"/>
+                                            <Condition Property="IsKeyboardFocused" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="BorderBrush" TargetName="Bd" Value="#FF26A0DA"/>
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="False"/>
+                                            <Condition Property="IsMouseOver" Value="True"/>
+                                            <Condition Property="IsKeyboardFocused" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="Bd" Value="#5426A0DA"/>
+                                        <Setter Property="BorderBrush" TargetName="Bd" Value="#FF26A0DA"/>
+                                    </MultiTrigger>
+                                </ControlTemplate.Triggers>-->
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:DropdownMenu}">
+                    <Grid x:Name="templateRoot" SnapsToDevicePixels="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
+                        </Grid.ColumnDefinitions>
+                        <Popup x:Name="PART_Popup" AllowsTransparency="True" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Placement="Bottom">
+                            <!--<Themes:SystemDropShadowChrome x:Name="shadow" Color="Transparent" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=templateRoot}">
+                               
+                            </Themes:SystemDropShadowChrome>-->
+                            <Border x:Name="DropDownBorder" BorderThickness="0,2,0,0" CornerRadius="3" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Margin="10"  MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=toggleButton}">
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="8" Color="Black" Opacity=".24" Direction="270" RenderingBias="Quality" ShadowDepth="2" />
+                                </Border.Effect>
+
+                                <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter Margin="5,15,5,5" Content="{TemplateBinding DropdownHeader}"  />
+                                    <ScrollViewer x:Name="DropDownScrollViewer" Margin="0,0,0,15" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                                        <Grid RenderOptions.ClearTypeHint="Enabled">
+                                            <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Border>
+                        </Popup>
+                        <ToggleButton x:Name="toggleButton" Margin="0,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                            Style="{StaticResource DropdownToggleButton}" />
+
+                        <ContentPresenter TextElement.FontWeight="Normal" x:Name="displayPresenter" Margin="15,0,15,0" ContentTemplate="{TemplateBinding DisplayTemplate}" Content="{TemplateBinding Display}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" IsHitTestVisible="False" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDropDownOpen" Value="True">
+                            <Setter Property="TextElement.Foreground" TargetName="displayPresenter" Value="#398dff" />
+                        </Trigger>
+                        <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="True">
+                            <!--<Setter Property="Margin" TargetName="shadow" Value="0,0,5,5"/>
+                            <Setter Property="Color" TargetName="shadow" Value="#71000000"/>-->
+                        </Trigger>
+                        <Trigger Property="HasItems" Value="False">
+                            <Setter Property="Height" TargetName="DropDownBorder" Value="95"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsGrouping" Value="True"/>
+                                <!--<Condition>
+                                    <Condition.Value>
+                                        <System:Boolean>False</System:Boolean>
+                                    </Condition.Value>
+                                </Condition>-->
+                            </MultiTrigger.Conditions>
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+                        </MultiTrigger>
+                        <!--<Trigger Property="CanContentScroll" SourceName="DropDownScrollViewer" Value="False">
+                            <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}"/>
+                            <Setter Property="Canvas.Left" TargetName="OpaqueRect" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:NavList}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:NavList}">
+                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="0" SnapsToDevicePixels="True">
+                        <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" TargetName="Bd" Value="White"/>
+                            <Setter Property="BorderBrush" TargetName="Bd" Value="#FFD9D9D9"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsGrouping" Value="True"/>
+                                <!--<Condition>
+                                    <Condition.Value>
+                                        <System:Boolean>False</System:Boolean>
+                                    </Condition.Value>
+                                </Condition>-->
+                            </MultiTrigger.Conditions>
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="{StaticResource PaperWhite800}"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="SnapsToDevicePixels" Value="True"/>
+                    <Setter Property="Padding" Value="15,3"/>
+                    <Setter Property="FocusVisualStyle">
+                        <Setter.Value>
+                            <Style>
+                                <Setter Property="Control.Template">
+                                    <Setter.Value>
+                                        <ControlTemplate>
+                                            <Rectangle Margin="2" SnapsToDevicePixels="True" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Border x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                                    <Grid Margin="{TemplateBinding Padding}" MinHeight="24">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <ContentPresenter x:Name="contentPresenter" Margin="0,0,10,0" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                        <Border x:Name="radioButtonBorder" Grid.Column="1" Margin="10,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="100" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="True" >
+                                            <Ellipse x:Name="optionMark" Margin="3" Fill="#398dff" MinWidth="6" MinHeight="6" Opacity="0" SnapsToDevicePixels="True" />
+                                        </Border>
+                                    </Grid>
+
+
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                                        <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#398dff"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:DropdownControl}">
+        <Setter Property="MaxDropDownHeight" Value="600" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:DropdownControl}">
+                    <Grid x:Name="templateRoot" SnapsToDevicePixels="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
+                        </Grid.ColumnDefinitions>
+                        <Popup x:Name="PART_Popup" AllowsTransparency="True" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Placement="Bottom">
+
+                            <Border BorderThickness="0,2,0,0" CornerRadius="3" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Margin="10" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=toggleButton}">
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="8" Color="Black" Opacity=".24" Direction="270" RenderingBias="Quality" ShadowDepth="2" />
+                                </Border.Effect>
+
+                                <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter Margin="5,15,5,5" Content="{TemplateBinding DropdownHeader}"  />
+                                    <ScrollViewer x:Name="DropDownScrollViewer" Margin="0,0,0,15" Grid.Row="1" VerticalScrollBarVisibility="Auto" >
+                                        <Grid RenderOptions.ClearTypeHint="Enabled">
+                                            <ContentPresenter x:Name="contentPresenter" Margin="0" Content="{TemplateBinding Content}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Border>
+                        </Popup>
+                        <ToggleButton x:Name="toggleButton" Margin="0,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
+                                      Style="{StaticResource DropdownToggleButton}"/>
+                        
+                        <ContentPresenter TextElement.FontWeight="Normal" x:Name="displayPresenter" Margin="15,0,15,0" ContentTemplate="{TemplateBinding DisplayTemplate}" Content="{TemplateBinding Display}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" IsHitTestVisible="False" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDropDownOpen" Value="True">
+                            <Setter Property="TextElement.Foreground" TargetName="displayPresenter" Value="#398dff" />
+                        </Trigger>
+                        <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="True">
+                            <!--<Setter Property="Margin" TargetName="shadow" Value="0,0,5,5"/>
+                            <Setter Property="Color" TargetName="shadow" Value="#71000000"/>-->
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsGrouping" Value="True"/>
+                                <!--<Condition>
+                                    <Condition.Value>
+                                        <System:Boolean>False</System:Boolean>
+                                    </Condition.Value>
+                                </Condition>-->
+                            </MultiTrigger.Conditions>
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+                        </MultiTrigger>
+                        <!--<Trigger Property="CanContentScroll" SourceName="DropDownScrollViewer" Value="False">
+                            <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}"/>
+                            <Setter Property="Canvas.Left" TargetName="OpaqueRect" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:MyComboBox}">
+        <Setter Property="MaxDropDownHeight" Value="600" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:MyComboBox}">
+                    <Grid x:Name="templateRoot" SnapsToDevicePixels="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
+                        </Grid.ColumnDefinitions>
+                        <Popup x:Name="PART_Popup" AllowsTransparency="True" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Placement="Bottom">
+
+                            <Border BorderThickness="0,2,0,0" CornerRadius="3" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Margin="10" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=toggleButton}">
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="8" Color="Black" Opacity=".24" Direction="270" RenderingBias="Quality" ShadowDepth="2" />
+                                </Border.Effect>
+
+                                <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <ContentPresenter Margin="5,15,5,5" Content="{TemplateBinding DropdownHeader}"  />
+                                    <ScrollViewer x:Name="DropDownScrollViewer" Margin="0,0,0,15" Grid.Row="1" VerticalScrollBarVisibility="Auto" >
+                                        <Grid RenderOptions.ClearTypeHint="Enabled">
+                                            <ContentPresenter x:Name="contentPresenter" Margin="0" Content="{TemplateBinding Content}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Border>
+                        </Popup>
+                        <ToggleButton x:Name="toggleButton" Margin="0,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
+                                      Style="{StaticResource DropdownToggleButton}"/>
+
+                        <ContentPresenter TextElement.FontWeight="Normal" x:Name="displayPresenter" Margin="15,0,15,0" ContentTemplate="{TemplateBinding DisplayTemplate}" Content="{TemplateBinding Display}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" IsHitTestVisible="False" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDropDownOpen" Value="True">
+                            <Setter Property="TextElement.Foreground" TargetName="displayPresenter" Value="#398dff" />
+                        </Trigger>
+                        <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="True">
+                            <!--<Setter Property="Margin" TargetName="shadow" Value="0,0,5,5"/>
+                            <Setter Property="Color" TargetName="shadow" Value="#71000000"/>-->
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsGrouping" Value="True"/>
+                                <!--<Condition>
+                                    <Condition.Value>
+                                        <System:Boolean>False</System:Boolean>
+                                    </Condition.Value>
+                                </Condition>-->
+                            </MultiTrigger.Conditions>
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+                        </MultiTrigger>
+                        <!--<Trigger Property="CanContentScroll" SourceName="DropDownScrollViewer" Value="False">
+                            <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}"/>
+                            <Setter Property="Canvas.Left" TargetName="OpaqueRect" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:SimpleButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:SimpleButton}">
+                    <Border x:Name="border" Background="Transparent"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1" CornerRadius="4" Opacity=".8" SnapsToDevicePixels="True">
+                        <Border x:Name="innerBorder" Background="{TemplateBinding Background}"
+                            BorderBrush="Transparent"
+                            BorderThickness="1" CornerRadius="3" SnapsToDevicePixels="True">
+                            <ContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="True" />
+                        </Border>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" TargetName="border"  Value="1"/>
+                            <Setter Property="Background" TargetName="border"  Value="#F3F3F3"/>
+                            <Setter Property="BorderBrush" TargetName="border"  Value="#D3D3D3"/>
+                            <Setter Property="BorderBrush" TargetName="innerBorder">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="Transparent" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Effect" TargetName="border">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="2" Color="Black" Opacity=".16" Direction="270" RenderingBias="Quality" ShadowDepth="1" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:SettableRadioButton}">
+        <Setter Property="Background" Value="{StaticResource PaperWhite1000}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PaperWhite700}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:SettableRadioButton}">
+                    <Border x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <ContentPresenter x:Name="contentPresenter" Margin="0,0,10,0" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                            <cc:SimpleButton x:Name="setting" Grid.Column="1" Visibility="Hidden" Margin="10, 0" Background="Transparent" BorderBrush="Transparent"
+                                         Padding="4"
+                                         HorizontalAlignment="Center" VerticalAlignment="Center"
+                                         Command="{TemplateBinding SettingCommand}" CommandParameter="{TemplateBinding CommandParameter}">
+                                <Path Visibility="Visible" Data="M12,7.6c0,0.1,0,0.2,0,0.4c0,0.1-0.1,0.3-0.1,0.4c-0.1,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.2,0.2-0.3,0.3
+	c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2,0-0.3-0.1c-0.1,0-0.2,0-0.3-0.1c-0.1,0-0.3,0-0.4,0c-0.1,0-0.3,0-0.4,0.1
+	c-0.1,0-0.2,0.1-0.3,0.2C9.1,9.6,9,9.8,9,10.1c0,0.3,0,0.5,0.1,0.8c0.1,0.2,0.1,0.3,0,0.5c-0.1,0.1-0.1,0.1-0.2,0.2
+	c-0.1,0.1-0.2,0.1-0.4,0.2c-0.1,0.1-0.3,0.1-0.4,0.1C7.9,12,7.8,12,7.6,12c-0.1,0-0.2,0-0.2-0.1c-0.1-0.1-0.1-0.1-0.1-0.2h0
+	C7.2,11.5,7,11.2,6.8,11c-0.2-0.2-0.5-0.3-0.8-0.3c-0.3,0-0.6,0.1-0.8,0.3c-0.2,0.2-0.4,0.4-0.5,0.7c0,0.1-0.1,0.2-0.2,0.2
+	C4.4,12,4.3,12,4.2,12c-0.1,0-0.3,0-0.4-0.1c-0.2,0-0.3-0.1-0.5-0.2c-0.2-0.1-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.2-0.3-0.3
+	c0-0.1-0.1-0.1-0.1-0.2c0-0.1,0-0.2,0.1-0.3c0.1-0.2,0.1-0.4,0.1-0.7c0-0.3-0.1-0.5-0.3-0.7C2.4,9.2,2.2,9.1,2.1,9.1
+	c-0.2,0-0.3-0.1-0.5,0c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.2,0-0.4,0C0.6,9.1,0.5,9,0.4,8.9C0.3,8.8,0.3,8.6,0.2,8.5C0.1,8.3,0.1,8.2,0,8
+	c0-0.2,0-0.3,0-0.4c0-0.2,0.1-0.3,0.3-0.4C0.5,7.2,0.8,7,1,6.8C1.2,6.5,1.3,6.3,1.3,6c0-0.3-0.1-0.6-0.3-0.8C0.8,5,0.5,4.8,0.3,4.7
+	c-0.1,0-0.1-0.1-0.2-0.2C0,4.4,0,4.3,0,4.2C0,4.1,0,4,0.1,3.8c0-0.1,0.1-0.3,0.1-0.4c0.1-0.1,0.1-0.2,0.2-0.4C0.5,3,0.5,2.9,0.6,2.8
+	c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.1,0,0.2,0.1C1.3,2.9,1.6,3,1.8,2.9c0.3,0,0.5-0.2,0.7-0.4c0.1-0.1,0.2-0.2,0.2-0.4
+	c0-0.2,0.1-0.3,0.1-0.4c0-0.1,0-0.3,0-0.4c0-0.1,0-0.2,0-0.3c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2C2.9,0.6,3,0.5,3.1,0.4
+	c0.1-0.1,0.3-0.2,0.4-0.2C3.7,0.1,3.8,0.1,4,0c0.1,0,0.3,0,0.3,0c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.1,0.1,0.1,0.2
+	C4.8,0.6,5,0.8,5.2,0.9C5.4,1.1,5.7,1.2,6,1.2c0.3,0,0.6-0.1,0.8-0.3C7,0.8,7.2,0.6,7.2,0.3c0-0.1,0.1-0.1,0.2-0.2
+	C7.5,0,7.6,0,7.6,0C7.8,0,7.9,0,8,0.1c0.1,0,0.3,0.1,0.4,0.1c0.1,0.1,0.3,0.1,0.4,0.2C8.9,0.5,9,0.6,9.1,0.7c0,0.1,0.1,0.1,0,0.2
+	c0,0.1,0,0.1-0.1,0.2C9,1.4,8.9,1.6,9,1.9c0,0.3,0.2,0.5,0.4,0.7C9.6,2.8,9.8,3,10.1,3c0.3,0,0.6,0,0.8-0.1c0.1,0,0.2-0.1,0.3-0.1
+	c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.2,0.3,0.3,0.5C11.9,3.7,12,3.9,12,4.2c0,0.1,0,0.3-0.1,0.3c-0.1,0.1-0.1,0.1-0.2,0.2
+	C11.5,4.8,11.2,5,11,5.2c-0.2,0.2-0.3,0.5-0.3,0.8c0,0.3,0.1,0.5,0.2,0.8c0.2,0.2,0.4,0.4,0.6,0.5c0.1,0,0.1,0.1,0.2,0.1
+	C11.9,7.4,11.9,7.5,12,7.6L12,7.6z M6,8.8c0.4,0,0.8-0.1,1.1-0.2C7.4,8.4,7.7,8.2,8,8c0.3-0.3,0.5-0.6,0.6-0.9
+	C8.7,6.7,8.8,6.4,8.8,6S8.7,5.2,8.6,4.9C8.4,4.6,8.2,4.3,8,4C7.7,3.7,7.4,3.5,7.1,3.4C6.7,3.3,6.4,3.2,6,3.2c-0.4,0-0.7,0.1-1.1,0.2
+	C4.6,3.5,4.3,3.7,4,4C3.8,4.3,3.6,4.6,3.4,4.9C3.3,5.2,3.2,5.6,3.2,6c0,0.4,0.1,0.7,0.2,1.1C3.6,7.4,3.8,7.7,4,8
+	c0.3,0.3,0.5,0.5,0.9,0.6C5.2,8.7,5.6,8.8,6,8.8L6,8.8z M6,8.8" Fill="{Binding (TextElement.Foreground), ElementName=contentPresenter, Mode=OneTime}" />
+                            </cc:SimpleButton>
+
+                            <Border x:Name="radioButtonBorder" Grid.Column="2" Margin="10,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="100" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="True" >
+                                <Ellipse x:Name="optionMark" Margin="3" Fill="{StaticResource Blue500}" MinWidth="6" MinHeight="6" Opacity="0" SnapsToDevicePixels="True" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Grey800}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Blue500}"/>
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
+                            <Setter Property="Visibility" TargetName="setting" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0.56"/>
+                        </Trigger>
+                        <Trigger Property="IsShowSetting" Value="False">
+                            <Setter Property="Visibility" TargetName="setting" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:SettableCheckBox}">
+        <Setter Property="Background" Value="{StaticResource PaperWhite1000}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PaperWhite700}"/>
+        <Setter Property="Foreground" Value="{StaticResource Grey700}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:SettableCheckBox}">
+                    <Border x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ContentPresenter x:Name="contentPresenter" Grid.Column="0" Margin="0,0,10,0" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                            <Path x:Name="optionMark" Grid.Column="1" Margin="5,0,5,0" Fill="{StaticResource Blue500}" Opacity="0"
+                              HorizontalAlignment="Center" VerticalAlignment="Center"
+                                  Data="M9.8,1.4L4.5,6.6c0,0-0.1,0.1-0.1,0.1C4.3,6.9,4.1,6.9,3.9,6.9c-0.2,0-0.4-0.1-0.6-0.2L0.2,3.6c-0.3-0.3-0.3-0.8,0-1.1
+			c0.3-0.3,0.8-0.3,1.1,0L3.9,5l4.7-4.7c0.3-0.3,0.8-0.3,1.1,0C10.1,0.6,10.1,1.1,9.8,1.4L9.8,1.4z M9.8,1.4"
+                                  SnapsToDevicePixels="True" />
+
+                            <cc:SimpleButton x:Name="setting" Grid.Column="3" Visibility="Hidden" Margin="10,0,0,0" Background="Transparent" BorderBrush="Transparent"
+                                         Padding="4"
+                                         HorizontalAlignment="Center" VerticalAlignment="Center"
+                                             Command="{TemplateBinding SettingCommand}" CommandParameter="{TemplateBinding CommandParameter}">
+                                <Path Visibility="Visible" Data="M12,7.6c0,0.1,0,0.2,0,0.4c0,0.1-0.1,0.3-0.1,0.4c-0.1,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.2,0.2-0.3,0.3
+	c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2,0-0.3-0.1c-0.1,0-0.2,0-0.3-0.1c-0.1,0-0.3,0-0.4,0c-0.1,0-0.3,0-0.4,0.1
+	c-0.1,0-0.2,0.1-0.3,0.2C9.1,9.6,9,9.8,9,10.1c0,0.3,0,0.5,0.1,0.8c0.1,0.2,0.1,0.3,0,0.5c-0.1,0.1-0.1,0.1-0.2,0.2
+	c-0.1,0.1-0.2,0.1-0.4,0.2c-0.1,0.1-0.3,0.1-0.4,0.1C7.9,12,7.8,12,7.6,12c-0.1,0-0.2,0-0.2-0.1c-0.1-0.1-0.1-0.1-0.1-0.2h0
+	C7.2,11.5,7,11.2,6.8,11c-0.2-0.2-0.5-0.3-0.8-0.3c-0.3,0-0.6,0.1-0.8,0.3c-0.2,0.2-0.4,0.4-0.5,0.7c0,0.1-0.1,0.2-0.2,0.2
+	C4.4,12,4.3,12,4.2,12c-0.1,0-0.3,0-0.4-0.1c-0.2,0-0.3-0.1-0.5-0.2c-0.2-0.1-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.2-0.3-0.3
+	c0-0.1-0.1-0.1-0.1-0.2c0-0.1,0-0.2,0.1-0.3c0.1-0.2,0.1-0.4,0.1-0.7c0-0.3-0.1-0.5-0.3-0.7C2.4,9.2,2.2,9.1,2.1,9.1
+	c-0.2,0-0.3-0.1-0.5,0c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.2,0-0.4,0C0.6,9.1,0.5,9,0.4,8.9C0.3,8.8,0.3,8.6,0.2,8.5C0.1,8.3,0.1,8.2,0,8
+	c0-0.2,0-0.3,0-0.4c0-0.2,0.1-0.3,0.3-0.4C0.5,7.2,0.8,7,1,6.8C1.2,6.5,1.3,6.3,1.3,6c0-0.3-0.1-0.6-0.3-0.8C0.8,5,0.5,4.8,0.3,4.7
+	c-0.1,0-0.1-0.1-0.2-0.2C0,4.4,0,4.3,0,4.2C0,4.1,0,4,0.1,3.8c0-0.1,0.1-0.3,0.1-0.4c0.1-0.1,0.1-0.2,0.2-0.4C0.5,3,0.5,2.9,0.6,2.8
+	c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.1,0,0.2,0.1C1.3,2.9,1.6,3,1.8,2.9c0.3,0,0.5-0.2,0.7-0.4c0.1-0.1,0.2-0.2,0.2-0.4
+	c0-0.2,0.1-0.3,0.1-0.4c0-0.1,0-0.3,0-0.4c0-0.1,0-0.2,0-0.3c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2C2.9,0.6,3,0.5,3.1,0.4
+	c0.1-0.1,0.3-0.2,0.4-0.2C3.7,0.1,3.8,0.1,4,0c0.1,0,0.3,0,0.3,0c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.1,0.1,0.1,0.2
+	C4.8,0.6,5,0.8,5.2,0.9C5.4,1.1,5.7,1.2,6,1.2c0.3,0,0.6-0.1,0.8-0.3C7,0.8,7.2,0.6,7.2,0.3c0-0.1,0.1-0.1,0.2-0.2
+	C7.5,0,7.6,0,7.6,0C7.8,0,7.9,0,8,0.1c0.1,0,0.3,0.1,0.4,0.1c0.1,0.1,0.3,0.1,0.4,0.2C8.9,0.5,9,0.6,9.1,0.7c0,0.1,0.1,0.1,0,0.2
+	c0,0.1,0,0.1-0.1,0.2C9,1.4,8.9,1.6,9,1.9c0,0.3,0.2,0.5,0.4,0.7C9.6,2.8,9.8,3,10.1,3c0.3,0,0.6,0,0.8-0.1c0.1,0,0.2-0.1,0.3-0.1
+	c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.2,0.3,0.3,0.5C11.9,3.7,12,3.9,12,4.2c0,0.1,0,0.3-0.1,0.3c-0.1,0.1-0.1,0.1-0.2,0.2
+	C11.5,4.8,11.2,5,11,5.2c-0.2,0.2-0.3,0.5-0.3,0.8c0,0.3,0.1,0.5,0.2,0.8c0.2,0.2,0.4,0.4,0.6,0.5c0.1,0,0.1,0.1,0.2,0.1
+	C11.9,7.4,11.9,7.5,12,7.6L12,7.6z M6,8.8c0.4,0,0.8-0.1,1.1-0.2C7.4,8.4,7.7,8.2,8,8c0.3-0.3,0.5-0.6,0.6-0.9
+	C8.7,6.7,8.8,6.4,8.8,6S8.7,5.2,8.6,4.9C8.4,4.6,8.2,4.3,8,4C7.7,3.7,7.4,3.5,7.1,3.4C6.7,3.3,6.4,3.2,6,3.2c-0.4,0-0.7,0.1-1.1,0.2
+	C4.6,3.5,4.3,3.7,4,4C3.8,4.3,3.6,4.6,3.4,4.9C3.3,5.2,3.2,5.6,3.2,6c0,0.4,0.1,0.7,0.2,1.1C3.6,7.4,3.8,7.7,4,8
+	c0.3,0.3,0.5,0.5,0.9,0.6C5.2,8.7,5.6,8.8,6,8.8L6,8.8z M6,8.8" Fill="{Binding (TextElement.Foreground), ElementName=contentPresenter, Mode=OneTime}" />
+                            </cc:SimpleButton>
+
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Grey800}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Blue500}"/>
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
+                            <Setter Property="Visibility" TargetName="setting" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0.56"/>
+                        </Trigger>
+                        <Trigger Property="IsShowSetting" Value="False">
+                            <Setter Property="Visibility" TargetName="setting" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:FlatButton}">
+        <Setter Property="Padding" Value="12,6" />
+        <Setter Property="Background" Value="#398dff" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="BorderBrush" Value="#2f7acc" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:FlatButton}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="4" Color="Black" Opacity=".32" Direction="270" RenderingBias="Quality" ShadowDepth="1" />
+                        </Border.Effect>
+                        <Border BorderThickness="1">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,.5">
+                                    <GradientStop Color="#44FFFFFF" Offset="0"/>
+                                    <GradientStop Color="Transparent" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <ContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="True" RenderOptions.ClearTypeHint="Enabled" />
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    
+
+
+    <Style TargetType="{x:Type cc:SettingList}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:SettingList}">
+                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="0" SnapsToDevicePixels="True">
+                        <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" TargetName="Bd" Value="White"/>
+                            <Setter Property="BorderBrush" TargetName="Bd" Value="#FFD9D9D9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type cc:SettingListItem}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Margin" Value="20,5,20,0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:SettingListItem}">  
+                    <Grid x:Name="grid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding Description}" FontWeight="Bold" Padding="0, 5" Margin="0" SnapsToDevicePixels="True" />
+                        <TextBlock Grid.Column="2" Text="{Binding Value, Mode=TwoWay}" Padding="0, 5" Margin="0" SnapsToDevicePixels="True" />
+                        <Rectangle Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="{StaticResource PaperWhite700}" SnapsToDevicePixels="True" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Type}" Value="{x:Type sys:UInt32}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type cc:SettingListItem}">
+                            <Grid x:Name="grid">
+                                <Grid.Resources>
+                                    <cvt:Object2DoubleConverter x:Key="Object2DoubleConverter" />
+                                    <cvt:Object2UintConverter x:Key="Object2UintConverter" />
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding Description}" FontWeight="Bold" Padding="0, 5" Margin="0" SnapsToDevicePixels="True" />
+                                <c1:C1NumericBox x:Name="numericBox" Style="{StaticResource C1NumericBoxStyle}" Grid.Column="2" Value="{Binding Value, Mode=TwoWay, Converter={StaticResource Object2DoubleConverter}}" Minimum="{Binding Minimum, Mode=TwoWay, Converter={StaticResource Object2UintConverter}}" IsEnabled="{Binding IsEditable}" Width="60" Padding="0, 5" Margin="0" />
+                                <Rectangle Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="{StaticResource PaperWhite700}" SnapsToDevicePixels="True" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Type}" Value="{x:Type sys:Double}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type cc:SettingListItem}">
+                            <Grid x:Name="grid">
+                                <Grid.Resources>
+                                    <cvt:Object2DoubleConverter x:Key="Object2DoubleConverter" />
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding Description}" FontWeight="Bold" Padding="0, 5" Margin="0" SnapsToDevicePixels="True" />
+                                <c1:C1NumericBox Grid.Column="2" Style="{StaticResource C1NumericBoxStyle}" Value="{Binding Value, Mode=TwoWay, Converter={StaticResource Object2DoubleConverter} }" IsEnabled="{Binding IsEditable}" Minimum="0" Format="P" Width="60" Padding="0, 5" Margin="0" />
+                                <Rectangle Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="{StaticResource PaperWhite700}" SnapsToDevicePixels="True" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Type}" Value="{x:Type sys:Boolean}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type cc:SettingListItem}">
+                            <Grid x:Name="grid">
+                                <Grid.Resources>
+                                    <cvt:Object2DoubleConverter x:Key="Object2DoubleConverter" />
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding Description}" FontWeight="Bold" Padding="0, 5" Margin="0" SnapsToDevicePixels="True" />
+                                <CheckBox Grid.Column="2" IsChecked="{Binding Value}" IsEnabled="{Binding IsEditable}" Padding="0, 5" Margin="0"  Style="{StaticResource AnimatedCheckSwitch}" />
+                                <Rectangle Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="{StaticResource PaperWhite700}" SnapsToDevicePixels="True" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Type}" Value="{x:Type Brush}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type cc:SettingListItem}">
+                            <Grid x:Name="grid">
+                                <Grid.Resources>
+                                    <cvt:SolidColorBrush2ColorConverter x:Key="SolidColorBrush2ColorConverter" />
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding Description}" FontWeight="Bold" Padding="0, 5" Margin="0" SnapsToDevicePixels="True" />
+                                <cc:MyColorPicker Grid.Column="2" SelectedColor="{Binding Value, Mode=TwoWay, Converter={StaticResource SolidColorBrush2ColorConverter}}" IsEnabled="{Binding IsEditable}" Description="COLOUR" Margin="0" SnapsToDevicePixels="True" />
+                                <Rectangle Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="{StaticResource PaperWhite700}" SnapsToDevicePixels="True" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding IsEnumType}" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type cc:SettingListItem}">
+                            <Grid x:Name="grid">
+                                <Grid.Resources>
+                                    <cvt:SolidColorBrush2ColorConverter x:Key="SolidColorBrush2ColorConverter" />
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding Description}" FontWeight="Bold" Padding="0, 5" Margin="0" SnapsToDevicePixels="True" />
+                                <cc:MyComboBox Grid.Column="2" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="0" Display="{Binding Value}" IsEnabled="{Binding IsEditable}">
+
+                                    <cc:MyComboBox.DropdownHeader>
+                                        <TextBlock Margin="10,0" Text="{Binding Description, Converter={StaticResource ToUpperValueConverter}}" Foreground="{StaticResource Blue500}" FontSize="12" FontWeight="DemiBold"  />
+                                    </cc:MyComboBox.DropdownHeader>
+                                    <cc:MyComboBox.Content>
+                                        <cc:NavList SelectedValue="{Binding Value, Mode=TwoWay}" ItemsSource="{Binding EnumSource}" IsAutoCloseParentPopup="True"> 
+                                        </cc:NavList>
+                                    </cc:MyComboBox.Content>
+                                </cc:MyComboBox>
+                                <Rectangle Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="{StaticResource PaperWhite700}" SnapsToDevicePixels="True" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
+
+            <DataTrigger Binding="{Binding Type}" Value="{x:Type obj:Threshold}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type cc:SettingListItem}">
+                            <Grid x:Name="grid">
+                                <Grid.Resources>
+                                    <cvt:Object2DoubleConverter x:Key="Object2DoubleConverter" />
+                                    <cvt:Object2UintConverter x:Key="Object2UintConverter" />
+                                    <cvt:SolidColorBrush2ColorConverter x:Key="SolidColorBrush2ColorConverter" />
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding Description}" FontWeight="Bold" Padding="0, 5" Margin="0" SnapsToDevicePixels="True" />
+                                <StackPanel Orientation="Horizontal" Grid.Column="2" IsEnabled="{Binding IsEditable}">
+                                    <c1:C1NumericBox x:Name="numericBox" Style="{StaticResource C1NumericBoxStyle}" Value="{Binding Value.Value, Mode=TwoWay, Converter={StaticResource Object2DoubleConverter}}" Minimum="{Binding Value.Minimum, Mode=TwoWay, Converter={StaticResource Object2DoubleConverter}}" Width="60" Padding="0, 5" Margin="0" />
+                                   
+                                    <cc:MyColorPicker SelectedColor="{Binding Value.Brush, Mode=TwoWay, Converter={StaticResource SolidColorBrush2ColorConverter}}" Description="COLOUR" Margin="0" SnapsToDevicePixels="True" />
+                                </StackPanel>
+                                <Rectangle Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="{StaticResource PaperWhite700}" SnapsToDevicePixels="True" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+
+
+
+    <Style TargetType="{x:Type cc:MyColorPicker}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type cc:MyColorPicker}">
+                    <cc:DropdownControl Grid.Column="2" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="1,0,0,0" Display="{TemplateBinding SelectedColor, Converter={StaticResource Color2BrushConverter}}">
+                        <cc:DropdownControl.DisplayTemplate>
+                            <DataTemplate>
+                                <Border>
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="/StockAnalysis;component/Resources/TransparentBase.png" />
+                                    </Border.Background>
+                                    <Rectangle Width="18" Height="14" Fill="{Binding}" />
+                                </Border>
+                            </DataTemplate>
+                        </cc:DropdownControl.DisplayTemplate>
+                        <cc:DropdownControl.DropdownHeader>
+                            <TextBlock Margin="10,0" Text="{TemplateBinding Description}" Foreground="{StaticResource Blue500}" FontSize="12" FontWeight="DemiBold"  />
+                        </cc:DropdownControl.DropdownHeader>
+                        <cc:DropdownControl.Content>
+                            <cc:MyBasicColorPickerPart Background="White" Margin="15,0" Foreground="{StaticResource Grey700}" SelectedColor="{Binding SelectedColor, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </cc:DropdownControl.Content>
+                    </cc:DropdownControl>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

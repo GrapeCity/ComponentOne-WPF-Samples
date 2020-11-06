@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="DockingSamples.IconText" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Orientation="Horizontal">
+        <Image x:Name="Image" Stretch="None" Margin="2" VerticalAlignment="Center" />
+        <TextBlock x:Name="TextBlock" Margin="2" VerticalAlignment="Center" />
+    </StackPanel>
+</UserControl>

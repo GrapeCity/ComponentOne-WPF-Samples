@@ -1,0 +1,110 @@
+﻿<Window x:Class="StockChart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c1="clr-namespace:C1.WPF.Chart;assembly=C1.WPF.FlexChart.4.5.2"
+        xmlns:c1i="clr-namespace:C1.WPF.Chart.Interaction;assembly=C1.WPF.FlexChart.4.5.2"
+        xmlns:c1f="clr-namespace:C1.WPF.Chart.Finance;assembly=C1.WPF.FinancialChart.4.5.2"
+        xmlns:c1fa="clr-namespace:C1.WPF.Chart.Annotation;assembly=C1.WPF.FlexChart.4.5.2"
+        xmlns:c1fi="clr-namespace:C1.WPF.Chart.Interaction;assembly=C1.WPF.FlexChart.4.5.2"
+        xmlns:vm ="clr-namespace:StockChart.ViewModel"
+        xmlns:cvt="clr-namespace:StockChart.Converters"
+        xmlns:local="clr-namespace:StockChart"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Stock Chart" Height="600" Width="800" x:Name="chartWindow" WindowState="Maximized">
+    <Window.Resources>
+        <cvt:SeriesVisibility2BooleanConverter x:Key="SeriesVisibility2BooleanConverter" />
+        <cvt:Boolean2VisibilityConverter x:Key="Boolean2VisibilityConverter" />
+    </Window.Resources>
+    <Grid Background="#000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="110"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" x:Name="discriptionContainer">
+            <local:ucDescription />
+        </Grid>
+        <Grid Grid.Row="3" x:Name="titleContainer">
+            <local:ucTitlebar />
+        </Grid>
+        <Grid Grid.Row="5" x:Name="toolContainer">
+            <local:ucToolbar x:Name="ucToolbar" 
+                             />
+        </Grid>
+        <Grid Grid.Row="7" x:Name="finalsContainer">
+            <c1f:C1FinancialChart x:Name="financialChart1" Background="Black" ChartType="Line" BindingX="date" ItemsSource="{Binding DataSource}" Foreground="#666666" LegendPosition="None" RenderMode="Direct2D" MouseMove="financialChart1_MouseMove">
+                <c1f:C1FinancialChart.ToolTip>
+                    <ToolTip Background="#222222">
+                        <ToolTip.ContentTemplate>
+                            <DataTemplate>
+                                <TextBlock local:TextBoxExt.FormattedText="{Binding}" Foreground="#AAAAAA" TextWrapping="Wrap"/>
+                            </DataTemplate>
+                        </ToolTip.ContentTemplate>
+                    </ToolTip>
+                </c1f:C1FinancialChart.ToolTip>
+                <c1f:C1FinancialChart.AxisX>
+                    <c1:Axis Binding="date" 
+                             Min="{Binding Source={x:Reference Name=rangeSelector}, Path=LowerValue}" Max="{Binding Source={x:Reference Name=rangeSelector}, Path=UpperValue}">
+                    </c1:Axis>
+                </c1f:C1FinancialChart.AxisX>
+                <c1f:C1FinancialChart.AxisY>
+                    <c1:Axis Position="Right" MajorTickMarks="None" AxisLine="False" />
+                </c1f:C1FinancialChart.AxisY>
+                <c1:Series x:Name="mainSeries" SeriesName="MSFT">
+                    <c1:Series.Style>
+                        <c1:ChartStyle Fill="#40FFA500" Stroke="#FFA500" StrokeThickness="2" />
+                    </c1:Series.Style>
+                </c1:Series>
+                <c1f:MovingAverage x:Name="mainMovingAverage" Period="10" Visibility="Hidden">
+                    <c1f:MovingAverage.Style>
+                        <c1:ChartStyle Fill="#ffffd27f" Stroke="#ffffd27f" />
+                    </c1f:MovingAverage.Style>
+                </c1f:MovingAverage>
+                <c1:Series x:Name="volumeSeries" Binding="volume" ChartType="Column">
+                    <c1:Series.Style>
+                        <c1:ChartStyle Fill="#FFA500" Stroke="#FFA500" />
+                    </c1:Series.Style>
+                    <c1:Series.AxisY>
+                        <c1:Axis Position="None">
+                        </c1:Axis>
+                    </c1:Series.AxisY>
+                </c1:Series>
+                <c1f:C1FinancialChart.Layers>
+                    <c1fa:AnnotationLayer x:Name="annotationLayer" />
+                    <c1fi:C1LineMarker x:Name="lineMarker" Lines="Both" Interaction="Move" Alignment="Auto" DragLines="True" Visibility="{Binding IsShowLineMarker, Converter={StaticResource Boolean2VisibilityConverter}}"
+                                       PositionChanged="OnLineMarkerPositionChanged" />
+                </c1f:C1FinancialChart.Layers>
+            </c1f:C1FinancialChart>
+        </Grid>
+
+        <Grid Grid.Row="9" x:Name="rangeSelectorContainer">
+            <c1f:C1FinancialChart x:Name="financialChart2" ItemsSource="{Binding IndexDataSource}" BindingX="date" Foreground="#666666" Margin="10, 10, 10, 5"  RenderMode="Direct2D" >
+                <c1f:C1FinancialChart.ToolTip>
+                    <ToolTip Visibility="Collapsed" />
+                </c1f:C1FinancialChart.ToolTip>
+                <c1f:C1FinancialChart.AxisY>
+                    <c1:Axis Position="None" />
+                </c1f:C1FinancialChart.AxisY>
+                <c1f:FinancialSeries Binding="close">
+                    <c1f:FinancialSeries.Style>
+                        <c1:ChartStyle Fill="#FFA500" Stroke="#FFA500" StrokeThickness="2" />
+                    </c1f:FinancialSeries.Style>
+                </c1f:FinancialSeries>
+                <c1f:C1FinancialChart.Layers>
+                    <c1i:C1RangeSelector x:Name="rangeSelector" LowerValue="{Binding LowerValue, Mode=TwoWay}" UpperValue="{Binding UpperValue, Mode=TwoWay}" />
+                </c1f:C1FinancialChart.Layers>
+            </c1f:C1FinancialChart>
+        </Grid>
+    </Grid>
+</Window>

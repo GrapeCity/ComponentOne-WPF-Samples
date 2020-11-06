@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="GaugeSamples.C1SpeedometerGaugePage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:local="clr-namespace:GaugeSamples" xmlns:helpers="clr-namespace:Helpers" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/GaugeSamples.4;component/CommonResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+			<!--***************** SCROLL *****************-->
+
+		<Style x:Key="ScrollBarThumb" TargetType="{x:Type Thumb}">
+    		<Setter Property="OverridesDefaultStyle" Value="true" />
+    		<Setter Property="IsTabStop" Value="false" />
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Thumb}">
+    					<Rectangle x:Name="Background" Fill="#FFA8A8A8" StrokeThickness="1" Stroke="White" Opacity="0.6" />
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+
+        <Style x:Key="GralScrollBar" TargetType="{x:Type ScrollBar}">
+    		<Setter Property="Background" Value="Transparent" />
+    		<Setter Property="Stylus.IsPressAndHoldEnabled" Value="false" />
+    		<Setter Property="Stylus.IsFlicksEnabled" Value="false" />
+    		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+    		<Setter Property="Width" Value="8" />
+    		<Setter Property="MinWidth" Value="8" />
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type ScrollBar}">
+    					<Grid x:Name="Bg" Background="Transparent" SnapsToDevicePixels="true">
+    						<Grid.RowDefinitions>
+    							<RowDefinition Height="Auto" />
+    							<RowDefinition Height="0.00001*" />
+    							<RowDefinition Height="Auto" />
+    						</Grid.RowDefinitions>
+    						<RepeatButton Command="{x:Static ScrollBar.LineUpCommand}" IsEnabled="{TemplateBinding IsMouseOver}" Visibility="Collapsed" />
+    						<Track x:Name="PART_Track" IsDirectionReversed="true" IsEnabled="{TemplateBinding IsMouseOver}" Grid.Row="1">
+    							<Track.DecreaseRepeatButton>
+    								<RepeatButton Command="{x:Static ScrollBar.PageUpCommand}" Opacity="0" />
+    							</Track.DecreaseRepeatButton>
+    							<Track.IncreaseRepeatButton>
+    								<RepeatButton Command="{x:Static ScrollBar.PageDownCommand}" Opacity="0" />
+    							</Track.IncreaseRepeatButton>
+    							<Track.Thumb>
+    								<Thumb Cursor="Hand" Style="{StaticResource ScrollBarThumb}" />
+    							</Track.Thumb>
+    						</Track>
+    						<RepeatButton Command="{x:Static ScrollBar.LineDownCommand}" IsEnabled="{TemplateBinding IsMouseOver}" Grid.Row="2" Visibility="Collapsed" />
+    					</Grid>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    		<Style.Triggers>
+    			<Trigger Property="Orientation" Value="Horizontal">
+    				<Setter Property="Width" Value="Auto" />
+    				<Setter Property="MinWidth" Value="0" />
+    				<Setter Property="Height" Value="8" />
+    				<Setter Property="MinHeight" Value="8" />
+    				<Setter Property="Background" Value="Transparent" />
+    				<Setter Property="Template">
+    					<Setter.Value>
+    						<ControlTemplate TargetType="{x:Type ScrollBar}">
+    							<Grid x:Name="Bg" Background="Transparent" SnapsToDevicePixels="true">
+    								<Grid.ColumnDefinitions>
+    									<ColumnDefinition Width="Auto" />
+    									<ColumnDefinition Width="0.00001*" />
+    									<ColumnDefinition Width="Auto" />
+    								</Grid.ColumnDefinitions>
+    								<RepeatButton Command="{x:Static ScrollBar.LineLeftCommand}" IsEnabled="{TemplateBinding IsMouseOver}" Visibility="Collapsed" />
+    								<Track x:Name="PART_Track" Grid.Column="1" IsEnabled="{TemplateBinding IsMouseOver}">
+    									<Track.DecreaseRepeatButton>
+    										<RepeatButton Command="{x:Static ScrollBar.PageLeftCommand}" Opacity="0" />
+    									</Track.DecreaseRepeatButton>
+    									<Track.IncreaseRepeatButton>
+    										<RepeatButton Command="{x:Static ScrollBar.PageRightCommand}" Opacity="0" />
+    									</Track.IncreaseRepeatButton>
+    									<Track.Thumb>
+    										<Thumb Cursor="Hand" Style="{StaticResource ScrollBarThumb}" />
+    									</Track.Thumb>
+    								</Track>
+    								<RepeatButton Grid.Column="2" Command="{x:Static ScrollBar.LineRightCommand}" IsEnabled="{TemplateBinding IsMouseOver}" Visibility="Collapsed" />
+    							</Grid>
+    						</ControlTemplate>
+    					</Setter.Value>
+    				</Setter>
+    			</Trigger>
+    		</Style.Triggers>
+    	</Style>
+
+        <Style x:Key="GralScrollViewer" TargetType="{x:Type ScrollViewer}">
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="VerticalContentAlignment" Value="Top" />
+            <Setter Property="BorderThickness" Value="0" />
+			<Setter Property="Margin" Value="0 -8 -8 -8" />
+        	<Setter Property="Template">
+        		<Setter.Value>
+        			<ControlTemplate TargetType="{x:Type ScrollViewer}">
+        				<Grid x:Name="Grid" Background="{TemplateBinding Background}">
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="*" />
+        						<ColumnDefinition Width="Auto" />
+        					</Grid.ColumnDefinitions>
+        					<Grid.RowDefinitions>
+        						<RowDefinition Height="*" />
+        						<RowDefinition Height="Auto" />
+        					</Grid.RowDefinitions>
+        					<Rectangle x:Name="Corner" Grid.Column="1" Fill="Transparent" Grid.Row="1" />
+        					<ScrollContentPresenter x:Name="PART_ScrollContentPresenter" CanContentScroll="{TemplateBinding CanContentScroll}" CanHorizontallyScroll="False" CanVerticallyScroll="False" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Grid.Column="0" Margin="{TemplateBinding Padding}" Grid.Row="0" />
+        					<ScrollBar x:Name="PART_VerticalScrollBar" AutomationProperties.AutomationId="VerticalScrollBar" Cursor="Arrow" Grid.Column="1" Maximum="{TemplateBinding ScrollableHeight}" Minimum="0" Grid.Row="0" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportHeight}" Style="{DynamicResource GralScrollBar}" />
+        					<ScrollBar x:Name="PART_HorizontalScrollBar" AutomationProperties.AutomationId="HorizontalScrollBar" Cursor="Arrow" Grid.Column="0" Maximum="{TemplateBinding ScrollableWidth}" Minimum="0" Orientation="Horizontal" Grid.Row="1" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportWidth}" Style="{DynamicResource GralScrollBar}" />
+        				</Grid>
+        			</ControlTemplate>
+        		</Setter.Value>
+        	</Setter>
+		</Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="270" />
+        </Grid.ColumnDefinitions>
+        <!-- Property Editors -->
+        <Border Grid.Column="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" Style="{StaticResource GralScrollViewer}">
+                <WrapPanel ItemWidth="260">
+                    <!-- Value property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="Value:" />
+                        <c1:C1NumericBox Value="{Binding Value, ElementName=radialGauge, Mode=TwoWay,                                                      UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource inputStyle}" AllowNull="True" />
+                    </StackPanel>
+
+                    <!-- Minimum property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="Minimum:" />
+                        <c1:C1NumericBox Value="{Binding Minimum, ElementName=radialGauge, Mode=TwoWay}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+
+                    <!-- Maximum property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="Maximum:" />
+                        <c1:C1NumericBox Value="{Binding Maximum, ElementName=radialGauge, Mode=TwoWay}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+
+                    <!-- StartAngle property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="StartAngle:" />
+                        <DockPanel Style="{DynamicResource inputStyle}">
+                            <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="{Binding StartAngle, ElementName=radialGauge,                                                 StringFormat=0}" Style="{DynamicResource sliderValueStyle}" />
+                            <Slider Value="{Binding StartAngle, ElementName=radialGauge, Mode=TwoWay}" Minimum="-360" Maximum="360" Style="{DynamicResource sliderStyle}" />
+                        </DockPanel>
+                    </StackPanel>
+
+                    <!-- SweepAngle property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="SweepAngle:" />
+                        <DockPanel Style="{DynamicResource inputStyle}">
+                            <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="{Binding SweepAngle, ElementName=radialGauge,                                                 StringFormat=0}" Style="{DynamicResource sliderValueStyle}" />
+                            <Slider Value="{Binding SweepAngle, ElementName=radialGauge, Mode=TwoWay}" Minimum="-360" Maximum="360" Style="{DynamicResource sliderStyle}" />
+                        </DockPanel>
+                    </StackPanel>
+
+                    <!-- Radius property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="Radius:" />
+                        <DockPanel Style="{DynamicResource inputStyle}">
+                            <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="{Binding Radius, ElementName=radialGauge,                                                 StringFormat=0.00}" Style="{DynamicResource sliderValueStyle}" />
+                            <Slider Value="{Binding Radius, ElementName=radialGauge, Mode=TwoWay}" Minimum="0" Maximum="1.3" Style="{DynamicResource sliderStyle}" />
+                        </DockPanel>
+                    </StackPanel>
+
+                    <!-- OffAngle property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="OffAngle:" />
+                        <DockPanel Style="{DynamicResource inputStyle}">
+                            <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="{Binding OffAngle, ElementName=radialGauge,                                                 StringFormat=0}" Style="{DynamicResource sliderValueStyle}" />
+                            <Slider Value="{Binding OffAngle, ElementName=radialGauge, Mode=TwoWay}" Minimum="-360" Maximum="360" Style="{DynamicResource sliderStyle}" />
+                        </DockPanel>
+                    </StackPanel>
+
+                    <!-- IsLogarithmic property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="IsLogarithmic:" />
+                        <CheckBox IsChecked="{Binding IsLogarithmic, ElementName=radialGauge, Mode=TwoWay}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+
+                    <!-- LogarithmicBase property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="LogarithmicBase:" />
+                        <DockPanel Style="{DynamicResource inputStyle}">
+                            <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="{Binding LogarithmicBase, ElementName=radialGauge,                                                 StringFormat=0}" Style="{DynamicResource sliderValueStyle}" />
+                            <Slider Value="{Binding LogarithmicBase, ElementName=radialGauge, Mode=TwoWay}" Minimum="2" Maximum="100" Style="{DynamicResource sliderStyle}" />
+                        </DockPanel>
+                    </StackPanel>
+
+                    <!-- DecoratorsVisibility property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="DecoratorsVisibility:" />
+                        <ComboBox SelectedItem="{Binding DecoratorsVisibility, ElementName=radialGauge, Mode=TwoWay}" ItemsSource="{Binding DecoratorsVisibility, ElementName=radialGauge, Mode=OneWay,                                     Converter={x:Static helpers:GetEnumMembersConverter.Default}}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+
+                    <!-- AutoDetectMarkTemplates property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="AutoDetectMarkTemplates:" />
+                        <CheckBox IsChecked="{Binding AutoDetectMarkTemplates, ElementName=radialGauge, Mode=TwoWay}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+
+                    <!-- Background property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="Background:" />
+                        <ComboBox Style="{DynamicResource colorComboStyle}" SelectedItem="{Binding Background, ElementName=radialGauge, Mode=TwoWay}" />
+                    </StackPanel>
+
+                    <!-- BorderBrush property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="BorderBrush:" />
+                        <ComboBox Style="{DynamicResource colorComboStyle}" SelectedItem="{Binding BorderBrush, ElementName=radialGauge, Mode=TwoWay}" />
+                    </StackPanel>
+
+                    <!-- BorderThickness property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="BorderThickness:" />
+                        <TextBox Text="{Binding BorderThickness, ElementName=radialGauge, Mode=TwoWay,                                         Converter={x:Static helpers:ThicknessToStringConverter.Default},                                         UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+
+                    <!-- PointerLength property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="PointerLength:" />
+                        <DockPanel Style="{DynamicResource inputStyle}">
+                            <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="{Binding PointerLength, ElementName=radialGauge,                                                 StringFormat=0.00}" Style="{DynamicResource sliderValueStyle}" />
+                            <Slider Value="{Binding PointerLength, ElementName=radialGauge, Mode=TwoWay}" Minimum="0" Maximum="2" Style="{DynamicResource sliderStyle}" />
+                        </DockPanel>
+                    </StackPanel>
+
+                    <!-- PointerWidth property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="PointerWidth:" />
+                        <DockPanel Style="{DynamicResource inputStyle}">
+                            <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="{Binding PointerWidth, ElementName=radialGauge,                                                 StringFormat=0.00}" Style="{DynamicResource sliderValueStyle}" />
+                            <Slider Value="{Binding PointerWidth, ElementName=radialGauge, Mode=TwoWay}" Minimum="0" Maximum="2" Style="{DynamicResource sliderStyle}" />
+                        </DockPanel>
+                    </StackPanel>
+
+
+                    <!-- PointerOffset property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="PointerOffset:" />
+                        <DockPanel Style="{DynamicResource inputStyle}">
+                            <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="{Binding PointerOffset, ElementName=radialGauge,                                                 StringFormat=0.00}" Style="{DynamicResource sliderValueStyle}" />
+                            <Slider Value="{Binding PointerOffset, ElementName=radialGauge, Mode=TwoWay}" Minimum="-2" Maximum="2" Style="{DynamicResource sliderStyle}" />
+                        </DockPanel>
+                    </StackPanel>
+
+                    <!-- PointerVisibility property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="PointerVisibility:" />
+                        <ComboBox SelectedItem="{Binding PointerVisibility, ElementName=radialGauge, Mode=TwoWay}" ItemsSource="{Binding PointerVisibility, ElementName=radialGauge, Mode=OneWay,                                     Converter={x:Static helpers:GetEnumMembersConverter.Default}}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+
+                    <!-- PointerFill property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="PointerFill:" />
+                        <ComboBox Style="{DynamicResource colorComboStyle}" SelectedItem="{Binding PointerFill, ElementName=radialGauge, Mode=TwoWay}" />
+                    </StackPanel>
+
+                    <!-- PointerStroke property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="PointerStroke:" />
+                        <ComboBox Style="{DynamicResource colorComboStyle}" SelectedItem="{Binding PointerStroke, ElementName=radialGauge, Mode=TwoWay}" />
+                    </StackPanel>
+
+                    <!-- PointerStrokeThickness property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="PointerStrokeThickness:" />
+                        <c1:C1NumericBox Value="{Binding PointerStrokeThickness, ElementName=radialGauge, Mode=TwoWay,                                                 UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+
+                    <!-- PointerOrigin property editor -->
+                    <StackPanel Style="{DynamicResource captionInputContainer}">
+                        <TextBlock VerticalAlignment="Center" Width="150" Margin="0 0 5 0" Text="PointerOrigin:" />
+                        <TextBox Text="{Binding PointerOrigin, ElementName=radialGauge, Mode=TwoWay,                                         Converter={x:Static helpers:PointToStringConverter.Default},                                         UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource inputStyle}" />
+                    </StackPanel>
+                </WrapPanel>
+            </ScrollViewer>
+        </Border>
+
+        <Border Padding="10">
+            <c1:C1SpeedometerGauge x:Name="radialGauge" Height="300" Value="80" Margin="0 30 0 0" StartAngle="-50" SweepAngle="100" BorderBrush="#BEBEBE" BorderThickness="2" Background="#F5F5F5" PointerFill="#FBB258" >
+                <c1:C1GaugeRange To="40" Location="0.95" Fill="#88BDE6" Width="0.1" Opacity="0.2" />
+                <c1:C1GaugeRange From="0" To="80" Location="0.9" Fill="#88BDE6" Width="0.05" Opacity="0.4" />
+                <c1:C1GaugeRange From="0" To="100" Location="0.88" Fill="#88BDE6" Width="0.025" Opacity="0.6" />
+                <c1:C1GaugeMark Interval="20" Location="0.95"/>
+                <c1:C1GaugeMark Interval="10" Location="0.95"/>
+                <c1:C1GaugeMark Interval="5"  Location="0.95"/>
+                <c1:C1GaugeLabel Interval="20" Alignment="Out" AlignmentOffset="10" Foreground="Black" FontSize="16" />
+            </c1:C1SpeedometerGauge>
+
+        </Border>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="CustomTypeDescriptor.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:CustomTypeDescriptor"
+    Title="CustomTypeDescriptor" Height="600" Width="800" 
+    WindowStartupLocation="CenterScreen"
+    FontFamily="Segoe UI" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="_chkGroup" Content="Group Data" IsChecked="false" Margin="4,0" VerticalAlignment="Center" Click="_chkGroup_Click" />
+                <CheckBox x:Name="_chkCustomCells" Content="Custom Cells" IsChecked="False" Margin="4,0" VerticalAlignment="Center" Grid.Column="1" Click="_chkCustomCells_Click" />
+                <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Right" >
+                    <TextBlock x:Name="_txtStatus" VerticalAlignment="Center" TextAlignment="Right" Width="200" Margin="4" Grid.Column="2" />
+                    <local:SearchBox x:Name="_search" HorizontalAlignment="Right" Grid.Column="3" />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <c1:C1FlexGrid x:Name="_flexDataTable" BorderBrush="Gray" BorderThickness="2" Grid.Row="1" />
+        <c1:C1FlexGrid x:Name="_flexFinancial" BorderBrush="Gray" BorderThickness="2" Grid.Row="1" Grid.Column="1" />
+    </Grid>
+</Window>

@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ToolbarSamples.Toolstrip" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style TargetType="Image" x:Key="MenuIcon">
+            <Setter Property="Width" Value="16" />
+            <Setter Property="Height" Value="16" />
+        </Style>
+        <Style TargetType="Image" x:Key="tbIcon">
+            <!--<Setter Property="Stretch" Value="None" />-->
+            <!--<Setter Property="Margin" Value="2 2 0 0"/>-->
+            <Setter Property="Width" Value="16" />
+            <Setter Property="Height" Value="16" />
+        </Style>
+        <Style TargetType="c1:C1Separator" x:Key="tbSep">
+            <Setter Property="Width" Value="8" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <c1:C1CheckeredBorder x:Name="cb" SquareWidth="16" Grid.ColumnSpan="2" Grid.RowSpan="2">
+        </c1:C1CheckeredBorder>
+
+        <Border ClipToBounds="True" x:Name="imgbdr" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Image x:Name="img" Stretch="None" Source="/ToolbarSamples.4;component/Resources/ladybird.jpg" />
+        </Border>
+
+        <c1:C1ToolbarStrip Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right">
+            <c1:C1ToolbarStrip.Background>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Color="#F0F0F0" Offset="0" />
+                    <GradientStop Color="#c0c0c0" Offset="1" />
+                </LinearGradientBrush>
+            </c1:C1ToolbarStrip.Background>
+            <c1:C1ToolbarButton x:Name="btn1_1" IsEnabled="False" ToolTip="Original size" Click="OriginalSize_Click">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/view_1_1.png" />
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton x:Name="btnZoomIn" ToolTip="Zoom in" Click="ZoomIn_Click">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/zoom_in.png" />
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton x:Name="btnZoomOut" ToolTip="Zoom out" Click="ZoomOut_Click">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/zoom_out.png" />
+            </c1:C1ToolbarButton>
+        </c1:C1ToolbarStrip>
+
+        <c1:C1ToolbarStrip Grid.ColumnSpan="2" x:Name="tb" Overflow="Panel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            <c1:C1ToolbarStrip.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#F0F0F0" Offset="0" />
+                    <GradientStop Color="#c0c0c0" Offset="1" />
+                </LinearGradientBrush>
+            </c1:C1ToolbarStrip.Background>
+
+            <c1:C1ToolbarDropDown ToolTipService.ToolTip="Toolstrip options">
+                <c1:C1ToolbarDropDown.Header>
+                    <Grid>
+                    <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/controlPanel.png" />
+                    </Grid>
+                </c1:C1ToolbarDropDown.Header>
+                <c1:C1ToolbarDropDown.Content>
+                    <StackPanel Margin="8">
+                        <TextBlock Text="Toolstrip options" />
+                        <CheckBox Content="Is vertical" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
+                        <TextBlock Text="Overflow:" />
+                        <RadioButton Content="None" Checked="RadioButton_Checked" />
+                        <RadioButton Content="Menu" Checked="RadioButton_Checked" />
+                        <RadioButton Content="Panel" IsChecked="True" Checked="RadioButton_Checked" />
+                    </StackPanel>
+                </c1:C1ToolbarDropDown.Content>
+            </c1:C1ToolbarDropDown>
+
+            <c1:C1Separator Style="{StaticResource tbSep}" />
+
+            <c1:C1ToolbarDropDown ToolTipService.ToolTip="New">
+                <c1:C1ToolbarDropDown.Header>
+                    <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/newProject.png" />
+                </c1:C1ToolbarDropDown.Header>
+                <c1:C1ToolbarDropDown.Menu>
+                    <ContextMenu>
+                        <MenuItem Header="Team Project...">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource MenuIcon}" Source="/ToolbarSamples.4;component/Resources/newTeamProject.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Project...">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource MenuIcon}" Source="/ToolbarSamples.4;component/Resources/newProject.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Web Site...">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource MenuIcon}" Source="/ToolbarSamples.4;component/Resources/newWebSite.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="File...">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource MenuIcon}" Source="/ToolbarSamples.4;component/Resources/newFile.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </c1:C1ToolbarDropDown.Menu>
+            </c1:C1ToolbarDropDown>
+
+            <c1:C1Separator Style="{StaticResource tbSep}" />
+
+            <c1:C1ToolbarDropDown ToolTipService.ToolTip="Open">
+                <c1:C1ToolbarDropDown.Header>
+                    <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/openProject.png" />
+                </c1:C1ToolbarDropDown.Header>
+                <c1:C1ToolbarDropDown.Menu>
+                    <ContextMenu>
+                        <MenuItem Header="Project...">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource MenuIcon}" Source="/ToolbarSamples.4;component/Resources/openProject.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Web Site...">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource MenuIcon}" Source="/ToolbarSamples.4;component/Resources/openWebSite.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="File...">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource MenuIcon}" Source="/ToolbarSamples.4;component/Resources/openFile.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </c1:C1ToolbarDropDown.Menu>
+            </c1:C1ToolbarDropDown>
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Close solution">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/closeSolution.png" />
+            </c1:C1ToolbarButton>
+
+            <c1:C1Separator Style="{StaticResource tbSep}" />
+
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Save">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/save.png" />
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Save All">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/saveAll.png" />
+            </c1:C1ToolbarButton>
+
+            <c1:C1Separator Style="{StaticResource tbSep}" />
+
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Page setup">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/pageSetup.png" />
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Print">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/print.png" />
+            </c1:C1ToolbarButton>
+
+            <c1:C1Separator Style="{StaticResource tbSep}" />
+
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Delete">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/delete.png" />
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Cut">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/cut.png" />
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Copy">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/copy.png" />
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Paste">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/paste.png" />
+            </c1:C1ToolbarButton>
+
+            <c1:C1Separator Style="{StaticResource tbSep}" />
+
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Undo">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/undo.png" />
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton ToolTipService.ToolTip="Redo">
+                <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/redo.png" />
+            </c1:C1ToolbarButton>
+
+            <c1:C1Separator Style="{StaticResource tbSep}" />
+
+            <c1:C1ToolbarDropDown ToolTipService.ToolTip="Popup">
+                <c1:C1ToolbarDropDown.Header>
+                    <Image Style="{StaticResource tbIcon}" Source="/ToolbarSamples.4;component/Resources/color.png" />
+                </c1:C1ToolbarDropDown.Header>
+                <c1:C1ToolbarDropDown.Content>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="20" Text="R:" VerticalAlignment="Center" TextAlignment="Center" />
+                            <Slider Margin="3" Width="80" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="20" Text="G:" VerticalAlignment="Center" TextAlignment="Center" />
+                            <Slider Margin="3" Width="80" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="20" Text="B:" VerticalAlignment="Center" TextAlignment="Center" />
+                            <Slider Margin="3" Width="80" />
+                        </StackPanel>
+
+                    </StackPanel>
+                </c1:C1ToolbarDropDown.Content>
+            </c1:C1ToolbarDropDown>
+
+        </c1:C1ToolbarStrip>
+
+    </Grid>
+</UserControl>

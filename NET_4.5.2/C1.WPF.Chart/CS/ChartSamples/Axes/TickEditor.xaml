@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ChartSamples.TickEditor" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.5.2">
+    <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+      <TextBlock Text="Major ticks:" Grid.Row="1" />
+      <TextBlock Text="Minor ticks:" Grid.Row="2" />
+
+
+      <TextBlock Text="Height:" Grid.Column="1" />
+      <TextBlock Text="Overlap:" Grid.Column="2" />
+        
+        <c1:C1NumericBox x:Name="nbMajHeight" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="20" Value="6" Increment="2" ValueChanged="nbTickHeight_ValueChanged" Width="50" />
+      
+        <c1:C1NumericBox x:Name="nbMajOverlap" Grid.Row="1" Grid.Column="2" Minimum="0" Maximum="1" Value="0" Format="0.00" Width="50" Increment="0.25" ValueChanged="nbTickHeight_ValueChanged" />
+
+      <c1:C1NumericBox x:Name="nbMinHeight" Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="20" Value="4" Increment="2" ValueChanged="nbTickHeight_ValueChanged" Width="50" />
+
+      <c1:C1NumericBox x:Name="nbMinOverlap" Grid.Row="2" Grid.Column="2" Minimum="0" Maximum="1" Value="0" Format="0.00" Width="50" Increment="0.25" ValueChanged="nbTickHeight_ValueChanged" />
+
+  </Grid>
+</UserControl>

@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="SalesAnalysis.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignWidth="640" d:DesignHeight="480">
+    <Grid x:Name="LayoutRoot">
+        <Grid x:Name="PageScrollViewer" >
+            <StackPanel x:Name="ContentStackPanel" Style="{StaticResource ContentStackPanelStyle}">
+                <TextBlock x:Name="HeaderText" Style="{StaticResource HeaderTextStyle}" Text="Home"></TextBlock>
+                <TextBlock Style="{StaticResource ContentTextStyle}" TextWrapping="Wrap" Margin="0 0 0 6" >
+                    NorthWind Sales Analysis Demo
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="0 0 0 6" >
+                    This project shows how the C1FlexGrid and C1Chart can be used in typical WPF 
+                    business applications . In addition to  data retrieval, the sample
+                    shows the following C1FlexGrid features:
+                </TextBlock>
+
+                <TextBlock TextWrapping="Wrap" Margin="0 0 0 6" >
+                1 - Dynamic subtotals: The group headers shown in the sample contain subtotals for
+                    the invoices in the group. The subtotals are automatically updated as the data
+	                is loaded or edited. These are implemented simply by setting the GroupAggregate 
+	                property on the extended price column to Aggregate.Sum.
+                </TextBlock>
+
+                <TextBlock TextWrapping="Wrap" Margin="0 0 0 6" >
+                2 - Advanced Grouping: Hold down the control key to collapse or expand the entire
+                    grid at once to any desired outline level. This simple feature, along with the
+	                dynamic subtotals, allows you to use the grid to create quick summary reports 
+	                (sales by country or customer for example).
+                </TextBlock>
+
+                <TextBlock TextWrapping="Wrap" Margin="0 0 0 6" >
+                3 - Printing: Once you have created an interesting quick summary report, you can
+                	print it by clicking a button. The C1FlexGrid provides high quality printing
+	                support with control over scaling, margins, and repeating column and rows 
+                    headers on every page.
+                </TextBlock>
+
+                <TextBlock TextWrapping="Wrap" Margin="0 0 0 6" >
+                4 - Saving: You can also save your quick reports to CSV, plain text, or Html.
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

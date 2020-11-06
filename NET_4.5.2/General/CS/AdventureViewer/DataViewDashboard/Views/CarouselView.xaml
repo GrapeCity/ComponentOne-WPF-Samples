@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="DataViewDashboard.Views.CarouselView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:DataViewDashboard.ViewModels"
+             xmlns:v="clr-namespace:DataViewDashboard.Views"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style x:Key="myListBoxItemStyle" TargetType="{x:Type ListBoxItem}">
+            <Style.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
+            </Style.Resources>
+        </Style>
+        <Style x:Key="myListBoxStyle" TargetType="ListBox">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="c1:C1CarouselPanel.HorizontalPathAlignment" Value="Left" />
+            <Setter Property="c1:C1CarouselPanel.VerticalPathAlignment" Value="Top" />
+            <Setter Property="c1:C1CarouselPanel.PerspectiveAngle" Value="25" />
+            <Setter Property="c1:C1CarouselPanel.PerspectiveFactor" Value="1.0" />
+            <Setter Property="c1:C1CarouselPanel.PathGeometry" Value="F1 M 466.829,27.2642C 635.339,35.6577 762.667,98.3819 762.667,173C 762.667,254.002 613.428,319.667 429.333,319.667C 245.238,319.667 96,254.002 96,173C 96,98.0584 224.402,35.1712 393.751,27.1714" />
+            <Setter Property="ItemContainerStyle" Value="{StaticResource myListBoxItemStyle}" />
+            <Setter Property="ItemsSource" Value="{Binding Source.View}" />
+        </Style>
+
+        <!-- Customers -->
+        <DataTemplate DataType="{x:Type vm:CustomersViewModel}">
+            <ListBox Style="{StaticResource myListBoxStyle}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <c1:C1CarouselPanel Margin="-100 -100 0 0" VerticalPathAlignment="Center" HorizontalPathAlignment="Center" HorizontalItemAnchorOnPath="Center" VerticalItemAnchorOnPath="Center"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="400" Height="310" Background="White" BorderThickness="1" BorderBrush="Gray">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Border Background="{StaticResource HighlightBrush}">
+                                    <TextBlock FontSize="14" HorizontalAlignment="Left" Margin="4 2" Foreground="White">
+                                    <Run Text="{Binding FirstName}" />
+                                    <Run Text="{Binding LastName}" />
+                                    </TextBlock>
+                                </Border>
+                                <v:CustomerTile Grid.Row="1" Padding="20"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DataTemplate>
+
+        <!-- Orders -->
+        <DataTemplate DataType="{x:Type vm:OrdersViewModel}">
+            <ListBox Style="{StaticResource myListBoxStyle}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <c1:C1CarouselPanel Margin="-100 -100 0 0" VerticalPathAlignment="Center" HorizontalPathAlignment="Center" HorizontalItemAnchorOnPath="Center" VerticalItemAnchorOnPath="Center"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="400" Height="310" Background="White" BorderThickness="1" BorderBrush="Gray">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Border Background="{StaticResource HighlightBrush}">
+                                    <TextBlock FontSize="14" HorizontalAlignment="Left" Margin="4 2" Foreground="White">
+                                        <Run Text="Order #: " />
+                                        <Run Text="{Binding SalesOrderNumber}" />
+                                    </TextBlock>
+                                </Border>
+                                <v:OrderTile Grid.Row="1" Padding="20"/>
+                            </Grid>
+                            
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DataTemplate>
+
+ 
+
+        <!-- Products -->
+        <DataTemplate DataType="{x:Type vm:ProductsViewModel}">
+            <ListBox Style="{StaticResource myListBoxStyle}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <c1:C1CarouselPanel Margin="-100 -100 0 0" VerticalPathAlignment="Center" HorizontalPathAlignment="Center" HorizontalItemAnchorOnPath="Center" VerticalItemAnchorOnPath="Center"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="400" Height="310" Background="White" BorderThickness="1" BorderBrush="Gray">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Border Background="{StaticResource HighlightBrush}">
+                                    <TextBlock Text="{Binding Name}" FontSize="14" HorizontalAlignment="Left" Margin="4 2" Foreground="White"/>
+                                </Border>
+                                <v:ProductTile Grid.Row="1" Padding="20"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <ContentControl Content="{Binding SelectedDataView}" />
+    </Grid>
+</UserControl>

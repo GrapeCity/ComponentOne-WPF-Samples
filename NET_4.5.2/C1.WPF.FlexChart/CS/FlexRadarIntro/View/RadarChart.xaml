@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="FlexRadarIntro.RadarChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FlexRadarIntro"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+        </Grid.Resources>
+        <Grid.DataContext>
+            <local:FlexRadarViewModel />
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <StackPanel.Resources>
+                <Style TargetType="ComboBox">
+                    <Setter Property="Margin" Value="5 0 50 0" />
+                    <Setter Property="Width" Value="100" />
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="Chart type: "/>
+            <ComboBox x:Name="cbChartType" ItemsSource="{Binding ChartTypes}" SelectedValue="{Binding ElementName=radarChart, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}" />
+            <TextBlock Text="Stacking: " />
+            <ComboBox x:Name="cbStacking" ItemsSource="{Binding Stackings}" SelectedValue="{Binding ElementName=radarChart, Path=Stacking, Mode=TwoWay, Converter={StaticResource enumConverter}}" />
+            <TextBlock Text="Palette: "/>
+            <ComboBox x:Name="cbPalette" ItemsSource="{Binding Palettes}" SelectedValue="{Binding ElementName=radarChart, Path=Palette, Mode=TwoWay, Converter={StaticResource enumConverter}}" />
+            <TextBlock Text="Starting angle: " />
+            <c1:C1NumericBox x:Name="nbStartingAngle" Minimum="0" Maximum="360" Increment="15" Width="70" Margin="5 0 10 0" Value="{Binding ElementName=radarChart, Path=StartAngle, Mode=TwoWay}" />
+            <CheckBox Content="Reversed" VerticalAlignment="Center" IsChecked="{Binding ElementName=radarChart, Path=Reversed, Mode=TwoWay}" />
+        </StackPanel>
+        <c1:C1FlexRadar x:Name="radarChart" Grid.Row="1" Binding="Value" BindingX="Name" ItemsSource="{Binding Points1}">
+            <c1:Series SeriesName="s1" />
+            <c1:Series SeriesName="s2" ItemsSource="{Binding Points2}" />
+            <c1:C1FlexRadar.AxisY>
+                <c1:Axis AxisLine="True" MajorTickMarks="Cross" Min="0" MajorGrid="True" />
+            </c1:C1FlexRadar.AxisY>
+            <c1:C1FlexRadar.DataLabel>
+                <c1:DataLabel Content="{}{Value}" />
+            </c1:C1FlexRadar.DataLabel>
+        </c1:C1FlexRadar>
+    </Grid>
+</UserControl>

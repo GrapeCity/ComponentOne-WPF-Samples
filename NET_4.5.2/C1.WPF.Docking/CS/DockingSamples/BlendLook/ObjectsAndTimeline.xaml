@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="DockingSamples.BlendLook.ObjectsAndTimeline" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.ColumnSpan="2" Fill="#FF595959" />
+            <TextBox Text="  (No Storyboard open)  " Foreground="#FF7D7D7D" FontSize="11" Padding="0" BorderBrush="#FF595959" />
+            <Image Grid.Column="1" Source="../Resources/ico_objects.png" Stretch="Fill" HorizontalAlignment="Right" Margin="0 0 5 0" Width="64" Height="18" />
+        </Grid>
+        <c1:C1TreeView BorderThickness="0" Grid.Row="1">
+            <c1:C1TreeViewItem IsExpanded="True" HorizontalContentAlignment="Stretch">
+                <c1:C1TreeViewItem.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="1" Source="../Resources/ico_objects2.png" Stretch="Fill" HorizontalAlignment="Right" Margin="0 0 5 0" Width="32" Height="16" />
+                        <StackPanel Orientation="Horizontal">
+                            <Image Grid.Column="1" Source="../Resources/ico-usercontrol.png" Stretch="Fill" HorizontalAlignment="Right" Width="12" Height="12" Margin="0,0,5,0" />
+                            <TextBox Grid.Row="0" BorderThickness="0" Text="[UserControl]" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                        </StackPanel>
+                    </Grid>
+                </c1:C1TreeViewItem.Header>
+                <c1:C1TreeViewItem HorizontalContentAlignment="Stretch">
+                    <c1:C1TreeViewItem.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="1" Source="../Resources/ico_objects2.png" Stretch="Fill" HorizontalAlignment="Right" Margin="0 0 5 0" Width="32" Height="16" />
+                            <StackPanel Orientation="Horizontal">
+                                <Image Grid.Column="1" Source="../Resources/ico_grid.png" Stretch="Fill" HorizontalAlignment="Right" Width="12" Height="12" Margin="0,0,5,0" />
+                                <TextBox Text="[Grid]" BorderThickness="0" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                            </StackPanel>
+                        </Grid>
+                    </c1:C1TreeViewItem.Header>
+                    <c1:C1TreeViewItem HorizontalContentAlignment="Stretch">
+                        <c1:C1TreeViewItem.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="1" Source="../Resources/ico_objects2.png" Stretch="Fill" HorizontalAlignment="Right" Margin="0 0 5 0" Width="32" Height="16" />
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Grid.Column="1" Source="../Resources/ico_grid.png" Stretch="Fill" HorizontalAlignment="Right" Width="12" Height="12" Margin="0,0,5,0" />
+                                    <TextBox Grid.Row="0" BorderThickness="0" Text="[Grid]" Foreground="White" FontSize="11" Height="18" Padding="0" Background="Transparent" />
+                                </StackPanel>
+                            </Grid>
+                        </c1:C1TreeViewItem.Header>
+                    </c1:C1TreeViewItem>
+                </c1:C1TreeViewItem>
+            </c1:C1TreeViewItem>
+        </c1:C1TreeView>
+    </Grid>
+</UserControl>

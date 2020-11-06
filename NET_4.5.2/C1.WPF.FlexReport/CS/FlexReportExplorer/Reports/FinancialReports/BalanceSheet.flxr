@@ -1,0 +1,2073 @@
+<?xml version="1.0"?>
+<Reports>
+  <FormatVersion>1.0 1.0.0.0</FormatVersion>
+  <Report ref="1">
+    <Name>BalanceSheet</Name>
+    <DataSourceName>Main</DataSourceName>
+    <OnOpen>' -- style script start
+_styleCtr = 0
+' -- style script end
+</OnOpen>
+    <Layout>
+      <Width>10809</Width>
+      <Margin>720</Margin>
+      <MarginTop>720</MarginTop>
+      <MarginRight>720</MarginRight>
+      <MarginBottom>720</MarginBottom>
+      <Orientation>Portrait</Orientation>
+      <PaperSize>Letter</PaperSize>
+    </Layout>
+    <Font>
+      <Name>Segoe UI</Name>
+    </Font>
+    <DataSources>
+      <DataSource>
+        <Name>Main</Name>
+        <DataProvider>OLEDB</DataProvider>
+      </DataSource>
+    </DataSources>
+    <Sections>
+      <Section>
+        <Name>Detail</Name>
+        <SubSections>
+          <SubSection>
+            <Name>SubSection1</Name>
+            <Height>7659</Height>
+          </SubSection>
+        </SubSections>
+        <Type>Detail</Type>
+        <OnPrint>' -- style script start
+
+_styleCtr = _styleCtr + 1
+' -- style script end
+</OnPrint>
+      </Section>
+      <Section>
+        <Name>Header</Name>
+        <SubSections>
+          <SubSection>
+            <Name>SubSection1</Name>
+            <Height>1830</Height>
+          </SubSection>
+        </SubSections>
+        <Type>Header</Type>
+        <OnPrint>' -- style script start
+' -- var Assets=txtTotalCurrAsset+txtTotalFixedAsset+txtTotalOthrAsset
+' -- var Liabilities=txtCurrLibTotal+txtLongtrmLibTotal+txtOthrLibTotal
+' -- var AssetsPer=Assets*100/(txtTotalCurrAsset+txtTotalFixedAsset+txtTotalOthrAsset+txtCurrLibTotal+txtLongtrmLibTotal+txtOthrLibTotal)
+AssetsBaseRect.Width=4860*((txtTotalCurrAsset+txtTotalFixedAsset+txtTotalOthrAsset)*100/(txtTotalCurrAsset+txtTotalFixedAsset+txtTotalOthrAsset+txtCurrLibTotal+txtLongtrmLibTotal+txtOthrLibTotal))/100
+LiabBaseRect.Width=4860*((txtCurrLibTotal+txtLongtrmLibTotal+txtOthrLibTotal)*100/(txtTotalCurrAsset+txtTotalFixedAsset+txtTotalOthrAsset+txtCurrLibTotal+txtLongtrmLibTotal+txtOthrLibTotal))/100
+' -- style script end</OnPrint>
+      </Section>
+      <Section>
+        <Name>Footer</Name>
+        <SubSections>
+          <SubSection>
+            <Name>SubSection1</Name>
+            <PrintAtPageBottom>true</PrintAtPageBottom>
+          </SubSection>
+        </SubSections>
+        <Type>Footer</Type>
+      </Section>
+      <Section>
+        <Name>PageHeader</Name>
+        <SubSections>
+          <SubSection>
+            <Name>SubSection1</Name>
+            <Height>1515</Height>
+          </SubSection>
+        </SubSections>
+        <Type>PageHeader</Type>
+      </Section>
+      <Section>
+        <Name>PageFooter</Name>
+        <Background type="Solid">
+          <Color>FFFFFFE1</Color>
+        </Background>
+        <SubSections>
+          <SubSection>
+            <Name>SubSection1</Name>
+          </SubSection>
+        </SubSections>
+        <Type>PageFooter</Type>
+        <Repeat>true</Repeat>
+      </Section>
+    </Sections>
+    <Fields>
+      <TextField>
+        <Name>fldCurrAsset</Name>
+        <Background type="Solid">
+          <Color>FFF8F8F8</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>15</Left>
+        <Top>0</Top>
+        <Width>4860</Width>
+        <Height>389</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Current Assets</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>fldCurrLib</Name>
+        <Background type="Solid">
+          <Color>FFF8F8F8</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>15</Top>
+        <Width>4860</Width>
+        <Height>389</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Current Liabilities</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>lblCashinBank</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>375</Top>
+        <Width>2745</Width>
+        <Height>344</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Cash in Bank</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtCashinBank</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>375</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">45000</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblAccPayble</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>390</Top>
+        <Width>3093</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Accounts Payable</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtAccPayble</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>390</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">2585600</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field16</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5922</Left>
+        <Top>675</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <ShapeField>
+        <Name>Field10</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>690</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblInv</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>690</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Inventory</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtInv</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>690</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">45000</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblTaxPayble</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>705</Top>
+        <Width>3093</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Taxes Payable</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtTaxPayble</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>705</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">56263</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field18</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5922</Left>
+        <Top>985</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblPrepaidExp</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>990</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Prepaid Expenses</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtPrepaidExp</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>990</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">600</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field6</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>1000</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblNotesPayble</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>1005</Top>
+        <Width>3543</Width>
+        <Height>308</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Notes Payable (due within 12 months)</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtNotesPayble</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>1005</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">216</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field20</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5922</Left>
+        <Top>1269</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <ShapeField>
+        <Name>Field7</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>1284</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblOthrCurrAsset</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>1290</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Other</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrCurrAsset</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>1290</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">10000</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblLngTrmDebt</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>1305</Top>
+        <Width>3093</Width>
+        <Height>324</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Current Portion Long-term Debt</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtLngTrmDebt</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>1305</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">3800</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field21</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5922</Left>
+        <Top>1585</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>Field15</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>1620</Top>
+        <Width>4860</Width>
+        <Height>519</Height>
+        <ZOrder>-15</ZOrder>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+          <Bold>true</Bold>
+        </Font>
+      </TextField>
+      <TextField>
+        <Name>lblOthrCurrLib</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>1590</Top>
+        <Width>3093</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Other Current Liabilities (specify)</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrCurrLib</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>1590</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">3000</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field14</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>1600</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>Field23</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>1920</Top>
+        <Width>4872</Width>
+        <Height>519</Height>
+        <ZOrder>-16</ZOrder>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+          <Bold>true</Bold>
+        </Font>
+      </TextField>
+      <TextField>
+        <Name>lblTotalCurrAsset</Name>
+        <Section>Detail</Section>
+        <Left>15</Left>
+        <Top>1620</Top>
+        <Width>2300</Width>
+        <Height>519</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Total</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtTotalCurrAsset</Name>
+        <Section>Detail</Section>
+        <Left>2330</Left>
+        <Top>1620</Top>
+        <Width>2555</Width>
+        <Height>519</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Expression>txtCashinBank + txtInv + txtPrepaidExp + txtOthrCurrAsset</Expression>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field22</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5922</Left>
+        <Top>1920</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblCurrLibTotal</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>1920</Top>
+        <Width>2283</Width>
+        <Height>519</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <ForeColor>FFD81016</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Total</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtCurrLibTotal</Name>
+        <Section>Detail</Section>
+        <Left>8430</Left>
+        <Top>1920</Top>
+        <Width>2367</Width>
+        <Height>519</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <ForeColor>FFD81016</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Expression>txtAccPayble + txtTaxPayble + txtNotesPayble + txtLngTrmDebt + txtOthrCurrLib</Expression>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>fldFixedAsset</Name>
+        <Background type="Solid">
+          <Color>FFF8F8F8</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>15</Left>
+        <Top>2715</Top>
+        <Width>4845</Width>
+        <Height>389</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Fixed Assets</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>flbLongTrmLib</Name>
+        <Background type="Solid">
+          <Color>FFF8F8F8</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>3030</Top>
+        <Width>4860</Width>
+        <Height>389</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Long-Term Liabilities</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>lblMachine</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>3090</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Machinary &amp; Equipment</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtMachine</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>3090</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">56200</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field28</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>3390</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblFurniture</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>3405</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Furniture &amp; Fixtures</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtFurniture</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>3405</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">32400</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblBankLoan</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>3405</Top>
+        <Width>3993</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Bank Loans Payable (greater than 12 months)</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtBankLoan</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>3405</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">200</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field29</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>3700</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblLeasehold</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>3705</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Leasehold Improvements</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtLeasehold</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>3705</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">6300</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field24</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>3720</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblLessShortTerm</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>3720</Top>
+        <Width>3093</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Less: Short-term Portion</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtLessShortTerm</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>3720</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">560</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field30</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>3984</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblRealEstate</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>4005</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Real Estate / Buildings</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtRealEstate</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>4005</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">6250000</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>txtOthrLngTrmDebt</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>4320</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <ZOrder>-2</ZOrder>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">450</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblNotePayble</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>4020</Top>
+        <Width>3093</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Notes Payable to Stockholders</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtNotePayble</Name>
+        <Section>Detail</Section>
+        <Left>9285</Left>
+        <Top>4020</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">6203</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field25</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>4030</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <ShapeField>
+        <Name>Field31</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>4300</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblOthrFixedAsset</Name>
+        <Section>Detail</Section>
+        <Left>30</Left>
+        <Top>4305</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Other</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrFixedAsset</Name>
+        <Section>Detail</Section>
+        <Left>3450</Left>
+        <Top>4305</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">7000</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field26</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>4314</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblOthrLngTrmDebt</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>4320</Top>
+        <Width>3093</Width>
+        <Height>344</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Other long-term debt (specify)</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>Field41</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>4650</Top>
+        <Width>4860</Width>
+        <Height>519</Height>
+        <ZOrder>-20</ZOrder>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+          <Bold>true</Bold>
+        </Font>
+      </TextField>
+      <TextField>
+        <Name>Field39</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>4645</Top>
+        <Width>4860</Width>
+        <Height>519</Height>
+        <ZOrder>-17</ZOrder>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+          <Bold>true</Bold>
+        </Font>
+      </TextField>
+      <ShapeField>
+        <Name>Field27</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>4630</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <ShapeField>
+        <Name>Field32</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>4635</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblTotalFixedAsset</Name>
+        <Section>Detail</Section>
+        <Left>15</Left>
+        <Top>4645</Top>
+        <Width>1815</Width>
+        <Height>519</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Total</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtTotalFixedAsset</Name>
+        <Section>Detail</Section>
+        <Left>2330</Left>
+        <Top>4645</Top>
+        <Width>2555</Width>
+        <Height>519</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Expression>txtMachine + txtFurniture + txtLeasehold + txtRealEstate + txtOthrFixedAsset</Expression>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblLongtrmLibTotal</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>4650</Top>
+        <Width>2283</Width>
+        <Height>514</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <ForeColor>FFD81016</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Total</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtLongtrmLibTotal</Name>
+        <Section>Detail</Section>
+        <Left>8430</Left>
+        <Top>4655</Top>
+        <Width>2367</Width>
+        <Height>514</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <ForeColor>FFD81016</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Expression>txtBankLoan + txtLessShortTerm + txtNotePayble + txtOthrLngTrmDebt</Expression>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>fldOtherAsset</Name>
+        <Background type="Solid">
+          <Color>FFF8F8F8</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>5775</Top>
+        <Width>4845</Width>
+        <Height>389</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Other Assets</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>fldOthrLib</Name>
+        <Background type="Solid">
+          <Color>FFF8F8F8</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>5790</Top>
+        <Width>4860</Width>
+        <Height>389</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Shareholders Equity</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>lblOthrAssSpecify1</Name>
+        <Section>Detail</Section>
+        <Left>15</Left>
+        <Top>6165</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Receivable from employee</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrAssSpecify1</Name>
+        <Section>Detail</Section>
+        <Left>3435</Left>
+        <Top>6165</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">12500</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblOthrLibSpecify1</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>6180</Top>
+        <Width>3093</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Common stock</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrLibSpecify1</Name>
+        <Section>Detail</Section>
+        <Left>9270</Left>
+        <Top>6180</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">16300</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblOthrAssSpecify2</Name>
+        <Section>Detail</Section>
+        <Left>15</Left>
+        <Top>6480</Top>
+        <Width>2745</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Receivable from clients</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrAssSpecify2</Name>
+        <Section>Detail</Section>
+        <Left>3435</Left>
+        <Top>6480</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">32600</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field33</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>6495</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblOthrLibSpecify2</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>6495</Top>
+        <Width>3093</Width>
+        <Height>300</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Additional paid-in capital</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrLibSpecify2</Name>
+        <Section>Detail</Section>
+        <Left>9270</Left>
+        <Top>6495</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">8500</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field38</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5922</Left>
+        <Top>6502</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>lblOthrAssSpecify3</Name>
+        <Section>Detail</Section>
+        <Left>15</Left>
+        <Top>6780</Top>
+        <Width>2745</Width>
+        <Height>330</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Intangible assets</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrAssSpecify3</Name>
+        <Section>Detail</Section>
+        <Left>3435</Left>
+        <Top>6780</Top>
+        <Width>1425</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">3200</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblOthrLibSpecify3</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>6795</Top>
+        <Width>3093</Width>
+        <Height>345</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Retained earnings</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtOthrLibSpecify3</Name>
+        <Section>Detail</Section>
+        <Left>9270</Left>
+        <Top>6795</Top>
+        <Width>1512</Width>
+        <Height>300</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+        </Font>
+        <Text>
+          <Value sys="string">3819708</Value>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ShapeField>
+        <Name>Field34</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>6805</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <ShapeField>
+        <Name>Field37</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5922</Left>
+        <Top>6812</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>Field40</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>7110</Top>
+        <Width>4860</Width>
+        <Height>519</Height>
+        <ZOrder>-18</ZOrder>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+          <Bold>true</Bold>
+        </Font>
+      </TextField>
+      <ShapeField>
+        <Name>Field35</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>7089</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <ShapeField>
+        <Name>Field36</Name>
+        <Background type="Solid">
+          <Color>FFE4E4E4</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5922</Left>
+        <Top>7096</Top>
+        <Width>4860</Width>
+        <Height>28.8</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+      </ShapeField>
+      <TextField>
+        <Name>Field42</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>7140</Top>
+        <Width>4860</Width>
+        <Height>519</Height>
+        <ZOrder>-19</ZOrder>
+        <MarginLeft>100</MarginLeft>
+        <MarginRight>100</MarginRight>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+          <Bold>true</Bold>
+        </Font>
+      </TextField>
+      <TextField>
+        <Name>txtOthrLibTotal</Name>
+        <Section>Detail</Section>
+        <Left>8415</Left>
+        <Top>7125</Top>
+        <Width>2367</Width>
+        <Height>519</Height>
+        <ZOrder>-1</ZOrder>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <ForeColor>FFD81016</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Expression>txtOthrLibSpecify1 + txtOthrLibSpecify2 + txtOthrLibSpecify3</Expression>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblTotalOthrAsset</Name>
+        <Section>Detail</Section>
+        <Left>0</Left>
+        <Top>7110</Top>
+        <Width>1815</Width>
+        <Height>514</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Total</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>txtTotalOthrAsset</Name>
+        <Section>Detail</Section>
+        <Left>2315</Left>
+        <Top>7110</Top>
+        <Width>2555</Width>
+        <Height>514</Height>
+        <MarginLeft>28.8</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <Align>RightTop</Align>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Expression>txtOthrAssSpecify1 + txtOthrAssSpecify2 + txtOthrAssSpecify3</Expression>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>lblOthrLibTotal</Name>
+        <Section>Detail</Section>
+        <Left>5937</Left>
+        <Top>7140</Top>
+        <Width>2283</Width>
+        <Height>519</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>28.8</MarginTop>
+        <MarginRight>28.8</MarginRight>
+        <MarginBottom>28.8</MarginBottom>
+        <ForeColor>FFD81016</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>12</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Total</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>Field3</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>PageHeader</Section>
+        <Left>0</Left>
+        <Top>216</Top>
+        <Width>4860</Width>
+        <Height>519</Height>
+        <ZOrder>-12</ZOrder>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+          <Bold>true</Bold>
+        </Font>
+      </TextField>
+      <TextField>
+        <Name>Field4</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>PageHeader</Section>
+        <Left>5937</Left>
+        <Top>216</Top>
+        <Width>4860</Width>
+        <Height>519</Height>
+        <ZOrder>-12</ZOrder>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>9.75</Size>
+          <Bold>true</Bold>
+        </Font>
+      </TextField>
+      <ShapeField>
+        <Name>AssetsUpperRect</Name>
+        <Background type="Solid">
+          <Color>FFC29EC4</Color>
+        </Background>
+        <Section>PageHeader</Section>
+        <Left>0</Left>
+        <Top>0</Top>
+        <Width>4860</Width>
+        <Height>216</Height>
+        <ZOrder>-11</ZOrder>
+      </ShapeField>
+      <ShapeField>
+        <Name>LiabUpperRect</Name>
+        <Background type="Solid">
+          <Color>FFC29EC4</Color>
+        </Background>
+        <Section>PageHeader</Section>
+        <Left>5937</Left>
+        <Top>0</Top>
+        <Width>4860</Width>
+        <Height>216</Height>
+        <ZOrder>-11</ZOrder>
+      </ShapeField>
+      <TextField>
+        <Name>Field1</Name>
+        <Section>PageHeader</Section>
+        <Left>1830</Left>
+        <Top>216</Top>
+        <Width>3030</Width>
+        <Height>519</Height>
+        <MarginLeft>14.4</MarginLeft>
+        <MarginTop>14.4</MarginTop>
+        <MarginRight>100</MarginRight>
+        <MarginBottom>14.4</MarginBottom>
+        <Align>RightTop</Align>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>14.25</Size>
+        </Font>
+        <Text>
+          <Expression>txtTotalCurrAsset + txtTotalFixedAsset + txtTotalOthrAsset</Expression>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <TextField>
+        <Name>fldTotalLib</Name>
+        <Section>PageHeader</Section>
+        <Left>5937</Left>
+        <Top>216</Top>
+        <Width>2268</Width>
+        <Height>519</Height>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>14.4</MarginTop>
+        <MarginRight>14.4</MarginRight>
+        <MarginBottom>14.4</MarginBottom>
+        <ForeColor>FFD81016</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>14.25</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Total Liabilities</Value>
+        </Text>
+      </TextField>
+      <ShapeField>
+        <Name>AssetsBaseRect</Name>
+        <Background type="Solid">
+          <Color>FFE5EC95</Color>
+        </Background>
+        <Section>PageHeader</Section>
+        <Left>0</Left>
+        <Top>0</Top>
+        <Width>4860</Width>
+        <Height>216</Height>
+        <ZOrder>2</ZOrder>
+      </ShapeField>
+      <ShapeField>
+        <Name>LiabBaseRect</Name>
+        <Background type="Solid">
+          <Color>FFE5EC95</Color>
+        </Background>
+        <Section>PageHeader</Section>
+        <Left>5937</Left>
+        <Top>0</Top>
+        <Width>4860</Width>
+        <Height>216</Height>
+        <ZOrder>2</ZOrder>
+      </ShapeField>
+      <TextField>
+        <Name>fldTotalAssets</Name>
+        <Section>PageHeader</Section>
+        <Left>15</Left>
+        <Top>216</Top>
+        <Width>1800</Width>
+        <Height>519</Height>
+        <ZOrder>3</ZOrder>
+        <MarginLeft>100</MarginLeft>
+        <MarginTop>14.4</MarginTop>
+        <MarginRight>14.4</MarginRight>
+        <MarginBottom>14.4</MarginBottom>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>14.25</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Total Assets</Value>
+        </Text>
+      </TextField>
+      <TextField>
+        <Name>Field2</Name>
+        <Section>PageHeader</Section>
+        <Left>8235</Left>
+        <Top>216</Top>
+        <Width>2562</Width>
+        <Height>519</Height>
+        <ZOrder>4</ZOrder>
+        <MarginRight>100</MarginRight>
+        <Align>RightTop</Align>
+        <ForeColor>FFD81016</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>14.25</Size>
+        </Font>
+        <Text>
+          <Expression>txtCurrLibTotal + txtLongtrmLibTotal + txtOthrLibTotal</Expression>
+        </Text>
+        <Format>$#,##0</Format>
+      </TextField>
+      <ImageField>
+        <Name>Field8</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>Header</Section>
+        <Left>6570</Left>
+        <Top>0</Top>
+        <Width>4230</Width>
+        <Height>1110</Height>
+        <PictureAlign>RightTop</PictureAlign>
+        <PictureScale>Scale</PictureScale>
+        <Picture>
+          <Image>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</Image>
+        </Picture>
+      </ImageField>
+      <TextField>
+        <Name>Field9</Name>
+        <Background type="Solid">
+          <Color>FFF1F1F1</Color>
+        </Background>
+        <Section>Header</Section>
+        <Left>0</Left>
+        <Top>0</Top>
+        <Width>6670</Width>
+        <Height>1110</Height>
+        <MarginLeft>576</MarginLeft>
+        <Align>LeftMiddle</Align>
+        <ForeColor>FF551E5F</ForeColor>
+        <Font>
+          <Name>Segoe UI Light</Name>
+          <Size>23</Size>
+        </Font>
+        <Text>
+          <Value sys="string">Balance Sheet</Value>
+        </Text>
+      </TextField>
+    </Fields>
+  </Report>
+</Reports>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="InputPanelSample.MSDataGridDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:InputPanelSample"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="FootBorder" TargetType="Border">
+            <Setter Property="Background" Value="White" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="C1InputPanel ItemsSource Binding ObservableCollection" Grid.Column="0" BorderBrush="Black" BorderThickness="2" >
+            <c1:C1InputPanel x:Name="InputPanel" Header="Employees" HeaderPadding="4" ItemsSource="{Binding CustomerObservable}" Margin="15"
+                            HeaderBackground="White"
+                            HeaderForeground="Black"
+                            NavigationBackground="White" 
+                            ValidationBackground="White" 
+                            FooterBorderStyle="{StaticResource FootBorder}"/>
+        </GroupBox>
+        <GroupBox Header="MSDataGrid ItemsSource Binding ObservableCollection" Grid.Column="1" BorderBrush="Black" BorderThickness="2">
+            <DataGrid ItemsSource="{Binding CustomerObservable}" IsSynchronizedWithCurrentItem="True" Margin="15" RowBackground="#E8E8E8" AlternatingRowBackground="White"/>
+        </GroupBox>
+    </Grid>
+</UserControl>

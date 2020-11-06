@@ -1,0 +1,1334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Controls>
+	<Group name="データ管理" isExpanded="true">
+		<Control name="DataGrid" isTop="true" isNew="true" assembly="C1.WPF.DataGrid">
+			<Feature assemblyName="DataGridSamples.4.exe" type="DataGridSamples.DemoGrid" source="C1.WPF.DataGrid\CS\DataGridSamples\DataGrid\DataGridPage.xaml">
+				<Description>C1DataGrid コントロールを使用すると、表形式のデータを簡単に表示、編集、分析できます。 このデモでは、ソート、フィルタリング、グループ化、固定列、列/行のサイズ変更など、デフォルトでサポートされているすべての機能を示します。</Description>
+				<Properties>
+					<Property name="HeadersVisibility" />
+					<Property name="SelectionMode" />
+					<Property name="CanUserSort" />
+					<Property name="CanUserFilter" />
+					<Property name="IsReadOnly" />
+					<Property name="CanUserRemoveRows" />
+					<Property name="CanUserAddRows" />
+					<Property name="CanUserEditRows" />
+					<Property name="CanUserGroup" value="true" />
+					<Property name="CanUserResizeColumns" />
+					<Property name="CanUserResizeRows" />
+					<Property name="ShowGroupingPanel" />
+					<Property name="CanUserFreezeColumns" value="Left" />
+					<Property name="GridLinesVisibility"/>
+					<Property name="ShowVerticalFreezingSeparator" />
+					<Property name="FrozenColumnCount" value="1" minimumValue="0" maximumValue="11" />
+					<Property name="IsLoading" />
+				</Properties>
+			</Feature>
+			<Feature name="選択" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Selection\SelectionPage.xaml" type="DataGridSamples.Selection">
+				<Description>C1DataGrid は、Microsoft Excel のようなセル選択を提供する複数の方法を可能にするいくつかの選択モードをサポートしています。</Description>
+				<Properties>
+					<Property name="SelectionMode" />
+					<Property name="ColumnHeaderClickAction" />
+				</Properties>
+			</Feature>
+			<Feature name="データ入力" assemblyName="DataGridSamples.4.exe" type="DataGridSamples.DataInput">
+				<SubFeatures>
+					<SubFeature name="追加＆削除" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\DataInput\AddRemoveRows\AddRemoveRowsPage.xaml" type="DataGridSamples.AddRemoveRows">
+						<Description>C1DataGrid は、&quot;新規行&quot; および削除をサポートするデータ入力のために特別に設計されています。</Description>
+					</SubFeature>
+					<SubFeature name="検証" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\DataInput\Validation\Validation.xaml" type="DataGridSamples.Validation">
+						<Description>C1DataGrid は、組み込みの WPF 検証フレームワークもサポートしています。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="フィルター" isExpanded="true">
+				<Description>C1DataGrid でフィルターを簡単にカスタマイズする方法を示します。</Description>
+				<SubFeatures>
+					<SubFeature name="フィルター行" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\FilterRow\FilterRowPage.xaml" type="DataGridSamples.FilterRow" />
+					<SubFeature name="フルテキストフィルター" assemblyName="DataGridSamples.4.exe" isNew="true" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\FullTextSearch\FullTextSearchPage.xaml" type="DataGridSamples.FullTextSearch" />
+					<SubFeature name="自動フィルター" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\AutoFilter\AutoFilterPage.xaml" type="DataGridSamples.AutoFilter" />
+					<SubFeature name="カスタムフィルター" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\CustomFilters\CustomFilters.xaml" type="DataGridSamples.CustomFilters" />
+					<SubFeature name="既定 - Excel ライク" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\DefaultFilter\DefaultFilterPage.xaml" type="DataGridSamples.DefaultFilter" />
+				</SubFeatures>
+			</Feature>
+			<Feature name="グループ化" assemblyName="DataGridSamples.4.exe" type="DataGridSamples.Grouping">
+				<Description>グリッド内のデータをグループ化し、カスタマイズされた要約行を表示する方法を示します。</Description>
+				<SubFeatures>
+					<SubFeature name="グループ小計" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Grouping\GroupSummary\GroupSummaryPage.xaml" type="DataGridSamples.GroupSummary" />
+					<SubFeature name="総計" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Grouping\GrandTotal\GrandTotalPage.xaml" type="DataGridSamples.GrandTotal" />
+				</SubFeatures>
+			</Feature>
+			<Feature name="階層表示">
+				<Description>階層的なシナリオを達成するには多くの方法があり、さまざまな選択肢をサポートしています。このサンプルは、Row.Visibility プロパティを使用して行を非表示にする方法を示します。</Description>
+				<SubFeatures>
+					<SubFeature name="Row.Visibility を使用する" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Hierarchical\HierarchicalTasks\HierarchicalTasksPage.xaml" type="DataGridSamples.HierarchicalTasks" />
+					<SubFeature name="ネストされたグリッド" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Hierarchical\NestedGrids\NestedGridsPage.xaml" type="DataGridSamples.Hierarchical">
+						<Description>このサンプルでは、親/子シナリオの C1DataGrid をネストしています。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="ClearStyle" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Appearance\AppearancePage.xaml" type="DataGridSamples.Appearance">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1DataGrid コントロールのカスタムスタイルを素早く作成できます。 ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="GridLinesVisibility" />
+					<Property name="VerticalGridLinesBrush" />
+					<Property name="HorizontalGridLinesBrush" />
+					<Property name="RowBackground" />
+					<Property name="AlternatingRowBackground" />
+					<Property name="RowForeground" />
+					<Property name="AlternatingRowForeground" />
+					<Property name="SelectedBackground" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="ValidationBackground" />
+					<Property name="ValidationForeground" />
+					<Property name="GroupingPanelBackground" />
+					<Property name="GroupingPanelForeground" />
+					<Property name="HeaderBackground" />
+					<Property name="HeaderForeground" />
+					<Property name="DEMO_BorderThickness" caption="BorderThickness" />
+				</Properties>
+			</Feature>
+			<Feature name="高度な機能" assemblyName="DataGridSamples.4.exe" type="DataGridSamples.Advanced">
+				<Description>より多くのシナリオをお探しですか？シンプルシナリオと複雑なシナリオの両方をサポートするために設計された C1DataGrid コントロールなら問題ありません。行と列をカスタマイズし、ローカライズしたり、データをエクスポートしたりできます。</Description>
+				<SubFeatures>
+					<SubFeature name="エクスポート書式" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\ExportFormats\ExportFormatsPage.xaml" type="DataGridSamples.ExportFormats">
+						<Description>C1DataGrid は、HTML、PDF、および Excel といったいくつかの標準フォーマットにコンテンツを簡単にエクスポートできます（クリップボードまたはファイルの両方のエクスポートを介して）。</Description>
+					</SubFeature>
+					<SubFeature name="カスタム列" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Advanced\CustomColumns\CustomColumnsPage.xaml" type="DataGridSamples.CustomColumns" />
+					<SubFeature name="ハイパーリンク" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Advanced\Hyperlinks.xaml" type="DataGridSamples.Hyperlinks">
+						<Description>ハイパーリンクの列を使用する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="カスタム行" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Advanced\CustomRows\CustomRowsPage.xaml" type="DataGridSamples.CustomRows" />
+					<SubFeature name="条件付き書式" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Advanced\ConditionalFormat\ConditionalFormatPage.xaml" type="DataGridSamples.ConditionalFormat" />
+					<SubFeature name="行のドラッグ＆ドロップ" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Advanced\DragAndDropRows\DragAndDropRows.xaml" type="DataGridSamples.DragAndDropRows" />
+				</SubFeatures>
+			</Feature>
+		</Control>
+		<Control name="FlexGrid" isTop="true" isNew="true" assembly="C1.WPF.FlexGrid.4">
+      <Feature type="ShowCase.ShowCaseSample" name="ShowCase" assemblyName="ShowCase.exe" source="C1.WPF.FlexGrid\CS\ShowCase\ShowCase\ShowCaseSample.xaml" isNew="true">
+        <Description>
+          The modern, high-performance FlexGrid control comes with flexible data binding and an easy-to-use API for maximum configuration and customization.
+        </Description>
+      </Feature>
+      <Feature type="MainTestApplication.Financial" assemblyName="FlexGridSamples.exe" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Financial\Financial.xaml">
+				<Description>C1FlexGrid は、軽量で柔軟なオブジェクトモデルを持つ DataGrid コントロールです。C1FlexGrid は、アンバウンドモード、フレキシブルなセルマージ、マルチセルの行と列のヘッダなど、多くのユニークな機能を提供します。</Description>
+			</Feature>
+			<Feature name="フィルタリング" assemblyName="FlexGridSamples.exe" isExpanded="true">
+				<SubFeatures>
+					<SubFeature name="フィルタリング" assemblyName="FlexGridSamples.exe" type="MainTestApplication.Filtering" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\Filtering.xaml" >
+						<Description>このデモでは、列フィルタリングを有効にする方法を示します。ユーザーは、列ヘッダーのドロップダウンをクリックしてフィルターを設定できます。アクティブなフィルタは、列見出しのアイコンで示されます。フィルタは、連結モードと非連結モードで使用できます。</Description>
+					</SubFeature>
+					<SubFeature name="フルテキストフィルター" assemblyName="FlexGridSamples.exe" isNew="true" type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml" >
+						<Description>このデモでは、FullTextFilter を使用してすべての列にわたってデータをフィルター処理して強調表示する方法を示します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="グループ化" assemblyName="FlexGridSamples.exe">
+				<SubFeatures>
+					<SubFeature name="基本的なグループ化" assemblyName="FlexGridSamples.exe" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Grouping\Grouping.xaml" type="MainTestApplication.Grouping">
+						<Description>このデモでは、C1FlexGridがICollectionView データのグループ化をサポートする方法を示します。また、AllowMerging プロパティを使用して、同じ内容の隣接セルをマージする方法も示します。</Description>
+					</SubFeature>
+					<SubFeature name="グループ化パネル" assemblyName="FlexGridSamples.exe" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Grouping\GroupingPanel.xaml" type="MainTestApplication.GroupingPanel">
+						<Description>列ヘッダーをグループ化領域にドラッグしてグループを作成します。グループを作成したら、マーカーをドラッグしてグループの順序を変更するか、グループをクリックしてグループを削除またはソートします。</Description>
+					</SubFeature>
+					<SubFeature name="カスタムグループ化" assemblyName="FlexGridSamples.exe" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Grouping\CustomGrouping.xaml" type="MainTestApplication.CustomGrouping">
+						<Description>このデモでは、単純な値コンバーターを使用してカスタムのグループ化ロジックを定義する方法を示します。価格、コスト別にグループ化するか、またはカスタムグループを表示するために導入されました。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="iTunes" type="MainTestApplication.iTunes" source="C1.WPF.FlexGrid\CS\FlexGridSamples\iTunes\iTunes.xaml" assemblyName="FlexGridSamples.exe">
+				<Description>このデモでは、約 10,000 曲をアーティストとアルバム別にグループ化したライブラリを表示しています。ユーザーが曲、アルバム、またはアーティストをすばやく簡単に見つけることができる検索ボックスが含まれています。フィルタリングはデータビューで実行されます。このデモでは、セルのカスタマイズに使用される C1FlexGrid の CellFactory インターフェイスを紹介します。アーティスト、アルバム、曲、折りたたみ/展開アイコン、評価の横に画像を表示するカスタムセルを使用します。ICellFactory インターフェイスを継承し、セルを表すために使用される FrameworkElement オブジェクトを提供することで、簡単にカスタムセルを作成できます。</Description>
+			</Feature>
+			<Feature name="選択" type="MainTestApplication.SelectionMode" source="C1.WPF.FlexGrid\CS\FlexGridSamples\SelectionMode\SelectionMode.xaml" assemblyName="FlexGridSamples.exe">
+				<Description>C1FlexGrid には、SelectionMode プロパティによって制御される豊富な選択モデルがあります。選択モードは、単一セル、セル範囲（隣接セルのブロック）、単一行、行範囲、またはリストボックス（必ずしも連続している必要はありません）に設定できます。選択モードに関係なく、C1FlexGrid は選択したセルを常に CellRange オブジェクトとして返します。これにより、選択したデータを簡単に監視して処理することができます。</Description>
+			</Feature>
+			<Feature name="アンバウンド" type="MainTestApplication.Unbound" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Unbound\Unbound.xaml" assemblyName="FlexGridSamples.exe">
+				<Description>IEnumerable データソースで作業することに加えて、C1FlexGrid は、バインドされていないモードもサポートしています。このモードでは、セル値がグリッド自体に格納され、使い慣れたインデックス表記法を使用してアクセスされます。このデモでは、マージされたマルチセルの行と列のヘッダーを設定する方法も示します。</Description>
+			</Feature>
+			<Feature name="編集" type="MainTestApplication.Editing" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Editing\Editing.xaml" assemblyName="FlexGridSamples.exe">
+				<Description>C1FlexGrid は、Excel 形式の編集をサポートしています。セルに値を入力し、Enter キーまたは矢印キーを使用して次のセルに移動します。または、F2 キーを押してフルエディットモードにします。矢印キーはエディタ内をナビゲートします。オートコンプリートとバリューマッピングされたカラムも内蔵されています。ColumnValueConverter を作成して ValueConverter プロパティのカラムに割り当てるだけです。トランザクションによる編集もサポートされています。ここで使用する Customer クラスは IEditableObject を実装しているため、新しい行に移動する前に Esc キーを押して変更を元に戻すことができます（注：灰色の列は読み取り専用です）。</Description>
+			</Feature>
+		</Control>
+		<Control name="FlexSheet" assembly="C1.WPF.FlexSheet">
+			<Feature assemblyName="FlexSheetSample.exe" type="FlexSheetSample.FlexSheetDemo" source="C1.WPF.FlexGrid.FlexSheet\CS\FlexSheetSample\FlexSheetSample\FlexSheetDemo.xaml" >
+				<Description>C1FlexSheet は、複数のシート、数式、セルの書式設定などのサポートを含む、WPF アプリケーション用の Microsoft Excel のようなスプレッドシート機能を提供します。</Description>
+			</Feature>
+		</Control>
+		<Control name="ListBox" assembly="C1.WPF">
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.ListBoxSample" source="C1.WPF\CS\BasicControls\ItemsControls\ListBoxSample.xaml">
+				<Description>C1ListBox コントロールは、ズーム機能が組み込まれた高性能のリストボックスです。ズームするには、マウスホイールを使用しながら CTRL を押し続けるか、タッチ対応デバイスを使用している場合はピンチジェスチャーを実行します。</Description>
+				<Properties>
+					<Property name="Orientation" />
+					<Property name="ZoomMode"/>
+					<Property name="SelectionMode"/>
+					<Property name="HorizontalScrollBarVisibility"/>
+					<Property name="VerticalScrollBarVisibility"/>
+				</Properties>
+			</Feature>
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.ListBoxSample" source="C1.WPF\CS\BasicControls\ItemsControls\ListBoxSample.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1ListBox コントロールのカスタムスタイルをすばやく作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="SelectedBackground"/>
+					<Property name="ButtonBackground"/>
+					<Property name="ButtonForeground"/>
+					<Property name="MouseOverBrush"/>
+					<Property name="PressedBrush"/>
+					<Property name="DEMO_BorderThickness" caption="BorderThickness" />
+					<Property name="CornerRadius"/>
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="OLAP" assembly="C1.WPF.Olap">
+			<Feature name="基本動作" type="OlapSamples.OlapDemo" assemblyName="OlapSamples.exe" source="C1.WPF.Olap\CS\OlapSamples\OlapSamples\Samples\OlapDemo.xaml" >
+				<Description>表とキューブのデータを細分化するピボットグリッドとチャートを作成し、リアルタイムの情報、洞察、結果を数秒で表示します。使いやすいコントロールは、Microsoft Excel® ピボットテーブルをモデルにしているため、すべてのユーザーにとって強力で使い慣れています。</Description>
+			</Feature>
+    </Control>
+    <Control name="DataFilter" assembly="C1.WPF.DataFilter" isNew="true">
+      <Feature
+        name="フィルター付き従業員リスト" type="EmployeesListWithFilter.DataFilterSample" assemblyName="EmployeesListWithFilter.exe"
+        source="C1.WPF.DataFilter\CS\EmployeesListWithFilter\Samples\DataFilterSample.xaml">
+        <Description>DataFilter を使用すると、ユーザーは条件に基づいてデータをフィルタリングできます。データソースからフィルターを簡単に作成することができ、フィルターは自動生成または手動で作成できます。
+アコーディオンベースのフィルタリング UI を任意のコントロールまたは情報画面に接続して、直感的なフィルタリングエクスペリエンスを提供できます。</Description>
+      </Feature>
+      <Feature
+        name="フィルター付き車リスト" type="CarsListWithFilter.CarsListControl" assemblyName="CarsListWithFilter.exe"
+         source="C1.WPF.DataFilter\CS\CarsListWithFilter\Samples\CarsListControl.xaml">
+        <Description>このサンプルでは、自動生成されたフィルターを変更し、フィルター式を保存および復元する方法を示します。</Description>
+      </Feature>
+      <Feature
+        name="フィルターサマリー" type="FilterSummary.FilterSummarySample" assemblyName="FilterSummary.exe"
+        source="C1.WPF.DataFilter\CS\FilterSummary\Samples\FilterSummaryControl.xaml">
+        <Description>このサンプルでは、さまざまな集計式とフィルターサマリーのカスタム形式を使用する方法を示します。</Description>
+      </Feature>
+      <Feature
+        name="Filter Editor" type="FilterEditor.FilterEditorSample" isNew="true" assemblyName="FilterEditor.exe"
+        source="C1.WPF.DataFilter\CS\FilterEditor\Samples\FilterEditorControl.xaml">
+        <Description>The FilterEditor allows end-users to create complex filter criteria. The TreeView based filtering UI can be attached to any control or information screen. For every operation control shows drop-down hints with available options.</Description>
+      </Feature>
+    </Control>
+  </Group>
+	<Group name="データ視覚化" isExpanded="true">
+		<Control name="Chart3D" assembly="C1.WPF.Chart3D">
+			<Feature assemblyName="ChartSamples.4.exe" type="ChartSamples.Function3D" source="C1.WPF.Chart\CS\ChartSamples\3D\Function3D.xaml" >
+				<Description>データを３次元でチャート化します。C1Chart3D コントロールでは、等高線レベル、ゾーン、凡例などのオプションを使用してサーフェスチャートを作成できます。</Description>
+			</Feature>
+			<Feature name="インタラクションおよびラベル" assemblyName="ChartSamples.4.exe" type="ChartSamples.Elevation" source="C1.WPF.Chart\CS\ChartSamples\3D\Elevation.xaml" >
+				<Description>プロット領域をドラッグすることでチャートと対話し、ポイント情報を含むツールチップを表示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="Chart" assembly="C1.WPF.Chart">
+			<Description>C1Chart コントロールは、Bar、Column、Area、Line、Pie、Scatter などの一般的なチャートタイプをすべてサポートしています。12種類の組み込みテーマと22色のパレットを使用して外観をカスタマイズします。</Description>
+			<Feature assemblyName="ChartSamples.4.exe" type="ChartSamples.Gallery" source="C1.WPF.Chart\CS\ChartSamples\Basics\Gallery.xaml">
+				<Description>このデモでは、C1Chartでサポートされているすべての2Dおよび3Dチャートタイプを表示します。</Description>
+			</Feature>
+			<Feature name="特殊なチャート" assemblyName="ChartSamples.4.exe" type="ChartSamples.Labels">
+				<SubFeatures>
+					<SubFeature name="金融" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Combination\FinancialChart.xaml" type="ChartSamples.FinancialChart">
+						<Description>このデモでは、２つの Y 軸を持つ金融チャートを示します。</Description>
+					</SubFeature>
+					<SubFeature name="レーダー" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Basics\Radar.xaml" type="ChartSamples.Radar">
+						<Description>このデモはレーダーチャートを示します。</Description>
+					</SubFeature>
+					<SubFeature name="レーダーバーチャート" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Basics\RangeBarChart.xaml" type="ChartSamples.RangeBarChart">
+						<Description>このデモでは、高温と低温を視覚化するガントチャートを表示します。</Description>
+					</SubFeature>
+					<SubFeature name="バブル" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Appearance\Bubble.xaml" type="ChartSamples.Bubble">
+						<Description>このデモでは、プロット要素にカスタムスタイルが適用されたバブルチャートを表示します。</Description>
+					</SubFeature>
+					<SubFeature name="積層円グラフ" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Appearance\StackedPie.xaml" type="ChartSamples.StackedPie">
+						<Description>積層円グラフを表示します。</Description>
+					</SubFeature>
+					<SubFeature name="複雑な棒グラフ" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Combination\ComplexChart.xaml" type="ChartSamples.ComplexChart">
+						<Description>異なるデータ型で異なるグラフタイプを組み合わせます。このデモでは、複雑な積層棒グラフを示しています。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="マーカー＆ラベル" assemblyName="ChartSamples.4.exe" type="ChartSamples.Labels">
+				<SubFeatures>
+					<SubFeature name="シンプルマーカー" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Interaction\SimpleMarker.xaml" type="ChartSamples.SimpleMarker">
+						<Description>このデモでは、ChartPanelObject クラスを使用してシンプルなマーカーを作成する方法を示します。チャート上に移動すると、マーカーが表示されます。</Description>
+					</SubFeature>
+					<SubFeature name="マウスマーカー" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Interaction\MouseMarker.xaml" type="ChartSamples.MouseMarker">
+						<Description>このデモでは、マウスカーソルとともに動くマーカーが表示されます。</Description>
+					</SubFeature>
+					<SubFeature name="十字線" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Interaction\Markers.xaml" type="ChartSamples.Markers">
+						<Description>このデモでは、十字線のような水平および垂直の線マーカーを示しています。</Description>
+					</SubFeature>
+					<SubFeature name="静的ラベル" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Basics\Labels.xaml" type="ChartSamples.Labels">
+						<Description>このデモでは、データポイントのスタティックラベルとツールチップを示しています。また、組み込みのパーセンテージ系列ラベルも表示されます。任意の UIElement をツールチップとラベル内に配置できます。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="インタラクティブ操作" assemblyName="ChartSamples.4.exe" type="ChartSamples.InteractiveChart">
+				<SubFeatures>
+					<SubFeature name="インタラクティブズーム" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Interaction\InteractiveChart.xaml" type="ChartSamples.InteractiveChart">
+						<Description>ユーザーがグラフをズーム、拡大縮小、およびスクロールできるようにすることで、エンドユーザーエクスペリエンスを強化します。C1Chart コントロールには、組み込みのズーム、パンニング（平行移動）、スケーリングの各操作が含まれています。</Description>
+					</SubFeature>
+					<SubFeature name="概要プラス詳細" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Interaction\ZoomChartControl.xaml" type="ChartSamples.ZoomChartControl">
+						<Description>上のチャートにて範囲を選択し、その詳細を下のチャートで参照します。このデモでは、C1RangeSlider も使用します。</Description>
+					</SubFeature>
+					<SubFeature name="ドラッグ＆ドロップ" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Interaction\DragDrop.xaml" type="ChartSamples.DragDrop">
+						<Description>C1Chart を使用すると、各ビジュアルプロット要素を完全に制御できます。このデモでは、C1DragDropManager クラスを使用して、２つのチャート間のドラッグアンドドロップを実装しています。</Description>
+					</SubFeature>
+					<SubFeature name="選択" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Interaction\Selection.xaml" type="ChartSamples.Selection">
+						<Description>ICollectionView インタフェースを実装するデータソースの選択をサポートします。このデモでは、C1FlexGrid も使用しています。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="グループ化と集計" assemblyName="ChartSamples.4.exe" type="ChartSamples.AggregateCategoryAxis">
+				<SubFeatures>
+					<SubFeature name="カテゴリのグループ化" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Aggregation\AggregateCategoryAxis.xaml" type="ChartSamples.AggregateCategoryAxis">
+						<Description>このデモでは、名前やカテゴリなど、データオブジェクトの一部のプロパティをグループ化する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="日付軸" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Aggregation\AggregateDateAxis.xaml" type="ChartSamples.AggregateDateAxis">
+						<Description>このデモでは、アイテムを日付別にグループ化し、年、月、週などの要約プロットを表示する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="範囲分布" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Aggregation\AggregateRange.xaml" type="ChartSamples.AggregateRange">
+						<Description>このデモでは、値の範囲でアイテムを数える方法を示します。このチャートは、各値域の基準を満たす項目の数を示しています。</Description>
+					</SubFeature>
+					<SubFeature name="系列の集計" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Aggregation\AggregateChart.xaml" type="ChartSamples.AggregateChart">
+						<Description>このデモでは、各データ系列を１つの合計、カウント、平均などに集計する方法を示します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="外観" assemblyName="ChartSamples.4.exe" type="ChartSamples.VisualEffects">
+				<SubFeatures>
+					<SubFeature name="複数のプロット領域" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Combination\PlotAreasHorizontal.xaml" type="ChartSamples.PlotAreasHorizontal">
+						<Description>C1Chart は、水平方向と垂直方向に積み重ねることができる複数のプロット領域をサポートしています。</Description>
+					</SubFeature>
+					<SubFeature name="読み込みアニメーション" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Appearance\LoadAnimation.xaml" type="ChartSamples.LoadAnimation">
+						<Description>C1Chart は、非常にカスタマイズ可能な読み込みアニメーションを提供するためのより簡単な API を提供します。</Description>
+					</SubFeature>
+					<SubFeature name="変換アニメーション" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Appearance\Animation.xaml" type="ChartSamples.Animation">
+						<Description>このデモでは、新しいデータを読み込む際に遷移アニメーションが表示されます。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="パフォーマンス" assemblyName="ChartSamples.4.exe" type="ChartSamples.MainPage">
+				<SubFeatures>
+					<SubFeature name="ライブデータ" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Performance\Dynamic.xaml" type="ChartSamples.Dynamic">
+						<Description>C1Chart が ObservableCollection にバインドされると、データへの変更は自動的にコントロールに反映されます。このデモでは、最小値、最大値、平均値の自動計算による動的折れ線グラフを示します。</Description>
+					</SubFeature>
+					<SubFeature name="大量のデータ" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Performance\LargeData.xaml" type="ChartSamples.LargeData">
+						<Description>最適化半径法を実証する 50,000 データ点を持つスクロール可能な折れ線グラフです。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="軸" assemblyName="ChartSamples.4.exe" type="ChartSamples.LogAxes">
+				<SubFeatures>
+					<SubFeature name="対数軸" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Axes\LogAxes.xaml" type="ChartSamples.LogAxes">
+						<Description>対数グラフ軸のさまざまなオプションを表示します。</Description>
+					</SubFeature>
+					<SubFeature name="依存軸" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Axes\DependentAxes.xaml" type="ChartSamples.DependentAxes">
+						<Description>C1Chart は、異なる測定単位で複数の Y 軸をサポートします。</Description>
+					</SubFeature>
+					<SubFeature name="起点" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Axes\AxisOrigin.xaml" type="ChartSamples.AxisOrigin">
+						<Description>原点を変更して軸を配置します。</Description>
+					</SubFeature>
+					<SubFeature name="カスタムラベル" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Axes\CustomLabels.xaml" type="ChartSamples.CustomLabels">
+						<Description>軸にカスタムラベルを表示します。</Description>
+					</SubFeature>
+					<SubFeature name="目盛り" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Axes\AxisTicks.xaml" type="ChartSamples.AxisTicks">
+						<Description>軸目盛りの長さと重なりをカスタマイズします。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="拡張" assemblyName="ChartSamples.4.exe" type="ChartSamples.AggregateChart">
+				<SubFeatures>
+					<SubFeature name="画像のエクスポート" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Basics\ImageExport.xaml" type="ChartSamples.ImageExport">
+						<Description>このデモでは、チャートをイメージとしてローカルに保存する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="パラメーター関数" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Advanced\Parametric.xaml" type="ChartSamples.Parametric">
+						<Description>パラメトリック関数のプロットを表示します。</Description>
+					</SubFeature>
+					<SubFeature name="近似曲線" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Advanced\TrendLines.xaml" type="ChartSamples.TrendLines">
+						<Description>自動トレンドラインをサポートしてチャートデータを分析します。C1Chart は、多項式、指数関数、対数関数、パワー、フーリエ、平均、移動平均、最小値、最大値を含むいくつかの異なる型をサポートしています。</Description>
+					</SubFeature>
+					<SubFeature name="移動平均線" assemblyName="ChartSamples.4.exe" source="C1.WPF.Chart\CS\ChartSamples\Advanced\MovAverage.xaml" type="ChartSamples.MovAverage">
+						<Description>移動平均トレンドラインを示します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+		</Control>
+		<Control name="FinancialChart" assembly="C1.WPF.FinancialChart" >
+			<Feature name="チャートタイプ">
+				<SubFeatures>
+					<SubFeature name="平均足" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.HeikinAshi" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\HeikinAshi.xaml" >
+						<Description>平均足チャートは日本のローソク足チャートのバリエーションで、ローソク足チャートからノイズを取り除き、移動平均によく似た動作をするように設計されています。このチャートを使用すると、トレンド、潜在的反転ポイントなどのテクニカル分析パターンを見極めることができます。</Description>
+					</SubFeature>
+					<SubFeature name="新値足" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.LineBreak" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\LineBreak.xaml" >
+						<Description>新値足チャートまたは新値三本足チャートは、垂直のボックスまたはラインを使用して、資産や市場の価格変動を示します。値動きは、ボックスの色とスタイルで表されます。直前のボックスのトレンドが続く値動きは同じ色で表され、反対方向のトレンドを示す値動きは異なる色／スタイルで示されます。反対方向のトレンドは、値が直前 n 個のボックスまたはラインの最大／最小値を超えた場合にのみ描画されます。この個数は、newLineBreaks オプションで決定されます</Description>
+					</SubFeature>
+					<SubFeature name="練行足" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.Renko" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\Renko.xaml" >
+						<Description>練行足チャートは、一様なサイズのブロックを使用して株価の動きをグラフ化します。価格が、新しいブロックの描画に必要なあらかじめ設定されたboxSize オプションより大きい値または小さい値に変化すると、次の列に新しいブロックが描画されます。ボックスの色と方向の変化は、トレンドの反転を示します。</Description>
+					</SubFeature>
+					<SubFeature name="カギ足" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.Kagi" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\Kagi.xaml" >
+						<Description>カギ足チャートは、一連の垂直線を連結して、需要と供給のトレンドを示します。線の太さと方向は、株価の動きによって決まります。終値が直前の終値と同じ方向に進む場合は、そのカギ足ラインが延長されます。しかし、終値があらかじめ設定した反転幅以上に反転した場合は、次の列に、新しいカギ足ラインが反対方向に引かれます。細い線は、価格が直前の底値を下回ったこと（売り）を、太い線は、価格が直前の高値を上回ったこと（買い）を示します。</Description>
+					</SubFeature>
+					<SubFeature name="カラムボリューム" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.ColumnVolume" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\ColumnVolume.xaml" >
+						<Description>カラムボリュームチャートは、縦棒グラフに似ていますが、2 番目の値「出来高」を受け取る点が異なり、この出来高によって各棒の幅が決まります。</Description>
+					</SubFeature>
+					<SubFeature name="エクイボリューム" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.EquiVolume" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\EquiVolume.xaml" >
+						<Description>エクイボリュームチャートは、ローソク足チャートに似ていますが、エクイボリュームでは高値と安値だけが示されます。また、各棒の幅は、５番目の値「出来高」によって決まります。</Description>
+					</SubFeature>
+					<SubFeature name="ローソクボリューム" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.CandleVolume" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\CandleVolume.xaml" >
+						<Description>ローソクボリュームチャートは、各棒の幅が５番目の値「出来高」によって決定されること以外は、標準的なローソク足チャートと同じです。</Description>
+					</SubFeature>
+					<SubFeature name="アームズローソクボリューム" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.ArmsCandleVolume" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\ArmsCandleVolume.xaml" >
+						<Description>Richard Arms によって作成されたアームズローソクボリュームチャートは、エクイボリュームチャートとローソクボリュームチャートを組み合わせたチャートです。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="インタラクション">
+				<SubFeatures>
+					<SubFeature name="マーカー" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.Markers" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\Markers.xaml" >
+						<Description>マーカーは、チャート上のマウスカーソルの位置に基づいてデータ値を表示する FinancialChart 上のテキスト領域を表示します。 マーカーは、十字線効果を有効にするためのオプションの垂直線と水平線もサポートしています。</Description>
+					</SubFeature>
+					<SubFeature name="範囲セレクタ" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.RangeSelector" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\RangeSelector.xaml" >
+						<Description>範囲セレクタを使用すると、エンドユーザーが実行時に FinancialChart のデータの表示範囲を調整できます。 範囲セレクタの一般的なユースケースとカスタムスタイルの適用方法を紹介します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="解析">
+				<SubFeatures>
+					<SubFeature name="傾向線" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.TrendLines" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\TrendLines.xaml" >
+						<Description>傾向線は、データの傾向を視覚化し、予測の問題点を分析するために使用されます。</Description>
+					</SubFeature>
+					<SubFeature name="移動平均" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.MovingAverages" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\MovingAverages.xaml" >
+						<Description>移動平均傾向線は、元のデータセットから一連の平均値を求めることでデータを分析するために使用されます。</Description>
+					</SubFeature>
+					<SubFeature name="オーバーレイ" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.Overlays" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\Overlays.xaml" >
+						<Description>テクニカルインジケータと同様に、オーバーレイは、元のデータセットに１つ以上の数式を適用することによって計算される派生データのセットです。オーバーレイは通常、資産の市場方向を予測するために使用され、Y軸のスケールが同じであるため、一般的に元のデータセットにプロットされています。</Description>
+					</SubFeature>
+					<SubFeature name="インジケーター" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.Indicators" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\Indicators.xaml" >
+						<Description>テクニカルインジケータは、元のデータセットに 1 つ以上の数式を適用して計算することにより派生したデータのセットです。テクニカルインジケータは、一般に資産の市場の方向を予測するために使用され、通常は元のデータと Y 軸のスケールが異なるため、別にプロットされます。</Description>
+					</SubFeature>
+					<SubFeature name="イベントアノテーション" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.EventAnnotations" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\EventAnnotations.xaml" >
+						<Description>イベントアノテーションは、FinancialChart の特定のデータポイントにアタッチできる重要なイベントをマークするために使用されます。 イベントのアノテーションにカーソルを合わせると、イベントの詳細が表示されます。</Description>
+					</SubFeature>
+					<SubFeature name="フィボナッチツール" assemblyName="FinancialChartExplorer.4.exe" type="FinancialChartExplorer.FibonacciTool" source="C1.WPF.FlexChart\CS\FinancialChartExplorer\View\FibonacciTool.xaml" >
+						<Description>フィボナッチツールは、金融チャートの傾向分析に使用されます。レンジセレクタの助けを借りて、計算のためのデータ範囲を選択することができます。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+		</Control>
+		<Control name="FlexChart" isTop="true" isNew="true" assembly="C1.WPF.FlexChart">
+			<Feature name="Flex Chart">
+				<SubFeatures>
+          <SubFeature name="Showcase" isNew="true" assemblyName="FlexChartShowcase.exe" type="FlexChartShowcase.ShowcaseControl" source="C1.WPF.FlexChart\CS\FlexChartShowcase\Samples\ShowcaseControl.xaml">
+            <Description>The modern, high-performance FlexChart control comes with flexible data binding and an easy-to-use API for maximum configuration and customization. Chart types range from basic to complex to support all your data visualization needs.</Description>
+          </SubFeature>
+					<SubFeature name="概要" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Introduction" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Introduction.xaml">
+						<Description>FlexChart の基本機能を示します。チャートはデータソースにバインドされており、ユーザーがチャートタイプ、系列の積み重ね、および回転を選択できます。</Description>
+					</SubFeature>
+					<SubFeature name="アニメーション" assemblyName="AnimationDemoWPF.exe" isNew="true" type="AnimationDemo.Views.FlexChartAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\FlexChartAnimation.xaml">
+						<Description>FlexChart には、新規データの読み込み、更新、および追加のための高度なアニメーションオプションが付属しています。</Description>
+					</SubFeature>
+					<SubFeature name="カスタムアニメーション" assemblyName="AnimationDemoWPF.exe" isNew="true" type="AnimationDemo.Views.CustomAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\CustomAnimation.xaml">
+						<Description>このビューでは、AnimationTransform イベントでチャートアニメーションをカスタマイズする方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="バインディング" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Binding" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Binding.xaml" >
+						<Description>このビューでは、FlexChart を使用して、単一のデータ配列から２組の値を表示する方法を示します。これは、FlexChart の最も一般的な使用シナリオです。</Description>
+					</SubFeature>
+					<SubFeature name="系列バインディング" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.SeriesBinding" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\SeriesBinding.xaml">
+						<Description>このビューでは、FlexChart を使用して複数のデータソースのデータをデータ系列ごとに表示する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="ヘッダーとフッター" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.HeaderAndFooter" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\HeaderAndFooter.xaml">
+						<Description>このビューでは、ヘッダーとフッターをチャートに追加する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="選択" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Selection" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Selection.xaml">
+						<Description>このビューでは、FlexChart の選択機能を示します。</Description>
+					</SubFeature>
+					<SubFeature name="ラベル" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Labels" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Labels.xaml">
+						<Description>このビューでは、FlexChart の dataLabel プロパティを使用して各データポイントにラベルを追加する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="ヒットテスト" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.HitTest" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\HitTest.xaml">
+						<Description>このビューでは、FlexChart の HitTest メソッドの使用方法を示します。HitTest メソッドはポイントをとり、最も近いチャート要素を返します。</Description>
+					</SubFeature>
+					<SubFeature name="ズーム" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Zoom" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Zoom.xaml">
+						<Description>このビューでは、FlexChart コントロールのカスタムズームを実装する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="バブル" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Bubble" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Bubble.xaml" >
+						<Description>このビューでは、FlexChart コントロールを使用してバブルチャートを作成する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="金融チャート" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Financial" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Financial.xaml" >
+						<Description>このビューでは、FlexChart コントロールを使用して金融チャートを作成する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="複数の軸" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Axes" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Axes.xaml" >
+						<Description>このビューでは、２つの Y 軸を持つ FlexChart を示します。</Description>
+					</SubFeature>
+					<SubFeature name="複数のプロット領域" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.PlotAreas" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\PlotAreas.xaml" >
+						<Description>このビューでは、いくつかのプロット領域がある FlexChart を示します。</Description>
+					</SubFeature>
+					<SubFeature name="軸のバインディング" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.AxisBinding" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\AxisBinding.xaml" >
+						<Description>このビューでは、FlexChart の軸バインディング機能を示します。</Description>
+					</SubFeature>
+					<SubFeature name="ゾーン" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Zones" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Zones.xaml" >
+						<Description>このビューでは、生徒の成績の散布図を作成し、ゾーンを使用して各成績範囲を強調表示します。</Description>
+					</SubFeature>
+					<SubFeature name="統計線" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.TrendLine" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\TrendLine.xaml" >
+						<Description>このビューでは、FlexChart の TrendLine を示します。</Description>
+					</SubFeature>
+					<SubFeature name="ウォーターフォール" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Waterfall" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Waterfall.xaml" >
+						<Description>このビューでは、FlexChart のウォーターフォールデータ系列を示します。</Description>
+					</SubFeature>
+					<SubFeature name="箱ひげ" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.BoxWhisker" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\BoxWhisker.xaml" >
+						<Description>箱ひげデータ系列は通常、異なる数値データセット間の分布を比較するために使用されます。</Description>
+					</SubFeature>
+					<SubFeature name="エラーバー" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.ErrorBar" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\ErrorBar.xaml" >
+						<Description>エラーバーは、エラーと標準偏差のマージンを一目で確認するのに役立ちます。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="Flex Pie" isExpander="true">
+				<SubFeatures>
+					<SubFeature name="概要" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.PieIntroduction" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\PieIntroduction.xaml">
+						<Description>このビューでは、FlexPie の基本機能を示します。</Description>
+					</SubFeature>
+					<SubFeature name="アニメーション" assemblyName="AnimationDemoWPF.exe" isNew="true" type="AnimationDemo.Views.FlexPieAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\FlexPieAnimation.xaml">
+						<Description>FlexPie には、新規データの読み込み、更新、および追加のための高度なアニメーションオプションが付属しています。</Description>
+					</SubFeature>
+					<SubFeature name="選択" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.PieSelection" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\PieSelection.xaml">
+						<Description>このビューでは、FlexPie の選択機能を示します。</Description>
+					</SubFeature>
+					<SubFeature name="複数の円グラフ" assemblyName="FlexChartExplorer.4.exe" isNew="true" type="FlexChartExplorer.MultiPie" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\MultiPie.xaml">
+						<Description>複数のコンマ区切りフィールドがバインディングで指定されている場合、複数の円グラフを描画します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="Sunburst">
+				<SubFeatures>
+					<SubFeature name="概要" assemblyName="SunburstIntro.4.exe" type="SunburstIntro.GettingStarted" source="C1.WPF.FlexChart\CS\SunburstIntro\View\GettingStarted.xaml">
+						<Description>Sunburst コントロールを使用する手順を示します。</Description>
+					</SubFeature>
+					<SubFeature name="基本機能" assemblyName="SunburstIntro.4.exe" type="SunburstIntro.BasicFeatures" source="C1.WPF.FlexChart\CS\SunburstIntro\View\BasicFeatures.xaml">
+						<Description>このビューでは、Sunburst の基本機能を示します。</Description>
+					</SubFeature>
+					<SubFeature name="凡例とタイトル" assemblyName="SunburstIntro.4.exe" type="SunburstIntro.LegendTitles" source="C1.WPF.FlexChart\CS\SunburstIntro\View\LegendTitles.xaml">
+						<Description>このビューでは、Sunburst の LegendPosition、Header、および Footer の各プロパティを変更できます。</Description>
+					</SubFeature>
+					<SubFeature name="選択" assemblyName="SunburstIntro.4.exe" type="SunburstIntro.SunburstSelection" source="C1.WPF.FlexChart\CS\SunburstIntro\View\SunburstSelection.xaml">
+						<Description>このビューでは、Sunburst の選択機能を示します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="Flex Radar">
+				<SubFeatures>
+					<SubFeature name="レーダーチャート" assemblyName="FlexRadarIntro.4.exe" type="FlexRadarIntro.RadarChart" source="C1.WPF.FlexChart\CS\FlexRadarIntro\View\RadarChart.xaml">
+						<Description>このデモでは、FlexRadar コントロールを使用してレーダーチャートを作成する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature name="ポーラチャート" assemblyName="FlexRadarIntro.4.exe" type="FlexRadarIntro.PolarChart" source="C1.WPF.FlexChart\CS\FlexRadarIntro\View\PolarChart.xaml">
+						<Description>FlexRadar コントロールは、x 値が度単位の角度値を指定する数値である場合の極座標グラフを表します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="TreeMap" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.TreeMap" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\TreeMap.xaml" >
+				<Description>C1TreeMap は、階層データをネストされた矩形のセットとして表示します。ノードの矩形は、Binding プロパティで指定されたデータ項目のプロパティの値に比例する領域を持ちます。BindingName プロパティは、矩形ラベルで示されるデータ項目のプロパティを指定します。</Description>
+			</Feature>
+		</Control>
+		<Control name="GanttView" assembly="C1.WPF.GanttView">
+			<Feature name="概要" assemblyName="GanttViewSample.exe" type="GanttViewSample.GanttViewDemo" source="C1.WPF.GanttView\CS\GanttViewSample\GanttViewSample\GanttViewDemo.xaml" >
+				<Description>タイムスケール/グリッド/プロジェクトのプロパティの変更、ダイアログあるいはタスクバーのドラッグによるタスクの編集、フィルターまたは並べ替えのタスクなど、基本的な GanttView の機能を示します。</Description>
+			</Feature>
+			<Feature name="カスタム列" assemblyName="GanttViewSample.exe" type="GanttViewSample.CustomColumn" source="C1.WPF.GanttView\CS\GanttViewSample\GanttViewSample\CustomColumn.xaml">
+				<Description>このサンプルでは、リソースの全コストにリソース使用量を乗じたものとして計算される特別なカスタム列（実績コスト）を追加します。「実績コスト」列の値は、そのソース値（リソースコストやタスク期間など）が変更されるたびに再計算されます。</Description>
+			</Feature>
+			<Feature name="フィルター" assemblyName="GanttViewSample.exe" type="GanttViewSample.Filter" source="C1.WPF.GanttView\CS\GanttViewSample\GanttViewSample\Filter.xaml">
+				<Description>このサンプルは、さまざまな既存のフィルタを組み合わせたり、複数の条件で高度なフィルタを使用してカスタムフィルタを作成する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="Gauges" assembly="C1.WPF.Gauge">
+			<Feature name="放射状ゲージ" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\RadialGauge\C1RadialGaugePage.xaml" type="GaugeSamples.DemoRadialGauge">
+				<Description>ゲージには、いくつかのタイプの放射状ゲージが付属しています。一般的な放射状ゲージには、ダイヤルとスピードメーターがあります。</Description>
+				<SubFeatures>
+					<SubFeature name="C1RadialGauge" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\RadialGauge\C1RadialGaugePage.xaml" type="GaugeSamples.DemoRadialGauge" />
+					<SubFeature name="C1SpeedometerGauge" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\RadialGauge\C1SpeedometerGaugePage.xaml" type="GaugeSamples.C1SpeedometerGaugePage" />
+					<SubFeature name="C1VolumeGauge" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\RadialGauge\C1VolumeGaugePage.xaml" type="GaugeSamples.C1VolumeGaugePage" />
+				</SubFeatures>
+			</Feature>
+			<Feature name="線形ゲージ" assemblyName="GaugeSamples.4.exe" type="GaugeSamples.LinearGauge">
+				<Description>ゲージには、すぐに使用できるいくつかのタイプの線形ゲージが含まれています。一般的な線形ゲージには、ルーラーと温度計があります。</Description>
+				<SubFeatures>
+					<SubFeature name="C1LinearGauge" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\LinearGauge\C1LinearGaugePage.xaml" type="GaugeSamples.DemoLinearGauge" />
+					<SubFeature name="C1RulerGauge" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\LinearGauge\C1RulerGaugePage.xaml" type="GaugeSamples.C1RulerGaugePage" />
+				</SubFeatures>
+			</Feature>
+			<Feature name="つまみ" assemblyName="GaugeSamples.4.exe" type="GaugeSamples.Knob">
+				<Description>C1Knob コントロールを使用すると、ユーザーはポインタを値にドラッグできます。カスタマイズ可能な領域を持つユニークな C1RegionKnob も含まれています。つまみゲージは、テキストベースのエディタやスライダに代わるものです。</Description>
+				<SubFeatures>
+					<SubFeature name="C1Knob" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\Knob\C1KnobPage.xaml" type="GaugeSamples.C1KnobPage" />
+					<SubFeature name="C1RegionKnob" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\Knob\C1RegionKnobPage.xaml" type="GaugeSamples.C1RegionKnobPage" />
+				</SubFeatures>
+			</Feature>
+			<Feature name="高度なカスタマイズ" assemblyName="GaugeSamples.4.exe" type="GaugeSamples.Linears">
+				<Description>ゲージ全体を完全にカスタマイズすることができます。 温度計を作成したり、自動車のダッシュボードなどを模倣します。</Description>
+				<SubFeatures>
+					<SubFeature name="温度計" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\LinearGauge\CustomLinearGauges\ThermometerUserControl.xaml" type="GaugeSamples.ThermometerUserControl" />
+					<SubFeature name="定規" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\LinearGauge\CustomLinearGauges\RuleUserControl.xaml" type="GaugeSamples.RuleUserControl" />
+					<SubFeature name="時計" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\RadialGauge\ClockPage.xaml" type="GaugeSamples.ClockPage" />
+					<SubFeature name="自動車メーター" assemblyName="GaugeSamples.4.exe" source="C1.WPF.Gauge\CS\GaugeSamples\RadialGauge\SpeedometersPage.xaml" type="GaugeSamples.SpeedometersPage" />
+				</SubFeatures>
+			</Feature>
+		</Control>
+		<Control name="Maps" assembly="C1.WPF.Maps">
+			<Feature assemblyName="MapsSamples.4.exe" type="MapsSamples.DemoMaps" source="C1.WPF.Maps\CS\MapsSamples\C1MapsPage.xaml">
+				<Description>C1Maps を使用して、画面と地理座標をスムーズにズーム、パン、マッピングします。 Microsoft Live Maps を含むさまざまなソースからの情報を表示します。独自のカスタム要素をマップにスーパーインポーズすることもできます。</Description>
+			</Feature>
+			<Feature assemblyName="MapsSamples.4.exe" type="MapsSamples.DemoMaps" source="C1.WPF.Maps\CS\MapsSamples\C1MapsPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1Maps コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="OrgChart" assembly="C1.WPF.OrgChart">
+			<Feature name="基本機能" type="TestWPF.OrgChartSample" assemblyName="C1OrgChart_Demo2010.4.exe" source="C1.WPF.OrgChart\CS\C1OrgChart_Demo\C1OrgChart_Demo\OrgChartSample.xaml">
+				<Description>データの構造と関係を示す階層図を作成します。C1OrgChart コントロールは、プラットフォームの豊富なデータバインディングメカニズムを活用します。</Description>
+			</Feature>
+			<Feature name="階層" source="C1.WPF.OrgChart\CS\HierarchicalDataTemplate\HierarchicalDataTemplate\HierarchicalDataTemplateSample.xaml" type="HierarchicalDataTemplateWPF.HierarchicalDataTemplateSample" assemblyName="HierarchicalDataTemplate2010.4.exe">
+				<Description>DataTemplateSelectorクラスとHierarchicalDataTemplateクラスを使用したC1OrgChartの高度なバインディングシナリオを示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="Sparkline" assembly="C1.WPF.Sparkline">
+			<Feature name="基本機能" assemblyName="SparklineSamples.4.exe" type="SparklineSamples.SparklineDemo" source="C1.WPF.Sparkline\CS\SparklineSamples\SparklineDemo.xaml">
+				<Description>Microsoft Excel に基づいて、C1SparkLine コントロールは３つの異なるタイプのスパークラインをサポートします。</Description>
+			</Feature>
+			<Feature name="カスタマイズ" assemblyName="SparklineSamples.4.exe" type="SparklineSamples.AppearanceSample" source="C1.WPF.Sparkline\CS\SparklineSamples\AppearanceSample.xaml">
+				<Description>このデモでは、スパークラインの外観をカスタマイズするために設定できるさまざまなプロパティを示します。</Description>
+			</Feature>
+			<Feature name="データバインディング" assemblyName="SparklineSamples.4.exe" type="SparklineSamples.RegionSales" source="C1.WPF.Sparkline\CS\SparklineSamples\RegionSales.xaml">
+				<Description>このデモでは、データバインドされた ListBox 内にスパークラインを表示します。</Description>
+			</Feature>
+			<Feature name="FlexGrid との統合" assemblyName="SparklineSamples.4.exe" type="SparklineSamples.FlexGridIntegration" isNew="true" source="C1.WPF.Sparkline\CS\SparklineSamples\FlexGridIntegration.xaml">
+				<Description>このデモでは、FlexGrid の列の CellTemplates 内でスパークラインを使用する方法を示します。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="入力および編集">
+		<Control name="ColorPicker" assembly="C1.WPF.Extended">
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoColorPicker" source="C1.WPF.Extended\CS\ExtendedSamples\C1ColorPicker\C1ColorPickerPage.xaml">
+				<Description>専門的にデザインされたパレットから色を選択するか、透明性のサポートを含む独自のカスタムカラーを作成します。</Description>
+				<Properties>
+					<Property name="Palette" value="Standard" />
+					<Property name="Mode" value="Both" />
+					<Property name="ShowRecentColors" value="True" />
+					<Property name="ShowAlphaChannel" />
+					<Property name="ShowTransparentColor" />
+					<Property name="CornerRadius"/>
+				</Properties>
+			</Feature>
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoColorPicker" source="C1.WPF.Extended\CS\ExtendedSamples\C1ColorPicker\C1ColorPickerPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1ColorPicker コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="FocusBrush" />
+					<Property name="InputBackground" />
+					<Property name="InputForeground" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="ComboBox" assembly="C1.WPF">
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoComboBox" source="C1.WPF\CS\BasicControls\Input\C1ComboBoxPage.xaml">
+				<Description>C1ComboBox コントロールを使用すると、編集可能なテキストボックスにテキストを入力したり、自動検索可能なドロップダウンリストからテキストを選択することができます。</Description>
+				<Properties>
+					<Property name="AutoComplete" value="true" />
+					<Property name="Condition" />
+					<Property name="DropDownDirection" />
+					<Property name="IsEnabled" value="true" />
+					<Property name="IsEditable" value="false" />
+					<Property name="DropDownHeight" nullable="true" minimumValue="0" maximumValue="400" />
+					<Property name="DropDownWidth" nullable="true" minimumValue="0" maximumValue="400" />
+					<Property name="CornerRadius"/>
+				</Properties>
+				<Event>SelectedItemChanged</Event>
+			</Feature>
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoComboBox" source="C1.WPF\CS\BasicControls\Input\C1ComboBoxPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1ComboBox コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="SelectedBackground" />
+					<Property name="FocusBrush" />
+					<Property name="CaretBrush" />
+					<Property name="SelectionBackground" />
+					<Property name="SelectionForeground" />
+					<Property name="ButtonBackground" />
+					<Property name="ButtonForeground" />
+					<Property name="HorizontalAlignment" display="false" value="Center" />
+					<Property name="VerticalAlignment" display="false" value="Center" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="DateTime Editors" assembly="C1.WPF.DateTimeEditors">
+			<Feature name="C1DateTimePicker" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\Input\C1DateTimePickerPage.xaml" type="BasicControls.DemoDateTimePicker">
+				<Description>C1DateTimePicker は、日付入力、時刻入力、またはその両方を同時に処理できます。</Description>
+				<Properties>
+					<Property name="EditMode" />
+					<Property name="DateFormat" />
+					<Property name="TimeFormat" />
+					<Property name="FirstDayOfWeek" />
+					<Property name="MinDate" />
+					<Property name="MaxDate" />
+					<Property name="IsReadOnly" />
+					<Property name="IsEnabled" />
+					<Property name="AllowNull" />
+				</Properties>
+			</Feature>
+			<Feature name="C1TimeEditor" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\Input\C1TimeEditorPage.xaml" type="BasicControls.DemoTimeEditor">
+				<Description>C1TimeEditor コントロールは、時間値の簡単なエディタを提供します。</Description>
+				<Properties>
+					<Property name="Format" />
+					<Property name="Increment" nullable="false" />
+					<Property name="Minimum" />
+					<Property name="Maximum" />
+					<Property name="ShowButtons" />
+					<Property name="IsReadOnly" />
+					<Property name="IsEnabled" />
+					<Property name="AllowNull" />
+					<Property name="Delay" minimumValue="0" maximumValue="1000" />
+					<Property name="Interval" minimumValue="1" maximumValue="500" />
+				</Properties>
+			</Feature>
+			<Feature name="C1DatePicker" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\Input\C1DatePickerPage.xaml" type="BasicControls.DemoDatePicker">
+				<Description>C1DatePicker コントロールは日付値のエディタを提供します。</Description>
+				<Properties>
+					<Property name="IsReadOnly" />
+					<Property name="AllowNull" />
+					<Property name="FirstDayOfWeek" caption="First Day of Week"/>
+					<Property name="SelectedDateFormat" caption="Selected Date Format"/>
+					<Property name="CustomFormat" caption="Custom Format" />
+					<Property name="Watermark" type="String" />
+				</Properties>
+			</Feature>
+			<Feature name="高度な設定" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\Input\DateTimePickerAdvanced.xaml" type="BasicControls.DateTimePickerAdvanced">
+				<Description>このサンプルは、日付と時刻のマスクを使用してカスタム形式で値を入力する方法を示します。</Description>
+			</Feature>
+			<Feature type="BasicControls.DemoDateTimePicker" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\Input\C1DateTimePickerPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、DateTimeEditor コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="FocusBrush" />
+					<Property name="ButtonBackground" />
+					<Property name="ButtonForeground" />
+					<Property name="HorizontalAlignment" display="false" value="Center" />
+					<Property name="VerticalAlignment" display="false" value="Center" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="DropDown" assembly="C1.WPF">
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoDropDown" source="C1.WPF\CS\BasicControls\Input\C1DropDownPage.xaml" >
+				<Description>C1DropDown はドロップダウン部分に任意の UIElement をホストできます。これはドロップダウンや SearchBox や AutoCompleteBox に TreeView を表示するなど、より一般的なドロップダウン要件を解決するために使用できます。</Description>
+				<Properties>
+					<Property name="DropDownDirection" />
+					<Property name="AutoClose" value="true" />
+					<Property name="DropDownWidth" nullable="true" minimumValue="0" maximumValue="200" />
+					<Property name="DropDownHeight" nullable="true" minimumValue="0" maximumValue="200" />
+					<Property name="IsDropDownOpen" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="Input" assembly="C1.WPF.Input" >
+			<Feature name="C1MultiSelect" assemblyName="InputSamples.4.exe" type="InputSamples.C1MultiSelectPage" source="C1.WPF.Input\CS\InputSamples\InputSamples\C1MultiSelect\C1MultiSelectPage.xaml">
+				<Description>MultiSelect コントロールを使用すると、ドロップダウンチェックリストまたはタグの編集リストから複数のオブジェクトを選択できます。DropDown と Header の両方をカスタマイズすることができ、データは単純な文字列からカスタムオブジェクトまであらゆる範囲が利用できます。</Description>
+			</Feature>
+			<Feature name="C1CheckList" assemblyName="InputSamples.4.exe" type="InputSamples.C1CheckListPage" source="C1.WPF.Input\CS\InputSamples\InputSamples\C1MultiSelect\C1CheckListPage.xaml">
+				<Description>CheckList コントロールを使用して、チェックボックスを使用してリストから複数の項目を選択できます。このコントロールは、データバインディングと UI カスタマイズのオプションをサポートしています。</Description>
+			</Feature>
+			<Feature name="C1TagEditor" assemblyName="InputSamples.4.exe" type="InputSamples.C1TagEditorPage" source="C1.WPF.Input\CS\InputSamples\InputSamples\C1MultiSelect\C1TagEditorPage.xaml">
+				<Description>TagEditor コントロールを使用して、タグの追加や削除によってタグのコレクションを編集できます。セパレータ付きのテキストまたはボタン状の UI 要素としてタグを表すことができます。</Description>
+			</Feature>
+			<Feature name="C1MaskedTextBox" assemblyName="BasicControls.4.exe" type="BasicControls.DemoMaskedTextBox" source="C1.WPF\CS\BasicControls\Input\C1MaskedTextBoxPage.xaml">
+				<Description>C1MaskedTextBox コントロールを使用すると、ユーザーは特定のマスクに適合するテキストを入力できます。</Description>
+				<Properties>
+					<Property name="Text" />
+					<Property name="Mask" value="(###) 999-9999" />
+					<Property name="Value" />
+					<Property name="PromptChar" />
+					<Property name="TextMaskFormat" />
+					<Property name="IsReadOnly" />
+					<Property name="IsEnabled" />
+					<Property name="ReplaceMode" />
+					<Property name="TextAlignment" />
+					<Property name="Watermark" value="enter text here" />
+					<Property name="CornerRadius"/>
+				</Properties>
+				<Event>TextChanged</Event>
+				<Text>(555) 555-1212</Text>
+			</Feature>
+			<Feature name="C1NumericBox" assemblyName="BasicControls.4.exe" type="BasicControls.DemoNumericBox" source="C1.WPF\CS\BasicControls\Input\C1NumericBoxPage.xaml">
+				<Description>C1NumericBox コントロールを使用すると、ユーザーは柔軟な書式設定、インクリメント、上/下ボタンで数値を入力できます。</Description>
+				<Properties>
+					<Property name="Value" />
+					<Property name="Format" value="N2" />
+					<Property name="Increment" />
+					<Property name="Minimum" value="-10000" nullable="true" />
+					<Property name="Maximum" value="10000" nullable="true" />
+					<Property name="IsReadOnly" />
+					<Property name="IsEnabled" />
+					<Property name="AllowNull" />
+					<Property name="ShowButtons" />
+					<Property name="TextAlignment" />
+					<Property name="Delay" minimumValue="0" maximumValue="1000" />
+					<Property name="Interval" minimumValue="1" maximumValue="500" />
+				</Properties>
+				<Event>ValueChanged</Event>
+			</Feature>
+			<Feature name="C1RangeSlider" assemblyName="BasicControls.4.exe" type="BasicControls.DemoRangeSlider" source="C1.WPF\CS\BasicControls\Input\C1RangeSliderPage.xaml">
+				<Description>C1RangeSlider は基本的なスライダコントロールを拡張し、１つではなく２つのつまみ要素を提供し、ユーザーは単一の値ではなく範囲を選択できます。</Description>
+				<Properties>
+					<Property name="Minimum" />
+					<Property name="Maximum" />
+					<Property name="LowerValue" />
+					<Property name="UpperValue" />
+					<Property name="Width" value="300" minimumValue="0" maximumValue="800" nullable="true" />
+					<Property name="Height" minimumValue="0" maximumValue="800" nullable="true" />
+					<Property name="Orientation" value="Horizontal" />
+					<Property name="HorizontalAlignment" value="Center" />
+					<Property name="VerticalAlignment" value="Center" />
+				</Properties>
+				<Event>UpperValueChanged,LowerValueChanged</Event>
+			</Feature>
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoNumericBox" source="C1.WPF\CS\BasicControls\Input\C1NumericBoxPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1NumericBox コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="Background" caption="Background" />
+					<Property name="Foreground" caption="Foreground" />
+					<Property name="BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="FocusBrush" />
+					<Property name="ButtonBackground" />
+					<Property name="ButtonForeground" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="InputPanel" assembly="C1.WPF.InputPanel">
+			<Feature name="MS DataGrid で使用する" assemblyName="InputPanelSample.4.exe" type="InputPanelSample.MSDataGridDemo" source="C1.WPF.InputPanel\CS\InputPanelSample\InputPanelSample\MSDataGrid\MSDataGridDemo.xaml" >
+				<Description>このサンプルは、MS DataGrid と共に C1InputPanel を使用する方法を示します。</Description>
+			</Feature>
+			<Feature name="C1DataGrid で使用する" assemblyName="InputPanelSample.4.exe" type="InputPanelSample.C1DataGridDemo" source="C1.WPF.InputPanel\CS\InputPanelSample\InputPanelSample\C1DataGrid\C1DataGridDemo.xaml" >
+				<Description>このサンプルでは、C1DataGrid と共に C1InputPanel を使用する方法を示します。</Description>
+			</Feature>
+			<Feature name="C1FlexGrid で使用する" assemblyName="InputPanelSample.4.exe" type="InputPanelSample.FlexGridDemo" source="C1.WPF.InputPanel\CS\InputPanelSample\InputPanelSample\C1FlexGrid\FlexGridDemo.xaml" >
+				<Description>このサンプルは C1FlexGrid と共に C1InputPanel を使用する方法を示します。</Description>
+			</Feature>
+			<Feature name="カスタムテンプレート" assemblyName="InputPanelSample.4.exe" type="InputPanelSample.CustomTemplate" source="C1.WPF.InputPanel\CS\InputPanelSample\InputPanelSample\CustomTemplate\CustomTemplate.xaml" >
+				<Description>このサンプルは、C1InputPanel コントロールのカスタム ItemsTemplate を設定する方法を示しています。</Description>
+			</Feature>
+			<Feature name="行の詳細" assemblyName="InputPanelSample.4.exe" type="InputPanelSample.Integration" source="C1.WPF.InputPanel\CS\InputPanelSample\InputPanelSample\Integration\Integration.xaml" >
+				<Description>このサンプルは、C1 DataGrid コントロールの行の詳細を表示するために C1InputPanel を使用する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="PropertyGrid" assembly="C1.WPF.Extended">
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoPropertyGrid" source="C1.WPF.Extended\CS\ExtendedSamples\C1PropertyGrid\C1PropertyGridPage.xaml">
+				<Description>C1PropertyGrid を使用すると、特殊な編集コントロールを使用して任意のオブジェクトを編集できます。</Description>
+				<Properties>
+					<Property name="AutoGenerateMethods" value="false" />
+					<Property name="AutoGenerateProperties" value="false" />
+					<Property name="ShowDescription" value="true" />
+					<Property name="ShowResetButton" value="true" />
+				</Properties>
+			</Feature>
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoPropertyGrid" source="C1.WPF.Extended\CS\ExtendedSamples\C1PropertyGrid\C1PropertyGridPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1PropertyGrid コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="AutoGenerateMethods" value="false" />
+					<Property name="AutoGenerateProperties" value="false" />
+					<Property name="ShowDescription" value="true" />
+					<Property name="ShowResetButton" value="true" />
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="CategoryBackground" />
+					<Property name="CategoryForeground" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="Rating" assembly="C1.WPF.Extended">
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoRating" source="C1.WPF.Extended\CS\ExtendedSamples\C1Rating\C1RatingPage.xaml" >
+				<Description>このサンプルは、C1Rating コントロールを表示し、アイコンをカスタマイズする方法を示します。</Description>
+			</Feature>
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoCustomAnimation" source="C1.WPF.Extended\CS\ExtendedSamples\C1Rating\CustomAnimation.xaml" name="カスタムアニメーション">
+				<Description>このサンプルは、C1Rating コントロールでカスタムアニメーションを使用する方法を示しています。</Description>
+			</Feature>
+		</Control>
+		<Control name="RichTextBox" isNew="true" assembly="C1.WPF.RichTextBox">
+			<Feature assemblyName="RichTextBoxSamples.4.exe" isNew="true" type="RichTextBoxSamples.DemoRichTextBox" source="C1.WPF.RichTextBox\CS\RichTextBoxSamples\DemoRichTextBox.xaml" >
+				<Description>書式設定されたテキストを HTML ドキュメントとしてロード、編集、保存します。C1RichTextBox コントロールは、クリップボード、テキストの書式設定、配置、リスト、画像、ハイパーリンク、テーブルなどをサポートします。下書きまたは印刷ビューで文書を編集して表示します。</Description>
+				<Properties>
+					<Property name="Width" minimumValue="0" maximumValue="800" nullable="true" />
+					<Property name="Height" minimumValue="0" maximumValue="600" nullable="true" />
+					<Property name="IsEnabled" />
+					<Property name="IsReadOnly" />
+					<Property name="SelectionBackground" />
+					<Property name="SelectionForeground" />
+				</Properties>
+				<Event>RequestNavigate</Event>
+			</Feature>
+			<Feature name="書式" assemblyName="RichTextBoxSamples.4.exe" type="RichTextBoxSamples.MainPage" source="C1.WPF.RichTextBox\CS\RichTextBoxSamples\Formatting.xaml" >
+				<Description>このデモでは、C1RichTextBox で使用できるほとんどの書式設定オプションを示します。</Description>
+			</Feature>
+			<Feature name="スペルチェック" assemblyName="RichTextBoxSamples.4.exe" type="RichTextBoxSamples.AsYouTypeSpellCheck" source="C1.WPF.RichTextBox\CS\RichTextBoxSamples\AsYouTypeSpellCheck.xaml" >
+				<Description>C1RichTextBox は、C1SpellChecker コンポーネントを使用して、モーダルおよび逐次入力スペルチェックをサポートします。スペルチェックボタンをクリックするか、テキストボックスにスペルミスのある単語を入力すると、この機能が動作しています。</Description>
+			</Feature>
+			<Feature name="インポート＆エクスポート" assemblyName="RichTextBoxSamples.4.exe" type="RichTextBoxSamples.DemoRichTextBoxFilter" source="C1.WPF.RichTextBox\CS\RichTextBoxSamples\DemoRichTextBoxFilter.xaml" >
+				<Description>HTML および RTF コンテンツを C1RichTextBox に直接インポートまたはエクスポートします。</Description>
+			</Feature>
+			<Feature name="カスタムコンテキストメニュー" assemblyName="RichTextBoxSamples.4.exe" type="RichTextBoxSamples.CustomContextMenu" source="C1.WPF.RichTextBox\CS\RichTextBoxSamples\CustomContextMenu.xaml" >
+				<Description>C1RichTextBox コントロールでカスタムコンテキストメニューとして C1RadialMenu を使用する方法を示します。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="レポートおよびドキュメント">
+		<Control name="Excel" assembly="C1.WPF.Excel">
+			<Feature assemblyName="ExcelSamples.4.exe" type="ExcelSamples.ExcelCreator" source="C1.WPF.Excel\CS\ExcelSamples\ExcelCreator.xaml">
+				<Description>C1Excelコンポーネントの基本的な機能を示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="FlexReport" assembly="C1.WPF.FlexReport">
+			<Feature name="FlexReport ビューワ" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.ViewerPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\ViewerPage.xaml" >
+				<Description>サンプルでは、C1FlexViewerPane を使用して FlexReport で生成されたレポートを表示する方法を示します。</Description>
+			</Feature>
+			<Feature name="エクスポート" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.ExportPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\ExportPage.xaml" >
+				<Description>このサンプルでは、FlexReport レポート定義ファイル（.flxr）からレポートを選択するか、定義済みレポートのリストからレポートを選択してレポートを生成することができます。このレポートは、サポートされている外部形式のいずれかにエクスポートできます。</Description>
+			</Feature>
+			<Feature name="印刷" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.PrintPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\PrintPage.xaml" >
+				<Description>このサンプルでは、FlexReport レポート定義ファイル（.flxr）からレポートを選択するか、定義済みレポートのリストからレポートを選択してレポートを生成することができます。レポートを印刷することができます。</Description>
+			</Feature>
+		</Control>
+		<Control name="FlexViewer" isTop="true" assembly="C1.WPF.FlexViewer">
+			<Feature name="Pdf Viewer" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PdfViewPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PdfViewPage.xaml" >
+				<Description>C1FlexViewerとC1PdfDocumentSourceを使用して簡単なPDFビューアを作成する方法を示します。</Description>
+			</Feature>
+			<Feature name="FlexReport Viewer" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.ViewerPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\ViewerPage.xaml" >
+				<Description>このサンプルでは、C1FlexViewerPaneを使用してFlexReportで生成されたレポートを表示する方法を示します。</Description>
+			</Feature>
+			<Feature name="Ssrs Viewer" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.SsrsPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\SsrsPage.xaml" >
+				<Description>このサンプルは、C1SSRSDocumentSourceコンポーネントをC1FlexViewerPaneとともに使用して、SSRSサーバーで使用可能なレポートをプレビューおよび印刷したり、さまざまな形式にレポートをエクスポートしたりする方法を示しています。</Description>
+			</Feature>
+		</Control>
+		<Control name="PdfDocumentSource" assembly="C1.WPF.Document" >
+			<Feature name="Viewer" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PdfViewPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PdfViewPage.xaml" >
+				<Description>C1FlexViewerとC1PdfDocumentSourceを使用して簡単なPDFビューアを作成する方法を示します。</Description>
+			</Feature>
+			<Feature name="Export" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.ExportPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\ExportPage.xaml" >
+				<Description>C1PdfDocumentSourceをビューアなしで使用して、コードからドキュメントをエクスポートする方法を示します。</Description>
+			</Feature>
+			<Feature name="Printing" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PrintPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PrintPage.xaml" >
+				<Description>C1PdfDocumentSourceをビューアなしで使用してコードからドキュメントを印刷する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="Pdf" assembly="C1.WPF.Pdf">
+			<Feature name="基本的な機能" source="C1.WPF.Pdf\CS\PdfCreator\Basic.xaml" type="PdfCreator.Basic" assemblyName="PdfCreator.4.exe">
+				<Description>アプリケーションから Adobe PDFドキュメントを簡単に作成、印刷、メール送信できます。これは、クライアント側の PDF 文書でできる基本的なことを示しています。</Description>
+			</Feature>
+			<Feature name="高度な機能" source="C1.WPF.Pdf\CS\PdfCreator\Advanced.xaml" type="PdfCreator.Advanced" assemblyName="PdfCreator.4.exe">
+				<Description>クライアントサイドの PDF 文書でできることを高度に示しています。</Description>
+			</Feature>
+		</Control>
+		<Control name="Word" assembly="C1.WPF.Word">
+			<Feature assemblyName="WordCreator.4.exe" type="Word.Creator.Basic" source="C1.WPF.Word\CS\WordCreator\Basic.xaml">
+				<Description>アプリケーションから Microsoft Word 文書を容易に作成および保存します。これは、Word 文書でできる基本的なことを示しています。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="ユーティリティ">
+		<Control name="BarCode" assembly="C1.WPF.BarCode">
+			<Feature assemblyName="BarCodesSample.4.exe" type="BarCodesSample.DemoPage" source="C1.WPF.BarCode\CS\BarCodeSamples\BarCodeSamples\DemoPage.xaml">
+				<Description>C1BarCode コントロールは、異なるタイプのバーコードと QR コードを生成します。</Description>
+			</Feature>
+			<Feature name="新しいバーコードタイプ" isNew="true" assemblyName="BarCodesSample.4.exe" type="BarCodesSample.NewBarcode" source="C1.WPF.BarCode\CS\BarCodeSamples\BarCodeSamples\NewBarcodes.xaml">
+				<Description>2018 年に追加された新しいバーコードおよび QR コードの種類を確認できます。</Description>
+			</Feature>
+		</Control>
+		<Control name="Expressions" assembly="C1.WPF.ExpressionEditor">
+			<Feature name="列の計算" assemblyName="C1ExpressionEditorSample.exe" type="C1ExpressionEditorSample.ColumnCalculation" source="C1.WPF.ExpressionEditor\CS\ExpressionEditorSamples\ExpressionEditorSamples\ColumnCalculation\ColumnCalculation.xaml" >
+				<Description>ExpressionEditorを使用してFlexGridやその他のデータグリッド内で列計算を実行する方法を示します。</Description>
+			</Feature>
+			<Feature name="グループ化" assemblyName="C1ExpressionEditorSample.exe" type="C1ExpressionEditorSample.SupportGrouping" source="C1.WPF.ExpressionEditor\CS\ExpressionEditorSamples\ExpressionEditorSamples\Grouping\SupportGrouping.xaml" >
+				<Description>ExpressionEditorを使用してFlexGridまたは他のデータグリッド内でデータをグループ化する方法を示します。</Description>
+			</Feature>
+			<Feature name="フィルタ" assemblyName="C1ExpressionEditorSample.exe" type="C1ExpressionEditorSample.SupportFilter" source="C1.WPF.ExpressionEditor\CS\ExpressionEditorSamples\ExpressionEditorSamples\Filter\SupportFilter.xaml" >
+				<Description>ExpressionEditorを使用してFlexGridおよびその他のグリッドコントロール内のデータをフィルタリングする方法を示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="Themes" assembly="C1.WPF.Themes">
+			<Feature type="Themes.DemoThemes" assemblyName="Themes2010.4.exe" source="C1.WPF.Themes\CS\Themes2010\ThemesPage.xaml">
+				<Description>Studio for WPF には、あなたのスタイルの可能性を広げる多くの専門テーマが含まれています。新しい Office 2016 テーマをチェック！</Description>
+			</Feature>
+			<Feature name="スケジューラのテーマ" assemblyName="Themes2010.4.exe" type="Themes.SchedulerThemes" source="C1.WPF.Themes\CS\Themes2010\SchedulerThemes.xaml">
+				<Description>C1Scheduler を使用すると、複数のビュー、予定編集、リマインダ、連絡先、ラベル、リソースを備えた非常に洗練されたスケジューリングアプリケーションを作成できます。新しい Office 2016 テーマをチェック！</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="スケジューリング">
+		<Control name="Scheduler" assembly="C1.WPF.Schedule">
+			<Feature name="テーマおよびビュー" assemblyName="Themes2010.4.exe" type="Themes.SchedulerThemes" source="C1.WPF.Themes\CS\Themes2010\SchedulerThemes.xaml">
+				<Description>C1Scheduler を使用すると、複数のビュー、予定編集、リマインダ、連絡先、ラベル、リソースを備えた非常に洗練されたスケジューリングアプリケーションを作成できます。新しい Office 2016 テーマをチェック！</Description>
+			</Feature>
+			<Feature name="組み込みのテーマ" assemblyName="SchedulerSamples.4.exe" type="SchedulerSamples.DefaultSchedulerWindow" source="C1.WPF.Schedule\CS\SchedulerSamples\DefaultSchedulerWindow.xaml">
+				<Description>C1Themesに加えて、C1Schedulerアセンブリにはいくつかの組み込みテーマが含まれています。</Description>
+			</Feature>
+			<Feature name="グループ化" assemblyName="SchedulerSamples.4.exe" type="SchedulerSamples.Grouping" source="C1.WPF.Schedule\CS\SchedulerSamples\Grouping.xaml">
+				<Description>C1Scheduler コントロールは、リソース、連絡先、カテゴリ別のグループ化をサポートします。</Description>
+			</Feature>
+			<Feature name="カスタムスタイル" assemblyName="SchedulerSamples.4.exe" type="SchedulerSamples.CustomSchedulerStyles" source="C1.WPF.Schedule\CS\SchedulerSamples\CustomSchedulerStyles.xaml">
+				<Description>事前に定義された C1Scheduler ビューの代わりにカスタム定義されたスタイルの使用を示します。</Description>
+			</Feature>
+			<Feature name="カレンダー設定" assemblyName="SchedulerSamples.4.exe" type="SchedulerSamples.CalendarSettings" source="C1.WPF.Schedule\CS\SchedulerSamples\CalendarSettings.xaml">
+				<Description>：週の開始日、稼働日を変更したり、休日や週末を追加したりします。C1Calendar と C1Scheduler コントロールで同じ設定を共有できます。</Description>
+			</Feature>
+			<Feature name="カレンダー" assemblyName="SchedulerSamples.4.exe" type="SchedulerSamples.Calendar" source="C1.WPF.Schedule\CS\SchedulerSamples\Calendar.xaml">
+				<Description>C1Calendar コントロールは、日付範囲の選択、月単位のナビゲーション、および C1Scheduler コントロールとのシームレスな統合をサポートする複数月のカレンダーを表します。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="ナビゲーションおよびレイアウト">
+		<Control name="Accordion" assembly="C1.WPF.Extended">
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoAccordion" source="C1.WPF.Extended\CS\ExtendedSamples\C1Accordion\C1AccordionPage.xaml" >
+				<Description>あなたの UI を整理し、画面の領域を最適化します。C1Accordion は複数のアイテムを含む ItemsControl であり、一度に１つのアイテムだけを展開することができます。</Description>
+				<Properties>
+					<Property name="Width" minimumValue="10" maximumValue="800" nullable="true" />
+					<Property name="Height" minimumValue="10" maximumValue="600" nullable="true" />
+					<Property name="ExpandDirection" value="Down" />
+					<Property name="AllowCollapseAll" />
+					<Property name="Fill" value="true" />
+					<Property name="DEMO_Padding" caption="Padding" />
+					<Property name="HeaderPadding" />
+					<Property name="CornerRadius" />
+				</Properties>
+			</Feature>
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoAccordion" source="C1.WPF.Extended\CS\ExtendedSamples\C1Accordion\C1AccordionPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1Accordion コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="ExpandedBackground" />
+					<Property name="FocusBrush" />
+					<Property name="HeaderBackground" />
+					<Property name="HeaderForeground" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="Bitmap" assembly="C1.WPF.Bitmap">
+			<Feature assemblyName="BitmapSamples.4.exe" type="BitmapSamples.Crop" name="トリミング" source="C1.WPF.Bitmap\CS\BitmapSamples\Crop.xaml">
+				<Description>C1Bitmap を使用してイメージをトリミングする方法を示します。</Description>
+			</Feature>
+			<Feature assemblyName="BitmapSamples.4.exe" type="BitmapSamples.FaceWarp" name="画像の歪み" source="C1.WPF.Bitmap\CS\BitmapSamples\FaceWarp.xaml">
+				<Description>C1Bitmap と頂点シェーダを使用して画像を歪める方法を示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="Book" assembly="C1.WPF.Extended">
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoBook" source="C1.WPF.Extended\CS\ExtendedSamples\C1Book\C1BookPage.xaml" >
+				<Description>C1Book コントロールは、実際の本のように、その中にデータを提示したり UI を整理したりします。実際の本のようにページをドラッグすると、マウスポインタでページをドラッグできます。必要に応じて、コーナーをクリックしてページを反転させます。</Description>
+				<Properties>
+					<Property name="ShowInnerShadows" value="true" />
+					<Property name="ShowOuterShadows" value="true" />
+					<Property name="IsFirstPageOnTheRight" value="false" />
+					<Property name="Orientation" />
+					<Property name="ShowPageFold" />
+					<Property name="PageFoldAction" />
+					<Property name="FoldSize" minimumValue="20" maximumValue="100" />
+					<Property name="CurrentPage" minimumValue="0" maximumValue="11" />
+				</Properties>
+				<Event>CurrentPageChanged</Event>
+			</Feature>
+			<Feature name="単一ページ" assemblyName="ExtendedSamples.4.exe" source="C1.WPF.Extended\CS\ExtendedSamples\C1Book\SinglePage.xaml" type="ExtendedSamples.SinglePage">
+				<Description>PageMode を OnePage に設定すると、単一ページのブックが実現します。</Description>
+			</Feature>
+		</Control>
+		<Control name="Carousel" assembly="C1.WPF.Carousel">
+			<Feature assemblyName="CarouselSamples.4.exe" type="CarouselSamples.CarouselPage" source="C1.WPF.Carousel\CS\CarouselSamples\CarouselPage.xaml">
+				<Description>C1CarouselPanel コントロールは、任意の 3D パスに沿って子要素を配置する仮想パネルコントロールです。C1CarouselPanel コントロールをアイテムコントロールとともに使用すると、アイテムのフラットリストを真の 3D 遠近法とスクロールアニメーションを備えたインタラクティブカルーセルに変えることができます。</Description>
+			</Feature>
+		</Control>
+		<Control name="DockControl" assembly="C1.WPF.Docking">
+			<Feature assemblyName="DockingSamples.4.exe" type="DockingSamples.DockControlBasic" source="C1.WPF.Docking\CS\DockingSamples\Basic\DockControlBasic.xaml" >
+				<Description>アプリケーション内への複数のウィンドウのドッキングを処理します。C1DockControl は、余白を埋めるコンテンツをサポートします。デフォルトの外観は、Visual Studio ドッキングのルックアンドフィールを模倣しています。</Description>
+			</Feature>
+			<Feature name="Visual Studio" assemblyName="DockingSamples.4.exe" type="DockingSamples.VisualStudioLookPage" source="C1.WPF.Docking\CS\DockingSamples\VisualStudioLook\VisualStudioLookPage.xaml">
+				<Description>このデモでは、C1DockControl を使用した Visual Studio のデモを示しています。</Description>
+			</Feature>
+		</Control>
+		<Control name="DragDropManager" assembly="C1.WPF">
+			<Feature name="DemoListBox" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\DragDropManager\DemoListBox.xaml" type="BasicControls.DemoListBox">
+				<Description>C1DragDropManager は、高度なドラッグアンドドロップを有効にします。異なるリストボックス間でアイテムを簡単にドラッグ＆ドロップすることができます。</Description>
+			</Feature>
+			<Feature name="Checkers" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\DragDropManager\DemoDragDropManager.xaml" type="BasicControls.DemoDragDropManager">
+				<Description>C1DragDropManager コントロールを使用すると、任意の UIElement のドラッグアンドドロップ操作を簡単に管理できます。</Description>
+			</Feature>
+		</Control>
+		<Control name="Expander" assembly="C1.WPF.Extended">
+			<Description>C1Expander は非常にシンプルながら、コンテンツを拡張および縮小する機能を提供する便利なコントロールです。</Description>
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoExpander" source="C1.WPF.Extended\CS\ExtendedSamples\C1Expander\C1ExpanderPage.xaml">
+				<Properties>
+					<Property name="ExpandDirection" value="Down" />
+					<Property name="IsExpandable" />
+					<Property name="Width" value="300" minimumValue="10" maximumValue="800" nullable="true" />
+					<Property name="Height" minimumValue="10" maximumValue="600" nullable="true" />
+				</Properties>
+			</Feature>
+			<Feature assemblyName="ExtendedSamples.4.exe" type="ExtendedSamples.DemoExpander" source="C1.WPF.Extended\CS\ExtendedSamples\C1Expander\C1ExpanderPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1Expander コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="HeaderForeground" />
+					<Property name="HeaderBackground" />
+					<Property name="ExpandedBackground" />
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="MouseOverBrush" />
+					<Property name="FocusBrush" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="HyperPanel" assembly="C1.WPF">
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoHyperPanel" source="C1.WPF\CS\BasicControls\Panels\C1HyperPanelPage.xaml" >
+				<Description>C1HyperPanel は、マウスの近くのアイテムに自動拡大効果を提供する StackPanel です。</Description>
+				<Properties>
+					<Property name="Orientation" value="Horizontal" />
+					<Property name="Distribution" value="0.5" minimumValue="0" maximumValue="1" />
+					<Property name="ApplyOpacity" />
+					<Property name="MinElementScale" value="0.6" minimumValue="0" maximumValue="1" />
+					<Property name="HorizontalContentAlignment" value="Stretch" />
+					<Property name="VerticalContentAlignment" value="Stretch" />
+					<Property name="Center" minimumValue="0" maximumValue="1"/>
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="MediaPlayer" assembly="C1.WPF.MediaPlayer">
+			<Feature name="Media Player" assemblyName="MediaPlayerSamples.4.exe" source="C1.WPF.MediaPlayer\CS\MediaPlayerSamples\C1MediaPlayerPage.xaml" type="MediaPlayerSamples.DemoMediaPlayer">
+				<Description>C1MediaPlayer は、メディア、ビデオ、またはオーディオを実行するプレーヤーを提供します。プレイリスト、フルスクリーンモード、オーバーレイサポートなどの高度な機能を簡単に実装できます。</Description>
+				<Properties>
+					<Property name="IsChapterListButtonVisible" />
+					<Property name="IsFullScreenButtonVisible" />
+					<Property name="IsItemListButtonVisible" />
+					<Property name="IsLoopButtonVisible" />
+					<Property name="IsNextButtonVisible" />
+					<Property name="IsPlayButtonVisible" />
+					<Property name="IsPositionSliderVisible" />
+					<Property name="IsPreviousButtonVisible" />
+					<Property name="IsStopButtonVisible" />
+					<Property name="IsTimePresenterVisible" />
+					<Property name="IsTitleVisible" />
+					<Property name="IsVolumeControlVisible" />
+					<Property name="SuperimposeButtonsFullScreen" />
+					<Property name="SuperimposeButtonsWindowed" />
+					<Property name="Angle" minimumValue="0" maximumValue="360" />
+				</Properties>
+			</Feature>
+			<Feature assemblyName="MediaPlayerSamples.4.exe" type="MediaPlayerSamples.DemoMediaPlayer" source="C1.WPF.MediaPlayer\CS\MediaPlayerSamples\C1MediaPlayerPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1MediaPlayer コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="FocusBrush" />
+					<Property name="ButtonBackground" />
+					<Property name="ButtonForeground" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="OutlookBar" assembly="C1.WPF.OutlookBar">
+			<Feature name="Basic" source="C1.WPF.OutlookBar\CS\OutlookBarSamples\MainPage.xaml" type="OutlookBarSamples.DemoOutlookBar" assemblyName="OutlookBarSamples.4.exe">
+				<Description>C1OutlookBar コントロールは、Microsoft Outlook のナビゲーションウィンドウを模倣し、各カテゴリに大小のアイコンが表示されます。ボタンをクリックしてスプリッターをドラッグすると、バーを折りたたむことができます。</Description>
+			</Feature>
+		</Control>
+		<Control name="Menu" assembly="C1.WPF">
+			<Feature name="メニュー" assemblyName="BasicControls.4.exe" type="BasicControls.DemoMenu" source="C1.WPF\CS\BasicControls\Menu\C1Menu.xaml">
+				<Description>C1Menu を使用して、完全なメニューシステムを WPF アプリケーションに追加します。</Description>
+			</Feature>
+			<Feature name="ラジアルメニュー" assemblyName="BasicControls.4.exe" type="BasicControls.DemoRadialMenu" source="C1.WPF\CS\BasicControls\Menu\C1RadialMenu.xaml">
+				<Description>最新のタッチ・ファースト・インターフェースからインスパイアされた C1RadialMenu コントロールは、伝統的なコンテキストメニューの独特でタッチに優しい選択肢です。ネストされたメニューを作成し、色のための特別なメニュー項目と数字のためのラジアルダイヤルを取得します。</Description>
+			</Feature>
+		</Control>
+		<Control name="TabControl" assembly="C1.WPF">
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoTabControl" source="C1.WPF\CS\BasicControls\Containers\C1TabControl\C1TabControlPage.xaml">
+				<Description>C1TabControl は、UI の省スペース化のための ItemsControl です。４つのビルトインタブシェイプ、スクロール、アライメントオプション、およびタブ選択のメニューを取得します。</Description>
+				<Properties>
+					<Property name="CanUserReorder"/>
+					<Property name="TabItemClose" caption="TabItemClose" />
+					<Property name="TabItemShape" caption="TabItemShape" />
+					<Property name="TabStripMenuVisibility" caption="TabStripMenuVisibility" />
+					<Property name="TabStripOverlap" caption="TabStripOverlap" value="2" minimumValue="0" maximumValue="10" nullable="false" />
+					<Property name="TabStripOverlapDirection" caption="TabStripOverlapDirection" />
+					<Property name="TabStripPlacement" caption="TabStripPlacement" />
+				</Properties>
+			</Feature>
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoTabControl" source="C1.WPF\CS\BasicControls\Containers\C1TabControl\C1TabControlPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1TabControl のカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="SelectedBackground" />
+					<Property name="TabStripBackground" />
+					<Property name="TabStripForeground" />
+					<Property name="TabStripMenuVisibility" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="Tile" assembly="C1.WPF.Tile">
+			<Feature type="TileSamplesLib.TileTypes" source="C1.WPF.Tile\CS\TileSamples\TileSamplesLib\TileTypes.xaml" name="タイル形式">
+				<Description>ListBox コントロールの異なる設定で異なるタイルタイプを表示します。</Description>
+			</Feature>
+			<Feature type="TileSamplesLib.FlickrPhotoViewer" source="C1.WPF.Tile\CS\TileSamples\TileSamplesLib\FlickrPhotoViewer.xaml" name="Flickr フォトビューワ">
+				<Description>ContentSource が設定されている別のタイルコントロールを表示します。カスタムデリゲートコマンドを C1Tile コントロールにバインドする方法も示します。タイルをクリックすると、別のウィンドウにフルイメージが表示されます。</Description>
+			</Feature>
+		</Control>
+		<Control name="TileView" assembly="C1.WPF.TileView">
+			<Feature assemblyName="TileViewSamples.4.exe" type="TileViewSamples.MainPage" source="C1.WPF.TileView\CS\TileViewSamples\MainPage.xaml" name="ダッシュボード">
+				<Description>インタラクティブにデータをブラウズします。C1TileView コントロールを使用すると、タイルを拡大/縮小して多かれ少なかれ情報を表示できます。このコントロールは、ダッシュボード、ディテールビュー、フォトギャラリーなどに最適です。</Description>
+				<Properties>
+					<Property name="AnimationDuration" />
+				</Properties>
+			</Feature>
+			<Feature assemblyName="TileViewSamples.4.exe" type="TileViewSamples.MainPage" source="C1.WPF.TileView\CS\TileViewSamples\MainPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1TileView コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="Background" />
+					<Property name="BorderBrush" />
+					<Property name="BorderThickness" />
+					<Property name="HeaderBackground" />
+					<Property name="HeaderForeground" />
+					<Property name="ItemBackground" />
+					<Property name="ItemForeground" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="FocusBrush" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="Toolbar" isNew="true" assembly="C1.WPF.Toolbar">
+			<Feature name="Simplified Ribbon" type="ToolbarSamples.SimplifiedRibbon" source="C1.WPF.Toolbar\CS\ToolbarSamples\SimplifiedRibbon.xaml" isNew="true" assemblyName="ToolbarSamples.4.exe">
+				<Description>Simplified Ribbon は、クリーンでコンパクトなツールバーとリボンのハイブリッドです。コントロールを折りたたんでコンパクトな単一行表示にしたり、展開して完全なリボンの外観に切り替えることができます。</Description>
+			</Feature>
+			<Feature type="ToolbarSamples.Toolbar" source="C1.WPF.Toolbar\CS\ToolbarSamples\Toolbar.xaml" assemblyName="ToolbarSamples.4.exe">
+				<Description>あなたのアプリケーションのメニューとツールバーに組織と優雅さを加えます。C1Toolbar コントロールは、ボタンをタブとグループにグループ化することをサポートしています。トグル、分割、ツールストリップのような特別なボタンも用意されています。</Description>
+			</Feature>
+			<Feature name="ツールバーコマンド" source="C1.WPF.Toolbar\CS\ToolbarSamples\ToolbarCommands.xaml" type="ToolbarSamples.ToolbarCommands" assemblyName="ToolbarSamples.4.exe">
+				<Description>ツールバーコマンドを使用すると、ツールバーのボタンのラベルや画像を指定できます。ツールバーボタンは、ツールバーグループ内のさまざまなサイズにすることもできます。</Description>
+			</Feature>
+			<Feature name="ClearStyle" source="C1.WPF.Toolbar\CS\ToolbarSamples\Toolbar.xaml" type="ToolbarSamples.Toolbar" assemblyName="ToolbarSamples.4.exe">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1Toolbar コントロールのカスタムスタイルを素早く作成できます。 ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="PressedBrush" />
+					<Property name="FocusBrush" />
+				</Properties>
+			</Feature>
+			<Feature name="ToolbarStrip" type="ToolbarSamples.Toolstrip" assemblyName="ToolbarSamples.4.exe">
+				<SubFeatures>
+					<SubFeature type="ToolbarSamples.Toolstrip" source="C1.WPF.Toolbar\CS\ToolbarSamples\Toolstrip.xaml" name="ToolbarStrip" assemblyName="ToolbarSamples.4.exe">
+						<Description>C1ToolbarStrip は、さほど洗練されていないシナリオ用のスタンドアロンコントロールとして使用できます。</Description>
+						<Properties>
+							<Property name="Orientation" />
+							<Property name="Overflow" />
+						</Properties>
+					</SubFeature>
+					<SubFeature type="ToolbarSamples.Toolstrip" source="C1.WPF.Toolbar\CS\ToolbarSamples\Toolstrip.xaml" name="ClearStyle" assemblyName="ToolbarSamples.4.exe">
+						<Description>いくつかのブラシプロパティを変更するだけで、C1ToolbarStrip コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+						<Properties>
+							<Property name="DEMO_Background" caption="Background" />
+							<Property name="DEMO_Foreground" caption="Foreground" />
+							<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+							<Property name="ButtonBackground" />
+							<Property name="ButtonForeground" />
+							<Property name="MouseOverBrush" />
+							<Property name="PressedBrush" />
+							<Property name="FocusBrush" />
+						</Properties>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+		</Control>
+		<Control name="TreeView" assembly="C1.WPF">
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoTreeView" source="C1.WPF\CS\BasicControls\ItemsControls\C1TreeViewPage.xaml" >
+				<Description>展開または折りたたみできるノード内の項目の階層リストを表示します。</Description>
+				<Properties>
+					<Property name="AllowDragDrop" />
+					<Property name="ShowLines" value="true" />
+				</Properties>
+			</Feature>
+			<Feature name="ドラッグ＆ドロップ" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\ItemsControls\C1TreeViewDragDrop.xaml" type="BasicControls.DemoTreeViewDragDrop">
+				<Description>ドラッグ＆ドロップ操作の組み込みサポートを示します。</Description>
+			</Feature>
+			<Feature name="外部へのドラッグ" isNew="true" assemblyName="C1TreeViewDragDropSample2010.4.exe" source="C1.WPF\CS\C1TreeViewDragDropSample\C1TreeViewDragDropSample2010\Interaction.xaml" type="C1TreeViewDragDropSample2010.Interaction">
+				<Description>TreeView は、他のコントロールやアプリケーションとのドラッグ＆ドロップ操作をサポートしています。</Description>
+			</Feature>
+			<Feature name="データバインド" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\ItemsControls\SimpleC1TreeViewPage.xaml" type="BasicControls.DemoSimpleC1TreeView">
+				<Description>カスタマイズされた外観を持つデータバインドされた TreeView を示します。</Description>
+			</Feature>
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoTreeView" source="C1.WPF\CS\BasicControls\ItemsControls\C1TreeViewPage.xaml" name="ClearStyle">
+				<Description>いくつかのブラシプロパティを変更するだけで、C1TreeView コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>
+				<Properties>
+					<Property name="DEMO_Background" caption="Background" />
+					<Property name="DEMO_Foreground" caption="Foreground" />
+					<Property name="DEMO_BorderBrush" caption="BorderBrush" />
+					<Property name="MouseOverBrush" />
+					<Property name="SelectedBackground" />
+					<Property name="ShowLines" value="true" />
+					<Property name="LineStroke" />
+					<Property name="LineThickness" />
+					<Property name="HorizontalAlignment" display="false" value="Center" />
+					<Property name="VerticalAlignment" display="false" value="Top" />
+				</Properties>
+			</Feature>
+		</Control>
+		<Control name="Windows" assembly="C1.WPF">
+			<Feature assemblyName="BasicControls.4.exe" type="BasicControls.DemoWindow" source="C1.WPF\CS\BasicControls\Containers\C1Window\C1WindowPage.xaml" >
+				<Description>C1Window コントロールは、WPF XBAP アプリケーションのさまざまなフォームを処理するための使い慣れたソリューションを提供します。たとえば、モーダルおよびモードレスの子ウィンドウ、ウィザード、ダイアログボックス、およびメッセージボックスを表示します。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="レガシーコントロール">
+		<Control name="PdfViewer" assembly="C1.WPF.PdfViewer">
+			<Feature assemblyName="PdfViewerSamples.4.exe" type="PdfViewerSamples.DemoPdfViewer" source="C1.WPF.PdfViewer\CS\PdfViewerSamples\C1PdfViewerPage.xaml" >
+				<Description>C1PdfViewer コントロールを使用して、WPF で PDF ドキュメントを表示します。コントロールは PDF ファイルを読み込み、それらをネイティブ XAML 要素に変換するので、最終結果は Adobe に依存せずに 100％ ネイティブです。</Description>
+			</Feature>
+			<Feature name="PDF Acroform" assemblyName="PdfViewerSamples.4.exe" source="C1.WPF.PdfViewer\CS\PdfViewerSamples\AcroformDemo.xaml" type="PdfViewerSamples.AcroformDemo">
+				<Description>このデモでは、acroform 要素を含む PDF ファイルを表示する方法を示します。</Description>
+			</Feature>
+			<Feature name="PDF アノテーション" assemblyName="PdfViewerSamples.4.exe" source="C1.WPF.PdfViewer\CS\PdfViewerSamples\AnnotationDemo.xaml" type="PdfViewerSamples.AnnotationDemo">
+				<Description>このデモでは、PDF ファイルにアノテーションを作成する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<Control name="ReportViewer" assembly="C1.WPF.ReportViewer">
+			<Feature assemblyName="ReportViewerSamples.4.exe" type="ReportViewerSamples.DemoReportViewer" source="C1.WPF.ReportViewer\CS\ReportViewerSamples\MainPage.xaml" >
+				<Description>C1ReportViewer コントロールは、サーバー生成レポートを PDF/MSHTML として表示するために使用されます。C1Reports、Microsoft Reporting Services、ActiveReports、Crystal などによって生成されたレポートを表示します。</Description>
+			</Feature>
+		</Control>
+	</Group>
+</Controls>

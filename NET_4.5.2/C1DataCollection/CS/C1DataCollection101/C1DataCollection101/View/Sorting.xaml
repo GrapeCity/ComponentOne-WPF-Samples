@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"       
+      mc:Ignorable="d" 
+             x:Class="C1DataCollection101.Sorting">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ToolBar>
+            <Button x:Name="btnSort" Click="OnSortClicked" Background="#9D2235">
+                <StackPanel>
+                    <Image x:Name="btnImage" Source="/C1DataCollection101;component/Images/sort-ascending.png" Height="30" />
+                </StackPanel>
+            </Button>
+        </ToolBar>
+        <Grid Grid.Row="1">
+            <ProgressBar x:Name="activityIndicator" VerticalAlignment="Center" IsIndeterminate="True" MaxWidth="200"/>
+            <c1:C1FlexGrid x:Name="grid"></c1:C1FlexGrid>
+            <TextBlock x:Name="message" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        </Grid>
+    </Grid>
+</Page>

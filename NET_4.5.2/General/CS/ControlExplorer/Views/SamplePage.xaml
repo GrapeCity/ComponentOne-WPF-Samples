@@ -1,0 +1,130 @@
+﻿<Page x:Class="ControlExplorer.SamplePage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+           xmlns:local="clr-namespace:ControlExplorer"
+           mc:Ignorable="d"
+           d:DataContext="{d:DesignData Source=/DesignData/FeatureData.xaml}"
+           xmlns:lr="clr-namespace:ControlExplorer.Properties">
+    <Page.Resources>
+        <Storyboard x:Key="ChangeSampleStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="featureDescription">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="tabControl">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" Storyboard.TargetName="featureDescription">
+                <EasingDoubleKeyFrame KeyTime="0" Value="880"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="880.509"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="2">
+                <StackPanel Orientation="Horizontal" SnapsToDevicePixels="True">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Panel.ZIndex" Value="3"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <StackPanel Orientation="Horizontal" Height="40" Panel.ZIndex="2">
+                        <Grid>
+                            <Rectangle Fill="#a2a2a2"/>
+                            <local:HyperlinkButton x:Name="homeButton" NavigateUri="/Views/HomePage.xaml" Margin="5 0">
+                                <Image Source="/Resources/ico-Home.png" Width="25" Height="25" Stretch="Fill"/>
+                            </local:HyperlinkButton>
+                        </Grid>
+                        <Path Data="M0,0 L6,6 L0,12 z" Fill="#a2a2a2" Width="15" Stretch="Fill" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40" Panel.ZIndex="1" Margin="-15 0 0 0" Grid.Column="1">
+                        <Grid>
+                            <Rectangle Fill="#cbcccb"/>
+                            <local:ControlNavigator Text="{Binding Control.Name}" FontSize="14" Background="#cbcccb" VerticalContentAlignment="Stretch" Margin="20 0 0 0" Panel.ZIndex="3"/>
+                        </Grid>
+                        <Path Data="M0,0 L6,6 L0,12 z" Fill="#cbcccb" Width="15" Stretch="Fill" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40" Panel.ZIndex="0" Grid.Column="2" Margin="-30 0 0 0">
+                        <Grid>
+                            <Rectangle Fill="#a2a2a2"/>
+                            <TextBlock Text="{Binding Name}" Margin="35 0 0 0" FontSize="14"/>
+                        </Grid>
+                        <Path Data="M0,0 L6,6 L0,12 z" Fill="#a2a2a2" Width="15" Stretch="Fill" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <c1:C1TabControl x:Name="tabControl" Grid.Column="1" Grid.Row="1" Padding="0" TabStripHorizontalAlignment="Right" TabItemShape="Rectangle" BorderBrush="#FFBBBBBB" PressedBrush="{x:Null}" MouseOverBrush="#FFC2C2C2" TabStripBackground="#FFABABAB" TabStripOverlap="3" Margin="0,30,10,0" >
+                <c1:C1TabItem Header="{x:Static lr:Resources.Sample_Text}" Style="{StaticResource SampleTabItem}" KeyDown="C1TabItem_KeyDown">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <ContentPresenter Content="{Binding Sample}" Margin="8" />
+                        <c1:C1Expander Grid.Column="1" IsExpanded="True" Visibility="{Binding PropertiesVisibility}" Style="{StaticResource PropertiesExpander}">
+                            <c1:C1PropertyGrid x:Name="properties" Width="280" AddingPropertyBox="properties_AddingPropertyBox" SelectedObject="{Binding Sample}" AutoGenerateProperties="False" Style="{StaticResource PropertiesPropertyGrid}" />
+                        </c1:C1Expander>
+                    </Grid>
+                </c1:C1TabItem>
+                <c1:C1TabItem Header="{x:Static lr:Resources.Code_Text}" Style="{StaticResource SampleTabItem}" >
+                    <local:SourceCode x:Name="code"/>
+                </c1:C1TabItem>
+            </c1:C1TabControl>
+            <Grid Margin="10 0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="controlName" Text="{Binding Control.Name}" Margin="0 30 0 10" FontSize="15" FontWeight="Bold" />
+                <TextBlock x:Name="featureDescription" Text="{Binding Description}" Grid.Row="1" FontSize="12" TextWrapping="Wrap"  />
+                <TextBlock Text="{x:Static lr:Resources.Features_Text}" Grid.Row="2" FontWeight="Bold" FontSize="15" Margin="0 5 0 10" />
+                <c1:C1TreeView x:Name="tree"
+                               Grid.Row="3"
+                               ItemPrepared="tree_ItemPrepared"
+                               SelectionChanged="tree_SelectionChanged"
+                               ItemsSource="{Binding Control.Features}" 
+                               SelectionMode="Single"
+                               SnapsToDevicePixels="True" 
+                               HorizontalContentAlignment="Stretch" 
+                               Style="{StaticResource SamplePageTreeView}" 
+                               Margin="0,0,-5,0">
+                    <c1:C1TreeView.ItemTemplate>
+                        <c1:C1HierarchicalDataTemplate ItemsSource="{Binding SubFeatures}">
+                            <Grid Height="30">
+                                <TextBlock VerticalAlignment="Center" FontSize="13" Text="{Binding Name}"/>
+                            </Grid>
+                        </c1:C1HierarchicalDataTemplate>
+                    </c1:C1TreeView.ItemTemplate>
+                </c1:C1TreeView>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,139 @@
+﻿<Page x:Class="DashboardWPF.Tasks"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+      xmlns:res="clr-namespace:DashboardWPF.Strings"      
+      xmlns:local="clr-namespace:DashboardWPF"
+      mc:Ignorable="d" ShowsNavigationUI="False"
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Tasks" Loaded="OnLoaded">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DashboardWPF;component/Style/Style.xaml" />
+                <ResourceDictionary>
+                    <Style x:Key="TaskFlexGridStyle" TargetType="{x:Type c1:C1FlexGrid}">
+                        <Setter Property="AutoGenerateColumns" Value="False"/>
+                        <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+                        <Setter Property="FontSize" Value="12"/>
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Style="{DynamicResource RootGrid}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="5" Style="{DynamicResource Tilte}" Text="{x:Static res:Resource.TaskPage_Title}"/>
+        <TabControl Margin="0,10,0,5" Grid.Row="1" x:Name="TabRoot" SelectionChanged="OnSelectionChanged">
+            <TabItem Header="{x:Static res:Resource.AllTasks_Header}">
+                <Border Margin="0,10,0,0" Style="{DynamicResource TileBorder}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <c1:C1FlexGridGroupPanel FlexGrid="{Binding ElementName=All}" />
+                        <c1:C1FlexGrid Grid.Row="1" x:Name="All" Style="{DynamicResource TaskFlexGridStyle}">
+                            <c1:C1FlexGrid.Columns>
+                                <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding DueDate}" Width="*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                            </c1:C1FlexGrid.Columns>
+                        </c1:C1FlexGrid>
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="{x:Static res:Resource.InProgress_Header}">
+                <Border Margin="0,10,0,0" Style="{DynamicResource TileBorder}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <c1:C1FlexGridGroupPanel FlexGrid="{Binding ElementName=InProgress}" />
+                        <c1:C1FlexGrid Grid.Row="1" x:Name="InProgress" Style="{DynamicResource TaskFlexGridStyle}">
+                            <c1:C1FlexGrid.Columns>
+                                <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding DueDate}" Width="*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                            </c1:C1FlexGrid.Columns>
+                        </c1:C1FlexGrid>
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="{x:Static res:Resource.Completed_Header}">
+                <Border Margin="0,10,0,0" Style="{DynamicResource TileBorder}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <c1:C1FlexGridGroupPanel FlexGrid="{Binding ElementName=Completed}" />
+                        <c1:C1FlexGrid Grid.Row="1" x:Name="Completed" Style="{DynamicResource TaskFlexGridStyle}">
+                            <c1:C1FlexGrid.Columns>
+                                <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding DueDate}" Width="*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                            </c1:C1FlexGrid.Columns>
+                        </c1:C1FlexGrid>
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="{x:Static res:Resource.Deferred_Header}">
+                <Border Margin="0,10,0,0" Style="{DynamicResource TileBorder}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <c1:C1FlexGridGroupPanel FlexGrid="{Binding ElementName=Deferred}" />
+                        <c1:C1FlexGrid Grid.Row="1" x:Name="Deferred" Style="{DynamicResource TaskFlexGridStyle}">
+                            <c1:C1FlexGrid.Columns>
+                                <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding DueDate}" Width="*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                            </c1:C1FlexGrid.Columns>
+                        </c1:C1FlexGrid>
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="{x:Static res:Resource.Urgent_Header}">
+                <Border Margin="0,10,0,0" Style="{DynamicResource TileBorder}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <c1:C1FlexGridGroupPanel FlexGrid="{Binding ElementName=Urgent}" />
+                        <c1:C1FlexGrid Grid.Row="1" x:Name="Urgent" Style="{DynamicResource TaskFlexGridStyle}">
+                            <c1:C1FlexGrid.Columns>
+                                <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding DueDate}" Width="*" IsReadOnly="True"/>
+                                <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                            </c1:C1FlexGrid.Columns>
+                        </c1:C1FlexGrid>
+                    </Grid>
+                </Border>
+            </TabItem>
+        </TabControl>
+        <Border Grid.Row="2" Margin="0,5,0,0" Style="{DynamicResource TileBorder}">
+            <local:RangeSelector Grid.Row="2" DateRangeChanged="OnDateRangeChanged" />
+        </Border>
+    </Grid>
+</Page>

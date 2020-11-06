@@ -1,0 +1,66 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HowToDoItInCode"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" x:Class="HowToDoItInCode.MainWindow"
+        xmlns:GanttView="clr-namespace:C1.GanttView;assembly=C1.WPF.GanttView.4.5.2"
+        mc:Ignorable="d"
+        Title="HowToDoItInCode" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <c1:C1GanttView Name="gv" Grid.Row="1" ShowToolbar="False" StartDate="2012/6/22">
+            <c1:C1GanttView.Columns>
+                <GanttView:TaskPropertyColumn Property="Mode"/>
+                <GanttView:TaskPropertyColumn Property="Name"/>
+                <GanttView:TaskPropertyColumn Property="Duration" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="DurationUnits" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Start" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Finish" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="PercentComplete" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintType" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintDate" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Predecessors" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Deadline" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Calendar" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ResourceNames" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Notes" Visible="False"/>
+            </c1:C1GanttView.Columns>
+            <c1:C1GanttView.Tasks>
+                <GanttView:Task Name="Task 1" Duration="3" Start="2012/6/22"></GanttView:Task>
+                <GanttView:Task Name="Task 2" Duration="3" Start="2012/6/29"></GanttView:Task>
+                <GanttView:Task Name="Task 3" Duration="3" Start="2012/6/25"></GanttView:Task>
+            </c1:C1GanttView.Tasks>
+        </c1:C1GanttView>
+        <Grid Grid.Row="0" Width="500" HorizontalAlignment="Left" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Load GanttView from XML" Width="240" Height="30" Margin="5" Click="btnLoadXml_Click"/>
+            <Button Grid.Row="1" Content="Save GanttView to XML" Width="240" Height="30" Margin="5" Click="btnSaveXml_Click"/>
+            <Button x:Name="btnAddTopLevel" Grid.Row="2" Content="Add Top Level to Timescale" Width="240" Height="30" Margin="5" Click="btnTimescale_Click"/>
+            <Button x:Name="btnRemoveTopLevel" Grid.Row="3" Content="Remove Top Level from Timescale" Width="240" Height="30" Margin="5" Click="btnRemoveTopLevel_Click"/>
+            <Button Grid.Row="4" Content="Add Resource to Task 1" Width="240" Height="30" Margin="5" Click="btnAddResource_Click"/>
+            <Button Grid.Row="5" Content="Add Predecessor to Task 2" Width="240" Height="30" Margin="5" Click="btnAddPredecessor_Click"/>
+            <Button x:Name="btnInsertTask" Grid.Column="1" Content="Insert New Task Before Task 2" Width="240" Height="30" Margin="5" Click="btnInsertTask_Click"/>
+            <Button x:Name="btnMove" Grid.Column="1" Grid.Row="1" Content="Move the New Task to the First Row" Width="240" Height="30" Margin="5" Click="btnMove_Click"/>
+            <Button x:Name="btnDelete" Grid.Column="1" Grid.Row="2" Content="Delete the New Task" Width="240" Height="30" Margin="5" Click="btnDelete_Click"/>
+            <CheckBox x:Name="chkShowDuration" Grid.Column="1" Grid.Row="3" Content="Show Task Duration Columns" Width="240" Height="30" Margin="5" VerticalContentAlignment="Center" Click="chkShowDuration_CheckedChanged"/>
+            <Button Grid.Column="1" Grid.Row="4" Content="Change Manual Task Bar Style" Width="240" Height="30" Margin="5" Click="btnChangeBarStyle_Click"/>
+            <Button Grid.Column="1" Grid.Row="5" Content="Change Task 3 Bar Style" Width="240" Height="30" Margin="5" Click="btnChangeTaskStyle_Click"/>
+        </Grid>
+    </Grid>
+</Window>
