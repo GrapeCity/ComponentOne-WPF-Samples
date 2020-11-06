@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="RibbonExplorer.Toolstrip" 
+             mc:Ignorable="d" 
+             d:DesignHeight="278.653" 
+             d:DesignWidth="771.84" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <UserControl.Resources>
+        <Style TargetType="Image" x:Key="MenuIcon">
+            <Setter Property="Width" Value="16" />
+            <Setter Property="Height" Value="16" />
+        </Style>
+        <Style TargetType="Image" x:Key="tbIcon">
+            <!--<Setter Property="Stretch" Value="None" />-->
+            <!--<Setter Property="Margin" Value="2 2 0 0"/>-->
+            <Setter Property="Width" Value="16" />
+            <Setter Property="Height" Value="16" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <c1:C1CheckeredBorder x:Name="cb" SquareWidth="16" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+
+        <Border ClipToBounds="True" x:Name="imgbdr" Grid.ColumnSpan="2" Grid.Row="1">
+            <Image x:Name="img" Stretch="None" Source="../Resources/Images/ladybird.jpg"/>
+        </Border>
+
+        <c1:C1ToolStrip ToolIconSize="16" Overflow="None" Background="Transparent" Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right" GroupCornerRadius="2">
+            <c1:C1ToolStrip.ToolStyle>
+                <Style TargetType="c1:C1Tool">
+                    <Setter Property="BorderThickness" Value="1"/>
+                </Style>
+            </c1:C1ToolStrip.ToolStyle>
+            <c1:C1ButtonTool x:Name="btn1_1" IsEnabled="False" Label="Original size" Click="OriginalSize_Click">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/view_1_1.png"/>
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool x:Name="btnZoomIn" Label="Zoom in" Click="ZoomIn_Click">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/zoom_in.png"/>
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool x:Name="btnZoomOut" Label="Zoom out" Click="ZoomOut_Click">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/zoom_out.png"/>
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+        </c1:C1ToolStrip>
+
+        <c1:C1ToolStrip ToolIconSize="16" Grid.ColumnSpan="2" x:Name="tb">
+            <c1:C1DropDownTool Description="Toolstrip options">
+                <c1:C1DropDownTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/controlPanel.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1DropDownTool.IconTemplate>
+                <c1:C1DropDownTool.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="8">
+                            <TextBlock Text="Toolstrip options" />
+                            <CheckBox Content="Is vertical" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
+                            <TextBlock Text="Overflow:" />
+                            <RadioButton Content="None" Checked="RadioButton_Checked" />
+                            <RadioButton Content="Menu" IsChecked="True" Checked="RadioButton_Checked" />
+                        </StackPanel>
+                    </DataTemplate>
+                </c1:C1DropDownTool.ContentTemplate>
+            </c1:C1DropDownTool>
+
+            <c1:C1ToolSeparator/>
+
+            <c1:C1MenuTool Label="New">
+                <c1:C1MenuTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/newProject.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1MenuTool.IconTemplate>
+                <c1:C1ButtonTool Label="Team Project...">
+                    <c1:C1ButtonTool.IconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1BitmapIcon Source="../Resources/Images/newTeamProject.png"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1ButtonTool.IconTemplate>
+                </c1:C1ButtonTool>
+                <c1:C1ButtonTool Label="Project...">
+                    <c1:C1ButtonTool.IconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1BitmapIcon Source="../Resources/Images/newProject.png"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1ButtonTool.IconTemplate>
+                </c1:C1ButtonTool>
+                <c1:C1ButtonTool Label="Web Site...">
+                    <c1:C1ButtonTool.IconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1BitmapIcon Source="../Resources/Images/newWebSite.png"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1ButtonTool.IconTemplate>
+                </c1:C1ButtonTool>
+                <c1:C1ButtonTool Label="File...">
+                    <c1:C1ButtonTool.IconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1BitmapIcon Source="../Resources/Images/newFile.png"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1ButtonTool.IconTemplate>
+                </c1:C1ButtonTool>
+            </c1:C1MenuTool>
+
+            <c1:C1ToolSeparator  />
+
+            <c1:C1MenuTool Label="Open">
+                <c1:C1MenuTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/openProject.png"/>
+                    </c1:C1IconTemplate>
+                </c1:C1MenuTool.IconTemplate>
+                <c1:C1ButtonTool Label="Project..." Click="OnProjectClicked">
+                    <c1:C1ButtonTool.IconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1BitmapIcon Source="../Resources/Images/openProject.png"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1ButtonTool.IconTemplate>
+                </c1:C1ButtonTool>
+                <c1:C1ButtonTool Label="Web Site...">
+                    <c1:C1ButtonTool.IconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1BitmapIcon Source="../Resources/Images/openWebSite.png"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1ButtonTool.IconTemplate>
+                </c1:C1ButtonTool>
+                <c1:C1ButtonTool Label="File...">
+                    <c1:C1ButtonTool.IconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1BitmapIcon Source="../Resources/Images/openFile.png"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1ButtonTool.IconTemplate>
+                </c1:C1ButtonTool>
+            </c1:C1MenuTool>
+            <c1:C1ButtonTool Label="Close solution">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/closeSolution.png"/>
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+
+            <c1:C1ToolSeparator  />
+
+            <c1:C1ButtonTool Label="Save">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/save.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool Label="Save All">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/saveAll.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+
+            <c1:C1ToolSeparator  />
+
+            <c1:C1ButtonTool Label="Page setup">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/pageSetup.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool Label="Print">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/print.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+
+            <c1:C1ToolSeparator  />
+
+            <c1:C1ButtonTool Label="Delete">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/delete.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool Label="Cut">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/cut.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool Label="Copy">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/copy.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool Label="Paste">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/paste.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+
+            <c1:C1ToolSeparator  />
+
+            <c1:C1ButtonTool Label="Undo">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/undo.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool Label="Redo">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/redo.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+
+            <c1:C1ToolSeparator  />
+
+            <c1:C1DropDownTool Label="Popup">
+                <c1:C1DropDownTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/Images/color.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1DropDownTool.IconTemplate>
+                <c1:C1DropDownTool.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Width="20" Text="R:" VerticalAlignment="Center" TextAlignment="Center" />
+                                <Slider Margin="3" Width="80" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Width="20" Text="G:" VerticalAlignment="Center" TextAlignment="Center" />
+                                <Slider Margin="3" Width="80" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Width="20" Text="B:" VerticalAlignment="Center" TextAlignment="Center" />
+                                <Slider Margin="3" Width="80" />
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </c1:C1DropDownTool.ContentTemplate>
+            </c1:C1DropDownTool>
+
+        </c1:C1ToolStrip>
+
+    </Grid>
+</UserControl>

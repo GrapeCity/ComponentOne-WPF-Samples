@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="FinancialChartExplorer.FibonacciTool"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FinancialChartExplorer"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <local:IntToVisibilityConverter x:Key="IntToVisibilityConverter"/>
+            <local:IntToSeriesVisibilityConverter x:Key="ITSVConverter"/>
+            <local:MultipleConverter x:Key="MultipleConverter"/>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <StackPanel.Resources>
+                <Style TargetType="ComboBox">
+                    <Setter Property="Width" Value="150"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Margin" Value="20 0 20 10"/>
+                </Style>
+                <Style TargetType="c1:C1NumericBox">
+                    <Setter Property="Width" Value="120"/>
+                    <Setter Property="Margin" Value="10 0 20 10"/>
+                    <Setter Property="Format" Value="g"/>
+                </Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <DataTemplate x:Key="cbFibonacciTypesTemplate">
+                    <TextBlock>
+                        <TextBlock.Inlines>
+                            <Run Text="Type: "/>
+                            <Run Text="{Binding Path=.}"/>
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Key="cbPositionsTemplate">
+                    <TextBlock>
+                        <TextBlock.Inlines>
+                            <Run Text="Position: "/>
+                            <Run Text="{Binding Path=.}"/>
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Key="cbUptrendsTemplate">
+                    <TextBlock>
+                        <TextBlock.Inlines>
+                            <Run Text="Uptrend: "/>
+                            <Run Text="{Binding Path=.}"/>
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                </DataTemplate>
+                <local:EnumConverter x:Key="EmConverter"/>
+            </StackPanel.Resources>
+            <ComboBox x:Name="cbFibonacciTypes"
+                      ItemsSource="{Binding FibonacciTypes}"
+                      ItemTemplate="{StaticResource cbFibonacciTypesTemplate}"
+                      SelectedIndex="2"/>
+            <StackPanel Orientation="Vertical" Visibility="{Binding ElementName=cbFibonacciTypes, Path=SelectedIndex, Converter={StaticResource IntToVisibilityConverter}, ConverterParameter=0}">
+                <ComboBox SelectedValue="{Binding ElementName=financialChart, Path=Series[2].LabelPosition, Converter={StaticResource EmConverter}}"
+                          ItemsSource="{Binding VerticalPositions}"
+                          ItemTemplate="{StaticResource cbPositionsTemplate}"/>
+                <StackPanel Orientation="Horizontal" Margin="20 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="StartX"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[2].StartX, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="StartY"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[2].StartY,Mode=TwoWay}"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="EndX"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[2].EndX, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3 0">
+                        <TextBlock Text="EndY"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[2].EndY, Mode=TwoWay}" Format="f2"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Visibility="{Binding ElementName=cbFibonacciTypes, Path=SelectedIndex, Converter={StaticResource IntToVisibilityConverter}, ConverterParameter=1}">
+                <ComboBox SelectedValue="{Binding ElementName=financialChart, Path=Series[3].LabelPosition, Converter={StaticResource EmConverter}}"
+                          ItemsSource="{Binding VerticalPositions}"
+                          ItemTemplate="{StaticResource cbPositionsTemplate}"/>
+                <StackPanel Orientation="Horizontal" Margin="20 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="StartX"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[3].StartX, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="StartY"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[3].StartY, Mode=TwoWay}"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="EndX"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[3].EndX, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3 0">
+                        <TextBlock Text="EndY"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[3].EndY, Mode=TwoWay}"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=cbFibonacciTypes, Path=SelectedIndex, Converter={StaticResource IntToVisibilityConverter}, ConverterParameter=2}">
+                <ComboBox x:Name="cbUptrends"
+                          SelectedValue="{Binding ElementName=financialChart, Path=Series[1].Uptrend, Converter={StaticResource EmConverter}}"
+                          ItemsSource="{Binding Uptrends}"
+                          ItemTemplate="{StaticResource cbUptrendsTemplate}"/>
+                <ComboBox x:Name="cbPositions"
+                          SelectedValue="{Binding ElementName=financialChart, Path=Series[1].LabelPosition, Converter={StaticResource EmConverter}}"
+                          ItemsSource="{Binding Positions}"
+                          ItemTemplate="{StaticResource cbPositionsTemplate}"/>
+                <CheckBox x:Name="cbRangeSelector" Content="Range selector" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Visibility="{Binding ElementName=cbFibonacciTypes, Path=SelectedIndex, Converter={StaticResource IntToVisibilityConverter}, ConverterParameter=3}">
+                <ComboBox SelectedValue="{Binding ElementName=financialChart, Path=Series[4].LabelPosition, Converter={StaticResource EmConverter}}"
+                          ItemsSource="{Binding TimeZonesPositions}"
+                          ItemTemplate="{StaticResource cbPositionsTemplate}"/>
+                <StackPanel Orientation="Horizontal" Margin="20 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="StartX"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[4].StartX, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="StartY"/>
+                        <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Series[4].EndX, Mode=TwoWay}"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <c1:C1FinancialChart x:Name="financialChart" ItemsSource="{Binding Data}" BindingX="Date" ChartType="Candlestick" ToolTipContent="{}{seriesName}&#x000A;{Date} {y}">
+            <c1:FinancialSeries Binding="High,Low,Open,Close" ChartType="Line" SeriesName="BOX"/>
+            <c1:Fibonacci x:Name="fibonacci" Binding="Close" Visibility="{Binding Source={x:Reference Name=cbFibonacciTypes}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=2}">
+                <c1:Fibonacci.Style>
+                    <c1:ChartStyle Fill="Red" Stroke="Red" StrokeThickness="0.5" FontSize="10"/>
+                </c1:Fibonacci.Style>
+            </c1:Fibonacci>
+            <c1:FibonacciArcs x:Name="arc" Binding="Close" StartX="46" StartY="19.75" EndX="54" EndY="17.1" Visibility="{Binding Source={x:Reference Name=cbFibonacciTypes}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=0}"/>
+            <c1:FibonacciFans x:Name="fans" Binding="Close" StartX="10" StartY="18.12" EndX="32" EndY="20.53" Visibility="{Binding Source={x:Reference Name=cbFibonacciTypes}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=1}"/>
+            <c1:FibonacciTimeZones x:Name="timeZones" Binding="Close" StartX="0" EndX="3" Visibility="{Binding Source={x:Reference Name=cbFibonacciTypes}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=3}"/>
+            <c1:C1FinancialChart.AxisX>
+                <c1:Axis LabelAngle="45" MajorUnit="3" />
+            </c1:C1FinancialChart.AxisX>
+            <c1:C1FinancialChart.Layers>
+                <c1:C1RangeSelector x:Name="rangeSelector" ValueChanged="C1RangeSelector_ValueChanged">
+                    <c1:C1RangeSelector.Visibility>
+                        <MultiBinding Converter="{StaticResource MultipleConverter}">
+                            <Binding Source="{x:Reference Name=cbFibonacciTypes}" Path="SelectedIndex"/>
+                            <Binding Source="{x:Reference Name=cbRangeSelector}" Path="IsChecked"/>
+                        </MultiBinding>
+                    </c1:C1RangeSelector.Visibility>
+                </c1:C1RangeSelector>
+            </c1:C1FinancialChart.Layers>
+        </c1:C1FinancialChart>
+    </Grid>
+</UserControl>

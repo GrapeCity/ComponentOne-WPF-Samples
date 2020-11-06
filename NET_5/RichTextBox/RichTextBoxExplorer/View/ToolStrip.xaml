@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="RichTextBoxExplorer.ToolStrip" 
+             mc:Ignorable="d" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             d:DesignWidth="600" d:DesignHeight="400">
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <c1:C1RichTextBoxToolStrip RichTextBox="{Binding ElementName=richTB}">
+            <c1:C1UndoTool/>
+            <c1:C1RedoTool/>
+            <c1:C1FontFamilyTool/>
+            <c1:C1FontSizeTool/>
+            <c1:C1PasteTool/>
+            <c1:C1CutTool/>
+            <c1:C1CopyTool/>
+            <c1:C1ToolSeparator/>
+            <c1:C1BoldTool/>
+            <c1:C1ItalicTool/>
+            <c1:C1UnderlineTool/>
+            <c1:C1StrikethroughTool/>
+            <c1:C1ToolSeparator/>
+            <c1:C1NumberingTool/>
+            <c1:C1BulletsTool/>
+            <c1:C1ToolSeparator/>
+            <c1:C1LeftAlignTool/>
+            <c1:C1CenterAlignTool/>
+            <c1:C1RightAlignTool/>
+            <c1:C1JustifyTool/>
+        </c1:C1RichTextBoxToolStrip>
+        <c1:C1RichTextBox x:Name="richTB" Margin="4 0 4 4" Grid.Row="1"/>
+    </Grid>
+</UserControl>

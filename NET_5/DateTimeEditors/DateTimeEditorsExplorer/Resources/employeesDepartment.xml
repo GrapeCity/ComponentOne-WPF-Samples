@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Employees>
+  <Employee>
+    <EmployeeID>2</EmployeeID>
+    <Name>Kevin Brown</Name>
+    <Title>Marketing Assistant</Title>
+    <Gender>M</Gender>
+    <ManagerID>6</ManagerID>
+    <DepartmentID>4</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>3</EmployeeID>
+    <Name>Roberto Tamburello</Name>
+    <Title>Engineering Manager</Title>
+    <Gender>M</Gender>
+    <ManagerID>12</ManagerID>
+    <DepartmentID>1</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>4</EmployeeID>
+    <Name>Rob Walters</Name>
+    <Title>Senior Tool Designer</Title>
+    <Gender>M</Gender>
+    <ManagerID>3</ManagerID>
+    <DepartmentID>2</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>5</EmployeeID>
+    <Name>Thierry D'Hers</Name>
+    <Title>Tool Designer</Title>
+    <Gender>M</Gender>
+    <ManagerID>263</ManagerID>
+    <DepartmentID>2</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>6</EmployeeID>
+    <Name>David Bradley</Name>
+    <Title>Marketing Manager</Title>
+    <Gender>M</Gender>
+    <ManagerID>109</ManagerID>
+    <DepartmentID>4</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>9</EmployeeID>
+    <Name>Gail Erickson</Name>
+    <Title>Design Engineer</Title>
+    <Gender>F</Gender>
+    <ManagerID>3</ManagerID>
+    <DepartmentID>1</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>11</EmployeeID>
+    <Name>Jossef Goldberg</Name>
+    <Title>Design Engineer</Title>
+    <Gender>M</Gender>
+    <ManagerID>3</ManagerID>
+    <DepartmentID>1</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>12</EmployeeID>
+    <Name>Terri Duffy</Name>
+    <Title>Vice President of Engineering</Title>
+    <Gender>F</Gender>
+    <ManagerID>109</ManagerID>
+    <DepartmentID>1</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>30</EmployeeID>
+    <Name>Paula Barreto de Mattos</Name>
+    <Title>Human Resources Manager</Title>
+    <Gender>F</Gender>
+    <ManagerID>140</ManagerID>
+    <DepartmentID>9</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>46</EmployeeID>
+    <Name>Sariya Harnpadoungsataya</Name>
+    <Title>Marketing Specialist</Title>
+    <Gender>M</Gender>
+    <ManagerID>6</ManagerID>
+    <DepartmentID>4</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>47</EmployeeID>
+    <Name>Willis Johnson</Name>
+    <Title>Recruiter</Title>
+    <Gender>M</Gender>
+    <ManagerID>30</ManagerID>
+    <DepartmentID>9</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>59</EmployeeID>
+    <Name>Deborah Poe</Name>
+    <Title>Accounts Receivable Specialist</Title>
+    <Gender>F</Gender>
+    <ManagerID>139</ManagerID>
+    <DepartmentID>10</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>70</EmployeeID>
+    <Name>Mindy Martin</Name>
+    <Title>Benefits Specialist</Title>
+    <Gender>F</Gender>
+    <ManagerID>30</ManagerID>
+    <DepartmentID>9</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>71</EmployeeID>
+    <Name>Wendy Kahn</Name>
+    <Title>Finance Manager</Title>
+    <Gender>F</Gender>
+    <ManagerID>140</ManagerID>
+    <DepartmentID>10</DepartmentID>
+  </Employee>
+   <Employee>
+    <EmployeeID>94</EmployeeID>
+    <Name>Candy Spoon</Name>
+    <Title>Accounts Receivable Specialist</Title>
+    <Gender>F</Gender>
+    <ManagerID>139</ManagerID>
+    <DepartmentID>10</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>103</EmployeeID>
+    <Name>David Barber</Name>
+    <Title>Assistant to the Chief Financial Officer</Title>
+    <Gender>M</Gender>
+    <ManagerID>140</ManagerID>
+    <DepartmentID>10</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>106</EmployeeID>
+    <Name>Mary Gibson</Name>
+    <Title>Marketing Specialist</Title>
+    <Gender>F</Gender>
+    <ManagerID>6</ManagerID>
+    <DepartmentID>4</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>109</EmployeeID>
+    <Name>Ken Sánchez</Name>
+    <Title>Chief Executive Officer</Title>
+    <Gender>M</Gender>
+    <ManagerID />
+    <DepartmentID>16</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>130</EmployeeID>
+    <Name>Bryan Walton</Name>
+    <Title>Accounts Receivable Specialist</Title>
+    <Gender>M</Gender>
+    <ManagerID>139</ManagerID>
+    <DepartmentID>10</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>140</EmployeeID>
+    <Name>Laura Norman</Name>
+    <Title>Chief Financial Officer</Title>
+    <Gender>F</Gender>
+    <ManagerID>109</ManagerID>
+    <DepartmentID>16</DepartmentID>
+  </Employee>
+   <Employee>
+    <EmployeeID>154</EmployeeID>
+    <Name>Hao Chen</Name>
+    <Title>Human Resources Administrative Assistant</Title>
+    <Gender>M</Gender>
+    <ManagerID>30</ManagerID>
+    <DepartmentID>9</DepartmentID>
+  </Employee>
+   <Employee>
+    <EmployeeID>191</EmployeeID>
+    <Name>Grant Culbertson</Name>
+    <Title>Human Resources Administrative Assistant</Title>
+    <Gender>M</Gender>
+    <ManagerID>30</ManagerID>
+    <DepartmentID>9</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>263</EmployeeID>
+    <Name>Ovidiu Cracium</Name>
+    <Title>Senior Tool Designer</Title>
+    <Gender>M</Gender>
+    <ManagerID>3</ManagerID>
+    <DepartmentID>2</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>265</EmployeeID>
+    <Name>Janice Galvin</Name>
+    <Title>Tool Designer</Title>
+    <Gender>F</Gender>
+    <ManagerID>263</ManagerID>
+    <DepartmentID>2</DepartmentID>
+  </Employee>
+   <Employee>
+    <EmployeeID>267</EmployeeID>
+    <Name>Michael Sullivan</Name>
+    <Title>Senior Design Engineer</Title>
+    <Gender>M</Gender>
+    <ManagerID>3</ManagerID>
+    <DepartmentID>1</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>270</EmployeeID>
+    <Name>Sharon Salavaria</Name>
+    <Title>Design Engineer</Title>
+    <Gender>F</Gender>
+    <ManagerID>3</ManagerID>
+    <DepartmentID>1</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>281</EmployeeID>
+    <Name>Shu Ito</Name>
+    <Title>Sales Representative</Title>
+    <Gender>M</Gender>
+    <ManagerID>268</ManagerID>
+    <DepartmentID>3</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>282</EmployeeID>
+    <Name>José Saraiva</Name>
+    <Title>Sales Representative</Title>
+    <Gender>M</Gender>
+    <ManagerID>268</ManagerID>
+    <DepartmentID>3</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>283</EmployeeID>
+    <Name>David Campbell</Name>
+    <Title>Sales Representative</Title>
+    <Gender>M</Gender>
+    <ManagerID>268</ManagerID>
+    <DepartmentID>3</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>284</EmployeeID>
+    <Name>Amy Alberts</Name>
+    <Title>European Sales Manager</Title>
+    <Gender>F</Gender>
+    <ManagerID>273</ManagerID>
+    <DepartmentID>3</DepartmentID>
+  </Employee>
+  <Employee>
+    <EmployeeID>285</EmployeeID>
+    <Name>Jae Pak</Name>
+    <Title>Sales Representative</Title>
+    <Gender>F</Gender>
+    <ManagerID>284</ManagerID>
+    <DepartmentID>3</DepartmentID>
+  </Employee>
+</Employees>

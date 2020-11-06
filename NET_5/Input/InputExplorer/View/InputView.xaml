@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="InputExplorer.InputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid>
+        <ScrollViewer>
+            <c1:C1WrapPanel MaxWidth="1280">
+                <c1:C1Button Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Click me" />
+                <c1:C1ToggleButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Toggle me" />
+
+                <c1:C1TextBoxBase TextWrapping="Wrap" Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Text="TextBoxBase"/>
+
+                <c1:C1ComboBox Width="200" Margin="10 20 10 20" VerticalAlignment="Center" IsTextSearchEnabled="True">
+                    <c1:C1ComboBoxItem Content="Studio for Silverlight" />
+                    <c1:C1ComboBoxItem Content="Studio for WPF" />
+                    <c1:C1ComboBoxItem Content="Studio for ASP.NET" />
+                    <c1:C1ComboBoxItem Content="Studio for iPhone" />
+                    <c1:C1ComboBoxItem Content="Studio for WinForms" />
+                    <c1:C1ComboBoxItem Content="Studio for ActiveX" />
+                    <c1:C1ComboBoxItem Content="Studio for Mobile" />
+                    <c1:C1ComboBoxItem Content="Studio for Silverlight" />
+                    <c1:C1ComboBoxItem Content="Studio for WPF" />
+                    <c1:C1ComboBoxItem Content="Studio for ASP.NET" />
+                    <c1:C1ComboBoxItem Content="Studio for iPhone" />
+                    <c1:C1ComboBoxItem Content="Studio for WinForms" />
+                    <c1:C1ComboBoxItem Content="Studio for ActiveX" />
+                    <c1:C1ComboBoxItem Content="Studio for Mobile" />
+                </c1:C1ComboBox>
+
+                <c1:C1FilePicker Width="120" Margin="10 20 10 20" VerticalAlignment="Center"/>
+
+                <c1:C1NumericBox Width="120" Margin="10 20 10 20" VerticalAlignment="Center" AllowNull="True" Placeholder="Enter number here"/>
+
+                <c1:C1ColorPicker Width="120" Margin="10 20 10 20" VerticalAlignment="Center"/>
+
+                <c1:C1HyperlinkButton Content="Follow me!" Margin="10 20 10 20" VerticalAlignment="Center"/>
+
+                <c1:C1DateTimePicker Width="226" Margin="10 20 10 20" VerticalAlignment="Center" DatePlaceholder="Enter date" TimePlaceholder="Enter time"/>
+
+                <c1:C1DatePicker Width="120" Margin="10 20 10 20" VerticalAlignment="Center" />
+
+                <c1:C1DropDownButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Header="Header" AutoSizeMode="GrowAndShrink">
+                    <c1:C1DropDownButton.Content>
+                        <TextBox Text="Content" Margin="8"/>
+                    </c1:C1DropDownButton.Content>
+                </c1:C1DropDownButton>
+
+                <c1:C1SplitButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Header="Header" AutoSizeMode="GrowAndShrink">
+                    <c1:C1SplitButton.Content>
+                        <TextBox Text="Content" Margin="8"/>
+                    </c1:C1SplitButton.Content>
+                </c1:C1SplitButton>
+
+            </c1:C1WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

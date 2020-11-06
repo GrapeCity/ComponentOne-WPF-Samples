@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="RibbonExplorer.Ribbon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RibbonExplorer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:C1ToolbarCommand x:Key="cmdPaste" LabelTitle=" Paste" />
+
+        <local:C1ToolbarCommand x:Key="cmdCut" LabelTitle=" Cut" />
+
+        <local:C1ToolbarCommand x:Key="cmdCopy" LabelTitle=" Copy" />
+
+        <local:C1ToolbarCommand x:Key="cmdDelete" LabelTitle=" Delete" />
+
+        <local:C1ToolbarCommand x:Key="cmdZoomOriginal" LabelTitle=" 1:1" />
+
+        <local:C1ToolbarCommand x:Key="cmdZoomIn" LabelTitle=" Zoom In" />
+
+        <local:C1ToolbarCommand x:Key="cmdZoomOut" LabelTitle=" Zoom Out" />
+
+        <local:C1ToolbarCommand x:Key="cmdFind" LabelTitle=" Find" />
+
+        <local:C1ToolbarCommand x:Key="cmdAbout" LabelTitle=" About" />
+
+        <local:C1ToolbarCommand x:Key="cmdHelp" LabelTitle=" Help" />
+
+        <local:C1ToolbarCommand x:Key="cmdUndo" LabelTitle=" Undo" />
+
+        <local:C1ToolbarCommand x:Key="cmdRedo" LabelTitle=" Redo" />
+
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <c1:C1Ribbon FontSize="14" SelectedIndex="0">
+            <c1:RibbonTabItem Header="Home">
+                <c1:RibbonGroup Header="Edit" ShowDialogLauncher="True" DialogLauncherClick="OnHomeDialogLaunched">
+                    <c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:RibbonGroupSizeDefinition>
+                            <c1:RibbonToolSizeDefinition Size="Large"/>
+                        </c1:RibbonGroupSizeDefinition>
+                        <c1:RibbonGroupSizeDefinition>
+                            <c1:RibbonToolSizeDefinition Size="Large"/>
+                            <c1:RibbonToolSizeDefinition Size="Small" IsLabelVisible="True"/>
+                            <c1:RibbonToolSizeDefinition Size="Small" IsLabelVisible="True"/>
+                            <c1:RibbonToolSizeDefinition Size="Small" IsLabelVisible="True"/>
+                            <c1:RibbonToolSizeDefinition Size="Small" IsLabelVisible="False"/>
+                            <c1:RibbonToolSizeDefinition Size="Small" IsLabelVisible="False"/>
+                            <c1:RibbonToolSizeDefinition Size="Small" IsLabelVisible="False"/>
+                        </c1:RibbonGroupSizeDefinition>
+                    </c1:RibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ButtonTool Command="{StaticResource cmdPaste}" Label="Paste">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M336,64h-64V32c0-17.6-14.4-32-32-32h-64c-17.602,0-32,14.4-32,32v32H80v64h256V64z M240,64h-64V32.057c0.017-0.019,0.036-0.039,0.057-0.057h63.884c0.021,0.018,0.041,0.038,0.059,0.057V64z M400,160V80c0-8.8-7.199-16-16-16h-32v32h16v64H176v224H48V96h16V64H32c-8.801,0-16,7.2-16,16v320c0,8.8,7.199,16,16,16h144v96h224l96-96V160H400z M400,466.745V416h50.744L400,466.745z M464,384h-96v96H208V192h256V384z" />
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Command="{StaticResource cmdCopy}" Label="Copy">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M416,128h-96V96L224,0H0v384h192v128h320V224L416,128z M416,173.255L466.744,224H416V173.255z M224,45.255L274.745,96H224V45.255z M32,32h160v96h96v224H32V32z M480,480H224v-96h96V160h64v96h96V480z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Command="{StaticResource cmdCut}" Label="Cut">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M398.638,309.175c-34.2,0-64.1,19.2-79.3,47.4l-52.4-99.3l119.7-227.7c5.2-9.4,2.1-21.9-8.3-27.1c-9.4-5.2-21.9-2.1-27.1,8.3l-107,203.5l-106.6-202.5c-5.2-9.4-16.7-13.5-27.1-8.3c-9.4,5.2-13.5,16.7-8.3,27.1l119.7,226.2        l-52.2,99.2c-15.4-27.9-45-46.8-79-46.8c-49.7,0-90.1,40.4-90.1,90.1s40.4,90.1,90.1,90.1c37.1,0,69.1-22.6,82.9-54.7l71-135.2        l69.5,131.2c12.8,34.2,45.8,58.6,84.5,58.6c49.7,0,90.1-40.4,90.1-90.1S448.337,309.175,398.638,309.175z M90.738,448.475        c-27.1,0-49.1-22-49.1-49.1s22-49.1,49.1-49.1s49.1,22,49.1,49.1S117.838,448.475,90.738,448.475z M398.638,448.475        c-27.1,0-49.1-22-49.1-49.1s22-49.1,49.1-49.1s49.1,22,49.1,49.1S425.737,448.475,398.638,448.475z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Command="{StaticResource cmdDelete}" Label="Delete">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M180.607,10.607l-79.696,79.697l79.696,79.697L170,180.607l-79.696-79.696l-79.696,79.696L0,170.001l79.696-79.697L0,10.607    L10.607,0.001l79.696,79.696L170,0.001L180.607,10.607z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Command="{StaticResource cmdUndo}" Label="Undo">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M3.5856569,0.00023033762 C3.7174191,0.0039081506 3.8487277,0.051651671 3.955786,0.14507106 4.200491,0.35879782 4.2253971,0.73039502 4.0118675,0.97510004 L2.0262578,3.2480314 11.247812,3.2480314 C13.868156,3.2480314 16,5.3798752 16,8.0000001 16,10.620125 13.867937,12.751968 11.247812,12.751968 L1.5258751,12.751968 C1.1646875,12.751968 0.87193751,12.459219 0.87193751,12.098031 0.87193751,11.736844 1.1646875,11.444094 1.5258751,11.444094 L11.247812,11.444094 C13.147062,11.444094 14.692125,9.8990622 14.692125,8.0000001 14.692125,6.1009374 13.147062,4.5559064 11.247812,4.5559064 L1.8551842,4.5559064 4.0118675,7.0246664 C4.225594,7.2693711 4.2005191,7.6409689 3.955786,7.8546954 3.8442142,7.9521552 3.7063868,7.9999996 3.5691216,7.9999996 3.4052072,7.9999996 3.2422485,7.931747 3.1257854,7.798811 L0.14530492,4.386941 C0.036326241,4.2623082 -0.01135195,4.1031118 0.0022704601,3.9482353 L0.002317887,3.9478772 0,3.9019688 C0,3.6310547 0.16467187,3.3986719 0.39938378,3.2994128 L0.42856553,3.288734 3.1257572,0.20115212 C3.2460892,0.063616365 3.4162481,-0.0044983013 3.5856569,0.00023033762 z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Command="{StaticResource cmdRedo}" Label="Redo">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M12.414343,0.00023031235 C12.583752,-0.0044984818 12.753911,0.063616276 12.874242,0.20115232 L15.571434,3.2887419 15.600616,3.299421 C15.835328,3.3986802 16,3.6310636 16,3.9019784 L15.997682,3.9478868 15.99773,3.9482449 C16.011352,4.1031219 15.963674,4.2623187 15.854695,4.3869519 L12.874215,7.7988303 C12.757751,7.9317665 12.594793,8.0000193 12.430878,8.0000193 12.293613,8.0000193 12.155786,7.9521749 12.044214,7.8547149 11.799481,7.6409879 11.774406,7.2693892 11.988132,7.0246837 L14.144816,4.5559177 4.7521879,4.5559177 C2.8529379,4.5559176 1.3078749,6.1009524 1.3078749,8.0000198 1.3078749,9.8990865 2.8529379,11.444122 4.7521879,11.444122 L14.474124,11.444122 C14.835312,11.444122 15.128063,11.736873 15.128063,12.098061 15.128063,12.45925 14.835312,12.751999 14.474124,12.751999 L4.7521879,12.751999 C2.1320629,12.751999 0,10.620151 0,8.0000198 0,5.3798885 2.1318438,3.2480394 4.7521879,3.2480394 L13.973742,3.2480394 11.988132,0.97510242 C11.774603,0.73039675 11.799509,0.3587985 12.044214,0.14507151 12.151272,0.051651955 12.282581,0.0039081573 12.414343,0.00023031235 z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                </c1:RibbonGroup>
+
+                <c1:RibbonGroup VerticalContentAlignment="Center" Header="Scale">
+                    <c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:RibbonGroupSizeDefinition>
+                            <c1:RibbonToolSizeDefinition Size="Small"/>
+                        </c1:RibbonGroupSizeDefinition>
+                    </c1:RibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ButtonTool Command="{StaticResource cmdZoomOriginal}" Label="1:1">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M24.027,46.333c-4.32,16.125-2.103,32.968,6.244,47.426c11.132,19.281,31.892,31.259,54.178,31.259  c8.411,0,16.745-1.729,24.474-5.03l32.507,56.303l12.99-7.5l-32.508-56.305c11.174-8.353,19.19-20.117,22.856-33.802  c4.32-16.125,2.103-32.968-6.244-47.426C127.393,11.978,106.633,0,84.347,0C73.435,0,62.647,2.899,53.148,8.383  C38.69,16.73,28.349,30.208,24.027,46.333z M84.347,15c16.944,0,32.727,9.104,41.188,23.759c6.344,10.988,8.029,23.789,4.745,36.044  c-3.283,12.255-11.143,22.499-22.131,28.842c-7.222,4.169-15.416,6.373-23.699,6.373c-16.944,0-32.727-9.104-41.188-23.759  c-6.344-10.988-8.029-23.788-4.745-36.043C41.801,37.96,49.66,27.717,60.648,21.373C67.87,17.204,76.064,15,84.347,15z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Command="{StaticResource cmdZoomIn}" Label="Zoom In">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M4.9999999,3 L5.9999999,3 5.9999999,5 7.9999999,5 7.9999999,6 5.9999999,6 5.9999999,8 4.9999999,8 4.9999999,6 2.9999999,6 2.9999999,5 4.9999999,5 z M5.6702685,1.3613853 C4.9185118,1.3613855 4.1748323,1.5614184 3.51937,1.9397926 2.5221099,2.515568 1.8088346,3.4452128 1.5107819,4.5575557 1.2127296,5.6698074 1.3656583,6.8315234 1.9414338,7.8287835 2.7093458,9.1588573 4.1417956,9.9851265 5.6796164,9.9851265 6.431374,9.9851265 7.1750535,9.7850943 7.8305153,9.4067192 8.8277749,8.8310356 9.5411414,7.9012995 9.8391027,6.7890482 10.137155,5.676796 9.9842262,4.5149899 9.408452,3.5177293 8.6405391,2.1876557 7.2080898,1.3613855&#xa;5.6702685,1.3613853 z M5.6702685,0 C7.6929244,0 9.5770816,1.0871116 10.587321,2.8369458 11.344887,4.1491399 11.546099,5.677794 11.15402,7.1412835 10.821298,8.3833208 10.093773,9.4510107 9.0796317,10.209121 L12.030026,15.319307 10.851066,16 7.900762,10.889995 C7.1992859,11.18959 6.4429001,11.346513 5.6795258,11.346513 3.6568701,11.346513 1.7727126,10.259401 0.76238321,8.5094767 0.0048174753,7.1972823 -0.19639521,5.6686277 0.19568368,4.2051382 0.58794438,2.7416489 1.5264833,1.5183985 2.8386773,0.76083302 3.7007975,0.26311043 4.6799058,0 5.6702685,0 z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Command="{StaticResource cmdZoomOut}" Label="Zoom out">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M3.0150127,5 L8.0150127,5 8.0150127,6 3.0150127,6 z M5.6702685,1.3613853 C4.9185118,1.3613855 4.1748323,1.5614184 3.51937,1.9397926 2.5221099,2.515568 1.8088346,3.4452128 1.5107819,4.5575557 1.2127296,5.6698074 1.3656583,6.8315234 1.9414338,7.8287835 2.7093457,9.1588573 4.1417956,9.9851265 5.6796164,9.9851265 6.431374,9.9851265 7.1750535,9.7850943 7.8305153,9.4067192 8.8277749,8.8310356 9.5411414,7.9012995 9.8391027,6.7890482 10.137155,5.676796 9.9842262,4.5149899 9.408452,3.5177293 8.6405391,2.1876557 7.2080898,1.3613855&#xa;5.6702685,1.3613853 z M5.6702685,0 C7.6929244,0 9.5770816,1.0871116 10.587321,2.8369458 11.344887,4.1491399 11.546099,5.677794 11.15402,7.1412835 10.821298,8.3833208 10.093773,9.4510107 9.0796317,10.209121 L12.030026,15.319307 10.851066,16 7.900762,10.889995 C7.1992859,11.18959 6.4429001,11.346513 5.6795258,11.346513 3.6568701,11.346513 1.7727126,10.259401 0.76238321,8.5094767 0.0048174709,7.1972823 -0.19639522,5.6686277 0.19568369,4.2051382 0.58794438,2.7416489 1.5264833,1.5183985 2.8386773,0.76083302 3.7007975,0.26311043 4.6799058,0 5.6702685,0 z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                </c1:RibbonGroup>
+
+                <c1:RibbonGroup Header="Search">
+                    <c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:RibbonGroupSizeDefinition>
+                            <c1:RibbonToolSizeDefinition Size="Large"/>
+                        </c1:RibbonGroupSizeDefinition>
+                    </c1:RibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ButtonTool Command="{StaticResource cmdFind}" Label="Find">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M458.369,80H430V0H275v80h-60V0H60v80H31.631L0.099,353.281L0,354.138V490h215V300h60v190h215V354.138L458.369,80z     M185,460H30v-90h155V460z M185,340H31.83l26.539-230H185V340z M185,80H90V30h95V80z M275,270h-60V170h60V270z M275,140h-60v-30    h60V140z M305,30h95v50h-95V30z M305,110h126.631l26.539,230H305V110z M460,460H305v-90h155V460z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                </c1:RibbonGroup>
+            </c1:RibbonTabItem>
+
+            <c1:RibbonTabItem Header="Help">
+                <c1:RibbonGroup Header="Help">
+                    <c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:RibbonGroupSizeDefinition>
+                            <c1:RibbonToolSizeDefinition Size="Large"/>
+                        </c1:RibbonGroupSizeDefinition>
+                    </c1:RibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ButtonTool Command="{StaticResource cmdHelp}" Label=" Help">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M7.6693614,10.271911 C8.2239809,10.271911 8.6079483,10.677228 8.6079483,11.263872 8.6079483,11.818517 8.2453125,12.234501 7.6693614,12.234501 7.0827446,12.234501 6.7307743,11.797184 6.7307744,11.263872 6.7307743,10.677228 7.1360734,10.271911 7.6693614,10.271911 z M7.7973506,3.7655003 C9.33322,3.7655004 9.9624999,4.6827974 9.9624999,5.6214275 9.9624999,6.5067258 9.4292119,7.136034 8.9599185,7.7226777 8.3733015,8.4586487 8.3733015,8.8426337 8.3733015,9.5679388 L7.0080843,9.5679388 C6.9867526,9.2266188 6.9760869,9.1839538 6.9760869,9.0879569 6.9760869,8.4906478 7.2000679,7.9040041 7.6800272,7.2746959 8.085326,6.7413836 8.3626359,6.3253994 8.3626359,5.8667505 8.3626359,5.3761035 8.0533288,5.0454499 7.4453804,5.0454497 7.0827446,5.0454499 6.656114,5.1627783 6.3681386,5.365437 L6.0374999,4.2134826 C6.4108016,3.9894912 7.0614129,3.7655004 7.7973506,3.7655003 z M7.9999998,1 C4.1340064,1 1,4.1340066 1,8 1,11.865993 4.1340064,15 7.9999998,15 11.865993,15 15,11.865993 15,8 15,4.1340066 11.865993,1 7.9999998,1 z M7.9999998,0 C12.4112,0 16,3.5888487 16,8.0000486 16,12.411248 12.4112,16 7.9999998,16 3.5888,16 0,12.411248 0,8.0000486 0,3.5888487 3.5888,0 7.9999998,0 z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Command="{StaticResource cmdAbout}" Label=" About">
+                        <c1:C1ButtonTool.IconTemplate>
+                            <c1:C1IconTemplate>
+                                <c1:C1PathIcon Data="M8,7 C8.4141998,7 8.75,7.3358002 8.75,7.75 L8.75,12.25 C8.75,12.6642 8.4141998,13 8,13 7.5858002,13 7.25,12.6642 7.25,12.25 L7.25,7.75 C7.25,7.3358002 7.5858002,7 8,7 z M8,3.5 C8.5513,3.5 8.9997997,3.9488001 8.9997997,4.5004501 8.9997997,5.0516 8.5513,5.5 8,5.5 7.4487,5.5 7.0001998,5.0516 7.0001998,4.5004501 7.0001998,3.9488001 7.4487,3.5 8,3.5 z M8,1 C4.1340065,1 1,4.1340065 1,8 1,11.865993 4.1340065,15 8,15 11.865993,15 15,11.865993 15,8 15,4.1340065 11.865993,1 8,1 z M8,0 C12.4112,0 16,3.5888486 16,8.0000486 16,12.411248 12.4112,16 8,16 3.5888,16 0,12.411248 0,8.0000486 0,3.5888486 3.5888,0 8,0 z"/>
+                            </c1:C1IconTemplate>
+                        </c1:C1ButtonTool.IconTemplate>
+                    </c1:C1ButtonTool>
+                </c1:RibbonGroup>
+            </c1:RibbonTabItem>
+        </c1:C1Ribbon>
+        <TextBox x:Name="tb" Grid.Row="1" IsReadOnly="True" VerticalScrollBarVisibility="Visible" />
+    </Grid>
+</UserControl>

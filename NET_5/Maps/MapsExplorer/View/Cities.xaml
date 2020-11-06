@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="MapsExplorer.Cities" Background="#FF374F5D" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:loc="clr-namespace:MapsExplorer">
+  <UserControl.Resources>
+    <!-- Converters -->
+    <loc:LODConverter x:Key="lodCnv" />
+    <loc:GeometryConverter x:Key="geomCnv" />
+
+    <!-- Template -->
+    <DataTemplate x:Key="templCity">
+      <c1:VectorPlacemark Fill="Transparent" Loaded="C1VectorPlacemark_Loaded" GeoPoint="{Binding GeoPoint}" Label="{Binding Name}" LabelPosition="Right" Stroke="#80FFFFFF" Lod="{Binding Population,Converter={StaticResource lodCnv}}" Geometry="{Binding Population,Converter={StaticResource geomCnv}}">
+      </c1:VectorPlacemark>
+    </DataTemplate>
+    <SolidColorBrush x:Key="CE_SampleBorder" Color="#FF8FB4CC" />
+  </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+     <Border BorderThickness="3" BorderBrush="{StaticResource CE_SampleBorder}">
+      <c1:C1Maps x:Name="maps" Zoom="1" />
+      </Border>
+    </Grid>
+</UserControl>

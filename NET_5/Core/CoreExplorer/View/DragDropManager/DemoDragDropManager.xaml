@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="CoreExplorer.DemoDragDropManager" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:CoreExplorer">
+    <UserControl.Resources>
+        <Style x:Key="BlackBackground" TargetType="Border">
+            <Setter Property="Background" Value="#FF134F5C" />
+        </Style>
+        <Style x:Key="WhiteBackground" TargetType="Border">
+            <Setter Property="Background" Value="#FFCFE2F3" />
+        </Style>
+        <Style x:Key="Player1" TargetType="local:PieceControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="local:PieceControl">
+                        <Ellipse Margin="3" RenderTransformOrigin="0.5,0.5" StrokeThickness="2" Fill="#FFFFFFFF" Stroke="#FFAAAAAA" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Player2" TargetType="local:PieceControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="local:PieceControl">
+                        <Ellipse Margin="3" RenderTransformOrigin="0.5,0.5" StrokeThickness="2" Fill="Black" Stroke="#FF444444" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Play Again" Width="120" Margin="0 0 0 10" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click" Grid.Row="1" Grid.Column="1" />
+
+        <Border x:Name="borderTable" Grid.Column="1" Grid.Row="2" Height="400" Width="400">
+            <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1">
+                <Grid x:Name="checkersTable" />
+            </Border>
+        </Border>
+    </Grid>
+</UserControl>

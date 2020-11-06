@@ -1,0 +1,32 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeEditorsExplorer", "DateTimeEditorsExplorer.csproj", "{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugGC|Any CPU = DebugGC|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.DebugGC|Any CPU.ActiveCfg = Debug|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.DebugGC|Any CPU.Build.0 = Debug|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E89F546E-AFFF-48C1-8361-5755AB7C4CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {827ED1F7-CB06-41C5-B6BA-D3C1C2D7B109}
+	EndGlobalSection
+EndGlobal
