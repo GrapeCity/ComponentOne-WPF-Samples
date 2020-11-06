@@ -1,5 +1,5 @@
 ## LiveLinqToXML
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.DataSource\CS\LiveLinq\HowTo\Indexing\LiveLinqToXML)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataSource/CS/LiveLinq/HowTo/Indexing/LiveLinqToXML)
 ____
 #### Improving performance of LINQ to XML with LiveLinq indexing.
 ____

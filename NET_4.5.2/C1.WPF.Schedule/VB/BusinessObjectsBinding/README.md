@@ -1,5 +1,5 @@
 ## BusinessObjectsBinding
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Schedule\VB\BusinessObjectsBinding)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Schedule/VB/BusinessObjectsBinding)
 ____
 #### Shows how to bind AppointmentStorage to the collection of a custom business objects.
 ____

@@ -1,5 +1,5 @@
 ## HeaderTooltips
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\HeaderTooltips\HeaderTooltips)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/HeaderTooltips/HeaderTooltips)
 ____
 #### Shows how you can attach tooltips to column headers.
 ____

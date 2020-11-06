@@ -1,5 +1,5 @@
 ## LabResults
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\LabResults)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/LabResults)
 ____
 #### Shows how you can build grouped, filtered views of your data in an MVVM pattern.
 ____

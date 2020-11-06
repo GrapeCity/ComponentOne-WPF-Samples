@@ -1,5 +1,5 @@
 ## ChartSamples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Chart\CS\ChartSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Chart/CS/ChartSamples)
 ____
 #### Shows various ComponentOne Chart for WPF samples grouped by functionality.
 ____

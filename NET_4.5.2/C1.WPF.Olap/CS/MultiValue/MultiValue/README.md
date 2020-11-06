@@ -1,5 +1,5 @@
 ## MultiValue
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Olap\CS\MultiValue\MultiValue)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Olap/CS/MultiValue/MultiValue)
 ____
 #### Shows how you can use C1Olap to analyze multiple fields in one view.
 ____

@@ -1,5 +1,5 @@
 ## PrintDocumentTemplates
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Schedule\VB\PrintDocTemplates)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Schedule/VB/PrintDocTemplates)
 ____
 #### Demonstrates creating C1.C1Preview.C1PrintDocument templates for printing C1Scheduler's views.
 ____

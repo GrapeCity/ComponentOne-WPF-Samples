@@ -1,5 +1,5 @@
 ## ColumnPicker
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\ColumnPicker)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ColumnPicker)
 ____
 #### Shows how to implement a column picker context menu in the C1FlexGrid.
 ____

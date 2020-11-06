@@ -1,5 +1,5 @@
 ## Scrollbar Styles
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\ScrollBarStyles)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ScrollBarStyles)
 ____
 #### Shows how you can customize the appearance of the scrollbars within a C1FlexGrid.
 ____

@@ -1,5 +1,5 @@
 ## CheckBoxes
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\CheckBoxes)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/CheckBoxes)
 ____
 #### Shows how you can use a custom CellFactory to display check boxes in unbound grids.
 ____

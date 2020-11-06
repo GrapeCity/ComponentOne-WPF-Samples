@@ -1,5 +1,5 @@
 ## Invalidate
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\VB\Invalidate)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/VB/Invalidate)
 ____
 #### Shows how to use the Invalidate method to update cells dynamically.
 ____

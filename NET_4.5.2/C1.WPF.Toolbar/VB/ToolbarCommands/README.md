@@ -1,5 +1,5 @@
 ## ToolbarCommands
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Toolbar\VB\ToolbarCommands)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Toolbar/VB/ToolbarCommands)
 ____
 #### Shows the use of Commands with C1Toolbar.
 ____

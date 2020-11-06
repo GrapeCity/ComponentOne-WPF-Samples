@@ -1,5 +1,5 @@
 ## GapAnalysis
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\GapAnalysis)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/GapAnalysis)
 ____
 #### This sample highlights some of the main features in the C1FlexGrid.
 ____

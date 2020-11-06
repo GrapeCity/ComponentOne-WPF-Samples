@@ -1,5 +1,5 @@
 ## EmployeesListWithFilter
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.DataFilter\CS\EmployeesListWithFilter)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataFilter/CS/EmployeesListWithFilter)
 ____
 #### Demonstrates using C1DataFilter control to generate filters using data annotation attributes.
 ____

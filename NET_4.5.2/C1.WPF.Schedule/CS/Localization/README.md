@@ -1,5 +1,5 @@
 ## Localization
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.Schedule\CS\Localization)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Schedule/CS/Localization)
 ____
 #### Demonstrates creating and using of localized string resources.
 ____

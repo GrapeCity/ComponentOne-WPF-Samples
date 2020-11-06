@@ -1,5 +1,5 @@
 ## Entity Framework DataSource Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.DataSource\CS\DataSourceSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataSource/CS/DataSourceSamples)
 ____
 #### This project shows the key features of the Entity Framework DataSource components including C1DataSource.
 ____

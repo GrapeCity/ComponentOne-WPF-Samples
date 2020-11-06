@@ -1,5 +1,5 @@
 ## GridTreeView
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/\NET_4.5.2\C1.WPF.FlexGrid\CS\GridTreeView)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/GridTreeView)
 ____
 #### Shows how you can use the C1FlexGrid to implement a bound hierarchical TreeView.
 ____
