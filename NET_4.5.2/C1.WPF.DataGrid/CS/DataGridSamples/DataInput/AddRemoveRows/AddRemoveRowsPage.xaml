@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="DataGridSamples.AddRemoveRows"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+      xmlns:helpers="clr-namespace:Helpers"
+      mc:Ignorable="d" 
+      d:DataContext="{d:DesignData Source=/DesignData/SampleProducts.xaml}" 
+      d:DesignHeight="340" d:DesignWidth="622">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style x:Key="NewRowStyle" TargetType="c1:DataGridNewRowPresenter">
+                <Setter Property="WatermarkText" Value="Click here to enter a new product"/>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0 0 0 10" Orientation="Horizontal" VerticalAlignment="Center" >
+                <Button x:Name="btnAdd" Padding="0" Content="Add new Product" Width="120" Height="22" Click="btnAdd_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <RadioButton x:Name="rbnTop" Margin="8,2,0,0" Width="43" Content="Top" GroupName="NewRowVisibility" IsChecked="True"/>
+                <RadioButton x:Name="rbnBottom" Margin="8,2,0,0" Width="66" Content="Bottom" GroupName="NewRowVisibility"/>
+                <TextBlock x:Name="txtMsg" Margin="8 0 0 0" Foreground="#FFD01818"/>
+        </StackPanel>
+
+        <c1:C1DataGrid 
+                    x:Name="grid" 
+                    Grid.Row="1" 
+                    RowHeight="25" 
+                    AutoGeneratingColumn="grid_AutoGeneratingColumn" 
+                    BeginningNewRow="grid_BeginningNewRow" 
+                    CommittingNewRow="grid_CommittingNewRow" 
+                    CancelingNewRow="grid_CancelingNewRow"
+                    RowsAdded="grid_RowsAdded"
+                    RowsDeleted="grid_RowsDeleted"
+                    DeletingRows="grid_DeletingRows"
+                    NewRowVisibility="Bottom"
+                    ItemsSource="{Binding}"
+                    NewRowStyle="{StaticResource NewRowStyle}">
+            <c1:C1DataGrid.Columns>
+                <c1:DataGridTemplateColumn>
+                    <c1:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnRemove" Margin="2" Click="btnRemove_Click" Height="18" Width="18" IsTabStop="False">
+                                <Image Source="/DataGridSamples.4;component/Resources/ico-delete.png" Height="12" Width="12" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" IsHitTestVisible="False"/>
+                            </Button>
+                        </DataTemplate>
+                    </c1:DataGridTemplateColumn.CellTemplate>
+                </c1:DataGridTemplateColumn>
+            </c1:C1DataGrid.Columns>
+        </c1:C1DataGrid>
+    </Grid>
+</UserControl>

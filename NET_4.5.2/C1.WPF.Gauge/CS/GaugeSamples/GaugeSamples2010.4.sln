@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaugeSamples2010.4", "GaugeSamples2010.4.csproj", "{91018CB1-FF07-44B4-8C21-F78005D53CFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91018CB1-FF07-44B4-8C21-F78005D53CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91018CB1-FF07-44B4-8C21-F78005D53CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91018CB1-FF07-44B4-8C21-F78005D53CFA}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91018CB1-FF07-44B4-8C21-F78005D53CFA}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{91018CB1-FF07-44B4-8C21-F78005D53CFA}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{91018CB1-FF07-44B4-8C21-F78005D53CFA}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{91018CB1-FF07-44B4-8C21-F78005D53CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91018CB1-FF07-44B4-8C21-F78005D53CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

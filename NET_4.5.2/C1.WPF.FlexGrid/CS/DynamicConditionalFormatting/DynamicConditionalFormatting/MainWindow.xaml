@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="DynamicConditionalFormatting.MainWindow" Title="Dynamic Conditional Formatting Application" Height="350" Width="525" WindowState="Maximized" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:DynamicConditionalFormatting">
+    <Window.Resources>
+        <!-- binding converter: change prices into brushes -->
+        <local:DynamicRangeConverter x:Key="DRCPrice" LowerValue="{Binding LowerValue, ElementName=_rngPrice}" UpperValue="{Binding UpperValue, ElementName=_rngPrice}" LowValueBrush="Red" HighValueBrush="Green" NormalValueBrush="LightGray" />
+        <!-- binding converter: change weights into brushes -->
+        <local:DynamicRangeConverter x:Key="DRCWeight" LowerValue="{Binding LowerValue, ElementName=_rngWeight}" UpperValue="{Binding UpperValue, ElementName=_rngWeight}" LowValueBrush="Red" HighValueBrush="Green" NormalValueBrush="LightGray" />
+    </Window.Resources>
+    <Grid x:Name="LayoutRoot" Background="White" MinWidth="400">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!-- title -->
+        <Grid Grid.ColumnSpan="2" Margin="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="C1FlexGrid: Dynamic conditional formatting" FontWeight="Bold" FontSize="16" />
+            <TextBlock Grid.Row="1" TextWrapping="Wrap">
+                Select price and weight ranges using the sliders and see how the values on the
+                grid below change from red (below the minimum) to gray (within range) to green
+                (above the maximum).
+            </TextBlock>
+        </Grid>
+        <!-- show/select price range -->
+        <TextBlock Text="Desired Price Range: " Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="12" />
+        <local:VisualRangeSlider x:Name="_rngPrice" Grid.Row="1" Grid.Column="1" Margin="12" MinWidth="100" MaxWidth="400" Height="40" HorizontalAlignment="Left" Fill="#80008000" LowerValue="50" UpperValue="100" />
+
+        <!-- show/select weight range -->
+        <TextBlock Text="Desired Weight Range: " Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="12" />
+        <local:VisualRangeSlider x:Name="_rngWeight" Grid.Row="2" Grid.Column="1" Margin="12" MinWidth="100" MaxWidth="400" Height="40" HorizontalAlignment="Left" Fill="#80f00000" Minimum="0" Maximum="500" LowerValue="10" UpperValue="50" />
+        <!-- show values with conditional formatting -->
+        <c1:C1FlexGrid Name="_flex" Grid.Row="4" Grid.ColumnSpan="2" AutoGenerateColumns="False">
+            <c1:C1FlexGrid.Columns>
+                <c1:Column Binding="{Binding Line}" />
+                <c1:Column Binding="{Binding Color}" />
+                <c1:Column Binding="{Binding Name}" />
+
+                <c1:Column Binding="{Binding Price}">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Price, StringFormat=n0}" Foreground="{Binding Price, Converter={StaticResource DRCPrice}}" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+
+                <c1:Column Binding="{Binding Weight}">
+                    <c1:Column.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Weight, StringFormat=n0}" Foreground="{Binding Weight, Converter={StaticResource DRCWeight}}" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                        </DataTemplate>
+                    </c1:Column.CellTemplate>
+                </c1:Column>
+
+                <c1:Column Binding="{Binding Cost}" HorizontalAlignment="Right" />
+                <c1:Column Binding="{Binding Discontinued}" HorizontalAlignment="Center" />
+                <c1:Column Binding="{Binding Rating}" HorizontalAlignment="Center" />
+            </c1:C1FlexGrid.Columns>
+        </c1:C1FlexGrid>
+    </Grid>
+</Window>

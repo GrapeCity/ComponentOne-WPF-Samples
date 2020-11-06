@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.5.2" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <Color x:Key="MainColor">Red</Color>
+    <Style TargetType="c1:C1ComboBox">
+        <Setter Property="BorderThickness" Value="5" />
+        <Setter Property="BorderBrush" Value="Red" />
+    </Style>
+    
+</ResourceDictionary>

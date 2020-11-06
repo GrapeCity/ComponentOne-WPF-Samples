@@ -1,0 +1,68 @@
+﻿<local:TextEditor x:Class="StockAnalysis.EditableAnnotitions.AnnotationEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cc="clr-namespace:StockAnalysis.Partial.CustomControls"
+             xmlns:uc="clr-namespace:StockAnalysis.Partial.UserControls"
+             xmlns:local="clr-namespace:StockAnalysis.EditableAnnotitions"
+             mc:Ignorable="d" Margin="10" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Border Background="{StaticResource PaperWhite1000}" BorderBrush="{StaticResource LogoBlue}" BorderThickness="1" CornerRadius="3">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="8" Color="Black" Opacity=".24" Direction="270" RenderingBias="Quality" ShadowDepth="2" />
+        </Border.Effect>
+
+        <StackPanel Orientation="Vertical" Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Content:" FontWeight="Bold" Padding="0, 5" Margin="0, 0, 20, 0" SnapsToDevicePixels="True" />
+                <TextBox x:Name="txtAnnotationContent" Grid.Column="2" MinWidth="120" MaxWidth="240" Height="25" FontSize="14" 
+                     VerticalContentAlignment="Center"
+                     BorderThickness="1" BorderBrush="{StaticResource PaperWhite700}"
+                     Background="{StaticResource PaperWhite900}"></TextBox>
+                <Rectangle Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="{StaticResource PaperWhite700}" SnapsToDevicePixels="True" />
+            </Grid>
+
+
+
+            <uc:AnnotationShapeSettings x:Name="annotationShapeSettings" DataContext="{Binding EditingAnnotationStyle}"
+                 />
+            <uc:AnnotationTextSettings x:Name="annotationTextSettings" DataContext="{Binding EditingAnnotationStyle}"
+                />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0">
+
+                <cc:SimpleButton x:Name="btnOk" Margin="15,0,0,0" Height="25" Width="30"
+                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                 BorderBrush="{StaticResource PaperWhite700}"
+                                 Click="btnOkCancel_Click" Tag="Ok">
+                        <Button.Content>
+                            <Path Fill="{StaticResource StockGreen}"
+                              VerticalAlignment="Center" HorizontalAlignment="Center"
+                              Data="F1 M 6.403,12.613 M 6.403,12.613 C 5.974,12.613 5.567,12.444 5.262,12.139 L 0.474,7.353 C 0.169,7.048 0.000,6.641 0.000,6.209 C 0.000,5.778 0.169,5.371 0.474,5.066 C 0.779,4.761 1.187,4.591 1.618,4.591 C 2.049,4.591 2.457,4.761 2.762,5.066 L 6.406,8.709 L 13.238,1.875 C 13.543,1.570 13.951,1.400 14.382,1.400 C 14.813,1.400 15.221,1.570 15.526,1.875 C 15.831,2.180 16.000,2.587 16.000,3.019 C 16.000,3.450 15.831,3.857 15.526,4.162 L 7.547,12.139 C 7.242,12.444 6.835,12.613 6.403,12.613 L 6.403,12.613 Z"/>
+                        </Button.Content>
+                    </cc:SimpleButton>
+                <cc:SimpleButton x:Name="btnCancel" Margin="15,0,0,0" Height="25" Width="30"
+                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                 BorderBrush="{StaticResource PaperWhite700}"
+                                 Click="btnOkCancel_Click" Tag="Cancel">
+                    <Button.Content>
+                        <Path Fill="{StaticResource StockRed}"
+                              VerticalAlignment="Center" HorizontalAlignment="Center"
+                              Data="F1 M 14.438,10.739 L 10.729,7.030 L 14.408,3.351 L 14.408,3.350 C 15.188,2.571 15.152,1.382 14.438,0.601 C 13.688,-0.146 12.475,-0.148 11.723,0.597 L 8.010,4.310 L 4.274,0.575 C 3.917,0.208 3.428,0.001 2.917,0.000 C 2.405,-0.001 1.915,0.205 1.558,0.571 C 0.813,1.317 0.814,2.540 1.563,3.288 L 5.297,7.023 L 1.584,10.735 C 0.838,11.481 0.840,12.704 1.588,13.451 C 2.338,14.199 3.552,14.201 4.304,13.455 L 8.017,9.742 L 11.726,13.451 C 12.476,14.199 13.689,14.201 14.442,13.455 C 15.188,12.703 15.186,11.489 14.438,10.739 Z"/>
+                    </Button.Content>
+                </cc:SimpleButton>
+            </StackPanel>
+            
+        </StackPanel>
+        
+    </Border>
+</local:TextEditor>

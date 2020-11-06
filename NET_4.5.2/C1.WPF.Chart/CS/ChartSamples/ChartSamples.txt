@@ -1,0 +1,20 @@
+﻿Gallery (Gallery.xaml)
+=======================
+Shows the gallery of built-in types.
+
+Financial (Financial.xaml)
+===========================
+Shows financial chart with two y-axes and tooltips.
+
+Chart themes (ChartThemes.xaml)
+================================
+Shows chart themes and palettes.
+
+2D Multiple Axes (MultipleAxes.xaml)
+=====================================
+2D chart with scrollable x-axis and two y-axes.
+
+Scatter (Scatter.xaml)
+=======================
+2D Scatter chart with animation.
+

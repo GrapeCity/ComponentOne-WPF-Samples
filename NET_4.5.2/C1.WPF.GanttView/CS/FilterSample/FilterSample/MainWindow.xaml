@@ -1,0 +1,225 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilterSample"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" x:Class="FilterSample.MainWindow"
+        xmlns:GanttView="clr-namespace:C1.GanttView;assembly=C1.WPF.GanttView.4.5.2"
+        mc:Ignorable="d"
+        Title="FilterSample" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <c1:C1GanttView Grid.Row="1" Name="gv" StartDate="2014/2/25">
+            <c1:C1GanttView.Columns>
+                <GanttView:TaskPropertyColumn Property="Mode"/>
+                <GanttView:TaskPropertyColumn Property="Name"/>
+                <GanttView:TaskPropertyColumn Property="Duration" />
+                <GanttView:TaskPropertyColumn Property="DurationUnits" />
+                <GanttView:TaskPropertyColumn Property="Start" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Finish" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="PercentComplete" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintType" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintDate" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Predecessors" Visible="True"/>
+                <GanttView:TaskPropertyColumn Property="Deadline" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Calendar" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ResourceNames" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Notes" Visible="False"/>
+            </c1:C1GanttView.Columns>
+            <c1:C1GanttView.TaskResources>
+                <GanttView:Resource Name="Toby Nixon" Cost="2700" ID="1"/>
+                <GanttView:Resource Name="Vikas Jain" Cost="880" ID="2"/>
+                <GanttView:Resource Name="Carole Poland" Cost="0" ID="3"/>
+                <GanttView:Resource Name="Copyeditors" ResourceType="Material" ID="4"/>
+                <GanttView:Resource Name="Dan Jump" Cost="0" ID="5"/>
+                <GanttView:Resource Name="Hany Morcos" Cost="0" ID="6"/>
+                <GanttView:Resource Name="Jane Dow" Cost="0" ID="7"/>
+                <GanttView:Resource Name="John Evans" Cost="0" ID="8"/>
+                <GanttView:Resource Name="Jun Cao" Cost="0" ID="9"/>
+                <GanttView:Resource Name="Katie Jordan" Cost="0" ID="10"/>
+                <GanttView:Resource Name="Luis Sousa" Cost="0" ID="11"/>
+                <GanttView:Resource Name="Printing Service" Cost="0" ResourceType="Material" ID="12"/>
+                <GanttView:Resource Name="Robin Wood" Cost="0" ID="13"/>
+                <GanttView:Resource Name="Sharon Salavaria" Cost="0" ID="14"/>
+                <GanttView:Resource Name="Toni Poe" Cost="0" ID="15"/>
+                <GanttView:Resource Name="Travel" Cost="8000" ID="16"/>
+                <GanttView:Resource Name="Wiliam Flash" Cost="0" ID="17"/>
+                <GanttView:Resource Name="Zac Woodall" Cost="0" ID="18"/>
+            </c1:C1GanttView.TaskResources>
+            <c1:C1GanttView.ProjectSummary>
+                <GanttView:Task Name="New Book Launch schedule" Mode="Automatic" PercentComplete="21%" ID="0"/>
+            </c1:C1GanttView.ProjectSummary>
+            <c1:C1GanttView.Tasks>
+                <GanttView:Task Name="Planning Phase" Mode="Automatic" PercentComplete="19%" ID="1" OutlineParentID="0"/>
+                <GanttView:Task Name="Assign launch team members" Mode="Automatic" Duration="1" PercentComplete="100%" ID="2" OutlineParentID="1">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="3"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task Mode="Automatic" Duration="1" DurationUnits="Weeks" Start="2014/2/26" PercentComplete="60%" ID="3" OutlineParentID="1">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="2"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Schedule author interviews" Mode="Automatic" Duration="1" DurationUnits="Weeks" ID="4" OutlineParentID="1">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="9"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="2"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Design and order marketing material" Mode="Automatic" Duration="2" DurationUnits="Weeks" ID="5" OutlineParentID="1">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="18"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="2"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Planning complete!" Mode="Automatic" Duration="0" ID="6" OutlineParentID="1">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="5"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Mode="Automatic" ConstraintDate="2014/3/3 0:00:00" ConstraintType="StartNoEarlierThan" PercentComplete="43%" ID="7" OutlineParentID="0">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Kickoff book launch meeting" Mode="Automatic" Duration="1" ConstraintDate="2014/3/12" ConstraintType="StartNoEarlierThan" PercentComplete="100%" ID="8" OutlineParentID="7">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="14"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task Mode="Automatic" Duration="2" PercentComplete="50%" ID="9" OutlineParentID="7">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="3"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="8"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Plan author's travel itinerary" Mode="Automatic" Duration="6" PercentComplete="100%" ID="10" OutlineParentID="7">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="8"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Channel Sales prep" Mode="Automatic" Duration="1" DurationUnits="Weeks" ID="11" OutlineParentID="7">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="6"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="18"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="8"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Complete book launch form" PercentComplete="100%" ID="12" OutlineParentID="7" Start="2014/3/20 9:00:00" Finish="2014/3/24 9:00:00">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="2"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="11"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Prepare book sales kit" DurationUnits="Weeks" ID="13" OutlineParentID="7" Start="2014/3/20 9:00:00" Finish="2014/3/27 9:00:00">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="6"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="18"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="8"></GanttView:Predecessor>
+                        <GanttView:Predecessor PredecessorTaskID="11"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Distribute internal marketing material" Mode="Automatic" Duration="2" ID="14" OutlineParentID="7">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="18"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="13"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Public Launch Phase" Mode="Automatic" ID="15" OutlineParentID="0">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="7"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Author travel and appearances" Mode="Automatic" ID="16" OutlineParentID="15"/>
+                <GanttView:Task Name="Author radio interview" Mode="Automatic" Duration="1" ConstraintDate="2014/3/31" ConstraintType="StartNoEarlierThan" ID="17" OutlineParentID="16">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="15"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task Name="Author reading and signing at book fair" Mode="Automatic" Duration="1" ID="18" OutlineParentID="16">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="15"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="16"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="17"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Distribute advance copies" Mode="Automatic" Duration="2" Notes="Get recipient list from publicist" ID="19" OutlineParentID="15" ConstraintDate="2014/3/31" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="2"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task Name="Distribute book sales kit" Mode="Automatic" Duration="2" ID="20" OutlineParentID="15" ConstraintDate="2014/3/31" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="18"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task Mode="Automatic" Duration="7" ID="21" OutlineParentID="15">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="20"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Launch public Web portal for book" Mode="Automatic" Duration="1" DurationUnits="Weeks" ID="22" OutlineParentID="15">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="2"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="20"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Launch social media programs for book" Mode="Automatic" Duration="1" DurationUnits="Weeks" ID="23" OutlineParentID="15">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="2"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="22"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Launch complete!" Mode="Automatic" Duration="0" ID="24" OutlineParentID="15">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="21"></GanttView:Predecessor>
+                        <GanttView:Predecessor PredecessorTaskID="22"></GanttView:Predecessor>
+                        <GanttView:Predecessor PredecessorTaskID="23"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+            </c1:C1GanttView.Tasks>
+        </c1:C1GanttView>
+        <ToolBarTray Grid.Row="0" Height="30">
+            <ToolBar Header="Filter">
+                <Button Content="Missing Name Tasks" Width="240" Height="24" Click="btnMissNaming_Click"/>
+                <Button Content="Missing Resource Tasks" Width="240" Height="24" Click="btnMissingResource_Click"/>
+                <Button Content="Tasks Are Performed Within Mar 16 - Apr 1" Width="240" Height="24" Click="btnPerformWithin_Click"/>
+                <Button Content="Tasks Have Notes" Width="240" Height="24" Click="btnHaveNotes_Click"/>
+                <Button Content="Late Tasks On Mar 16" Width="240" Height="24" Click="btnLateOn_Click"/>
+                <Button Content="Completed Tasks by Carole" Width="240" Height="24" Click="btnCompletedByCarole_Click"/>
+                <Button Content="Tasks Performed by Toby or Toni" Width="240" Height="24" Click="btnTobyOrToni_Click"/>
+            </ToolBar>
+        </ToolBarTray>
+    </Grid>
+</Window>

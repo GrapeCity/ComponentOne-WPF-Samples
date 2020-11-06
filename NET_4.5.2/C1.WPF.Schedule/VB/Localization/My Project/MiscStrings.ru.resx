@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Daily" xml:space="preserve">
+    <value>Каждый день</value>
+    <comment>used by the RecurrencePattern class</comment>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>день</value>
+    <comment>used by the WeekDaysEnumToStringMultiConverter</comment>
+  </data>
+  <data name="EmptyGroupName" xml:space="preserve">
+    <value>Календарь</value>
+  </data>
+  <data name="EveryNDay" xml:space="preserve">
+    <value>Каждый {0} день</value>
+    <comment>template for phrases such as "Occurs every 3 days"</comment>
+  </data>
+  <data name="EveryNMonth" xml:space="preserve">
+    <value>Каждый {1} день каждого {0} месяца</value>
+    <comment>template for phrases such as "Occurs day 24 of every 2 months"</comment>
+  </data>
+  <data name="EveryNMonthOnTheNWeekday" xml:space="preserve">
+    <value>{1} {2} каждого {0} месяца</value>
+    <comment>template for phrases such as "Occurs the first Friday of every 2 months"</comment>
+  </data>
+  <data name="EveryNWeek" xml:space="preserve">
+    <value>Каждую {0} неделю, {1}</value>
+    <comment>template for phrases such as "Occurs every 2 weeks on Monday}"</comment>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>1</value>
+    <comment>used by the WeekOfMonthEnumToStringMultiConverter</comment>
+  </data>
+  <data name="Fourth" xml:space="preserve">
+    <value>4</value>
+    <comment>used by the WeekOfMonthEnumToStringMultiConverter</comment>
+  </data>
+  <data name="IncorrectPattern" xml:space="preserve">
+    <value>неверное повторение</value>
+    <comment>used by the RecurrencePattern class</comment>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>последний</value>
+    <comment>used by the WeekOfMonthEnumToStringMultiConverter</comment>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>Ежемесячно, каждый {0} день</value>
+    <comment>template for phrases such as "Occurs day 24 of every 1 month"</comment>
+  </data>
+  <data name="MonthlyOnTheNWeekday" xml:space="preserve">
+    <value>Ежемесячно, {0} {1}</value>
+    <comment>template for phrases such as "Occurs the 2 Friday of every 1 month"</comment>
+  </data>
+  <data name="MoreAppointments" xml:space="preserve">
+    <value>Нажми меня</value>
+  </data>
+  <data name="NextAppointment" xml:space="preserve">
+    <value>Следующее событие</value>
+    <comment>the localized value for the C1Scheduler.NextAppointmentText property</comment>
+  </data>
+  <data name="OnWorkingDays" xml:space="preserve">
+    <value>Каждый рабочий день</value>
+    <comment>used by the RecurrencePattern class</comment>
+  </data>
+  <data name="PreviousAppointment" xml:space="preserve">
+    <value>Предыдущее событие</value>
+    <comment>the localized value for the C1Scheduler.PreviousAppointmentText property</comment>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>2</value>
+    <comment>used by the WeekOfMonthEnumToStringMultiConverter</comment>
+  </data>
+  <data name="Since" xml:space="preserve">
+    <value> с {0} с {1} по {2}.</value>
+    <comment>template for phrases such as " effective 4.12.2007 from 8:00 to 8:20."</comment>
+  </data>
+  <data name="SinceNTimes" xml:space="preserve">
+    <value> с {0} с {1} по {2}, {3} раз.</value>
+    <comment>template for phrases such as " effective 4.12.2007 from 8:00 to 8:20, 5 times."</comment>
+  </data>
+  <data name="SinceUntil" xml:space="preserve">
+    <value> с {0} по {1} с {2} по {3}.</value>
+    <comment>template for phrases such as " effective 4.12.2007 until 10.12.2007 from 8:00 to 8:20."</comment>
+  </data>
+  <data name="Third" xml:space="preserve">
+    <value>3</value>
+    <comment>used by the WeekOfMonthEnumToStringMultiConverter</comment>
+  </data>
+  <data name="Weekday" xml:space="preserve">
+    <value>рабочий день</value>
+    <comment>used by the WeekDaysEnumToStringMultiConverter</comment>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>выходной</value>
+    <comment>used by the WeekDaysEnumToStringMultiConverter</comment>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>Каждый {0}</value>
+    <comment>template for phrases such as "Occurs every Monday"</comment>
+  </data>
+  <data name="Yearly" xml:space="preserve">
+    <value>{1}, {0} число</value>
+    <comment>template for phrases such as "Occurs every December 31"</comment>
+  </data>
+  <data name="YearlyNth" xml:space="preserve">
+    <value>Каждый {0} {1}, {2}</value>
+    <comment>template for phrases such as "Occurs the 2 Friday of December"</comment>
+  </data>
+</root>

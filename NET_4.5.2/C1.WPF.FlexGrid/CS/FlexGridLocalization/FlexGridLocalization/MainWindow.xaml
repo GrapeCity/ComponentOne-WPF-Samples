@@ -1,0 +1,60 @@
+﻿<Window xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"  x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FlexGridLocalization Application" Height="480" Width="640">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="C1FlexGrid Localization" FontSize="18" FontWeight="Bold"/>
+            <TextBlock Text="Current Culture: " VerticalAlignment="Bottom" Margin="20 0 0 0"/>
+            <TextBlock Name="_txtCI" Text="Default" VerticalAlignment="Bottom" />
+        </StackPanel>
+        <c1:C1FlexGrid Grid.Row="1" Name="_flex">
+            <c1:C1FlexGridFilterService.FlexGridFilter>
+                <c1:C1FlexGridFilter />
+            </c1:C1FlexGridFilterService.FlexGridFilter>
+            <c1:C1FlexGrid.Columns>
+                <c1:Column Width="300"/>
+                <c1:Column />
+                <c1:Column />
+                <c1:Column />
+                <c1:Column Width="*"/>
+            </c1:C1FlexGrid.Columns>
+            <c1:C1FlexGrid.Rows>
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+                <c1:Row />
+            </c1:C1FlexGrid.Rows>
+        </c1:C1FlexGrid>
+    </Grid>
+</Window>

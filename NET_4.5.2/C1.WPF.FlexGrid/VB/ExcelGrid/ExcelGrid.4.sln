@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExcelGrid.4", "ExcelGrid\ExcelGrid.4.vbproj", "{B0E4982C-F66D-4559-9662-FA63894E78EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseGC|Any CPU = ReleaseGC|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.ReleaseGC|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E4982C-F66D-4559-9662-FA63894E78EB}.ReleaseGC|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {878DD4A0-92CB-4A73-9695-0BDE6BCC896C}
+	EndGlobalSection
+EndGlobal

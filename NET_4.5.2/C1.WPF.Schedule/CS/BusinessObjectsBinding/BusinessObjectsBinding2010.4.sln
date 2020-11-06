@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjectsBinding2010.4", "BusinessObjectsBinding2010.4.csproj", "{C25E020E-98EA-4EAF-8914-E4B55CAF9374}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C25E020E-98EA-4EAF-8914-E4B55CAF9374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25E020E-98EA-4EAF-8914-E4B55CAF9374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C25E020E-98EA-4EAF-8914-E4B55CAF9374}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25E020E-98EA-4EAF-8914-E4B55CAF9374}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{C25E020E-98EA-4EAF-8914-E4B55CAF9374}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{C25E020E-98EA-4EAF-8914-E4B55CAF9374}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{C25E020E-98EA-4EAF-8914-E4B55CAF9374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C25E020E-98EA-4EAF-8914-E4B55CAF9374}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6250FAE5-966D-4395-B1FC-8CC79065BA08}
+	EndGlobalSection
+EndGlobal

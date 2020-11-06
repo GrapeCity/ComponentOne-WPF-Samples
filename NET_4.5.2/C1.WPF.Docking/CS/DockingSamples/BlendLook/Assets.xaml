@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="DockingSamples.BlendLook.Assets" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:local="clr-namespace:DockingSamples.BlendLook" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.ColumnSpan="2" Fill="#FF595959" />
+            <TextBox Grid.Row="0" Text="Search" FontStyle="Italic" Foreground="#FFB9B9B9" FontSize="11" Padding="0" BorderBrush="#FF595959" />
+            <Image Grid.Column="1" Source="../Resources/ico_assets.png" Stretch="Fill" HorizontalAlignment="Right" Width="43" Height="18" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="#FF404040" Grid.Column="1" />
+            <c1:C1TreeView Grid.Column="0" x:Name="TreeView" SelectionChanged="TreeView_SelectionChanged" BorderThickness="0" Background="Transparent" Margin="2">
+
+                <local:AssetTreeViewItem Header="Project" IsSelected="True" Background="Transparent">
+                    <sys:String>C1DockControl</sys:String>
+                    <sys:String>C1TabControl</sys:String>
+                </local:AssetTreeViewItem>
+
+                <local:AssetTreeViewItem Header="Controls">
+                    <sys:String>Border</sys:String>
+                    <sys:String>Button</sys:String>
+                </local:AssetTreeViewItem>
+
+                <local:AssetTreeViewItem Header="Styles">
+                    <sys:String>InnerPickerStyle</sys:String>
+                    <sys:String>OuterPickerStyle</sys:String>
+                </local:AssetTreeViewItem>
+
+                <local:AssetTreeViewItem Header="Behaviors">
+                    <sys:String>ChangePropertyAction</sys:String>
+                </local:AssetTreeViewItem>
+
+            </c1:C1TreeView>
+            <ListBox BorderThickness="0" Grid.Column="1" x:Name="ListBox" ItemsSource="{Binding ElementName=TreeView, Path=qSelectedItem.Controls}" Background="Transparent" />
+        </Grid>
+    </Grid>
+</UserControl>

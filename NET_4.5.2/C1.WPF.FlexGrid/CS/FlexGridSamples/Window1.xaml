@@ -1,0 +1,192 @@
+﻿<Window x:Class="MainTestApplication.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MainTestApplication"
+    Title="FlexGrid for WPF"
+    WindowStartupLocation="CenterScreen"
+    Height="600" Width="900" FontFamily="Segoe UI" FontSize="13">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FFB63636" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="0">
+        <Grid.Resources>
+            <Style x:Key="textBorderStyle" TargetType="Border" >
+                <Setter Property="Margin" Value="8" />
+                <Setter Property="BorderBrush" Value="#FFA3AEB9" />
+                <Setter Property="BorderThickness" Value="1" />
+            </Style>
+        </Grid.Resources>
+        <Border BorderBrush="Black" BorderThickness="1">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8CA7C5" Offset="1"/>
+                    <GradientStop Color="#FFC6D9EF"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Border BorderBrush="#FFA3AEB9" BorderThickness="1" Height="36" Margin="10,10,10,0" VerticalAlignment="Top" CornerRadius="2">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD6E3F1" Offset="1"/>
+                    <GradientStop Color="#FFEBF3FC"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border BorderBrush="#FFEEF5FB" BorderThickness="1" Margin="0" CornerRadius="1">
+                <StackPanel Margin="0,0,-6,-4" Orientation="Horizontal">
+                    <TextBlock Margin="0,2,0,4" TextWrapping="Wrap" Text="ComponentOne FlexGrid® for WPF" FontSize="18.667" Foreground="#FF4976AD" Width="576"/>
+                </StackPanel>
+            </Border>
+        </Border>
+        <Grid x:Name="LayoutRoot" Margin="10,50,10,10">
+            <TabControl>
+                <!-- Grouping -->
+                <TabItem Header="Grouping" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:Grouping Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}" Background="#FFF4F6F9">
+                            <TextBlock Text="This demo shows how the C1FlexGrid supports ICollectionView data grouping. It also shows how you can use the AllowMerging property to merge adjacent cells that have the same content." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- Grouping Panel-->
+                <TabItem Header="Grouping Panel" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:GroupingPanel Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}" Background="#FFF4F6F9">
+                            <TextBlock Text="Create groups by dragging column headers into the grouping areas. Once you have created the groups, drag the markers to re-order the groups, or click them to remove or sort the groups." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- Custom Grouping-->
+                <TabItem Header="Custom Grouping" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:CustomGrouping Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}" Background="#FFF4F6F9">
+                            <TextBlock Text="This demo shows how to define custom grouping logic using simple value converters. Group by Price, Cost or Introduced to see custom groups." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- Row Details-->
+                <TabItem Header="Row Details" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:RowDetails Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}" Background="#FFF4F6F9">
+                            <TextBlock Text="This demo shows how to use C1InputPanel to display and edit row details." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- Filtering -->
+                <TabItem Header="Filtering" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:Filtering Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}" Background="#FFF4F6F9">
+                            <TextBlock Text="This demo shows how to enable column filtering. Users may click a drop-down on the column headers to set up filters. Active filters are indicated by an icon on the column header. Filters may be used in bound and unbound modes." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- FullTextFilter -->
+                <TabItem Header="Full Text Filter" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:FullTextFilter Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}" Background="#FFF4F6F9">
+                            <TextBlock Text="This demo shows how to filters and highlights the data across all columns." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- Unbound -->
+                <TabItem Header="Unbound" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:Unbound Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}">
+                            <TextBlock Text="In addition to working with IEnumerable data sources, the C1FlexGrid also supports an unbound mode, where cell values are stored in the grid itself and are accessed using familiar indexing notation. This demo also shows how you can set up merged multi-cell row and column headers." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- SelectionMode -->
+                <TabItem Header="SelectionMode" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:SelectionMode Grid.Row="0"/>
+                        <Border Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource textBorderStyle}">
+                            <TextBlock Text="The C1FlexGrid has a rich selection model controlled by the SelectionMode property. You can set the selection mode to single cell, cell range (block of adjacent cells), single row, row range, or list box (not necessarily contiguous). Regardless of the selection mode, the C1FlexGrid always returns the selected cells as a CellRange object so you can easily monitor and work with the selected data." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- iTunes (custom cells/tree/search/filter/Linq) -->
+                <TabItem Header="iTunes" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <local:iTunes Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}">
+                            <TextBlock Text="This demo displays a library of about 10,000 songs grouped by artist and album. It includes a search box that allows users to find songs, albums, or artists quickly and easily. The filtering is done on the data view. This demo showcases the C1FlexGrid's CellFactory interface used for customizing cells. We use custom cells to display images next to the artists, albums, songs, collapse/expand icons, and ratings. We can easily create custom cells by inheriting the ICellFactory interface and providing the FrameworkElement objects used to represent the cells." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- Financial -->
+                <TabItem Header="Financial" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:Financial Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}">
+                            <TextBlock Text="This demo shows a financial application with real time data updates, flashing cells, and sparklines. It highlights the control's performance in WPF. Check the Custom Cells checkbox to see how we display flashes and sparklines for a better user experience. This is accomplished using the C1FlexGrid's CellFactory interface for easily customizing cells." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <!-- Editing -->
+                <TabItem Header="Editing" Foreground="#FF325989">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <local:Editing Grid.Row="0"/>
+                        <Border Grid.Row="1" Style="{StaticResource textBorderStyle}">
+                            <TextBlock Text="The C1FlexGrid supports Excel-style editing. Just type values into cells and use the enter or arrow keys to move to the next one. Or press F2 and enter full-edit mode, where arrow keys navigate within the editor. Auto-complete and value-mapped columns are also built-in: simply create a ColumnValueConverter and assign it to the columns ValueConverter property and you're done. Transactioned edits are supported too. The Customer class used here implements IEditableObject, so you can undo changes by pressing the Escape key before you move to a new row. (Note: the gray columns are read-only)." TextWrapping="Wrap" Margin="10,5" Foreground="#FF4976AD"/>
+                        </Border>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>

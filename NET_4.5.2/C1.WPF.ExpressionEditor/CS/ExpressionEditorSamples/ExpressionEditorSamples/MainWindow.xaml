@@ -1,0 +1,26 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:C1ExpressionEditorSample"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" x:Class="C1ExpressionEditorSample.MainWindow"
+        mc:Ignorable="d"
+        Title="ExpressionEditor Sample" Height="540" Width="800">
+    <Grid>
+        <c1:C1TabControl>
+            <c1:C1TabItem Header="Column Calculation">
+                <local:ColumnCalculation />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Support Grouping">
+                <local:SupportGrouping />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Support Filter">
+                <local:SupportFilter />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="FlexChart Filter">
+                <local:FlexChart />
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+    </Grid>
+</Window>

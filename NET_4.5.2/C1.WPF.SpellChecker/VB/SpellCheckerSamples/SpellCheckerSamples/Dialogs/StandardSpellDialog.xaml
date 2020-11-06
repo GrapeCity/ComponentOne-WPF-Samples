@@ -1,0 +1,73 @@
+﻿<c1:C1Window x:Class="SpellCheckerSamples.StandardSpellDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" Header="Spelling" Width="520" Height="250" 
+             IsResizable="False" KeyDown="C1SpellDialog_KeyDown">
+    <c1:C1Window.Resources>
+        <Style x:Key="Label" TargetType="TextBlock">
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
+        <Style x:Key="Button" TargetType="Button">
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="Padding" Value="6" />
+        </Style>
+        <Style x:Key="DialogItem" TargetType="Control">
+            <Setter Property="Margin" Value="4" />
+        </Style>
+    </c1:C1Window.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="#FFE7E7E7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- show error -->
+        <TextBlock x:Name="_lblNotInDictionary" Style="{StaticResource Label}"      Text="Not in Dictionary"/>
+        <TextBlock x:Name="_lblRepeatedWord"	Style="{StaticResource Label}"      Text="Repeated Word:" Visibility="Collapsed"/>
+        <TextBox x:Name="_txtError" 		    Style="{StaticResource DialogItem}" Grid.Column="1" Grid.ColumnSpan="3" IsReadOnly="True" Background="{x:Null}" IsTabStop="False" FontWeight="Bold" />
+
+        <!-- get correction -->
+        <TextBlock x:Name="_lblChangeTo" 		Style="{StaticResource Label}"      Text="Change To:" Grid.Row="1" />
+        <TextBox x:Name="_txtChangeTo" 		    Style="{StaticResource DialogItem}" Grid.Column="1" Grid.Row="1" TextChanged="_txtChangeTo_TextChanged" />
+
+        <!-- show suggestions -->
+        <TextBlock x:Name="_lblSuggestions"		Style="{StaticResource Label}"      Text="Suggestions:" Grid.Row="2" />
+        <ListBox x:Name="_listSuggestions"	    Style="{StaticResource DialogItem}"  Grid.Column="1" Grid.Row="2" Grid.RowSpan="5" SelectionChanged="_listSuggestions_SelectionChanged" />
+
+        <!-- commands -->
+        <Button x:Name="_btnIgnore"			    Style="{StaticResource Button}" Grid.Column="2" Grid.Row="2" Content="Ignore"       Click="_btnIgnore_Click" />
+        <Button x:Name="_btnIgnoreAll" 		    Style="{StaticResource Button}" Grid.Column="3" Grid.Row="2" Content="Ignore All"   Click="_btnIgnoreAll_Click" />
+        <Button x:Name="_btnChange" 		    Style="{StaticResource Button}" Grid.Column="2" Grid.Row="3" Content="Change"       Click="_btnChange_Click" />
+        <Button x:Name="_btnChangeAll" 		    Style="{StaticResource Button}" Grid.Column="3" Grid.Row="3" Content="Change All"   Click="_btnChangeAll_Click" />
+        <Button x:Name="_btnAdd" 			    Style="{StaticResource Button}" Grid.Column="2" Grid.Row="4" Content="Add"          Click="_btnAdd_Click" />
+        <Button x:Name="_btnSuggest" 		    Style="{StaticResource Button}" Grid.Column="3" Grid.Row="4" Content="Suggest"      Click="_btnSuggest_Click" />
+        <Button x:Name="_btnCancel" 		    Style="{StaticResource Button}" Grid.Column="3" Grid.Row="7" Content="Cancel"       Click="_btnCancel_Click" />
+
+        <!-- separator line -->
+        <Rectangle Height="1" Margin="4,0,4,0" VerticalAlignment="Bottom" Grid.ColumnSpan="4" Grid.Row="6" Fill="#FF4B4A4A" />
+
+        <!-- text holders -->
+        <TextBlock x:Name="_lblNoSuggestions" 	Visibility="Collapsed" Grid.Row="7" Text="(no suggestions)" />
+        <TextBlock x:Name="_lblChange" 			Visibility="Collapsed" Grid.Row="7" Text="Change" />
+        <TextBlock x:Name="_lblRemove" 			Visibility="Collapsed" Grid.Row="7" Text="Remove" />
+
+    </Grid>
+</c1:C1Window>

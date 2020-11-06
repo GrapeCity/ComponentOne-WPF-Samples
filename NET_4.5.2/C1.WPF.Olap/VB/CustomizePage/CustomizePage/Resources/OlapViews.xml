@@ -1,0 +1,123 @@
+﻿<OlapViews>
+  
+  <C1OlapPage id="Product vs Country">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="Sales" subtotal="Sum" format="n0" />
+        <Field name="OrderDate" subtotal="Count" />
+        <Field name="Product" subtotal="Count" />
+        <Field name="Customer" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="Employee" subtotal="Count" />
+        <Field name="Category" subtotal="Count" />
+      </Fields>
+      <RowFields>
+        <Field name="Product" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="Country" />
+      </ColumnFields>
+      <ValueFields>
+        <Field name="Sales" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+
+  <C1OlapPage id="Employee vs Country">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="Sales" subtotal="Sum" format="n0" />
+        <Field name="OrderDate" subtotal="Count" />
+        <Field name="Product" subtotal="Count" />
+        <Field name="Customer" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="Employee" subtotal="Count" />
+        <Field name="Category" subtotal="Count" />
+      </Fields>
+      <RowFields>
+        <Field name="Country" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="Employee" />
+      </ColumnFields>
+      <ValueFields>
+        <Field name="Sales" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+
+  <C1OlapPage id="Employee vs Month">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="Sales" subtotal="Sum" format="n0" />
+        <Field name="OrderDate" subtotal="Count" format="MMMM"/>
+        <Field name="Product" subtotal="Count" />
+        <Field name="Customer" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="Employee" subtotal="Count" />
+        <Field name="Category" subtotal="Count" />
+      </Fields>
+      <RowFields>
+        <Field name="Employee" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="OrderDate" />
+      </ColumnFields>
+      <ValueFields>
+        <Field name="Sales" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+
+  <C1OlapPage id="Employee vs Weekday">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="Sales" subtotal="Sum" format="n0" />
+        <Field name="OrderDate" subtotal="Count" format="dddd" />
+        <Field name="Product" subtotal="Count" />
+        <Field name="Customer" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="Employee" subtotal="Count" />
+        <Field name="Category" subtotal="Count" />
+      </Fields>
+      <RowFields>
+        <Field name="Employee" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="OrderDate" />
+      </ColumnFields>
+      <ValueFields>
+        <Field name="Sales" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>
+
+  <C1OlapPage id="Employee vs Year">
+    <C1OlapEngine>
+      <Fields>
+        <Field name="Sales" subtotal="Sum" format="n0" />
+        <Field name="OrderDate" subtotal="Count" format="yyyy" />
+        <Field name="Product" subtotal="Count" />
+        <Field name="Customer" subtotal="Count" />
+        <Field name="Country" subtotal="Count" />
+        <Field name="Employee" subtotal="Count" />
+        <Field name="Category" subtotal="Count" />
+      </Fields>
+      <RowFields>
+        <Field name="Employee" />
+      </RowFields>
+      <ColumnFields>
+        <Field name="OrderDate" />
+      </ColumnFields>
+      <ValueFields>
+        <Field name="Sales" />
+      </ValueFields>
+    </C1OlapEngine>
+    <C1OlapChart ChartType="Bar" ColorGeneration="Office" ShowTitle="True" ShowLegend="Automatic" ShowGridLines="True" Stacked="True" />
+  </C1OlapPage>  
+  
+</OlapViews>

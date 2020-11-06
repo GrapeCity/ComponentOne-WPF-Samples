@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="SpellCheckerSamples.SpellCheckerDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SpellCheckerSamples"
+             mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- title -->
+            <RowDefinition Height="Auto" />
+            <!-- buttons -->
+            <RowDefinition Height="*"/>
+            <!-- textBoxes -->
+            <RowDefinition Height="80"/>
+            <!-- textBoxOut -->
+        </Grid.RowDefinitions>
+
+        <!-- buttons -->
+        <Border Grid.Row="1" Margin="0 0 0 10">
+            <StackPanel Orientation="Horizontal" >
+                <Button x:Name="_btnBatch" Content="Batch Check" Width="107" IsEnabled="False" Click="_btnBatch_Click" Margin="0 0 10 0"/>
+                <Button x:Name="_btnModal" Content="Spell Check" Width="107" IsEnabled="False" Click="_btnModal_Click" Margin="0 0 20 0"/>
+                <TextBlock Text=" Control to check:" VerticalAlignment="Center" Margin="0 0 2 0"/>
+                <ComboBox x:Name="_cmbControl" Width="107" VerticalAlignment="Center" Padding="3" SelectionChanged="_cmbControl_SelectionChanged" Margin="0 0 20 0">
+                    <ComboBox.Items>
+                        <TextBlock Text="TextBox" />
+                        <TextBlock Text="RichTextBox" />
+                        <TextBlock Text="DataGrid" />
+                    </ComboBox.Items>
+                </ComboBox>
+                <TextBlock Text="Spell Dialog:" VerticalAlignment="Center" Margin="0 0 2 0"/>
+                <ComboBox x:Name="_cmbDialog" Width="107" Height="20" VerticalAlignment="Center" Padding="3" SelectedIndex="0" >
+                    <ComboBox.Items>
+                        <TextBlock Text="Built-In" />
+                        <TextBlock Text="Customized" />
+                        <TextBlock Text="Default style" />
+                        <TextBlock Text="Word style" />
+                    </ComboBox.Items>
+                </ComboBox>
+            </StackPanel>
+        </Border>
+
+        <!-- regular textbox -->
+        <TextBox x:Name="_plainTextBox"  AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" LostFocus="_plainTextBox_LostFocus" Grid.Row="2" />
+
+        <!-- rich textbox and toolbar -->
+        <Grid x:Name="_richTextBoxPanel" Grid.Row="2" Visibility="Collapsed" Margin="0 10 0 0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <c1:C1RichTextBoxToolbar x:Name="_rtbToolbar" />
+            <c1:C1RichTextBox x:Name="_richTextBox" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Grid.Row="1" />
+        </Grid>
+
+        <!-- DataGrid -->
+        <c1:C1DataGrid x:Name="_dataGrid" Grid.Row="2" Visibility="Collapsed" Margin="0 10 0 0" />
+
+        <!-- event log tracer -->
+        <TextBox x:Name="_outputTextBox" Margin="0 10 0 0" TextWrapping="Wrap" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Grid.Row="3" ToolTipService.ToolTip="Output pane" />
+    </Grid>
+</UserControl>

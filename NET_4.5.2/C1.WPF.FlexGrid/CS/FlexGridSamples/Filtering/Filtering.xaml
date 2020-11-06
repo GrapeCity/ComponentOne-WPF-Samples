@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="MainTestApplication.Filtering"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid Background="White">
+        <Grid.Resources>
+            <Style x:Key="gridStyle" TargetType="Control">
+                <Setter Property="BorderBrush" Value="#FFA3AEB9"/>
+                <Setter Property="BorderThickness" Value="1"/>
+            </Style>
+        </Grid.Resources>
+        <c1:C1FlexGrid x:Name="_flexFilter" 
+                            Style="{StaticResource gridStyle}"
+                            AllowMerging="All"
+                            GroupRowPosition="None"
+                            MinColumnWidth="10"
+                            MaxColumnWidth="300" BorderThickness="1" >
+            <!-- add filtering support to the control: -->
+            <c1:C1FlexGridFilterService.FlexGridFilter>
+                <c1:C1FlexGridFilter />
+            </c1:C1FlexGridFilterService.FlexGridFilter>
+        </c1:C1FlexGrid>
+    </Grid>
+</UserControl>

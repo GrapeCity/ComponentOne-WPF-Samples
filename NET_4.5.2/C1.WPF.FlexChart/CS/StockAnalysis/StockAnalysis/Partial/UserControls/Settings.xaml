@@ -1,0 +1,63 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cc="clr-namespace:StockAnalysis.Partial.CustomControls"
+             xmlns:cvt="clr-namespace:StockAnalysis.Converter"
+             xmlns:local="clr-namespace:StockAnalysis.Partial.UserControls"
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             x:Class="StockAnalysis.Partial.UserControls.Settings"
+             mc:Ignorable="d" 
+             d:DesignHeight="29" d:DesignWidth="600" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <UserControl.Resources>
+        <cvt:Name2LogoConverter x:Key="Name2LogoConverter" />
+    </UserControl.Resources>
+    <Grid Background="{StaticResource PaperWhite1000}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="1" Padding="15,0">
+            <ContentControl VerticalAlignment="Center" Content="{Binding Model.CurrectQuote.Name, Converter={StaticResource Name2LogoConverter}}" SnapsToDevicePixels="True" />
+        </Border>
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="{StaticResource PaperWhite800}" HorizontalAlignment="Right" Orientation="Horizontal">
+            <cc:DropdownControl VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="1,0,0,0" Display="Options">
+                <cc:DropdownControl.DropdownHeader>
+                    <TextBlock Margin="10,0" Text="CHART STYLE" Foreground="{StaticResource Blue500}" FontSize="12" FontWeight="DemiBold"  />
+                </cc:DropdownControl.DropdownHeader>
+                <cc:DropdownControl.Content>
+                    <local:Display ChartType="{Binding Model.ChartType, Mode=TwoWay}" />
+                </cc:DropdownControl.Content>
+            </cc:DropdownControl>
+            <cc:DropdownControl x:Name="indicatorsDropdown" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="1,0,0,0" Display="Indicators" DropDownOpened="indicatorsDropdown_DropDownOpened">
+                <cc:DropdownControl.DropdownHeader>
+                    <TextBlock Margin="10,0" Text="INDICATOR TYPE" Foreground="{StaticResource Blue500}" FontSize="12" FontWeight="DemiBold"  />
+                </cc:DropdownControl.DropdownHeader>
+                <cc:DropdownControl.Content>
+                    <local:Indicators />
+                </cc:DropdownControl.Content>
+            </cc:DropdownControl>
+            <cc:DropdownControl x:Name="overlaysDropdown" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="1,0,0,0" Display="Overlays" DropDownOpened="overlaysDropdown_DropDownOpened">
+                <cc:DropdownControl.DropdownHeader>
+                    <TextBlock Margin="10,0" Text="OVERLAY TYPE" Foreground="{StaticResource Blue500}" FontSize="12" FontWeight="DemiBold"  />
+                </cc:DropdownControl.DropdownHeader>
+                <cc:DropdownControl.Content>
+                    <local:Overlays />
+                </cc:DropdownControl.Content>
+            </cc:DropdownControl>
+            <!--<cc:DropdownControl VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="1,0,0,0" Display="Custom Indicator" DropDownOpened="DropdownControl_DropDownOpened">
+                <cc:DropdownControl.DropdownHeader>
+                    <TextBlock Margin="10,0" Text="CUSTOM INDICATOR" Foreground="{StaticResource Blue500}" FontSize="12" FontWeight="DemiBold"  />
+                </cc:DropdownControl.DropdownHeader>
+                <cc:DropdownControl.Content>
+                    <local:CustomIndicator />
+                </cc:DropdownControl.Content>
+            </cc:DropdownControl>-->
+            
+            <Rectangle Width="54" Fill="White" VerticalAlignment="Stretch" Margin="1,0,0,0" />
+        </StackPanel>
+    </Grid>
+</UserControl>

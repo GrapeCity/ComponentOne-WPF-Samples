@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="GanttViewSample.GanttViewDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GanttViewSample"
+             mc:Ignorable="d" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:GanttView="clr-namespace:C1.GanttView;assembly=C1.WPF.GanttView.4.5.2"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <c1:C1GanttView x:Name="gv" StartDate="3/29/2016">
+            <c1:C1GanttView.Columns>
+                <GanttView:TaskPropertyColumn Property="Mode" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Name"/>
+                <GanttView:TaskPropertyColumn Property="Duration" Width="65" />
+                <GanttView:TaskPropertyColumn Property="DurationUnits" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Start" />
+                <GanttView:TaskPropertyColumn Property="Finish" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="PercentComplete" />
+                <GanttView:TaskPropertyColumn Property="ConstraintType" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintDate" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Predecessors" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Deadline" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Calendar" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ResourceNames" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Notes" Visible="False"/>
+            </c1:C1GanttView.Columns>
+        </c1:C1GanttView>
+    </Grid>
+</UserControl>

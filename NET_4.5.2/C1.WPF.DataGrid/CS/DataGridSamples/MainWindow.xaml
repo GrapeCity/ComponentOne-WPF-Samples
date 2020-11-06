@@ -1,0 +1,64 @@
+﻿<Window x:Class="DataGridSamples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DataGridSamples"
+        Title="MainWindow" Height="400" Width="600">
+    <Grid>
+        <c1:C1TabControl TabItemShape="Sloped" Padding="10" BorderThickness="1" BorderBrush="LightGray">
+            <c1:C1TabControl.ItemContainerStyle>
+                <Style TargetType="c1:C1TabItem">
+                    <Setter Property="Padding" Value="8" />
+                </Style>
+            </c1:C1TabControl.ItemContainerStyle>
+            <c1:C1TabItem Header="Demo">
+                <local:DemoGrid/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Custom Filters">
+                <local:FullTextSearch/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Custom Columns">
+                <local:CustomColumns/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Add / Remove Rows">
+                <local:AddRemoveRows/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Hierarchical">
+                <local:Hierarchical/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Hierarchical Tasks">
+                <local:HierarchicalTasks/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Hyperlinks">
+                <local:Hyperlinks/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Drag And Drop Rows">
+                <local:DragAndDropRows/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Validation">
+                <local:Validation/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Selection">
+                <local:Selection/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Export Formats">
+                <local:ExportFormats/>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Conditional Format">
+                <local:ConditionalFormat />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Performance">
+                <local:Performance />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Deferred Scrolling">
+                <local:DeferredScrolling />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Grand Total">
+                <local:GrandTotal />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="Summaries">
+                <local:GroupSummary />
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+    </Grid>
+</Window>

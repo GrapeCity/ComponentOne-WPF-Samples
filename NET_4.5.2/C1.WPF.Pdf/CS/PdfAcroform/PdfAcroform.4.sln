@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfAcroform.4", "PdfAcroform.4.csproj", "{97364EB5-FA1E-47B9-AB07-F94D5336877F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97364EB5-FA1E-47B9-AB07-F94D5336877F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97364EB5-FA1E-47B9-AB07-F94D5336877F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97364EB5-FA1E-47B9-AB07-F94D5336877F}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97364EB5-FA1E-47B9-AB07-F94D5336877F}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{97364EB5-FA1E-47B9-AB07-F94D5336877F}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{97364EB5-FA1E-47B9-AB07-F94D5336877F}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{97364EB5-FA1E-47B9-AB07-F94D5336877F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97364EB5-FA1E-47B9-AB07-F94D5336877F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

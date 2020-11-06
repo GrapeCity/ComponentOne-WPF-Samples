@@ -1,0 +1,207 @@
+﻿<Window x:Class="GroupSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupSample"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:GanttView="clr-namespace:C1.GanttView;assembly=C1.WPF.GanttView.4.5.2"
+        mc:Ignorable="d"
+        Title="GroupSample" Height="600" Width="1200" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <c1:C1GanttView x:Name="ganttView" ShowToolbar="False" StartDate="10/24/2016">
+            <c1:C1GanttView.Columns>
+                <GanttView:TaskPropertyColumn Property="Mode"/>
+                <GanttView:TaskPropertyColumn Property="Name"/>
+                <GanttView:TaskPropertyColumn Property="Duration" />
+                <GanttView:TaskPropertyColumn Property="DurationUnits" />
+                <GanttView:TaskPropertyColumn Property="Start" />
+                <GanttView:TaskPropertyColumn Property="Finish" />
+                <GanttView:TaskPropertyColumn Property="PercentComplete" />
+                <GanttView:TaskPropertyColumn Property="ConstraintType" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintDate" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Predecessors" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Deadline" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Calendar" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ResourceNames" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Notes" Visible="False"/>
+            </c1:C1GanttView.Columns>
+            <c1:C1GanttView.CalendarExceptions>
+                <GanttView:CalendarException StartDate="10/31/2016" Name="Vacation"/>
+            </c1:C1GanttView.CalendarExceptions>
+            <c1:C1GanttView.TaskResources>
+                <GanttView:Resource ID="1640417825" Name="Rita Been" Notes="Tester" Cost="100"/>
+                <GanttView:Resource ID="239555279" Name="Eric Smith" Notes="Project Manager" Cost="250"/>
+                <GanttView:Resource ID="766290656" Name="Daniel Hank" Notes="Analyst" Cost="150"/>
+                <GanttView:Resource ID="2011144056" Name="Juan Carlos" Notes="Developer" Cost="300"/>
+                <GanttView:Resource ID="448108000" Name="Mike Jones" Notes="Developer" Cost="100"/>
+                <GanttView:Resource ID="1869891731" Name="Chris Lee" Notes="Developer" Cost="400"/>
+                <GanttView:Resource ID="556319480" Name="Sarah Robert" Notes="Tester" Cost="250"/>
+                <GanttView:Resource ID="1334638351" Name="Micheal Owen" Notes="Documentation Maker" Cost="200"/>
+                <GanttView:Resource ID="2101511829" Name="Juliet Paul" Notes="Documentation Maker" Cost="150"/>
+            </c1:C1GanttView.TaskResources>
+            <c1:C1GanttView.ProjectSummary>
+                <GanttView:Task ID="1331333418" Name="Project Summary Task" Mode="Automatic" />
+            </c1:C1GanttView.ProjectSummary>
+            <c1:C1GanttView.Tasks>
+                <GanttView:Task ID="939539143" Name="Acquisition" Mode="Automatic" OutlineParentID="1331333418"/>
+                <GanttView:Task ID="242148085" Name="Manuscript received" Mode="Automatic" Duration="0" ConstraintDate="10/25/2016" ConstraintType="StartNoEarlierThan" OutlineParentID="939539143"/>
+                <GanttView:Task ID="925207044" Name="Content edit" Mode="Automatic" Duration="24" PercentComplete="100"  ConstraintDate="10/25/2016" ConstraintType="StartNoEarlierThan" OutlineParentID="939539143">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="242148085" />
+                    </GanttView:Task.Predecessors>
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="766290656"/>
+                        <GanttView:ResourceRef ResourceID="239555279"/>
+                        <GanttView:ResourceRef ResourceID="2101511829"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task ID="362538391" Name="Handoff to Editorial" OutlineParentID="939539143" Start="11/29/2016 12:30" Finish="11/29/2016 12:30">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="925207044"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="1807223556" Mode="Automatic"  Name="Editorial" OutlineParentID="1331333418"/>
+                <GanttView:Task ID="1552574403" Name="Organize manuscript for copyedit" Start="11/30/2016 8:30" Finish="12/7/2016 8:30" PercentComplete="20" OutlineParentID="1807223556">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="448108000" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="362538391"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="1179983348" Name="Copyedit" Start="12/7/2016 12:30" Finish="1/4/2017 8:30" OutlineParentID="1807223556">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="448108000" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1552574403"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="2098269195" Name="Copyedit incorp" Start="1/4/2017 12:30" Finish="1/11/2017 8:30" OutlineParentID="1807223556">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="2011144056" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1179983348"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="792666599" Name="Handoff to Production" Start="1/11/2017 12:30" Finish="1/11/2017 12:30" OutlineParentID="1807223556">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="2098269195"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="2121238572" Mode="Automatic" Name="Design and Production" Start="11/30/2016 8:30" />
+                <GanttView:Task ID="312019882" Name="Cover design" PercentComplete="10" Start="11/30/2016 8:30" Finish="12/6/2016 8:30" OutlineParentID="2121238572">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="1869891731" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1552574403" PredecessorType="StartToStart"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="2131650479" Name="Set pages" PercentComplete="60" Start="12/6/2016 12:30" Finish="12/20/2016 8:30" OutlineParentID="2121238572">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="556319480" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="312019882"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="1600264846" Name="Interior illustration design" Start="12/20/2016 12:30" Finish="1/10/2017 8:30" OutlineParentID="2121238572">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="1869891731" Amount="10"/>
+                        <GanttView:ResourceRef ResourceID="766290656" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="2131650479"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="185936048" Mode="Automatic" Name="Pages review" Start="1/11/2017 8:30" OutlineParentID="1331333418"/>
+                <GanttView:Task ID="1447717244" Name="Proofread and index" Start="1/11/2017 12:30" Finish="1/25/2017 8:30" OutlineParentID="185936048">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="1334638351" Amount="10"/>
+                        <GanttView:ResourceRef ResourceID="2011144056" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1600264846"/>
+                        <GanttView:Predecessor PredecessorTaskID="792666599"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="1352797036" Name="Incorporate 1st Pages review" Start="1/25/2017 12:30" Finish="2/1/2017 8:30" OutlineParentID="185936048">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="2101511829" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1447717244"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="1301076315" Name="Send proofed pages to Production" Start="2/1/2017 12:30" Finish="2/1/2017 12:30" OutlineParentID="185936048">
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1352797036"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="562163695" Name="Enter page corrections and index" Start="2/2/2017 8:30" Finish="2/9/2017 8:30" OutlineParentID="185936048">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="556319480" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1301076315"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="19552401" Mode="Automatic" Name="Color prep and printing" Start="2/9/2017 8:30" OutlineParentID="185936048"/>
+                <GanttView:Task ID="1597983629" Name="Send to color house" Start="2/9/2017 12:30" Finish="2/14/2017 8:30" OutlineParentID="19552401">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="1640417825" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="562163695"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="591786279" Name="Generate proofs" Start="2/14/2017 12:30" Finish="2/21/2017 8:30" OutlineParentID="19552401">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="2011144056" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1597983629"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="816445275" Name="Print and ship" Start="2/21/2017 12:30" Finish="3/21/2017 8:30" OutlineParentID="19552401">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef ResourceID="1334638351" Amount="10"/>
+                        <GanttView:ResourceRef ResourceID="556319480" Amount="10"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="591786279"/>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task ID="514161404"/>
+                <GanttView:Task ID="992389273"/>
+                <GanttView:Task ID="246882487"/>
+                <GanttView:Task ID="1546671531"/>
+                <GanttView:Task ID="2076126586"/>
+            </c1:C1GanttView.Tasks>
+        </c1:C1GanttView>
+        <Grid Grid.Row="1">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <GroupBox Margin="5" Header="Summary" x:Name="SummaryGroup">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Margin="5" VerticalAlignment="Center" Width="90" Content="Indent" Click="Indent_Click"/>
+                        <Button Margin="5" VerticalAlignment="Center" Width="90" Content="Outdent" Click="Outdent_Click"/>
+                        <CheckBox x:Name="ShowProjectSummary" Content="Show Project Summary" Click="ShowProjectSummary_Click" VerticalAlignment="Center" Width="150"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Margin="5" Header="Group">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <ComboBox x:Name="GroupSelector" SelectionChanged="GroupSelector_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Value" VerticalAlignment="Center" Margin="5" Width="150" />
+                        <CheckBox x:Name="MaintainHierarchy" Content="Maintain Hierarchy" Click="MaintainHierarchy_Click" VerticalAlignment="Center" Width="150"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

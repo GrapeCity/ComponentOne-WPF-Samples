@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="RichTextBoxSamples.DemoRichTextBox" mc:Ignorable="d" Background="#FF374F5D" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+	<Border Background="#FFE2EBEF" BorderBrush="#FF617384" BorderThickness="1">
+		<Grid x:Name="LayoutRoot">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+	            <RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+
+            <c1:C1SimplifiedRichTextBoxToolbar x:Name="ribbon" RichTextBox="{Binding ElementName=richTB}" Margin="-1,-1,-1,0"  />
+			<c1:C1RichTextBox x:Name="richTB" Grid.Row="1" ViewMode="Print" HorizontalContentAlignment="Center" BorderThickness="0" LineNumberMode="Continuous" />
+	        
+			<Border BorderBrush="#FF617384" BorderThickness="0 1 0 0" Grid.Row="2">
+		        <c1:C1RichTextBoxToolbar RichTextBox="{Binding ElementName=richTB}">
+		            <c1:C1RichTextBoxToolbar.Template>
+		                <ControlTemplate TargetType="c1:C1RichTextBoxToolbar">
+		                    <c1:C1ToolbarStrip HorizontalAlignment="Right" Margin="2">
+		                        <c1:C1PrintViewTool />
+		                        <c1:C1DraftViewTool />
+		                        <c1:C1ZoomComboTool />
+		                        <c1:C1ZoomSliderTool />
+		                    </c1:C1ToolbarStrip>
+		                </ControlTemplate>
+		            </c1:C1RichTextBoxToolbar.Template>
+		        </c1:C1RichTextBoxToolbar>
+			</Border>	
+		</Grid>
+	</Border>	
+</UserControl>

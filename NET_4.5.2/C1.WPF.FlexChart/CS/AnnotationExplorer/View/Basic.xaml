@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="AnnotationExplorer.Basic"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AnnotationExplorer"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid>
+        <Grid.DataContext>
+            <local:AnnotationViewModel />
+        </Grid.DataContext>
+        <c1:C1FlexChart x:Name="flexChart" ChartType="Line" ToolTipContent="{}{y}" ItemsSource="{Binding Data}">
+            <c1:C1FlexChart.AxisY>
+                <c1:Axis Min="0" Max="100" AxisLine="False" MajorGrid="True" MajorTickMarks="None"/>
+            </c1:C1FlexChart.AxisY>
+            <c1:Series SeriesName="Base dataList" Binding="Y" BindingX="X"/>
+            <c1:C1FlexChart.Layers>
+                <c1:AnnotationLayer>
+                    <c1:AnnotationLayer.Annotations>
+                        <c1:Text Content="Relative" Location="0.55, 0.15" Attachment="Relative" TooltipText="This is a text annotation&#x000A;Locaton: { x: 0.55, y: 0.15 }&#x000A;Attachment: Relative">
+                            <c1:Text.Style>
+                                <c1:ChartStyle FontSize="15" Stroke="Black" FontFamily="GenericSansSerif" />
+                            </c1:Text.Style>
+                        </c1:Text>
+                        <c1:Ellipse Content="Relative" Location="0.4, 0.45" Width="120" Height="80" Attachment="Relative"
+                                    TooltipText="This is an ellipse annotation&#x000A;Location: { x: 0.4, y: 0.45 }&#x000A;Attachment: Relative">
+                            <c1:Ellipse.Style>
+                                <c1:ChartStyle Fill="Goldenrod" Stroke="DarkGoldenrod" FontWeight="Bold" FontSize="10" FontFamily="GenericSansSerif" />
+                            </c1:Ellipse.Style>
+                        </c1:Ellipse>
+                        <c1:Circle Content="DataIndex" Radius="50" SeriesIndex="0" PointIndex="27" Attachment="DataIndex"
+                                   TooltipText="This is a circle annotation&#x000A;Radius: 50&#x000A;PointIndex: 27&#x000A;Attachment: DataIndex">
+                            <c1:Circle.Style>
+                                <c1:ChartStyle Fill="LightSeaGreen" FontSize="10" Stroke="DarkCyan" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </c1:Circle.Style>
+                        </c1:Circle>
+                        <c1:Rectangle Content="DataCoordinate" Width="130" Height="100" Location="37, 30" Attachment="DataCoordinate"
+                                      TooltipText="This is a rectangle annotation&#x000A;Location: { x: 37, y: 30}&#x000A;Attachment: DataCoordinate">
+                            <c1:Rectangle.Style>
+                                <c1:ChartStyle Fill="SlateBlue" FontSize="10" Stroke="DarkSlateBlue" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </c1:Rectangle.Style>
+                        </c1:Rectangle>
+                        <c1:Square Content="DataIndex" Length="80" SeriesIndex="0" PointIndex="45" Attachment="DataIndex"
+                                      TooltipText="This is a square annotation&#x000A;Length: 80&#x000A;PointIndex: 45&#x000A;Attachment: DataIndex">
+                            <c1:Square.Style>
+                                <c1:ChartStyle Fill="SandyBrown" FontSize="10" Stroke="Chocolate" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </c1:Square.Style>
+                        </c1:Square>
+                        <c1:Polygon Content="Absolute" Attachment="Absolute"
+                                      TooltipText="This is a polygon annotation&#x000A;Points: [(200, 25),(150, 70),(175, 115),(225, 115),(250, 70)]&#x000A;Attachment: Absolute">
+                            <c1:Polygon.Style>
+                                <c1:ChartStyle Fill="Red" StrokeThickness="3" FontSize="10" Stroke="DarkTurquoise" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </c1:Polygon.Style>
+                            <c1:Polygon.Points>
+                                <Point X="200" Y="25"/>
+                                <Point X="150" Y="70"/>
+                                <Point X="175" Y="115"/>
+                                <Point X="225" Y="115"/>
+                                <Point X="250" Y="70"/>
+                            </c1:Polygon.Points>
+                        </c1:Polygon>
+                        <c1:Line Content="Absolute" Start="50, 200" End="300, 350" Attachment="Absolute"
+                                      TooltipText="This is a line annotation&#x000A;Points: [(50, 200),(300, 350)]&#x000A;Attachment: Absolute">
+                            <c1:Line.Style>
+                                <c1:ChartStyle StrokeThickness="4" FontSize="10" Stroke="DarkTurquoise" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </c1:Line.Style>
+                        </c1:Line>
+                        <c1:Image Location="22, 30" Attachment="DataCoordinate" TooltipText="This is an image annotation&#x000A;Location: { x: 22, y: 30}&#x000A;Attachment: DataCoordinate" Source="/Resources/Image.png"/>
+                    </c1:AnnotationLayer.Annotations>
+                </c1:AnnotationLayer>
+            </c1:C1FlexChart.Layers>
+        </c1:C1FlexChart>
+    </Grid>
+</UserControl>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="ColumnFilter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Lucida Sans"
+        Title="C1FlexGrid: Column Filters" Height="350" Width="650">
+    
+    <Window.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="Margin" Value="4 0" />
+            <Setter Property="Padding" Value="8 2" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- header -->
+        <TextBlock Text="C1FlexGrid: Column Filters" FontSize="16" FontWeight="Bold" Margin="4" />
+
+        <!-- controls -->
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button Name="_btnClear" Content="Clear Filter" Click="_btnClear_Click" ToolTipService.ToolTip="Clear all filters currently applied to the columns." />
+            <Button Name="_btnBlue" Content="Blue Color" Click="_btnBlue_Click" ToolTipService.ToolTip="Show only products with Color = Blue." />
+            <Button Name="_btnExpensive" Content="Expensive Products" Click="_btnExpensive_Click" ToolTipService.ToolTip="Show only products that cost more than $900." />
+            <Button Name="_btnSave" Content="Save Filter" Click="_btnSave_Click" ToolTipService.ToolTip="Save current filter definition as a string." />
+            <Button Name="_btnLoad" Content="Load Filter" Click="_btnLoad_Click" ToolTipService.ToolTip="Restore previously saved filter definition." />
+            <CheckBox Name="_chkCollectionView" Content="UseCollectionView" VerticalAlignment="Center" Click="_chkCollectionView_Click" ToolTipService.ToolTip="Apply filter to source collection (instead of setting row visibility)." />
+        </StackPanel>
+
+        <!-- C1FlexGrid -->
+        <c1:C1FlexGrid x:Name="_flex" Grid.Row="2" >
+
+            <!-- use C1FlexGridFilterService to add the filter -->
+            <c1:C1FlexGridFilterService.FlexGridFilter>
+                <c1:C1FlexGridFilter FilterApplied="C1FlexGridFilter_FilterApplied" />
+            </c1:C1FlexGridFilterService.FlexGridFilter>
+        </c1:C1FlexGrid>
+
+        <!-- status bar -->
+        <TextBlock Name="_txtStatus" Grid.Row="3" HorizontalAlignment="Right" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="FinancialChartExplorer.Overlays"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FinancialChartExplorer"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <local:IntToSeriesVisibilityConverter x:Key="ITSVConverter" />
+            <local:EnumConverter x:Key="EnumConverter"/>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <c1:C1FinancialChart
+            x:Name="overlayChart"
+            ItemsSource="{Binding Data}"
+            Background="White"
+            MouseMove="financialChart_MouseMove"
+            ChartType="Candlestick"
+            BindingX="Date">
+            <c1:FinancialSeries Binding="High,Low,Open,Close" SeriesName="Box"/>
+            <c1:BollingerBands x:Name="bollinger" Period="20" Binding="High,Low,Close" SeriesName="Bolligner Bands" Visibility="{Binding Source={x:Reference Name=cbOverlays}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=0}"/>
+            <c1:Envelopes x:Name="envelopes" Period="20" Size="0.03" Binding="High,Low,Close" SeriesName="Envelopes" Visibility="{Binding Source={x:Reference Name=cbOverlays}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=1}"/>
+            <c1:IchimokuCloud x:Name="ichimoku" Binding="High,Low,Close" SeriesName="Ichimoku Cloud" Visibility="{Binding Source={x:Reference Name=cbOverlays}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=2}">
+                <c1:IchimokuCloud.BearishCloudColor>
+                    <SolidColorBrush Color="Tomato"/>
+                </c1:IchimokuCloud.BearishCloudColor>
+                <c1:IchimokuCloud.BullishCloudColor>
+                    <SolidColorBrush Color="LightGreen"/>
+                </c1:IchimokuCloud.BullishCloudColor>
+                <c1:IchimokuCloud.ConversionLineStyle>
+                    <c1:ChartStyle StrokeThickness="0.7" Stroke="Gold"/>
+                </c1:IchimokuCloud.ConversionLineStyle>
+                <c1:IchimokuCloud.BaseLineStyle>
+                    <c1:ChartStyle StrokeThickness="0.7" Stroke="LightSlateGray"/>
+                </c1:IchimokuCloud.BaseLineStyle>
+                <c1:IchimokuCloud.LeadingSpanALineStyle>
+                    <c1:ChartStyle StrokeThickness="0.8" Stroke="LightGreen"/>
+                </c1:IchimokuCloud.LeadingSpanALineStyle>
+                <c1:IchimokuCloud.LeadingSpanBLineStyle>
+                    <c1:ChartStyle  StrokeThickness="0.8" Stroke="Tomato"/>
+                </c1:IchimokuCloud.LeadingSpanBLineStyle>
+                <c1:IchimokuCloud.LaggingLineStyle>
+                    <c1:ChartStyle StrokeThickness="0.7" Stroke="CornflowerBlue"/>
+                </c1:IchimokuCloud.LaggingLineStyle>
+            </c1:IchimokuCloud>
+            <c1:Alligator x:Name="alligator" Binding="High,Low,Close" SeriesName="Alligator" Visibility="{Binding Source={x:Reference Name=cbOverlays}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=3}">
+                <c1:Alligator.JawLineStyle>
+                    <c1:ChartStyle StrokeThickness="0.8" Stroke="LightGreen"/>
+                </c1:Alligator.JawLineStyle>
+                <c1:Alligator.TeethLineStyle>
+                    <c1:ChartStyle StrokeThickness="0.8" Stroke="Tomato"/>
+                </c1:Alligator.TeethLineStyle>
+                <c1:Alligator.LipsLineStyle>
+                    <c1:ChartStyle StrokeThickness="0.8" Stroke="CornflowerBlue"/>
+                </c1:Alligator.LipsLineStyle>              
+            </c1:Alligator>
+            <c1:ZigZag x:Name="zigZag" Binding="High,Low,Close" SeriesName="ZigZag" Visibility="{Binding Source={x:Reference Name=cbOverlays}, Path=SelectedIndex, Converter={StaticResource ITSVConverter}, ConverterParameter=4}">
+                <c1:ZigZag.Style>
+                    <c1:ChartStyle StrokeThickness="0.8" Stroke="Green"/>
+                </c1:ZigZag.Style>
+            </c1:ZigZag>
+            <c1:C1FinancialChart.AxisX>
+                <c1:Axis LabelAngle="45" MajorUnit="3"/>
+            </c1:C1FinancialChart.AxisX>
+        </c1:C1FinancialChart>
+        <StackPanel Grid.Row="1" Margin="0 10">
+            <StackPanel.Resources>
+                <Style TargetType="c1:C1NumericBox">
+                    <Setter Property="Width" Value="120"/>
+                    <Setter Property="Margin" Value="10 0 20 0"/>
+                </Style>
+                <local:IntToVisibilityConverter x:Key="ITVConverter" />
+            </StackPanel.Resources>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Overlay" Margin="10 0"/>
+                <ComboBox x:Name="cbOverlays" ItemsSource="{Binding OverlayTypes}" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="spBollingerOptions" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=0}">
+                <TextBlock Text="Period" Margin="15 0 0 0"/>
+                <c1:C1NumericBox x:Name="cbPeriod" Value="20" Minimum="2" Maximum="86" ValueChanged="cbPeriod_ValueChanged"/>
+                <TextBlock Text="Multiplier"/>
+                <c1:C1NumericBox x:Name="cbMultiplier" Value="2" Minimum="1" Maximum="100" ValueChanged="cbMultiplier_ValueChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="spEnvelopesOptions" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=1}" Margin="0 10">
+                <TextBlock Text="Period" Margin="15 0 0 0"/>
+                <c1:C1NumericBox x:Name="cbEnvelopesPeriod" Value="20" Minimum="2" Maximum="86" ValueChanged="cbEnvelopesPeriod_ValueChanged"/>
+                <TextBlock Text="Size"/>
+                <c1:C1NumericBox x:Name="cbSize" Value="0.03" Minimum="0" Maximum="1" Format="P" ValueChanged="cbSize_ValueChanged"/>
+                <TextBlock Text="Type" Margin="0 0 10 0"/>
+                <ComboBox x:Name="cbTypes" ItemsSource="{Binding Types}" Width="120" SelectedValue="{Binding ElementName=overlayChart, Path=Series[2].Type, Converter={StaticResource EnumConverter}}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="ichimokuConversion" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=2}">
+                <TextBlock Text="Conversion Period" Margin="15 0 0 0"/>
+                <c1:C1NumericBox x:Name="conversionNumberic" Value="9" Minimum="1" Maximum="100" ValueChanged="conversionNumberic_ValueChanged"/>
+                <TextBlock Text="Base Period"/>
+                <c1:C1NumericBox x:Name="baseNumberic" Value="26" Minimum="1" Maximum="100" ValueChanged="baseNumberic_ValueChanged"/>
+                <TextBlock Text="Leading Period"/>
+                <c1:C1NumericBox x:Name="leadingNumberic" Value="52" Minimum="1" Maximum="100" ValueChanged="leadingNumberic_ValueChanged"/>
+                <TextBlock Text="Lagging Period"/>
+                <c1:C1NumericBox x:Name="laggingNumberic" Value="26" Minimum="1" Maximum="100" ValueChanged="laggingNumberic_ValueChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="spAlligatorrOptions" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=3}">
+                <TextBlock Text="JawPeriod" Margin="15 0 0 0"/>
+                <c1:C1NumericBox x:Name="cbJawPeriod" Value="13" Minimum="1" Maximum="100" ValueChanged="cbJawPeriod_ValueChanged"/>
+                <TextBlock Text="JawPeriod" Margin="15 0 0 0"/>
+                <c1:C1NumericBox x:Name="cbTeethPeriod" Value="8" Minimum="1" Maximum="100" ValueChanged="cbTeethPeriod_ValueChanged"/>
+                <TextBlock Text="LipsPeriod" Margin="15 0 0 0"/>
+                <c1:C1NumericBox x:Name="cbLipsPeriod" Value="5" Minimum="1" Maximum="100" ValueChanged="cbLipsPeriod_ValueChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="spZigZagOptions" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=4}">               
+                <TextBlock Text="Distance" Margin="15 0 0 0"/>
+                <c1:C1NumericBox x:Name="cbDistance" Value="5" Minimum="1" Maximum="100" ValueChanged="cbDistance_ValueChanged"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MainTestApplication.CustomGrouping"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1:C1FlexGridGroupPanel 
+                        x:Name="_groupPanelCustomGrouping" Grid.Row="0" Background="WhiteSmoke"
+                        WatermarkText="Drag column headers here to create groups."
+                        MaxGroups="8"
+                        HideGroupedColumns="False"
+                        DragMarkerColor="#FF5C54"
+                        FlexGrid="{Binding ElementName=_flexCustomGrouping}"/>
+        <c1:C1FlexGrid x:Name="_flexCustomGrouping" Grid.Row="1" />
+    </Grid>
+</UserControl>

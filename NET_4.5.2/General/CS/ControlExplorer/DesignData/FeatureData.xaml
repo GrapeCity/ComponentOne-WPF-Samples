@@ -1,0 +1,50 @@
+﻿<local:FeatureDescription xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                          xmlns:local="clr-namespace:ControlExplorer"
+                          Description="Shows all the functionality supported by the C1DataGrid by default including sorting, filtering, grouping, frozen columns and column/row resizing.">
+    <local:FeatureDescription.Control>
+        <local:ControlDescription Name="DataGrid" Description="Rich DataGrid with advanced features for displaying, analysing, and editing tabular data.">
+            <local:ControlDescription.Features>
+                <local:FeatureDescription Name="See it in action" Description="Shows all the functionality supported by the C1DataGrid by default including sorting, filtering, grouping, frozen columns and column/row resizing."/>
+                <local:FeatureDescription Name="Selection" Description="Shows the different selection options for C1DataGrid: single cell, single row, single column, single range, multi-row, multi-column, and multi-range."/>
+                <local:FeatureDescription Name="Data Input" IsExpanded="True">
+                    <local:FeatureDescription.SubFeatures>
+                        <local:FeatureDescription Name="Add &amp; Remove" Description="C1DataGrid is specially designed for data input with support of &quot;new row&quot; and deletion."/>
+                        <local:FeatureDescription Name="Validation" Description="C1DataGrid also supports the built-in Silverlight validation framework."/>
+                        <local:FeatureDescription Name="Async Validation" Description="Shows data validation asynchronously as the user scrolls."/>
+                    </local:FeatureDescription.SubFeatures>
+                </local:FeatureDescription>
+                <local:FeatureDescription Name="Filters" Description="">
+                    <local:FeatureDescription.SubFeatures>
+                        <local:FeatureDescription Name="Filter Row"/>
+                        <local:FeatureDescription Name="Full Text search"/>
+                        <local:FeatureDescription Name="Auto Filter"/>
+                        <local:FeatureDescription Name="Custom Filters"/>
+                        <local:FeatureDescription Name="Default - Excel Like"/>
+                    </local:FeatureDescription.SubFeatures>
+                </local:FeatureDescription>
+                <local:FeatureDescription Name="Grouping">
+                    <local:FeatureDescription.SubFeatures>
+                        <local:FeatureDescription Name="" Description=""/>
+                    </local:FeatureDescription.SubFeatures>
+                </local:FeatureDescription>
+                <local:FeatureDescription Name="Merging">
+                    <local:FeatureDescription.SubFeatures>
+                        <local:FeatureDescription Name="" Description=""/>
+                    </local:FeatureDescription.SubFeatures>
+                </local:FeatureDescription>
+                <local:FeatureDescription Name="Big Data">
+                    <local:FeatureDescription.SubFeatures>
+                        <local:FeatureDescription Name="" Description=""/>
+                    </local:FeatureDescription.SubFeatures>
+                </local:FeatureDescription>
+                <local:FeatureDescription Name="ClearStyle"/>
+                <local:FeatureDescription Name="More">
+                    <local:FeatureDescription.SubFeatures>
+                        <local:FeatureDescription Name="" Description=""/>
+                    </local:FeatureDescription.SubFeatures>
+                </local:FeatureDescription>
+            </local:ControlDescription.Features>
+        </local:ControlDescription>
+    </local:FeatureDescription.Control>
+</local:FeatureDescription>

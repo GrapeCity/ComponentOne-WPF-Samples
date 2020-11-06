@@ -1,0 +1,30 @@
+PDF
+
+THE ORIGINS OF THE Portable Document Format and the Adobe Acrobat product family date to early 1990. At that time, the PostScript page description language was rapidly becoming the worldwide standard for the production of the printed page. PDF builds on the PostScript page description language by layering a document structure and interactive navigation features on PostScript's underlying imaging model, providing a convenient, efficient mechanism enabling documents to be reliably viewed and printed anywhere.
+
+The PDF specification was first published at the same time the first Acrobat products were introduced in 1993. Since then, updated versions of the specification have been and continue to be available from Adobe via the World Wide Web. This book is the third professionally published edition of the specification. Like its predecessors, it is completely self-contained, including the precise documentation of the underlying imaging model from PostScript along with the PDF-specific features that are combined in version 1.4 of the PDF standard.
+
+Over the past eight years, aided by the explosive growth of the Internet, PDF has become the de facto standard for the electronic exchange of documents. Well over 200 million copies of the free Acrobat Reader application have been distributed around the world, facilitating efficient sharing of digital content. In addition, PDF is now the industry standard for the intermediate representation of printed material in electronic prepress systems for conventional printing applications. As major corporations, government agencies, and educational institutions streamline their operations by replacing paper-based work flow with electronic exchange of information, the impact and opportunity for the application of PDF will continue to grow at a rapid pace.
+
+PDF is the file format that underlies Adobe ePaper Solutions, a family of products supporting Adobe's vision for Network Publishing -- the process of creating, managing, and accessing digital content on diverse platforms and devices. ePaper fulfills a set of requirements related to business process needs for the global desktop user,including:
+
+* Preservation of document fidelity across the enterprise, independently of the device, platform, and software
+
+* Merging of content from diverse sources -- Web sites, word processing and spreadsheet programs, scanned documents, photos, and graphics -- into one self-contained document while maintaining the integrity of all original source documents
+
+* Real-time collaborative editing of documents from multiple locations or platforms
+
+* Digital signatures to certify authenticity
+
+* Security and permissions to allow the creator to retain control of the document and associated rights
+
+* Accessibility of content to those with disabilities
+
+* Extraction and reuse of content using other file formats and applications
+
+A significant number of third-party developers and systems integrators offer customized enhancements and extensions to Adobe's core family of products.
+
+Adobe publishes the PDF specification in order to encourage the development of such third-party applications. The emergence of PDF as a standard for electronic information exchange is the result of concerted effort by many individuals in both the private and public sectors. Without the dedication of Adobe employees, our industry partners, and our customers, the widespread acceptance of PDF could not have been achieved. We thank all of you for your continuing support and creative contributions to the success of PDF.
+
+Chuck Geschke and John Warnock
+May 2001

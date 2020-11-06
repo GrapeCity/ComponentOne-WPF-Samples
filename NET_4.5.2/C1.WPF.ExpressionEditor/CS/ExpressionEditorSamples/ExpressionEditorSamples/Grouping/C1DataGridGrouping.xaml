@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="C1ExpressionEditorSample.C1DataGridGrouping"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:C1ExpressionEditorSample"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="groupRowHeaderStyle" TargetType="{x:Type c1:DataGridGroupRowPresenter}">
+            <Setter Property="GroupContent">
+                <Setter.Value>
+                    <DockPanel Grid.Column="2">
+                        <TextBlock Text="{Binding Name}" />
+                        <TextBlock FontWeight="Bold" Text=" ("/>
+                        <TextBlock FontWeight="Bold" Text="{Binding ItemCount}"/>
+                        <TextBlock FontWeight="Bold" Text=" Items)"/>
+                    </DockPanel>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <local:ExpressionEditorEE x:Name="editor" OKContent="Add expression to C1DataGrid groups." CancelContent="Clear all groups"/>
+        <c1:C1DataGrid x:Name="dataGrid" GroupRowStyle="{StaticResource groupRowHeaderStyle}" Grid.Column="1" Grid.RowSpan="2"/>
+    </Grid>
+</UserControl>

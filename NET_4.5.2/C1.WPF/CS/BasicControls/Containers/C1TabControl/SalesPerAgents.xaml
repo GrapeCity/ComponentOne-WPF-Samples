@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl mc:Ignorable="d" x:Class="BasicControls.SalesPerAgents" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:c1Chart="clr-namespace:C1.WPF.C1Chart;assembly=C1.WPF.C1Chart.4.5.2">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Border BorderBrush="#FFCBD2DB" BorderThickness="0,0,0,3">
+			<Border.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFE9ECF0" Offset="0" />
+        						<GradientStop Color="#FFDDE1E7" Offset="0.2" />
+        						<GradientStop Color="#FFCCD3DC" Offset="0.2" />
+        						<GradientStop Color="#FFFAFAFB" Offset="0.647" />
+				</LinearGradientBrush>
+			</Border.Background>
+		</Border>
+		<Grid HorizontalAlignment="Right" Margin="10,6,15,6" Width="38" Height="38">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.138*" />
+				<ColumnDefinition Width="0.862*" />
+			</Grid.ColumnDefinitions>
+			<Ellipse Fill="#FF507494" Stroke="Black" StrokeThickness="0" Grid.ColumnSpan="2" />
+			<Ellipse Fill="White" Stroke="Black" StrokeThickness="0" Margin="2" Grid.ColumnSpan="2" />
+			<Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="14.67" Margin="14.647,3.683,3.683,0" VerticalAlignment="Top" SnapsToDevicePixels="False" Grid.Column="1" Data="M2.9057262E-06,0 C9.3888426,0 17.000002,7.6111584 17.000002,16.999998 L0,17 z" d:LayoutOverrides="VerticalAlignment">
+				<Path.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF89B9E7" Offset="0" />
+						<GradientStop Color="#FF4775A9" Offset="1" />
+					</LinearGradientBrush>
+				</Path.Fill>
+			</Path>
+			<Path Stretch="Fill" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Left" Margin="-1.317,3.71,0,5.918" Width="14.094" SnapsToDevicePixels="False" Grid.Column="1" Data="M15.999996,0 L15.999996,17.449839 C15.999996,17.449839 9.4539824,32.207588 9.4539824,32.207588 C3.8512123,29.427641 0,23.648544 0,16.969946 C0,8.0212078 6.9143362,0.68739891 15.692011,0.019517422 z">
+				<Path.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFCBEC05" Offset="0" />
+						<GradientStop Color="#FF5B9200" Offset="1" />
+					</LinearGradientBrush>
+				</Path.Fill>
+			</Path>
+			<Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="13.954" Margin="8.705,0,3.71,3.683" VerticalAlignment="Bottom" SnapsToDevicePixels="False" Grid.Column="1" Data="M-0.129338,0 L16.96995,0 L16.950432,0.30798525 C16.282549,9.0856609 8.948741,15.999998 2.8312204E-06,15.999998 C-2.5099769,15.90144 -4.6997151,15.38966 -6.6337628,14.547951 z">
+				<Path.Fill>
+					<LinearGradientBrush EndPoint="0.791,0.899" StartPoint="0.056,0.085">
+						<GradientStop Color="#FFCD3D0B" Offset="0" />
+						<GradientStop Color="#FFC13B08" Offset="1" />
+					</LinearGradientBrush>
+				</Path.Fill>
+			</Path>
+		</Grid>
+		<TextBlock Margin="15,0,1,0" Text="Sales Per Sales Agent" TextWrapping="NoWrap" FontFamily="Trebuchet MS" FontSize="24" Foreground="#FF507494" HorizontalAlignment="Left" VerticalAlignment="Center" />
+		<c1Chart:C1Chart ChartType="Pie" x:Name="salesPieChart" Theme="Office2003Royale" Margin="0" Grid.Row="1" BorderThickness="0">
+                        <c1Chart:C1Chart.Data>
+                            <c1Chart:ChartData>
+                                <c1Chart:DataSeries Values="1 2 3 4" />
+                            </c1Chart:ChartData>
+                        </c1Chart:C1Chart.Data>
+                    
+                  <c1Chart:C1ChartLegend FontSize="11" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="legend" Height="152" Width="165" Grid.Row="1" />
+		</c1Chart:C1Chart>
+	</Grid>
+</UserControl>

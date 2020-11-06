@@ -1,0 +1,324 @@
+﻿<UserControl x:Class="DataViewDashboard.Views.GridView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DataViewDashboard"
+             xmlns:vm="clr-namespace:DataViewDashboard.ViewModels"
+             xmlns:v="clr-namespace:DataViewDashboard.Views"
+             xmlns:c="clr-namespace:DataViewDashboard.Converters"
+             mc:Ignorable="d" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <c:AlphabeticTextGroupConverter x:Key="alphabetTextGroupConverter" />
+        <c:CustomerOrdersVisibilityConverter x:Key="customerOrdersVisibilityConverter" />
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <!-- Customers -->
+        <DataTemplate DataType="{x:Type vm:CustomersViewModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <c1:C1FlexGridGroupPanel 
+                        Background="WhiteSmoke"  Foreground="Black"
+                        FlexGrid="{Binding ElementName=c1DataGrid1}"/>
+                <c1:C1FlexGrid x:Name="c1DataGrid1" Grid.Row="1"
+                               ItemsSource="{Binding Source.View}" 
+                               AutoGenerateColumns="False"
+                               MinRowHeight="48"
+                               GridLinesVisibility="Horizontal"
+                               GridLinesBrush="LightGray"
+                               SelectionMode="Row"
+                               ColumnHeaderForeground="Gray"
+                               CursorBackground="#E1F5FE"
+                               SelectionBackground="#BBDEFB"
+                               AllowAddNew="False">
+                    <c1:C1FlexGridFilterService.FlexGridFilter>
+                        <c1:C1FlexGridFilter />
+                    </c1:C1FlexGridFilterService.FlexGridFilter>
+                    <c1:C1FlexGrid.Columns>
+                        <c1:Column Header="First Name" MinWidth="110" Width="*" Binding="{Binding FirstName}" />
+                        <c1:Column Header="Last Name" MinWidth="110" Width="*" Binding="{Binding LastName}"/>
+                        <c1:Column Header="Company Name"  MinWidth="110" Width="*" Binding="{Binding CompanyName}"/>
+                        <c1:Column Header="Email Address" MinWidth="110" Width="*" Binding="{Binding EmailAddress}"/>
+                        <c1:Column Header="Phone" MinWidth="110" Width="*" Binding="{Binding Phone}"  />
+                        <c1:Column Header="Last Modified" MinWidth="180" Width="*">
+                            <c1:Column.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding ModifiedDate}"  />
+                                </DataTemplate>
+                            </c1:Column.CellTemplate>
+                            <c1:Column.CellEditingTemplate>
+                                <DataTemplate>
+                                    <c1:C1DateTimePicker DateTime="{Binding ModifiedDate , Mode=TwoWay}"  />
+                                </DataTemplate>
+                            </c1:Column.CellEditingTemplate>
+                        </c1:Column>
+                    </c1:C1FlexGrid.Columns>
+                    <c1:C1FlexGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <c1:C1TabControl TabItemShape="Rectangle" >
+                                <c1:C1TabItem Header="Addresses">
+                                    <c1:C1FlexGrid ItemsSource="{Binding CustomerAddresses}"
+                                                   AutoGenerateColumns="False"
+                                                   MinRowHeight="48"
+                                                   GridLinesVisibility="Horizontal"
+                                                   GridLinesBrush="LightGray"
+                                                   ColumnHeaderForeground="Gray"
+                                                   CursorBackground="#E1F5FE"
+                                                   SelectionMode="Row"
+                                                   SelectionBackground="#BBDEFB"
+                                                   HeadersVisibility="Column"
+                                                   AllowAddNew="False">
+                                        <c1:C1FlexGrid.Columns>
+                                            <c1:Column Header="Address Type" Binding="{Binding AddressType}" MinWidth="110" Width="*"/>
+                                            <c1:Column Header="Line 1" Binding="{Binding Address.AddressLine1}" MinWidth="110" Width="*"  />
+                                            <c1:Column Header="Line 2" Binding="{Binding Address.AddressLine2}" MinWidth="110" Width="*" />
+                                            <c1:Column Header="City" Binding="{Binding Address.City}"  />
+                                            <c1:Column Header="State/Province" Binding="{Binding Address.StateProvince}" MinWidth="110" Width="*"  />
+                                            <c1:Column Header="Country/Region" Binding="{Binding Address.CountryRegion}" MinWidth="110" Width="*"  />
+                                            <c1:Column Header="Postal Code" Binding="{Binding Address.PostalCode}" MinWidth="110" Width="*" />
+                                            <c1:Column Header="Last Modified" MinWidth="180" Width="*" >
+                                                <c1:Column.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding ModifiedDate}"  />
+                                                    </DataTemplate>
+                                                </c1:Column.CellTemplate>
+                                                <c1:Column.CellEditingTemplate>
+                                                    <DataTemplate>
+                                                        <c1:C1DateTimePicker DateTime="{Binding ModifiedDate , Mode=TwoWay}"  />
+                                                    </DataTemplate>
+                                                </c1:Column.CellEditingTemplate>
+                                            </c1:Column>
+                                        </c1:C1FlexGrid.Columns>
+                                    </c1:C1FlexGrid>
+                                </c1:C1TabItem>
+                                <c1:C1TabItem Header="Orders">
+                                    <v:SalesOrderHeadersGrid />
+                                </c1:C1TabItem>
+                            </c1:C1TabControl>
+                        </DataTemplate>
+                    </c1:C1FlexGrid.RowDetailsTemplate>
+                </c1:C1FlexGrid>
+            </Grid>
+        </DataTemplate>
+        <!-- Products -->
+        <DataTemplate DataType="{x:Type vm:ProductsViewModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <c1:C1FlexGridGroupPanel 
+                        Background="WhiteSmoke"  Foreground="Black"
+                        FlexGrid="{Binding ElementName=c1DataGrid1}"/>
+                <c1:C1FlexGrid x:Name="c1DataGrid1" Grid.Row="1"
+                               ItemsSource="{Binding Source.View}" 
+                               AutoGenerateColumns="False"
+                               MinRowHeight="48"
+                               GridLinesVisibility="Horizontal"
+                               GridLinesBrush="LightGray"
+                               SelectionMode="Row"
+                               ColumnHeaderForeground="Gray"
+                               CursorBackground="#E1F5FE"
+                               SelectionBackground="#BBDEFB"
+                               AllowAddNew="False">
+                    <c1:C1FlexGridFilterService.FlexGridFilter>
+                        <c1:C1FlexGridFilter />
+                    </c1:C1FlexGridFilterService.FlexGridFilter>
+                    <c1:C1FlexGrid.Columns>
+                        <c1:Column Header="Thumbnail">
+                            <c1:Column.CellTemplate>
+                                <DataTemplate>
+                                    <Image 
+                                Margin="4" 
+                                Source="{Binding Path=ThumbNailPhoto, Converter={StaticResource imageFromDBConverter}}"/>
+                                </DataTemplate>
+                            </c1:Column.CellTemplate>
+                        </c1:Column>
+                        <c1:Column Header="Product Number" Binding="{Binding ProductNumber}"/>
+                        <c1:Column Header="Name" MinWidth="110" Width="*" Binding="{Binding Name}"/>
+                        <c1:Column Header="Category" MinWidth="110" Width="*" Binding="{Binding ProductCategory.Name}" />
+                        <c1:Column Header="Product Model" MinWidth="110" Width="*" Binding="{Binding ProductModel.Name}"/>
+                        <c1:Column Header="Color" Binding="{Binding Color}" MinWidth="110" Width="*" />
+                        <c1:Column Header="Standard Cost" Binding="{Binding StandardCost}" MinWidth="110" Width="*"  Format="c2"/>
+                        <c1:Column Header="List Price" Binding="{Binding ListPrice}" MinWidth="110" Width="*" />
+                        <c1:Column Header="Size" Binding="{Binding Size}" MinWidth="110" Width="*" />
+                        <c1:Column Header="Weight" Binding="{Binding Weight}" MinWidth="110" Width="*"  />
+                        <c1:Column Header="Sell Start Date"  MinWidth="180" Width="*"  Format="d" >
+                            <c1:Column.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding SellStartDate}"  />
+                                </DataTemplate>
+                            </c1:Column.CellTemplate>
+                            <c1:Column.CellEditingTemplate>
+                                <DataTemplate>
+                                    <c1:C1DatePicker DisplayDate="{Binding SellStartDate , Mode=TwoWay}"  />
+                                </DataTemplate>
+                            </c1:Column.CellEditingTemplate>
+                        </c1:Column>
+                        <c1:Column Header="Sell End Date" MinWidth="180" Width="*" Format="d">
+                            <c1:Column.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding SellEndDate}"  />
+                                </DataTemplate>
+                            </c1:Column.CellTemplate>
+                            <c1:Column.CellEditingTemplate>
+                                <DataTemplate>
+                                    <c1:C1DatePicker DisplayDate="{Binding SellEndDate , Mode=TwoWay}"  />
+                                </DataTemplate>
+                            </c1:Column.CellEditingTemplate>
+                        </c1:Column>
+                    </c1:C1FlexGrid.Columns>
+                    <c1:C1FlexGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <c1:C1TabControl TabItemShape="Rectangle" >
+                                <c1:C1TabItem Header="Product Descriptions">
+                                    <c1:C1FlexGrid ItemsSource="{Binding ProductModel.ProductModelProductDescriptions}"
+                                                   AutoGenerateColumns="False"
+                                                   MinRowHeight="48"
+                                                   GridLinesVisibility="Horizontal"
+                                                   GridLinesBrush="LightGray"
+                                                   ColumnHeaderForeground="Gray"
+                                                   CursorBackground="#E1F5FE"
+                                                   SelectionMode="Row"
+                                                   SelectionBackground="#BBDEFB"
+                                                   HeadersVisibility="Column"
+                                                   AllowAddNew="False">
+                                        <c1:C1FlexGrid.Columns>
+                                            <c1:Column Header="Culture" Binding="{Binding Culture}" MinWidth="110" Width="*" />
+                                            <c1:Column Header="Product Model" Binding="{Binding ProductModel.Name}" MinWidth="110" Width="*" />
+                                            <c1:Column Header="Description" Binding="{Binding ProductDescription.Description}" MinWidth="110" Width="*" />
+                                        </c1:C1FlexGrid.Columns>
+                                    </c1:C1FlexGrid>
+                                </c1:C1TabItem>
+                                <c1:C1TabItem Header="Sales">
+                                    <v:SalesOrderDetailsChart Height="275" />
+                                </c1:C1TabItem>
+                            </c1:C1TabControl>
+                        </DataTemplate>
+                    </c1:C1FlexGrid.RowDetailsTemplate>
+                </c1:C1FlexGrid>
+            </Grid>
+        </DataTemplate>
+        <!-- Orders -->
+        <DataTemplate DataType="{x:Type vm:OrdersViewModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <c1:C1FlexGridGroupPanel 
+                        Background="WhiteSmoke"  Foreground="Black"
+                        FlexGrid="{Binding ElementName=c1DataGrid1}"/>
+                <c1:C1FlexGrid x:Name="c1DataGrid1" Grid.Row="1"
+                               ItemsSource="{Binding Source.View}" 
+                               AutoGenerateColumns="False"
+                               MinRowHeight="48"
+                               GridLinesVisibility="Horizontal"
+                               GridLinesBrush="LightGray"
+                               SelectionMode="Row"
+                               ColumnHeaderForeground="Gray"
+                               CursorBackground="#E1F5FE"
+                               SelectionBackground="#BBDEFB"
+                               AllowAddNew="False">
+                    <c1:C1FlexGridFilterService.FlexGridFilter>
+                        <c1:C1FlexGridFilter />
+                    </c1:C1FlexGridFilterService.FlexGridFilter>
+                    <c1:C1FlexGrid.Columns>
+                        <c1:Column Header="Order Number" MinWidth="110" Width="*" Binding="{Binding SalesOrderNumber}" />
+                        <c1:Column Header="Purchase Number" MinWidth="110" Width="*" Binding="{Binding PurchaseOrderNumber}" />
+                        <c1:Column Header="Account Number" MinWidth="110" Width="*" Binding="{Binding AccountNumber}" />
+                        <c1:Column Header="Company" MinWidth="110" Width="*" Binding="{Binding Customer.CompanyName}"/>
+                        <c1:Column Header="Sales Person" MinWidth="110" Width="*" Binding="{Binding Customer.SalesPerson}"/>
+                        <c1:Column Header="Order Date" MinWidth="180" Width="*">
+                            <c1:Column.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding OrderDate}"  />
+                                </DataTemplate>
+                            </c1:Column.CellTemplate>
+                            <c1:Column.CellEditingTemplate>
+                                <DataTemplate>
+                                    <c1:C1DateTimePicker DateTime="{Binding OrderDate , Mode=TwoWay}"  />
+                                </DataTemplate>
+                            </c1:Column.CellEditingTemplate>
+                        </c1:Column>
+                        <c1:Column Header="Sub Total" MinWidth="110" Width="*" Binding="{Binding SubTotal}"  Format="c2"/>
+                        <c1:Column Header="Tax Amount" MinWidth="110" Width="*" Binding="{Binding TaxAmt}" Format="c2"/>
+                        <c1:Column Header="Freight" MinWidth="110" Width="*" Binding="{Binding Freight}" />
+                        <c1:Column Header="Total Due" MinWidth="110" Width="*" Binding="{Binding TotalDue}"  Format="c2" />
+                        <c1:Column Header="Due Date" MinWidth="180" Width="*">
+                            <c1:Column.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DueDate}"  />
+                                </DataTemplate>
+                            </c1:Column.CellTemplate>
+                            <c1:Column.CellEditingTemplate>
+                                <DataTemplate>
+                                    <c1:C1DateTimePicker DateTime="{Binding DueDate , Mode=TwoWay}"  />
+                                </DataTemplate>
+                            </c1:Column.CellEditingTemplate>
+                        </c1:Column>
+                        <c1:Column Header="Ship Date" MinWidth="180" Width="*" >
+                            <c1:Column.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding ShipDate}"  />
+                                </DataTemplate>
+                            </c1:Column.CellTemplate>
+                            <c1:Column.CellEditingTemplate>
+                                <DataTemplate>
+                                    <c1:C1DateTimePicker DateTime="{Binding ShipDate , Mode=TwoWay}"  />
+                                </DataTemplate>
+                            </c1:Column.CellEditingTemplate>
+                        </c1:Column>
+                        <c1:Column Header="Status" MinWidth="110" Width="*" Binding="{Binding Status}"/>
+                        <c1:Column Header="Online Order" MinWidth="110" Width="*" Binding="{Binding OnlineOrderFlag}"  />
+                        <c1:Column Header="Last Modified" MinWidth="180" Width="*" Format="d">
+                            <c1:Column.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding ModifiedDate}"  />
+                                </DataTemplate>
+                            </c1:Column.CellTemplate>
+                            <c1:Column.CellEditingTemplate>
+                                <DataTemplate>
+                                    <c1:C1DateTimePicker DateTime="{Binding ModifiedDate , Mode=TwoWay}"  />
+                                </DataTemplate>
+                            </c1:Column.CellEditingTemplate>
+                        </c1:Column>
+                    </c1:C1FlexGrid.Columns>
+                    <c1:C1FlexGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <c1:C1TabControl TabItemShape="Rectangle" >
+                                <c1:C1TabItem Header="Order Details">
+                                    <v:SalesOrderDetailsGrid MaxHeight="400"/>
+                                </c1:C1TabItem>
+                                <c1:C1TabItem Header="Customer">
+                                    <Grid>
+                                        <c1:C1PropertyGrid x:Name="c1PropertyGrid1" SelectedObject="{Binding Customer}" AutoGenerateProperties="False">
+                                            <c1:C1PropertyGrid.PropertyAttributes>
+                                                <c1:PropertyAttribute MemberName="FirstName" DisplayName="First Name"  />
+                                                <c1:PropertyAttribute MemberName="LastName" DisplayName="Last Name"  />
+                                                <c1:PropertyAttribute MemberName="CompanyName" DisplayName="Company Name" />
+                                                <c1:PropertyAttribute MemberName="EmailAddress" DisplayName="Email" />
+                                                <c1:PropertyAttribute MemberName="Phone" />
+                                            </c1:C1PropertyGrid.PropertyAttributes>
+                                        </c1:C1PropertyGrid>
+                                    </Grid>
+                                </c1:C1TabItem>
+                            </c1:C1TabControl>
+                        </DataTemplate>
+                    </c1:C1FlexGrid.RowDetailsTemplate>
+                </c1:C1FlexGrid>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <ContentControl Content="{Binding SelectedDataView}" />
+    </Grid>
+</UserControl>
