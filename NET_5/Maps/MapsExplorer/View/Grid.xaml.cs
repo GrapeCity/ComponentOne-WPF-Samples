@@ -22,6 +22,12 @@ namespace MapsExplorer
         {
             InitializeComponent();
             Tag = "Grid";
+            this.Loaded += Grid_Loaded;
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            maps.Layers.Clear();
             Color fc = Color.FromArgb(0xff, 0xC0, 0x50, 0x4d);
             maps.Foreground = new SolidColorBrush(fc);
 

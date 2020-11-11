@@ -28,6 +28,11 @@ namespace MapsExplorer
         {
             InitializeComponent();
             Tag = "Factories";
+            this.Loaded += Factories_Loaded;
+        }
+
+        private void Factories_Loaded(object sender, RoutedEventArgs e)
+        {
             LoadDataBase();
             InitializeMapLayers();
         }

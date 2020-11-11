@@ -13,9 +13,9 @@ namespace MapsExplorer
                 "Demo",
                 new Lazy<System.Windows.Controls.Control>(() => new DemoMaps())));
             _ = _allItems[0].Sample.Value; //Force first page is loaded immediately
-            _allItems.Add(new SampleItem("Cities",
-                "Cities",
-                new Lazy<System.Windows.Controls.Control>(() => new Cities())));
+            //_allItems.Add(new SampleItem("Cities",
+            //    "Cities",
+            //    new Lazy<System.Windows.Controls.Control>(() => new Cities())));
             _allItems.Add(new SampleItem("Earthquakes",
                 "Earthquakes",
                 new Lazy<System.Windows.Controls.Control>(() => new EarthQuakes())));

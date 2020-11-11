@@ -57,25 +57,25 @@
     <EmbeddedResource Include="Resources\data.zip" />
     <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20203.32" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <Resource Include="Resources\Roboto-Regular.ttf" />
   </ItemGroup>

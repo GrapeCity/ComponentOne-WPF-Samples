@@ -58,29 +58,29 @@
   <ItemGroup>
     <PackageReference Include="C1.DataCollection" Version="1.0.20203.32" />
     <PackageReference Include="C1.WPF.Chart">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection" Version="1.0.20203.32" />
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>

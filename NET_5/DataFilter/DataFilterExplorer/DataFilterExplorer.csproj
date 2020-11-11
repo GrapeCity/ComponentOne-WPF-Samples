@@ -29,19 +29,19 @@
       <Version>1.0.20203.32</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="System.Data.OleDb" Version="4.7.1" />
     <PackageReference Include="System.Linq.Parallel">
