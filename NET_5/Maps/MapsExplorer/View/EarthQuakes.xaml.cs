@@ -20,6 +20,11 @@ namespace MapsExplorer
             InitializeComponent();
             Tag = "Earthquakes";
 
+            this.Loaded += EarthQuakes_Loaded;
+        }
+
+        private void EarthQuakes_Loaded(object sender, RoutedEventArgs e)
+        {
             if (this.maps.Layers.Count == 0)
             {
                 var layer = new VectorLayer()

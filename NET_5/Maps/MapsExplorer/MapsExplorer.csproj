@@ -13,6 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="VectorLayer\EarthQuakes.xaml.cs" />
+    <Compile Remove="View\Cities.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\2.5_day_depth.kml" />
@@ -30,6 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <Page Remove="VectorLayer\EarthQuakes.xaml" />
+    <Page Remove="View\Cities.xaml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\2.5_day_depth.kml" />
@@ -49,10 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

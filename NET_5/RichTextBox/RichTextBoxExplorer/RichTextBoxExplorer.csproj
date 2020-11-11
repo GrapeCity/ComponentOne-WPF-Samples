@@ -16,25 +16,25 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox.Ribbon">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20203.25</Version>
+      <Version>5.0.20203.29</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

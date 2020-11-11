@@ -32,6 +32,11 @@ namespace MapsExplorer
         {
             InitializeComponent();
             Tag = "ShapeFile";
+            this.Loaded += MapShape_Loaded;
+        }
+
+        private void MapShape_Loaded(object sender, RoutedEventArgs e)
+        {
             InitialLocations();
             this.countriesCombo.ItemsSource = Locations;
             countriesCombo.SelectedIndex = 0;

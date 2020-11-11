@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using C1.WPF.Core;
+using C1.WPF.Maps;
+using System;
+using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Net;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-
-using C1.WPF.Maps;
-using C1.WPF.Core;
-using System.Globalization;
 
 namespace MapsExplorer
 {
@@ -28,6 +21,11 @@ namespace MapsExplorer
             InitializeComponent();
             Tag = "KML";
 
+            this.Loaded += MapChart_Loaded;            
+        }
+
+        private void MapChart_Loaded(object sender, RoutedEventArgs e)
+        {
             maps.Source = null;
 
             vl = new VectorLayer()
@@ -133,19 +131,27 @@ namespace MapsExplorer
                     Height = sz,
                     Fill = lgb,
                     Stroke = new SolidColorBrush(Colors.LightGray),
-                    StrokeThickness = 0.5,
-                    RenderTransform = new TranslateTransform() { Y = 0.5 * sz }
+                    StrokeThickness = 0.5
                 });
                 sp.Children.Add(new TextBlock()
                 {
                     Height = sz,
                     Text = cv.Value.ToString(),
                     VerticalAlignment = VerticalAlignment.Center,
+                    Margin = new Thickness(5, 0, 0, 0)
                 });
                 lbi.Content = sp;
                 legend.Items.Add(lbi);
             }
             legend.Items.Add(new ListBoxItem() { Height = sz });
+        }
+
+        private void legend_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            foreach (var item in e.AddedItems)
+            {
+                ((ListBoxItem)item).IsSelected = false;
+            }
         }
     }
 }

@@ -24,6 +24,14 @@ namespace MapsExplorer
         {
             InitializeComponent();
             Tag = "Cities";
+
+            this.Loaded += Cities_Loaded;
+            
+        }
+
+        private void Cities_Loaded(object sender, RoutedEventArgs e)
+        {
+            maps.Layers.Clear();
             Color fc = Color.FromArgb(0xff, 0xC0, 0x50, 0x4d);
             maps.Foreground = new SolidColorBrush(fc);
 

@@ -28,6 +28,11 @@ namespace MapsExplorer
         {
             InitializeComponent();
             Tag = "GeoRSS";
+            this.Loaded += Flicker_Loaded;
+        }
+
+        private void Flicker_Loaded(object sender, RoutedEventArgs e)
+        {
             if (maps.Layers.Count > 0)
             {
                 vl = maps.Layers[0] as VectorLayer;

@@ -26,6 +26,12 @@ namespace MapsExplorer
         {
             InitializeComponent();
             Tag = "Marks";
+            this.Loaded += Marks_Loaded;
+        }
+
+        private void Marks_Loaded(object sender, RoutedEventArgs e)
+        {
+            maps.Layers.Clear();
             vl = new VectorLayer();
             maps.Layers.Add(vl);
             maps.MouseLeftButtonUp += new MouseButtonEventHandler(maps_MouseLeftButtonUp);
