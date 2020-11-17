@@ -13,6 +13,7 @@ using C1.WPF;
 using System.Diagnostics;
 using System.Windows.Markup;
 using C1.WPF.Core;
+using CoreExplorer.Resources;
 
 namespace CoreExplorer
 {
@@ -23,7 +24,7 @@ namespace CoreExplorer
         public DemoListBox()
         {
             InitializeComponent();
-            Tag = "This demo shows how you can drag and drop between two UI controls using C1DragDropManager.";
+            Tag = AppResources.DemoListTag;
 
             // create drag/drop manager
             _dd = new C1DragDropManager();

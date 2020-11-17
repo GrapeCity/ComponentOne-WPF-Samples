@@ -1,15 +1,6 @@
 ﻿using C1.WPF.Maps;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 
 namespace MapsExplorer
 {
@@ -18,7 +9,7 @@ namespace MapsExplorer
         public EarthQuakes()
         {
             InitializeComponent();
-            Tag = "Earthquakes";
+            Tag = Properties.Resources.Earthquakes;
 
             this.Loaded += EarthQuakes_Loaded;
         }

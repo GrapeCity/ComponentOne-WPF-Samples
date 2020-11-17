@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Collections.Generic;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -19,9 +20,7 @@ namespace FlexChartExplorer
         {
             this.InitializeComponent();
             this.Loaded += HitTest_Loaded;
-            Tag = "This view demonstrates the use of the FlexChart's hitTest method.\r" +
-                "The hitTest method takes a point and returns the nearest chart element.It can be used to provide interactive features such as clickable regions, drill - downs, etc.\r" +
-                "Move mouse over chart to see information about the chart element that is closest to the mouse.";
+            Tag = AppResources.HitTestTag;
         }
 
         private void HitTest_Loaded(object sender, RoutedEventArgs e)

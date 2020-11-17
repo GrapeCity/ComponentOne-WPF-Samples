@@ -1,5 +1,6 @@
 ﻿using C1.DataCollection;
 using C1.WPF.DataFilter;
+using DataFilterExplorer.Resources;
 using System;
 using System.IO;
 using System.Windows.Controls;
@@ -17,13 +18,7 @@ namespace DataFilterExplorer
         public FilterEditorSample()
         {
             InitializeComponent();
-            Tag = "This sample shows the basic features of C1FilterEditor. \r" +
-                "This sample demonstrates basic functionality of the C1FilterEditor control. \r" +
-                "The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions \"And\" and \"Or\" or a filter for a data source property. \r" +
-                "The C1FilterEditor.SetExpression method is used to load predefined filter. \r" +
-                "You can use the GetExpression method to get the current filter expression, which you can use for xml serialization. \r" +
-                "In this sample FlexGrid.DataSource property and FilterEditor.DataSource property are both set to the same data collection. \r" +
-                "That allows to filter FlexGrid content based on multiple conditions selected in the C1FilterEditor.";
+            Tag = AppResources.FilterEditorTag;
             C1DataCollection<Car> data = new C1DataCollection<Car>(DataProvider.GetCars());
             filterEditor.ItemsSource = data;
             flexGrid.ItemsSource = data;

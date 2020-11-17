@@ -7,6 +7,7 @@ using System.Windows.Data;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -15,8 +16,7 @@ namespace FlexChartExplorer
         public RangedHistogram()
         {
             this.InitializeComponent();
-            Tag = "This view shows main functionality of Ranged Histogram." + Environment.NewLine + Environment.NewLine +
-               "An unique Histogram chart that can be used to study categorical as well as non-categorical data. Provides multiple binning options as well as support for Overflow and Underflow bins. ";
+            Tag = AppResources.RangedHistogramTag;
         }
 
 

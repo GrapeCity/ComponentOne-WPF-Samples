@@ -8,7 +8,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="C1-ball.ico" />
-    <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\girl1.png" />
@@ -84,11 +83,24 @@
     <Resource Include="Resources\Menu\undo.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20203.29</Version>
+      <Version>5.0.20203.34</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20203.29</Version>
+      <Version>5.0.20203.34</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using C1.Chart;
+using FlexChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace FlexChartExplorer
         public ErrorBar()
         {
             InitializeComponent();
-            Tag = "The Error bar helps you see margins of error and standard deviations at a glance.";
+            Tag = AppResources.ErrorBarTag;
         }
         public List<string> ChartTypes
         {

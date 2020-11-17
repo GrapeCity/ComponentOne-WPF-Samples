@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using C1.Chart;
 using System.Windows.Data;
 using System.Globalization;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -22,13 +23,7 @@ namespace FlexChartExplorer
         public Legend()
         {
             this.InitializeComponent();
-            Tag = "This view shows how you can use the FlexChart legend properties." + Environment.NewLine + Environment.NewLine +
-                "The sample does the following: " + Environment.NewLine + Environment.NewLine +
-                "1.Set legend position property to decide how you locate the legend.such as \"Auto\", \"Left\", \"Top\", \"Right\" and \"Bottom\"." + Environment.NewLine +
-                "2.Set legend orientations." + Environment.NewLine +
-                "3.Set the mode of legend text wrapping.such as \"None\", \"Wrap\" and \"Truncate\"." + Environment.NewLine +
-                "4.Set a value more than 0 to legend item maxWidth property, set 0 to disable legend textWrapping." + Environment.NewLine +
-                "5.Set the LegendGroup property of each series to group items within the legend.  Legend items within each group are arranged by the legend orientation property while the legend groups are arranged based on the legend position.";
+            Tag = AppResources.LegendTag;
         }
 
         public List<FruitsDataItem> Data

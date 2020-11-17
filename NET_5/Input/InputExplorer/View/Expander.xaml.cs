@@ -13,7 +13,7 @@ namespace InputExplorer
         public Expander()
         {
             InitializeComponent();
-            Tag = "C1Expander allows you to create an expandable and collapsible information panel that can include text, images, and controls. Choose from four expand directions and position of the expand button.";
+            Tag = Properties.Resources.Expander;
 
             ExpandDirectionComboBox.ItemsSource = new ExpandDirection[]
             {

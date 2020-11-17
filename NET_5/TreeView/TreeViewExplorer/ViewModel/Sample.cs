@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Controls;
-using System.Windows.Media;
+using TreeViewExplorer.Properties;
 
 namespace TreeViewExplorer
 {
@@ -24,14 +24,14 @@ namespace TreeViewExplorer
 
         public SampleDataSource()
         {
-            _allItems.Add(new SampleItem("Overview",
-                "Overview",
+            _allItems.Add(new SampleItem(Resources.IntroductionTitle,
+                Resources.IntroductionTitle,
                 new DemoTreeView()));
-            _allItems.Add(new SampleItem("Binding",
-                "Binding",
+            _allItems.Add(new SampleItem(Resources.BindingTitle,
+                Resources.BindingTitle,
                 new DemoSimpleC1TreeView()));
-            _allItems.Add(new SampleItem("Drag & Drop",
-                "Drag & Drop",
+            _allItems.Add(new SampleItem(Resources.DragDropTitle,
+                Resources.DragDropTitle,
                 new DemoTreeViewDragDrop()));
         }
 

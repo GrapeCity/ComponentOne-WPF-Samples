@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using C1.WPF.ColorPicker;
+using ColorPickerExplorer.Resources;
 
 namespace ColorPickerExplorer
 {
@@ -23,7 +24,7 @@ namespace ColorPickerExplorer
         public DemoColorPicker()
         {
             InitializeComponent();
-            Tag = "Choose to include a basic color palette with preselected and standard colors, an advanced palette that users can use to completely customize their color selection, or both! ColorPicker for WPF even includes transparency, hexadecimal color, and RGB and HLS color model support to provide a rich visual color input interface.";
+            Tag = AppResources.Tag;
         }
 
 

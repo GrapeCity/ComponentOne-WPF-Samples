@@ -27,7 +27,7 @@ namespace GridShowCase
         public ShowCaseSample()
         {
             InitializeComponent();
-            Tag = "The sample demonstrate the most important grid features.";
+            Tag = Properties.Resources.Tag;
         }
 
         private void CsvExport_Click(object sender, RoutedEventArgs e)

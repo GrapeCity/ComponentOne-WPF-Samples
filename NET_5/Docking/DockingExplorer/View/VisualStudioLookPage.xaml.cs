@@ -16,6 +16,7 @@ using C1.WPF.Core;
 using C1.WPF.Docking;
 using C1.WPF.Menu;
 using C1.WPF.TabControl;
+using DockingExplorer.Resources;
 
 namespace DockingExplorer
 {
@@ -27,7 +28,7 @@ namespace DockingExplorer
         public VisualStudioLookPage()
         {
             InitializeComponent();
-            Tag = "This sample shows a more realistic layout that looks like Microsoft Visual Studio.";
+            Tag = AppResources.VisualStudioTag;
 
             UpdateWindowMenuItem();
             dockControl.ItemDockModeChanged += new EventHandler<C1.WPF.Docking.ItemDockModeChangedEventArgs>(MainWindow.dockControl_ItemDockModeChanged);

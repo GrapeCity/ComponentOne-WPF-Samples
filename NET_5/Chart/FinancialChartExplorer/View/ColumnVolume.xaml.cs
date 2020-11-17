@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using C1.WPF.Chart.Finance;
+using FinancialChartExplorer.Resources;
 
 namespace FinancialChartExplorer
 {
@@ -27,7 +28,7 @@ namespace FinancialChartExplorer
         {
             InitializeComponent();
             this.Loaded += ColumnVolume_Loaded;
-            Tag = "ColumnVolume charts are similar to Column charts, except that they accept a second value, volume, which dictates the width of each bar.";
+            Tag = AppResources.ColumnVolumeTag;
         }
 
         void ColumnVolume_Loaded(object sender, RoutedEventArgs e)

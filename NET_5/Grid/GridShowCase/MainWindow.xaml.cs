@@ -12,7 +12,8 @@ namespace GridShowCase
         /// </summary>
         public MainWindow()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            Title = Properties.Resources.Title;
         }
         
     }

@@ -1,6 +1,7 @@
 ﻿using C1.Chart;
 using C1.WPF.Chart;
 using C1.WPF.Core;
+using FinancialChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -18,7 +19,7 @@ namespace FinancialChartExplorer
         public Indicators()
         {
             InitializeComponent();
-            Tag = "A technical indicator is a set of derived data that is calculated by applying one or more formulas to the original set of data. Technical indicators are generally used to forecast the asset's market direction and generally plotted separately from the original data since the Y-axis scales differ.";
+            Tag = AppResources.IndicatorsTag;
         }
 
         public List<Quote> Data

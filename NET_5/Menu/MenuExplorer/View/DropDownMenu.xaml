@@ -9,8 +9,8 @@
     <Grid>
         <c1:C1DropDownButton DropDownWidth="176" HorizontalAlignment="Center" VerticalAlignment="Center" Header="Click here to see menu">
             <c1:C1MenuList AutoClose="True" DetectBoundaries="True" BorderThickness="0">
-                <c1:C1MenuItem Header="File" Click="C1MenuItem_Click">
-                    <c1:C1MenuItem Header="New" Click="C1MenuItem_Click">
+                <c1:C1MenuItem Header="File" >
+                    <c1:C1MenuItem Header="New" >
                         <c1:C1MenuItem Header="Project...">
                             <c1:C1MenuItem.Icon>
                                 <Image Source="../Resources/Menu/newProject.png" />
@@ -32,7 +32,7 @@
                             </c1:C1MenuItem.Icon>
                         </c1:C1MenuItem>
                     </c1:C1MenuItem>
-                    <c1:C1MenuItem Header="Open" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="Open" >
                         <c1:C1MenuItem Header="Project...">
                             <c1:C1MenuItem.Icon>
                                 <Image Source="../Resources/Menu/openProject.png" />
@@ -73,63 +73,63 @@
                             <Image Source="../Resources/Menu/pageSetup.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
-                    <c1:C1MenuItem Header="Print" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="Print" >
                         <c1:C1MenuItem.Icon>
                             <Image Source="../Resources/Menu/print.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
                     <c1:C1MenuSeparator />
-                    <c1:C1MenuItem Header="Exit" Click="C1MenuItem_Click" />
+                    <c1:C1MenuItem Header="Exit"  />
                 </c1:C1MenuItem>
-                <c1:C1MenuItem Header="Edit" Click="C1MenuItem_Click">
-                    <c1:C1MenuItem Header="Undo" Click="C1MenuItem_Click">
+                <c1:C1MenuItem Header="Edit" >
+                    <c1:C1MenuItem Header="Undo" >
                         <c1:C1MenuItem.Icon>
                             <Image Source="../Resources/Menu/undo.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
-                    <c1:C1MenuItem Header="Redo" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="Redo" >
                         <c1:C1MenuItem.Icon>
                             <Image Source="../Resources/Menu/redo.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
                     <c1:C1MenuSeparator />
-                    <c1:C1MenuItem Header="Cut" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="Cut" >
                         <c1:C1MenuItem.Icon>
                             <Image Source="../Resources/Menu/cut.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
-                    <c1:C1MenuItem Header="Copy" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="Copy" >
                         <c1:C1MenuItem.Icon>
                             <Image Source="../Resources/Menu/copy.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
-                    <c1:C1MenuItem Header="Paste" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="Paste" >
                         <c1:C1MenuItem.Icon>
                             <Image Source="../Resources/Menu/paste.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
-                    <c1:C1MenuItem Header="Delete" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="Delete" >
                         <c1:C1MenuItem.Icon>
                             <Image Source="../Resources/Menu/delete.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
                 </c1:C1MenuItem>
-                <c1:C1MenuItem Header="Window" Click="C1MenuItem_Click">
-                    <c1:C1MenuItem Header="Document 1" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
-                    <c1:C1MenuItem Header="Document 2" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
-                    <c1:C1MenuItem Header="Document 3" IsCheckable="True" Click="C1MenuItem_Click" />
-                    <c1:C1MenuItem Header="Document 4" IsCheckable="True" Click="C1MenuItem_Click" />
+                <c1:C1MenuItem Header="Window" >
+                    <c1:C1MenuItem Header="Document 1" IsCheckable="True" IsChecked="True"  />
+                    <c1:C1MenuItem Header="Document 2" IsCheckable="True" IsChecked="True"  />
+                    <c1:C1MenuItem Header="Document 3" IsCheckable="True"  />
+                    <c1:C1MenuItem Header="Document 4" IsCheckable="True"  />
                     <c1:C1MenuSeparator />
-                    <c1:C1MenuItem Header="Exclusive 1" GroupName="Exclusives" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
-                    <c1:C1MenuItem Header="Exclusive 2" GroupName="Exclusives" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
-                    <c1:C1MenuItem Header="Exclusive 3" GroupName="Exclusives" IsCheckable="True" Click="C1MenuItem_Click" />
+                    <c1:C1MenuItem Header="Exclusive 1" GroupName="Exclusives" IsCheckable="True" IsChecked="True"  />
+                    <c1:C1MenuItem Header="Exclusive 2" GroupName="Exclusives" IsCheckable="True" IsChecked="True"  />
+                    <c1:C1MenuItem Header="Exclusive 3" GroupName="Exclusives" IsCheckable="True"  />
                 </c1:C1MenuItem>
-                <c1:C1MenuItem Header="Deep" Click="C1MenuItem_Click">
-                    <c1:C1MenuItem Header="Deep1" Click="C1MenuItem_Click">
-                        <c1:C1MenuItem Header="Deep2" Click="C1MenuItem_Click">
-                            <c1:C1MenuItem Header="Deep3" Click="C1MenuItem_Click">
-                                <c1:C1MenuItem Header="Deep4" Click="C1MenuItem_Click">
-                                    <c1:C1MenuItem Header="Deep5" Click="C1MenuItem_Click">
+                <c1:C1MenuItem Header="Deep" >
+                    <c1:C1MenuItem Header="Deep1" >
+                        <c1:C1MenuItem Header="Deep2" >
+                            <c1:C1MenuItem Header="Deep3" >
+                                <c1:C1MenuItem Header="Deep4" >
+                                    <c1:C1MenuItem Header="Deep5" >
                                     </c1:C1MenuItem>
                                 </c1:C1MenuItem>
                             </c1:C1MenuItem>

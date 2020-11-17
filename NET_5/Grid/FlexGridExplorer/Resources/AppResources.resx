@@ -382,4 +382,10 @@
   <data name="FilterRowTitle" xml:space="preserve">
     <value>Filter Row</value>
   </data>
+  <data name="SortIconPosition" xml:space="preserve">
+    <value>Sort Icon Position</value>
+  </data>
+  <data name="SortIconTemplate" xml:space="preserve">
+    <value>Sort Icon Template</value>
+  </data>
 </root>

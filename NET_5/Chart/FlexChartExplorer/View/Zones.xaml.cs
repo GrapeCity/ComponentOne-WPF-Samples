@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using C1.Chart;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -32,8 +33,7 @@ namespace FlexChartExplorer
             this.InitializeComponent();
 
             this.Loaded += Zones_Loaded;
-            Tag = "The view creates a scatter chart of student grades, highlighting each grade range using zones.\r" +
-                "The zones are drawn in rendering event of FlexChart. Statistic values are calculated and plotted.";
+            Tag = AppResources.ZonesTag;
         }
 
         private void Zones_Loaded(object sender, RoutedEventArgs e)

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -19,8 +20,7 @@ namespace FlexChartExplorer
         public TreeMap()
         {
             this.InitializeComponent();
-            Tag = "This view shows main functionality of TreeMap control." + Environment.NewLine + Environment.NewLine +
-               "TreeMap charts are compact way of visualizing hierarchical data in form of nested rectangles with area of each rectangle depicting the quantity of each category.";
+            Tag = AppResources.TreeMapTag;
         }
 
         public object[] Data

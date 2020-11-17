@@ -14,7 +14,7 @@ namespace RichTextBoxExplorer
         public ToolStrip()
         {
             InitializeComponent();
-            Tag = "This sample shows C1RichTextBox with a simpler editing toolstrip.";
+            Tag = Properties.Resources.ToolStrip;
 
             var stream = Application.GetResourceStream(new Uri("/" + _asmName + ";component/Resources/letter.rtf", UriKind.Relative)).Stream;
             var rtf = new StreamReader(stream).ReadToEnd();

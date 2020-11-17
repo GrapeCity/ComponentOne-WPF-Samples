@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialChartExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace FinancialChartExplorer
             InitializeComponent();
             this.Loaded += HeikinAshi_Loaded;
 
-            Tag = "Heikin-Ashi charts are a variation of Japanese candlestick charts that were designed to remove noise from candlesticks and behave much like a moving average. These charts can be used to identify trends, potential reversal points, and other technical analysis patterns.";
+            Tag = AppResources.HeikinAshiTag;
         }
 
         void HeikinAshi_Loaded(object sender, RoutedEventArgs e)

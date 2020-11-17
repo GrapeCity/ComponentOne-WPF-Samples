@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -19,8 +20,7 @@ namespace FlexChartExplorer
         public Financial()
         {
             this.InitializeComponent();
-            Tag = "This view shows how to create financial charts with the FlexChart control.\r" +
-                "The FlexChart supports two types of financial chart: Candlestick and HiLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source.";
+            Tag = AppResources.FinancialTag;
         }
 
         public List<string> ChartTypes

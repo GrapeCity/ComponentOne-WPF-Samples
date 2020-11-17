@@ -18,8 +18,8 @@ namespace RichTextBoxExplorer
         public DemoRichTextBox()
         {
             InitializeComponent();
-            Tag = "Edit and format rich text containing multiple fonts, decorations, sizes, colors, and other basic HTML and RTF features such as pictures and tables using the C1RichTextBox control.";
-            
+            Tag = Properties.Resources.Demo;
+
             //var spellChecker = new C1SpellChecker();
             //richTB.SpellChecker = spellChecker;
             //spellChecker.MainDictionary.Load(Application.GetResourceStream(new Uri("/" + _asmName + ";component/Resources/C1Spell_en-US.dct", UriKind.Relative)).Stream);

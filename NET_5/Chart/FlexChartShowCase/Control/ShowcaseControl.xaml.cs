@@ -16,6 +16,7 @@ using System.Windows.Media;
 using C1.Chart.Annotation;
 using C1.WPF.Chart.Annotation;
 using System.Windows.Input;
+using FlexChartShowcase.Resources;
 
 namespace FlexChartShowcase
 {
@@ -35,7 +36,7 @@ namespace FlexChartShowcase
         public ShowcaseControl()
         {
             InitializeComponent();
-            Tag = "The sample demonstrate the most important chart features.";
+            Tag = AppResources.Desc;
 
             GetTemperatureData(new string[] { "Tokyo", "London" }, true, 40, true);
             SetupChart();

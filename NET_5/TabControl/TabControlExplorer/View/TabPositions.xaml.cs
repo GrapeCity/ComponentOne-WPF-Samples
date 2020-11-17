@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using C1.WPF;
-using C1.WPF.Input;
+﻿using C1.WPF.Input;
 using C1.WPF.TabControl;
+using System;
+using System.Windows.Controls;
 
 namespace TabControlExplorer
 {
@@ -27,7 +15,7 @@ namespace TabControlExplorer
         public TabPositions()
         {
             InitializeComponent();
-            Tag = "The tabs can be placed at the top, bottom, left, or right of the control. Rotate the tab content and customize the tab shape.";
+            Tag = Properties.Resources.TabPosition;
         }
 
         private void tabShape_SelectedItemChanged(object sender, C1.WPF.Core.PropertyChangedEventArgs<object> e)

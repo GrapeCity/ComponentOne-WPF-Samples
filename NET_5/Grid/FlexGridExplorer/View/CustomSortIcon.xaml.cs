@@ -27,6 +27,8 @@ namespace FlexGridExplorer
                 sortIconTemplate.Items.Add(value);
             }
             sortIconTemplate.SelectedIndex = 2;
+            lblIconPos.Text = AppResources.SortIconPosition;
+            lblIconTemplate.Text = AppResources.SortIconTemplate;
 
             Load();
         }

@@ -1,5 +1,6 @@
 ﻿using C1.DataCollection;
 using C1.WPF.DataFilter;
+using DataFilterExplorer.Resources;
 using System.Data;
 using System.Linq;
 using System.Windows;
@@ -17,7 +18,7 @@ namespace DataFilterExplorer
         public FilterSummarySample()
         {
             InitializeComponent();
-            Tag = "This sample demonstrates how to use the FilterSummary for the Checklist filter. Also shows how to use different aggregate expressions and custom format of filter summaries.";
+            Tag = AppResources.FilterSummaryTag;
             _data = new C1DataCollection<Car>(DataProvider.GetCars());
             flexGrid.ItemsSource = _data;
             c1DataFilter1.ItemsSource = _data;

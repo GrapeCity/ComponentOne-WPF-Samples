@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using C1.WPF.Docking;
+using DockingExplorer.Resources;
 
 namespace DockingExplorer
 {
@@ -23,7 +24,7 @@ namespace DockingExplorer
         public DockControlBasic()
         {
             InitializeComponent();
-            Tag = "Handle multiple windows in your WPF application with DockControl for WPF. Similar to the docking system in Microsoft Visual Studio, C1DockControl delivers dockable, floating, and tabbed windows. You can also auto-hide sections and easily style the C1DockControl.";
+            Tag = AppResources.OverviewTag;
             dockControl.ItemDockModeChanged += new EventHandler<C1.WPF.Docking.ItemDockModeChangedEventArgs>(MainWindow.dockControl_ItemDockModeChanged);
 
             Unloaded += delegate

@@ -9,33 +9,41 @@ namespace MapsExplorer
 
         public SampleDataSource()
         {
-            _allItems.Add(new SampleItem("Demo",
-                "Demo",
+            _allItems.Add(new SampleItem(Properties.Resources.DemoTitle,
+                Properties.Resources.DemoTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new DemoMaps())));
             _ = _allItems[0].Sample.Value; //Force first page is loaded immediately
+            
             //_allItems.Add(new SampleItem("Cities",
             //    "Cities",
             //    new Lazy<System.Windows.Controls.Control>(() => new Cities())));
-            _allItems.Add(new SampleItem("Earthquakes",
-                "Earthquakes",
+            
+            _allItems.Add(new SampleItem(Properties.Resources.EarthquakesTitle,
+                Properties.Resources.EarthquakesTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new EarthQuakes())));
-            _allItems.Add(new SampleItem("Factories",
-                "Factories",
+
+            _allItems.Add(new SampleItem(Properties.Resources.FactoriesTitle,
+                Properties.Resources.FactoriesTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new Factories())));
-            _allItems.Add(new SampleItem("GeoRSS",
-                "GeoRSS",
+
+            _allItems.Add(new SampleItem(Properties.Resources.FlickerTitle,
+                Properties.Resources.FlickerTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new Flicker())));
-            _allItems.Add(new SampleItem("Marks",
-                "Marks",
+
+            _allItems.Add(new SampleItem(Properties.Resources.MarksTitle,
+                Properties.Resources.MarksTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new Marks())));
-            _allItems.Add(new SampleItem("KML",
-                "KML",
+
+            _allItems.Add(new SampleItem(Properties.Resources.MapChartTitle,
+                Properties.Resources.MapChartTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new MapChart())));
-            _allItems.Add(new SampleItem("ShapeFile",
-                "ShapeFile",
+
+            _allItems.Add(new SampleItem(Properties.Resources.MapShapeTitle,
+                Properties.Resources.MapShapeTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new MapShape())));
-            _allItems.Add(new SampleItem("Grid",
-                "Grid",
+
+            _allItems.Add(new SampleItem(Properties.Resources.GridTitle,
+                Properties.Resources.GridTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new Grid())));
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoreExplorer.Resources;
+using System;
 using System.Collections.ObjectModel;
 
 namespace CoreExplorer
@@ -9,16 +10,19 @@ namespace CoreExplorer
         {
             AllItems = new ObservableCollection<SampleItem>();
 
-            AllItems.Add(new SampleItem("Input Handling",
-                "Input Handling",
+            AllItems.Add(new SampleItem(
+                AppResources.InputHandlingTitle,
+                AppResources.InputHandlingDescription,
                 new InputHandling()));
 
-            AllItems.Add(new SampleItem("Drag Drop Manager",
-                "Drag Drop Manager",
+            AllItems.Add(new SampleItem(
+                AppResources.DragDropManagerTitle,
+                AppResources.DragDropManagerDescription,
                 new DemoDragDropManager()));
 
-            AllItems.Add(new SampleItem("Drag Drop ListBox",
-                "Drag Drop ListBox",
+            AllItems.Add(new SampleItem(
+                AppResources.DragDropListBoxTitle,
+                AppResources.DragDropListBoxDescription,
                 new DemoListBox()));
         }
 

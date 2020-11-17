@@ -22,7 +22,7 @@ namespace TabControlExplorer.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace TabControlExplorer.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TabControlExplorer.Properties.Resources", typeof(Resources).Assembly);
@@ -51,12 +51,66 @@ namespace TabControlExplorer.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The new indicator tab style is modeled after Office 365. The tabs have a clean look with an indicator line displayed below the selected tab..
+        /// </summary>
+        public static string Indicator {
+            get {
+                return ResourceManager.GetString("Indicator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simplified Indicator.
+        /// </summary>
+        public static string IndicatorTitle {
+            get {
+                return ResourceManager.GetString("IndicatorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrange content in an efficient, organized manner using TabControl for WPF. Take advantage of tab scrolling, tabstrip placement options, pinning and closing tabs..
+        /// </summary>
+        public static string Overview {
+            get {
+                return ResourceManager.GetString("Overview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overview.
+        /// </summary>
+        public static string OverviewTitle {
+            get {
+                return ResourceManager.GetString("OverviewTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The tabs can be placed at the top, bottom, left, or right of the control. Rotate the tab content and customize the tab shape..
+        /// </summary>
+        public static string TabPosition {
+            get {
+                return ResourceManager.GetString("TabPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tab Positions.
+        /// </summary>
+        public static string TabPositionTitle {
+            get {
+                return ResourceManager.GetString("TabPositionTitle", resourceCulture);
             }
         }
     }

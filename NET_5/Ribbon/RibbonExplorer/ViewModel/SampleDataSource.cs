@@ -8,12 +8,12 @@ namespace RibbonExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem("Overview",
-                                "Overview",
+                new SampleItem(Properties.Resources.RibbonTitle,
+                                Properties.Resources.RibbonTitle,
                                 new Ribbon()),
 
-                new SampleItem("Toolstrip",
-                                "Toolstrip",
+                new SampleItem(Properties.Resources.ToolStripTitle,
+                                Properties.Resources.ToolStripTitle,
                                 new Toolstrip())
             };
         }

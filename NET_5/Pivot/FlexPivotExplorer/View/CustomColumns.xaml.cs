@@ -1,20 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Data;
-using System.Reflection;
-using C1.WPF.Pivot;
-using C1.Zip;
 
 namespace FlexPivotExplorer
 {
@@ -27,8 +13,7 @@ namespace FlexPivotExplorer
         public CustomColumns()
         {
             InitializeComponent();
-            Tag = "Shows a custom calculated column in FlexPivotGrid\r" +
-                "This project shows sales by country and category.It also shows a couple calculated columns that show the difference in product sales a custom total calculation.";
+            Tag = Properties.Resources.Column;
             //Loaded += MainPage_Loaded;
 
             pivotPage.Loaded += (s, ea) =>

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -18,8 +19,7 @@ namespace FlexChartExplorer
         public PieIntroduction()
         {
             this.InitializeComponent();
-            Tag = "This view shows the FlexPie's basic features. It binds the chart to a data source.\r" +
-                "If you move the mouse over a chart element, a tooltip will appear showing details about the data point.";
+            Tag = AppResources.PieIntroductionTag;
         }
 
         public List<FruitDataItem> Data

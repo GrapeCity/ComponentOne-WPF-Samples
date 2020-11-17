@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialChartExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace FinancialChartExplorer
         public RangeSelector()
         {
             InitializeComponent();
-            Tag = "The RangeSelector allows end users to adjust the FinancialChart's visible range of data at runtime. The example below demonstrates the typical use case for the RangeSelector and how to apply a custom style.";
+            Tag = AppResources.RangeSelectorTag;
         }
 
         public List<Quote> Data

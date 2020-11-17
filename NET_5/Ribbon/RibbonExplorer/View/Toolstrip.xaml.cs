@@ -1,5 +1,4 @@
-﻿using C1.WPF.Menu;
-using C1.WPF.Ribbon;
+﻿using C1.WPF.Ribbon;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -16,7 +15,7 @@ namespace RibbonExplorer
         public Toolstrip()
         {
             InitializeComponent();
-            Tag = "The lighter C1ToolStrip control provides a simple row of buttons for basic applications and tool windows.";
+            Tag = Properties.Resources.ToolStrip;
 
             img.RenderTransform = st;
             img.RenderTransformOrigin = new Point(0.5, 0.5);

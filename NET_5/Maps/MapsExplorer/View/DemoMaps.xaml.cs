@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using C1.WPF.Maps;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using C1.WPF.Maps;
 
 namespace MapsExplorer
 {
@@ -23,7 +15,7 @@ namespace MapsExplorer
         public DemoMaps()
         {
             InitializeComponent();
-            Tag = "Demo";
+            Tag = Properties.Resources.Demo;
             cboSource.SetBinding(ComboBox.SelectedItemProperty, new Binding() { ElementName = "maps", Path = new PropertyPath("Source"), Mode = BindingMode.TwoWay, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged });
             ckBoxShowTools.SetBinding(CheckBox.IsCheckedProperty, new Binding() { ElementName = "maps", Path = new PropertyPath("ShowTools"), Mode = BindingMode.TwoWay, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged });
         }

@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -17,12 +18,7 @@ namespace FlexChartExplorer
         {
             this.InitializeComponent();
             this.Loaded += SeriesBinding_Loaded;
-            Tag = "This view shows how you can use the FlexChart to show data from multiple data sources, one per series.\r" +
-                "The sample does the following:\r" + Environment.NewLine +
-                "1.Set the chart's bindingX and binding properties to 'x' and 'y'.\r" +
-                "2.Add a Series object to the chart's series array and set its DataSource property to an array of objects that have 'x' and 'y' properties.\r" +
-                "3.Add a second Series object to the chart's series array and set its DataSource property to a different array of objects that have 'x' and 'y' properties.\r" + Environment.NewLine +
-                "Alternatively, we could have set the bindingX and binding properties on the Series objects instead of setting then on the chart.In this case this was not necessary because the binding names are the same for all series.";
+            Tag = AppResources.SeriesBindingTag;
         }
 
         private void SeriesBinding_Loaded(object sender, RoutedEventArgs e)

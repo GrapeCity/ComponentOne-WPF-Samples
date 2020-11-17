@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialChartExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace FinancialChartExplorer
         {
             InitializeComponent();
             this.Loaded += CandleVolume_Loaded;
-            Tag = "CandleVolume charts are identical to standard Candlestick charts, except that the width of each bar is determined by a fifth value, volume.";
+            Tag = AppResources.CandleVolumeTag;
         }
 
         void CandleVolume_Loaded(object sender, RoutedEventArgs e)

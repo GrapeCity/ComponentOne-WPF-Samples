@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlexChartExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
 
@@ -16,8 +17,7 @@ namespace FlexChartExplorer
         public HeaderAndFooter()
         {
             this.InitializeComponent();
-            Tag = "This view shows how you can add a header and a footer to the chart.\r" +
-                "The header and footer properties determine the content, and the headerStyle and footerStyle properties determine the appearance of the header and footer.";
+            Tag = AppResources.HeaderFooterTag;
         }
 
         public List<DataItem> Data

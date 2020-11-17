@@ -15,7 +15,7 @@ namespace TabControlExplorer
         public Overview()
         {
             InitializeComponent();
-            Tag = "Arrange content in an efficient, organized manner using TabControl for WPF. Take advantage of tab scrolling, tabstrip placement options, pinning and closing tabs.";
+            Tag = Properties.Resources.Overview;
         }
 
         private void tabs_TabClosing(object sender, C1.WPF.TabControl.CancelSourceEventArgs e)

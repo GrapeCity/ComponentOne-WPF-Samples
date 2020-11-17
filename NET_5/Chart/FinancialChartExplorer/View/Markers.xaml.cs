@@ -1,6 +1,7 @@
 ﻿using C1.Chart;
 using C1.WPF.Chart;
 using C1.WPF.Chart.Interaction;
+using FinancialChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace FinancialChartExplorer
         public Markers()
         {
             InitializeComponent();
-            Tag = "Markers display a text area on the FinancialChart that displays the data values based on the mouse cursor's position on the chart. Markers also support optional vertical and horizontal lines to enable a cross-hair effect.";
+            Tag = AppResources.MarkersTag;
         }
 
         public List<Quote> Data

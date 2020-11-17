@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -17,7 +18,7 @@ namespace FlexChartExplorer
         public PieSelection()
         {
             this.InitializeComponent();
-            Tag = "This view shows the FlexPie's selection feature.";
+            Tag = AppResources.PieSelectionTag;
         }
 
         public List<string> Positions

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Apply" xml:space="preserve">
+    <value>適用</value>
+    <comment>Apply</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="CellFreezingDescription" xml:space="preserve">
+    <value>行、列のセルを固定表示する方法</value>
+    <comment>Shows frozen columns, rows and cell merging.</comment>
+  </data>
+  <data name="CellFreezingTitle" xml:space="preserve">
+    <value>セルの固定</value>
+    <comment>Cell Freezing &amp; Merging</comment>
+  </data>
+  <data name="Collapse" xml:space="preserve">
+    <value>折りたたみ</value>
+    <comment>Collapse</comment>
+  </data>
+  <data name="ColumnDefinitionDescription" xml:space="preserve">
+    <value>列を指定して書式設定する方法</value>
+  </data>
+  <data name="ColumnDefinitionTitle" xml:space="preserve">
+    <value>列の定義</value>
+  </data>
+  <data name="ColumnLayoutDescription" xml:space="preserve">
+    <value>列マネージャを利用してレイアウトを変更</value>
+    <comment>Shows a custom column manager to modify column layout.</comment>
+  </data>
+  <data name="ColumnLayoutTitle" xml:space="preserve">
+    <value>列レイアウト管理</value>
+  </data>
+  <data name="ConditionalFormattingDescription" xml:space="preserve">
+    <value>CellFactory を利用した書式の設定</value>
+    <comment>Uses a CellFactory to apply conditional formatting.</comment>
+  </data>
+  <data name="ConditionalFormattingTitle" xml:space="preserve">
+    <value>条件付き書式</value>
+  </data>
+  <data name="CustomCellsDescription" xml:space="preserve">
+    <value>数値をゲージで表示するセル</value>
+  </data>
+  <data name="CustomCellsTitle" xml:space="preserve">
+    <value>カスタムセル</value>
+  </data>
+  <data name="CustomMergingDescription" xml:space="preserve">
+    <value>隣接セルをマージして表示する</value>
+    <comment>Shows a grid with custom cell merging.</comment>
+  </data>
+  <data name="CustomMergingTitle" xml:space="preserve">
+    <value>セル結合の応用</value>
+    <comment>Custom Merging</comment>
+  </data>
+  <data name="EditColumnLayout" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="EditConfirmationDescription" xml:space="preserve">
+    <value>セルの内容を変更する前にダイアログを表示</value>
+    <comment>Shows how to prompt the user with a confirmation dialog before committing changes to a cell.</comment>
+  </data>
+  <data name="EditConfirmationQuestion" xml:space="preserve">
+    <value>編集内容を反映しますか？</value>
+  </data>
+  <data name="EditConfirmationQuestionTitle" xml:space="preserve">
+    <value>編集確認</value>
+  </data>
+  <data name="EditConfirmationTitle" xml:space="preserve">
+    <value>編集の確認</value>
+  </data>
+  <data name="EditCustomer" xml:space="preserve">
+    <value>顧客データの編集</value>
+  </data>
+  <data name="EditingDescription" xml:space="preserve">
+    <value>入力フォームでセル内容を編集</value>
+  </data>
+  <data name="EditingTitle" xml:space="preserve">
+    <value>編集フォーム</value>
+  </data>
+  <data name="EditRow" xml:space="preserve">
+    <value>行の編集</value>
+    <comment>edit a single row</comment>
+  </data>
+  <data name="EmptyListText" xml:space="preserve">
+    <value>表示するデータはありません。</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>フィルタ</value>
+  </data>
+  <data name="FilterDescription" xml:space="preserve">
+    <value>列のフィルタ条件をフォームで指定</value>
+  </data>
+  <data name="FilterPlaceholderText" xml:space="preserve">
+    <value>フィルタリングするテキストを入力</value>
+  </data>
+  <data name="FilterTitle" xml:space="preserve">
+    <value>フィルタ</value>
+  </data>
+  <data name="FullTextFilterDescription" xml:space="preserve">
+    <value>列のデータをフィルタリングして強調表示</value>
+  </data>
+  <data name="FullTextFilterTitle" xml:space="preserve">
+    <value>全テキストフィルタ</value>
+  </data>
+  <data name="GettingStartedDescription" xml:space="preserve">
+    <value>FlexGrid でデータを表示、編集、集計</value>
+  </data>
+  <data name="GettingStartedTitle" xml:space="preserve">
+    <value>FlexGrid の基本機能</value>
+  </data>
+  <data name="GroupingDescription" xml:space="preserve">
+    <value>コレクションをグループ化して集計</value>
+  </data>
+  <data name="GroupingTitle" xml:space="preserve">
+    <value>グループ化</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OnDemandDescription" xml:space="preserve">
+    <value>スクロールの終端で表示データをロード</value>
+    <comment>Load items on demand as the user scrolls down the grid.</comment>
+  </data>
+  <data name="OnDemandTitle" xml:space="preserve">
+    <value>データオンデマンド</value>
+    <comment>On Demand</comment>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>フィルタを解除</value>
+    <comment>remove filter</comment>
+  </data>
+  <data name="RowDetailsDescription" xml:space="preserve">
+    <value>グリッドを展開／折りたたみして明細を表示</value>
+    <comment>Expand and collapse row details.</comment>
+  </data>
+  <data name="RowDetailsTitle" xml:space="preserve">
+    <value>詳細行</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SearchPlaceholderText" xml:space="preserve">
+    <value>YouTube で検索するビデオのテキストを入力</value>
+  </data>
+  <data name="SelectionModesDescription" xml:space="preserve">
+    <value>各種セル選択モードを表示</value>
+    <comment>Shows the various cell selection modes.</comment>
+  </data>
+  <data name="SelectionModesTitle" xml:space="preserve">
+    <value>選択モード</value>
+  </data>
+  <data name="SelectRowMessage" xml:space="preserve">
+    <value>編集する行を選択してください。対象の行をダブルタップしても編集できます。</value>
+    <comment>Please select a row first or double-tap the row directly.</comment>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>ソート</value>
+  </data>
+  <data name="StarSizingDescription" xml:space="preserve">
+    <value>配分で列幅を設定するレスポンシブなレイアウト</value>
+  </data>
+  <data name="StarSizingInstructions" xml:space="preserve">
+    <value>デバイスの回転でスターサイズ機能の動作を確認</value>
+    <comment>Rotate the device to see star-sizing in action.</comment>
+  </data>
+  <data name="StarSizingTitle" xml:space="preserve">
+    <value>スターサイズ設定</value>
+  </data>
+  <data name="UnboundDescription" xml:space="preserve">
+    <value>データソースに接続しない行と列で表を作成</value>
+    <comment>Add empty rows and columns to create an unbound grid.</comment>
+  </data>
+  <data name="UnboundTitle" xml:space="preserve">
+    <value>アンバウンド(データ非接続)</value>
+    <comment>Unbound</comment>
+  </data>
+  <data name="CellsSelectedText" xml:space="preserve">
+    <value>個のセルを選択</value>
+    <comment>cell(s) selected</comment>
+  </data>
+  <data name="DetailsVisibiltyMode" xml:space="preserve">
+    <value>詳細の表示モード</value>
+    <comment>DetailsVisibiltyMode</comment>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>金曜日</value>
+    <comment>Thursday</comment>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>月曜日</value>
+    <comment>Monday</comment>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>土曜日</value>
+    <comment>Saturday</comment>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>日曜日</value>
+    <comment>Sunday</comment>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>木曜日</value>
+    <comment>Thursday</comment>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>火曜日</value>
+    <comment>Tuesday</comment>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>水曜日</value>
+    <comment>Wednesday</comment>
+  </data>
+  <data name="CustomAppearanceTitle" xml:space="preserve">
+    <value>外観のカスタマイズ</value>
+    <comment>Custom Appearance</comment>
+  </data>
+  <data name="CustomAppearanceDescription" xml:space="preserve">
+    <value>外観スタイルを変更してグリッドを表示</value>
+    <comment>Shows a grid with a custom style.</comment>
+  </data>
+  <data name="Weekday" xml:space="preserve">
+    <value>平日</value>
+    <comment>Weekday</comment>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>週末</value>
+    <comment>Weekend</comment>
+  </data>
+  <data name="ShowMarquee" xml:space="preserve">
+    <value>マーキーの表示</value>
+    <comment>ShowMarquee</comment>
+  </data>
+  <data name="NewRowDescription" xml:space="preserve">
+    <value>追加する新しい行を表示</value>
+  </data>
+  <data name="NewRowTitle" xml:space="preserve">
+    <value>新しい行</value>
+  </data>
+  <data name="NewRowPlaceholder" xml:space="preserve">
+    <value>クリックして新しい行を追加する</value>
+  </data>
+  <data name="CustomSortIconTitle" xml:space="preserve">
+    <value>カスタムソートアイコン</value>
+  </data>
+  <data name="CustomSortIconDescription" xml:space="preserve">
+    <value>ヘッダー列にカスタムソートアイコンを表示</value>
+    <comment>Show how to custom sort icon in header column.</comment>
+  </data>
+  <data name="CheckListDescription" xml:space="preserve">
+    <value>チェックボックスで FlexGrid の行を選択する方法</value>
+  </data>
+  <data name="CheckListTitle" xml:space="preserve">
+    <value>チェックリスト</value>
+  </data>
+  <data name="SortIconPosition" xml:space="preserve">
+    <value>ソートアイコンの位置</value>
+  </data>
+  <data name="SortIconTemplate" xml:space="preserve">
+    <value>ソートアイコンのテンプレート</value>
+  </data>
+  <data name="LiveUpdatesDescription" xml:space="preserve">
+    <value>グリッド内の変更をアニメーションで表す方法を示します。</value>
+  </data>
+  <data name="LiveUpdatesTitle" xml:space="preserve">
+    <value>ライブ更新</value>
+  </data>
+  <data name="ColorUpdates" xml:space="preserve">
+    <value>色分けされた更新</value>
+  </data>
+  <data name="ExportDescription" xml:space="preserve">
+    <value>CSV、テキスト、および HTML 形式でエクスポートする方法を示します。</value>
+  </data>
+  <data name="ExportTitle" xml:space="preserve">
+    <value>エクスポート</value>
+  </data>
+  <data name="RowDetailsAddress" xml:space="preserve">
+    <value>住所</value>
+  </data>
+  <data name="RowDetailsCity" xml:space="preserve">
+    <value>都市</value>
+  </data>
+  <data name="RowDetailsCountry" xml:space="preserve">
+    <value>国</value>
+  </data>
+  <data name="RowDetailsPostalCode" xml:space="preserve">
+    <value>郵便コード</value>
+  </data>
+  <data name="FilterRowDescription" xml:space="preserve">
+    <value>GridFilterRow を介して列でデータをフィルタリングします。</value>
+  </data>
+  <data name="FilterRowTitle" xml:space="preserve">
+    <value>行のフィルタリング</value>
+  </data>
+  <data name="FinancialDescription" xml:space="preserve">
+    <value>Shows a financial application with real time data updates, flashing cells, and sparklines.</value>
+  </data>
+    <data name="FinancialTitle" xml:space="preserve">
+    <value>Financial</value>
+  </data>
+    <data name="PagingDescription" xml:space="preserve">
+    <value>Shows how to paginate data by using VirtualModeDataCollection with FlexGrid</value>
+  </data>
+    <data name="PagingTitle" xml:space="preserve">
+    <value>Paging</value>
+  </data>
+</root>

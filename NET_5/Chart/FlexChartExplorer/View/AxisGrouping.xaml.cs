@@ -1,4 +1,5 @@
 ﻿using C1.Chart;
+using FlexChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace FlexChartExplorer
         {
             InitializeComponent();
             //SetToHierarchicalData();
-            Tag = "This view shows grouping of axis labels.";
+            Tag = AppResources.AxisGroupingTag;
         }
 
         public List<string> GroupSeparator
