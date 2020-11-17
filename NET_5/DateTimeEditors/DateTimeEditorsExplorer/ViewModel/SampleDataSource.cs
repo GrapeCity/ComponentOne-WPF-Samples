@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DateTimeEditorsExplorer.Resources;
+using System;
 using System.Collections.ObjectModel;
 
 namespace DateTimeEditorsExplorer
@@ -9,20 +10,24 @@ namespace DateTimeEditorsExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem("DatePicker",
-                "DatePicker",
+                new SampleItem(
+                AppResources.DatePickerTitle,
+                AppResources.DatePickerDescription,
                 new DemoDatePicker()),
 
-                new SampleItem("DateTimePicker",
-                "DateTimePicker",
+                new SampleItem(
+                AppResources.DateTimePickerTitle,
+                AppResources.DateTimePickerDescription,
                 new DemoDateTimePicker()),
 
-                new SampleItem("TimeEditor",
-                "TimeEditor",
+                new SampleItem(
+                AppResources.TimeEditorTitle,
+                AppResources.TimeEditorDescription,
                 new DemoTimeEditor()),
 
-                new SampleItem("DateTimePicker Advanced",
-                "DateTimePicker Advanced",
+                new SampleItem(
+                AppResources.DateTimePickerAdvancedTitle,
+                AppResources.DateTimePickerAdvancedDescription,
                 new DateTimePickerAdvanced())
             };
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DockingExplorer.Resources;
+using System;
 using System.Collections.ObjectModel;
 
 namespace DockingExplorer
@@ -9,12 +10,12 @@ namespace DockingExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem("Overview",
-                                "Overview",
-                                new DockControlBasic()),
+                new SampleItem(AppResources.OverviewTitle,
+                               AppResources.OverviewDescription,
+                               new DockControlBasic()),
 
-                new SampleItem("Visual Studio",
-                                "Visual Studio",
+                new SampleItem(AppResources.VisualStudioTitle,
+                               AppResources.VisualStudioDescription,
                                 new VisualStudioLookPage())
             };
         }

@@ -9,14 +9,14 @@ namespace InputExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem("Overview",
-                                "Overview",
+                new SampleItem(Properties.Resources.InputTitle,
+                                Properties.Resources.InputTitle,
                                 new InputView()),
-                new SampleItem("Range Slider",
-                                "Range Slider",
+                new SampleItem(Properties.Resources.RangeSliderTitle,
+                                Properties.Resources.RangeSliderTitle,
                                 new RangeSlider()),
-                new SampleItem("Expander",
-                                "Expander",
+                new SampleItem(Properties.Resources.ExpanderTitle,
+                                Properties.Resources.ExpanderTitle,
                                 new Expander())
             };
         }

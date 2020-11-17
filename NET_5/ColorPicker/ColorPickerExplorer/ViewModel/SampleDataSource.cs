@@ -1,4 +1,4 @@
-﻿using System;
+﻿using ColorPickerExplorer.Resources;
 using System.Collections.ObjectModel;
 
 namespace ColorPickerExplorer
@@ -9,8 +9,9 @@ namespace ColorPickerExplorer
         {
             AllItems = new ObservableCollection<SampleItem>();
 
-            AllItems.Add(new SampleItem("Overview",
-                "Overview",
+            AllItems.Add(new SampleItem(
+                AppResources.OverviewTitle,
+                AppResources.OverviewDescription,
                 new DemoColorPicker()));
         }
 

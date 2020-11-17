@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using C1.Chart;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -20,7 +21,7 @@ namespace FlexChartExplorer
         public AutoLabels()
         {
             this.InitializeComponent();
-            Tag = "The demo shows automatic label positioning. When DataLabel.Position is Auto the chart performs automatic label layout trying to avoid their overlapping.";
+            Tag = AppResources.AutoLabelsTag;
 
             Data = DataHelper.Create(DataShape, 100);
         }

@@ -8,6 +8,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
 using System.Windows.Media;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -16,11 +17,7 @@ namespace FlexChartExplorer
         public Histogram()
         {
             this.InitializeComponent();
-            Tag = "A Histogram chart is used to study the distribution of non-categorical data by dividing it into bins of specified width. It plots the frequency of data items that fall in each of these bins. This sample shows:" + Environment.NewLine + Environment.NewLine +
-                "1. Histogram chart with columns" + Environment.NewLine +
-                "2. Frequency Polygon: A variation of Histogram charts where the columns are replaced by a curve.These are helpful for comparing multiple sets of data." + Environment.NewLine +
-                "3. Normal Curve: A bell - shaped curve, also known as Gaussian curve, which shows the probability distribution of a continuous random variable." + Environment.NewLine +
-                "4. Cumulative Frequency Polygons: Popularly known as ogives, shows the running total of frequencies on the chart.";
+            Tag = AppResources.HistogramTag;
         }
         public List<Bin> Data
         {

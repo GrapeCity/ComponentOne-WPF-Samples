@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialChartExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace FinancialChartExplorer
         {
             InitializeComponent();
             this.Loaded += EquiVolume_Loaded;
-            Tag = "EquiVolume charts are similar to Candlestick charts, but they only show the high and low values. In addition, the width of each bar is determined by a fifth value, volume.";
+            Tag = AppResources.EquiVolumeTag;
         }
 
         void EquiVolume_Loaded(object sender, RoutedEventArgs e)

@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Globalization;
+using FinancialChartExplorer.Resources;
 
 namespace FinancialChartExplorer
 {
@@ -27,7 +28,7 @@ namespace FinancialChartExplorer
         public TrendLines()
         {
             InitializeComponent();
-            Tag = "Trend lines are used to visualize trends in data and to help analyze the problems of prediction.";
+            Tag = AppResources.TrendLinesTag;
 
             Binding bindingMinX = new Binding();
             bindingMinX.Source = this;

@@ -10,7 +10,7 @@ namespace RibbonExplorer
         public Ribbon()
         {
             InitializeComponent();
-            Tag = "The C1Ribbon control as an alternative to the Microsoft Ribbon control with a much simpler API and straightforward customization options. Group common commands together in an easy-to-use interface that users love.";
+            Tag = Properties.Resources.Ribbon;
             foreach (var key in Resources.Keys)
             {
                 var cmd = Resources[key] as C1ToolbarCommand;

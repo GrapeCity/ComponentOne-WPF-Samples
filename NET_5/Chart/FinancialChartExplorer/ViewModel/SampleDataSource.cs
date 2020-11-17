@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using FinancialChartExplorer.Resources;
+using System.Collections.ObjectModel;
 
 namespace FinancialChartExplorer
 {
@@ -8,47 +9,47 @@ namespace FinancialChartExplorer
 
         public SampleDataSource()
         {
-            var chartTypeGroup = new SampleGroup("Chart Types");
-            chartTypeGroup.Samples.Add(new Sample("Heikin-Ashi",
+            var chartTypeGroup = new SampleGroup(AppResources.ChartTypesTitle);
+            chartTypeGroup.Samples.Add(new Sample(AppResources.HeikinAshiTitle,
                 new HeikinAshi())
             { IsSelected = true });
-            chartTypeGroup.Samples.Add(new Sample("Line Break",
+            chartTypeGroup.Samples.Add(new Sample(AppResources.LineBreak,
                 new LineBreak()));
-            chartTypeGroup.Samples.Add(new Sample("Renko",
+            chartTypeGroup.Samples.Add(new Sample(AppResources.Renko,
                 new Renko()));
-            chartTypeGroup.Samples.Add(new Sample("Kagi",
+            chartTypeGroup.Samples.Add(new Sample(AppResources.Kagi,
                 new Kagi()));
-            chartTypeGroup.Samples.Add(new Sample("ColumnVolume",
+            chartTypeGroup.Samples.Add(new Sample(AppResources.ColumnVolume,
                 new ColumnVolume()));
-            chartTypeGroup.Samples.Add(new Sample("EquiVolume",
+            chartTypeGroup.Samples.Add(new Sample(AppResources.EquiVolume,
                 new EquiVolume()));
-            chartTypeGroup.Samples.Add(new Sample("CandleVolume",
+            chartTypeGroup.Samples.Add(new Sample(AppResources.CandleVolume,
                 new CandleVolume()));
-            chartTypeGroup.Samples.Add(new Sample("Arms CandleVolume",
+            chartTypeGroup.Samples.Add(new Sample(AppResources.ArmsCandleVolume,
                 new ArmsCandleVolume()));
-            chartTypeGroup.Samples.Add(new Sample("Point&Figure",
+            chartTypeGroup.Samples.Add(new Sample(AppResources.PointFigure,
                 new PointAndFigure()));
             Groups.Add(chartTypeGroup);
 
-            var interactionGroup = new SampleGroup("Interaction");
-            interactionGroup.Samples.Add(new Sample("Markers",
+            var interactionGroup = new SampleGroup(AppResources.Interaction);
+            interactionGroup.Samples.Add(new Sample(AppResources.Markers,
                 new Markers()));
-            interactionGroup.Samples.Add(new Sample("Range Selector",
+            interactionGroup.Samples.Add(new Sample(AppResources.RangeSelector,
                 new RangeSelector()));
             Groups.Add(interactionGroup);
 
-            var analyticsGroup = new SampleGroup("Analytics");
-            analyticsGroup.Samples.Add(new Sample("Trend Lines",
+            var analyticsGroup = new SampleGroup(AppResources.Analytics);
+            analyticsGroup.Samples.Add(new Sample(AppResources.TrendLines,
                 new TrendLines()));
-            analyticsGroup.Samples.Add(new Sample("Moving Average",
+            analyticsGroup.Samples.Add(new Sample(AppResources.MovingAverage,
                new MovingAverages()));
-            analyticsGroup.Samples.Add(new Sample("Overlays",
+            analyticsGroup.Samples.Add(new Sample(AppResources.Overlays,
                new Overlays()));
-            analyticsGroup.Samples.Add(new Sample("Indicators",
+            analyticsGroup.Samples.Add(new Sample(AppResources.Indicators,
                new Indicators()));
-            analyticsGroup.Samples.Add(new Sample("Event Annotations",
+            analyticsGroup.Samples.Add(new Sample(AppResources.EventAnnotations,
              new EventAnnotations()));
-            analyticsGroup.Samples.Add(new Sample("Fibonacci Tool",
+            analyticsGroup.Samples.Add(new Sample(AppResources.FibonacciTool,
               new FibonacciTool()));
             Groups.Add(analyticsGroup);
         }

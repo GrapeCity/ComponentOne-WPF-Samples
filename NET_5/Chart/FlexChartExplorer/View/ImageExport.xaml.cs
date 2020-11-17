@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows;
 using Microsoft.Win32;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -25,7 +26,7 @@ namespace FlexChartExplorer
         {
             this.InitializeComponent();
             this.Loaded += ImageExport_Loaded;
-            Tag = "Save FlexChart as image.";
+            Tag = AppResources.ImageExportTag;
         }
 
         private void ImageExport_Loaded(object sender, RoutedEventArgs e)

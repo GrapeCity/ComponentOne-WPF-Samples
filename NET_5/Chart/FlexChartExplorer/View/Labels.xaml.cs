@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -18,7 +19,7 @@ namespace FlexChartExplorer
         public Labels()
         {
             this.InitializeComponent();
-            Tag = "This view demonstrates how you can use the FlexChart's dataLabel property to add labels to each data point.";
+            Tag = AppResources.LabelsTag;
         }
 
         public List<string> ChartTypes

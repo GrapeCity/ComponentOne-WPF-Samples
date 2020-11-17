@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using C1.WPF.Maps;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-
-using C1.WPF.Maps;
 
 namespace MapsExplorer
 {
@@ -21,7 +13,7 @@ namespace MapsExplorer
         public Grid()
         {
             InitializeComponent();
-            Tag = "Grid";
+            Tag = Properties.Resources.Grid;
             this.Loaded += Grid_Loaded;
         }
 

@@ -11,7 +11,7 @@ namespace RichTextBoxExplorer
         public DemoRichTextBoxFilter()
         {
             InitializeComponent();
-            Tag = "C1RichTexBox works by converting HTML and RTF content to its own internal document structure. The control can import and export these formats, and therefore, also work as a tool that can convert HTML to RTF and vice versa.";
+            Tag = Properties.Resources.DemoFilter;
 
             //var spellChecker = new C1SpellChecker();
             //richToolbar.SpellChecker = spellChecker;

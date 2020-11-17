@@ -1,19 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using C1.WPF;
-using C1.WPF.Core;
+﻿using C1.WPF.Core;
 using C1.WPF.Menu;
+using System.Windows.Controls;
 
 namespace MenuExplorer
 {
@@ -25,7 +12,7 @@ namespace MenuExplorer
         public CustomAppearance()
         {
             InitializeComponent();
-            Tag = "This demo shows how to apply a custom style to the C1Menu control.";
+            Tag = Properties.Resources.Appearance;
         }
 
         private void C1MenuItem_Click(object sender, SourcedEventArgs e)

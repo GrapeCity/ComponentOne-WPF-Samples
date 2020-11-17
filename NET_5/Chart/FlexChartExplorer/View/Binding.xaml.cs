@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -15,13 +16,7 @@ namespace FlexChartExplorer
         public Binding()
         {
             this.InitializeComponent();
-            Tag = "This view shows how you can use the FlexChart to show two sets of values from a single array of data. This is the most common usage scenario for the FlexChart.\r" +
-                "The sample does the following:\r" + Environment.NewLine +
-                "1.Set the chart's DataSource property to an array of data objects. Each data object has values for 'date', 'sales', and 'downloads'.\r" +
-                "2.Set the chart's bindingX property to 'date'.\r" +
-                "3.Add a Series object to the chart's series array and set its binding property to 'sales'.\r" +
-                "4.Add a second Series object to the chart's series array and set its binding property to 'downloads'.\r" + Environment.NewLine +
-                "In addition to binding, this sample shows the effect of the interpolateNulls and legendToggle properties.When you set interpolateNulls to true, the chart fills in gaps created by null values in the data.When you set legendToggle to true, the chart toggles the visibility of the series when you click its name in the legend.";
+            Tag = AppResources.BindingTag;
         }
 
         public List<string> ChartTypes

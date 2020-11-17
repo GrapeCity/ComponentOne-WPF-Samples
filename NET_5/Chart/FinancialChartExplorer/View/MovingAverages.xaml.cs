@@ -1,4 +1,5 @@
 ﻿using C1.Chart;
+using FinancialChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace FinancialChartExplorer
         public MovingAverages()
         {
             InitializeComponent();
-            Tag = "Moving average trend lines are used to analyze data by creating a series of averages of the original data set.";
+            Tag = AppResources.MovingAveragesTag;
         }
 
         public List<Quote> Data

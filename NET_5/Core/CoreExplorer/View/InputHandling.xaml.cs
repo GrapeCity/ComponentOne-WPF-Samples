@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using C1.WPF.Core;
+using CoreExplorer.Resources;
 
 namespace CoreExplorer
 {
@@ -17,7 +18,7 @@ namespace CoreExplorer
         public InputHandling()
         {
             InitializeComponent();
-            Tag = "The C1TapHelper, C1ZoomHelper, and C1DragHelper classes help listening to drag and zoom gestures supporting inertiaand  either using the mouse or fingers.";
+            Tag = AppResources.Tag;
 
             _dragHelper = new C1DragHelper(FramePanel, C1DragHelperMode.TranslateXY | C1DragHelperMode.Inertia, captureElementOnPointerPressed: false);
             _dragHelper.DragStarted += OnDragStarted;

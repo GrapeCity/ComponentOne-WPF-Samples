@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialChartExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace FinancialChartExplorer
         {
             InitializeComponent();
             this.Loaded += ArmsCandleVolume_Loaded;
-            Tag = "Created by Richard Arms, Arms CandleVolume charts are a combination of EquiVolume and CandleVolume charts.";
+            Tag = AppResources.ArmsCandleTag;
         }
 
         void ArmsCandleVolume_Loaded(object sender, RoutedEventArgs e)

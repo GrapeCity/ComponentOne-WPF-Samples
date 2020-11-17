@@ -7,6 +7,7 @@ using System.Windows.Controls;
 
 using C1.Chart;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -23,7 +24,7 @@ namespace FlexChartExplorer
         public DateTimeAxisGrouping()
         {
             InitializeComponent();
-            Tag = "This view shows grouping of date-time axis labels.";
+            Tag = AppResources.DateTimeAxisGroupingTag;
 
             // Instantiate and assign the AxisGroupProvider,
             //and set the TimeUnits for each desired level.

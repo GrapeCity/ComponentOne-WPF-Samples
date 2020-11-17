@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlexChartExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,8 +26,7 @@ namespace FlexChartExplorer
         {
             InitializeComponent();
             this.Loaded += OnLoaded;
-            Tag = "This view shows Waterfall Series in FlexChart.\r" +
-                "The Waterfall series is normally used to demonstrate how the starting position either increases or decreases through a series of changes.";
+            Tag = AppResources.WaterfallTag;
         }
 
         void OnLoaded(object sender, RoutedEventArgs e)

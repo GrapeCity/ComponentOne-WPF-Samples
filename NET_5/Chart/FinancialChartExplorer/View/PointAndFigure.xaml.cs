@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 using C1.Chart.Finance;
 using C1.WPF.Chart.Finance;
+using FinancialChartExplorer.Resources;
 
 namespace FinancialChartExplorer
 {
@@ -29,7 +30,7 @@ namespace FinancialChartExplorer
         {
             InitializeComponent();
             this.Loaded += Renko_Loaded;
-            Tag = "Point and Figure chart consists of columns of X's and O's that represent filtered price movements. X-Columns represent rising prices and O-Columns represent falling prices.";
+            Tag = AppResources.PointFigureTag;
         }
 
         public List<Company> Companies

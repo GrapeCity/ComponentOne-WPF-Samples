@@ -6,6 +6,7 @@ using C1.Chart;
 using System.Windows.Data;
 using System.Globalization;
 using System.Windows;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -32,12 +33,7 @@ namespace FlexChartExplorer
             cbRotate.SetBinding(CheckBox.IsCheckedProperty, new System.Windows.Data.Binding() { ElementName = "flexChart", Path = new PropertyPath("Rotated"), 
                 Mode = BindingMode.TwoWay });
 
-            Tag = "This view shows the FlexChart's basic features. It binds the chart to a data source and allows you to select the chart type, series stacking, and rotation.\r" +
-                "If you move the mouse over a chart element, a tooltip will appear showing details about the data point.\r" + Environment.NewLine +
-                "The simplest way to use the FlexChart is to:\r" + Environment.NewLine +
-                "1.Set the chart's DataSource property to an array of data objects.\r" +
-                "2.Set the chart's bindingX property to the name of the property that contains the X values (in this example fruit names).\r" +
-                "3.Add one or more Series objects to the chart's series array and set their binding property to the name of the property that contains the Y values (in this example the months of March, April, and May).";
+            Tag = AppResources.IntroductionTag;
         }
 
         public List<string> ChartTypes

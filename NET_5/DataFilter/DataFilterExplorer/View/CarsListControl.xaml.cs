@@ -1,5 +1,6 @@
 ﻿using C1.DataCollection;
 using C1.WPF.DataFilter;
+using DataFilterExplorer.Resources;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace DataFilterExplorer
         public CarsListControl()
         {
             InitializeComponent();
-            Tag = "This sample demonstrates how to use C1DataFilter control to filter the C1FlexGrid control. Also demonstrates how to modify automatically generated filters, save and restore filter expressions.";
+            Tag = AppResources.CarListTag;
             //Get Cars list
             _carsTable = DataProvider.GetCarTable();
             var data = new C1DataCollection<Car>(DataProvider.GetCarDataCollection(_carsTable));

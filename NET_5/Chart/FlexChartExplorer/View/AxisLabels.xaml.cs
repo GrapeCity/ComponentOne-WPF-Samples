@@ -17,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -31,7 +32,7 @@ namespace FlexChartExplorer
         public AxisLabels()
         {
             InitializeComponent();
-            Tag = "This view shows various Axis options to avoid label overlapping.";
+            Tag = AppResources.AxisLabelsTag;
         }
 
         public List<object> Data

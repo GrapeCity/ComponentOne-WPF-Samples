@@ -9,14 +9,14 @@ namespace MenuExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem("Overview",
-                                "Overview",
+                new SampleItem(Properties.Resources.MenuTitle,
+                                Properties.Resources.MenuTitle,
                                 new DemoMenu()),
-                new SampleItem("Custom Appearance",
-                                "Custom Appearance",
+                new SampleItem(Properties.Resources.AppearanceTitle,
+                                Properties.Resources.AppearanceTitle,
                                 new CustomAppearance()),
-                new SampleItem("Drop Down Menu",
-                                "Drop Down Menu",
+                new SampleItem(Properties.Resources.DropDownMenuTitle,
+                                Properties.Resources.DropDownMenuTitle,
                                 new DropDownMenu())
             };
         }

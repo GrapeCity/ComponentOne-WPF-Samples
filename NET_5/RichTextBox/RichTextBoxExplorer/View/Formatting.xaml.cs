@@ -7,7 +7,7 @@ namespace RichTextBoxExplorer
         public Formatting()
         {
             InitializeComponent();
-            Tag = "The C1RichTextBox control supports all of the rich formatting features you need in a rich text editor such as fonts, paragraph alignment, lists, clipboard, inserting objects like pictures, links, tables, and more.";
+            Tag = Properties.Resources.Format;
         }
     }
 }

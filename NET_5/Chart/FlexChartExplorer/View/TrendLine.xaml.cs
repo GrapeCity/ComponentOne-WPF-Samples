@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using C1.WPF.Core;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -35,8 +36,7 @@ namespace FlexChartExplorer
         {
             InitializeComponent();
             this.Loaded += HandleLoaded;
-            Tag = "This view shows TrendLine in FlexChart.\r" +
-                "You can use different trendline types by setting the FitType property of TrendLine. The points on the plot can be dragged by mouse which updates the trend line and its equation automatically.";
+            Tag = AppResources.TrendLineTag;
         }
 
         

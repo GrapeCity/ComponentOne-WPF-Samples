@@ -1,4 +1,5 @@
 ﻿using C1.Chart;
+using FlexChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace FlexChartExplorer
         public BoxWhisker()
         {
             InitializeComponent();
-            Tag = "The Box & Whisker series is normally used to compare distributions between different sets of numerical data";
+            Tag = AppResources.BoxWhiskerTag;
         }
 
         public List<string> Calculations

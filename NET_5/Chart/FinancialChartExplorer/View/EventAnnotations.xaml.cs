@@ -1,6 +1,7 @@
 ﻿using C1.Chart;
 using C1.Chart.Annotation;
 using C1.WPF.Chart;
+using FinancialChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace FinancialChartExplorer
         {
             InitializeComponent();
             this.Loaded += EventAnnotations_Loaded;
-            Tag = "Event annotations are used to mark important events that can be attached to a specific data point on the FinancialChart. Hovering over the event annotation will reveal the full details of the event.";
+            Tag = AppResources.EventAnnotationsTag;
         }
 
         private void EventAnnotations_Loaded(object sender, RoutedEventArgs e)

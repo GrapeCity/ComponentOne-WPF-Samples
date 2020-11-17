@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using C1.WPF;
-using C1.WPF.Core;
+﻿using C1.WPF.Core;
 using C1.WPF.Input;
 using C1.WPF.TabControl;
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace TabControlExplorer
 {
@@ -26,7 +17,7 @@ namespace TabControlExplorer
         public SimplifiedIndicator()
         {
             InitializeComponent();
-            Tag = "The new indicator tab style is modeled after Office 365. The tabs have a clean look with an indicator line displayed below the selected tab.";
+            Tag = Properties.Resources.Indicator;
         }
 
         void tabStripPlacement_SelectedValueChanged(object sender, PropertyChangedEventArgs<object> e)

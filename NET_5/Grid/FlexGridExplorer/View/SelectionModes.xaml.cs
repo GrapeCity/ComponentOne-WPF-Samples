@@ -19,6 +19,7 @@ namespace FlexGridExplorer
                 selectionMode.Items.Add(value.ToString());
             }
             selectionMode.SelectedIndex = selectionMode.Items.IndexOf(GridSelectionMode.CellRange.ToString());
+            lblShowMarquee.Text = AppResources.ShowMarquee;
 
             var data = Customer.GetCustomerList(100);
             grid.ItemsSource = data;

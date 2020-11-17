@@ -13,11 +13,11 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="2">
-            <TextBlock Text="Sort Icon Position" VerticalAlignment="Center"/>
+            <TextBlock x:Name="lblIconPos" Text="Sort Icon Position" VerticalAlignment="Center"/>
             <ComboBox x:Name="sortIconPosition" SelectionChanged="SortIconPositionChanged" Margin="4 0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="2">
-            <TextBlock Text="Sort Icon Template" VerticalAlignment="Center"/>
+            <TextBlock x:Name="lblIconTemplate" Text="Sort Icon Template" VerticalAlignment="Center"/>
             <ComboBox x:Name="sortIconTemplate" SelectionChanged="SortIconTemplateChanged" Margin="4 0"/>
         </StackPanel>
         <c1:FlexGrid x:Name="grid" SortIconPosition="Left" Grid.Row="2"/>

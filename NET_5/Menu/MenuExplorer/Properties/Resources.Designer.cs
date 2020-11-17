@@ -22,7 +22,7 @@ namespace MenuExplorer.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace MenuExplorer.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MenuExplorer.Properties.Resources", typeof(Resources).Assembly);
@@ -51,12 +51,66 @@ namespace MenuExplorer.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This demo shows how to apply a custom style to the C1Menu control..
+        /// </summary>
+        public static string Appearance {
+            get {
+                return ResourceManager.GetString("Appearance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Appearance.
+        /// </summary>
+        public static string AppearanceTitle {
+            get {
+                return ResourceManager.GetString("AppearanceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create custom drop-downs using C1Menu. This demo shows how to create a dropdown menu using C1Menu inside a C1DropDownButton control..
+        /// </summary>
+        public static string DropDownMenu {
+            get {
+                return ResourceManager.GetString("DropDownMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drop Down Menu.
+        /// </summary>
+        public static string DropDownMenuTitle {
+            get {
+                return ResourceManager.GetString("DropDownMenuTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable..
+        /// </summary>
+        public static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overview.
+        /// </summary>
+        public static string MenuTitle {
+            get {
+                return ResourceManager.GetString("MenuTitle", resourceCulture);
             }
         }
     }

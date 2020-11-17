@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
 using System.Windows.Media;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -23,8 +24,7 @@ namespace FlexChartExplorer
         public TreeMapNodeColor()
         {
             this.InitializeComponent();
-            Tag = "TreeMaps can be used to display two quantitive variables simultaneously, one represented by each rectangle's size and the other represented by its colour." + Environment.NewLine + Environment.NewLine +
-               "This view demonstrates how you can use TreeMap.NodeRendering event to specify color of each node.";
+            Tag = AppResources.TreeMapNodeColorTag;
             treeMap.DataLabel.Style.Stroke = new SolidColorBrush(Color.FromRgb(255, 255, 255));
             treeMap.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
         }

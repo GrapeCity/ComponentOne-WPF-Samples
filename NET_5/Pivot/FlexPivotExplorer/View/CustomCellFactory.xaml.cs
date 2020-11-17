@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
+﻿using C1.WPF.Grid;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using C1.WPF.Grid;
 
 namespace FlexPivotExplorer
 {
@@ -24,9 +13,7 @@ namespace FlexPivotExplorer
         public CustomCellFactory()
         {
             InitializeComponent();
-            Tag = "Shows how to apply conditional formatting to an FlexPivotGrid control using the FlexGrid's CustomCellFactory feature.\r" +
-                "The FlexPivotGrid derives from the FlexGrid control, so you can use the standard CustomCellFactory mechanism to apply styles to cells based on their contents(or to draw the entire cell if you prefer).\r" +
-                "This sample shows a grid where values greater than 500 appear with a light green background";
+            Tag = Properties.Resources.CellFactory;
             // bind olap page to data
             pivotPage.Loaded += (s, ea) =>
             {

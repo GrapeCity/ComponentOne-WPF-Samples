@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using C1.WPF.Core;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using C1.WPF;
-using C1.WPF.Core;
 
 namespace TreeViewExplorer
 {
@@ -18,7 +16,7 @@ namespace TreeViewExplorer
         public DemoTreeViewDragDrop()
         {
             InitializeComponent();
-            Tag = "This sample shows how to implement drag & drop action in C1TreeView.";
+            Tag = Properties.Resources.DragDrop;
 
             SampleTreeView.ItemsSource = BuildDepartmentTree();
 

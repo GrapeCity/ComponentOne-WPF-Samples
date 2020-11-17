@@ -9,20 +9,20 @@ namespace RichTextBoxExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem("Overview",
-                                "Overview",
+                new SampleItem(Properties.Resources.DemoTitle,
+                                Properties.Resources.DemoTitle,
                                 new DemoRichTextBox()),
 
-                new SampleItem("Formatting",
-                                "Formatting",
+                new SampleItem(Properties.Resources.FormatTitle,
+                                Properties.Resources.FormatTitle,
                                 new Formatting()),
 
-                new SampleItem("Import & Export",
-                                "Import & Export",
+                new SampleItem(Properties.Resources.DemoFilterTitle,
+                                Properties.Resources.DemoFilterTitle,
                                 new DemoRichTextBoxFilter()),
 
-                new SampleItem("ToolStrip",
-                                "ToolStrip",
+                new SampleItem(Properties.Resources.ToolStripTitle,
+                                Properties.Resources.ToolStripTitle,
                                 new ToolStrip()),
 
             };

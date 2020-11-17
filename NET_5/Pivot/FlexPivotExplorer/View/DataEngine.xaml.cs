@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 
 namespace FlexPivotExplorer
 {
@@ -35,7 +24,7 @@ namespace FlexPivotExplorer
         public DataEngine()
         {
             InitializeComponent();
-            Tag = "This sample shows how to get data to C1 DataEngine to perform analytics. C1DataEngine is capable of handling large amount of data, millions of rows in seconds or less. Data is retrieved from a database.";
+            Tag = Properties.Resources.DataEngine;
 
             flexPivotPage.Loaded += (s, ea) =>
             {

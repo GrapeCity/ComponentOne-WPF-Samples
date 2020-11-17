@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -17,7 +18,7 @@ namespace FlexChartExplorer
         public Axes()
         {
             this.InitializeComponent();
-            Tag = "This view shows the FlexChart with two y-axes.";
+            Tag = AppResources.AxesTag;
         }
 
         public List<DataItem> Data

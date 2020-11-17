@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Collections.Generic;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -21,8 +22,7 @@ namespace FlexChartExplorer
         {
             this.InitializeComponent();
             this.Loaded += Zoom_Loaded;
-            Tag = "This view shows how to implement a custom zoom for the FlexChart control.\r" +
-                "Use the mouse or touch to select a rectangular area on the plot area.The chart will zoom in on the selected area.When you are done, click the 'Reset Zoom' button below the chart to return to the original view.";
+            Tag = AppResources.ZoomTag;
         }
 
         private void Zoom_Loaded(object sender, RoutedEventArgs e)

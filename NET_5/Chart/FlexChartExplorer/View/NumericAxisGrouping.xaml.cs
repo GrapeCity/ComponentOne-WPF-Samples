@@ -1,4 +1,5 @@
 ﻿using C1.Chart;
+using FlexChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace FlexChartExplorer
         public NumericAxisGrouping()
         {
             InitializeComponent();
-            Tag = "This view shows grouping of numeric axis labels.";
+            Tag = AppResources.NumericAxisGroupingTag;
             flexChart.AxisY.GroupProvider = new MyGroupProvider();
         }
 

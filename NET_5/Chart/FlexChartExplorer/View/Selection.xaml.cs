@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -19,8 +20,7 @@ namespace FlexChartExplorer
         public Selection()
         {
             this.InitializeComponent();
-            Tag = "This view demonstrates the FlexChart's selection feature.\r" +
-                "The selectionMode property determines whether the chart should select series or points when the user clicks on the chart.";
+            Tag = AppResources.SelectionTag;
         }
 
         public List<string> ChartTypes

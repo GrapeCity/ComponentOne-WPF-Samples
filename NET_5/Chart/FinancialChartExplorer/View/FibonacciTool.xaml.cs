@@ -1,4 +1,5 @@
 ﻿using C1.Chart;
+using FinancialChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace FinancialChartExplorer
         public FibonacciTool()
         {
             InitializeComponent();
-            Tag = "Fibonacci tool is used for trend analysis in financial charts. With the help of range selector, you can choose data range for calculation.";
+            Tag = AppResources.FibonacciToolTag;
         }
 
         public List<Quote> Data

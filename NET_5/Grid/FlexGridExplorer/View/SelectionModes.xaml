@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <ComboBox x:Name="selectionMode" SelectionChanged="selectionMode_SelectionChanged"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <TextBlock Text="ShowMarquee" VerticalAlignment="Center" />
+            <TextBlock x:Name="lblShowMarquee" Text="ShowMarquee" VerticalAlignment="Center" />
             <CheckBox Margin="5,0" x:Name="switchMarquee" IsChecked="{Binding ElementName=grid, Path=ShowMarquee, Mode=TwoWay}" VerticalAlignment="Center"/>
         </StackPanel>
         <TextBlock x:Name="lblSelection" Grid.Row="2"/>

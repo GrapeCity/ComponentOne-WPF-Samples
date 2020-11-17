@@ -10,16 +10,16 @@ namespace TabControlExplorer
             AllItems = new ObservableCollection<SampleItem>
             {
                 new SampleItem(
-                    "Overview",
-                    "Overview",
+                    Properties.Resources.OverviewTitle,
+                    Properties.Resources.OverviewTitle,
                     new Overview()),
                 new SampleItem(
-                    "Tab Positions",
-                    "Tab Positions",
+                    Properties.Resources.TabPositionTitle,
+                    Properties.Resources.TabPositionTitle,
                     new TabPositions()),
                 new SampleItem(
-                    "Simplified Indicator",
-                    "Simplified Indicator",
+                    Properties.Resources.IndicatorTitle,
+                    Properties.Resources.IndicatorTitle,
                     new SimplifiedIndicator()),
             };
         }

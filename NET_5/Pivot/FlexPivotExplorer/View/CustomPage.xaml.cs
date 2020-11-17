@@ -1,24 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using C1.FlexPivot;
+using C1.WPF.Core;
+using C1.WPF.Menu;
+using C1.WPF.Ribbon;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Data;
-using System.Reflection;
-using C1.Zip;
-using System.Xml;
-using C1.WPF.Menu;
-using C1.WPF.Core;
-using C1.FlexPivot;
-using C1.WPF.Ribbon;
 
 namespace FlexPivotExplorer
 {
@@ -33,10 +21,7 @@ namespace FlexPivotExplorer
         public CustomPage()
         {
             InitializeComponent();
-            Tag = "Shows how you can customize the FlexPivotPage control.\r" +
-                "The sample creates a default view that is persisted across sessions in isolated storage.It also adds a new menu to the FlexPivotPage that contains a list of predefined views.\r" +
-                "The IsolatedStorageSettings.ApplicationSettings class allows you to save and load application settings very easily.\r" +
-                "The predefined views defined in this application show how you can use the FlexPivotField.Format property to group date values and analyze sales by year, month, and weekday.";
+            Tag = Properties.Resources.Page;
             pivotPage.Loaded += (s, ea) =>
             {
                 if (!pivotPage.IsVisible)

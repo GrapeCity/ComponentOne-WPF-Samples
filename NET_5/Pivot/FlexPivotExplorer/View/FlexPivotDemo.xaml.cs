@@ -1,16 +1,10 @@
-﻿using C1.Zip;
+﻿using C1.WPF.Core;
+using C1.WPF.Ribbon;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Xml;
-using C1.WPF.Menu;
-using C1.WPF.Core;
-using C1.WPF.Ribbon;
 
 namespace FlexPivotExplorer
 {
@@ -24,8 +18,7 @@ namespace FlexPivotExplorer
         public FlexPivotDemo()
         {
             InitializeComponent();
-            Tag = "With FlexPivot you can create pivot grids and charts that slice and dice your tabular and cube data to give you real-time information, insights, and results in seconds. " +
-                    "The easy-to-use controls are modeled after Microsoft Excel® Pivot Tables, so they're powerful and familiar for all users.";
+            Tag = Properties.Resources.Pivot;
 
             flexPivotPage.Loaded += (s, ea) =>
             {

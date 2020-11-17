@@ -745,6 +745,24 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sort Icon Position.
+        /// </summary>
+        public static string SortIconPosition {
+            get {
+                return ResourceManager.GetString("SortIconPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort Icon Template.
+        /// </summary>
+        public static string SortIconTemplate {
+            get {
+                return ResourceManager.GetString("SortIconTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows a responsive column layout that uses star sizing..
         /// </summary>
         public static string StarSizingDescription {

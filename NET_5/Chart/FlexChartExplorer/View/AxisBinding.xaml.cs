@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Controls;
 using C1.Chart;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -19,7 +20,7 @@ namespace FlexChartExplorer
         public AxisBinding()
         {
             this.InitializeComponent();
-            Tag = "This view shows the FlexChart's axis binding feature.";
+            Tag = AppResources.AxisBindingTag;
             this.flexChart.AxisY.ItemsSource = AxisData;
         }
 

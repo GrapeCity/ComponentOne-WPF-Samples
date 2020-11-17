@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlexPivotExplorer.Resources;
+using System;
 using System.Collections.ObjectModel;
 
 namespace FlexPivotExplorer
@@ -9,27 +10,33 @@ namespace FlexPivotExplorer
 
         public SampleDataSource()
         {
-            _allItems.Add(new SampleItem("Overview",
-                "Overview",
+            _allItems.Add(new SampleItem(Properties.Resources.PivotTitle,
+                Properties.Resources.PivotTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new FlexPivotDemo())));
             _ = _allItems[0].Sample.Value; //Force first page is loaded immediately
-            _allItems.Add(new SampleItem("Custom Cell Factory",
-                "Custom Cell Factory",
+
+            _allItems.Add(new SampleItem(Properties.Resources.CellFactoryTitle,
+                Properties.Resources.CellFactoryTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new CustomCellFactory())));
-            _allItems.Add(new SampleItem("Custom Columns",
-                "Custom Columns",
+
+            _allItems.Add(new SampleItem(Properties.Resources.ColumnTitle,
+                Properties.Resources.ColumnTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new CustomColumns())));
-            _allItems.Add(new SampleItem("Custom Page",
-                "Custom Page",
+
+            _allItems.Add(new SampleItem(Properties.Resources.PageTitle,
+                Properties.Resources.PageTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new CustomPage())));
-            _allItems.Add(new SampleItem("Multi Values",
-                "Multi Values",
+
+            _allItems.Add(new SampleItem(Properties.Resources.MultiValueTitle,
+                Properties.Resources.MultiValueTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new MultiValues())));
-            _allItems.Add(new SampleItem("Custom Template",
-                "Custom Template",
+
+            _allItems.Add(new SampleItem(Properties.Resources.TemplateTitle,
+                Properties.Resources.TemplateTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new CustomTemplate())));
-            _allItems.Add(new SampleItem("Data Engine",
-                "Data Engine",
+
+            _allItems.Add(new SampleItem(Properties.Resources.DataEngineTitle,
+                Properties.Resources.DataEngineTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new DataEngine())));
         }
 

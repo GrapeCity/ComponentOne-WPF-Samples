@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Collections.Generic;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -18,7 +19,7 @@ namespace FlexChartExplorer
         public PlotAreas()
         {
             this.InitializeComponent();
-            Tag = "This view shows the FlexChart with several plot areas.";
+            Tag = AppResources.PlotAreasTag;
         }
 
         public PlotAreasSampleDataItem[] Data

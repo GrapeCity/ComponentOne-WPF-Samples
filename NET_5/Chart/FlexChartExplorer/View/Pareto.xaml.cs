@@ -1,5 +1,6 @@
 ﻿using C1.Chart;
 using C1.WPF.Chart;
+using FlexChartExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace FlexChartExplorer
         public Pareto()
         {
             this.InitializeComponent();
-            Tag = "A Pareto is a special histogram chart with columns sorted in descending order and a rising line that represents the cumulative total percentage. Pareto charts makes it easier to analyze most significant issues and prioritise corrective actions.";
+            Tag = AppResources.ParetoTag;
             Init();
         }
 

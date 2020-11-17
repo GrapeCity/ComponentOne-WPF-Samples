@@ -2,6 +2,7 @@
 using C1.WPF.DateTimeEditors;
 using System;
 using System.Windows;
+using DateTimeEditorsExplorer.Resources;
 
 namespace DateTimeEditorsExplorer
 {
@@ -13,7 +14,7 @@ namespace DateTimeEditorsExplorer
         public DemoTimeEditor()
         {
             InitializeComponent();
-            Tag = "The C1TimeEditor provides a simple interface for selecting time values. The time can be selected by using the spin buttons, keyboard arrows, or by typing in fields.";
+            Tag = AppResources.TimePickerTag;
         }
 
         #region Object model

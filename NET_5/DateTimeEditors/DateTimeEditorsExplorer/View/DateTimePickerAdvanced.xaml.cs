@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using DateTimeEditorsExplorer.Resources;
+using System.Threading;
 using System.Windows.Controls;
 
 namespace DateTimeEditorsExplorer
@@ -11,7 +12,7 @@ namespace DateTimeEditorsExplorer
         public DateTimePickerAdvanced()
         {
             InitializeComponent();
-            Tag = "Customize the date and time format and set the mask and placeholder text.";
+            Tag = AppResources.DateTimePickerAdvanceTag;
             // add some custom formats to dateFormatCombo
             dateFormatCombo.Items.Add("MM/dd/yyyy");
             dateFormatCombo.Items.Add("dd-MM-yyyy");

@@ -19,7 +19,7 @@ namespace MapsExplorer
         public MapChart()
         {
             InitializeComponent();
-            Tag = "KML";
+            Tag = Properties.Resources.MapChart;
 
             this.Loaded += MapChart_Loaded;            
         }

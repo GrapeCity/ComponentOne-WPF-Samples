@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Media;
 using C1.Chart;
+using FlexChartExplorer.Resources;
 
 namespace FlexChartExplorer
 {
@@ -19,7 +20,7 @@ namespace FlexChartExplorer
         public PieSliceColor()
         {
             this.InitializeComponent();
-            Tag = "This view shows how to customize FlexPie silce colors. The color intensity depends on the corresponding data value. It also demonstrates animation when loading new or updating existing data.";
+            Tag = AppResources.PieSliceColorTag;
         }
 
         private void NewData()
