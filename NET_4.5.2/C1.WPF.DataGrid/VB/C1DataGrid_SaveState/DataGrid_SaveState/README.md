@@ -1,5 +1,5 @@
 ## C1DataGrid Save State
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataGrid/VB/C1DataGrid_SaveState/DataGrid_SaveState)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataGrid/VB/C1DataGrid_SaveState/DataGrid_SaveState)
 ____
 #### Shows how to save the state of a data grid in the user settings.
 ____

@@ -1,5 +1,5 @@
 ## CoreExplorer Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Core/CoreExplorer)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Core/CoreExplorer)
 ____
 #### Shows the controls belonging to the C1.WPF.Core library.
 ____

@@ -1,5 +1,5 @@
 ## FlexGridLocalization
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/FlexGridLocalization)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/FlexGridLocalization)
 ____
 #### Shows how you can localize the FlexGrid filter to different languages.
 ____

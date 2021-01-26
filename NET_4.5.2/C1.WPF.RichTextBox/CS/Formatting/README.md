@@ -1,5 +1,5 @@
 ## C1RichTextBox Formatting
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.RichTextBox/CS/Formatting)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.RichTextBox/CS/Formatting)
 ____
 #### Shows the different formatting options of C1RichTextBox
 ____

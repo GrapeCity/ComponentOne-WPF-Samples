@@ -1,5 +1,5 @@
 ## FlexCommonTasks
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexReport/CS/FlexCommonTasks)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexReport/CS/FlexCommonTasks)
 ____
 #### Demonstrates the reports from the FlexCommonTasks_WPF.flxr report definition file
 ____

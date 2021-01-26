@@ -1,5 +1,5 @@
 ## MultiGridPdf
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/MultiGridPdf)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/MultiGridPdf)
 ____
 #### Shows how you to create a PDF document that contains multiple C1FlexGrid controls.
 ____

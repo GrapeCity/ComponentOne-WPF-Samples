@@ -1,5 +1,5 @@
 ## C1DataCollection101
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1DataCollection/CS/C1DataCollection101/C1DataCollection101)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1DataCollection/CS/C1DataCollection101/C1DataCollection101)
 ____
 #### This sample demonstrates how to using C1DataCollection with WPF controls.
 ____

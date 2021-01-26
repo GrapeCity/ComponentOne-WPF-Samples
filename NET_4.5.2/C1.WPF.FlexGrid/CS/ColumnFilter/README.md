@@ -1,5 +1,5 @@
 ## ColumnFilter
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ColumnFilter)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ColumnFilter)
 ____
 #### Demonstrates the use of the C1FlexGridFilter extension class to implement column filters in a C1FlexGrid control.
 ____

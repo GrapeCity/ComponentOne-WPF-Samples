@@ -1,5 +1,5 @@
 ## AutoSizeColumns
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Excel/CS/AutoSizeColumns)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Excel/CS/AutoSizeColumns)
 ____
 #### Automatically size sheet columns to fit their contents.
 ____

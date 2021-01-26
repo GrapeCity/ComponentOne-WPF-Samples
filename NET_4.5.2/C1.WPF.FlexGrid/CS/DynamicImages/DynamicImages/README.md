@@ -1,5 +1,5 @@
 ## DynamicImages
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/DynamicImages/DynamicImages)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/DynamicImages/DynamicImages)
 ____
 #### Shows how you can use a custom cell factory to implement cells with dynamic images.
 ____

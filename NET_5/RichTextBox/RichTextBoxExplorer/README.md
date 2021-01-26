@@ -1,5 +1,5 @@
 ## RichTextBoxExplorer Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/RichTextBox/RichTextBoxExplorer)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/RichTextBox/RichTextBoxExplorer)
 ____
 #### Shows samples of the C1RichTextBox control.
 ____

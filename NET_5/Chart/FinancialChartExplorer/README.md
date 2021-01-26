@@ -1,5 +1,5 @@
 ## FinancialChartExplorer
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Chart/FinancialChartExplorer)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Chart/FinancialChartExplorer)
 ____
 #### Showcases the WPF FinancialChart.
 ____

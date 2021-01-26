@@ -1,5 +1,5 @@
 ## ColumnFooters
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ColumnFooters)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ColumnFooters)
 ____
 #### Shows how you can add column footer cells that remain visible when the user scrolls the control vertically.
 ____

@@ -1,5 +1,5 @@
 ## TraditionalIndexing
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/TraditionalIndexing)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/TraditionalIndexing)
 ____
 #### Shows how you can emulate the traditional indexing method used in the C1FlexGrid for WinForms.
 ____

@@ -1,5 +1,5 @@
 ## HierarchicalDataTemplate
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.OrgChart/CS/HierarchicalDataTemplate/HierarchicalDataTemplate)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.OrgChart/CS/HierarchicalDataTemplate/HierarchicalDataTemplate)
 ____
 #### Demonstrates advanced binding scenarios using the DataTemplateSelector and
 ____

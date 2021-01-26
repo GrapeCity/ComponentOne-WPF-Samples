@@ -1,5 +1,5 @@
 ## ZoomSample
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.GanttView/CS/ZoomSample/ZoomSample)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.GanttView/CS/ZoomSample/ZoomSample)
 ____
 #### Demonstrates zoom-in/zoom-out features of C1GanttView.
 ____

@@ -1,5 +1,5 @@
 ## C1Bitmap Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Bitmap/CS/BitmapSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Bitmap/CS/BitmapSamples)
 ____
 #### Shows how to use classes provided by the C1.WPF.Bitmap assembly.
 ____

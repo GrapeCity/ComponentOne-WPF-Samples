@@ -1,5 +1,5 @@
 ## C1SpellChecker Sample
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.SpellChecker/CS/SpellCheckerSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.SpellChecker/CS/SpellCheckerSamples)
 ____
 #### Shows how to use the C1SpellChecker object to check TextBox, C1DataGrid, and C1RichTextBox controls.
 ____
