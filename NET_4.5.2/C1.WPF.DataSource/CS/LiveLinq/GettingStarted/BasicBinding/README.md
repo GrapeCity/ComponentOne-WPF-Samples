@@ -1,5 +1,5 @@
 ## BasicBinding
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataSource/CS/LiveLinq/GettingStarted/BasicBinding)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataSource/CS/LiveLinq/GettingStarted/BasicBinding)
 ____
 #### Bind your controls to LINQ queries, that is, to LiveLinq live views.
 ____

@@ -1,5 +1,5 @@
 ## Orders-EF-MVVM
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataSource/CS/Orders-EF-MVVM)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataSource/CS/Orders-EF-MVVM)
 ____
 #### Orders demo application with Entity Framework and the MVVM pattern
 ____

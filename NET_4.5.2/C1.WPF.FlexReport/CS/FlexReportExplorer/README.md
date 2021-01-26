@@ -1,5 +1,5 @@
 ## FlexReportExplorer
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexReport/CS/FlexReportExplorer)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexReport/CS/FlexReportExplorer)
 ____
 #### Explore the reporting features offered by FlexReport in WPF Applications. 
 ____

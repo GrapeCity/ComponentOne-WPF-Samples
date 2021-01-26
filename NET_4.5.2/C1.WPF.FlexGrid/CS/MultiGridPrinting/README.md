@@ -1,5 +1,5 @@
 ## MultiGridPrinting
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/MultiGridPrinting)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/MultiGridPrinting)
 ____
 #### Shows how you can print multiple grids into a single document.
 ____

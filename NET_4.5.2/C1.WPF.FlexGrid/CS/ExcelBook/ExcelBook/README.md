@@ -1,5 +1,5 @@
 ## ExcelBook
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ExcelBook/ExcelBook)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/ExcelBook/ExcelBook)
 ____
 #### Shows a class that extends the C1FlexGrid to provide many Excel-like features.
 ____

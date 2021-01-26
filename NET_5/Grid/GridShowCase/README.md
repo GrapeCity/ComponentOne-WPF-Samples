@@ -1,5 +1,5 @@
 ## FlexGrid Showcase
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Grid/GridShowCase)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_5/Grid/GridShowCase)
 ____
 #### Shows the main features of Grid control.
 ____

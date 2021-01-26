@@ -1,5 +1,5 @@
 ## Adventure Viewer
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/General/CS/AdventureViewer)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/General/CS/AdventureViewer)
 ____
 #### Shows a data viewer for the AdventureWorks database.
 ____

@@ -1,5 +1,5 @@
 ## FilterEditor
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataFilter/CS/FilterEditor)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataFilter/CS/FilterEditor)
 ____
 #### This sample shows the basic features of C1FilterEditor.
 ____

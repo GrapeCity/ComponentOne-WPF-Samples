@@ -1,5 +1,5 @@
 ## C1Sparkline Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Sparkline/CS/SparklineSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Sparkline/CS/SparklineSamples)
 ____
 #### Shows samples of the controls in the C1.WPF.Sparkline dll.
 ____

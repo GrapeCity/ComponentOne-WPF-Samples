@@ -1,5 +1,5 @@
 ## PrintingWPF
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/PrintingWPF)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.FlexGrid/CS/PrintingWPF)
 ____
 #### Demonstrates the printing features of the C1FlexGrid control.
 ____

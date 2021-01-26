@@ -1,5 +1,5 @@
 ## WYSIWYGPrinting
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Schedule/CS/WYSIWYGPrinting)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Schedule/CS/WYSIWYGPrinting)
 ____
 #### Demonstrates printing C1Scheduler's views via System.Windows.Controls.PrintDialog.PrintDocument method.
 ____

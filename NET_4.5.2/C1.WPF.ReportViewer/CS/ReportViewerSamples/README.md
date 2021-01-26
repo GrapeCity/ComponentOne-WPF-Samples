@@ -1,5 +1,5 @@
 ## ReportViewerSamples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.ReportViewer/CS/ReportViewerSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.ReportViewer/CS/ReportViewerSamples)
 ____
 #### Shows the C1ReportViewer control in action.
 ____

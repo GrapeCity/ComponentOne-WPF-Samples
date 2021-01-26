@@ -1,5 +1,5 @@
 ## DataGrid Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataGrid/CS/DataGridSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.DataGrid/CS/DataGridSamples)
 ____
 #### Shows samples of the C1DataGrid control.
 ____

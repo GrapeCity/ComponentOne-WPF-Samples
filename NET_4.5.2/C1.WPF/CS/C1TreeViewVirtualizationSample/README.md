@@ -1,5 +1,5 @@
 ## C1TreeView Virtualization
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF/CS/C1TreeViewVirtualizationSample)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF/CS/C1TreeViewVirtualizationSample)
 ____
 #### Shows how to use IsVirtualizing property to optimize the performance.
 ____

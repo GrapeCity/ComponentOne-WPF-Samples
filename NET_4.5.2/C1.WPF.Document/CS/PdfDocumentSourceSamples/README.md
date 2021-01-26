@@ -1,5 +1,5 @@
 ## PdfDocumentSourceSamples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Document/CS/PdfDocumentSourceSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_4.5.2/C1.WPF.Document/CS/PdfDocumentSourceSamples)
 ____
 #### Demonstrates the major features of PdfDocumentSource and FlexViewer for WPF.
 ____
