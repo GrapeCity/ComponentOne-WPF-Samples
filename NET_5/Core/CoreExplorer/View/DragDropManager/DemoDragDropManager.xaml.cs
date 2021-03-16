@@ -21,7 +21,7 @@ namespace CoreExplorer
         public DemoDragDropManager()
         {
             InitializeComponent();
-            Tag = "C1DragDropManager has an extensive set of methods and events that allow you to control the entire drag-and-drop process. Just register some elements as drag sources and some as drop targets, and then handle the DragDrop event to move or copy the elements to their new location. You can also customize the appearance of the drag markers for both the drag source and drop target. This makes the entire operation more user-friendly and visually appealing.";
+            Tag = CoreExplorer.Resources.AppResources.DragDropManagerTag;
 
             for (int i = 0; i < 8; ++i)
             {

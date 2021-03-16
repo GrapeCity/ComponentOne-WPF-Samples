@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using C1.WPF;
@@ -67,7 +68,7 @@ namespace BasicControls
                 {
                     // find target node
                     C1TreeViewItem target = Tree.GetNode(e.GetPosition(null));
-                    if (target != null )
+                    if (target != null)
                     {
                         bool insertAfter = e.GetPosition(target).Y > 4;
                         if (target.HasItems)
@@ -84,6 +85,8 @@ namespace BasicControls
                         {
                             DoCopy(item, target, insertAfter);
                         }
+
+                        Tree.ItemsSource = Tree.ItemsSource;
                     }
                 }
             }
@@ -105,11 +108,39 @@ namespace BasicControls
             if (copyAfter)
                 targetIndex++;
 
-            // copy source node and insert
-            Employee emp = (Employee)source.Header;
-            if ( !targetCollection.Contains(emp))
+            var sourceTreeViewItem = source as C1TreeViewItem;
+            var targetTreeViewItem = target as C1TreeViewItem;
+
+            var empSource = sourceTreeViewItem.DataContext as Employee;
+            var departmentId = 0;
+            if (targetTreeViewItem.DataContext is Employee)
             {
-                targetCollection.Insert(targetIndex, emp);
+                departmentId = ((Employee)targetTreeViewItem.DataContext).DepartmentID;
+            }
+            else
+            {
+                departmentId = ((Department)targetTreeViewItem.DataContext).DepartmentID;
+            }
+            if (departmentId == 0 || empSource.DepartmentID == departmentId) return;
+            foreach (var dep in Tree.ItemsSource)
+            {
+                var department = dep as Department;
+                if (department.DepartmentID != departmentId) continue;
+
+                var empToAdd = empSource.Clone();
+                empToAdd.DepartmentID = departmentId;
+                if (!department.Employees.Any(x => x.EmployeeID == empToAdd.EmployeeID))
+                {
+                    if (!department.Employees.Any())
+                    {
+                        department.Employees.Add(empToAdd);
+                    }
+                    else
+                    {
+                        department.Employees.Insert(targetIndex, empToAdd);
+                    }
+                }
+                break;
             }
         }
 
@@ -118,7 +149,7 @@ namespace BasicControls
         /// </summary>
         /// <param name="source">The source node to move</param>
         /// <param name="target">The target node</param>
-        /// <param name="copyAfter">Indicates if the source node will be moved after (larger index) the target </param>
+        /// <param name="moveAfter">Indicates if the source node will be moved after (larger index) the target </param>
         private void DoMove(C1TreeViewItem source, C1TreeViewItem target, bool moveAfter)
         {
             // get source collection/index
@@ -133,16 +164,44 @@ namespace BasicControls
             if (sourceCollection == targetCollection && sourceIndex < targetIndex)
                 targetIndex--;
 
-            // remove node from old position, insert into new
-            if (sourceIndex >= 0)
+
+            var sourceTreeViewItem = source as C1TreeViewItem;
+            var targetTreeViewItem = target as C1TreeViewItem;
+
+            var empSource = sourceTreeViewItem.DataContext as Employee;
+            var departmentId = 0;
+            if (targetTreeViewItem.DataContext is Employee)
             {
-                sourceCollection.RemoveAt(sourceIndex);
+                departmentId = ((Employee)targetTreeViewItem.DataContext).DepartmentID;
             }
-            // copy source node and insert
-            Employee emp = (Employee)source.Header;
-            if (!targetCollection.Contains(emp))
+            else
             {
-                targetCollection.Insert(targetIndex, emp);
+                departmentId = ((Department)targetTreeViewItem.DataContext).DepartmentID;
+            }
+            if (departmentId == 0 || empSource.DepartmentID == departmentId) return;
+            foreach (var dep in Tree.ItemsSource)
+            {
+                var department = dep as Department;
+                if (department.DepartmentID != departmentId) continue;
+
+                if (!department.Employees.Any(x => x.EmployeeID == empSource.EmployeeID))
+                {
+                    if (!department.Employees.Any())
+                    {
+                        department.Employees.Add(empSource);
+                    }
+                    else
+                    {
+                        department.Employees.Insert(targetIndex, empSource);
+                    }
+                }
+                break;
+            }
+            // remove node from old position
+            if (sourceIndex >= 0 && empSource.DepartmentID != departmentId)
+            {
+                empSource.DepartmentID = departmentId;
+                sourceCollection.RemoveAt(sourceIndex);
             }
         }
     }

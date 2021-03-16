@@ -107,7 +107,7 @@ namespace FilterSummary
                     var modelFilter = f as RangeFilter;
                     modelFilter.Maximum = data.Max(x => (x as Car).Price);
                     modelFilter.Minimum = data.Min(x => (x as Car).Price);
-                    modelFilter.Digits = 0;
+                    modelFilter.Format = "F0";
                 }
             }
         }

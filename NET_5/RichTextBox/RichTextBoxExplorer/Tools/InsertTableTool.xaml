@@ -22,9 +22,9 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Number of columns:" Margin="10 0 0 0" VerticalAlignment="Center" />
-                <c1:C1NumericBox x:Name="numColsBox" Grid.Column="1" Minimum="1" Value="2" Height="24"  Margin="10 10 10 5"/>
+                <c1:C1NumericBox x:Name="numColsBox" Padding="0" Grid.Column="1" Minimum="1" Value="2" Height="24"  Margin="10 10 10 5"/>
                 <TextBlock Text="Number of rows:" Margin="10 0 0 0" VerticalAlignment="Center" Grid.Row="1" />
-                <c1:C1NumericBox x:Name="numRowsBox" Grid.Row="1" Minimum="1" Value="2"  Height="24" Margin="10 5 10 10"  Grid.Column="1"/>
+                <c1:C1NumericBox x:Name="numRowsBox" Padding="0" Grid.Row="1" Minimum="1" Value="2"  Height="24" Margin="10 5 10 10"  Grid.Column="1"/>
             </Grid>
             <Grid Background="#FFF0F0F0" Grid.Row="1">
                 <Grid.RowDefinitions>

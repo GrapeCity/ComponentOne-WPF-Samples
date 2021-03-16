@@ -376,6 +376,24 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exports the grid information to Html, Text or CSV..
+        /// </summary>
+        public static string ExportDescription {
+            get {
+                return ResourceManager.GetString("ExportDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export.
+        /// </summary>
+        public static string ExportTitle {
+            get {
+                return ResourceManager.GetString("ExportTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filter.
         /// </summary>
         public static string Filter {
@@ -570,6 +588,24 @@ namespace FlexGridExplorer.Resources {
         public static string Monday {
             get {
                 return ResourceManager.GetString("Monday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows the effects of different settings of MouseOverMode.
+        /// </summary>
+        public static string MouseHoverDescription {
+            get {
+                return ResourceManager.GetString("MouseHoverDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mouse Hover.
+        /// </summary>
+        public static string MouseHoverTitle {
+            get {
+                return ResourceManager.GetString("MouseHoverTitle", resourceCulture);
             }
         }
         

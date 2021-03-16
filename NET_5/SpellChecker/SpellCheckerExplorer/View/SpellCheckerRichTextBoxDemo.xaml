@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="SpellCheckerExplorer.SpellCheckerRichTextBoxDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SpellCheckerExplorer"
+             mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- title -->
+            <RowDefinition Height="Auto" />
+            <!-- buttons -->
+            <RowDefinition Height="*"/>
+            <!-- textBoxes -->
+            <RowDefinition Height="80"/>
+            <!-- textBoxOut -->
+        </Grid.RowDefinitions>
+
+        <!-- rich textbox and toolbar -->
+        <Grid x:Name="_richTextBoxPanel" Grid.Row="2" Margin="0 10 0 0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <c1:C1RichTextBoxRibbon x:Name="_rtbToolbar" RichTextBox="{Binding ElementName=_richTextBox}" >
+                <c1:RibbonTabItem Header="Home">
+                    <c1:RibbonGroup Header="Tools">
+                        <c1:RibbonGroup.GroupSizeDefinitions>
+                            <c1:RibbonGroupSizeDefinition>
+                                <c1:RibbonToolSizeDefinition Size="Large"/>
+                            </c1:RibbonGroupSizeDefinition>
+                        </c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:C1SpellCheckTool />
+                        <c1:C1FindAndReplaceTool/>
+                    </c1:RibbonGroup>
+                    <c1:RibbonGroup Header="Edit">
+                        <c1:C1PasteTool/>
+                        <c1:C1CutTool/>
+                        <c1:C1UndoTool/>
+                        <c1:C1ToolSeparator/>
+                        <c1:C1CopyTool/>
+                        <c1:C1RedoTool/>
+                        <c1:C1FormatPainterTool/>
+                    </c1:RibbonGroup>
+                    <c1:RibbonGroup Header="Font">
+                        <c1:C1ToolStrip>
+                            <c1:C1FontFamilyTool/>
+                            <c1:C1FontSizeTool/>
+                            <c1:C1IncreaseFontSizeTool/>
+                            <c1:C1DecreaseFontSizeTool/>
+                        </c1:C1ToolStrip>
+                        <c1:C1ToolStrip>
+                            <c1:C1BoldTool/>
+                            <c1:C1ItalicTool/>
+                            <c1:C1UnderlineTool/>
+                            <c1:C1StrikethroughTool/>
+                            <c1:C1ToolSeparator/>
+                            <c1:C1ChangeCaseTool/>
+                            <c1:C1SuperscriptTool/>
+                            <c1:C1SubscriptTool/>
+                            <c1:C1ToolSeparator/>
+                            <c1:C1FontColorTool/>
+                            <c1:C1TextHighlightTool/>
+                        </c1:C1ToolStrip>
+                    </c1:RibbonGroup>
+                    <c1:RibbonGroup Header="Paragraph">
+                        <c1:C1ToolStrip>
+                            <c1:C1LeftAlignTool/>
+                            <c1:C1CenterAlignTool/>
+                            <c1:C1RightAlignTool/>
+                            <c1:C1JustifyTool/>
+                            <c1:C1ToolSeparator/>
+                            <c1:C1BulletsTool/>
+                            <c1:C1NumberingTool/>
+                            <c1:C1ToolSeparator/>
+                            <c1:C1TextWrappingTool/>
+                        </c1:C1ToolStrip>
+                        <c1:C1ToolStrip>
+                            <c1:C1ParagraphColorTool/>
+                            <c1:C1BorderMenuTool/>
+                            <c1:C1MarginTool/>
+                            <c1:C1PaddingTool/>
+                            <c1:C1ToolSeparator/>
+                            <c1:C1LineSpacingTool/>
+                        </c1:C1ToolStrip>
+                    </c1:RibbonGroup>
+                </c1:RibbonTabItem>
+                <c1:RibbonTabItem Header="Tables">
+                    <c1:RibbonGroup Header="Table">
+                        <c1:RibbonGroup.GroupSizeDefinitions>
+                            <c1:RibbonGroupSizeDefinition>
+                                <c1:RibbonToolSizeDefinition Size="Large"/>
+                            </c1:RibbonGroupSizeDefinition>
+                        </c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:C1InsertTableTool/>
+                        <c1:C1SelectTableMenuTool/>
+                        <c1:C1ShowGridlinesTool/>
+                        <c1:C1TableWidthTool/>
+                    </c1:RibbonGroup>
+                    <c1:RibbonGroup Header="Rows And Columns">
+                        <c1:RibbonGroup.GroupSizeDefinitions>
+                            <c1:RibbonGroupSizeDefinition>
+                                <c1:RibbonToolSizeDefinition Size="Large"/>
+                            </c1:RibbonGroupSizeDefinition>
+                        </c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:C1DeleteTableMenuTool/>
+                        <c1:C1InsertColumnsLeftTool/>
+                        <c1:C1InsertColumnsRightTool/>
+                        <c1:C1InsertRowsAboveTool/>
+                        <c1:C1InsertRowsBelowTool/>
+                    </c1:RibbonGroup>
+                    <c1:RibbonGroup Header="Merge">
+                        <c1:RibbonGroup.GroupSizeDefinitions>
+                            <c1:RibbonGroupSizeDefinition>
+                                <c1:RibbonToolSizeDefinition Size="Large"/>
+                            </c1:RibbonGroupSizeDefinition>
+                        </c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:C1MergeCellsTool/>
+                        <c1:C1UnmergeCellTool/>
+                    </c1:RibbonGroup>
+                    <c1:RibbonGroup Header="Cell">
+                        <c1:RibbonGroup.GroupSizeDefinitions>
+                            <c1:RibbonGroupSizeDefinition>
+                                <c1:RibbonToolSizeDefinition Size="Small"/>
+                            </c1:RibbonGroupSizeDefinition>
+                        </c1:RibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ColumnWidthTool/>
+                        <c1:C1RowHeightTool/>
+                        <c1:C1ToolSeparator/>
+                        <c1:C1TopAlignTool/>
+                        <c1:C1VerticalCenterAlignTool/>
+                        <c1:C1BottomAlignTool/>
+                    </c1:RibbonGroup>
+                </c1:RibbonTabItem>
+            </c1:C1RichTextBoxRibbon>
+            <c1:C1RichTextBox x:Name="_richTextBox" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Grid.Row="1" />
+        </Grid>
+
+        <!-- event log tracer -->
+        <TextBox x:Name="_outputTextBox" Margin="0 10 0 0" TextWrapping="Wrap" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Grid.Row="3" ToolTipService.ToolTip="Output pane" />
+    </Grid>
+</UserControl>

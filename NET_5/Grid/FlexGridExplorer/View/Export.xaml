@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="FlexGridExplorer.Export"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:FlexGridExplorer.Resources"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <c1:C1IconTemplate x:Key="ExportIconTemplate">
+            <c1:C1CompositeIcon>
+                <c1:C1PathIcon ViewBox="0,0,16,16" Data="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                <c1:C1PathIcon ViewBox="0,0,16,16" Data="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+            </c1:C1CompositeIcon>
+        </c1:C1IconTemplate>
+    </UserControl.Resources>
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1:C1ToolStrip ToolIconSize="16" ToolLabelVisibility="Visible" ToolOrientation="Vertical">
+            <c1:C1ButtonTool x:Name="exportButton" Label="{x:Static res:AppResources.ExportTitle}" IconTemplate="{StaticResource ExportIconTemplate}" Click="OnExport"/>
+            <CheckBox x:Name="checkSaveHeaders" IsChecked="True" Margin="5" VerticalAlignment="Center">Save Headers</CheckBox>
+            <CheckBox x:Name="checkVisibleRows" Margin="5" VerticalAlignment="Center">Visible Rows</CheckBox>
+            <CheckBox x:Name="checkVisibleColumns" Margin="5" VerticalAlignment="Center">Visible Columns</CheckBox>
+            <CheckBox x:Name="checkFormatted" Margin="5" VerticalAlignment="Center">Formatted</CheckBox>
+        </c1:C1ToolStrip>
+        <c1:FlexGrid x:Name="grid"  FrozenColumns="3" FrozenRows="2" AllowMerging="Cells" AutoGenerateColumns="False" Grid.Row="1" HeadersVisibility="All" ShowMarquee="True" AllowResizing="Both" Style="{x:Static c1:FlexGrid.ClassicStyle}">
+            <c1:FlexGrid.Columns>
+                <c1:GridColumn Binding="Id" IsReadOnly="true" MinWidth="150" Width="*"/>
+                <c1:GridColumn Binding="FirstName" MinWidth="150" Width="*"/>
+                <c1:GridColumn Binding="LastName" MinWidth="150" Width="*"/>
+                <c1:GridColumn Binding="Address" MinWidth="200" Width="*"/>
+                <c1:GridColumn Binding="City" MinWidth="200" Width="*"/>
+                <c1:GridColumn Binding="CountryId" Header="Country" MinWidth="150" Width="*"/>
+                <c1:GridColumn Binding="Email" MinWidth="200" Width="*"/>
+                <c1:GridColumn Binding="PostalCode" MinWidth="110" Width="*"/>
+                <c1:GridColumn Binding="Active" MinWidth="110" Width="*"/>
+                <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Date" MinWidth="150" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
+                <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Time" Header="Last Order Time" MinWidth="150" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
+                <c1:GridColumn Binding="OrderTotal" Format="C" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
+                <c1:GridHyperlinkColumn Binding="SampleHyperlink" Width="*" ContentBinding="SampleHyperlinkContent" MinWidth="150"/>
+                <c1:GridImageColumn Binding="SampledImage" Width="50" />
+            </c1:FlexGrid.Columns>
+        </c1:FlexGrid>
+    </Grid>
+</UserControl>

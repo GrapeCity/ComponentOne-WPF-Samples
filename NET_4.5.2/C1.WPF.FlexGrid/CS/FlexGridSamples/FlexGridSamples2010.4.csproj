@@ -19,7 +19,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkProfile/>
+    <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
 <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -104,6 +104,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Filtering\FilterRow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Filtering\FullTextFilter.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -135,6 +139,10 @@
     <Page Include="iTunes\iTunes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MouseHover\MouseHover.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="RowDetails\RowDetails.xaml">
       <SubType>Designer</SubType>
@@ -168,7 +176,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Filtering\FullTextFilter.xaml.cs" >
+    <Compile Include="Filtering\FilterRow.xaml.cs">
+      <DependentUpon>FilterRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filtering\FullTextFilter.xaml.cs">
       <DependentUpon>FullTextFilter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Financial\StockTicker.cs" />
@@ -194,6 +205,9 @@
     </Compile>
     <Compile Include="iTunes\iTunes.xaml.cs">
       <DependentUpon>iTunes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MouseHover\MouseHover.xaml.cs">
+      <DependentUpon>MouseHover.xaml</DependentUpon>
     </Compile>
     <Compile Include="RowDetails\RowDetails.xaml.cs">
       <DependentUpon>RowDetails.xaml</DependentUpon>
@@ -235,7 +249,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\app.manifest" />
@@ -280,6 +294,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="C1.WPF.DateTimeEditors.4.5.2" />
+    <Reference Include="C1.WPF.Extended.4.5.2" />
     <Reference Include="C1.WPF.FlexGridFilter.4.5.2" />
     <Reference Include="C1.WPF.FlexGrid.GroupPanel.4.5.2" />
     <Reference Include="C1.WPF.FlexGrid.4.5.2" />

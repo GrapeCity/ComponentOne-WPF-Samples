@@ -19,10 +19,10 @@ namespace FlexGrid101.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    public class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace FlexGrid101.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FlexGrid101.Resources.AppResources", typeof(AppResources).Assembly);
@@ -51,7 +51,7 @@ namespace FlexGrid101.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Apply.
         /// </summary>
-        internal static string Apply {
+        public static string Apply {
             get {
                 return ResourceManager.GetString("Apply", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        internal static string Cancel {
+        public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows frozen columns, rows and cell merging..
         /// </summary>
-        internal static string CellFreezingDescription {
+        public static string CellFreezingDescription {
             get {
                 return ResourceManager.GetString("CellFreezingDescription", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cell Freezing &amp; Merging.
         /// </summary>
-        internal static string CellFreezingTitle {
+        public static string CellFreezingTitle {
             get {
                 return ResourceManager.GetString("CellFreezingTitle", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to cell(s) selected.
         /// </summary>
-        internal static string CellsSelectedText {
+        public static string CellsSelectedText {
             get {
                 return ResourceManager.GetString("CellsSelectedText", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Show how to select flexgrid rows through checkboxes..
         /// </summary>
-        internal static string CheckListDescription {
+        public static string CheckListDescription {
             get {
                 return ResourceManager.GetString("CheckListDescription", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Check-List.
         /// </summary>
-        internal static string CheckListTitle {
+        public static string CheckListTitle {
             get {
                 return ResourceManager.GetString("CheckListTitle", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Collapse.
         /// </summary>
-        internal static string Collapse {
+        public static string Collapse {
             get {
                 return ResourceManager.GetString("Collapse", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Supports C1CollectionView to provide live sorting, filtering and grouping..
         /// </summary>
-        internal static string CollectionViewDescription {
+        public static string CollectionViewDescription {
             get {
                 return ResourceManager.GetString("CollectionViewDescription", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to CollectionView.
         /// </summary>
-        internal static string CollectionViewName {
+        public static string CollectionViewName {
             get {
                 return ResourceManager.GetString("CollectionViewName", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to specify and format columns..
         /// </summary>
-        internal static string ColumnDefinitionDescription {
+        public static string ColumnDefinitionDescription {
             get {
                 return ResourceManager.GetString("ColumnDefinitionDescription", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Column Definitions.
         /// </summary>
-        internal static string ColumnDefinitionTitle {
+        public static string ColumnDefinitionTitle {
             get {
                 return ResourceManager.GetString("ColumnDefinitionTitle", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows a custom column manager to modify column layout..
         /// </summary>
-        internal static string ColumnLayoutDescription {
+        public static string ColumnLayoutDescription {
             get {
                 return ResourceManager.GetString("ColumnLayoutDescription", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Column Layout.
         /// </summary>
-        internal static string ColumnLayoutTitle {
+        public static string ColumnLayoutTitle {
             get {
                 return ResourceManager.GetString("ColumnLayoutTitle", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Uses a CellFactory to apply conditional formatting..
         /// </summary>
-        internal static string ConditionalFormattingDescription {
+        public static string ConditionalFormattingDescription {
             get {
                 return ResourceManager.GetString("ConditionalFormattingDescription", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Conditional Formatting.
         /// </summary>
-        internal static string ConditionalFormattingTitle {
+        public static string ConditionalFormattingTitle {
             get {
                 return ResourceManager.GetString("ConditionalFormattingTitle", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows a grid with a custom style..
         /// </summary>
-        internal static string CustomAppearanceDescription {
+        public static string CustomAppearanceDescription {
             get {
                 return ResourceManager.GetString("CustomAppearanceDescription", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Custom Appearance.
         /// </summary>
-        internal static string CustomAppearanceTitle {
+        public static string CustomAppearanceTitle {
             get {
                 return ResourceManager.GetString("CustomAppearanceTitle", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Customizes a cell by displaying a library of about 10,000 songs grouped by artist and album..
         /// </summary>
-        internal static string CustomCellsDescription {
+        public static string CustomCellsDescription {
             get {
                 return ResourceManager.GetString("CustomCellsDescription", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Custom Cells.
         /// </summary>
-        internal static string CustomCellsTitle {
+        public static string CustomCellsTitle {
             get {
                 return ResourceManager.GetString("CustomCellsTitle", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows a grid with custom cell merging..
         /// </summary>
-        internal static string CustomMergingDescription {
+        public static string CustomMergingDescription {
             get {
                 return ResourceManager.GetString("CustomMergingDescription", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Custom Merging.
         /// </summary>
-        internal static string CustomMergingTitle {
+        public static string CustomMergingTitle {
             get {
                 return ResourceManager.GetString("CustomMergingTitle", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Show how to customize the sorting icon in header columns..
         /// </summary>
-        internal static string CustomSortIconDescription {
+        public static string CustomSortIconDescription {
             get {
                 return ResourceManager.GetString("CustomSortIconDescription", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Custom Sort Icon.
         /// </summary>
-        internal static string CustomSortIconTitle {
+        public static string CustomSortIconTitle {
             get {
                 return ResourceManager.GetString("CustomSortIconTitle", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to DetailsVisibiltyMode.
         /// </summary>
-        internal static string DetailsVisibiltyMode {
+        public static string DetailsVisibiltyMode {
             get {
                 return ResourceManager.GetString("DetailsVisibiltyMode", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
-        internal static string EditColumnLayout {
+        public static string EditColumnLayout {
             get {
                 return ResourceManager.GetString("EditColumnLayout", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to prompt the user with a confirmation dialog before committing changes to a cell..
         /// </summary>
-        internal static string EditConfirmationDescription {
+        public static string EditConfirmationDescription {
             get {
                 return ResourceManager.GetString("EditConfirmationDescription", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Do you want to commit the edit?.
         /// </summary>
-        internal static string EditConfirmationQuestion {
+        public static string EditConfirmationQuestion {
             get {
                 return ResourceManager.GetString("EditConfirmationQuestion", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Confirm Edit.
         /// </summary>
-        internal static string EditConfirmationQuestionTitle {
+        public static string EditConfirmationQuestionTitle {
             get {
                 return ResourceManager.GetString("EditConfirmationQuestionTitle", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Edit Confirmation.
         /// </summary>
-        internal static string EditConfirmationTitle {
+        public static string EditConfirmationTitle {
             get {
                 return ResourceManager.GetString("EditConfirmationTitle", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Edit Customer.
         /// </summary>
-        internal static string EditCustomer {
+        public static string EditCustomer {
             get {
                 return ResourceManager.GetString("EditCustomer", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Edit cells by input form rather than inline..
         /// </summary>
-        internal static string EditingDescription {
+        public static string EditingDescription {
             get {
                 return ResourceManager.GetString("EditingDescription", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Editing Form.
         /// </summary>
-        internal static string EditingTitle {
+        public static string EditingTitle {
             get {
                 return ResourceManager.GetString("EditingTitle", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Edit Row.
         /// </summary>
-        internal static string EditRow {
+        public static string EditRow {
             get {
                 return ResourceManager.GetString("EditRow", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to There are no videos to show..
         /// </summary>
-        internal static string EmptyListText {
+        public static string EmptyListText {
             get {
                 return ResourceManager.GetString("EmptyListText", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Filter.
         /// </summary>
-        internal static string Filter {
+        public static string Filter {
             get {
                 return ResourceManager.GetString("Filter", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Filters the data by columns through a generated form..
         /// </summary>
-        internal static string FilterDescription {
+        public static string FilterDescription {
             get {
                 return ResourceManager.GetString("FilterDescription", resourceCulture);
             }
@@ -396,16 +396,34 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Enter text to filter.
         /// </summary>
-        internal static string FilterPlaceholderText {
+        public static string FilterPlaceholderText {
             get {
                 return ResourceManager.GetString("FilterPlaceholderText", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filters the data by columns using a filter row..
+        /// </summary>
+        public static string FilterRowDescription {
+            get {
+                return ResourceManager.GetString("FilterRowDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FilterRow.
+        /// </summary>
+        public static string FilterRowTitle {
+            get {
+                return ResourceManager.GetString("FilterRowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filter.
         /// </summary>
-        internal static string FilterTitle {
+        public static string FilterTitle {
             get {
                 return ResourceManager.GetString("FilterTitle", resourceCulture);
             }
@@ -414,7 +432,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows a financial application with real time data updates, flashing cells, and sparklines..
         /// </summary>
-        internal static string FinancialDescription {
+        public static string FinancialDescription {
             get {
                 return ResourceManager.GetString("FinancialDescription", resourceCulture);
             }
@@ -423,7 +441,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Financial.
         /// </summary>
-        internal static string FinancialTitle {
+        public static string FinancialTitle {
             get {
                 return ResourceManager.GetString("FinancialTitle", resourceCulture);
             }
@@ -432,7 +450,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Friday.
         /// </summary>
-        internal static string Friday {
+        public static string Friday {
             get {
                 return ResourceManager.GetString("Friday", resourceCulture);
             }
@@ -441,7 +459,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Filters and highlights the data across all columns..
         /// </summary>
-        internal static string FullTextFilterDescription {
+        public static string FullTextFilterDescription {
             get {
                 return ResourceManager.GetString("FullTextFilterDescription", resourceCulture);
             }
@@ -450,7 +468,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Full Text Filter.
         /// </summary>
-        internal static string FullTextFilterTitle {
+        public static string FullTextFilterTitle {
             get {
                 return ResourceManager.GetString("FullTextFilterTitle", resourceCulture);
             }
@@ -459,7 +477,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Display, edit and aggregate your data all at once with FlexGrid..
         /// </summary>
-        internal static string GettingStartedDescription {
+        public static string GettingStartedDescription {
             get {
                 return ResourceManager.GetString("GettingStartedDescription", resourceCulture);
             }
@@ -468,7 +486,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Getting Started.
         /// </summary>
-        internal static string GettingStartedTitle {
+        public static string GettingStartedTitle {
             get {
                 return ResourceManager.GetString("GettingStartedTitle", resourceCulture);
             }
@@ -477,7 +495,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Groups and aggregates a collection of data..
         /// </summary>
-        internal static string GroupingDescription {
+        public static string GroupingDescription {
             get {
                 return ResourceManager.GetString("GroupingDescription", resourceCulture);
             }
@@ -486,7 +504,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Create groups by dragging column headers into the grouping areas..
         /// </summary>
-        internal static string GroupingPanelDescription {
+        public static string GroupingPanelDescription {
             get {
                 return ResourceManager.GetString("GroupingPanelDescription", resourceCulture);
             }
@@ -495,7 +513,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Grouping Panel.
         /// </summary>
-        internal static string GroupingPanelTitle {
+        public static string GroupingPanelTitle {
             get {
                 return ResourceManager.GetString("GroupingPanelTitle", resourceCulture);
             }
@@ -504,7 +522,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Grouping.
         /// </summary>
-        internal static string GroupingTitle {
+        public static string GroupingTitle {
             get {
                 return ResourceManager.GetString("GroupingTitle", resourceCulture);
             }
@@ -513,7 +531,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Match Case.
         /// </summary>
-        internal static string MatchCaseLabel {
+        public static string MatchCaseLabel {
             get {
                 return ResourceManager.GetString("MatchCaseLabel", resourceCulture);
             }
@@ -522,7 +540,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Match Whole Word.
         /// </summary>
-        internal static string MatchWholeWordLabel {
+        public static string MatchWholeWordLabel {
             get {
                 return ResourceManager.GetString("MatchWholeWordLabel", resourceCulture);
             }
@@ -531,16 +549,34 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Monday.
         /// </summary>
-        internal static string Monday {
+        public static string Monday {
             get {
                 return ResourceManager.GetString("Monday", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows the effects of different settings of MouseOverMode.
+        /// </summary>
+        public static string MouseHoverDescription {
+            get {
+                return ResourceManager.GetString("MouseHoverDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mouse Hover.
+        /// </summary>
+        public static string MouseHoverTitle {
+            get {
+                return ResourceManager.GetString("MouseHoverTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows adding new rows..
         /// </summary>
-        internal static string NewRowDescription {
+        public static string NewRowDescription {
             get {
                 return ResourceManager.GetString("NewRowDescription", resourceCulture);
             }
@@ -549,7 +585,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Click here to add a new row.
         /// </summary>
-        internal static string NewRowPlaceholder {
+        public static string NewRowPlaceholder {
             get {
                 return ResourceManager.GetString("NewRowPlaceholder", resourceCulture);
             }
@@ -558,7 +594,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to New Row.
         /// </summary>
-        internal static string NewRowTitle {
+        public static string NewRowTitle {
             get {
                 return ResourceManager.GetString("NewRowTitle", resourceCulture);
             }
@@ -567,7 +603,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
-        internal static string OK {
+        public static string OK {
             get {
                 return ResourceManager.GetString("OK", resourceCulture);
             }
@@ -576,7 +612,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Load items on demand as the user scrolls down the grid..
         /// </summary>
-        internal static string OnDemandDescription {
+        public static string OnDemandDescription {
             get {
                 return ResourceManager.GetString("OnDemandDescription", resourceCulture);
             }
@@ -585,7 +621,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to On Demand.
         /// </summary>
-        internal static string OnDemandTitle {
+        public static string OnDemandTitle {
             get {
                 return ResourceManager.GetString("OnDemandTitle", resourceCulture);
             }
@@ -594,7 +630,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Remove.
         /// </summary>
-        internal static string Remove {
+        public static string Remove {
             get {
                 return ResourceManager.GetString("Remove", resourceCulture);
             }
@@ -603,7 +639,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Expand and collapse row details..
         /// </summary>
-        internal static string RowDetailsDescription {
+        public static string RowDetailsDescription {
             get {
                 return ResourceManager.GetString("RowDetailsDescription", resourceCulture);
             }
@@ -612,7 +648,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Row Details.
         /// </summary>
-        internal static string RowDetailsTitle {
+        public static string RowDetailsTitle {
             get {
                 return ResourceManager.GetString("RowDetailsTitle", resourceCulture);
             }
@@ -621,7 +657,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saturday.
         /// </summary>
-        internal static string Saturday {
+        public static string Saturday {
             get {
                 return ResourceManager.GetString("Saturday", resourceCulture);
             }
@@ -630,7 +666,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
-        internal static string SaveColumnLayout {
+        public static string SaveColumnLayout {
             get {
                 return ResourceManager.GetString("SaveColumnLayout", resourceCulture);
             }
@@ -639,7 +675,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Enter text to search videos on YouTube.
         /// </summary>
-        internal static string SearchPlaceholderText {
+        public static string SearchPlaceholderText {
             get {
                 return ResourceManager.GetString("SearchPlaceholderText", resourceCulture);
             }
@@ -648,7 +684,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows the various cell selection modes..
         /// </summary>
-        internal static string SelectionModesDescription {
+        public static string SelectionModesDescription {
             get {
                 return ResourceManager.GetString("SelectionModesDescription", resourceCulture);
             }
@@ -657,7 +693,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Selection Modes.
         /// </summary>
-        internal static string SelectionModesTitle {
+        public static string SelectionModesTitle {
             get {
                 return ResourceManager.GetString("SelectionModesTitle", resourceCulture);
             }
@@ -666,7 +702,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Please select a row first or double-tap the row directly..
         /// </summary>
-        internal static string SelectRowMessage {
+        public static string SelectRowMessage {
             get {
                 return ResourceManager.GetString("SelectRowMessage", resourceCulture);
             }
@@ -675,7 +711,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ShowMarquee.
         /// </summary>
-        internal static string ShowMarquee {
+        public static string ShowMarquee {
             get {
                 return ResourceManager.GetString("ShowMarquee", resourceCulture);
             }
@@ -684,7 +720,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sort.
         /// </summary>
-        internal static string Sort {
+        public static string Sort {
             get {
                 return ResourceManager.GetString("Sort", resourceCulture);
             }
@@ -693,7 +729,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows a responsive column layout that uses star sizing..
         /// </summary>
-        internal static string StarSizingDescription {
+        public static string StarSizingDescription {
             get {
                 return ResourceManager.GetString("StarSizingDescription", resourceCulture);
             }
@@ -702,7 +738,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Rotate the device to see star-sizing in action..
         /// </summary>
-        internal static string StarSizingInstructions {
+        public static string StarSizingInstructions {
             get {
                 return ResourceManager.GetString("StarSizingInstructions", resourceCulture);
             }
@@ -711,7 +747,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Star Sizing.
         /// </summary>
-        internal static string StarSizingTitle {
+        public static string StarSizingTitle {
             get {
                 return ResourceManager.GetString("StarSizingTitle", resourceCulture);
             }
@@ -720,7 +756,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sunday.
         /// </summary>
-        internal static string Sunday {
+        public static string Sunday {
             get {
                 return ResourceManager.GetString("Sunday", resourceCulture);
             }
@@ -729,7 +765,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Thursday.
         /// </summary>
-        internal static string Thursday {
+        public static string Thursday {
             get {
                 return ResourceManager.GetString("Thursday", resourceCulture);
             }
@@ -738,7 +774,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tuesday.
         /// </summary>
-        internal static string Tuesday {
+        public static string Tuesday {
             get {
                 return ResourceManager.GetString("Tuesday", resourceCulture);
             }
@@ -747,7 +783,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Add empty rows and columns to create an unbound grid..
         /// </summary>
-        internal static string UnboundDescription {
+        public static string UnboundDescription {
             get {
                 return ResourceManager.GetString("UnboundDescription", resourceCulture);
             }
@@ -756,7 +792,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Unbound.
         /// </summary>
-        internal static string UnboundTitle {
+        public static string UnboundTitle {
             get {
                 return ResourceManager.GetString("UnboundTitle", resourceCulture);
             }
@@ -765,7 +801,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Wednesday.
         /// </summary>
-        internal static string Wednesday {
+        public static string Wednesday {
             get {
                 return ResourceManager.GetString("Wednesday", resourceCulture);
             }
@@ -774,7 +810,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Weekday.
         /// </summary>
-        internal static string Weekday {
+        public static string Weekday {
             get {
                 return ResourceManager.GetString("Weekday", resourceCulture);
             }
@@ -783,7 +819,7 @@ namespace FlexGrid101.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Weekend.
         /// </summary>
-        internal static string Weekend {
+        public static string Weekend {
             get {
                 return ResourceManager.GetString("Weekend", resourceCulture);
             }

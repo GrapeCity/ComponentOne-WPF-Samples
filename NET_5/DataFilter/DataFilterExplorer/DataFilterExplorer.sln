@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFilterExplorer", "DataFilterExplorer.csproj", "{1244B09F-C5B2-4A07-AD90-6C3007F69586}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\..\..\..\Shared\Controls\DataFilter\C1.DataFilter.projitems*{7d93cea3-a8fd-49cf-9907-ccbf97a8d28f}*SharedItemsImports = 5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

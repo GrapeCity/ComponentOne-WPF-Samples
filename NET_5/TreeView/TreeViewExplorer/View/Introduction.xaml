@@ -24,6 +24,7 @@
             <c1:C1TreeView x:Name="WindowExplorerTreeView"
                            MinWidth="350"
                            HorizontalAlignment="Center"
+                           IsVirtualizing="True"
                            BorderThickness="0"
                            ShowLines="True">
                 <c1:C1TreeView.ExpandedIconTemplate>

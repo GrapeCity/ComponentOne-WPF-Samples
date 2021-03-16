@@ -114,8 +114,11 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="C1.WPF.Bitmap.4.5.2" />
+    <Reference Include="C1.WPF.DX.4.5.2" />
     <Reference Include="C1.WPF.Excel.4.5.2" />
     <Reference Include="C1.WPF.FlexGrid.4.5.2" />
+    <Reference Include="C1.WPF.Zip.4.5.2" />
     <Reference Include="C1.WPF.4.5.2" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

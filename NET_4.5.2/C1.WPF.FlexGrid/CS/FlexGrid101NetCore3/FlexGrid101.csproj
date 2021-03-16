@@ -176,25 +176,28 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.5.20203.726</Version>
+      <Version>4.5.20211.739</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.5.20203.726</Version>
+      <Version>4.5.20211.739</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Extended">
+      <Version>4.5.20211.739</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.5.20203.726</Version>
+      <Version>4.5.20211.739</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid.GroupPanel">
-      <Version>4.5.20203.726</Version>
+      <Version>4.5.20211.739</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
-      <Version>4.5.20203.726</Version>
+      <Version>4.5.20211.739</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Gauge">
-      <Version>4.5.20203.726</Version>
+      <Version>4.5.20211.739</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Zip">
-      <Version>4.5.20203.726</Version>
+      <Version>4.5.20211.739</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +206,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\Settings.settings">

@@ -118,27 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Demo" xml:space="preserve">
-    <value>Edit and format rich text containing multiple fonts, decorations, sizes, colors, and other basic HTML and RTF features such as pictures and tables using the C1RichTextBox control.</value>
+    <value>C1RichTextBox コントロールを使用して、複数のフォント、装飾、サイズ、色、および画像や表などの他の基本的な HTML および RTF 機能を含むリッチテキストを編集およびフォーマットします。</value>
+    <comment>Edit and format rich text containing multiple fonts, decorations, sizes, colors, and other basic HTML and RTF features such as pictures and tables using the C1RichTextBox control.</comment>
   </data>
   <data name="DemoFilter" xml:space="preserve">
-    <value>C1RichTexBox works by converting HTML and RTF content to its own internal document structure. The control can import and export these formats, and therefore, also work as a tool that can convert HTML to RTF and vice versa.</value>
+    <value>C1RichTexBox は、HTML および RTF コンテンツを独自の内部ドキュメント構造に変換することで機能します。コントロールはこれらの形式をインポートおよびエクスポートできるため、HTML を RTF に、またはその逆に変換できるツールとしても機能します。</value>
+    <comment>C1RichTexBox works by converting HTML and RTF content to its own internal document structure. The control can import and export these formats, and therefore, also work as a tool that can convert HTML to RTF and vice versa.</comment>
   </data>
   <data name="DemoFilterTitle" xml:space="preserve">
-    <value>Import &amp; Export</value>
+    <value>インポート＆エクスポート</value>
+    <comment>Import &amp; Export</comment>
   </data>
   <data name="DemoTitle" xml:space="preserve">
-    <value>Overview</value>
+    <value>概要</value>
+    <comment>Overview</comment>
   </data>
   <data name="Format" xml:space="preserve">
-    <value>The C1RichTextBox control supports all of the rich formatting features you need in a rich text editor such as fonts, paragraph alignment, lists, clipboard, inserting objects like pictures, links, tables, and more.</value>
+    <value>C1RichTextBox コントロールは、フォント、段落の配置、リスト、クリップボード、画像、リンク、表などのオブジェクトの挿入など、リッチテキストエディターで必要なすべてのリッチフォーマット機能をサポートします。</value>
+    <comment>The C1RichTextBox control supports all of the rich formatting features you need in a rich text editor such as fonts, paragraph alignment, lists, clipboard, inserting objects like pictures, links, tables, and more.</comment>
   </data>
   <data name="FormatTitle" xml:space="preserve">
-    <value>Formatting</value>
+    <value>書式</value>
+    <comment>Formatting</comment>
   </data>
   <data name="ToolStrip" xml:space="preserve">
-    <value>This sample shows C1RichTextBox with a simpler editing toolstrip.</value>
+    <value>このサンプルは、よりシンプルな編集ツールストリップを備えたC1RichTextBoxを示しています。</value>
+    <comment>This sample shows C1RichTextBox with a simpler editing toolstrip.</comment>
   </data>
   <data name="ToolStripTitle" xml:space="preserve">
-    <value>ToolStrip</value>
+    <value>ツールストリップ</value>
+    <comment>ToolStrip</comment>
   </data>
 </root>

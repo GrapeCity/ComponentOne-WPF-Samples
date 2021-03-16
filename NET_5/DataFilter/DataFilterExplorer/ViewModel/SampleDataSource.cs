@@ -27,7 +27,7 @@ namespace DataFilterExplorer
                 new SampleItem(
                     AppResources.CustomFilterTitle,
                     AppResources.CustomFilterDescription,
-                    new Lazy<System.Windows.Controls.Control>(() => new FilterEditorSample())
+                    new Lazy<System.Windows.Controls.Control>(() => new CustomFiltersSample())
                 )
             );
         }

@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Desc" xml:space="preserve">
-    <value>The sample demonstrate the most important chart features.</value>
+    <value>このサンプルではチャートの主要な機能を示します。</value>
   </data>
 </root>

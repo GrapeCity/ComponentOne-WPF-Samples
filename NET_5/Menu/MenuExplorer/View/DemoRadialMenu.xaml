@@ -1,0 +1,210 @@
+﻿<UserControl x:Class="MenuExplorer.DemoRadialMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=netstandard"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock" x:Key="TextIconStyle">
+            <Setter Property="Margin" Value="-10" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="Segoe UI Symbol" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="Foreground" Value="#333333" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="Image" >
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Border Background="LemonChiffon" MinHeight="40" BorderBrush="#969696" BorderThickness="1" Padding="5">
+            <c1:C1ContextMenuService.ContextMenu>
+                <c1:C1RadialMenu x:Name="contextMenu"  Offset="-130,0"  Opened="contextMenu_Opened"  AccentBrush="ForestGreen"
+                             ItemClick="contextMenu_ItemClick" ItemOpened="contextMenu_ItemOpened" BorderBrush="#FFC6DEC4" >
+                    <c1:C1RadialMenuItem Header="UndoRedo" SelectedIndex="0" ShowSelectedItem="True" Command="{Binding UndoCommand}">
+                        <c1:C1RadialMenuItem Header="Undo" Command="{Binding UndoCommand}">
+                            <c1:C1RadialMenuItem.Icon>
+                                <!--http://www.geekchamp.com/icon-explorer/action-icons/icon?code=e10e-->
+                                <Image Source="../Resources/Menu/e10e-Undo.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem Header="Redo" Command="{Binding RedoCommand}">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e10d-Redo.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem ToolTip="Clear Text Formatting" Command="{Binding ClearFormatCommand}" DisplayIndex="7">
+                            <c1:C1RadialMenuItem.Header>
+                                <TextBlock TextWrapping="Wrap" MaxWidth="50" TextAlignment="Center">Clear Format</TextBlock>
+                            </c1:C1RadialMenuItem.Header>
+                            <c1:C1RadialMenuItem.Icon>
+                                <Grid Width="18" Height="18" Margin="-5">
+                                    <Path Stretch="Uniform"  Fill="Black" Data="M2.3136952,28.813705 L26.313696,28.813705 C26.86598,28.813705 27.313696,29.261421 27.313696,29.813705 L27.313696,30.813705 C27.313696,31.36599 26.86598,31.813705 26.313696,31.813705 L2.3136952,31.813705 C1.7614106,31.813705 1.3136953,31.36599 1.3136954,30.813705 L1.3136954,29.813705 C1.3136953,29.261421 1.7614106,28.813705 2.3136952,28.813705 z M10.778173,10.778175 L2.9999995,18.556351 L8.4681635,24.024515 L11.704519,23.993965 L17.849241,17.849243 z M18.556349,0 C19.324118,0 20.091883,0.29289436 20.67767,0.87868118 L27.748737,7.949749 C28.920311,9.1213207 28.920311,11.020815 27.748737,12.192389 C22.563288,17.377838 13.34287,26.598255 13.34287,26.598255 C13.34287,26.598255 6.7992635,26.598253 6.7992635,26.598253 C6.7992635,26.598253 3.2357025,23.034693 0.87867981,20.67767 C-0.29289317,19.506096 -0.29289317,17.606602 0.87867934,16.43503 L16.435028,0.87868118 C17.020815,0.29289436 17.788582,0 18.556349,0 z"/>
+                                </Grid>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                    </c1:C1RadialMenuItem>
+                    <c1:C1RadialMenuItem AutoSelect="True" ShowSelectedItem="True" Header="Clipboard" SectorCount="8">
+                        <c1:C1RadialMenuItem Header="Cut">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e16b-Scissors.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem Header="Copy">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e16f-Documents.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem Header="Paste">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e16d-Documents.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                    </c1:C1RadialMenuItem>
+
+                    <c1:C1RadialMenuItem Header="Add" SectorCount="6">
+                        <c1:C1RadialMenuItem.Icon>
+                            <Image Source="../Resources/Menu/e109-Add.48.png"/>
+                        </c1:C1RadialMenuItem.Icon>
+                        <c1:C1RadialMenuItem Header="New" ToolTip="New Item">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e1da-Folder.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem Header="Existing" ToolTip="Existing Item">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e132-File.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem Header="Folder">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e188-Folder.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem Header="Class">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/1f4c4-Document.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                    </c1:C1RadialMenuItem>
+                    <c1:C1RadialMenuItem Header="File" SectorCount="6">
+                        <c1:C1RadialMenuItem Header="Exclude" ToolTip="Exclude From Project" DisplayIndex="2">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e10a-Cancel.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem Header="Delete">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e107-Delete.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                        <c1:C1RadialMenuItem Header="Rename">
+                            <c1:C1RadialMenuItem.Icon>
+                                <Image Source="../Resources/Menu/e104-Edit.48.png"/>
+                            </c1:C1RadialMenuItem.Icon>
+                        </c1:C1RadialMenuItem>
+                    </c1:C1RadialMenuItem>
+                    <c1:C1RadialMenuItem Header="Properties">
+                        <c1:C1RadialMenuItem.Icon>
+                            <Image Source="../Resources/Menu/e115-Settings.48.png"/>
+                        </c1:C1RadialMenuItem.Icon>
+                    </c1:C1RadialMenuItem>
+                    <c1:C1RadialNumericItem Header="Font Size" Minimum="9" Maximum="72"  MarkStartAngle="-128" MarkEndAngle="231" x:Name="fontSize" Value="11">
+                        <c1:C1RadialNumericItem.Icon>
+                            <TextBlock FontFamily="Segoe UI" >
+                               <Run Text="A" FontStyle="Italic" FontSize="20"/>
+                               <Run Text="{Binding Path=Value,UpdateSourceTrigger=PropertyChanged, ElementName=fontSize}" FontSize="15"  Typography.Variants="Superscript"/>
+                            </TextBlock>
+                        </c1:C1RadialNumericItem.Icon>
+                        <sys:Double>9</sys:Double>
+                        <sys:Double>11</sys:Double>
+                        <sys:Double>13</sys:Double>
+                        <sys:Double>16</sys:Double>
+                        <sys:Double>20</sys:Double>
+                        <sys:Double>36</sys:Double>
+                        <sys:Double>72</sys:Double>
+                    </c1:C1RadialNumericItem>
+                    <c1:C1RadialMenuItem Header="Color" ShowSelectedItem="True" AutoSelect="True" SelectedIndex="1" >
+                        <c1:C1RadialColorItem x:Name="rainbowItem" ShowSelectedItem="True" AutoSelect="True" IsSelectable="False" >
+                            <!-- C1RadialColorItem supports Brushes and Colors as child elements. 
+                             In such case it will auto-generate C1RadialColorItems. 
+                             AccentBrush and tooltip for auto-generated items will be made based on the brush color. -->
+                            <SolidColorBrush Color="Red"/>
+                            <SolidColorBrush Color="Orange"/>
+                            <SolidColorBrush Color="Yellow"/>
+                            <SolidColorBrush Color="Green"/>
+                            <SolidColorBrush Color="Blue"/>
+                            <SolidColorBrush Color="Indigo"/>
+                            <SolidColorBrush Color="Violet"/>
+                        </c1:C1RadialColorItem>
+
+                        <c1:C1RadialMenuItem ToolTip="Font Color" Tag="Red" x:Name="fontColorItem" Header="Color"/>
+
+                        <c1:C1RadialColorItem x:Name="orangeItem" SelectedIndex="2"
+                                  ShowSelectedItem="True" AutoSelect="True" IsSelectable="False">
+                            <!-- subitems of the C1RadialColorItem can subscribe on Click event. 
+                             But if they are not subscribed and the parent C1RadialColorItem has ShowSelectedItem="True", 
+                             the parent item will handle clicks. -->
+                            <c1:C1RadialColorItem ToolTip="Yellow" Brush="Yellow" IsCheckable="True" GroupName="Orange"/>
+                            <c1:C1RadialColorItem ToolTip="Brown" Brush="Brown" IsCheckable="True" GroupName="Orange"/>
+                            <c1:C1RadialColorItem ToolTip="Orange" Brush="#FFD46224" IsCheckable="True" GroupName="Orange"/>
+                            <c1:C1RadialColorItem ToolTip="Orange" Brush="#FFF37D1F" IsCheckable="True" GroupName="Orange"/>
+                            <c1:C1RadialColorItem ToolTip="Orange" Brush="Orange" IsCheckable="True" GroupName="Orange"/>
+                            <c1:C1RadialColorItem ToolTip="Gold" Brush="Gold" IsCheckable="True" GroupName="Orange"/>
+                            <c1:C1RadialColorItem ToolTip="Light Yellow" Brush="#FFF5DD43" IsCheckable="True" GroupName="Orange" />
+                            <c1:C1RadialColorItem ToolTip="Light Yellow" Brush="#FFF3F393" IsCheckable="True" GroupName="Orange"/>
+                        </c1:C1RadialColorItem>
+
+                        <c1:C1RadialColorItem x:Name="redItem" SelectedIndex="5"
+                                  ShowSelectedItem="True" AutoSelect="True" IsSelectable="False">
+                            <c1:C1RadialColorItem ToolTip="Rose" Brush="#FFFFC7CE" GroupName="Red"/>
+                            <c1:C1RadialColorItem ToolTip="Pink" Brush="#FFF77A90" GroupName="Red"/>
+                            <c1:C1RadialColorItem ToolTip="Plum" Brush="#FFDE05DE" GroupName="Red"/>
+                            <c1:C1RadialColorItem ToolTip="Purple" Brush="#FF811681" GroupName="Red"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Red" Brush="DarkRed" GroupName="Red"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Red" Brush="#FFC00000" GroupName="Red"/>
+                            <c1:C1RadialColorItem ToolTip="Red" Brush="Red" GroupName="Red"/>
+                            <c1:C1RadialColorItem ToolTip="Rose" Brush="#FFF6A2A4" GroupName="Red"/>
+                        </c1:C1RadialColorItem>
+
+                        <c1:C1RadialColorItem x:Name="greenItem" SelectedIndex="5"
+                                  ShowSelectedItem="True" AutoSelect="True" IsSelectable="False">
+                            <c1:C1RadialColorItem ToolTip="Lime" Brush="#FF92D050" GroupName="Green"/>
+                            <c1:C1RadialColorItem ToolTip="Light Green" Brush="#FFC6EFCE" GroupName="Green"/>
+                            <c1:C1RadialColorItem ToolTip="Green" Brush="#FF00FF00" GroupName="Green"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Green" Brush="#FF1D421E" GroupName="Green"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Green" Brush="#FF1D5A2D" GroupName="Green"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Green" Brush="Green" GroupName="Green"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Green" Brush="#FF008000" GroupName="Green"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Green" Brush="#FF00B050" GroupName="Green"/>
+                        </c1:C1RadialColorItem>
+
+                        <c1:C1RadialColorItem x:Name="blueItem" SelectedIndex="0"
+                                  ShowSelectedItem="True" AutoSelect="True" IsSelectable="False">
+                            <c1:C1RadialColorItem ToolTip="Blue" Brush="Blue" GroupName="Blue"/>
+                            <c1:C1RadialColorItem ToolTip="Slate Blue" Brush="MediumSlateBlue" GroupName="Blue"/>
+                            <c1:C1RadialColorItem ToolTip="Turquoise" Brush="Turquoise" GroupName="Blue"/>
+                            <c1:C1RadialColorItem ToolTip="Aqua" Brush="Aqua" GroupName="Blue"/>
+                            <c1:C1RadialColorItem ToolTip="Sky Blue" Brush="SkyBlue" GroupName="Blue"/>
+                            <c1:C1RadialColorItem ToolTip="Purple" Brush="#FFAC38AC" AccentBrush="#FF801C80" GroupName="Blue"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Purple" Brush="Purple" GroupName="Blue"/>
+                            <c1:C1RadialColorItem ToolTip="Dark Blue" Brush="DarkBlue" GroupName="Blue"/>
+                        </c1:C1RadialColorItem>
+                    </c1:C1RadialMenuItem>
+                </c1:C1RadialMenu>
+            </c1:C1ContextMenuService.ContextMenu>
+            <Grid   HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="75" >
+                <TextBlock Foreground="Sienna" TextAlignment="Center" FontSize="14" x:Name="text" Text="Touch: hold down for a few seconds until the indicator displays.&#10;Mouse: right-click over this page." 
+                                TextWrapping="Wrap" />
+            </Grid>
+        </Border>
+        <TextBlock x:Name="txt" Foreground="Red" Text="" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10" />
+    </Grid>
+</UserControl>
+

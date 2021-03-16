@@ -14,6 +14,7 @@ Shows the following samples
 	- Grouping
 	- RowDetails
 	- Filter
+	- FilterRow
 	- FullTextFilter
 	- ColumnLayout
 	- StarSizing
@@ -25,3 +26,4 @@ Shows the following samples
 	- Financial
 	- GroupingPanel
 	- CustomSortIcon
+	- MouseHover

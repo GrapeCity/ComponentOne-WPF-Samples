@@ -70,6 +70,24 @@ namespace CoreExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows how to use C1ProgressBar, change its mode and customize appearance.
+        /// </summary>
+        internal static string DemoProgressBarDescription {
+            get {
+                return ResourceManager.GetString("DemoProgressBarDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Progress Bar.
+        /// </summary>
+        internal static string DemoProgressBarTitle {
+            get {
+                return ResourceManager.GetString("DemoProgressBarTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Drag Drop ListBox.
         /// </summary>
         internal static string DragDropListBoxDescription {
@@ -93,6 +111,15 @@ namespace CoreExplorer.Resources {
         internal static string DragDropManagerDescription {
             get {
                 return ResourceManager.GetString("DragDropManagerDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C1DragDropManager has an extensive set of methods and events that allow you to control the entire drag-and-drop process. Just register some elements as drag sources and some as drop targets, and then handle the DragDrop event to move or copy the elements to their new location. You can also customize the appearance of the drag markers for both the drag source and drop target. This makes the entire operation more user-friendly and visually appealing..
+        /// </summary>
+        internal static string DragDropManagerTag {
+            get {
+                return ResourceManager.GetString("DragDropManagerTag", resourceCulture);
             }
         }
         

@@ -7,6 +7,9 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Resources\simple.htm" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="C1-ball.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +38,7 @@
     <Resource Include="Resources\PublicPictures.png" />
     <Resource Include="Resources\PublicVideos.png" />
     <Resource Include="Resources\RecycleBin.png" />
+    <Resource Include="Resources\simple.htm" />
     <Resource Include="Resources\User.png" />
   </ItemGroup>
   <ItemGroup>
@@ -100,14 +104,23 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.RichTextBox">
+      <Version>5.0.20211.57</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.SpellChecker">
+      <Version>5.0.20211.57</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

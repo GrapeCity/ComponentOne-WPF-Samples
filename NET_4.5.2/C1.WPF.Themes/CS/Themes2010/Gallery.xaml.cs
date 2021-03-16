@@ -72,7 +72,7 @@ namespace Themes
 
             propGrid1.SelectedObject = persons[0];
             propGrid2.SelectedObject = persons[1];
-            MultiSelect.ItemsSource = persons;
+            MultiSelect.ItemsSource = Person.Generate(80);
             MultiSelect.SelectedItem = persons[0];
             InputPanel.ItemsSource = persons;
             CheckList.ItemsSource = persons;

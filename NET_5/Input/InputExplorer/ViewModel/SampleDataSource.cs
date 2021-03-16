@@ -15,9 +15,6 @@ namespace InputExplorer
                 new SampleItem(Properties.Resources.RangeSliderTitle,
                                 Properties.Resources.RangeSliderTitle,
                                 new RangeSlider()),
-                new SampleItem(Properties.Resources.ExpanderTitle,
-                                Properties.Resources.ExpanderTitle,
-                                new Expander())
             };
         }
 

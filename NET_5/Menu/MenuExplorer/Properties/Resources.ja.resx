@@ -117,22 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Appearance" xml:space="preserve">
-    <value>This demo shows how to apply a custom style to the C1Menu control.</value>
+  <data name="CustomMenuAppearanceDesc" xml:space="preserve">
+    <value>このデモは、カスタムスタイルを C1Menu コントロールに適用する方法を示します。</value>
+    <comment>This demo shows how to apply a custom style to the C1Menu control.</comment>
   </data>
-  <data name="AppearanceTitle" xml:space="preserve">
-    <value>Custom Appearance</value>
+  <data name="CustomMenuAppearanceTitle" xml:space="preserve">
+    <value>カスタム外観</value>
+    <comment>Custom Appearance</comment>
   </data>
-  <data name="DropDownMenu" xml:space="preserve">
-    <value>Create custom drop-downs using C1Menu. This demo shows how to create a dropdown menu using C1Menu inside a C1DropDownButton control.</value>
+  <data name="DropDownMenuDesc" xml:space="preserve">
+    <value>C1Menu を使用してカスタムドロップダウンを作成します。このデモは、C1DropDownButton コントロール内で C1Menu を使用してドロップダウンメニューを作成する方法を示します。</value>
+    <comment>Create custom drop-downs using C1Menu. This demo shows how to create a dropdown menu using C1Menu inside a C1DropDownButton control.</comment>
   </data>
   <data name="DropDownMenuTitle" xml:space="preserve">
-    <value>Drop Down Menu</value>
+    <value>ドロップダウンメニュー</value>
+    <comment>Drop Down Menu</comment>
   </data>
-  <data name="Menu" xml:space="preserve">
-    <value>Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable.</value>
+  <data name="DemoMenuDesc" xml:space="preserve">
+    <value>C1Menu コントロールを使用してメニューを作成し、C1ContextMenu コントロールを使用してポップアップメニューをインターフェイスにアタッチします。メニューを任意の深さにネストし、メニューラベルとともに各メニュー項目のアイコンを使用し、メニュー項目をチェック可能にすることもできます。</value>
+    <comment>Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable.</comment>
   </data>
-  <data name="MenuTitle" xml:space="preserve">
-    <value>Overview</value>
+  <data name="DemoMenuTitle" xml:space="preserve">
+    <value>概要</value>
+    <comment>Overview</comment>
+  </data>
+    <data name="DemoRadialMenuDesc" xml:space="preserve">
+    <value>Shows how to use C1RadialMenu</value>
+  </data>
+    <data name="DemoRadialMenuTitle" xml:space="preserve">
+    <value>Demo C1RadialMenu</value>
+  </data>
+    <data name="CustomRadialContextMenuDesc" xml:space="preserve">
+    <value>Shows how to use C1RadialMenu with C1RichTextBox</value>
+  </data>
+    <data name="CustomRadialContextMenuTitle" xml:space="preserve">
+    <value>Custom Context Menu</value>
   </data>
 </root>

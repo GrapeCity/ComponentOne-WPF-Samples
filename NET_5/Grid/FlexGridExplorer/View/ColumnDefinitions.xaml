@@ -16,7 +16,7 @@
                 <c1:GridColumn Binding="CountryId" Header="Country" MinWidth="110" Width="*"/>
                 <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Date" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
                 <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Time" Header="Last Order Time" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
-                <c1:GridColumn Binding="OrderTotal" Format="C" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
+                <c1:GridNumericColumn Binding="OrderTotal" Format="C" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
             </c1:FlexGrid.Columns>
         </c1:FlexGrid>
     </Grid>

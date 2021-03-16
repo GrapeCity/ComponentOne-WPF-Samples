@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" 
+             x:Class="AccordionExplorer.ExpanderSample" av:DesignWidth="400" av:DesignHeight="300">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="4">
+            <TextBlock Text="ExpandDirection" VerticalAlignment="Center" Margin="0 0 4 0"/>
+            <ComboBox x:Name="ExpandDirectionComboBox"  SelectionChanged="OnExpandDirectionChanged" SelectedIndex="0"/>
+            <TextBlock Text="ExpandIconAlignment" VerticalAlignment="Center" Margin="8 0 4 0"/>
+            <ComboBox x:Name="ExpandIconAlignmentComboBox"  SelectionChanged="OnExpandIconAlignmentChanged" SelectedIndex="1"/>
+        </StackPanel>
+        <c1:C1Expander x:Name="ExpanderControl" Header="Expand me!" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <CheckBox Margin="5" VerticalAlignment="Center" x:Name="Condition" Content="Inside C1Expander"/>
+        </c1:C1Expander>
+    </Grid>
+</UserControl>

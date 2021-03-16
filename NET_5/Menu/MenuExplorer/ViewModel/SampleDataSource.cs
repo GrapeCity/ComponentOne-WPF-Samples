@@ -9,15 +9,21 @@ namespace MenuExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem(Properties.Resources.MenuTitle,
-                                Properties.Resources.MenuTitle,
+                new SampleItem(Properties.Resources.DemoMenuTitle,
+                                Properties.Resources.DemoMenuTitle,
                                 new DemoMenu()),
-                new SampleItem(Properties.Resources.AppearanceTitle,
-                                Properties.Resources.AppearanceTitle,
-                                new CustomAppearance()),
+                new SampleItem(Properties.Resources.CustomMenuAppearanceTitle,
+                                Properties.Resources.CustomMenuAppearanceTitle,
+                                new CustomMenuAppearance()),                
                 new SampleItem(Properties.Resources.DropDownMenuTitle,
                                 Properties.Resources.DropDownMenuTitle,
-                                new DropDownMenu())
+                                new DropDownMenu()),
+                new SampleItem(Properties.Resources.DemoRadialMenuTitle,
+                                Properties.Resources.DemoRadialMenuDesc,
+                                new DemoRadialMenu()),
+                new SampleItem(Properties.Resources.CustomRadialContextMenuTitle,
+                                Properties.Resources.CustomRadialContextMenuTitle,
+                                new CustomRadialContextMenu())
             };
         }
 

@@ -119,12 +119,12 @@
         </Style>
 
         <Style x:Key="excelBlue" TargetType="c1:FlexGrid">
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="DefaultColumnHeaderRowHeight" Value="28"/>
             <Setter Property="DefaultRowHeight" Value="28"/>
             <Setter Property="CellPadding" Value="4"/>
             <Setter Property="BorderBrush" Value="#FFA3AEB9"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="GridLinesVisibility" Value="All"/>
             <Setter Property="ShowMarquee" Value="True"/>
             <Setter Property="RowBackground" Value="Transparent"/>
             <Setter Property="AlternatingRowBackground" Value="Transparent"/>
@@ -133,8 +133,14 @@
             <Setter Property="TopLeftCellBackground" Value="#FFA9C4E9"/>
             <Setter Property="RowHeaderBackground" Value="#FFE4ECF7"/>
             <Setter Property="RowHeaderSelectedBackground" Value="#FFFFD58D"/>
+            <Setter Property="GridLinesVisibility" Value="All"/>
             <Setter Property="GridLinesBrush" Value="#FFD0D7E5"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#FF9EB6CE"/>
+            <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#FF9EB6CE"/>
+            <Setter Property="RowHeaderGridLinesVisibility" Value="All"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#FF9EB6CE"/>
+            <Setter Property="TopLeftHeaderGridLinesVisibility" Value="All"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#FF9EB6CE"/>
             <Setter Property="SelectionBackground" Value="#FFEAECF5"/>
             <Setter Property="ColumnHeaderSelectedBackground">
                 <Setter.Value>

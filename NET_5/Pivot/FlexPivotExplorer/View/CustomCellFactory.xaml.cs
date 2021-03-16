@@ -1,4 +1,5 @@
 ﻿using C1.WPF.Grid;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -48,9 +49,9 @@ namespace FlexPivotExplorer
     /// </summary>
     public class ConditionalCellFactory : GridCellFactory
     {
-        public override void PrepareCell(GridCellType cellType, GridCellRange range, GridCellView cell)
+        public override void PrepareCell(GridCellType cellType, GridCellRange range, GridCellView cell, Thickness internalBorders)
         {
-            base.PrepareCell(cellType, range, cell);
+            base.PrepareCell(cellType, range, cell, internalBorders);
 
             // apply green background if necessary
             if (cellType == GridCellType.Cell)

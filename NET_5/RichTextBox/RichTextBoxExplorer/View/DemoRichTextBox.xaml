@@ -78,6 +78,7 @@
                             <c1:RibbonToolSizeDefinition Size="Large"/>
                         </c1:RibbonGroupSizeDefinition>
                     </c1:RibbonGroup.GroupSizeDefinitions>
+                    <c1:C1SpellCheckTool />
                     <c1:C1FindAndReplaceTool/>
                 </c1:RibbonGroup>
             </c1:RibbonTabItem>

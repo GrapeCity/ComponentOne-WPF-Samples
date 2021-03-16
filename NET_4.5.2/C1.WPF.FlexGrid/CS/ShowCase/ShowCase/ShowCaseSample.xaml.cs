@@ -60,7 +60,7 @@ namespace ShowCase
         }
         private void cmbTheme_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
         {
-            var theme = C1ThemeFactory.GetTheme((C1AvailableThemes)cmbTheme.SelectedItem);
+            var theme = C1ThemeFactory.GetTheme((C1AvailableThemes)(cmbTheme.SelectedItem ?? C1AvailableThemes.Default));
 
             C1Theme.ApplyTheme(LayoutRoot, theme);
 

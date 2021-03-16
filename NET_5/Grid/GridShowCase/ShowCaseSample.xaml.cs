@@ -60,7 +60,7 @@ namespace GridShowCase
 
             if (dlg.ShowDialog() == true)
             {
-                flexGrid.Save(dlg.FileName, type, GridSaveOptions.Formatted);
+                flexGrid.Save(dlg.FileName, type, GridSaveOptions.SaveHeaders | GridSaveOptions.Formatted);
                 Process.Start(new ProcessStartInfo(dlg.FileName) { UseShellExecute = true });
             }
         }
@@ -182,11 +182,11 @@ namespace GridShowCase
             var grid = cellContent as Grid;
             var bitmapIcon = grid.Children[0] as C1BitmapIcon;
             var textBlock = grid.Children[1] as TextBlock;
-            TrySetBitmapSource(bitmapIcon, row);
+            TrySetBitmapSource(bitmapIcon, cellType, row);
             textBlock.Text = Grid.GetCellText(cellType, row, this);
         }
 
-        private async void TrySetBitmapSource(C1BitmapIcon bitmapIcon, GridRow row)
+        private async void TrySetBitmapSource(C1BitmapIcon bitmapIcon, GridCellType cellType, GridRow row)
         {
             CacheBitmapSourceGetterFunction();
             if (_imageSourceGetter == null)
@@ -203,7 +203,18 @@ namespace GridShowCase
             else
             {
                 var tag = Guid.NewGuid();
-                bitmapIcon.Source = DefaultBitmapSource;
+                // In case the backspace button is pressed
+                // the cell value will be null, and the DefaultBitmapSource 
+                // is a non-transparent renderable image, so image source is set to null to make
+                // cell visually appear empty
+                if (Grid.GetCellValue(cellType, row, this) == null)
+                {
+                    bitmapIcon.Source = null;
+                }
+                else
+                {
+                    bitmapIcon.Source = DefaultBitmapSource;
+                }
                 bitmapIcon.Tag = tag;
 
                 try

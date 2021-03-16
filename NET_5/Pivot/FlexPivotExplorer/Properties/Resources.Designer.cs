@@ -100,6 +100,24 @@ namespace FlexPivotExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows how to work with cube data source.
+        /// </summary>
+        public static string CubeAnalysisDesc {
+            get {
+                return ResourceManager.GetString("CubeAnalysisDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cube Analysis.
+        /// </summary>
+        public static string CubeAnalysisTitle {
+            get {
+                return ResourceManager.GetString("CubeAnalysisTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This sample shows how to get data to C1 DataEngine to perform analytics. C1DataEngine is capable of handling large amount of data, millions of rows in seconds or less. Data is retrieved from a database..
         /// </summary>
         public static string DataEngine {
@@ -195,6 +213,24 @@ namespace FlexPivotExplorer.Properties {
         public static string TemplateTitle {
             get {
                 return ResourceManager.GetString("TemplateTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to work with TopN filter.
+        /// </summary>
+        public static string TopNDemoDesc {
+            get {
+                return ResourceManager.GetString("TopNDemoDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top N Filter.
+        /// </summary>
+        public static string TopNDemoTitle {
+            get {
+                return ResourceManager.GetString("TopNDemoTitle", resourceCulture);
             }
         }
     }

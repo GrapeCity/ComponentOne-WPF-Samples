@@ -63,27 +63,81 @@ namespace MenuExplorer.Properties {
         /// <summary>
         ///   Looks up a localized string similar to This demo shows how to apply a custom style to the C1Menu control..
         /// </summary>
-        public static string Appearance {
+        public static string CustomMenuAppearanceDesc {
             get {
-                return ResourceManager.GetString("Appearance", resourceCulture);
+                return ResourceManager.GetString("CustomMenuAppearanceDesc", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Custom Appearance.
         /// </summary>
-        public static string AppearanceTitle {
+        public static string CustomMenuAppearanceTitle {
             get {
-                return ResourceManager.GetString("AppearanceTitle", resourceCulture);
+                return ResourceManager.GetString("CustomMenuAppearanceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to use C1RadialMenu with C1RichTextBox.
+        /// </summary>
+        public static string CustomRadialContextMenuDesc {
+            get {
+                return ResourceManager.GetString("CustomRadialContextMenuDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Context Menu.
+        /// </summary>
+        public static string CustomRadialContextMenuTitle {
+            get {
+                return ResourceManager.GetString("CustomRadialContextMenuTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable..
+        /// </summary>
+        public static string DemoMenuDesc {
+            get {
+                return ResourceManager.GetString("DemoMenuDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo C1Menu.
+        /// </summary>
+        public static string DemoMenuTitle {
+            get {
+                return ResourceManager.GetString("DemoMenuTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to use C1RadialMenu.
+        /// </summary>
+        public static string DemoRadialMenuDesc {
+            get {
+                return ResourceManager.GetString("DemoRadialMenuDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo C1RadialMenu.
+        /// </summary>
+        public static string DemoRadialMenuTitle {
+            get {
+                return ResourceManager.GetString("DemoRadialMenuTitle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Create custom drop-downs using C1Menu. This demo shows how to create a dropdown menu using C1Menu inside a C1DropDownButton control..
         /// </summary>
-        public static string DropDownMenu {
+        public static string DropDownMenuDesc {
             get {
-                return ResourceManager.GetString("DropDownMenu", resourceCulture);
+                return ResourceManager.GetString("DropDownMenuDesc", resourceCulture);
             }
         }
         
@@ -93,24 +147,6 @@ namespace MenuExplorer.Properties {
         public static string DropDownMenuTitle {
             get {
                 return ResourceManager.GetString("DropDownMenuTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable..
-        /// </summary>
-        public static string Menu {
-            get {
-                return ResourceManager.GetString("Menu", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Overview.
-        /// </summary>
-        public static string MenuTitle {
-            get {
-                return ResourceManager.GetString("MenuTitle", resourceCulture);
             }
         }
     }
