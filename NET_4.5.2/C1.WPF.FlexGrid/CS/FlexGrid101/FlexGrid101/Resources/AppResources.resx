@@ -364,4 +364,16 @@
   <data name="CustomSortIconTitle" xml:space="preserve">
     <value>Custom Sort Icon</value>
   </data>
+  <data name="FilterRowDescription" xml:space="preserve">
+    <value>Filters the data by columns using a filter row.</value>
+  </data>
+    <data name="FilterRowTitle" xml:space="preserve">
+    <value>FilterRow</value>
+  </data>
+  <data name="MouseHoverDescription" xml:space="preserve">
+    <value>Shows the effects of different settings of MouseOverMode</value>
+  </data>
+  <data name="MouseHoverTitle" xml:space="preserve">
+    <value>Mouse Hover</value>
+  </data>
 </root>

@@ -13,6 +13,7 @@ namespace FlexGridExplorer
                 AppResources.GettingStartedTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new GettingStarted())));
             _ = _allItems[0].Sample.Value; //Force first page is loaded immediately
+
             _allItems.Add(new SampleItem(AppResources.ColumnDefinitionTitle,
                 AppResources.ColumnDefinitionTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new ColumnDefinitions())));
@@ -86,6 +87,13 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.CustomSortIconTitle,
                 AppResources.CustomSortIconTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new CustomSortIcon())));
+            _allItems.Add(new SampleItem(AppResources.MouseHoverTitle,
+                AppResources.MouseHoverTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new MouseHover())));
+            _allItems.Add(new SampleItem(AppResources.ExportTitle,
+                AppResources.ExportTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new Export())));
+
         }
 
         public ObservableCollection<SampleItem> AllItems

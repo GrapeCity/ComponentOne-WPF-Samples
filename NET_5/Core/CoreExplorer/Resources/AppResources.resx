@@ -141,4 +141,13 @@
   <data name="Tag" xml:space="preserve">
     <value>The C1TapHelper, C1ZoomHelper, and C1DragHelper classes help listening to drag and zoom gestures supporting inertiaand  either using the mouse or fingers.</value>
   </data>
+  <data name="DragDropManagerTag" xml:space="preserve">
+    <value>C1DragDropManager has an extensive set of methods and events that allow you to control the entire drag-and-drop process. Just register some elements as drag sources and some as drop targets, and then handle the DragDrop event to move or copy the elements to their new location. You can also customize the appearance of the drag markers for both the drag source and drop target. This makes the entire operation more user-friendly and visually appealing.</value>
+  </data>
+    <data name="DemoProgressBarDescription" xml:space="preserve">
+    <value>Shows how to use C1ProgressBar, change its mode and customize appearance</value>
+  </data>
+    <data name="DemoProgressBarTitle" xml:space="preserve">
+    <value>Progress Bar</value>
+  </data>
 </root>

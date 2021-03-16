@@ -85,7 +85,7 @@ namespace FlexPivotExplorer
         // apply a predefined view
         void mi_Click(object sender, RoutedEventArgs e)
         {
-            var mi = sender as C1MenuItem;
+            var mi = sender as C1ButtonTool;
             var viewDef = mi.Tag as string;
             pivotPage.ViewDefinition = viewDef;
         }

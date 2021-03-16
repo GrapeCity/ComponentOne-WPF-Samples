@@ -7,7 +7,7 @@ namespace MenuExplorer
         public DropDownMenu()
         {
             InitializeComponent();
-            Tag = Properties.Resources.DropDownMenu;
+            Tag = Properties.Resources.DropDownMenuDesc;
         }
     }
 }

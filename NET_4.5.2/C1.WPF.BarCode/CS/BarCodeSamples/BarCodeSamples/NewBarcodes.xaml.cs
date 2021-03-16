@@ -32,6 +32,8 @@ namespace BarCodesSample
 
         private void BarcodeType_SelectedItemChanged(object sender, C1.WPF.PropertyChangedEventArgs<object> e)
         {
+            if (BarcodeType.SelectedItem == null)
+                return;
             barCode.Text = "";
             CodeType codetype = (CodeType)BarcodeType.SelectedItem;
             barCode.CodeType = codetype;

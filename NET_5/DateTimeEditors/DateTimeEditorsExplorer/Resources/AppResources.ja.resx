@@ -121,25 +121,25 @@
     <value>DatePicker</value>
   </data>
   <data name="DatePickerTag" xml:space="preserve">
-    <value>The C1DatePicker control provides a simple and intuitive UI for selecting date values. Click the C1DatePickers drop-down arrow and select a date in the calendar.</value>
+    <value>C1DatePicker コントロールは、日付値を選択するためのシンプルで直感的な UI を提供します。C1DatePickers のドロップダウン矢印をクリックして、カレンダーで日付を選択します。</value>
   </data>
   <data name="DatePickerTitle" xml:space="preserve">
     <value>DatePicker</value>
   </data>
   <data name="DateTimePickerAdvancedDescription" xml:space="preserve">
-    <value>DateTimePicker Advanced</value>
+    <value>DateTimePicker の応用</value>
   </data>
   <data name="DateTimePickerAdvancedTitle" xml:space="preserve">
-    <value>DateTimePicker Advanced</value>
+    <value>DateTimePicker の応用</value>
   </data>
   <data name="DateTimePickerAdvanceTag" xml:space="preserve">
-    <value>Customize the date and time format and set the mask and placeholder text.</value>
+    <value>日付と時刻の形式をカスタマイズし、マスクとプレースホルダーテキストを設定します。</value>
   </data>
   <data name="DateTimePickerDescription" xml:space="preserve">
     <value>DateTimePicker</value>
   </data>
   <data name="DateTimePickerTag" xml:space="preserve">
-    <value>The C1DateTimePicker provides a simple and intuitive UI for selecting date and time or just time values. The date and time can be selected by using the spin buttons, keyboard arrows, or by typing in fields.</value>
+    <value>C1DateTimePicker は、日付と時刻、または時刻値のみを選択するためのシンプルで直感的な UI を提供します。日付と時刻は、スピンボタン、キーボードの矢印を使用するか、フィールドに入力することで選択できます。</value>
   </data>
   <data name="DateTimePickerTitle" xml:space="preserve">
     <value>DateTimePicker</value>
@@ -151,6 +151,6 @@
     <value>TimeEditor</value>
   </data>
   <data name="TimePickerTag" xml:space="preserve">
-    <value>The C1TimeEditor provides a simple interface for selecting time values. The time can be selected by using the spin buttons, keyboard arrows, or by typing in fields.</value>
+    <value>C1TimeEditor は、時刻値を選択するためのシンプルなインターフェイスを提供します。時刻は、スピンボタン、キーボードの矢印を使用するか、フィールドに入力することで選択できます。</value>
   </data>
 </root>

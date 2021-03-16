@@ -200,7 +200,7 @@
                     </c1:Column.CellEditingTemplate>
                 </c1:Column>
                 <c1:Column Binding="{Binding Price}" Format="C" MinWidth="120" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
-                <c1:Column   Header="Change" ColumnName="Change" IsReadOnly="True" MinWidth="80" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center">
+                <c1:Column Binding="{Binding History}" Header="Change" ColumnName="Change" IsReadOnly="True" MinWidth="80" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center">
                     <c1:Column.CellTemplate>
                         <DataTemplate>
                             <local:StockTicker Value="{Binding History}" BindingSource="History" Tag="{Binding}"  />

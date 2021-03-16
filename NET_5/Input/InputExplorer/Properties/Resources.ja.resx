@@ -118,21 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Expander" xml:space="preserve">
-    <value>C1Expander allows you to create an expandable and collapsible information panel that can include text, images, and controls. Choose from four expand directions and position of the expand button.</value>
+    <value>C1Expander を使用すると、テキスト、画像、およびコントロールを含めることができる、展開可能で折りたたみ可能な情報パネルを作成できます。4つの展開方向と展開ボタンの位置から選択します。</value>
+    <comment>C1Expander allows you to create an expandable and collapsible information panel that can include text, images, and controls. Choose from four expand directions and position of the expand button.</comment>
   </data>
   <data name="ExpanderTitle" xml:space="preserve">
-    <value>Expander</value>
+    <value>展開・折りたたみ</value>
   </data>
   <data name="Input" xml:space="preserve">
-    <value>This library includes several WPF input controls for any data entry scenario. Format and parse numbers, dates, colors, and masked text. Select multiple items from a checklist or enter items like a tag editor. Edit a numeric range visually using a slider. Design a custom drop-down UI with ease. Select files from the user's machine.</value>
+    <value>このライブラリには、データ入力シナリオ用のいくつかの WPF 入力コントロールが含まれています。数値、日付、色、およびマスクされたテキストをフォーマットして解析します。チェックリストから複数の項目を選択するか、タグエディタなどの項目を入力します。スライダーを使用して数値範囲を視覚的に編集します。カスタムドロップダウンUIを簡単に設計します。 ユーザーのマシンからファイルを選択します。</value>
+    <comment>This library includes several WPF input controls for any data entry scenario. Format and parse numbers, dates, colors, and masked text. Select multiple items from a checklist or enter items like a tag editor. Edit a numeric range visually using a slider. Design a custom drop-down UI with ease. Select files from the user's machine.</comment>
   </data>
   <data name="InputTitle" xml:space="preserve">
-    <value>Overview</value>
+    <value>概要</value>
   </data>
   <data name="RangeSlider" xml:space="preserve">
-    <value>The C1RangeSlider control extends the basic slider control and provides two thumbs, making it possible for users to select a range. Users can drag each thumb individually or drag the center to modify both at the same time.</value>
+    <value>C1RangeSlider コントロールは、基本的なスライダーコントロールを拡張し、2つの親指を提供して、ユーザーが範囲を選択できるようにします。ユーザーは、各親指を個別にドラッグするか、中央をドラッグして両方を同時に変更できます。</value>
+    <comment>The C1RangeSlider control extends the basic slider control and provides two thumbs, making it possible for users to select a range. Users can drag each thumb individually or drag the center to modify both at the same time.</comment>
   </data>
   <data name="RangeSliderTitle" xml:space="preserve">
-    <value>Range Slider</value>
+    <value>範囲スライダー</value>
   </data>
 </root>

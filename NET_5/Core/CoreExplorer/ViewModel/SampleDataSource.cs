@@ -24,6 +24,11 @@ namespace CoreExplorer
                 AppResources.DragDropListBoxTitle,
                 AppResources.DragDropListBoxDescription,
                 new DemoListBox()));
+
+            AllItems.Add(new SampleItem(
+                AppResources.DemoProgressBarTitle,
+                AppResources.DemoProgressBarTitle,
+                new DemoProgressBar()));
         }
 
         public ObservableCollection<SampleItem> AllItems

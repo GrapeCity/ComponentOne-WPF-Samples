@@ -22,9 +22,9 @@ namespace FlexGridExplorer
 
     public class MyCellFactory : GridCellFactory
     {
-        public override void PrepareCell(GridCellType cellType, GridCellRange range, GridCellView cell)
+        public override void PrepareCell(GridCellType cellType, GridCellRange range, GridCellView cell, Thickness internalBorders)
         {
-            base.PrepareCell(cellType, range, cell);
+            base.PrepareCell(cellType, range, cell, internalBorders);
             var orderCountColumn = Grid.Columns["OrderCount"];
             if (cellType == GridCellType.Cell && range.Column == orderCountColumn.Index)
             {

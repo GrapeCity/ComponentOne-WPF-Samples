@@ -163,6 +163,10 @@
                type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml" >
             <Description>This demo shows how to use FullTextFilter to filter and highlight the data across all columns.</Description>
           </SubFeature>
+          <SubFeature name="Filter Row" assemblyName="FlexGridSamples.exe"
+               type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
+                <Description>Displays a row whose cells filter the corresponding column as text is typed.</Description>
+          </SubFeature>
         </SubFeatures>
       </Feature>
       <Feature name="Grouping" assemblyName="FlexGridSamples.exe">
@@ -200,6 +204,10 @@
                type="MainTestApplication.Editing" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Editing\Editing.xaml"
                assemblyName="FlexGridSamples.exe">
         <Description>The C1FlexGrid supports Excel-style editing. Just type values into cells and use the enter or arrow keys to move to the next one. Or press F2 and enter full-edit mode, where arrow keys navigate within the editor. Auto-complete and value-mapped columns are also built-in: simply create a ColumnValueConverter and assign it to the columns ValueConverter property and you're done. Transactioned edits are supported too. The Customer class used here implements IEditableObject, so you can undo changes by pressing the Escape key before you move to a new row. (Note: the gray columns are read-only).</Description>
+      </Feature>
+	  <Feature name="Mouse Hover" type="MainTestApplication.MouseHover" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
+               assemblyName="FlexGridSamples.exe">
+        <Description>Mouse Hover demonstration.</Description>
       </Feature>
     </Control>
     <Control name="FlexSheet"

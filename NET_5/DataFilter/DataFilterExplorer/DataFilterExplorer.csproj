@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
@@ -23,25 +23,25 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>1.0.20203.32</Version>
+      <Version>1.0.20211.34</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>1.0.20203.32</Version>
+      <Version>1.0.20211.34</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
     <PackageReference Include="System.Data.OleDb" Version="4.7.1" />
     <PackageReference Include="System.Linq.Parallel">

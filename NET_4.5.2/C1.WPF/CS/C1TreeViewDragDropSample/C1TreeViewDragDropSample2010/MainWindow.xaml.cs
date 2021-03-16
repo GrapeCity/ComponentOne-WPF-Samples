@@ -31,8 +31,6 @@ namespace C1TreeViewDragDropSample2010
 
             SampleTreeView.AllowDragDrop = true;
             dragDrop = new CustomDragDrop(SampleTreeView);
-            SampleTreeView.DragOver += dragDrop.HandleDragOver;
-            SampleTreeView.DragDrop += dragDrop.HandleDragDrop;
         }
 
         private ObservableCollection<object> BuildDepartmentTree()

@@ -5,18 +5,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="CustomStyle" TargetType="c1:C1DockTabItem">
+            <Setter Property="TabShape" Value="Rectangle" />
+        </Style>
+        <Style x:Key="CustomSelectedStyle" TargetType="c1:C1DockTabItem">
+            <Setter Property="Background" Value="BlueViolet" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="TabShape" Value="Sloped" />
+        </Style>
+    </UserControl.Resources>
     <Grid>
-        <c1:C1DockControl x:Name="dockControl">
+        <c1:C1DockControl  x:Name="dockControl" SelectedDockTabHeaderStyle="{StaticResource CustomSelectedStyle}" >
             <c1:C1DockGroup>
-                <c1:C1DockTabControl Dock="Top">
-                    <c1:C1DockTabItem Header="Tab 1" TabShape="Sloped">
+                <c1:C1DockTabControl ItemContainerStyle="{StaticResource CustomStyle}" Dock="Top">
+                    <c1:C1DockTabItem Header="Tab 1" >
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
-                    <c1:C1DockTabItem Header="Tab 2" TabShape="Sloped">
+                    <c1:C1DockTabItem Header="Tab 2" >
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>
-                <c1:C1DockTabControl>
+                <c1:C1DockTabControl SelectedIndex="0">
                     <c1:C1DockTabItem Header="Tab 3" TabShape="Sloped">
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>

@@ -14,7 +14,7 @@ Shows the following samples
 	- Grouping
 	- RowDetails
 	- FullTextFilter
-    - FilterRow
+	- FilterRow
 	- ColumnLayout
 	- StarSizing
 	- CellFreezing
@@ -24,7 +24,9 @@ Shows the following samples
 	- CustomAppearance
 	- NewRow
 	- CheckList
-    - Paging
+	- Paging
 	- Financial
 	- LiveUpdates
 	- CustomSortIcon
+    - MouseHover
+    - Export

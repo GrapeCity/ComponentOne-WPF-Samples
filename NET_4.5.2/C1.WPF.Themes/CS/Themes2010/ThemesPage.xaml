@@ -3,7 +3,7 @@
              xmlns:local="clr-namespace:Themes" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
     <Grid Name="LayoutRoot">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="40" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">

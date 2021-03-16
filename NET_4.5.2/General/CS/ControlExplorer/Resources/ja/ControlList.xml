@@ -125,6 +125,9 @@
 					<SubFeature name="フルテキストフィルター" assemblyName="FlexGridSamples.exe" isNew="true" type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml" >
 						<Description>このデモでは、FullTextFilter を使用してすべての列にわたってデータをフィルター処理して強調表示する方法を示します。</Description>
 					</SubFeature>
+                    <SubFeature name="Filter Row" assemblyName="FlexGridSamples.exe" type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
+                        <Description>Displays a row whose cells filter the corresponding column as text is typed.</Description>
+                    </SubFeature>
 				</SubFeatures>
 			</Feature>
 			<Feature name="グループ化" assemblyName="FlexGridSamples.exe">
@@ -151,6 +154,10 @@
 			</Feature>
 			<Feature name="編集" type="MainTestApplication.Editing" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Editing\Editing.xaml" assemblyName="FlexGridSamples.exe">
 				<Description>C1FlexGrid は、Excel 形式の編集をサポートしています。セルに値を入力し、Enter キーまたは矢印キーを使用して次のセルに移動します。または、F2 キーを押してフルエディットモードにします。矢印キーはエディタ内をナビゲートします。オートコンプリートとバリューマッピングされたカラムも内蔵されています。ColumnValueConverter を作成して ValueConverter プロパティのカラムに割り当てるだけです。トランザクションによる編集もサポートされています。ここで使用する Customer クラスは IEditableObject を実装しているため、新しい行に移動する前に Esc キーを押して変更を元に戻すことができます（注：灰色の列は読み取り専用です）。</Description>
+			</Feature>
+			<Feature name="Mouse Hover" type="MainTestApplication.MouseHover" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
+               assemblyName="FlexGridSamples.exe">
+				<Description>Mouse Hover demonstration.</Description>
 			</Feature>
 		</Control>
 		<Control name="FlexSheet" assembly="C1.WPF.FlexSheet">

@@ -135,7 +135,7 @@
                     </c1:GridColumn.CellEditingTemplate>
                 </local:GridBitmapIconColumn>
                 <c1:GridColumn Binding="ProductName" ColumnName="Product Name" Header="Product" MinWidth="100" Width="*"/>
-                <local:GridBitmapIconColumn Binding="Country.Name" Header="Country" Width="200" ColumnName="Country" BitmapSourceBinding="Country.Image" DefaultBitmapSource="/GridShowCase;component/Resources/Images/noflag.png" IconWidth="25">
+                <local:GridBitmapIconColumn Binding="Country" Header="Country" Width="200" ColumnName="Country" BitmapSourceBinding="Country.Image" DefaultBitmapSource="/GridShowCase;component/Resources/Images/noflag.png" IconWidth="25">
                     <c1:GridColumn.CellEditingTemplate>
                         <DataTemplate>
                             <ComboBox ItemsSource="{Binding Countries, Source={StaticResource viewmodel}}" SelectedValue="{Binding Country, Mode=TwoWay}">

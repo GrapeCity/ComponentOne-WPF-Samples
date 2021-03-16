@@ -14,6 +14,7 @@ namespace FlexGridExplorer
         {
             InitializeComponent();
             Tag = AppResources.UnboundDescription;
+            grid.CellFactory = new CustomCellFactory();
             grid.MinColumnWidth = 85;
             PopulateUnboundGrid();
         }
@@ -24,7 +25,7 @@ namespace FlexGridExplorer
         private void PopulateUnboundGrid()
         {
             // allow merging
-            grid.AllowMerging =  GridAllowMerging.All;
+            grid.AllowMerging = GridAllowMerging.All;
 
             // add rows/columns to the unbound grid
             for (int i = 0; i < 12; i++) // three years, four quarters per year
@@ -78,4 +79,15 @@ namespace FlexGridExplorer
             grid.RowHeaders.Columns[1].Width = GridLength.Auto;
         }
     }
+
+    public class CustomCellFactory : GridCellFactory
+    {
+        public override void PrepareCell(GridCellType cellType, GridCellRange range, GridCellView cell, Thickness internalBorders)
+        {
+            base.PrepareCell(cellType, range, cell, internalBorders);
+            if (cellType == GridCellType.Cell && range.Column % 4 == 0)
+                cell.BorderThickness = new Thickness(1, 0, 0, 0); //Custom vertical grid line that separate years
+        }
+    }
+
 }

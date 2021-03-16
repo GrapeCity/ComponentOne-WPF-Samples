@@ -388,4 +388,16 @@
   <data name="SortIconTemplate" xml:space="preserve">
     <value>Sort Icon Template</value>
   </data>
+  <data name="MouseHoverDescription" xml:space="preserve">
+    <value>Shows the effects of different settings of MouseOverMode</value>
+  </data>
+  <data name="MouseHoverTitle" xml:space="preserve">
+    <value>Mouse Hover</value>
+  </data>
+  <data name="ExportTitle" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportDescription" xml:space="preserve">
+    <value>Exports the grid information to Html, Text or CSV.</value>
+  </data>
 </root>

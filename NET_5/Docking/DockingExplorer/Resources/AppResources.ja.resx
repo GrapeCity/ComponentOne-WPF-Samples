@@ -118,21 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="OverviewDescription" xml:space="preserve">
-    <value>Overview</value>
+    <value>概要</value>
   </data>
   <data name="OverviewTag" xml:space="preserve">
-    <value>Handle multiple windows in your WPF application with DockControl for WPF. Similar to the docking system in Microsoft Visual Studio, C1DockControl delivers dockable, floating, and tabbed windows. You can also auto-hide sections and easily style the C1DockControl.</value>
+    <value>DockControl for WPF を使用して、WPF アプリケーションで複数のウィンドウを処理します。C1DockControl は、Microsoft Visual Studio のドッキングシステムと同様に、ドッキング可能、フローティング、およびタブ付きのウィンドウを提供します。セクションを自動非表示にして、C1DockControl のスタイルを簡単に設定することもできます。</value>
   </data>
   <data name="OverviewTitle" xml:space="preserve">
-    <value>Overview</value>
+    <value>概要</value>
   </data>
   <data name="VisualStudioDescription" xml:space="preserve">
-    <value>Visual studio</value>
+    <value>Visual Studio のような外観</value>
   </data>
   <data name="VisualStudioTag" xml:space="preserve">
-    <value>This sample shows a more realistic layout that looks like Microsoft Visual Studio.</value>
+    <value>このサンプルは、Microsoft VisualStudio のような、より現実的なレイアウトを示します。</value>
   </data>
   <data name="VisualStudioTitle" xml:space="preserve">
-    <value>Visual studio</value>
+    <value>Visual Studio のような外観</value>
   </data>
 </root>

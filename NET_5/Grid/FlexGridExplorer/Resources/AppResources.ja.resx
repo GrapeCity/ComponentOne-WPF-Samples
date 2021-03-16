@@ -126,11 +126,11 @@
     <comment>Cancel</comment>
   </data>
   <data name="CellFreezingDescription" xml:space="preserve">
-    <value>行、列のセルを固定表示する方法</value>
+    <value>凍結された列/行、およびセルのマージを表示します。</value>
     <comment>Shows frozen columns, rows and cell merging.</comment>
   </data>
   <data name="CellFreezingTitle" xml:space="preserve">
-    <value>セルの固定</value>
+    <value>セルの固定化＆マージ</value>
     <comment>Cell Freezing &amp; Merging</comment>
   </data>
   <data name="Collapse" xml:space="preserve">
@@ -138,159 +138,191 @@
     <comment>Collapse</comment>
   </data>
   <data name="ColumnDefinitionDescription" xml:space="preserve">
-    <value>列を指定して書式設定する方法</value>
+    <value>列を指定およびフォーマットする方法を示します。</value>
+    <comment>Shows how to specify and format columns.</comment>
   </data>
   <data name="ColumnDefinitionTitle" xml:space="preserve">
     <value>列の定義</value>
+    <comment>Column Definitions</comment>
   </data>
   <data name="ColumnLayoutDescription" xml:space="preserve">
-    <value>列マネージャを利用してレイアウトを変更</value>
+    <value>列レイアウトを変更するためのカスタム列マネージャーを示します。</value>
     <comment>Shows a custom column manager to modify column layout.</comment>
   </data>
   <data name="ColumnLayoutTitle" xml:space="preserve">
-    <value>列レイアウト管理</value>
+    <value>列レイアウト</value>
+    <comment>Column Layout</comment>
   </data>
   <data name="ConditionalFormattingDescription" xml:space="preserve">
-    <value>CellFactory を利用した書式の設定</value>
+    <value>CellFactoryを使用して条件付き書式を適用します。</value>
     <comment>Uses a CellFactory to apply conditional formatting.</comment>
   </data>
   <data name="ConditionalFormattingTitle" xml:space="preserve">
     <value>条件付き書式</value>
+    <comment>Conditional Formatting</comment>
   </data>
   <data name="CustomCellsDescription" xml:space="preserve">
-    <value>数値をゲージで表示するセル</value>
+    <value>アーティストとアルバムごとにグループ化された約 10,000 曲のライブラリを表示して、セルをカスタマイズします。</value>
+    <comment>Customizes a cell by displaying a library of about 10,000 songs grouped by artist and album.</comment>
   </data>
   <data name="CustomCellsTitle" xml:space="preserve">
     <value>カスタムセル</value>
+    <comment>Custom Cells</comment>
   </data>
   <data name="CustomMergingDescription" xml:space="preserve">
-    <value>隣接セルをマージして表示する</value>
+    <value>カスタムセルがマージされたグリッドを表示します。</value>
     <comment>Shows a grid with custom cell merging.</comment>
   </data>
   <data name="CustomMergingTitle" xml:space="preserve">
-    <value>セル結合の応用</value>
+    <value>カスタムマージ</value>
     <comment>Custom Merging</comment>
   </data>
   <data name="EditColumnLayout" xml:space="preserve">
     <value>編集</value>
+    <comment>Edit</comment>
   </data>
   <data name="EditConfirmationDescription" xml:space="preserve">
-    <value>セルの内容を変更する前にダイアログを表示</value>
+    <value>セルに変更をコミットする前に、確認ダイアログでユーザーにプロンプトを表示する方法を示します。</value>
     <comment>Shows how to prompt the user with a confirmation dialog before committing changes to a cell.</comment>
   </data>
   <data name="EditConfirmationQuestion" xml:space="preserve">
     <value>編集内容を反映しますか？</value>
+    <comment>Do you want to commit the edit?</comment>
   </data>
   <data name="EditConfirmationQuestionTitle" xml:space="preserve">
     <value>編集確認</value>
+    <comment>Confirm Edit</comment>
   </data>
   <data name="EditConfirmationTitle" xml:space="preserve">
     <value>編集の確認</value>
+    <comment>Edit Confirmation</comment>
   </data>
   <data name="EditCustomer" xml:space="preserve">
     <value>顧客データの編集</value>
+    <comment>Edit Customer</comment>
   </data>
   <data name="EditingDescription" xml:space="preserve">
-    <value>入力フォームでセル内容を編集</value>
+    <value>インラインではなく入力フォームでセルを編集します。</value>
+    <comment>Edit cells by input form rather than inline.</comment>
   </data>
   <data name="EditingTitle" xml:space="preserve">
     <value>編集フォーム</value>
+    <comment>Editing Form</comment>
   </data>
   <data name="EditRow" xml:space="preserve">
     <value>行の編集</value>
-    <comment>edit a single row</comment>
+    <comment>Edit Row</comment>
   </data>
   <data name="EmptyListText" xml:space="preserve">
     <value>表示するデータはありません。</value>
+    <comment>There are no videos to show.</comment>
   </data>
   <data name="Filter" xml:space="preserve">
-    <value>フィルタ</value>
+    <value>フィルター</value>
+    <comment>Filter</comment>
   </data>
   <data name="FilterDescription" xml:space="preserve">
-    <value>列のフィルタ条件をフォームで指定</value>
+    <value>生成されたフォームを介して列でデータをフィルタリングします。</value>
+    <comment>Filters the data by columns through a generated form.</comment>
   </data>
   <data name="FilterPlaceholderText" xml:space="preserve">
     <value>フィルタリングするテキストを入力</value>
+    <comment>Enter text to filter</comment>
   </data>
   <data name="FilterTitle" xml:space="preserve">
-    <value>フィルタ</value>
+    <value>フィルター</value>
+    <comment>Filter</comment>
   </data>
   <data name="FullTextFilterDescription" xml:space="preserve">
-    <value>列のデータをフィルタリングして強調表示</value>
+    <value>すべての列のデータをフィルタリングして強調表示します。</value>
+    <comment>Filters and highlights the data across all columns.</comment>
   </data>
   <data name="FullTextFilterTitle" xml:space="preserve">
-    <value>全テキストフィルタ</value>
+    <value>フルテキストフィルター</value>
+    <comment>Full Text Filter</comment>
   </data>
   <data name="GettingStartedDescription" xml:space="preserve">
-    <value>FlexGrid でデータを表示、編集、集計</value>
+    <value>FlexGrid を使用して、データを一度に表示、編集、および集約します。</value>
+    <comment>Display, edit and aggregate your data all at once with FlexGrid.</comment>
   </data>
   <data name="GettingStartedTitle" xml:space="preserve">
     <value>FlexGrid の基本機能</value>
+    <comment>Getting Started</comment>
   </data>
   <data name="GroupingDescription" xml:space="preserve">
-    <value>コレクションをグループ化して集計</value>
+    <value>データのコレクションをグループ化して集約します。</value>
+    <comment>Groups and aggregates a collection of data.</comment>
   </data>
   <data name="GroupingTitle" xml:space="preserve">
     <value>グループ化</value>
+    <comment>Grouping</comment>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
+    <comment>OK</comment>
   </data>
   <data name="OnDemandDescription" xml:space="preserve">
-    <value>スクロールの終端で表示データをロード</value>
+    <value>ユーザーがグリッドを終端に移動した際にオンデマンドで項目を読み込みます。</value>
     <comment>Load items on demand as the user scrolls down the grid.</comment>
   </data>
   <data name="OnDemandTitle" xml:space="preserve">
-    <value>データオンデマンド</value>
+    <value>オンデマンド</value>
     <comment>On Demand</comment>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>フィルタを解除</value>
-    <comment>remove filter</comment>
+    <value>削除</value>
+    <comment>Remove</comment>
   </data>
   <data name="RowDetailsDescription" xml:space="preserve">
-    <value>グリッドを展開／折りたたみして明細を表示</value>
+    <value>行の詳細を展開および折りたたみます。</value>
     <comment>Expand and collapse row details.</comment>
   </data>
   <data name="RowDetailsTitle" xml:space="preserve">
-    <value>詳細行</value>
+    <value>行の詳細</value>
+    <comment>Row Details</comment>
   </data>
   <data name="Save" xml:space="preserve">
     <value>保存</value>
+    <comment>Save</comment>
   </data>
   <data name="SearchPlaceholderText" xml:space="preserve">
-    <value>YouTube で検索するビデオのテキストを入力</value>
+    <value>YouTube で検索する動画のテキストを入力</value>
+    <comment>Enter text to search videos on YouTube</comment>
   </data>
   <data name="SelectionModesDescription" xml:space="preserve">
-    <value>各種セル選択モードを表示</value>
+    <value>さまざまなセル選択モードを示します。</value>
     <comment>Shows the various cell selection modes.</comment>
   </data>
   <data name="SelectionModesTitle" xml:space="preserve">
     <value>選択モード</value>
+    <comment>Selection Modes</comment>
   </data>
   <data name="SelectRowMessage" xml:space="preserve">
-    <value>編集する行を選択してください。対象の行をダブルタップしても編集できます。</value>
+    <value>最初に行を選択するか、行を直接ダブルタップしてください。</value>
     <comment>Please select a row first or double-tap the row directly.</comment>
   </data>
   <data name="Sort" xml:space="preserve">
     <value>ソート</value>
+    <comment>Sort</comment>
   </data>
   <data name="StarSizingDescription" xml:space="preserve">
     <value>配分で列幅を設定するレスポンシブなレイアウト</value>
+    <comment>Shows a responsive column layout that uses star sizing.</comment>
   </data>
   <data name="StarSizingInstructions" xml:space="preserve">
-    <value>デバイスの回転でスターサイズ機能の動作を確認</value>
+    <value>デバイスを回転させて、スターサイズの動作を確認します。</value>
     <comment>Rotate the device to see star-sizing in action.</comment>
   </data>
   <data name="StarSizingTitle" xml:space="preserve">
-    <value>スターサイズ設定</value>
+    <value>スターサイズ</value>
+    <comment>Star Sizing</comment>
   </data>
   <data name="UnboundDescription" xml:space="preserve">
-    <value>データソースに接続しない行と列で表を作成</value>
+    <value>空の行と列を追加して、バインドされていないグリッドを作成します。</value>
     <comment>Add empty rows and columns to create an unbound grid.</comment>
   </data>
   <data name="UnboundTitle" xml:space="preserve">
-    <value>アンバウンド(データ非接続)</value>
+    <value>アンバウンド</value>
     <comment>Unbound</comment>
   </data>
   <data name="CellsSelectedText" xml:space="preserve">
@@ -330,11 +362,11 @@
     <comment>Wednesday</comment>
   </data>
   <data name="CustomAppearanceTitle" xml:space="preserve">
-    <value>外観のカスタマイズ</value>
+    <value>カスタム外観</value>
     <comment>Custom Appearance</comment>
   </data>
   <data name="CustomAppearanceDescription" xml:space="preserve">
-    <value>外観スタイルを変更してグリッドを表示</value>
+    <value>カスタムスタイルのグリッドを表示します。</value>
     <comment>Shows a grid with a custom style.</comment>
   </data>
   <data name="Weekday" xml:space="preserve">
@@ -350,26 +382,32 @@
     <comment>ShowMarquee</comment>
   </data>
   <data name="NewRowDescription" xml:space="preserve">
-    <value>追加する新しい行を表示</value>
+    <value>新しい行の追加を示します。</value>
+    <comment>Shows adding new rows.</comment>
   </data>
   <data name="NewRowTitle" xml:space="preserve">
     <value>新しい行</value>
+    <comment>New Row</comment>
   </data>
   <data name="NewRowPlaceholder" xml:space="preserve">
     <value>クリックして新しい行を追加する</value>
+    <comment>Click here to add a new row</comment>
   </data>
   <data name="CustomSortIconTitle" xml:space="preserve">
     <value>カスタムソートアイコン</value>
+    <comment>Custom Sort Icon</comment>
   </data>
   <data name="CustomSortIconDescription" xml:space="preserve">
-    <value>ヘッダー列にカスタムソートアイコンを表示</value>
-    <comment>Show how to custom sort icon in header column.</comment>
+    <value>ヘッダー列の並べ替えアイコンをカスタマイズする方法を示します。</value>
+    <comment>Show how to customize the sorting icon in header columns.</comment>
   </data>
   <data name="CheckListDescription" xml:space="preserve">
-    <value>チェックボックスで FlexGrid の行を選択する方法</value>
+    <value>チェックボックスを使用してフレックスグリッド行を選択する方法を示します。</value>
+    <comment>Show how to select flexgrid rows through checkboxes.</comment>
   </data>
   <data name="CheckListTitle" xml:space="preserve">
     <value>チェックリスト</value>
+    <comment>Check-List</comment>
   </data>
   <data name="SortIconPosition" xml:space="preserve">
     <value>ソートアイコンの位置</value>
@@ -379,9 +417,11 @@
   </data>
   <data name="LiveUpdatesDescription" xml:space="preserve">
     <value>グリッド内の変更をアニメーションで表す方法を示します。</value>
+    <comment>Shows how to animates changes in the grid.</comment>
   </data>
   <data name="LiveUpdatesTitle" xml:space="preserve">
     <value>ライブ更新</value>
+    <comment>Live updates</comment>
   </data>
   <data name="ColorUpdates" xml:space="preserve">
     <value>色分けされた更新</value>
@@ -405,21 +445,61 @@
     <value>郵便コード</value>
   </data>
   <data name="FilterRowDescription" xml:space="preserve">
-    <value>GridFilterRow を介して列でデータをフィルタリングします。</value>
+    <value>テキストが入力されるとセルが対応する列をフィルタリングする行を示します。</value>
+    <comment>Displays a row whose cells filter the corresponding column as text is typed.</comment>
   </data>
   <data name="FilterRowTitle" xml:space="preserve">
     <value>行のフィルタリング</value>
+    <comment>Filter Row</comment>
   </data>
   <data name="FinancialDescription" xml:space="preserve">
-    <value>Shows a financial application with real time data updates, flashing cells, and sparklines.</value>
+    <value>リアルタイムのデータ更新、点滅するセル、およびスパークラインを備えた金融アプリケーションを示します。</value>
+    <comment>Shows a financial application with real time data updates, flashing cells, and sparklines.</comment>
   </data>
-    <data name="FinancialTitle" xml:space="preserve">
-    <value>Financial</value>
+  <data name="FinancialTitle" xml:space="preserve">
+    <value>金融</value>
+    <comment>Financial</comment>
   </data>
-    <data name="PagingDescription" xml:space="preserve">
-    <value>Shows how to paginate data by using VirtualModeDataCollection with FlexGrid</value>
+  <data name="PagingDescription" xml:space="preserve">
+    <value>FlexGrid で VirtualModeDataCollection を使用してデータをページ分割する方法を示します。</value>
+    <comment>Shows how to paginate data by using VirtualModeDataCollection with FlexGrid</comment>
   </data>
-    <data name="PagingTitle" xml:space="preserve">
-    <value>Paging</value>
+  <data name="PagingTitle" xml:space="preserve">
+    <value>ページ化</value>
+    <comment>Paging</comment>
+  </data>
+  <data name="CollectionViewDescription" xml:space="preserve">
+    <value>ライブソート、フィルタリング、およびグループ化を提供する C1CollectionView をサポートします。</value>
+    <comment>Supports C1CollectionView to provide live sorting, filtering and grouping.</comment>
+  </data>
+  <data name="CollectionViewName" xml:space="preserve">
+    <value>CollectionView</value>
+    <comment>CollectionView</comment>
+  </data>
+  <data name="GroupingPanelDescription" xml:space="preserve">
+    <value>列ヘッダーをグループ化領域にドラッグして、グループを作成します。</value>
+    <comment>Create groups by dragging column headers into the grouping areas.</comment>
+  </data>
+  <data name="GroupingPanelTitle" xml:space="preserve">
+    <value>グループ化パネル</value>
+    <comment>Grouping Panel</comment>
+  </data>
+  <data name="MatchCaseLabel" xml:space="preserve">
+    <value>大文字と小文字を区別</value>
+    <comment>Match Case</comment>
+  </data>
+  <data name="MatchWholeWordLabel" xml:space="preserve">
+    <value>単語単位</value>
+    <comment>Match Whole Word</comment>
+  </data>
+  <data name="SaveColumnLayout" xml:space="preserve">
+    <value>保存</value>
+    <comment>Save</comment>
+  </data>
+    <data name="MouseHoverDescription" xml:space="preserve">
+    <value>Shows the effects of different settings of MouseOverMode</value>
+  </data>
+    <data name="MouseHoverTitle" xml:space="preserve">
+    <value>Mouse Hover</value>
   </data>
 </root>

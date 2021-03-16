@@ -14,7 +14,9 @@
             <Setter Property="BorderBrush" Value="#FFE0E0E0"/>
             <Setter Property="CornerRadius" Value="4"/>
             <Setter Property="GridLinesBrush" Value="#FFE0E0E0"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#FFE0E0E0"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#FFE0E0E0"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#FFE0E0E0"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#FFE0E0E0"/>
             <Setter Property="Foreground" Value="#DE000000"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Medium"/>
             <Setter Property="SortAscendingIconTemplate" Value="{x:Static c1:C1IconTemplate.ArrowUp}"/>
@@ -34,7 +36,9 @@
             <Setter Property="BorderBrush" Value="#FFE0E0E0"/>
             <Setter Property="CornerRadius" Value="4"/>
             <Setter Property="GridLinesBrush" Value="#1E1E1E"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#1E1E1E"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#1E1E1E"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#1E1E1E"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#1E1E1E"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Medium"/>
             <Setter Property="SortAscendingIconTemplate" Value="{x:Static c1:C1IconTemplate.ArrowUp}"/>
@@ -43,8 +47,10 @@
             <Setter Property="SelectionForeground" Value="#000000"/>
             <Setter Property="DefaultRowHeight" Value="52"/>
             <Setter Property="DefaultColumnHeaderRowHeight" Value="56"/>
+            <Setter Property="MouseOverBrush" Value="#0AFFFFFF"/>
         </Style>
         <Style x:Key="BureauBlack" TargetType="c1:FlexGrid" >
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="Vertical" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -91,19 +97,23 @@
             <Setter Property="SelectionBackground" Value="#ffd0e1ef" />
             <Setter Property="CursorBackground" Value="#ffa7cdf0" />
             <Setter Property="GridLinesBrush" Value="#ffc9caca" />
-            <Setter Property="HeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#ffc4c4c4"/>
         </Style>
 
         <Style x:Key="C1Blue" TargetType="c1:FlexGrid">
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="GridLinesVisibility" Value="Vertical"/>
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
             <Setter Property="RowHeaderGridLinesVisibility" Value="All"/>
             <Setter Property="TopLeftHeaderGridLinesVisibility" Value="All"/>
-            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="Background" Value="White" />
             <Setter Property="RowBackground" Value="#c0eaeff4"/>
             <Setter Property="AlternatingRowBackground" Value="#00ffffff"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#e0c8c8c8"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#e0c8c8c8"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#e0c8c8c8"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#e0c8c8c8"/>
             <Setter Property="GridLinesBrush" Value="#fff0f0f0"/>
             <Setter Property="FrozenLinesBrush" Value="#e0000000"/>
             <Setter Property="GroupRowBackground" Value="#e0e4e8e4"/>
@@ -136,6 +146,7 @@
         </Style>
 
         <Style x:Key="Cosmopolitan" TargetType="c1:FlexGrid" >
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="None" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -145,7 +156,9 @@
             <Setter Property="ColumnHeaderForeground" Value="#FF000000"/>
             <Setter Property="RowHeaderBackground" Value="#FFFFFFFF"/>
             <Setter Property="RowHeaderForeground" Value="#FF000000"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#FF999999"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#FF999999"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#FF999999"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#FF999999"/>
             <Setter Property="GridLinesBrush" Value="#FF999999"/>
             <Setter Property="FrozenLinesBrush" Value="#FF999999"/>
             <Setter Property="Background" Value="#FFFFFFFF" />
@@ -161,6 +174,7 @@
         </Style>
 
         <Style x:Key="CosmopolitanDark" TargetType="c1:FlexGrid" >
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="None" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -170,7 +184,9 @@
             <Setter Property="ColumnHeaderForeground" Value="#FFE2E2E2"/>
             <Setter Property="RowHeaderBackground" Value="#FF090909"/>
             <Setter Property="RowHeaderForeground" Value="#FFE2E2E2"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#FF333333"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#FF333333"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#FF333333"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#FF333333"/>
             <Setter Property="GridLinesBrush" Value="#FF333333"/>
             <Setter Property="FrozenLinesBrush" Value="#FF333333"/>
             <Setter Property="Background" Value="#FF090909" />
@@ -183,9 +199,11 @@
             <Setter Property="CursorBackground" Value="#FF333333" />
             <Setter Property="GroupRowBackground" Value="#FF090909"/>
             <Setter Property="TopLeftCellBackground" Value="#FF090909"/>
+            <Setter Property="MouseOverBrush" Value="#0AFFFFFF"/>
         </Style>
 
         <Style x:Key="ExpressionDark" TargetType="c1:FlexGrid" >
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="Vertical" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -204,7 +222,9 @@
             <Setter Property="ColumnHeaderForeground" Value="#FFE2E2E2"/>
             <Setter Property="RowHeaderBackground" Value="#FF6F6F6F"/>
             <Setter Property="RowHeaderForeground" Value="#FFE2E2E2"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#FF222222"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#FF222222"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#FF222222"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#FF222222"/>
             <Setter Property="GridLinesBrush" Value="#FF2B2B2B"/>
             <Setter Property="FrozenLinesBrush" Value="#FF222222"/>
             <Setter Property="Background" Value="#FF777777" />
@@ -233,9 +253,11 @@
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
+            <Setter Property="MouseOverBrush" Value="#0AFFFFFF"/>
         </Style>
 
         <Style x:Key="ExpressionLight" TargetType="c1:FlexGrid" >
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="Vertical" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -254,7 +276,9 @@
             <Setter Property="ColumnHeaderForeground" Value="White"/>
             <Setter Property="RowHeaderBackground" Value="#FFB8B8B8"/>
             <Setter Property="RowHeaderForeground" Value="White"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#FF888888"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#FF888888"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#FF888888"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#FF888888"/>
             <Setter Property="GridLinesBrush" Value="#FFD1D1D1"/>
             <Setter Property="FrozenLinesBrush" Value="Gray"/>
             <Setter Property="Background" Value="#FF9F9F9F" />
@@ -286,6 +310,7 @@
         </Style>
 
         <Style x:Key="Office2016Black" TargetType="c1:FlexGrid">
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="None" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -295,7 +320,9 @@
             <Setter Property="ColumnHeaderForeground" Value="#FFDADADA" />
             <Setter Property="RowHeaderBackground" Value="#FF363636" />
             <Setter Property="RowHeaderForeground" Value="#FFDADADA" />
-            <Setter Property="HeaderGridLinesBrush" Value="#FF686868" />
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#FF686868" />
+            <Setter Property="RowHeaderGridLinesBrush" Value="#FF686868" />
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#FF686868" />
             <Setter Property="GridLinesBrush" Value="#FF686868" />
             <Setter Property="FrozenLinesBrush" Value="#FF686868" />
             <Setter Property="Background" Value="#FF363636" />
@@ -312,9 +339,11 @@
             <Setter Property="TopLeftCellBackground" Value="#FF363636" />
             <Setter Property="RowHeaderSelectedBackground" Value="#FF505050"/>
             <!--<Setter Property="MarqueeColor" Value="#FF217346"/>-->
+            <Setter Property="MouseOverBrush" Value="#0AFFFFFF"/>
         </Style>
 
         <Style x:Key="RainierOrange" TargetType="c1:FlexGrid" >
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="Vertical" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -364,11 +393,14 @@
             <Setter Property="Foreground" Value="#ff000000" />
             <Setter Property="SelectionBackground" Value="#fffbdc6a" />
             <Setter Property="CursorBackground" Value="#fffbc711" />
-            <Setter Property="HeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#ffc4c4c4"/>
             <Setter Property="GridLinesBrush" Value="#ffc9caca" />
         </Style>
 
         <Style x:Key="ShinyBlue" TargetType="c1:FlexGrid" >
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="All" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -431,10 +463,13 @@
             <Setter Property="SelectionBackground" Value="#ff669bc4" />
             <Setter Property="CursorBackground" Value="#ff4178a4" />
             <Setter Property="GridLinesBrush" Value="#fff0f0f0" />
-            <Setter Property="HeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#ffc4c4c4"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#ffc4c4c4"/>
         </Style>
 
         <Style x:Key="WhistlerBlue" TargetType="c1:FlexGrid" >
+            <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
             <Setter Property="GridLinesVisibility" Value="Vertical" />
             <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -462,7 +497,9 @@
                 </Setter.Value>
             </Setter>
             <Setter Property="RowHeaderForeground" Value="#FF042271"/>
-            <Setter Property="HeaderGridLinesBrush" Value="#FFBBBBBB"/>
+            <Setter Property="ColumnHeaderGridLinesBrush" Value="#FFBBBBBB"/>
+            <Setter Property="RowHeaderGridLinesBrush" Value="#FFBBBBBB"/>
+            <Setter Property="TopLeftHeaderGridLinesBrush" Value="#FFBBBBBB"/>
             <Setter Property="GridLinesBrush" Value="#FFE9E9E9"/>
             <Setter Property="FrozenLinesBrush" Value="#FF838D91"/>
             <Setter Property="Background" Value="#FFD9DBDC" />
@@ -505,6 +542,6 @@
             <TextBlock Text="Theme" VerticalAlignment="Center"/>
             <ComboBox x:Name="Themes" Margin="4 0 0 0" SelectionChanged="OnThemeChanged"/>
         </StackPanel>
-        <c1:FlexGrid x:Name="grid" Margin="12" Grid.Row="1" Style="{StaticResource Material}"/>
+        <c1:FlexGrid x:Name="grid" Margin="12" Grid.Row="1" Style="{StaticResource Material}" SelectionMode="RowRange"/>
     </Grid>
 </UserControl>

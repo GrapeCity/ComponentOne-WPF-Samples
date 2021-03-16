@@ -92,7 +92,12 @@ namespace ShowCase
             get { return _selectedSize; }
             set
             {
-                _selectedSize = value; OnPropertyChanged("SelectedSize"); RefreshDataSize();
+                _selectedSize = value;
+                OnPropertyChanged("SelectedSize");
+                if (_selectedSize != null)
+                {
+                    RefreshDataSize();
+                }
             }
         }
 
@@ -107,7 +112,7 @@ namespace ShowCase
             }
 
             Products = new ListCollectionView(products);
-           
+
             OnPropertyChanged("Products");
         }
         protected void OnPropertyChanged(string propertyName)

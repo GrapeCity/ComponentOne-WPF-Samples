@@ -131,8 +131,14 @@ namespace ColumnPicker
         // populate context menu with column picker
         void CreateColumnPickerMenu(ContextMenu ctxMenu)
         {
+            bool isFirstCol = true;
             foreach (var c in _flex.Columns)
             {
+                if (isFirstCol)
+                {
+                    isFirstCol = false;
+                    continue;
+                }    
                 // create checkbox to represent this column
                 var chk = new CheckBox();
                 chk.Tag = c;

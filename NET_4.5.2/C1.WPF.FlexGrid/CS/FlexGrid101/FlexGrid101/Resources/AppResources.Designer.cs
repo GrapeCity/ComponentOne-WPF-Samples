@@ -19,7 +19,7 @@ namespace FlexGrid101.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -403,6 +403,24 @@ namespace FlexGrid101.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filters the data by columns using a filter row..
+        /// </summary>
+        internal static string FilterRowDescription {
+            get {
+                return ResourceManager.GetString("FilterRowDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FilterRow.
+        /// </summary>
+        internal static string FilterRowTitle {
+            get {
+                return ResourceManager.GetString("FilterRowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filter.
         /// </summary>
         internal static string FilterTitle {
@@ -534,6 +552,24 @@ namespace FlexGrid101.Resources {
         internal static string Monday {
             get {
                 return ResourceManager.GetString("Monday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows the effects of different settings of MouseOverMode.
+        /// </summary>
+        internal static string MouseHoverDescription {
+            get {
+                return ResourceManager.GetString("MouseHoverDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mouse Hover.
+        /// </summary>
+        internal static string MouseHoverTitle {
+            get {
+                return ResourceManager.GetString("MouseHoverTitle", resourceCulture);
             }
         }
         

@@ -13,7 +13,6 @@
                  BeginningEdit="OnBeginningEdit" 
                  CellEditEnded="OnCellEditEnded"
                  GridLinesVisibility="None"
-                 HeaderGridLinesBrush="Transparent"
                  HeadersVisibility="Column"
                  Background="White"
                  RowBackground="#FFE2EFDB"

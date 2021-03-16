@@ -1,5 +1,4 @@
-﻿using FlexPivotExplorer.Resources;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 
 namespace FlexPivotExplorer
@@ -38,6 +37,14 @@ namespace FlexPivotExplorer
             _allItems.Add(new SampleItem(Properties.Resources.DataEngineTitle,
                 Properties.Resources.DataEngineTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new DataEngine())));
+
+            _allItems.Add(new SampleItem(Properties.Resources.CubeAnalysisTitle,
+                Properties.Resources.CubeAnalysisTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new CubeAnalysis())));
+
+            _allItems.Add(new SampleItem(Properties.Resources.TopNDemoTitle,
+                Properties.Resources.TopNDemoTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new TopNDemo())));
         }
 
         public ObservableCollection<SampleItem> AllItems

@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Windows;
-using System.Windows.Controls;
-using C1.WPF;
+﻿using C1.WPF;
+using System.Collections;
+using System.Linq;
 
 namespace C1TreeViewDragDropSample2010
 {
@@ -18,8 +17,9 @@ namespace C1TreeViewDragDropSample2010
         public CustomDragDrop(C1TreeView tree)
         {
             Tree = tree;
-            Mark = new DropMark();
             Effect = DragDropEffect.Move;
+            tree.DragDrop += HandleDragDrop;
+            tree.DragStart += HandleDragStart;
         }
 
         /// <summary>
@@ -28,55 +28,35 @@ namespace C1TreeViewDragDropSample2010
         private C1TreeView Tree { get; set; }
 
         /// <summary>
-        /// A custom visual element used to indicate what the target of the drop will be.
-        /// </summary>
-        private DropMark Mark { get; set; }
-
-        /// <summary>
         /// The desired effect for the drop action (move or copy elements)
         /// </summary>
         public DragDropEffect Effect { get; set; }
 
         /// <summary>
-        /// Used to handle the DragOver event.
-        /// Adds the mark to indicate the drop target
-        /// Determines if a given node of the tree is a valid drop location
+        /// Handles DragStart event;
         /// </summary>
         /// <param name="source">The source of the event</param>
         /// <param name="e">The event arguments</param>
-        public void HandleDragOver(object source, DragDropEventArgs e)
+        private void HandleDragStart(object source, DragDropEventArgs e)
         {
-            C1DragDropManager dragDropManager = source as C1DragDropManager;
-            if (Mark.Parent == null)
-                dragDropManager.Canvas.Children.Add(Mark);
-            Mark.Visibility = Visibility.Collapsed;
-            e.Effect = DragDropEffect.None;
-
-            // Check if is a valid drop action
-            C1TreeViewItem target = Tree.GetNode(e.GetPosition(null));
-            if (IsValidDrop(e.DragSource as C1TreeViewItem, target))
+            if (e.DragSource is C1TreeViewItem && ((C1TreeViewItem)e.DragSource).DataContext is Department)
             {
-                // get target with respect to drag/drop canvas
-                Point p = target.C1TransformToVisual(dragDropManager.Canvas).Transform(new Point());
-                Point pos = e.GetPosition(target);
-                if (pos.Y > target.RenderSize.Height / 2)
-                {
-                    p.Y += target.RenderSize.Height;
-                }
-                Mark.SetValue(Canvas.LeftProperty, p.X);
-                Mark.SetValue(Canvas.TopProperty, p.Y);
-                Mark.Visibility = Visibility.Visible;
-                e.Effect = DragDropEffect.Move;
+                // don't allow to drag department nodes
+                e.Effect = DragDropEffect.None;
+            }
+            else
+            {
+                e.Effect = Effect;
             }
         }
 
         /// <summary>
-        /// Used to handle the DragDrop event.
+        /// Handles the DragDrop event.
         /// Determines the target and fires the corresponding action (move or copy).
         /// </summary>
         /// <param name="source">The source of the event</param>
         /// <param name="e">The event arguments</param>
-        public void HandleDragDrop(object source, DragDropEventArgs e)
+        private void HandleDragDrop(object source, DragDropEventArgs e)
         {
             if (e.Effect != DragDropEffect.None)
             {
@@ -88,8 +68,13 @@ namespace C1TreeViewDragDropSample2010
                     C1TreeViewItem target = Tree.GetNode(e.GetPosition(null));
                     if (target != null)
                     {
-                        Point p = e.GetPosition(target);
-                        bool insertAfter = (p.Y > target.RenderSize.Height / 2);
+                        bool insertAfter = e.GetPosition(target).Y > 4;
+                        if (target.HasItems)
+                        {
+                            // if target is department, insert new item inside
+                            target = target.FirstNode;
+                            insertAfter = false;
+                        }
                         if (Effect == DragDropEffect.Move)
                         {
                             DoMove(item, target, insertAfter);
@@ -98,40 +83,11 @@ namespace C1TreeViewDragDropSample2010
                         {
                             DoCopy(item, target, insertAfter);
                         }
+
+                        Tree.ItemsSource = Tree.ItemsSource;
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// Returns true if the target node is a valid drop location.
-        /// For this sample, a valid target node is the one that:
-        ///     Represents an employee (departments are not valid)
-        ///     Is not being copied to the same department it is assigned
-        ///     Is not being moved to a department it is already assigned
-        /// </summary>
-        /// <param name="source"></param>
-        /// <param name="target"></param>
-        /// <returns></returns>
-        private bool IsValidDrop(C1TreeViewItem source, C1TreeViewItem target)
-        {
-            bool isValidTarget = false;
-            // For this sample we will allow dragging of employees only
-            if ((source != null) && (target != null) && (source.Header is Employee) && (target.Header is Employee))
-            {
-                // Cannot copy employees in the same department
-                Employee sourceDataObject = (Employee)source.Header;
-                bool isAlreadyInDepartment = ((IList)target.ParentItemsSource).Contains(sourceDataObject);
-                if ((isAlreadyInDepartment) && ((Effect == DragDropEffect.Copy) || (source.Parent != target.Parent)))
-                {
-                    isValidTarget = false;
-                }
-                else
-                {
-                    isValidTarget = (!source.IsAncestorOf(target) && !(source == target));
-                }
-            }
-            return isValidTarget;
         }
 
         /// <summary>
@@ -150,9 +106,40 @@ namespace C1TreeViewDragDropSample2010
             if (copyAfter)
                 targetIndex++;
 
-            // copy source node and insert
-            Employee sourceCopy = ((Employee)source.Header).Clone();
-            targetCollection.Insert(targetIndex, sourceCopy);
+            var sourceTreeViewItem = source as C1TreeViewItem;
+            var targetTreeViewItem = target as C1TreeViewItem;
+
+            var empSource = sourceTreeViewItem.DataContext as Employee;
+            var departmentId = 0;
+            if (targetTreeViewItem.DataContext is Employee)
+            {
+                departmentId = ((Employee)targetTreeViewItem.DataContext).DepartmentID;
+            }
+            else
+            {
+                departmentId = ((Department)targetTreeViewItem.DataContext).DepartmentID;
+            }
+            if (departmentId == 0 || empSource.DepartmentID == departmentId) return;
+            foreach (var dep in Tree.ItemsSource)
+            {
+                var department = dep as Department;
+                if (department.DepartmentID != departmentId) continue;
+
+                var empToAdd = empSource.Clone();
+                empToAdd.DepartmentID = departmentId;
+                if (!department.Employees.Any(x => x.EmployeeID == empToAdd.EmployeeID))
+                {
+                    if (!department.Employees.Any())
+                    {
+                        department.Employees.Add(empToAdd);
+                    }
+                    else
+                    {
+                        department.Employees.Insert(targetIndex, empToAdd);
+                    }
+                }
+                break;
+            }
         }
 
         /// <summary>
@@ -160,8 +147,7 @@ namespace C1TreeViewDragDropSample2010
         /// </summary>
         /// <param name="source">The source node to move</param>
         /// <param name="target">The target node</param>
-        /// <param name="copyAfter">Indicates if the source node will be moved after
-        /// (larger index) the target </param>
+        /// <param name="moveAfter">Indicates if the source node will be moved after (larger index) the target </param>
         private void DoMove(C1TreeViewItem source, C1TreeViewItem target, bool moveAfter)
         {
             // get source collection/index
@@ -176,9 +162,45 @@ namespace C1TreeViewDragDropSample2010
             if (sourceCollection == targetCollection && sourceIndex < targetIndex)
                 targetIndex--;
 
-            // remove node from old position, insert into new
-            sourceCollection.RemoveAt(sourceIndex);
-            targetCollection.Insert(targetIndex, source.Header);
+
+            var sourceTreeViewItem = source as C1TreeViewItem;
+            var targetTreeViewItem = target as C1TreeViewItem;
+
+            var empSource = sourceTreeViewItem.DataContext as Employee;
+            var departmentId = 0;
+            if (targetTreeViewItem.DataContext is Employee)
+            {
+                departmentId = ((Employee)targetTreeViewItem.DataContext).DepartmentID;
+            }
+            else
+            {
+                departmentId = ((Department)targetTreeViewItem.DataContext).DepartmentID;
+            }
+            if (departmentId == 0 || empSource.DepartmentID == departmentId) return;
+            foreach (var dep in Tree.ItemsSource)
+            {
+                var department = dep as Department;
+                if (department.DepartmentID != departmentId) continue;
+
+                if (!department.Employees.Any(x => x.EmployeeID == empSource.EmployeeID))
+                {
+                    if (!department.Employees.Any())
+                    {
+                        department.Employees.Add(empSource);
+                    }
+                    else
+                    {
+                        department.Employees.Insert(targetIndex, empSource);
+                    }
+                }
+                break;
+            }
+            // remove node from old position
+            if (sourceIndex >= 0 && empSource.DepartmentID != departmentId)
+            {
+                empSource.DepartmentID = departmentId;
+                sourceCollection.RemoveAt(sourceIndex);
+            }
         }
     }
 }

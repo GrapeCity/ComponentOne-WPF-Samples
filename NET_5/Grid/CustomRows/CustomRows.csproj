@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>5.0.20211.57</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DateTimeEditors">
+      <Version>5.0.20211.57</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid">
+      <Version>5.0.20211.57</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>5.0.20211.57</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

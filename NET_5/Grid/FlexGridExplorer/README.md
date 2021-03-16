@@ -30,3 +30,5 @@ Shows the following samples
 * Financial
 * LiveUpdates
 * CustomSortIcon
+* MouseHover
+* Export

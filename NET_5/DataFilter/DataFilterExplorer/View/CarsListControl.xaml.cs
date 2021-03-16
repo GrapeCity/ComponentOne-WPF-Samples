@@ -1,4 +1,5 @@
 ﻿using C1.DataCollection;
+using C1.WPF.Accordion;
 using C1.WPF.DataFilter;
 using DataFilterExplorer.Resources;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace DataFilterExplorer
 {
@@ -26,6 +28,15 @@ namespace DataFilterExplorer
             c1DataFilter.ItemsSource = data;
             flexGrid.ItemsSource = data;
             c1DataFilter.SaveFilterExpression(_fileName);
+            c1DataFilter.ItemContainerGenerator.StatusChanged += ItemContainerGenerator_StatusChanged;
+        }
+
+        private void ItemContainerGenerator_StatusChanged(object sender, System.EventArgs e)
+        {
+            if (c1DataFilter.ItemContainerGenerator.Status == GeneratorStatus.ContainersGenerated)
+            {
+                c1DataFilter.Items[0].IsExpanded = false;
+            }
         }
 
         private void C1DataFilter_FilterAutoGenerating(object sender, FilterAutoGeneratingEventArgs e)
@@ -76,7 +87,7 @@ namespace DataFilterExplorer
                     priceFilter.Maximum = _carsTable.AsEnumerable().Max(x => x.Field<double>("Price"));
                     priceFilter.Minimum = _carsTable.AsEnumerable().Min(x => x.Field<double>("Price"));
                     priceFilter.Increment = 1000;
-                    priceFilter.Digits = 0;
+                    priceFilter.Format = "F0";
                     break;
                 default:
                     e.Cancel = true;

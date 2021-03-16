@@ -118,27 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DemoListTag" xml:space="preserve">
-    <value>This demo shows how you can drag and drop between two UI controls using C1DragDropManager.</value>
+    <value>このデモでは、C1DragDropManager を使用して２つの UI コントロール間でドラッグアンドドロップする方法を示します。</value>
   </data>
   <data name="DragDropListBoxDescription" xml:space="preserve">
-    <value>Drag Drop ListBox</value>
+    <value>ListBox ドラッグ＆ドロップ</value>
   </data>
   <data name="DragDropListBoxTitle" xml:space="preserve">
-    <value>Drag Drop ListBox</value>
+    <value>ListBox ドラッグ＆ドロップ</value>
   </data>
   <data name="DragDropManagerDescription" xml:space="preserve">
-    <value>Drag Drop Manager</value>
+    <value>ドラッグ＆ドロップマネージャー</value>
   </data>
   <data name="DragDropManagerTitle" xml:space="preserve">
-    <value>Drag Drop Manager</value>
+    <value>ドラッグ＆ドロップマネージャー</value>
   </data>
   <data name="InputHandlingDescription" xml:space="preserve">
-    <value>Input Handling</value>
+    <value>入力のハンドリング</value>
   </data>
   <data name="InputHandlingTitle" xml:space="preserve">
-    <value>Input Handling</value>
+    <value>入力のハンドリング</value>
   </data>
   <data name="Tag" xml:space="preserve">
-    <value>The C1TapHelper, C1ZoomHelper, and C1DragHelper classes help listening to drag and zoom gestures supporting inertiaand  either using the mouse or fingers.</value>
+    <value>C1TapHelper, C1ZoomHelper, C1DragHelper クラスは、マウスや指による、慣性をサポートしたドラッグやズームのジェスチャーのリスニングを支援します。</value>
+  </data>
+  <data name="DragDropManagerTag" xml:space="preserve">
+    <value>C1DragDropManager には、ドラッグ＆ドロッププロセス全体を制御できるようにするメソッドとイベントが豊富に用意されています。いくつかの要素をドラッグソースあるいはドロップターゲットとして登録し、DragDrop イベントを処理して要素を新しい場所に移動またはコピーします。ドラッグソースとドロップターゲットの両方のドラッグマーカーの外観をカスタマイズすることもできます。これにより、操作全体がよりユーザーフレンドリーにまり、視覚的にも魅力的なものになります。</value>
+  </data>
+    <data name="DemoProgressBarDescription" xml:space="preserve">
+    <value>Shows how to use C1ProgressBar, change its mode and customize appearance</value>
+  </data>
+    <data name="DemoProgressBarTitle" xml:space="preserve">
+    <value>Progress Bar</value>
   </data>
 </root>

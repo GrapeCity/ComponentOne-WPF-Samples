@@ -118,21 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Indicator" xml:space="preserve">
-    <value>The new indicator tab style is modeled after Office 365. The tabs have a clean look with an indicator line displayed below the selected tab.</value>
+    <value>新しいインジケータータブスタイルは Office365 をモデルにしています。タブの外観はすっきりしており、選択したタブの下にインジケーターの線が表示されます。</value>
+    <comment>The new indicator tab style is modeled after Office 365. The tabs have a clean look with an indicator line displayed below the selected tab.</comment>
   </data>
   <data name="IndicatorTitle" xml:space="preserve">
-    <value>Simplified Indicator</value>
+    <value>簡略化されたインジケーター</value>
+    <comment>Simplified Indicator</comment>
   </data>
   <data name="Overview" xml:space="preserve">
-    <value>Arrange content in an efficient, organized manner using TabControl for WPF. Take advantage of tab scrolling, tabstrip placement options, pinning and closing tabs.</value>
+    <value>TabControl for WPF を使用して、効率的で整理された方法でコンテンツを配置します。 タブのスクロール、タブストリップの配置オプション、タブの固定と終了を利用します。</value>
+    <comment>Arrange content in an efficient, organized manner using TabControl for WPF. Take advantage of tab scrolling, tabstrip placement options, pinning and closing tabs.</comment>
   </data>
   <data name="OverviewTitle" xml:space="preserve">
-    <value>Overview</value>
+    <value>概要</value>
+    <comment>Overview</comment>
   </data>
   <data name="TabPosition" xml:space="preserve">
-    <value>The tabs can be placed at the top, bottom, left, or right of the control. Rotate the tab content and customize the tab shape.</value>
+    <value>タブは、コントロールの上部、下部、左側、または右側に配置できます。タブの内容を回転させ、タブの形状をカスタマイズします。</value>
+    <comment>The tabs can be placed at the top, bottom, left, or right of the control. Rotate the tab content and customize the tab shape.</comment>
   </data>
   <data name="TabPositionTitle" xml:space="preserve">
-    <value>Tab Positions</value>
+    <value>タブの位置</value>
+    <comment>Tab Positions</comment>
   </data>
 </root>

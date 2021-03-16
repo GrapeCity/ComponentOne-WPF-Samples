@@ -7,6 +7,7 @@ using System.IO;
 using C1.WPF.RichTextBox.Documents;
 using C1.WPF.RichTextBox;
 using System.Reflection;
+using C1.WPF.SpellChecker;
 
 namespace RichTextBoxExplorer
 {
@@ -20,9 +21,9 @@ namespace RichTextBoxExplorer
             InitializeComponent();
             Tag = Properties.Resources.Demo;
 
-            //var spellChecker = new C1SpellChecker();
-            //richTB.SpellChecker = spellChecker;
-            //spellChecker.MainDictionary.Load(Application.GetResourceStream(new Uri("/" + _asmName + ";component/Resources/C1Spell_en-US.dct", UriKind.Relative)).Stream);
+            var spellChecker = new C1SpellChecker();
+            richTB.SpellChecker = spellChecker;
+            spellChecker.MainDictionary.Load(Application.GetResourceStream(new Uri("/" + _asmName + ";component/Resources/C1Spell_en-US.dct", UriKind.Relative)).Stream);
 
             var stream = Application.GetResourceStream(new Uri("/" + _asmName + ";component/Resources/dickens.htm", UriKind.Relative)).Stream;
             var html = new StreamReader(stream).ReadToEnd();

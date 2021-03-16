@@ -82,7 +82,7 @@ namespace CarsListWithFilter
                     priceFilter.Maximum = _carsTable.AsEnumerable().Max(x => x.Field<double>("Price"));
                     priceFilter.Minimum = _carsTable.AsEnumerable().Min(x => x.Field<double>("Price"));
                     priceFilter.Increment = 1000;
-                    priceFilter.Digits = 0;
+                    priceFilter.Format = "F0";
                     break;
                 default:
                     e.Cancel = true;

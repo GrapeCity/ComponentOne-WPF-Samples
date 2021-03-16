@@ -117,22 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Appearance" xml:space="preserve">
+  <data name="CustomMenuAppearanceDesc" xml:space="preserve">
     <value>This demo shows how to apply a custom style to the C1Menu control.</value>
   </data>
-  <data name="AppearanceTitle" xml:space="preserve">
+  <data name="CustomMenuAppearanceTitle" xml:space="preserve">
     <value>Custom Appearance</value>
   </data>
-  <data name="DropDownMenu" xml:space="preserve">
+  <data name="DropDownMenuDesc" xml:space="preserve">
     <value>Create custom drop-downs using C1Menu. This demo shows how to create a dropdown menu using C1Menu inside a C1DropDownButton control.</value>
   </data>
   <data name="DropDownMenuTitle" xml:space="preserve">
     <value>Drop Down Menu</value>
-  </data>
-  <data name="Menu" xml:space="preserve">
+  </data>  
+  <data name="DemoMenuDesc" xml:space="preserve">
     <value>Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable.</value>
   </data>
-  <data name="MenuTitle" xml:space="preserve">
-    <value>Overview</value>
+  <data name="DemoMenuTitle" xml:space="preserve">
+    <value>Demo C1Menu</value>
+  </data>
+  <data name="DemoRadialMenuDesc" xml:space="preserve">
+    <value>Shows how to use C1RadialMenu</value>
+  </data>
+  <data name="DemoRadialMenuTitle" xml:space="preserve">
+    <value>Demo C1RadialMenu</value>
+  </data>
+    <data name="CustomRadialContextMenuDesc" xml:space="preserve">
+    <value>Shows how to use C1RadialMenu with C1RichTextBox</value>
+  </data>
+    <data name="CustomRadialContextMenuTitle" xml:space="preserve">
+    <value>Custom Context Menu</value>
   </data>
 </root>

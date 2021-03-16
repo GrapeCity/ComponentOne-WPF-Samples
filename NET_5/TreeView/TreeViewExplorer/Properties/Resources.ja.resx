@@ -118,21 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Binding" xml:space="preserve">
-    <value>This sample shows how to bind data and create a custom template.</value>
+    <value>このサンプルは、データをバインドしてカスタムテンプレートを作成する方法を示します。</value>
+    <comment>This sample shows how to bind data and create a custom template.</comment>
   </data>
   <data name="BindingTitle" xml:space="preserve">
-    <value>Binding</value>
+    <value>バインディング</value>
+    <comment>Binding</comment>
   </data>
   <data name="DragDrop" xml:space="preserve">
-    <value>This sample shows how to implement drag &amp; drop action in C1TreeView.</value>
+    <value>このサンプルは、C1TreeView でドラッグアンドドロップアクションを実装する方法を示します。</value>
+    <comment>This sample shows how to implement drag &amp; drop action in C1TreeView.</comment>
   </data>
   <data name="DragDropTitle" xml:space="preserve">
-    <value>Drag &amp; Drop</value>
+    <value>ドラッグ＆ドロップ</value>
+    <comment>Drag &amp; Drop</comment>
   </data>
   <data name="Introduction" xml:space="preserve">
-    <value>This sample shows the C1TreeView's basic features.</value>
+    <value>このサンプルは、C1TreeView の基本機能を示します。</value>
+    <comment>This sample shows the C1TreeView's basic features.</comment>
   </data>
   <data name="IntroductionTitle" xml:space="preserve">
-    <value>Overview</value>
+    <value>概要</value>
+    <comment>Overview</comment>
   </data>
 </root>

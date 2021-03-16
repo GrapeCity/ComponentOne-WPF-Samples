@@ -68,10 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>5.0.20203.34</Version>
+      <Version>5.0.20211.57</Version>
     </PackageReference>
   </ItemGroup>
 </Project>
