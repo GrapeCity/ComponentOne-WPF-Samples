@@ -8,6 +8,7 @@ C1.WPF.Tile.C1Tile, C1.WPF.Tile.4.5.2
 C1.WPF.Schedule.C1Scheduler, C1.WPF.Schedule.4.5.2
 C1.WPF.Schedule.C1Calendar, C1.WPF.Schedule.4.5.2
 C1.WPF.BarCode.C1BarCode, C1.WPF.BarCode.4.5.2
+C1.C1Preview.C1PrintDocument, C1.WPF.PrintDocument.4.5.2
 
 
 

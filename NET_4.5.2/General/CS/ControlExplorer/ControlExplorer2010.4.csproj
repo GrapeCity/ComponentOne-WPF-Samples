@@ -289,6 +289,7 @@
     <Reference Include="C1.WPF.Tile.4.5.2" />
     <Reference Include="C1.WPF.Zip.4.5.2" />
     <Reference Include="C1.WPF.4.5.2" />
+    <Reference Include="C1.WPF.PrintDocument.4.5.2" />
     <ProjectReference Include="..\..\..\C1.WPF.BarCode\CS\BarCodeSamples\BarCodeSamples\BarCodesSample2010.4.csproj">
       <Project>{bbf9ac6f-be8d-4d52-9e99-f2b7a466d2cf}</Project>
       <Name>BarCodesSample2010.4</Name>
@@ -405,6 +406,10 @@
       <Project>{34EA51BA-206A-491C-A40A-C9E012AD88F3}</Project>
       <Name>PdfCreator2010.4</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.WPF.PrintDocument\CS\DataBinding\DataBinding.csproj">
+      <Project>{073d7e08-1ce8-43c3-a05c-201fad23b062}</Project>
+      <Name>DataBinding</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\C1.WPF.Sparkline\CS\SparklineSamples\SparklineSamples2010.4.csproj">
       <Project>{098b2718-4e02-4421-b8b8-3ccef81a640d}</Project>
       <Name>SparklineSamples2010.4</Name>
@@ -501,10 +506,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>1.0.20211.34</Version>
+      <Version>1.0.20212.56</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>1.0.20211.34</Version>
+      <Version>1.0.20212.56</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

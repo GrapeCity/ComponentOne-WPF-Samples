@@ -20,16 +20,21 @@ namespace DataFilterExplorer
                 AppResources.FilterSummaryDescription,
                 new Lazy<System.Windows.Controls.Control>(() => new FilterSummarySample())));
             _allItems.Add(new SampleItem(
+                AppResources.ConditionalFiltersTitle,
+                AppResources.ConditionalFiltersDescription,
+                new Lazy<System.Windows.Controls.Control>(() => new ConditionalFiltersSample())));
+            _allItems.Add(new SampleItem(
                 AppResources.FilterEditorTitle,
                 AppResources.FilterEditorDescription,
                 new Lazy<System.Windows.Controls.Control>(() => new FilterEditorSample())));
-            _allItems.Add(
-                new SampleItem(
-                    AppResources.CustomFilterTitle,
-                    AppResources.CustomFilterDescription,
-                    new Lazy<System.Windows.Controls.Control>(() => new CustomFiltersSample())
-                )
-            );
+            _allItems.Add(new SampleItem(
+                AppResources.CustomFilterTitle,
+                AppResources.CustomFilterDescription,
+                new Lazy<System.Windows.Controls.Control>(() => new CustomFiltersSample())));
+            _allItems.Add(new SampleItem(
+                AppResources.VirtualSourceTitle,
+                AppResources.VirtualSourceDescription,
+                new Lazy<System.Windows.Controls.Control>(() => new VirtualSource())));
         }
 
         public ObservableCollection<SampleItem> AllItems

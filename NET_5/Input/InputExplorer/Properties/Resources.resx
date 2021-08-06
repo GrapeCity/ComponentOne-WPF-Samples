@@ -135,4 +135,31 @@
   <data name="RangeSliderTitle" xml:space="preserve">
     <value>Range Slider</value>
   </data>
+  <data name="MaskedDemoDes" xml:space="preserve">
+    <value>Shows how to use C1MaskedTextBox with different settings of Mask and TextMaskFormat.</value>
+  </data>
+  <data name="MaskedDemoTitle" xml:space="preserve">
+    <value>Masked TextBox</value>
+  </data>
+  <data name="AddTag" xml:space="preserve">
+    <value>Add Tag</value>
+  </data>
+  <data name="AddTagButton" xml:space="preserve">
+    <value>AddTag</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add Text</value>
+  </data>
+  <data name="InputTagContent" xml:space="preserve">
+    <value>Input tag's content:</value>
+  </data>
+  <data name="InputText" xml:space="preserve">
+    <value>Input text:</value>
+  </data>
+  <data name="TagEditorDemoDes" xml:space="preserve">
+    <value>Shows how to use C1TagEditor.</value>
+  </data>
+  <data name="TagEditorDemoTitle" xml:space="preserve">
+    <value>Tag Editor</value>
+  </data>
 </root>

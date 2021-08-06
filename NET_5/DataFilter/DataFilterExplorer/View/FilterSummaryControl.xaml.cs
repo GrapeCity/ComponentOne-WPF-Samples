@@ -22,9 +22,6 @@ namespace DataFilterExplorer
             _data = new C1DataCollection<Car>(DataProvider.GetCars());
             flexGrid.ItemsSource = _data;
             c1DataFilter1.ItemsSource = _data;
-
-            foreach (ChecklistFilter filter in c1DataFilter1.Filters.Where(f => f is ChecklistFilter))
-                filter.SelectAll();
         }
 
         private void C1DataFilter1_FilterAutoGenerating(object sender, FilterAutoGeneratingEventArgs e)

@@ -13,6 +13,7 @@ namespace CoreExplorer
     public partial class DemoProgressBar : UserControl
     {
         BackgroundWorker worker = new BackgroundWorker();
+        private bool _restartWorker;
 
         public DemoProgressBar()
         {
@@ -46,6 +47,11 @@ namespace CoreExplorer
             //btnRunAgain.Visibility = Visibility.Collapsed;
             for (int i = 0; i < 100; i++)
             {
+                if (worker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    break;
+                }
                 worker.ReportProgress(i);
                 System.Threading.Thread.Sleep(10); //Simulate long tasks
             }
@@ -53,6 +59,12 @@ namespace CoreExplorer
 
         private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            if (_restartWorker)
+            {
+                _restartWorker = false;
+                worker.RunWorkerAsync();
+                return;
+            }
             c1ProgressBar1.Value = 100;
             c1ProgressBar2.Value = 100;
             defaultProgressBar.Value = 100;
@@ -70,9 +82,13 @@ namespace CoreExplorer
         {
             if (worker.IsBusy)
             {
+                _restartWorker = true;
                 worker.CancelAsync();
             }
-            worker.RunWorkerAsync();
+            else
+            {
+                worker.RunWorkerAsync();
+            }
         }
     }
 }

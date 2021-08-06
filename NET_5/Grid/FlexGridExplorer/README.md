@@ -17,6 +17,8 @@ Shows the following samples
 * RowDetails
 * FullTextFilter
 * FilterRow
+* CustomFilters
+* AdvancedFiltering
 * ColumnLayout
 * StarSizing
 * CellFreezing
@@ -32,3 +34,5 @@ Shows the following samples
 * CustomSortIcon
 * MouseHover
 * Export
+* ColumnOptions
+* ExcelExport

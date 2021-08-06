@@ -1,4 +1,4 @@
-﻿using C1.FlexPivot;
+﻿using C1.PivotEngine;
 using C1.WPF.Core;
 using C1.WPF.Menu;
 using C1.WPF.Ribbon;
@@ -31,7 +31,7 @@ namespace FlexPivotExplorer
                 isLoaded = true;                
 
                 // view not found in storage, use default
-                var fpEngine = pivotPage.FlexPivotEngine;
+                var fpEngine = pivotPage.C1PivotEngine;
                 fpEngine.DataSource = Utils.PivotDataSet.Tables[0].DefaultView;
                 fpEngine.BeginUpdate();
                 fpEngine.RowFields.Add("Country", "City");

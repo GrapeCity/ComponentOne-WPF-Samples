@@ -100,6 +100,24 @@ namespace FlexPivotExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows how to use apply conditional formatting to an FlexPivot control.
+        /// </summary>
+        public static string ConditionalFormattingDesc {
+            get {
+                return ResourceManager.GetString("ConditionalFormattingDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conditional Formatting.
+        /// </summary>
+        public static string ConditionalFormattingTitle {
+            get {
+                return ResourceManager.GetString("ConditionalFormattingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to work with cube data source.
         /// </summary>
         public static string CubeAnalysisDesc {
@@ -132,6 +150,24 @@ namespace FlexPivotExplorer.Properties {
         public static string DataEngineTitle {
             get {
                 return ResourceManager.GetString("DataEngineTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to work with group ranges.
+        /// </summary>
+        public static string GroupRangesDesc {
+            get {
+                return ResourceManager.GetString("GroupRangesDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group Ranges.
+        /// </summary>
+        public static string GroupRangesTitle {
+            get {
+                return ResourceManager.GetString("GroupRangesTitle", resourceCulture);
             }
         }
         

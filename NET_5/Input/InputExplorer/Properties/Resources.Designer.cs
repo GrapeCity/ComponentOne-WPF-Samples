@@ -61,6 +61,33 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Tag.
+        /// </summary>
+        public static string AddTag {
+            get {
+                return ResourceManager.GetString("AddTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AddTag.
+        /// </summary>
+        public static string AddTagButton {
+            get {
+                return ResourceManager.GetString("AddTagButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Text.
+        /// </summary>
+        public static string AddText {
+            get {
+                return ResourceManager.GetString("AddText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C1Expander allows you to create an expandable and collapsible information panel that can include text, images, and controls. Choose from four expand directions and position of the expand button..
         /// </summary>
         public static string Expander {
@@ -88,11 +115,47 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Input tag&apos;s content:.
+        /// </summary>
+        public static string InputTagContent {
+            get {
+                return ResourceManager.GetString("InputTagContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input text:.
+        /// </summary>
+        public static string InputText {
+            get {
+                return ResourceManager.GetString("InputText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Overview.
         /// </summary>
         public static string InputTitle {
             get {
                 return ResourceManager.GetString("InputTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to use C1MaskedTextBox with different settings of Mask and TextMaskFormat..
+        /// </summary>
+        public static string MaskedDemoDes {
+            get {
+                return ResourceManager.GetString("MaskedDemoDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Masked TextBox.
+        /// </summary>
+        public static string MaskedDemoTitle {
+            get {
+                return ResourceManager.GetString("MaskedDemoTitle", resourceCulture);
             }
         }
         
@@ -111,6 +174,24 @@ namespace InputExplorer.Properties {
         public static string RangeSliderTitle {
             get {
                 return ResourceManager.GetString("RangeSliderTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to use C1TagEditor..
+        /// </summary>
+        public static string TagEditorDemoDes {
+            get {
+                return ResourceManager.GetString("TagEditorDemoDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag Editor.
+        /// </summary>
+        public static string TagEditorDemoTitle {
+            get {
+                return ResourceManager.GetString("TagEditorDemoTitle", resourceCulture);
             }
         }
     }

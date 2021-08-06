@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using C1.WPF.Calendar;
@@ -57,6 +58,19 @@ namespace CalendarExplorer
             cbCalendarType.ItemsSource = new List<CalendarType> { CalendarType.Default, CalendarType.Gregorian, CalendarType.Japanese };
             cbCalendarType.SelectedItemChanged += CbCalendarType_SelectedItemChanged;
 
+            cbSelectionMode.ItemsSource = Enum.GetValues(typeof(SelectionMode)).Cast<SelectionMode>();
+            cbSelectionMode.SelectedItemChanged += cbSelectionMode_SelectedItemChanged;
+        }
+
+        private void cbSelectionMode_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
+        {
+
+            var selectionMode = (sender as C1ComboBox).SelectedItem;
+
+            if (selectionMode != null)
+            {
+                calendar.SelectionMode = (SelectionMode)selectionMode;
+            }
 
         }
 
@@ -67,29 +81,29 @@ namespace CalendarExplorer
 
             if (calendarType != null)
             {
-                Calendar.CalendarType = (CalendarType)calendarType;
+                calendar.CalendarType = (CalendarType)calendarType;
             }
 
         }
 
         private void CbDayOfWeekFormat_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
         {
-            Calendar.DayOfWeekFormat = (string)((C1ComboBox)sender).SelectedItem;
+            calendar.DayOfWeekFormat = (string)((C1ComboBox)sender).SelectedItem;
         }
 
         private void CbHeaderFormat_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
         {
-            Calendar.HeaderMonthFormat = (string)e.NewValue;
+            calendar.HeaderMonthFormat = (string)e.NewValue;
         }
 
         private void CbkShowAdjacentDay_Unchecked(object sender, RoutedEventArgs e)
         {
-            Calendar.ShowAdjacentDay = false;
+            calendar.ShowAdjacentDay = false;
         }
 
         private void CbkShowAdjacentDay_Checked(object sender, RoutedEventArgs e)
         {
-            Calendar.ShowAdjacentDay = true;
+            calendar.ShowAdjacentDay = true;
         }
 
         private void CbOrientation_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
@@ -99,44 +113,44 @@ namespace CalendarExplorer
 
             if (orientation != null)
             {
-                Calendar.Orientation = (Orientation)orientation;
+                calendar.Orientation = (Orientation)orientation;
             }
         }
 
 
         private void CbkShowNavigationButton_Unchecked(object sender, RoutedEventArgs e)
         {
-            Calendar.ShowNavigationButtons = false;
+            calendar.ShowNavigationButtons = false;
         }
 
         private void CbkShowNavigationButton_Checked(object sender, RoutedEventArgs e)
         {
-            Calendar.ShowNavigationButtons = true;
+            calendar.ShowNavigationButtons = true;
         }
 
         private void CbkShowHeader_Unchecked(object sender, RoutedEventArgs e)
         {
-            Calendar.ShowHeader = false;
+            calendar.ShowHeader = false;
         }
 
         private void CbkShowHeader_Checked(object sender, RoutedEventArgs e)
         {
-            Calendar.ShowHeader = true;
+            calendar.ShowHeader = true;
         }
 
         private void CbDayOfWeek_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
         {
-            Calendar.FirstDayOfWeek = (DayOfWeek)cbDayOfWeek.SelectedItem;
+            calendar.FirstDayOfWeek = (DayOfWeek)cbDayOfWeek.SelectedItem;
         }
 
         private void DpMaxDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            Calendar.MaxDate = (sender as C1DatePicker).SelectedDate;
+            calendar.MaxDate = (sender as C1DatePicker).SelectedDate;
         }
 
         private void DpMinDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            Calendar.MinDate = (sender as C1DatePicker).SelectedDate;
+            calendar.MinDate = (sender as C1DatePicker).SelectedDate;
         }
     }
 }

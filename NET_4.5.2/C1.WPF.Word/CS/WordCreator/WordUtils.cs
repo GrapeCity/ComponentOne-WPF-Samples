@@ -45,7 +45,7 @@ namespace Word.Creator
         public static Rect RenderParagraph(this C1WordDocument word, string text, Font font, Rect rcPage, Rect rc, bool outline, bool linkTarget)
         {
             // if it won't fit this page, do a page break
-            rc.Height = word.MeasureString(text, font, rc.Width).Height;
+            rc.Height = C1WordDocument.MeasureString(text, font, rc.Width).Height;
             if (rc.Bottom > rcPage.Bottom)
             {
                 word.PageBreak();

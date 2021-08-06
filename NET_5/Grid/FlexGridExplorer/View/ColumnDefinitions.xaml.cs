@@ -25,5 +25,12 @@ namespace FlexGridExplorer
             grid.Columns["CountryID"].DataMap = new GridDataMap { ItemsSource = dct, SelectedValuePath = "Key", DisplayMemberPath = "Value" };
             grid.MinColumnWidth = 85;
         }
+
+        private void OnActiveFilterLoading(object sender, GridColumnFilterLoadingEventArgs e)
+        {
+            var filter = e.DataFilter.Filters[0] as C1.WPF.DataFilter.ThreeStateFilter;
+            filter.TrueLabel = AppResources.ActiveLabel;
+            filter.FalseLabel = AppResources.InactiveLabel;
+        }
     }
 }

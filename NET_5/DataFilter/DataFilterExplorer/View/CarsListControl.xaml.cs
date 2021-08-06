@@ -44,12 +44,7 @@ namespace DataFilterExplorer
             switch (e.Property.Name)
             {
                 case "Model":
-                    var modelFilter = (ChecklistFilter)e.Filter;
-                    modelFilter.SelectAll();
-                    break;
                 case "Brand":
-                    var brandFilter = (ChecklistFilter)e.Filter;
-                    brandFilter.SelectAll();
                     break;
                 case "Liter":
                     var literFilter = (RangeFilter)e.Filter;
@@ -61,12 +56,10 @@ namespace DataFilterExplorer
                     var transmissFilter = (ChecklistFilter)e.Filter;
                     transmissFilter.HeaderText = "Transmiss Speed Count";
                     transmissFilter.ShowSelectAll = false;
-                    transmissFilter.SelectAll();
                     break;
                 case "Category":
                     var categoryFilter = (ChecklistFilter)e.Filter;
                     categoryFilter.ShowSelectAll = false;
-                    categoryFilter.SelectAll();
                     break;
                 case "TransmissAutomatic":
                     var taFilter = (ChecklistFilter)e.Filter;
@@ -80,7 +73,6 @@ namespace DataFilterExplorer
                     taFilter.DisplayMemberPath = "DisplayValue";
                     taFilter.ValueMemberPath = "Value";
                     taFilter.ShowSelectAll = false;
-                    taFilter.SelectAll();
                     break;
                 case "Price":
                     var priceFilter = (RangeFilter)e.Filter;

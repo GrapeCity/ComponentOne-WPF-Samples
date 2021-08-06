@@ -9,11 +9,11 @@
     <Grid>
         <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False">
             <c1:FlexGrid.Columns>
-                <c1:GridColumn Binding="Active" MinWidth="70" Width="0.5*"/>
+                <c1:GridColumn Binding="Active" MinWidth="70" Width="0.5*" FilterLoading="OnActiveFilterLoading"/>
                 <c1:GridColumn Binding="Id" IsReadOnly="true" MinWidth="100" Width="*"/>
                 <c1:GridColumn Binding="FirstName" MinWidth="110" Width="*"/>
                 <c1:GridColumn Binding="LastName" MinWidth="110" Width="*"/>
-                <c1:GridColumn Binding="CountryId" Header="Country" MinWidth="110" Width="*"/>
+                <c1:GridColumn Binding="CountryId" Header="Country" MinWidth="110" Width="*" AllowGrouping="True"/>
                 <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Date" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
                 <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Time" Header="Last Order Time" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
                 <c1:GridNumericColumn Binding="OrderTotal" Format="C" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>

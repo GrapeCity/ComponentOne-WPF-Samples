@@ -1,4 +1,4 @@
-﻿using C1.FlexPivot;
+﻿using C1.PivotEngine;
 using C1.WPF.Core;
 using C1.WPF.Pivot;
 using C1.WPF.Ribbon;
@@ -16,7 +16,7 @@ namespace FlexPivotExplorer
     public partial class TopNDemo : UserControl
     {
         bool isLoaded = false;
-        C1FlexPivotEngine fpEngine;
+        C1PivotEngine fpEngine;
 
         public TopNDemo()
         {
@@ -36,7 +36,7 @@ namespace FlexPivotExplorer
                 panel.DataSource = Utils.PivotDataSet.Tables[0].DefaultView;
                 pivotGrid.ItemsSource = panel;
 
-                fpEngine = panel.FlexPivotEngine;
+                fpEngine = panel.C1PivotEngine;
                 // apply update to view
                 fpEngine.BeginUpdate();
                 fpEngine.RowFields.Add("Country");

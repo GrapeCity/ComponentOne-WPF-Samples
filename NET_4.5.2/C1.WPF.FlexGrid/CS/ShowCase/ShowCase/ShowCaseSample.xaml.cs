@@ -36,25 +36,46 @@ namespace ShowCase
             AddColumnFooter(flexGrid);
             cmbTheme.ItemsSource = typeof(C1AvailableThemes).GetEnumValues<C1AvailableThemes>();
             cmbTheme.SelectedItem = C1AvailableThemes.Default;
+            flexGrid.LoadedRows += FlexGridOnLoadedRows;
         }
+
+        private void FlexGridOnLoadedRows(object sender, EventArgs e)
+        {
+            if (Condition1.IsChecked)
+            {
+                Condition1.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
+            }
+
+            if (Condition2.IsChecked)
+            {
+                Condition2.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
+            }
+
+            if (Condition3.IsChecked)
+            {
+                Condition3.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
+
+            }
+        }
+
         void AddColumnFooter(C1.WPF.FlexGrid.C1FlexGrid flex)
         {
             var gr = new GroupRow();
 
             // customize appearance of the new row
-            gr.CellStyle = new CellStyle() 
-            { 
-                BorderThickness = new Thickness(0), 
-                FontWeight = FontWeights.Bold, 
+            gr.CellStyle = new CellStyle()
+            {
+                BorderThickness = new Thickness(0),
+                FontWeight = FontWeights.Bold,
                 HorizontalAlignment = HorizontalAlignment.Right
             };
 
             // add the row to the ColumnFooters GridPanel
             flex.ColumnFooters.Rows.Add(gr);
-            
+
             var aggregatePriceValue = flexGrid.GetAggregate(Aggregate.Average, new CellRange(0, 5, flexGrid.Rows.Count - 1, 5));
             var aggregateDiscountValue = flexGrid.GetAggregate(Aggregate.Average, new CellRange(0, 8, flexGrid.Rows.Count - 1, 8));
-            
+
             gr[flexGrid.Columns["Price"]] = String.Format("Average Price: {0:C2}", aggregatePriceValue);
             gr[flexGrid.Columns["Discount"]] = String.Format("Average Discount : {0:F1}%", aggregateDiscountValue);
         }
@@ -134,7 +155,7 @@ namespace ShowCase
                     var discount = Double.Parse(row["Discount"].ToString());
                     if (discount > condition.X && discount < condition.Y)
                     {
-                        if (row.Background == null)
+                        if (item.IsChecked)
                             row.Background = new SolidColorBrush(Colors.LightSkyBlue);
                         else
                             row.Background = null;

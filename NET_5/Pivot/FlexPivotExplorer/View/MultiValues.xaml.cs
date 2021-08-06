@@ -1,4 +1,4 @@
-﻿using C1.FlexPivot;
+﻿using C1.PivotEngine;
 using System.Windows.Controls;
 
 namespace FlexPivotExplorer
@@ -29,7 +29,7 @@ namespace FlexPivotExplorer
                 pivotPage.DataSource = data;
 
                 // build an initial view
-                var fpEngine = pivotPage.FlexPivotEngine;
+                var fpEngine = pivotPage.C1PivotEngine;
                 fpEngine.BeginUpdate();
 
                 // build the view

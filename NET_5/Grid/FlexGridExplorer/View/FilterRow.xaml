@@ -6,17 +6,23 @@
       xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
       xmlns:res="clr-namespace:FlexGridExplorer.Resources"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300">
-
+      d:DesignHeight="400" d:DesignWidth="600">
+    <UserControl.Resources>
+        <c1:C1IconTemplate x:Key="funnelIcon">
+            <c1:C1SVGIcon Source="pack://application:,,,/Resources/filter.svg"/>
+        </c1:C1IconTemplate>
+    </UserControl.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <c1:FlexGrid x:Name="grid" IsReadOnly="True" HeadersVisibility="All" FrozenRows="1" Grid.Row="1">
+        <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="All" FrozenRows="1" Grid.Row="1" FrozenLinesBrush="Transparent" FilterIconTemplate="{StaticResource funnelIcon}" AllowFiltering="False">
             <c1:FlexGrid.Rows>
                 <c1:GridFilterRow Placeholder="{x:Static res:AppResources.FilterPlaceholderText}" AutoComplete="True"/>
             </c1:FlexGrid.Rows>
+            <c1:FlexGrid.Columns>
+                <c1:GridColumn Header="Store" Binding="Store.ID" AllowGrouping="True"/>
+                <c1:GridColumn Header="Model" Binding="Car.Model" Width="*"/>
+                <c1:GridColumn Header="Price" Binding="Car.Price"/>
+                <c1:GridColumn Header="Automatic transmission" Binding="Car.TransmissAutomatic" AllowGrouping="True"/>
+            </c1:FlexGrid.Columns>
         </c1:FlexGrid>
     </Grid>
 </UserControl>

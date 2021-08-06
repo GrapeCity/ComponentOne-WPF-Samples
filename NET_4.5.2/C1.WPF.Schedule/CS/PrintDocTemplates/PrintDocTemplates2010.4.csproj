@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="C1.WPF.C1Report.4.5.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -114,6 +111,7 @@
     <Reference Include="C1.WPF.DateTimeEditors.4.5.2" />
     <Reference Include="C1.WPF.Schedule.4.5.2" />
     <Reference Include="C1.WPF.4.5.2" />
+    <Reference Include="C1.WPF.PrintDocument.4.5.2" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

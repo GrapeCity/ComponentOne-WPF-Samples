@@ -15,6 +15,12 @@ namespace InputExplorer
                 new SampleItem(Properties.Resources.RangeSliderTitle,
                                 Properties.Resources.RangeSliderTitle,
                                 new RangeSlider()),
+                new SampleItem(Properties.Resources.MaskedDemoTitle,
+                                Properties.Resources.MaskedDemoTitle,
+                                new DemoMaskedTextBox()),
+                new SampleItem(Properties.Resources.TagEditorDemoTitle,
+                                Properties.Resources.TagEditorDemoTitle,
+                                new DemoTagEditor()),
             };
         }
 

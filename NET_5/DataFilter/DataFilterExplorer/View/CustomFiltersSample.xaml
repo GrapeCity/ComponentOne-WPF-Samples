@@ -94,7 +94,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="local:MapFilterPresenter">
-                        <ItemsPresenter Margin="5" VerticalAlignment="{Binding VerticalContentAlignment}" HorizontalAlignment="{Binding HorizontalContentAlignment}" />
+                        <ItemsPresenter Margin="5" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -104,7 +104,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="local:ModelFilterPresenter">
-                        <ItemsPresenter Margin="5" VerticalAlignment="{Binding VerticalContentAlignment}" HorizontalAlignment="{Binding HorizontalContentAlignment}" />
+                        <ItemsPresenter Margin="5" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -122,7 +122,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="local:TransmissionFilterPresenter">
-                        <ItemsPresenter Margin="5" VerticalAlignment="{Binding VerticalContentAlignment}" HorizontalAlignment="{Binding HorizontalContentAlignment}" />
+                        <ItemsPresenter Margin="5" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -140,7 +140,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="local:ColorFilterPresenter">
-                        <ItemsPresenter Margin="5" VerticalAlignment="{Binding VerticalContentAlignment}" HorizontalAlignment="{Binding HorizontalContentAlignment}" />
+                        <ItemsPresenter Margin="5" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>

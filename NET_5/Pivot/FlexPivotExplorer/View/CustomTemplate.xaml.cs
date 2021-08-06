@@ -26,7 +26,7 @@ namespace FlexPivotExplorer
                 pivotPage.ChartType = ChartType.Column;
                 pivotPage.ChartTotals = true;
                 // show sales by country and order date
-                var fpEngine = pivotPage.FlexPivotEngine;
+                var fpEngine = pivotPage.C1PivotEngine;
                 fpEngine.DataSource = Utils.PivotDataSet.Tables[0].DefaultView;
                 fpEngine.BeginUpdate();
                 fpEngine.RowFields.Add("Country");

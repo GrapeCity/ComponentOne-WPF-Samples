@@ -12,7 +12,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <c1:FlexGrid x:Name="grid" IsReadOnly="True" AllowMerging="All" HeadersVisibility="All" GridLinesVisibility="All" RowHeaderGridLinesVisibility="All" SelectionMode="Cell" />
+        <c1:FlexGrid x:Name="grid" IsReadOnly="True" AllowMerging="All" HeadersVisibility="All" GridLinesVisibility="All" RowHeaderGridLinesVisibility="All" SelectionMode="Cell" ColumnHeaderSelectedBackground="#FFF8F8F8" RowHeaderSelectedBackground="#FFF8F8F8" />
         <Grid Grid.Row="1" Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />

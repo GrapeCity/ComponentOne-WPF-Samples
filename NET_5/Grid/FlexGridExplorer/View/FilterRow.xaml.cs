@@ -1,4 +1,5 @@
 ﻿using FlexGridExplorer.Resources;
+using System.Linq;
 using System.Windows.Controls;
 
 namespace FlexGridExplorer
@@ -12,8 +13,9 @@ namespace FlexGridExplorer
         {
             InitializeComponent();
             Tag = AppResources.FilterRowDescription;
-            var data = Customer.GetCustomerList(100);
+            var data = DataProvider.GetCarsInStores().ToList();
             grid.ItemsSource = data;
+            grid.Columns["Store.ID"].DataMap = new C1.WPF.Grid.GridDataMap { ItemsSource = DataProvider.GetStores(), DisplayMemberPath = "City", SelectedValuePath = "ID" };
         }
     }
 }

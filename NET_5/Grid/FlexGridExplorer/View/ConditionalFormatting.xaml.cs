@@ -79,8 +79,7 @@ namespace FlexGridExplorer
             var label = cellContent as TextBlock;
             if (label != null)
             {
-                label.Foreground = null;
-                label.Background = null;
+                label.ClearValue(Label.ForegroundProperty);
             }
         }
     }

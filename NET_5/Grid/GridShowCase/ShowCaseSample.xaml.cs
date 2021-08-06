@@ -28,6 +28,26 @@ namespace GridShowCase
         {
             InitializeComponent();
             Tag = Properties.Resources.Tag;
+            flexGrid.Rows.CollectionChanged += FlexGridOnCollectionChanged;
+        }
+
+
+        private void FlexGridOnCollectionChanged(object sender, EventArgs e)
+        {
+            if (Condition1.IsChecked)
+            {
+                OnConditionalFormattingItemClick(sender, new SourcedEventArgs() {Source = Condition1 });
+            }
+
+            if (Condition2.IsChecked)
+            {
+                OnConditionalFormattingItemClick(sender, new SourcedEventArgs() { Source = Condition2 });
+            }
+
+            if (Condition3.IsChecked)
+            {
+                OnConditionalFormattingItemClick(sender, new SourcedEventArgs() { Source = Condition3 });
+            }
         }
 
         private void CsvExport_Click(object sender, RoutedEventArgs e)
@@ -73,7 +93,8 @@ namespace GridShowCase
 
         private void OnConditionalFormattingItemClick(object sender, SourcedEventArgs e)
         {
-            Point condition = (Point)(e.Source as C1MenuItem).CommandParameter;
+            C1MenuItem item = e.Source as C1MenuItem;
+            Point condition = (Point)(item).CommandParameter;
             foreach (var row in flexGrid.Rows)
             {
                 if (row.DataItem is Product product)
@@ -81,7 +102,7 @@ namespace GridShowCase
                     var discount = product.Discount;
                     if (discount > condition.X / 100 && discount < condition.Y / 100)
                     {
-                        if (row.Background == null)
+                        if (item.IsChecked)
                             row.Background = new SolidColorBrush(Colors.LightSkyBlue);
                         else
                             row.Background = null;
@@ -188,7 +209,11 @@ namespace GridShowCase
 
         private async void TrySetBitmapSource(C1BitmapIcon bitmapIcon, GridCellType cellType, GridRow row)
         {
-            CacheBitmapSourceGetterFunction();
+            try
+            {
+                CacheBitmapSourceGetterFunction();
+            }
+            catch { }
             if (_imageSourceGetter == null)
             {
                 bitmapIcon.Source = DefaultBitmapSource;
@@ -273,7 +298,6 @@ namespace GridShowCase
                 _imageSourceGetter = CreateBindingFunction(itemType, BitmapSourceBinding);
             }
         }
-
     }
 
     public class GridColorColumn : GridColumn

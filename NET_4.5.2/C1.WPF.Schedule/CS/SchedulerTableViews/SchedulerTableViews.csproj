@@ -160,5 +160,10 @@
   <ItemGroup>
     <Resource Include="Resources\C1-ball.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\C1NWind.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

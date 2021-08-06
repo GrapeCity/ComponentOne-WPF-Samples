@@ -21,8 +21,15 @@
     <None Remove="Images\Song.png" />
     <None Remove="Images\star.png" />
     <None Remove="Properties\Licenses.licx" />
+    <None Remove="Resources\cars.xml" />
     <None Remove="Resources\data.zip" />
+    <None Remove="Resources\filter.svg" />
     <None Remove="Resources\Roboto-Regular.ttf" />
+    <None Remove="Resources\sort-ascending.svg" />
+    <None Remove="Resources\sort2-ascending.svg" />
+    <None Remove="Resources\sort2-descending.svg" />
+    <None Remove="Resources\sort2.svg" />
+    <None Remove="Resources\Stores.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Album.png">
@@ -54,33 +61,52 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\cars.xml" />
     <EmbeddedResource Include="Resources\data.zip" />
-    <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20211.34" />
+    <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20212.57" />
+    <EmbeddedResource Include="Resources\Stores.txt" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DataFilter">
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid.Excel">
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Maps">
+      <Version>5.0.20212.100</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Menu">
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
+    <Resource Include="Resources\filter.svg" />
     <Resource Include="Resources\Roboto-Regular.ttf" />
+    <Resource Include="Resources\sort-ascending.svg" />
+    <Resource Include="Resources\sort2-descending.svg" />
+    <Resource Include="Resources\sort2-ascending.svg" />
+    <Resource Include="Resources\sort2.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">

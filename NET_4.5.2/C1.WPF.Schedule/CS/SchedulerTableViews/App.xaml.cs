@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Windows;
+using System.IO;
 
 namespace SchedulerTableViews
 {
@@ -14,8 +15,7 @@ namespace SchedulerTableViews
     {
         static App()
         {
-            AppDomain.CurrentDomain.SetData("DataDirectory", Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\ComponentOne Samples\Common");
-
+            AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(Directory.GetCurrentDirectory(), "DB"));
         }
     }
 }

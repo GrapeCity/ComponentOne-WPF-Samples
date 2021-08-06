@@ -10,6 +10,7 @@
             <ComboBox x:Name="ExpandDirectionComboBox"  SelectionChanged="OnExpandDirectionChanged" SelectedIndex="0"/>
             <TextBlock Text="ExpandIconAlignment" VerticalAlignment="Center" Margin="8 0 4 0"/>
             <ComboBox x:Name="ExpandIconAlignmentComboBox"  SelectionChanged="OnExpandIconAlignmentChanged" SelectedIndex="1"/>
+            <CheckBox IsChecked="{Binding IsEnabled,ElementName=ExpanderControl}" Content="IsEnabled" VerticalAlignment="Center" Margin="4 0"/>
         </StackPanel>
         <c1:C1Expander x:Name="ExpanderControl" Header="Expand me!" VerticalAlignment="Center" HorizontalAlignment="Center">
             <CheckBox Margin="5" VerticalAlignment="Center" x:Name="Condition" Content="Inside C1Expander"/>

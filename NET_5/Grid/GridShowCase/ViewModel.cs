@@ -50,7 +50,7 @@ namespace GridShowCase
             {
                 if (groupByCountry == null)
                 {
-                    groupByCountry = new RelayCommand(param => this.GroupBy(param, "Country"), param => true);
+                    groupByCountry = new RelayCommand(param => this.GroupBy(param, "Country.Name"), param => true);
                 }
                 return groupByCountry;
             }

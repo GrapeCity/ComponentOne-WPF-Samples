@@ -130,7 +130,7 @@
             <Setter Property="AlternatingRowBackground" Value="Transparent"/>
             <Setter Property="CursorBackground" Value="Transparent"/>
             <Setter Property="EditorBackground" Value="Transparent"/>
-            <Setter Property="TopLeftCellBackground" Value="#FFA9C4E9"/>
+            <Setter Property="TopLeftHeaderBackground" Value="#FFA9C4E9"/>
             <Setter Property="RowHeaderBackground" Value="#FFE4ECF7"/>
             <Setter Property="RowHeaderSelectedBackground" Value="#FFFFD58D"/>
             <Setter Property="GridLinesVisibility" Value="All"/>

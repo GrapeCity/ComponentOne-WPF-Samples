@@ -34,7 +34,7 @@ namespace FlexPivotExplorer
                     return;
                 isLoaded = true;
 
-                var fpEngine = flexPivotPage.FlexPivotEngine;
+                var fpEngine = flexPivotPage.C1PivotEngine;
 
                 firstLoad = true;
 
@@ -42,8 +42,8 @@ namespace FlexPivotExplorer
                 flexPivotPage.FlexPivotPanel.Workspace.Init(dataPath);
 
                 // show update log
-                flexPivotPage.FlexPivotEngine.StartUpdating += FlexPivotEngine_StartUpdating; ;
-                flexPivotPage.FlexPivotEngine.CancelUpdating += FlexPivotEngine_CancelUpdating;
+                flexPivotPage.C1PivotEngine.StartUpdating += FlexPivotEngine_StartUpdating; ;
+                flexPivotPage.C1PivotEngine.CancelUpdating += FlexPivotEngine_CancelUpdating;
                 flexPivotPage.Updated += _c1FlexPivotPage_Updated;
             };
         }
@@ -104,10 +104,10 @@ namespace FlexPivotExplorer
             EndAddingRows(count);
 
             // set data
-            flexPivotPage.FlexPivotPanel.FlexPivotEngine.BeginUpdate();
+            flexPivotPage.FlexPivotPanel.C1PivotEngine.BeginUpdate();
             flexPivotPage.DataSource = dt.DefaultView;
             OnSetData();
-            flexPivotPage.FlexPivotPanel.FlexPivotEngine.EndUpdate();
+            flexPivotPage.FlexPivotPanel.C1PivotEngine.EndUpdate();
         }
 
         private void DataEngineTable_Click(object sender, RoutedEventArgs e)
@@ -123,10 +123,10 @@ namespace FlexPivotExplorer
 
             // connect to DataEngine filled with data
             var fPanel = flexPivotPage.FlexPivotPanel;
-            fPanel.FlexPivotEngine.BeginUpdate();
+            fPanel.C1PivotEngine.BeginUpdate();
             fPanel.ConnectDataEngine(dt.TableName);
             OnSetData();
-            fPanel.FlexPivotEngine.EndUpdate();
+            fPanel.C1PivotEngine.EndUpdate();
         }
 
         // initialize or restore pivot view
@@ -134,7 +134,7 @@ namespace FlexPivotExplorer
         {
             if (firstLoad)
             {
-                var fpEngine = flexPivotPage.FlexPivotEngine;
+                var fpEngine = flexPivotPage.C1PivotEngine;
                 // set initial view
                 fpEngine.RowFields.Add("Country");
                 fpEngine.ColumnFields.Add("Category");
@@ -158,7 +158,7 @@ namespace FlexPivotExplorer
         {
             if (flexPivotPage.DataSource != null)
                 return flexPivotPage.DataSource.GetType().FullName;
-            else if (flexPivotPage.FlexPivotEngine.Fields.Count != 0)
+            else if (flexPivotPage.C1PivotEngine.Fields.Count != 0)
                 return "C1.DataEngine.Table";
             else
                 return null;
@@ -173,7 +173,7 @@ namespace FlexPivotExplorer
             stream = new MemoryStream();
             using (System.Xml.XmlWriter xw = System.Xml.XmlWriter.Create(stream))
             {
-                flexPivotPage.FlexPivotEngine.WriteXml(xw);
+                flexPivotPage.C1PivotEngine.WriteXml(xw);
                 xw.Flush();
                 stream.Position = 0;
             }

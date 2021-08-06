@@ -12,7 +12,7 @@ namespace FlexGridExplorer
     /// <summary>
     /// Simple data class generator.
     /// </summary>
-    /// <remarks>
+    /// <remarks></remarks>
     public class Customer : INotifyPropertyChanged, IEditableObject
     {
         #region ** fields

@@ -8,23 +8,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
+        <Style x:Key="cellStyle" TargetType="c1:GridCellView">
+            <Style.Setters>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                            <GradientStop Color="#FF292929" Offset="0"/>
+                            <GradientStop Color="#FF5D5D5D" Offset="0.567"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
         <local:ListViewCellFactoryStyle x:Key="listViewCellFactoryStyle">
             <local:ListViewCellFactoryStyle.LeftCellStyle>
-                <Style TargetType="c1:GridCellView">
+                <Style TargetType="c1:GridCellView" BasedOn="{StaticResource cellStyle}">
                     <Setter Property="BorderThickness" Value="1,1,0,1"/>
                     <Setter Property="CornerRadius" Value="10,0,0,10"/>
                     <Setter Property="Margin" Value="8,4,0,4"/>
                 </Style>
             </local:ListViewCellFactoryStyle.LeftCellStyle>
             <local:ListViewCellFactoryStyle.CenterCellStyle>
-                <Style TargetType="c1:GridCellView">
+                <Style TargetType="c1:GridCellView" BasedOn="{StaticResource cellStyle}">
                     <Setter Property="BorderThickness" Value="0,1,0,1"/>
                     <Setter Property="CornerRadius" Value="0,0,0,0"/>
                     <Setter Property="Margin" Value="0,4,0,4"/>
                 </Style>
             </local:ListViewCellFactoryStyle.CenterCellStyle>
             <local:ListViewCellFactoryStyle.RightCellStyle>
-                <Style TargetType="c1:GridCellView">
+                <Style TargetType="c1:GridCellView" BasedOn="{StaticResource cellStyle}">
                     <Setter Property="BorderThickness" Value="0,1,1,1"/>
                     <Setter Property="CornerRadius" Value="0,10,10,0"/>
                     <Setter Property="Margin" Value="0,4,8,4"/>
@@ -43,28 +55,29 @@
                      ColumnHeaderForeground="White" 
                      ColumnHeaderBackground="Black" 
                      ColumnHeaderGridLinesVisibility="None" 
-                     ColumnHeaderFontWeight="Bold" SelectionForeground="White">
+                     ColumnHeaderFontWeight="Bold" SelectionForeground="White" CellStyle="{StaticResource cellStyle}">
             <c1:FlexGrid.MouseOverBrush>
                 <SolidColorBrush Color="#FFFFFFFF" Opacity="0.15"/>
             </c1:FlexGrid.MouseOverBrush>
-            <c1:FlexGrid.RowBackground>
-                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
-                    <GradientStop Color="#FF292929" Offset="0"/>
-                    <GradientStop Color="#FF5D5D5D" Offset="0.567"/>
-                </LinearGradientBrush>
-            </c1:FlexGrid.RowBackground>
             <c1:FlexGrid.GridLinesBrush>
                 <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
                     <GradientStop Color="#FFA8A8A8" Offset="0"/>
                     <GradientStop Color="#FF252525" Offset="0.567"/>
                 </LinearGradientBrush>
             </c1:FlexGrid.GridLinesBrush>
-            <c1:FlexGrid.SelectionBackground>
-                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
-                    <GradientStop Color="#FF271200" Offset="0"/>
-                    <GradientStop Color="#FF7A3700" Offset="0.567"/>
-                </LinearGradientBrush>
-            </c1:FlexGrid.SelectionBackground>
+            <c1:FlexGrid.SelectionStyle>
+                <Style TargetType="c1:GridCellView">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                                <GradientStop Color="#FF271200" Offset="0"/>
+                                <GradientStop Color="#FF7A3700" Offset="0.567"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="FontStyle" Value="Italic"/>
+                </Style>
+            </c1:FlexGrid.SelectionStyle>
             <c1:FlexGrid.Columns>
                 <c1:GridColumn Binding="FirstName"/>
                 <c1:GridColumn Binding="LastName"/>

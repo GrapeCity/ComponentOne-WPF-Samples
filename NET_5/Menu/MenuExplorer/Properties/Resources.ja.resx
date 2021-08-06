@@ -138,19 +138,23 @@
     <comment>Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable.</comment>
   </data>
   <data name="DemoMenuTitle" xml:space="preserve">
-    <value>概要</value>
-    <comment>Overview</comment>
+    <value>C1Menu デモ</value>
+    <comment>Demo C1Menu</comment>
   </data>
-    <data name="DemoRadialMenuDesc" xml:space="preserve">
-    <value>Shows how to use C1RadialMenu</value>
+  <data name="DemoRadialMenuDesc" xml:space="preserve">
+    <value>C1RadialMenu の使用方法を示します</value>
+    <comment>Shows how to use C1RadialMenu</comment>
   </data>
-    <data name="DemoRadialMenuTitle" xml:space="preserve">
-    <value>Demo C1RadialMenu</value>
+  <data name="DemoRadialMenuTitle" xml:space="preserve">
+    <value>C1RadialMenu デモ</value>
+    <comment>Demo C1RadialMenu</comment>
   </data>
-    <data name="CustomRadialContextMenuDesc" xml:space="preserve">
-    <value>Shows how to use C1RadialMenu with C1RichTextBox</value>
+  <data name="CustomRadialContextMenuDesc" xml:space="preserve">
+    <value>C1RadialMenu を C1RichTextBox で使用する方法を示します。</value>
+    <comment>Shows how to use C1RadialMenu with C1RichTextBox</comment>
   </data>
-    <data name="CustomRadialContextMenuTitle" xml:space="preserve">
-    <value>Custom Context Menu</value>
+  <data name="CustomRadialContextMenuTitle" xml:space="preserve">
+    <value>カスタムコンテキストメニュー</value>
+    <comment>Custom Context Menu</comment>
   </data>
 </root>

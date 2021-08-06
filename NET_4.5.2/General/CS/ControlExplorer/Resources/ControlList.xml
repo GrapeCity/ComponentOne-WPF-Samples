@@ -142,7 +142,7 @@
       </Feature>
     </Control>
     <Control name="FlexGrid" isTop="true" isNew="true" assembly="C1.WPF.FlexGrid.4">
-      <Feature type="ShowCase.ShowCaseSample"  name="ShowCase"  assemblyName="ShowCase.exe" source="C1.WPF.FlexGrid\CS\ShowCase\ShowCase\ShowCaseSample.xaml" isNew="true">
+      <Feature type="ShowCase.ShowCaseSample"  name="ShowCase"  assemblyName="ShowCase.exe" source="C1.WPF.FlexGrid\CS\ShowCase\ShowCase\ShowCaseSample.xaml">
         <Description>
           The modern, high-performance FlexGrid control comes with flexible data binding and an easy-to-use API for maximum configuration and customization.
         </Description>
@@ -163,7 +163,7 @@
                type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml" >
             <Description>This demo shows how to use FullTextFilter to filter and highlight the data across all columns.</Description>
           </SubFeature>
-          <SubFeature name="Filter Row" assemblyName="FlexGridSamples.exe"
+          <SubFeature name="Filter Row" assemblyName="FlexGridSamples.exe" isNew="true"
                type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
                 <Description>Displays a row whose cells filter the corresponding column as text is typed.</Description>
           </SubFeature>
@@ -205,7 +205,8 @@
                assemblyName="FlexGridSamples.exe">
         <Description>The C1FlexGrid supports Excel-style editing. Just type values into cells and use the enter or arrow keys to move to the next one. Or press F2 and enter full-edit mode, where arrow keys navigate within the editor. Auto-complete and value-mapped columns are also built-in: simply create a ColumnValueConverter and assign it to the columns ValueConverter property and you're done. Transactioned edits are supported too. The Customer class used here implements IEditableObject, so you can undo changes by pressing the Escape key before you move to a new row. (Note: the gray columns are read-only).</Description>
       </Feature>
-	  <Feature name="Mouse Hover" type="MainTestApplication.MouseHover" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
+	  <Feature name="Mouse Hover" type="MainTestApplication.MouseHover" isNew="true"
+             source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
                assemblyName="FlexGridSamples.exe">
         <Description>Mouse Hover demonstration.</Description>
       </Feature>
@@ -1112,9 +1113,8 @@ The Accordion based filtering UI can be attached to any control or information s
         <Description>This sample shows how to use custom animation in C1Rating control.</Description>
       </Feature>
     </Control>
-    <Control name="RichTextBox" isNew="true"
-         assembly="C1.WPF.RichTextBox">
-      <Feature assemblyName="RichTextBoxSamples.4.exe" isNew="true"
+    <Control name="RichTextBox" assembly="C1.WPF.RichTextBox">
+      <Feature assemblyName="RichTextBoxSamples.4.exe" 
                type="RichTextBoxSamples.DemoRichTextBox" source="C1.WPF.RichTextBox\CS\RichTextBoxSamples\DemoRichTextBox.xaml" >
         <Description>Load, edit and save formatted text as HTML documents.&#10;
 Use the new SimplifiedRichTextBoxToolbar to get Office 365 look and feel.&#10;
@@ -1220,6 +1220,12 @@ Toggle the line numbers visibility in the View tab.
          assembly="C1.WPF.Word">
       <Feature assemblyName="WordCreator.4.exe" type="Word.Creator.Basic" source="C1.WPF.Word\CS\WordCreator\Basic.xaml">
         <Description>Easily create and save Microsoft Word documents from your apps. This shows the basic things you can do with a Word document.</Description>
+      </Feature>
+    </Control>
+    <Control name="PrintDocument" assembly="C1.WPF.PrintDocument" isNew="true">
+      <Feature assemblyName="DataBinding.exe" type="DataBinding.DataBoundDoc" source="C1.PrintDocument\CS\DataBinding\DataBoundDoc.xaml">
+        <Description>The C1PrintDocument component can be used to create rich documents containing tables, hyperlinks, input controls, images and more. You can easily add content to C1PrintDocument with its block, inline and direct rendering methods, and then print or export to PDF, Word, Excel and more. This demo shows the basics of data binding and scripting in C1PrintDocument.
+        </Description>
       </Feature>
     </Control>
   </Group>
@@ -1592,8 +1598,8 @@ Toggle the line numbers visibility in the View tab.
         </Properties>
       </Feature>
     </Control>
-    <Control name="Toolbar" isNew="true" assembly="C1.WPF.Toolbar">
-      <Feature  name="Simplified Ribbon" type="ToolbarSamples.SimplifiedRibbon" source="C1.WPF.Toolbar\CS\ToolbarSamples\SimplifiedRibbon.xaml"  isNew="true" assemblyName="ToolbarSamples.4.exe">
+    <Control name="Toolbar" assembly="C1.WPF.Toolbar">
+      <Feature  name="Simplified Ribbon" type="ToolbarSamples.SimplifiedRibbon" source="C1.WPF.Toolbar\CS\ToolbarSamples\SimplifiedRibbon.xaml" assemblyName="ToolbarSamples.4.exe">
         <Description>The simplified ribbon is a clean, compact hybrid of toolbar and ribbon design. Collapse the control for a compact, single line representation, or expand it to switch to a full ribbon appearance.</Description>
       </Feature>
       <Feature type="ToolbarSamples.Toolbar" source="C1.WPF.Toolbar\CS\ToolbarSamples\Toolbar.xaml" assemblyName="ToolbarSamples.4.exe">

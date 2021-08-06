@@ -1,4 +1,5 @@
-﻿using C1.WPF.Grid;
+﻿using C1.DataCollection;
+using C1.WPF.Grid;
 using FlexGridExplorer.Resources;
 using System;
 using System.Collections.ObjectModel;

@@ -6,7 +6,7 @@
       xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
       xmlns:e="http://schemas.microsoft.com/xaml/behaviors"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300">
+      d:DesignHeight="400" d:DesignWidth="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

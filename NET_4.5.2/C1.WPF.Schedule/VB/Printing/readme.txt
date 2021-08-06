@@ -90,3 +90,4 @@ Tags used in default templates:
 
 
 You can use the sample code as it is or edit it in any convenient way.	
+Please use C1.WPF.PrintDocument for printing support instead of retired C1.WPF.C1Report assembly. 

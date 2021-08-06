@@ -155,7 +155,7 @@ namespace GridShowCase
         //    }
         //}
     }
-    public class Country : IComparable
+    public class Country
     {
         public string Name { get; set; }
         public string Image { get; set; }
@@ -174,15 +174,6 @@ namespace GridShowCase
             return result;
         }
 
-        public int CompareTo(object obj)
-        {
-            if (obj != null && this.Name == ((Country)obj).Name)
-            {
-                return 1;
-            }
-            return -1;
-        }
-        
         public override string ToString()
         {
             return Name;

@@ -18,19 +18,42 @@ namespace DataFilterExplorer
             _transmissionFilterPresenter.SelectedChanged += (s, e) => OnValueChanged(new ValueChangedEventArgs() { ApplyFilter = true });
         }
 
-        protected override Expression GetExpression()
+        public override Expression Expression
         {
-            var tags = _transmissionFilterPresenter.GetSelectedValues();
-            var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
-            foreach (var tag in tags)
+            get
             {
-                expr.Expressions.Add(new OperationExpression() { Value = tag, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                var tags = _transmissionFilterPresenter.GetSelectedValues();
+                var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
+                foreach (var tag in tags)
+                {
+                    expr.Expressions.Add(new OperationExpression() { Value = tag, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                }
+                return expr;
             }
-            return expr;
+            set
+            {
+                var selectedValues = GetSelectedValues(value).ToList();
+                _transmissionFilterPresenter.SetSelectedValues(selectedValues);
+            }
         }
 
-        protected override void SetExpression(Expression expression)
+        private IEnumerable<string> GetSelectedValues(Expression expression)
         {
+            switch (expression)
+            {
+                case CombinationExpression combination when combination.FilterCombination == FilterCombination.Or:
+                    foreach (var e in combination.Expressions)
+                    {
+                        foreach (var v in GetSelectedValues(e))
+                        {
+                            yield return v;
+                        }
+                    }
+                    break;
+                case OperationExpression operation when operation.FilterOperation == FilterOperation.Equal:
+                    yield return operation.Value?.ToString();
+                    break;
+            }
         }
 
         public override bool IsApplied => _transmissionFilterPresenter.GetSelectedValues().Any();
@@ -38,6 +61,8 @@ namespace DataFilterExplorer
 
     public class TransmissionFilterPresenter : ItemsControl
     {
+        private bool _isInitializing = false;
+
         public TransmissionFilterPresenter()
         {
             foreach (RadioButton rb in Items)
@@ -57,9 +82,9 @@ namespace DataFilterExplorer
             {
                 Content = content,
                 GroupName = "G",
-                Margin= new System.Windows.Thickness(0, 0, 0, 5)
+                Margin = new System.Windows.Thickness(2)
             };
-            if(content == "All")
+            if (content == "All")
             {
                 rb.IsChecked = true;
             }
@@ -70,6 +95,7 @@ namespace DataFilterExplorer
         public event EventHandler SelectedChanged;
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            if (_isInitializing) return;
             SelectedChanged?.Invoke(this, e);
         }
 
@@ -77,18 +103,35 @@ namespace DataFilterExplorer
         {
             foreach (RadioButton rb in Items)
             {
-                if (rb.IsChecked == true)
+                if (rb.IsChecked ?? false)
                 {
-                    if(rb.Content.ToString() == "All")
+                    if (rb.Content.ToString() == "All")
                     {
-                        yield return "Yes";
-                        yield return "No";
+                        continue;
                     }
                     else
                     {
                         yield return rb.Content.ToString();
                     }
                 }
+            }
+        }
+
+        internal void SetSelectedValues(List<string> selectedValues)
+        {
+            try
+            {
+                _isInitializing = true;
+                if (selectedValues.Count == 0)
+                    selectedValues.Add("All");
+                foreach (var radioButton in Items.OfType<RadioButton>())
+                {
+                    radioButton.IsChecked = selectedValues?.Contains((string)radioButton.Content) ?? false;
+                }
+            }
+            finally
+            {
+                _isInitializing = false;
             }
         }
     }

@@ -50,9 +50,9 @@
                         </c1:C1DropDownTool.IconTemplate>
                         <c1:C1DropDownTool.Content>
                             <c1:C1MenuList BorderThickness="0" Orientation="Vertical" ItemClick="OnConditionalFormattingItemClick">
-                                <c1:C1MenuItem IsCheckable="True" Header="Discount &lt; 10%" CommandParameter="{StaticResource Condition1}"/>
-                                <c1:C1MenuItem IsCheckable="True" Header="Discount &lt; 20%" CommandParameter="{StaticResource Condition2}"/>
-                                <c1:C1MenuItem IsCheckable="True" Header="Discount &gt; 30%" CommandParameter="{StaticResource Condition3}"/>
+                                <c1:C1MenuItem Name="Condition1" IsCheckable="True" Header="Discount &lt; 10%" CommandParameter="{StaticResource Condition1}"/>
+                                <c1:C1MenuItem Name="Condition2" IsCheckable="True" Header="Discount &lt; 20%" CommandParameter="{StaticResource Condition2}"/>
+                                <c1:C1MenuItem Name="Condition3" IsCheckable="True" Header="Discount &gt; 30%" CommandParameter="{StaticResource Condition3}"/>
                             </c1:C1MenuList>
                         </c1:C1DropDownTool.Content>
                     </c1:C1DropDownTool>
@@ -134,8 +134,8 @@
                         </DataTemplate>
                     </c1:GridColumn.CellEditingTemplate>
                 </local:GridBitmapIconColumn>
-                <c1:GridColumn Binding="ProductName" ColumnName="Product Name" Header="Product" MinWidth="100" Width="*"/>
-                <local:GridBitmapIconColumn Binding="Country" Header="Country" Width="200" ColumnName="Country" BitmapSourceBinding="Country.Image" DefaultBitmapSource="/GridShowCase;component/Resources/Images/noflag.png" IconWidth="25">
+                <c1:GridColumn Binding="ProductName" ColumnName="Product Name" Header="Product" AllowGrouping="True" MinWidth="100" Width="*"/>
+                <local:GridBitmapIconColumn Binding="Country" Header="Country" SortMemberPath="Country.Name" GroupMemberPath="Country.Name" AllowGrouping="True" Width="200" ColumnName="Country" BitmapSourceBinding="Country.Image" DefaultBitmapSource="/GridShowCase;component/Resources/Images/noflag.png" IconWidth="25">
                     <c1:GridColumn.CellEditingTemplate>
                         <DataTemplate>
                             <ComboBox ItemsSource="{Binding Countries, Source={StaticResource viewmodel}}" SelectedValue="{Binding Country, Mode=TwoWay}">

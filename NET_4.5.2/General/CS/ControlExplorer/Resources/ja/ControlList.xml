@@ -109,7 +109,7 @@
 			</Feature>
 		</Control>
 		<Control name="FlexGrid" isTop="true" isNew="true" assembly="C1.WPF.FlexGrid.4">
-      <Feature type="ShowCase.ShowCaseSample" name="ShowCase" assemblyName="ShowCase.exe" source="C1.WPF.FlexGrid\CS\ShowCase\ShowCase\ShowCaseSample.xaml" isNew="true">
+      <Feature type="ShowCase.ShowCaseSample" name="ShowCase" assemblyName="ShowCase.exe" source="C1.WPF.FlexGrid\CS\ShowCase\ShowCase\ShowCaseSample.xaml" >
         <Description>
           The modern, high-performance FlexGrid control comes with flexible data binding and an easy-to-use API for maximum configuration and customization.
         </Description>
@@ -125,7 +125,7 @@
 					<SubFeature name="フルテキストフィルター" assemblyName="FlexGridSamples.exe" isNew="true" type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml" >
 						<Description>このデモでは、FullTextFilter を使用してすべての列にわたってデータをフィルター処理して強調表示する方法を示します。</Description>
 					</SubFeature>
-                    <SubFeature name="Filter Row" assemblyName="FlexGridSamples.exe" type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
+                    <SubFeature name="Filter Row" assemblyName="FlexGridSamples.exe" isNew="true" type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
                         <Description>Displays a row whose cells filter the corresponding column as text is typed.</Description>
                     </SubFeature>
 				</SubFeatures>
@@ -155,7 +155,7 @@
 			<Feature name="編集" type="MainTestApplication.Editing" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Editing\Editing.xaml" assemblyName="FlexGridSamples.exe">
 				<Description>C1FlexGrid は、Excel 形式の編集をサポートしています。セルに値を入力し、Enter キーまたは矢印キーを使用して次のセルに移動します。または、F2 キーを押してフルエディットモードにします。矢印キーはエディタ内をナビゲートします。オートコンプリートとバリューマッピングされたカラムも内蔵されています。ColumnValueConverter を作成して ValueConverter プロパティのカラムに割り当てるだけです。トランザクションによる編集もサポートされています。ここで使用する Customer クラスは IEditableObject を実装しているため、新しい行に移動する前に Esc キーを押して変更を元に戻すことができます（注：灰色の列は読み取り専用です）。</Description>
 			</Feature>
-			<Feature name="Mouse Hover" type="MainTestApplication.MouseHover" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
+			<Feature name="Mouse Hover" type="MainTestApplication.MouseHover" isNew="true" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
                assemblyName="FlexGridSamples.exe">
 				<Description>Mouse Hover demonstration.</Description>
 			</Feature>
@@ -883,8 +883,8 @@
 				<Description>このサンプルは、C1Rating コントロールでカスタムアニメーションを使用する方法を示しています。</Description>
 			</Feature>
 		</Control>
-		<Control name="RichTextBox" isNew="true" assembly="C1.WPF.RichTextBox">
-			<Feature assemblyName="RichTextBoxSamples.4.exe" isNew="true" type="RichTextBoxSamples.DemoRichTextBox" source="C1.WPF.RichTextBox\CS\RichTextBoxSamples\DemoRichTextBox.xaml" >
+		<Control name="RichTextBox" assembly="C1.WPF.RichTextBox">
+			<Feature assemblyName="RichTextBoxSamples.4.exe" type="RichTextBoxSamples.DemoRichTextBox" source="C1.WPF.RichTextBox\CS\RichTextBoxSamples\DemoRichTextBox.xaml" >
 				<Description>書式設定されたテキストを HTML ドキュメントとしてロード、編集、保存します。C1RichTextBox コントロールは、クリップボード、テキストの書式設定、配置、リスト、画像、ハイパーリンク、テーブルなどをサポートします。下書きまたは印刷ビューで文書を編集して表示します。</Description>
 				<Properties>
 					<Property name="Width" minimumValue="0" maximumValue="800" nullable="true" />
@@ -962,6 +962,13 @@
 				<Description>アプリケーションから Microsoft Word 文書を容易に作成および保存します。これは、Word 文書でできる基本的なことを示しています。</Description>
 			</Feature>
 		</Control>
+    <Control name="PrintDocument" assembly="C1.WPF.PrintDocument" isNew="true">
+      <Feature assemblyName="DataBinding.exe" type="DataBinding.DataBoundDoc" source="C1.PrintDocument\CS\DataBinding\DataBoundDoc.xaml">
+        <Description>
+          The C1PrintDocument component can be used to create rich documents containing tables, hyperlinks, input controls, images and more. You can easily add content to C1PrintDocument with its block, inline and direct rendering methods, and then print or export to PDF, Word, Excel and more. This demo shows the basics of data binding and scripting in C1PrintDocument.
+        </Description>
+      </Feature>
+    </Control>
 	</Group>
 	<Group name="ユーティリティ">
 		<Control name="BarCode" assembly="C1.WPF.BarCode">
@@ -1235,7 +1242,7 @@
 				</Properties>
 			</Feature>
 		</Control>
-		<Control name="Toolbar" isNew="true" assembly="C1.WPF.Toolbar">
+		<Control name="Toolbar" assembly="C1.WPF.Toolbar">
 			<Feature name="Simplified Ribbon" type="ToolbarSamples.SimplifiedRibbon" source="C1.WPF.Toolbar\CS\ToolbarSamples\SimplifiedRibbon.xaml" isNew="true" assemblyName="ToolbarSamples.4.exe">
 				<Description>Simplified Ribbon は、クリーンでコンパクトなツールバーとリボンのハイブリッドです。コントロールを折りたたんでコンパクトな単一行表示にしたり、展開して完全なリボンの外観に切り替えることができます。</Description>
 			</Feature>

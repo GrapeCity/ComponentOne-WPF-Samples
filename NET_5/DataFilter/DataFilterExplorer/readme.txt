@@ -23,3 +23,7 @@ Shows the following samples
 	+ MapFilter based on CustomFilter, allows to choose the store on map;
 	+ ModelFilter based on CustomFilter, allows to choose the model of the car;
 	+ PriceFilter based on ChecklistFilter, allows to choose the price range of cars.
+
+- ConditionalFiltersSample: This sample demonstrates how to use conditional filters that accept multiple conditions and a new full text filter.
+
+- VirtualSource : This sample demonstrates how C1DataFilter can be used with a virtualized source.

@@ -23,19 +23,22 @@ namespace DataFilterExplorer
             _modelFilterPresenter.SetTagList(itemSource);
         }
 
-        protected override Expression GetExpression()
-        {
-            var tags = _modelFilterPresenter.GetSelectedTagList();
-            var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
-            foreach (var tag in tags)
+        public override Expression Expression 
+        { 
+            get
             {
-                expr.Expressions.Add(new OperationExpression() { Value = tag, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                var tags = _modelFilterPresenter.GetSelectedTagList();
+                var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
+                foreach (var tag in tags)
+                {
+                    expr.Expressions.Add(new OperationExpression() { Value = tag, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                }
+                return expr;
             }
-            return expr;
-        }
+            set
+            {
 
-        protected override void SetExpression(Expression expression)
-        {
+            }
         }
 
         public override bool IsApplied => _modelFilterPresenter.GetSelectedTagList().Any();

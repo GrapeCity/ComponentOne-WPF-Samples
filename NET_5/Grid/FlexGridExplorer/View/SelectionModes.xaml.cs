@@ -45,6 +45,10 @@ namespace FlexGridExplorer
 
                 lblSelection.Text = (rowsSelected * colsSelected).ToString() + " " + AppResources.CellsSelectedText;
             }
+            else
+            {
+                lblSelection.Text = "";
+            }
         }
     }
 }

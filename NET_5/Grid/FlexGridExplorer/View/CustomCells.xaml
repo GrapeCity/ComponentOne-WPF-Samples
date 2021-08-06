@@ -27,7 +27,7 @@
                      AutoGenerateColumns="False" >
             <c1:FlexGrid.Columns>
                 <c1:GridColumn Binding="Name" Header="Title" AllowDragging="False" Width="300" />
-                <c1:GridColumn Binding="Duration" HorizontalAlignment="Right" />
+                <c1:GridColumn Binding="Duration" HorizontalAlignment="Right" AllowFiltering="False" />
                 <c1:GridColumn Binding="Size" HorizontalAlignment="Right" />
                 <c1:GridColumn Binding="Rating" HorizontalAlignment="Left" Width="200" Aggregate="Average" />
             </c1:FlexGrid.Columns>

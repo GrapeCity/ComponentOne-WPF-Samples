@@ -264,7 +264,7 @@ namespace Word.Creator
             // calculate cell height (max of all columns)
             foreach (string field in fields)
             {
-                var height = word.MeasureString(field, font, rcCell.Width).Height;
+                var height = C1WordDocument.MeasureString(field, font, rcCell.Width).Height;
                 rcCell.Height = Math.Max(rcCell.Height, height);
             }
             rcCell.Height += 6; // add 6 point margin
@@ -295,7 +295,7 @@ namespace Word.Creator
             foreach (string field in fields)
             {
                 string text = dr[field].ToString();
-                var height = word.MeasureString(text, font, rcCell.Width).Height;
+                var height = C1WordDocument.MeasureString(text, font, rcCell.Width).Height;
                 rcCell.Height = Math.Max(rcCell.Height, height);
             }
             rcCell = WordUtils.Inflate(rcCell, 4, 0); // add 4 point margin
@@ -486,9 +486,9 @@ namespace Word.Creator
 #if true
                 // connect the two with some dots (looks better than a dotted line)
                 string dots = ". ";
-                var wid = word.MeasureString(dots, bodyFont).Width;
-                var x1 = rc.X + word.MeasureString(header, bodyFont).Width + 8;
-                var x2 = rc.Right - word.MeasureString(page, bodyFont).Width - 8;
+                var wid = C1WordDocument.MeasureString(dots, bodyFont).Width;
+                var x1 = rc.X + C1WordDocument.MeasureString(header, bodyFont).Width + 8;
+                var x2 = rc.Right - C1WordDocument.MeasureString(page, bodyFont).Width - 8;
                 var x = rc.X;
                 for (rc.X = x1; rc.X < x2; rc.X += wid)
                 {

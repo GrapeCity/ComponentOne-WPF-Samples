@@ -67,9 +67,9 @@
                         </c1:C1ToolbarDropDown.Header>
                         <c1:C1ToolbarDropDown.Menu>
                             <ContextMenu>
-                                <MenuItem IsCheckable="True" Header="Discount &lt; 10%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition1}"></MenuItem>
-                                <MenuItem IsCheckable="True" Header="Discount &lt; 20%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition2}"></MenuItem>
-                                <MenuItem IsCheckable="True" Header="Discount &gt; 30%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition3}"></MenuItem>
+                                <MenuItem Name="Condition1" IsCheckable="True" Header="Discount &lt; 10%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition1}"></MenuItem>
+                                <MenuItem Name="Condition2" IsCheckable="True" Header="Discount &lt; 20%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition2}"></MenuItem>
+                                <MenuItem Name="Condition3" IsCheckable="True" Header="Discount &gt; 30%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition3}"></MenuItem>
                             </ContextMenu>
                         </c1:C1ToolbarDropDown.Menu>
                     </c1:C1ToolbarDropDown>

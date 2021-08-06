@@ -118,21 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CustomUIDescription" xml:space="preserve">
-    <value>You can change the calendar border, width, height, color, or more...</value>
+    <value>カレンダーの境界線、幅、高さ、色などを変更できます。</value>
+    <comment>You can change the calendar border, width, height, color, or more...</comment>
   </data>
   <data name="CustomUITitle" xml:space="preserve">
-    <value>Custom UI</value>
+    <value>カスタム UI</value>
+    <comment>Custom UI</comment>
   </data>
   <data name="AdvancedCustomUIDescription" xml:space="preserve">
-    <value>Besides common properties like border, width, height... you can custom the calendar user interface via Day of Week, Day in Month, and Icon templates.</value>
+    <value>境界線、幅、高さなどの一般的なプロパティに加えて、曜日、月の日、アイコンテンプレートを介してカレンダーのユーザーインターフェイスをカスタマイズできます。</value>
+    <comment>Besides common properties like border, width, height... you can custom the calendar user interface via Day of Week, Day in Month, and Icon templates.</comment>
   </data>
   <data name="AdvancedCustomUITitle" xml:space="preserve">
-    <value>Advanced Custom UI</value>
+    <value>高度なカスタム UI</value>
+    <comment>Advanced Custom UI</comment>
   </data>
   <data name="OverviewDescription" xml:space="preserve">
-    <value>The C1Calendar control displays a one-month calendar and allows users to select a date.</value>
+    <value>C1Calendar コントロールは、１か月のカレンダーを表示し、ユーザーが日付を選択できるようにします。</value>
+    <comment>The C1Calendar control displays a one-month calendar and allows users to select a date.</comment>
   </data>
   <data name="OverviewTitle" xml:space="preserve">
-    <value>Overview</value>
+    <value>概要</value>
+    <comment>Overview</comment>
   </data>
 </root>

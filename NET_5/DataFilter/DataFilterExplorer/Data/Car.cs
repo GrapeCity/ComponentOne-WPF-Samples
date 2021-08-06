@@ -6,6 +6,12 @@ namespace DataFilterExplorer
 {
     public class Car
     {
+        public Car()
+        {
+            Random gen = new Random();
+            int range = 25 * 365;
+            DateProductionLine = DateTime.Today.AddDays(-gen.Next(range));
+        }
         
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -13,6 +19,7 @@ namespace DataFilterExplorer
         public string Category { get; set; }
         public string TransmissSpeedCount { get; set; }
         public string TransmissAutomatic { get; set; }
+        public DateTime DateProductionLine { get; set; }
 
         [Browsable(false)]
         public int ID { get; set; }

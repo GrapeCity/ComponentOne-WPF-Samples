@@ -49,7 +49,7 @@
             <Setter Property="FontSize" Value="28"></Setter>
         </Style>
 
-        <Style x:Key="CalendarSelectionStyle" TargetType="Control" BasedOn="{StaticResource CalendarDaySlotBaseStyle}">
+        <Style x:Key="CalendarSelectionStyle" TargetType="Control" >
             <Setter Property="Background" Value="GreenYellow"></Setter>
             <Setter Property="Foreground" Value="DarkGreen"></Setter>
         </Style>

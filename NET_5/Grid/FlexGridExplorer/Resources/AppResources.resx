@@ -400,4 +400,34 @@
   <data name="ExportDescription" xml:space="preserve">
     <value>Exports the grid information to Html, Text or CSV.</value>
   </data>
+  <data name="ExcelExportDescription" xml:space="preserve">
+    <value>Showcases the export feature of FlexGrid</value>
+  </data>
+  <data name="ExcelExportTitle" xml:space="preserve">
+    <value>Excel Export</value>
+  </data>
+  <data name="CustomFiltersDescription" xml:space="preserve">
+    <value>Show how to customize the column filters</value>
+  </data>
+  <data name="CustomFiltersTitle" xml:space="preserve">
+    <value>Custom Filters</value>
+  </data>
+  <data name="ColumnOptionsDescription" xml:space="preserve">
+    <value>Customizes the options displayed in the menu displayed in the column header.</value>
+  </data>
+  <data name="ColumnOptionsTitle" xml:space="preserve">
+    <value>Column Options</value>
+  </data>
+  <data name="ActiveLabel" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="InactiveLabel" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="AdvancedFilteringTitle" xml:space="preserve">
+    <value>Advanced Filtering</value>
+  </data>
+  <data name="AdvancedFilteringDesc" xml:space="preserve">
+    <value>Shows how to use filter controls in advanced scenarios.</value>
+  </data>
 </root>

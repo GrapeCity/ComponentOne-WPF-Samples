@@ -6,8 +6,23 @@
       xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <c1:C1IconTemplate x:Key="SortAscendingIcon">
+            <c1:C1SVGIcon Source="pack://application:,,,/Resources/sort-ascending.svg"/>
+        </c1:C1IconTemplate>
+        <c1:C1IconTemplate x:Key="Sort2Icon">
+            <c1:C1SVGIcon Source="pack://application:,,,/Resources/sort2.svg"/>
+        </c1:C1IconTemplate>
+        <c1:C1IconTemplate x:Key="Sort2AscendingIcon">
+            <c1:C1SVGIcon Source="pack://application:,,,/Resources/sort2-ascending.svg"/>
+        </c1:C1IconTemplate>
+        <c1:C1IconTemplate x:Key="Sort2DescendingIcon">
+            <c1:C1SVGIcon Source="pack://application:,,,/Resources/sort2-descending.svg"/>
+        </c1:C1IconTemplate>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -20,6 +35,10 @@
             <TextBlock x:Name="lblIconTemplate" Text="Sort Icon Template" VerticalAlignment="Center"/>
             <ComboBox x:Name="sortIconTemplate" SelectionChanged="SortIconTemplateChanged" Margin="4 0"/>
         </StackPanel>
-        <c1:FlexGrid x:Name="grid" SortIconPosition="Left" Grid.Row="2"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="2">
+            <TextBlock x:Name="lblHeaderAlignment" Text="Header Alignment" VerticalAlignment="Center"/>
+            <ComboBox x:Name="headerAlignment" SelectionChanged="HeaderAlignmentChanged" Margin="4 0"/>
+        </StackPanel>
+        <c1:FlexGrid x:Name="grid" SortAscendingIconTemplate="{StaticResource SortAscendingIcon}" SortIconPosition="Left" Grid.Row="3"/>
     </Grid>
 </UserControl>

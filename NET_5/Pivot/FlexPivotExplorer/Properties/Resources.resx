@@ -183,4 +183,16 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
     <data name="TopNDemoTitle" xml:space="preserve">
     <value>Top N Filter</value>
   </data>
+  <data name="GroupRangesDesc" xml:space="preserve">
+    <value>Shows how to work with group ranges</value>
+  </data>
+    <data name="GroupRangesTitle" xml:space="preserve">
+    <value>Group Ranges</value>
+  </data>
+  <data name="ConditionalFormattingDesc" xml:space="preserve">
+    <value>Shows how to use apply conditional formatting to an FlexPivot control</value>
+  </data>
+    <data name="ConditionalFormattingTitle" xml:space="preserve">
+    <value>Conditional Formatting</value>
+  </data>
 </root>

@@ -129,13 +129,36 @@
     <value>車両リスト</value>
     <comment>Cars List</comment>
   </data>
+  <data name="ConditionalFiltersTag" xml:space="preserve">
+    <value>Demonstrate using new conditional filters that accept multiple conditions and a new full text filter.</value>
+  </data>
+  <data name="ConditionalFiltersTitle" xml:space="preserve">
+    <value>Conditional Filters</value>
+  </data>
   <data name="CustomFilterDescription" xml:space="preserve">
     <value>カスタムフィルター</value>
     <comment>Custom Filters</comment>
   </data>
+  <data name="CustomFilterDescription1" xml:space="preserve">
+    <value>Custom Filters</value>
+  </data>
   <data name="CustomFiltersTag" xml:space="preserve">
-    <value>C1DataFilterコントロールを使用してカスタムフィルターを表示する方法を示します。\r ウィンドウには C1TreeView と C1DataFilter があります。\r C1TreeView は、CustomContentPresenter を使用してデータを表示します。\r C1DataFilter は、次のカスタムフィルターを使用します。\r CustomFilter に基づく ColorFilter: 車の色を選択することを可能にします。\r CustomFilter に基づく MapFilter: マップ上のストアを選択できます。\r CustomFilter に基づくModelFilter: 車のモデルを選択することを可能にします。\r ChecklistFilter に基づくPriceFilter: 車の価格帯を選択できます。</value>
-    <comment>Demonstrates using C1DataFilter control to show custom filters.\r There is C1TreeView and C1DataFilter on the window.\r The C1TreeView uses CustomContentPresenter to shows data.\r The C1DataFilter uses three custom filters:\r ColorFilter based on CustomFilter, allows to choose the color of the car;\r MapFilter based on CustomFilter, allows to choose the store on map;\r ModelFilter based on CustomFilter, allows to choose the model of the car;\r PriceFilter based on ChecklistFilter, allows to choose the price range of cars.</comment>
+    <value>C1DataFilterコントロールを使用してカスタムフィルターを表示する方法を示します。
+ ウィンドウには C1TreeView と C1DataFilter があります。
+C1TreeView は、CustomContentPresenter を使用してデータを表示します。
+C1DataFilter は、次のカスタムフィルターを使用します。
+CustomFilter に基づく ColorFilter: 車の色を選択することを可能にします。
+CustomFilter に基づく MapFilter: マップ上のストアを選択できます。
+CustomFilter に基づくModelFilter: 車のモデルを選択することを可能にします。
+ChecklistFilter に基づくPriceFilter: 車の価格帯を選択できます。</value>
+    <comment>Demonstrates using C1DataFilter control to show custom filters.
+There is C1TreeView and C1DataFilter on the window.
+The C1TreeView uses CustomContentPresenter to shows data.
+The C1DataFilter uses three custom filters:
+ColorFilter based on CustomFilter, allows to choose the color of the car;
+MapFilter based on CustomFilter, allows to choose the store on map;
+ModelFilter based on CustomFilter, allows to choose the model of the car;
+PriceFilter based on ChecklistFilter, allows to choose the price range of cars.</comment>
   </data>
   <data name="CustomFilterTitle" xml:space="preserve">
     <value>カスタムフィルター</value>
@@ -146,8 +169,19 @@
     <comment>Filter Editor</comment>
   </data>
   <data name="FilterEditorTag" xml:space="preserve">
-    <value>このサンプルは、C1FilterEditor コントロールの基本的な機能を示します。\r FilterEditor コントロールは、ツリーの形式でフィルターを表します。ツリーノードは、論理条件「And」および「Or」、またはデータソースプロパティのフィルターにすることができます。\r C1FilterEditor.SetExpression メソッドは、事前定義されたフィルターをロードするために使用されます。\r GetExpressionメソッドを使用して、xmlシリアル化に使用できる現在のフィルター式を取得できます。\r このサンプルでは、FlexGrid.DataSource プロパティと FilterEditor.DataSource プロパティの両方が同じデータコレクションに設定されています。\r これにより、C1FilterEditor で選択された複数の条件に基づいて FlexGrid コンテンツをフィルタリングできます。</value>
-    <comment>This sample shows the basic features of C1FilterEditor. \r This sample demonstrates basic functionality of the C1FilterEditor control. \r The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions \"And\" and \"Or\" or a filter for a data source property. \r The C1FilterEditor.SetExpression method is used to load predefined filter. \r You can use the GetExpression method to get the current filter expression, which you can use for xml serialization. \r In this sample FlexGrid.DataSource property and FilterEditor.DataSource property are both set to the same data collection. \r That allows to filter FlexGrid content based on multiple conditions selected in the C1FilterEditor.</comment>
+    <value>このサンプルは、C1FilterEditor コントロールの基本的な機能を示します。
+FilterEditor コントロールは、ツリーの形式でフィルターを表します。ツリーノードは、論理条件「And」および「Or」、またはデータソースプロパティのフィルターにすることができます。
+C1FilterEditor.SetExpression メソッドは、事前定義されたフィルターをロードするために使用されます。
+GetExpressionメソッドを使用して、xmlシリアル化に使用できる現在のフィルター式を取得できます。
+このサンプルでは、FlexGrid.DataSource プロパティと FilterEditor.DataSource プロパティの両方が同じデータコレクションに設定されています。
+これにより、C1FilterEditor で選択された複数の条件に基づいて FlexGrid コンテンツをフィルタリングできます。</value>
+    <comment>This sample shows the basic features of C1FilterEditor.
+This sample demonstrates basic functionality of the C1FilterEditor control. 
+The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions "And" and "Or" or a filter for a data source property. 
+The C1FilterEditor.SetExpression method is used to load predefined filter. 
+You can use the GetExpression method to get the current filter expression, which you can use for xml serialization.
+In this sample FlexGrid.DataSource property and FilterEditor.DataSource property are both set to the same data collection. 
+That allows to filter FlexGrid content based on multiple conditions selected in the C1FilterEditor.</comment>
   </data>
   <data name="FilterEditorTitle" xml:space="preserve">
     <value>フィルターエディター</value>

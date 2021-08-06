@@ -28,7 +28,7 @@ namespace FlexPivotExplorer
                     return;
                 isLoaded = true;
 
-                var fpEngine = flexPivotPage.FlexPivotPanel.FlexPivotEngine;
+                var fpEngine = flexPivotPage.FlexPivotPanel.C1PivotEngine;
 
                 // prepare to build view 
                 string connectionString = @"Data Source=http://ssrs.componentone.com/OLAP/msmdpump.dll;Provider=msolap;Initial Catalog=AdventureWorksDW2012Multidimensional";

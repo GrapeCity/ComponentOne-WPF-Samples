@@ -28,7 +28,7 @@ namespace FlexPivotExplorer
                     return;
                 isLoaded = true;
 
-                var fpEngine = flexPivotPage.FlexPivotPanel.FlexPivotEngine;
+                var fpEngine = flexPivotPage.FlexPivotPanel.C1PivotEngine;
                 // apply update to view
                 fpEngine.BeginUpdate();
                 fpEngine.DataSource = Utils.PivotDataSet.Tables[0].DefaultView;

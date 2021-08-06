@@ -138,4 +138,10 @@
   <data name="RangeSliderTitle" xml:space="preserve">
     <value>範囲スライダー</value>
   </data>
+  <data name="MaskedDemoDes" xml:space="preserve">
+    <value>Shows how to use C1MaskedTextBox with different settings of Mask and TextMaskFormat.</value>
+  </data>
+    <data name="MaskedDemoTitle" xml:space="preserve">
+    <value>Masked TextBox</value>
+  </data>
 </root>

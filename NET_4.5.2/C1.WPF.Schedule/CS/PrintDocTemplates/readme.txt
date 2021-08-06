@@ -7,5 +7,6 @@ The sample creates C1PrintDocument templates for different C1Scheduler views and
 Later the saved templates can be used for printing and previewing.
 
 You can use the sample code as it is or edit it in any convenient way.
+Please use C1.WPF.PrintDocument for printing support instead of retired C1.WPF.C1Report assembly. 
 
 

@@ -44,7 +44,7 @@ namespace DataFilterExplorer
             pf.SetPriceIntervals(intervals);
 
             // Color filter
-            cf.SetColors(DataProvider.Colors.Select(x => new SolidColorBrush((Color)ColorConverter.ConvertFromString(x))));
+            cf.SetColors(DataProvider.Colors.Select(x => (Color)ColorConverter.ConvertFromString(x)).ToList());
 
         }
 

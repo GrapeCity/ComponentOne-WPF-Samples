@@ -18,30 +18,63 @@ namespace DataFilterExplorer
             _colorFilterPresenter.SelectedChanged += (s, e) => OnValueChanged(new ValueChangedEventArgs() { ApplyFilter = true });
         }
 
-        public void SetColors(IEnumerable<SolidColorBrush> colors) => _colorFilterPresenter.SetColors(colors);
+        public void SetColors(List<Color> colors) => _colorFilterPresenter.SetColors(colors);
 
-        protected override Expression GetExpression()
-        {
-            var colors = _colorFilterPresenter.GetSelectedColors();
-            var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
-            foreach (var color in colors)
+        public override Expression Expression 
+        { 
+            get
             {
-                expr.Expressions.Add(new OperationExpression() { Value = color.Color, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                var colors = _colorFilterPresenter.GetSelectedColors();
+                var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
+                foreach (var color in colors)
+                {
+                    expr.Expressions.Add(new OperationExpression() { Value = color.Color, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                }
+                return expr;
             }
-            return expr;
+            set
+            {
+                var selectedColors = GetColors(value).ToList();
+                _colorFilterPresenter.SetSelectedColors(selectedColors);
+            }
         }
 
-        protected override void SetExpression(Expression expression)
+        private IEnumerable<Color> GetColors(Expression expression)
         {
+            if (expression is OperationExpression operation)
+            {
+                if (operation.PropertyName != PropertyName) yield break;
+
+                var color = _colorFilterPresenter.Colors.FirstOrDefault(c => c == (Color)operation.Value);
+                if (color != default)
+                    yield return color;
+
+            }
+            else if (expression is CombinationExpression combination)
+            {
+                foreach (var e in combination.Expressions)
+                {
+                    foreach (var color in GetColors(e))
+                    {
+                        yield return color;
+                    }
+                }
+            }
+            yield break;
         }
+
 
         public override bool IsApplied => _colorFilterPresenter.GetSelectedColors().Any();
     }
 
     public class ColorFilterPresenter : ItemsControl
     {
-        public void SetColors(IEnumerable<SolidColorBrush> colors)
+        private bool _isInitializing = false;
+        public List<Color> Colors { get; set; }
+
+        public void SetColors(List<Color> colors)
         {
+            Colors = colors;
             foreach (CheckBox cb in Items)
             {
                 cb.Checked -= CB_CheckedChanged;
@@ -52,7 +85,7 @@ namespace DataFilterExplorer
             {
                 var cb = new CheckBox
                 {
-                    Background = color
+                    Background = new SolidColorBrush(color)
                 };
                 cb.Checked += CB_CheckedChanged;
                 cb.Unchecked += CB_CheckedChanged;
@@ -62,13 +95,33 @@ namespace DataFilterExplorer
 
         public event EventHandler SelectedChanged;
 
-        private void CB_CheckedChanged(object sender, EventArgs e) => SelectedChanged?.Invoke(this, e);
+        private void CB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (_isInitializing) return;
+            SelectedChanged?.Invoke(this, e);
+        }
 
         public IEnumerable<SolidColorBrush> GetSelectedColors()
         {
             foreach (CheckBox cb in Items)
-                if (cb.IsChecked == true)
+                if (cb.IsChecked ?? false)
                     yield return (SolidColorBrush)cb.Background;
+        }
+
+        internal void SetSelectedColors(List<Color> selectedColors)
+        {
+            try
+            {
+                _isInitializing = true;
+                foreach (CheckBox cb in Items)
+                {
+                    cb.IsChecked = cb.Background is SolidColorBrush solidColor && selectedColors.Contains(solidColor.Color);
+                }
+            }
+            finally
+            {
+                _isInitializing = false;
+            }
         }
     }
 }

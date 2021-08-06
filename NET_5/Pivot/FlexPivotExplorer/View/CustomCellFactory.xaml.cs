@@ -27,14 +27,14 @@ namespace FlexPivotExplorer
                 pivotPage.DataSource = Product.GetProducts(500);
 
                 // show product prices by color and line
-                var fpEngine = pivotPage.FlexPivotPanel.FlexPivotEngine;
+                var fpEngine = pivotPage.FlexPivotPanel.C1PivotEngine;
                 fpEngine.BeginUpdate();
                 fpEngine.RowFields.Add("Color");
                 fpEngine.ColumnFields.Add("Line");
                 var value = fpEngine.Fields["Price"];
                 fpEngine.ValueFields.Add(value);
                 value.Format = "n0";
-                value.Subtotal = C1.FlexPivot.Subtotal.Average;
+                value.Subtotal = C1.PivotEngine.Subtotal.Average;
                 fpEngine.EndUpdate();
 
                 // apply conditional formatting to grid cells

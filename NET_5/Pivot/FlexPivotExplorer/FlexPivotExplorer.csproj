@@ -32,10 +32,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataEngine">
-      <Version>5.0.20211.177</Version>
+      <Version>5.0.20212.219</Version>
     </PackageReference>
+    <PackageReference Include="C1.PivotEngine" Version="5.0.20212.219" />
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.Zip" Version="2.0.20202.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
@@ -101,5 +102,13 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\ConditionalFormatting.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="View\GroupRanges.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
   </ItemGroup>
 </Project>

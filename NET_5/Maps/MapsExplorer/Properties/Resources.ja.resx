@@ -118,51 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Demo" xml:space="preserve">
-    <value>Demo</value>
+    <value>ComponentOne Maps for WPF を使用して、画面と地理座標間のスムーズなズーム、パン、およびマッピングを取得します。</value>
+    <comment>Get smooth zooming, panning, and mapping between screen and geographical coordinates with ComponentOne Maps for WPF.</comment>
   </data>
   <data name="DemoTitle" xml:space="preserve">
-    <value>Demo</value>
+    <value>デモ</value>
+    <comment>Demo</comment>
   </data>
   <data name="Earthquakes" xml:space="preserve">
-    <value>Earthquakes</value>
+    <value>カスタムデータテンプレートを使用して地震データを視覚化するデータバインドされた C1VectorLayer を表示します。</value>
+    <comment>Shows a databound C1VectorLayer that visualizes earthquake data with a custom data template.</comment>
   </data>
   <data name="EarthquakesTitle" xml:space="preserve">
-    <value>Earthquakes</value>
+    <value>地震</value>
+    <comment>Earthquakes</comment>
   </data>
   <data name="Factories" xml:space="preserve">
-    <value>Factories</value>
+    <value>C1MapItemsLayer を使用してマップ上にアイテムを表示し、C1MapVirtualLayer を使用してアイテムの仮想化を提供します。</value>
+    <comment>Display items on the map using C1MapItemsLayer and provide item virtualization using C1MapVirtualLayer.</comment>
   </data>
   <data name="FactoriesTitle" xml:space="preserve">
-    <value>Factories</value>
+    <value>工場</value>
+    <comment>Factories</comment>
   </data>
   <data name="Flicker" xml:space="preserve">
-    <value>GeoRSS</value>
+    <value>C1Maps の C1VectorLayer にバインドされた GeoRSS フィードからロードされたデータ項目を表示します。</value>
+    <comment>Shows data items loaded from a GeoRSS feed bound to a C1VectorLayer in C1Maps.</comment>
   </data>
   <data name="FlickerTitle" xml:space="preserve">
     <value>GeoRSS</value>
+    <comment>GeoRSS</comment>
   </data>
   <data name="Grid" xml:space="preserve">
-    <value>Grid</value>
+    <value>正確な地理座標でベクトルの形状と線を描画する方法を示します。</value>
+    <comment>Shows how you can draw vector shapes and lines at exact geographic coordinates.</comment>
   </data>
   <data name="GridTitle" xml:space="preserve">
-    <value>Grid</value>
+    <value>グリッド</value>
+    <comment>Grid</comment>
   </data>
   <data name="MapChart" xml:space="preserve">
-    <value>KML</value>
+    <value>KML ファイルからベクターデータを読み込んで表示し、マップ上にシェイプをレンダリングしたり、ベクター図面で作成された完全なマップを提供したりします。</value>
+    <comment>Load and display vector data from KML files to render shapes on the map, or to provide a complete map created by vector drawings.</comment>
   </data>
   <data name="MapChartTitle" xml:space="preserve">
     <value>KML</value>
+    <comment>KML</comment>
   </data>
   <data name="MapShape" xml:space="preserve">
-    <value>ShapeFile</value>
+    <value>Shape ファイルからベクターデータを読み込んで表示し、マップ上にシェイプをレンダリングします。</value>
+    <comment>Load and display vector data from Shapefiles to render shapes on the map.</comment>
   </data>
   <data name="MapShapeTitle" xml:space="preserve">
-    <value>ShapeFile</value>
+    <value>Shape ファイル</value>
+    <comment>ShapeFile</comment>
   </data>
   <data name="Marks" xml:space="preserve">
-    <value>Marks</value>
+    <value>指定された座標でマップ上に C1VectorMarks を生成して表示します。</value>
+    <comment>Generate and display C1VectorMarks on the map at specified coordinates.</comment>
   </data>
   <data name="MarksTitle" xml:space="preserve">
-    <value>Marks</value>
+    <value>マーク</value>
+    <comment>Marks</comment>
   </data>
 </root>

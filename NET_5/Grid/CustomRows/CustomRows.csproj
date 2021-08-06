@@ -6,16 +6,16 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20211.57</Version>
+      <Version>5.0.20212.100</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

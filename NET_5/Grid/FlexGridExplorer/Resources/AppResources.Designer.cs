@@ -61,6 +61,33 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active.
+        /// </summary>
+        public static string ActiveLabel {
+            get {
+                return ResourceManager.GetString("ActiveLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to use filter controls in advanced scenarios..
+        /// </summary>
+        public static string AdvancedFilteringDesc {
+            get {
+                return ResourceManager.GetString("AdvancedFilteringDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced Filtering.
+        /// </summary>
+        public static string AdvancedFilteringTitle {
+            get {
+                return ResourceManager.GetString("AdvancedFilteringTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply.
         /// </summary>
         public static string Apply {
@@ -187,6 +214,24 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Customizes the options displayed in the menu displayed in the column header..
+        /// </summary>
+        public static string ColumnOptionsDescription {
+            get {
+                return ResourceManager.GetString("ColumnOptionsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Column Options.
+        /// </summary>
+        public static string ColumnOptionsTitle {
+            get {
+                return ResourceManager.GetString("ColumnOptionsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Uses a CellFactory to apply conditional formatting..
         /// </summary>
         public static string ConditionalFormattingDescription {
@@ -237,6 +282,24 @@ namespace FlexGridExplorer.Resources {
         public static string CustomCellsTitle {
             get {
                 return ResourceManager.GetString("CustomCellsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show how to customize the column filters.
+        /// </summary>
+        public static string CustomFiltersDescription {
+            get {
+                return ResourceManager.GetString("CustomFiltersDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Filters.
+        /// </summary>
+        public static string CustomFiltersTitle {
+            get {
+                return ResourceManager.GetString("CustomFiltersTitle", resourceCulture);
             }
         }
         
@@ -372,6 +435,24 @@ namespace FlexGridExplorer.Resources {
         public static string EmptyListText {
             get {
                 return ResourceManager.GetString("EmptyListText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Showcases the export feature of FlexGrid.
+        /// </summary>
+        public static string ExcelExportDescription {
+            get {
+                return ResourceManager.GetString("ExcelExportDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Export.
+        /// </summary>
+        public static string ExcelExportTitle {
+            get {
+                return ResourceManager.GetString("ExcelExportTitle", resourceCulture);
             }
         }
         
@@ -543,6 +624,15 @@ namespace FlexGridExplorer.Resources {
         public static string GroupingTitle {
             get {
                 return ResourceManager.GetString("GroupingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inactive.
+        /// </summary>
+        public static string InactiveLabel {
+            get {
+                return ResourceManager.GetString("InactiveLabel", resourceCulture);
             }
         }
         

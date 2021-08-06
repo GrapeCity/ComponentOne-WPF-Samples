@@ -496,10 +496,42 @@
     <value>保存</value>
     <comment>Save</comment>
   </data>
-    <data name="MouseHoverDescription" xml:space="preserve">
-    <value>Shows the effects of different settings of MouseOverMode</value>
+  <data name="MouseHoverDescription" xml:space="preserve">
+    <value>MouseOverMode のさまざまな設定の効果を示します。</value>
+    <comment>Shows the effects of different settings of MouseOverMode</comment>
   </data>
-    <data name="MouseHoverTitle" xml:space="preserve">
-    <value>Mouse Hover</value>
+  <data name="MouseHoverTitle" xml:space="preserve">
+    <value>マウスホバー</value>
+    <comment>Mouse Hover</comment>
+  </data>
+  <data name="ExcelExportDescription" xml:space="preserve">
+    <value>Showcases the export feature of FlexGrid</value>
+  </data>
+  <data name="ExcelExportTitle" xml:space="preserve">
+    <value>Excel Export</value>
+  </data>
+  <data name="CustomFiltersDescription" xml:space="preserve">
+    <value>Show how to customize the column filters</value>
+  </data>
+  <data name="CustomFiltersTitle" xml:space="preserve">
+    <value>Custom Filters</value>
+  </data>
+  <data name="ColumnOptionsDescription" xml:space="preserve">
+    <value>Customizes the options displayed in the menu displayed in the column header.</value>
+  </data>
+  <data name="ColumnOptionsTitle" xml:space="preserve">
+    <value>Column Options</value>
+  </data>
+  <data name="ActiveLabel" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="InactiveLabel" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="AdvancedFilteringTitle" xml:space="preserve">
+    <value>Advanced Filtering</value>
+  </data>
+  <data name="AdvancedFilteringDesc" xml:space="preserve">
+    <value>Shows how to use filter controls in advanced scenarios.</value>
   </data>
 </root>

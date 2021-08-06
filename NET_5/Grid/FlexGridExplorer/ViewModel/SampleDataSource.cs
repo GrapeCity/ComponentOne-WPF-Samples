@@ -48,6 +48,12 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.FilterRowTitle,
                 AppResources.FilterRowTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new FilterRow())));
+            _allItems.Add(new SampleItem(AppResources.CustomFiltersTitle,
+                AppResources.CustomFiltersTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new CustomFilters())));
+            _allItems.Add(new SampleItem(AppResources.AdvancedFilteringTitle,
+                AppResources.AdvancedFilteringTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new AdvancedFiltering())));
             _allItems.Add(new SampleItem(AppResources.ColumnLayoutTitle,
                 AppResources.ColumnLayoutTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new ColumnLayout())));
@@ -93,7 +99,13 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.ExportTitle,
                 AppResources.ExportTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new Export())));
+            _allItems.Add(new SampleItem(AppResources.ColumnOptionsTitle,
+                AppResources.ColumnOptionsTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new ColumnOptions())));
 
+            _allItems.Add(new SampleItem(AppResources.ExcelExportTitle,
+                AppResources.ExcelExportTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new ExcelExport())));
         }
 
         public ObservableCollection<SampleItem> AllItems

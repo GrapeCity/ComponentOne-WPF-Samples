@@ -45,6 +45,14 @@ namespace FlexPivotExplorer
             _allItems.Add(new SampleItem(Properties.Resources.TopNDemoTitle,
                 Properties.Resources.TopNDemoTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new TopNDemo())));
+            
+            _allItems.Add(new SampleItem(Properties.Resources.GroupRangesTitle,
+                Properties.Resources.GroupRangesTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new GroupRanges())));
+
+            _allItems.Add(new SampleItem(Properties.Resources.ConditionalFormattingTitle,
+                Properties.Resources.ConditionalFormattingTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new ConditionalFormatting())));
         }
 
         public ObservableCollection<SampleItem> AllItems

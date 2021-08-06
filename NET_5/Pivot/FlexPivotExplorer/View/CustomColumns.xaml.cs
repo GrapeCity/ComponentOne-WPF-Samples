@@ -25,7 +25,7 @@ namespace FlexPivotExplorer
                 isLoaded = true;
 
                 // show sales by country and category
-                var fpEngine = pivotPage.FlexPivotPanel.FlexPivotEngine;
+                var fpEngine = pivotPage.FlexPivotPanel.C1PivotEngine;
                 fpEngine.BeginUpdate();
                 //fpEngine.
                 fpEngine.Updated += fpEngine_Updated;
@@ -44,8 +44,8 @@ namespace FlexPivotExplorer
         void fpEngine_Updated(object sender, EventArgs e)
         {
             // add a new calculated column to the output table
-            var fpEngine = pivotPage.FlexPivotEngine;
-            var dt = fpEngine.FlexPivotTable;
+            var fpEngine = pivotPage.C1PivotEngine;
+            var dt = fpEngine.PivotTable;
             if (dt.Columns.Count >= 2)
             {
                 dt.Columns.Add("Diff", typeof(double),

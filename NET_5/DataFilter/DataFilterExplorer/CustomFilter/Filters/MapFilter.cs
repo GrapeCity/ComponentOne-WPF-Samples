@@ -29,37 +29,69 @@ namespace DataFilterExplorer
         {
             _mapFilterPresenter.SetStores(stores);
         }
-
-        protected override C1.WPF.DataFilter.Expression GetExpression()
-        {
-            var stores = _mapFilterPresenter.GetSelectedStores();
-            var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
-            foreach (var store in stores)
+        
+        public override C1.WPF.DataFilter.Expression Expression 
+        { 
+            get
             {
-                expr.Expressions.Add(new OperationExpression() { Value = store.ID, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                var stores = _mapFilterPresenter.GetSelectedStores();
+                var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
+                foreach (var store in stores)
+                {
+                    expr.Expressions.Add(new OperationExpression() { Value = store.ID, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                }
+                return expr;
             }
-            return expr;
+            set
+            {
+                var stores = GetStores(value).ToList();
+                _mapFilterPresenter.SetSelectedStores(stores);
+            }
         }
 
-        protected override void SetExpression(C1.WPF.DataFilter.Expression expression)
+        private IEnumerable<Store> GetStores(C1.WPF.DataFilter.Expression expression)
         {
-            
+            if (expression is OperationExpression operation)
+            {
+                if (operation.PropertyName != PropertyName) yield break;
+
+                var store = _mapFilterPresenter.Stores.FirstOrDefault(s => s.ID == (int)operation.Value);
+                if (store != null)
+                    yield return store;
+
+            }
+            else if (expression is CombinationExpression combination)
+            {
+                foreach (var e in combination.Expressions)
+                {
+                    foreach (var store in GetStores(e))
+                    {
+                        yield return store;
+                    }
+                }
+            }
+            yield break;
         }
 
         public override bool IsApplied => base.IsApplied && _mapFilterPresenter.GetSelectedStores().Any();
     }
 
-    public class MapFilterPresenter: ItemsControl
+    public class MapFilterPresenter : ItemsControl
     {
         private C1Maps _map;
         private VectorLayer _layer;
-        private List<Store> _stores;
+        private SolidColorBrush UnselectedBrush = new SolidColorBrush(Colors.LimeGreen);
+        private SolidColorBrush SelectedBrush = new SolidColorBrush(Colors.Gold);
+        public List<Store> Stores;
+        public List<Store> SelectedStores;
 
         public MapFilterPresenter()
         {
             _map = new C1Maps
             {
+                Background = new SolidColorBrush(Colors.LightGray),
                 Height = 200,
+                Width = 300,
                 Zoom = 2,
                 Center = new Point(-83, 39),
                 ShowTools = false,
@@ -81,14 +113,14 @@ namespace DataFilterExplorer
 
         public IEnumerable<Store> GetSelectedStores()
         {
-            return _stores.Where(s => _layer.Children.Any(x => ((SolidColorBrush)x.Fill).Color == new SolidColorBrush(Colors.Gold).Color && x.Tag == s.City));
+            return Stores.Where(s => _layer.Children.Any(x => x.Fill == SelectedBrush && x.Tag == s.City));
         }
 
-        public event EventHandler SelectedChanged;  
+        public event EventHandler SelectedChanged;
 
         public void SetStores(IEnumerable<Store> shops)
         {
-            _stores = shops.ToList();
+            Stores = shops.ToList();
             foreach (var shop in shops)
             {
                 var mark = new VectorPlacemark
@@ -102,7 +134,8 @@ namespace DataFilterExplorer
                     },
                     LabelPosition = LabelPosition.Top,
                     Geometry = CreateBaloon(),
-                    Fill = new SolidColorBrush(Colors.LimeGreen), Opacity = 0.7
+                    Fill = UnselectedBrush,
+                    Opacity = 0.7
                 };
                 mark.MouseLeftButtonDown += Mark_MouseLeftButtonDown;
                 _layer.Children.Add(mark);
@@ -112,18 +145,17 @@ namespace DataFilterExplorer
         private void Mark_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var pm = (VectorPlacemark)sender;
-            if(pm == null)
+            if (pm == null)
             {
                 return;
             }
-            var limeGreen = new SolidColorBrush(Colors.LimeGreen);
-            if (((SolidColorBrush)pm.Fill).Color == limeGreen.Color)
+            if (pm.Fill == UnselectedBrush)
             {
-                pm.Fill = new SolidColorBrush(Colors.Gold);
+                pm.Fill = SelectedBrush;
             }
             else
             {
-                pm.Fill = limeGreen;
+                pm.Fill = UnselectedBrush;
             }
             SelectedChanged?.Invoke(this, e);
         }
@@ -140,6 +172,15 @@ namespace DataFilterExplorer
             pf.Segments.Add(new ArcSegment() { SweepDirection = SweepDirection.Counterclockwise, Point = new Point(10, 24.14), RotationAngle = 45, Size = new Size(10, 10) });
             pg.Figures.Add(pf);
             return pg;
+        }
+
+        internal void SetSelectedStores(List<Store> selectedStores)
+        {
+            foreach (var placemark in _layer.Children.OfType<VectorPlacemark>())
+            {
+                var isSelected = selectedStores?.FirstOrDefault(s => s.City == placemark.Tag) != null;
+                placemark.Fill = isSelected ? SelectedBrush : UnselectedBrush;
+            }
         }
     }
 }

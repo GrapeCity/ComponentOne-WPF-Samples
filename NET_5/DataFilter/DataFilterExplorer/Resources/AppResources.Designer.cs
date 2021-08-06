@@ -88,6 +88,42 @@ namespace DataFilterExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Conditional Filters.
+        /// </summary>
+        internal static string ConditionalFiltersDescription {
+            get {
+                return ResourceManager.GetString("ConditionalFiltersDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demonstrate using new conditional filters that accept multiple conditions and a new full text filter..
+        /// </summary>
+        internal static string ConditionalFiltersTag {
+            get {
+                return ResourceManager.GetString("ConditionalFiltersTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conditional Filters.
+        /// </summary>
+        internal static string ConditionalFiltersTitle {
+            get {
+                return ResourceManager.GetString("ConditionalFiltersTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creating {0:N0} records....
+        /// </summary>
+        internal static string CreatingRecordsMessage {
+            get {
+                return ResourceManager.GetString("CreatingRecordsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Custom Filters.
         /// </summary>
         internal static string CustomFilterDescription {
@@ -97,7 +133,14 @@ namespace DataFilterExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Demonstrates using C1DataFilter control to show custom filters.\r There is C1TreeView and C1DataFilter on the window.\r The C1TreeView uses CustomContentPresenter to shows data.\r The C1DataFilter uses three custom filters:\r ColorFilter based on CustomFilter, allows to choose the color of the car;\r MapFilter based on CustomFilter, allows to choose the store on map;\r ModelFilter based on CustomFilter, allows to choose the model of the car;\r PriceFilter based on ChecklistFilter, allows to choose the price [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Demonstrates using C1DataFilter control to show custom filters.
+        ///There is C1TreeView and C1DataFilter on the window.
+        ///The C1TreeView uses CustomContentPresenter to shows data.
+        ///The C1DataFilter uses three custom filters:
+        ///ColorFilter based on CustomFilter, allows to choose the color of the car;
+        ///MapFilter based on CustomFilter, allows to choose the store on map;
+        ///ModelFilter based on CustomFilter, allows to choose the model of the car;
+        ///PriceFilter based on ChecklistFilter, allows to choose the price range  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string CustomFiltersTag {
             get {
@@ -124,7 +167,12 @@ namespace DataFilterExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This sample shows the basic features of C1FilterEditor. \r This sample demonstrates basic functionality of the C1FilterEditor control. \r The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions \&quot;And\&quot; and \&quot;Or\&quot; or a filter for a data source property. \r The C1FilterEditor.SetExpression method is used to load predefined filter. \r You can use the GetExpression method to get the current filter expression, which you can use for xml serialization. \r In this sam [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to This sample shows the basic features of C1FilterEditor.
+        ///This sample demonstrates basic functionality of the C1FilterEditor control. 
+        ///The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions &quot;And&quot; and &quot;Or&quot; or a filter for a data source property. 
+        ///The C1FilterEditor.SetExpression method is used to load predefined filter. 
+        ///You can use the GetExpression method to get the current filter expression, which you can use for xml serialization.
+        ///In this sample FlexGri [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string FilterEditorTag {
             get {
@@ -165,6 +213,33 @@ namespace DataFilterExplorer.Resources {
         internal static string FilterSummaryTitle {
             get {
                 return ResourceManager.GetString("FilterSummaryTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading records....
+        /// </summary>
+        internal static string LoadingMessage {
+            get {
+                return ResourceManager.GetString("LoadingMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This sample demonstrate how C1DataFilter can be used with a virtualized source..
+        /// </summary>
+        internal static string VirtualSourceDescription {
+            get {
+                return ResourceManager.GetString("VirtualSourceDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Source.
+        /// </summary>
+        internal static string VirtualSourceTitle {
+            get {
+                return ResourceManager.GetString("VirtualSourceTitle", resourceCulture);
             }
         }
     }

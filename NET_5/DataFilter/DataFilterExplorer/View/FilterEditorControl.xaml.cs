@@ -2,7 +2,9 @@
 using C1.WPF.DataFilter;
 using DataFilterExplorer.Resources;
 using System;
+using System.Globalization;
 using System.IO;
+using System.Threading;
 using System.Windows.Controls;
 using System.Xml.Serialization;
 

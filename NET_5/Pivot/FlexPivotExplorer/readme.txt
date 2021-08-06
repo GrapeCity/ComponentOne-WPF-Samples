@@ -29,3 +29,17 @@ The FlexPivotPanel is located on the right side of the FlexPivotPage.
 The FlexPivotChart has been removed from the TabPanel at the top of the page and is shown below the FlexPivotGrid
 
 - DataEngine: This sample shows how to get data to C1 DataEngine to perform analytics. C1DataEngine is capable of handling large amount of data, millions of rows in seconds or less. Data is retrieved from a database.
+
+- GroupRanges: This sample shows how to use ranges to group data.
+
+- Conditional Formatting: Shows how to apply conditional formatting to an FlexPivotGrid control. The PivotField class has three properties that determine how the field
+is displayed in a FlexPivotGrid:
+    + Style: Specifies the default background, foreground, and font weight
+    properties for the field. This property is useful mainly when the view
+    contains multiple value fields.
+    + StyleHigh: Specifies the background, foreground, and font weight properties 
+    for cells that contain "high" values. The style also specifies the criteria
+    for selecting high values (absolute or percentile).
+    + StyleLow: Specifies the background, foreground, and font weight properties 
+    for cells that contain "low" values. The style also specifies the criteria
+    for selecting low values (absolute or percentile).

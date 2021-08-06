@@ -126,11 +126,30 @@
   <data name="CarListTitle" xml:space="preserve">
     <value>Cars List</value>
   </data>
+  <data name="ConditionalFiltersDescription" xml:space="preserve">
+    <value>Conditional Filters</value>
+  </data>
+  <data name="ConditionalFiltersTag" xml:space="preserve">
+    <value>Demonstrate using new conditional filters that accept multiple conditions and a new full text filter.</value>
+  </data>
+  <data name="ConditionalFiltersTitle" xml:space="preserve">
+    <value>Conditional Filters</value>
+  </data>
+  <data name="CreatingRecordsMessage" xml:space="preserve">
+    <value>Creating {0:N0} records...</value>
+  </data>
   <data name="CustomFilterDescription" xml:space="preserve">
     <value>Custom Filters</value>
   </data>
   <data name="CustomFiltersTag" xml:space="preserve">
-    <value>Demonstrates using C1DataFilter control to show custom filters.\r There is C1TreeView and C1DataFilter on the window.\r The C1TreeView uses CustomContentPresenter to shows data.\r The C1DataFilter uses three custom filters:\r ColorFilter based on CustomFilter, allows to choose the color of the car;\r MapFilter based on CustomFilter, allows to choose the store on map;\r ModelFilter based on CustomFilter, allows to choose the model of the car;\r PriceFilter based on ChecklistFilter, allows to choose the price range of cars.</value>
+    <value>Demonstrates using C1DataFilter control to show custom filters.
+There is C1TreeView and C1DataFilter on the window.
+The C1TreeView uses CustomContentPresenter to shows data.
+The C1DataFilter uses three custom filters:
+ColorFilter based on CustomFilter, allows to choose the color of the car;
+MapFilter based on CustomFilter, allows to choose the store on map;
+ModelFilter based on CustomFilter, allows to choose the model of the car;
+PriceFilter based on ChecklistFilter, allows to choose the price range of cars.</value>
   </data>
   <data name="CustomFilterTitle" xml:space="preserve">
     <value>Custom Filters</value>
@@ -139,7 +158,13 @@
     <value>Filter Editor</value>
   </data>
   <data name="FilterEditorTag" xml:space="preserve">
-    <value>This sample shows the basic features of C1FilterEditor. \r This sample demonstrates basic functionality of the C1FilterEditor control. \r The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions \"And\" and \"Or\" or a filter for a data source property. \r The C1FilterEditor.SetExpression method is used to load predefined filter. \r You can use the GetExpression method to get the current filter expression, which you can use for xml serialization. \r In this sample FlexGrid.DataSource property and FilterEditor.DataSource property are both set to the same data collection. \r That allows to filter FlexGrid content based on multiple conditions selected in the C1FilterEditor.</value>
+    <value>This sample shows the basic features of C1FilterEditor.
+This sample demonstrates basic functionality of the C1FilterEditor control. 
+The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions "And" and "Or" or a filter for a data source property. 
+The C1FilterEditor.SetExpression method is used to load predefined filter. 
+You can use the GetExpression method to get the current filter expression, which you can use for xml serialization.
+In this sample FlexGrid.DataSource property and FilterEditor.DataSource property are both set to the same data collection. 
+That allows to filter FlexGrid content based on multiple conditions selected in the C1FilterEditor.</value>
   </data>
   <data name="FilterEditorTitle" xml:space="preserve">
     <value>Filter Editor</value>
@@ -152,5 +177,14 @@
   </data>
   <data name="FilterSummaryTitle" xml:space="preserve">
     <value>Filter Summary</value>
+  </data>
+  <data name="LoadingMessage" xml:space="preserve">
+    <value>Loading records...</value>
+  </data>
+  <data name="VirtualSourceDescription" xml:space="preserve">
+    <value>This sample demonstrate how C1DataFilter can be used with a virtualized source.</value>
+  </data>
+  <data name="VirtualSourceTitle" xml:space="preserve">
+    <value>Virtual Source</value>
   </data>
 </root>
