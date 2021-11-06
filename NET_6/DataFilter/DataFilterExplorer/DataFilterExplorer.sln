@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFilterExplorer", "DataFilterExplorer.csproj", "{1244B09F-C5B2-4A07-AD90-6C3007F69586}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GRAPECITY|Any CPU = GRAPECITY|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.GRAPECITY|Any CPU.ActiveCfg = Release|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.GRAPECITY|Any CPU.Build.0 = Release|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1244B09F-C5B2-4A07-AD90-6C3007F69586}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B553289-B050-4EF3-A7B3-423B579F88F3}
+	EndGlobalSection
+EndGlobal

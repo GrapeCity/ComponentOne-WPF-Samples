@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DateTimeEditors">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

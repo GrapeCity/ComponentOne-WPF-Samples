@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Analytics" xml:space="preserve">
+    <value>分析機能</value>
+  </data>
+  <data name="ArmsCandleTag" xml:space="preserve">
+    <value>Richard Arms によって作成されたアームズローソクボリュームチャートは、エクイボリュームチャートとローソクボリュームチャートを組み合わせたチャートです。</value>
+  </data>
+  <data name="ArmsCandleVolume" xml:space="preserve">
+    <value>アームズローソクボリューム</value>
+  </data>
+  <data name="CandleVolume" xml:space="preserve">
+    <value>ローソクボリューム</value>
+  </data>
+  <data name="CandleVolumeTag" xml:space="preserve">
+    <value>ローソクボリュームチャートは、各棒の幅が 5 番目の値「出来高」によって決定されること以外は、標準的なローソク足チャートと同じです。</value>
+  </data>
+  <data name="ChartTypesTitle" xml:space="preserve">
+    <value>チャートタイプ</value>
+  </data>
+  <data name="ColumnVolume" xml:space="preserve">
+    <value>カラムボリューム</value>
+  </data>
+  <data name="ColumnVolumeTag" xml:space="preserve">
+    <value>カラムボリュームチャートは、縦棒グラフに似ていますが、2 番目の値「出来高」を受け取る点が異なり、この出来高によって各棒の幅が決まります。</value>
+  </data>
+  <data name="EquiVolume" xml:space="preserve">
+    <value>エクイボリューム</value>
+  </data>
+  <data name="EquiVolumeTag" xml:space="preserve">
+    <value>エクイボリュームチャートは、ローソク足チャートに似ていますが、エクイボリュームでは高値と安値だけが示されます。また、各棒の幅は、5 番目の値「出来高」によって決まります。</value>
+  </data>
+  <data name="EventAnnotations" xml:space="preserve">
+    <value>イベント注釈</value>
+  </data>
+  <data name="EventAnnotationsTag" xml:space="preserve">
+    <value>イベント注釈は、重要なイベントをマークするために、FinancialChart上の特定のデータポイントにアタッチして使用されます。イベント注釈上にマウスポインタを置くとイベントの詳細が表示されます。</value>
+  </data>
+  <data name="FibonacciTool" xml:space="preserve">
+    <value>フィボナッチツール</value>
+  </data>
+  <data name="FibonacciToolTag" xml:space="preserve">
+    <value>フィボナッチツールは、株価チャートのトレンド分析に使用されます。範囲セレクタを使用すると、計算対象のデータ範囲を選択できます。</value>
+  </data>
+  <data name="FinancialChartDescription" xml:space="preserve">
+    <value>新しい WPFFinancialChart のショーケースです。</value>
+  </data>
+  <data name="FinancialChartTitle" xml:space="preserve">
+    <value>FinancialChart エクスプローラー</value>
+  </data>
+  <data name="HeikinAshiTag" xml:space="preserve">
+    <value>平均足チャートは日本のローソク足チャートのバリエーションで、ローソク足チャートからノイズを取り除き、移動平均によく似た動作をするように設計されています。このチャートを使用すると、トレンド、潜在的反転ポイントなどのテクニカル分析パターンを見極めることができます。</value>
+  </data>
+  <data name="HeikinAshiTitle" xml:space="preserve">
+    <value>平均足</value>
+  </data>
+  <data name="Indicators" xml:space="preserve">
+    <value>インジケーター</value>
+  </data>
+  <data name="IndicatorsTag" xml:space="preserve">
+    <value>テクニカルインジケータは、元のデータセットに 1 つ以上の数式を適用して計算することにより派生したデータのセットです。テクニカルインジケータは、一般に資産の市場の方向を予測するために使用され、通常は元のデータと Y 軸のスケールが異なるため、別にプロットされます。</value>
+  </data>
+  <data name="Interaction" xml:space="preserve">
+    <value>ユーザー操作機能</value>
+  </data>
+  <data name="Kagi" xml:space="preserve">
+    <value>カギ足</value>
+  </data>
+  <data name="KagiTag" xml:space="preserve">
+    <value>カギ足チャートは、一連の垂直線を連結して、需要と供給のトレンドを示します。線の太さと方向は、株価の動きによって決まります。終値が直前の終値と同じ方向に進む場合は、そのカギ足ラインが延長されます。しかし、終値があらかじめ設定した反転幅以上に反転した場合は、次の列に、新しいカギ足ラインが反対方向に引かれます。細い線は、価格が直前の底値を下回ったこと（売り）を、太い線は、価格が直前の高値を上回ったこと（買い）を示します。</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>新値足</value>
+  </data>
+  <data name="LineBreakTag" xml:space="preserve">
+    <value>新値足チャートまたは新値三本足チャートは、垂直のボックスまたはラインを使用して、資産や市場の価格変動を示します。値動きは、ボックスの色とスタイルで表されます。直前のボックスのトレンドが続く値動きは同じ色で表され、反対方向のトレンドを示す値動きは異なる色／スタイルで示されます。反対方向のトレンドは、値が直前 n 個のボックスまたはラインの最大／最小値を超えた場合にのみ描画されます。この個数は、newLineBreaks オプションで決定されます。</value>
+  </data>
+  <data name="Markers" xml:space="preserve">
+    <value>マーカー</value>
+  </data>
+  <data name="MarkersTag" xml:space="preserve">
+    <value>マーカーは、チャート上のマウスカーソルの位置に基づいてデータ値を表示するテキスト領域を FinancialChart 上に表示します。垂直線と水平線のオプションがあり、十字線を表示することもできます。</value>
+  </data>
+  <data name="MovingAverage" xml:space="preserve">
+    <value>移動平均</value>
+  </data>
+  <data name="MovingAveragesTag" xml:space="preserve">
+    <value>移動平均傾向線は、元のデータセットから一連の平均値を求めることでデータを分析するために使用されます。</value>
+  </data>
+  <data name="Overlays" xml:space="preserve">
+    <value>オーバーレイ</value>
+  </data>
+  <data name="OverlaysTag" xml:space="preserve">
+    <value>テクニカルインジケータと同様にオーバーレイも、元のデータセットに1つ以上の数式を適用して計算することにより派生したデータのセットです。オーバーレイは、一般に資産の市場の方向を予測するために使用され、通常は元のデータセットとY軸のスケールが同じであるため、一緒にプロットされます。</value>
+  </data>
+  <data name="PointFigure" xml:space="preserve">
+    <value>ポイント＆フィギュア</value>
+  </data>
+  <data name="PointFigureTag" xml:space="preserve">
+    <value>ポイント＆フィギュアチャートは、フィルタリングされた価格の動きを表す×と〇の列で構成されています。 X-Columns は価格の上昇を表し、O-Columns は価格の下落を表します。</value>
+  </data>
+  <data name="RangeSelector" xml:space="preserve">
+    <value>範囲セレクタ</value>
+  </data>
+  <data name="RangeSelectorTag" xml:space="preserve">
+    <value>範囲セレクタを使用すると、エンドユーザーが実行時に FinancialChart のデータの表示範囲を調整できます。 範囲セレクタの一般的なユースケースとカスタムスタイルの適用方法を紹介します。</value>
+  </data>
+  <data name="Renko" xml:space="preserve">
+    <value>練行足</value>
+  </data>
+  <data name="RenkoTag" xml:space="preserve">
+    <value>練行足チャートは、一様なサイズのブロックを使用して株価の動きをグラフ化します。価格が、新しいブロックの描画に必要なあらかじめ設定されたboxSize オプションより大きい値または小さい値に変化すると、次の列に新しいブロックが描画されます。ボックスの色と方向の変化は、トレンドの反転を示します。</value>
+  </data>
+  <data name="TrendLines" xml:space="preserve">
+    <value>傾向線</value>
+  </data>
+  <data name="TrendLinesTag" xml:space="preserve">
+    <value>傾向線は、データの傾向を視覚化し、予測の問題点を分析するために使用されます。</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FinancialChartエクスプローラー</value>
+  </data>
+</root>

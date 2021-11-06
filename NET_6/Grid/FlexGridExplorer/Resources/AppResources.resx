@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+    <comment>apply edits for this item</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>cancel edits for this item</comment>
+  </data>
+  <data name="Collapse" xml:space="preserve">
+    <value>Collapse</value>
+  </data>
+  <data name="ColumnDefinitionDescription" xml:space="preserve">
+    <value>Shows how to specify and format columns.</value>
+  </data>
+  <data name="ColumnDefinitionTitle" xml:space="preserve">
+    <value>Column Definitions</value>
+  </data>
+  <data name="CustomCellsDescription" xml:space="preserve">
+    <value>Customizes a cell by displaying a library of about 10,000 songs grouped by artist and album.</value>
+  </data>
+  <data name="CustomCellsTitle" xml:space="preserve">
+    <value>Custom Cells</value>
+  </data>
+  <data name="EditCustomer" xml:space="preserve">
+    <value>Edit Customer</value>
+  </data>
+  <data name="EditingDescription" xml:space="preserve">
+    <value>Edit cells by input form rather than inline.</value>
+  </data>
+  <data name="EditingTitle" xml:space="preserve">
+    <value>Editing Form</value>
+  </data>
+  <data name="EditRow" xml:space="preserve">
+    <value>Edit Row</value>
+    <comment>edit a single row</comment>
+  </data>
+  <data name="EmptyListText" xml:space="preserve">
+    <value>There are no videos to show.</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FilterDescription" xml:space="preserve">
+    <value>Filters the data by columns through a generated form.</value>
+  </data>
+  <data name="FilterPlaceholderText" xml:space="preserve">
+    <value>Enter text to filter</value>
+  </data>
+  <data name="FilterTitle" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FullTextFilterDescription" xml:space="preserve">
+    <value>Filters and highlights the data across all columns.</value>
+  </data>
+  <data name="FullTextFilterTitle" xml:space="preserve">
+    <value>Full Text Filter</value>
+  </data>
+  <data name="GettingStartedDescription" xml:space="preserve">
+    <value>Display, edit and aggregate your data all at once with FlexGrid.</value>
+  </data>
+  <data name="GettingStartedTitle" xml:space="preserve">
+    <value>Getting Started</value>
+  </data>
+  <data name="GroupingDescription" xml:space="preserve">
+    <value>Groups and aggregates a collection of data.</value>
+  </data>
+  <data name="GroupingTitle" xml:space="preserve">
+    <value>Grouping</value>
+  </data>
+  <data name="OnDemandDescription" xml:space="preserve">
+    <value>Load items on demand as the user scrolls down the grid.</value>
+  </data>
+  <data name="OnDemandTitle" xml:space="preserve">
+    <value>On Demand</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+    <comment>remove filter</comment>
+  </data>
+  <data name="SearchPlaceholderText" xml:space="preserve">
+    <value>Enter text to search videos on YouTube</value>
+  </data>
+  <data name="SelectionModesDescription" xml:space="preserve">
+    <value>Shows the various cell selection modes.</value>
+  </data>
+  <data name="SelectionModesTitle" xml:space="preserve">
+    <value>Selection Modes</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="ConditionalFormattingDescription" xml:space="preserve">
+    <value>Uses a CellFactory to apply conditional formatting.</value>
+  </data>
+  <data name="ConditionalFormattingTitle" xml:space="preserve">
+    <value>Conditional Formatting</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SelectRowMessage" xml:space="preserve">
+    <value>Please select a row first or double-tap the row directly.</value>
+  </data>
+  <data name="CellFreezingDescription" xml:space="preserve">
+    <value>Shows frozen columns, rows and cell merging.</value>
+  </data>
+  <data name="CellFreezingTitle" xml:space="preserve">
+    <value>Cell Freezing &amp; Merging</value>
+  </data>
+  <data name="StarSizingDescription" xml:space="preserve">
+    <value>Shows a responsive column layout that uses star sizing.</value>
+  </data>
+  <data name="StarSizingTitle" xml:space="preserve">
+    <value>Star Sizing</value>
+  </data>
+  <data name="EditConfirmationDescription" xml:space="preserve">
+    <value>Shows how to prompt the user with a confirmation dialog before committing changes to a cell.</value>
+  </data>
+  <data name="EditConfirmationTitle" xml:space="preserve">
+    <value>Edit Confirmation</value>
+  </data>
+  <data name="EditConfirmationQuestion" xml:space="preserve">
+    <value>Do you want to commit the edit?</value>
+  </data>
+  <data name="EditConfirmationQuestionTitle" xml:space="preserve">
+    <value>Confirm Edit</value>
+  </data>
+  <data name="ColumnLayoutDescription" xml:space="preserve">
+    <value>Shows a custom column manager to modify column layout.</value>
+  </data>
+  <data name="ColumnLayoutTitle" xml:space="preserve">
+    <value>Column Layout</value>
+  </data>
+  <data name="EditColumnLayout" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="SaveColumnLayout" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="StarSizingInstructions" xml:space="preserve">
+    <value>Rotate the device to see star-sizing in action.</value>
+  </data>
+  <data name="RowDetailsDescription" xml:space="preserve">
+    <value>Expand and collapse row details.</value>
+  </data>
+  <data name="RowDetailsTitle" xml:space="preserve">
+    <value>Row Details</value>
+  </data>
+  <data name="CustomMergingDescription" xml:space="preserve">
+    <value>Shows a grid with custom cell merging.</value>
+  </data>
+  <data name="CustomMergingTitle" xml:space="preserve">
+    <value>Custom Merging</value>
+  </data>
+  <data name="UnboundDescription" xml:space="preserve">
+    <value>Add empty rows and columns to create an unbound grid.</value>
+  </data>
+  <data name="UnboundTitle" xml:space="preserve">
+    <value>Unbound</value>
+  </data>
+  <data name="CellsSelectedText" xml:space="preserve">
+    <value>cell(s) selected</value>
+  </data>
+  <data name="CustomAppearanceDescription" xml:space="preserve">
+    <value>Shows a grid with a custom style.</value>
+  </data>
+  <data name="CustomAppearanceTitle" xml:space="preserve">
+    <value>Custom Appearance</value>
+  </data>
+  <data name="DetailsVisibiltyMode" xml:space="preserve">
+    <value>DetailsVisibiltyMode</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="Weekday" xml:space="preserve">
+    <value>Weekday</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>Weekend</value>
+  </data>
+  <data name="ShowMarquee" xml:space="preserve">
+    <value>ShowMarquee</value>
+  </data>
+  <data name="NewRowDescription" xml:space="preserve">
+    <value>Shows adding new rows.</value>
+  </data>
+  <data name="NewRowTitle" xml:space="preserve">
+    <value>New Row</value>
+  </data>
+  <data name="NewRowPlaceholder" xml:space="preserve">
+    <value>Click here to add a new row</value>
+  </data>
+  <data name="MatchCaseLabel" xml:space="preserve">
+    <value>Match Case</value>
+  </data>
+  <data name="MatchWholeWordLabel" xml:space="preserve">
+    <value>Match Whole Word</value>
+  </data>
+  <data name="CheckListDescription" xml:space="preserve">
+    <value>Show how to select flexgrid rows through checkboxes.</value>
+  </data>
+  <data name="CheckListTitle" xml:space="preserve">
+    <value>Check-List</value>
+  </data>
+  <data name="FinancialDescription" xml:space="preserve">
+    <value>Shows a financial application with real time data updates, flashing cells, and sparklines.</value>
+  </data>
+  <data name="FinancialTitle" xml:space="preserve">
+    <value>Financial</value>
+  </data>
+  <data name="GroupingPanelDescription" xml:space="preserve">
+    <value>Create groups by dragging column headers into the grouping areas.</value>
+  </data>
+  <data name="GroupingPanelTitle" xml:space="preserve">
+    <value>Grouping Panel</value>
+  </data>
+  <data name="CollectionViewDescription" xml:space="preserve">
+    <value>Supports C1CollectionView to provide live sorting, filtering and grouping.</value>
+  </data>
+  <data name="CollectionViewName" xml:space="preserve">
+    <value>CollectionView</value>
+  </data>
+  <data name="CustomSortIconDescription" xml:space="preserve">
+    <value>Show how to customize the sorting icon in header columns.</value>
+  </data>
+  <data name="CustomSortIconTitle" xml:space="preserve">
+    <value>Custom Sort Icon</value>
+  </data>
+  <data name="LiveUpdatesDescription" xml:space="preserve">
+    <value>Shows how to animates changes in the grid.</value>
+  </data>
+  <data name="LiveUpdatesTitle" xml:space="preserve">
+    <value>Live updates</value>
+  </data>
+  <data name="PagingDescription" xml:space="preserve">
+    <value>Shows how to paginate data by using VirtualModeDataCollection with FlexGrid</value>
+  </data>
+  <data name="PagingTitle" xml:space="preserve">
+    <value>Paging</value>
+  </data>
+  <data name="FilterRowDescription" xml:space="preserve">
+    <value>Displays a row whose cells filter the corresponding column as text is typed.</value>
+  </data>
+  <data name="FilterRowTitle" xml:space="preserve">
+    <value>Filter Row</value>
+  </data>
+  <data name="SortIconPosition" xml:space="preserve">
+    <value>Sort Icon Position</value>
+  </data>
+  <data name="SortIconTemplate" xml:space="preserve">
+    <value>Sort Icon Template</value>
+  </data>
+  <data name="MouseHoverDescription" xml:space="preserve">
+    <value>Shows the effects of different settings of MouseOverMode</value>
+  </data>
+  <data name="MouseHoverTitle" xml:space="preserve">
+    <value>Mouse Hover</value>
+  </data>
+  <data name="ExportTitle" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportDescription" xml:space="preserve">
+    <value>Exports the grid information to Html, Text or CSV.</value>
+  </data>
+  <data name="ExcelExportDescription" xml:space="preserve">
+    <value>Showcases the export feature of FlexGrid</value>
+  </data>
+  <data name="ExcelExportTitle" xml:space="preserve">
+    <value>Excel Export</value>
+  </data>
+  <data name="CustomFiltersDescription" xml:space="preserve">
+    <value>Show how to customize the column filters</value>
+  </data>
+  <data name="CustomFiltersTitle" xml:space="preserve">
+    <value>Custom Filters</value>
+  </data>
+  <data name="ColumnOptionsDescription" xml:space="preserve">
+    <value>Customizes the options displayed in the menu displayed in the column header.</value>
+  </data>
+  <data name="ColumnOptionsTitle" xml:space="preserve">
+    <value>Column Options</value>
+  </data>
+  <data name="ActiveLabel" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="InactiveLabel" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="AdvancedFilteringTitle" xml:space="preserve">
+    <value>Advanced Filtering</value>
+  </data>
+  <data name="AdvancedFilteringDesc" xml:space="preserve">
+    <value>Shows how to use filter controls in advanced scenarios.</value>
+  </data>
+  <data name="ShowSort" xml:space="preserve">
+    <value>Show sort icons</value>
+  </data>
+  <data name="HeaderAlignment" xml:space="preserve">
+    <value>Header Alignment</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexGridExplorer</value>
+  </data>
+</root>

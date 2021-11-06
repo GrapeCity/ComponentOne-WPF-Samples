@@ -1,0 +1,133 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>TreeViewExplorer.App</StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <Company>GrapeCity, Inc.</Company>
+    <Authors>GrapeCity, Inc.</Authors>
+    <Platforms>AnyCPU;x86</Platforms>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".gclicx" />
+    <None Remove="Resources\1f4c4-Document.48.png" />
+    <None Remove="Resources\assistant.png" />
+    <None Remove="Resources\Computer.png" />
+    <None Remove="Resources\ControlPanel.png" />
+    <None Remove="Resources\departments.xml" />
+    <None Remove="Resources\Desktop.png" />
+    <None Remove="Resources\DVDDrive.png" />
+    <None Remove="Resources\e104-Edit.48.png" />
+    <None Remove="Resources\e107-Delete.48.png" />
+    <None Remove="Resources\e109-Add.48.png" />
+    <None Remove="Resources\e10a-Cancel.48.png" />
+    <None Remove="Resources\e10d-Redo.48.png" />
+    <None Remove="Resources\e10e-Undo.48.png" />
+    <None Remove="Resources\e112-Back.48.png" />
+    <None Remove="Resources\e115-Settings.48.png" />
+    <None Remove="Resources\e132-File.48.png" />
+    <None Remove="Resources\e16b-Scissors.48.png" />
+    <None Remove="Resources\e16d-Documents.48.png" />
+    <None Remove="Resources\e16f-Documents.48.png" />
+    <None Remove="Resources\e188-Folder.48.png" />
+    <None Remove="Resources\e1da-Folder.48.png" />
+    <None Remove="Resources\employeesDepartment.xml" />
+    <None Remove="Resources\Folder.png" />
+    <None Remove="Resources\girl1.png" />
+    <None Remove="Resources\girl2.png" />
+    <None Remove="Resources\group.png" />
+    <None Remove="Resources\guy1.png" />
+    <None Remove="Resources\guy2.png" />
+    <None Remove="Resources\guy3.png" />
+    <None Remove="Resources\LocalDisk.png" />
+    <None Remove="Resources\manager.png" />
+    <None Remove="Resources\Network.png" />
+    <None Remove="Resources\PublicDownloads.png" />
+    <None Remove="Resources\PublicMusic.png" />
+    <None Remove="Resources\PublicPictures.png" />
+    <None Remove="Resources\PublicVideos.png" />
+    <None Remove="Resources\RecycleBin.png" />
+    <None Remove="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
+    <EmbeddedResource Include="Resources\departments.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\employeesDepartment.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TreeView">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\1f4c4-Document.48.png" />
+    <Resource Include="Resources\assistant.png" />
+    <Resource Include="Resources\Computer.png" />
+    <Resource Include="Resources\ControlPanel.png" />
+    <Resource Include="Resources\Desktop.png" />
+    <Resource Include="Resources\DVDDrive.png" />
+    <Resource Include="Resources\e104-Edit.48.png" />
+    <Resource Include="Resources\e107-Delete.48.png" />
+    <Resource Include="Resources\e109-Add.48.png" />
+    <Resource Include="Resources\e10a-Cancel.48.png" />
+    <Resource Include="Resources\e10d-Redo.48.png" />
+    <Resource Include="Resources\e10e-Undo.48.png" />
+    <Resource Include="Resources\e112-Back.48.png" />
+    <Resource Include="Resources\e115-Settings.48.png" />
+    <Resource Include="Resources\e132-File.48.png" />
+    <Resource Include="Resources\e16b-Scissors.48.png" />
+    <Resource Include="Resources\e16d-Documents.48.png" />
+    <Resource Include="Resources\e16f-Documents.48.png" />
+    <Resource Include="Resources\e188-Folder.48.png" />
+    <Resource Include="Resources\e1da-Folder.48.png" />
+    <Resource Include="Resources\Folder.png" />
+    <Resource Include="Resources\girl1.png" />
+    <Resource Include="Resources\girl2.png" />
+    <Resource Include="Resources\group.png" />
+    <Resource Include="Resources\guy1.png" />
+    <Resource Include="Resources\guy2.png" />
+    <Resource Include="Resources\guy3.png" />
+    <Resource Include="Resources\LocalDisk.png" />
+    <Resource Include="Resources\manager.png" />
+    <Resource Include="Resources\Network.png" />
+    <Resource Include="Resources\PublicDownloads.png" />
+    <Resource Include="Resources\PublicMusic.png" />
+    <Resource Include="Resources\PublicPictures.png" />
+    <Resource Include="Resources\PublicVideos.png" />
+    <Resource Include="Resources\RecycleBin.png" />
+    <Resource Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.ja.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\LoadOnDemand.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+</Project>

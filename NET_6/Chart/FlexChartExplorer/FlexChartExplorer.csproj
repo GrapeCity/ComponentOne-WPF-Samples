@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ApplicationIcon>c1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Chart">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DX">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.RichTextBox">
+      <Version>6.0.20213.140-beta</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

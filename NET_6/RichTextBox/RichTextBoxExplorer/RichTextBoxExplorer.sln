@@ -1,0 +1,32 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RichTextBoxExplorer", "RichTextBoxExplorer.csproj", "{D276C1C8-A498-470A-9FE3-991F39570966}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GRAPECITY|Any CPU = GRAPECITY|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D276C1C8-A498-470A-9FE3-991F39570966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.GRAPECITY|Any CPU.ActiveCfg = Release|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.GRAPECITY|Any CPU.Build.0 = Release|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D276C1C8-A498-470A-9FE3-991F39570966}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04B15190-3F91-4A5D-AB57-824BB3AA8BF4}
+	EndGlobalSection
+EndGlobal

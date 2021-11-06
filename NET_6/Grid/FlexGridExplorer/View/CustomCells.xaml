@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="FlexGridExplorer.CustomCells"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Background="White">
+        <!-- show songs in a FlexGrid -->
+        <c1:FlexGrid x:Name="_flexiTunes" Grid.Row="2"
+                     IsReadOnly="False"
+                     HeadersVisibility="Column"
+                     GridLinesVisibility="None"
+                     Background="White"
+                     RowBackground="White"
+                     AlternatingRowBackground="White"
+                     GroupRowBackground="White"
+                     MinColumnWidth="30"
+                     DefaultRowHeight="24"
+                     DefaultGroupRowHeight="24"
+                     DefaultColumnHeaderRowHeight="24"
+                     CellPadding="4"
+                     SelectionBackground="#a0eaeff4"
+                     CursorBackground="#ffeaeff4"
+                     AutoGenerateColumns="False" >
+            <c1:FlexGrid.Columns>
+                <c1:GridColumn Binding="Name" Header="Title" AllowDragging="False" Width="300" />
+                <c1:GridColumn Binding="Duration" HorizontalAlignment="Right" AllowFiltering="False" />
+                <c1:GridColumn Binding="Size" HorizontalAlignment="Right" />
+                <c1:GridColumn Binding="Rating" HorizontalAlignment="Left" Width="200" Aggregate="Average" />
+            </c1:FlexGrid.Columns>
+        </c1:FlexGrid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutoLabelDesc" xml:space="preserve">
+    <value>自動ラベル</value>
+  </data>
+  <data name="AutoLabelsTag" xml:space="preserve">
+    <value>自動ラベルの配置を示します。DataLabel.Position が Auto の場合、チャートはラベルの重なりを避けるために自動ラベルレイアウトを実行します。</value>
+  </data>
+  <data name="AutoLabelsTitle" xml:space="preserve">
+    <value>自動ラベル</value>
+  </data>
+  <data name="AxesDesc" xml:space="preserve">
+    <value>複数の軸</value>
+  </data>
+  <data name="AxesTag" xml:space="preserve">
+    <value>２本の Y 軸を持つ FlexChart を示します。</value>
+  </data>
+  <data name="AxesTitle" xml:space="preserve">
+    <value>複数の軸</value>
+  </data>
+  <data name="AxisBindingDesc" xml:space="preserve">
+    <value>軸のバインディング</value>
+  </data>
+  <data name="AxisBindingTag" xml:space="preserve">
+    <value>FlexChart の軸バインディング機能を示します。</value>
+  </data>
+  <data name="AxisBindingTitle" xml:space="preserve">
+    <value>軸のバインディング</value>
+  </data>
+  <data name="AxisGroupingDesc" xml:space="preserve">
+    <value>軸のグループ化</value>
+  </data>
+  <data name="AxisGroupingTag" xml:space="preserve">
+    <value>軸ラベルのグループ化を示します。</value>
+  </data>
+  <data name="AxisGroupingTitle" xml:space="preserve">
+    <value>軸のグループ化</value>
+  </data>
+  <data name="AxisLabelsDesc" xml:space="preserve">
+    <value>軸ラベル</value>
+  </data>
+  <data name="AxisLabelsTag" xml:space="preserve">
+    <value>ラベルの重なりを避けるためのさまざまな Axis オプションを示します。</value>
+  </data>
+  <data name="AxisLabelsTitle" xml:space="preserve">
+    <value>軸ラベル</value>
+  </data>
+  <data name="BindingDesc" xml:space="preserve">
+    <value>バインディング</value>
+  </data>
+  <data name="BindingTag" xml:space="preserve">
+    <value>FlexChart を使用して単一のデータ配列から２つの値セットを表示する方法を示します。これは FlexChart の最も一般的な使用例です。
+このサンプルは以下のことを行います。
+1.チャートの DataSource プロパティにデータオブジェクトの配列を設定します。各データオブジェクトには 'date'、'sales'、'downloads' の値が含まれています。
+2.チャートの BindingX プロパティに 'date' を設定します。
+3.Series オブジェクトにチャートの Series 配列を追加し、その Binding プロパティに 'sales' を設定します。
+4.２つ目の Series オブジェクトをチャートの Series 配列に追加し、その Binding プロパティに 'downloads' を設定します。
+バインディングに加えて、このサンプルは InterpolateNulls プロパティと LegendToggle プロパティの効果も示します。InterpolateNulls をtrueに設定すると、データ内の null 値によって生じたギャップが埋められます。LegendToggle をtrueに設定すると、凡例の系列名をクリックしたときにその系列のチャートへの表示/非表示が切り替わります。</value>
+  </data>
+  <data name="BindingTitle" xml:space="preserve">
+    <value>バインディング</value>
+  </data>
+  <data name="BoxWhiskerDesc" xml:space="preserve">
+    <value>箱ひげ</value>
+  </data>
+  <data name="BoxWhiskerTag" xml:space="preserve">
+    <value>箱ひげは、通常、さまざまな数値データセット間の分布を比較するために使用されます。</value>
+  </data>
+  <data name="BoxWhiskerTitle" xml:space="preserve">
+    <value>箱ひげ</value>
+  </data>
+  <data name="BubbleDesc" xml:space="preserve">
+    <value>バブルチャート</value>
+  </data>
+  <data name="BubbleTag" xml:space="preserve">
+    <value>FlexChart コントロールを使用してバブルチャートを作成する方法を示します。
+    バブルチャートと他のチャートタイプとの違いは、バブルチャートでは X と Y に加えてバブルサイズのバインディングも指定することです。バブルサイズのバインディングを指定するには、各バブルの Y およびサイズ値に使用するプロパティの名前をカンマで区切って Binding プロパティに設定します。
+    この例のチャートには、'x'、'y'、'size' の各プロパティを持つオブジェクトのリストがバインドされています。チャートの系列は１つで、その Binding プロパティが文字列 'y, size' に設定されています。</value>
+  </data>
+  <data name="BubbleTitle" xml:space="preserve">
+    <value>バブルチャート</value>
+  </data>
+  <data name="DateTimeAxisGroupingDesc" xml:space="preserve">
+    <value>日時軸のグループ化</value>
+  </data>
+  <data name="DateTimeAxisGroupingTag" xml:space="preserve">
+    <value>日時軸ラベルのグループ化を示します。</value>
+  </data>
+  <data name="DateTimeAxisGroupingTitle" xml:space="preserve">
+    <value>日時軸のグループ化</value>
+  </data>
+  <data name="ErrorBarDesc" xml:space="preserve">
+    <value>エラーバー</value>
+  </data>
+  <data name="ErrorBarTag" xml:space="preserve">
+    <value>エラーバーは、エラーと標準偏差のマージンを一目で確認するのに役立ちます。</value>
+  </data>
+  <data name="ErrorBarTitle" xml:space="preserve">
+    <value>エラーバー</value>
+  </data>
+  <data name="FinancialCharDesc" xml:space="preserve">
+    <value>株価チャート</value>
+  </data>
+  <data name="FinancialChartTitle" xml:space="preserve">
+    <value>株価チャート</value>
+  </data>
+  <data name="FinancialTag" xml:space="preserve">
+    <value>FlexChart コントロールを使用して株価チャートを作成する方法を示します。
+    FlexChart は、Candlestick と HiLowOpenClose の２種類の株価チャートをサポートしています。これらを使用するには、使用するタイプを ChartType プロパティに設定し、高値、安値、始値、終値を含むデータソースフィールドを指定する文字列を系列の Binding プロパティに設定します。</value>
+  </data>
+  <data name="HeaderFooterDesc" xml:space="preserve">
+    <value>ヘッダとフッタ</value>
+  </data>
+  <data name="HeaderFooterTag" xml:space="preserve">
+    <value>ヘッダとフッタをチャートに追加する方法を示します。
+    Header プロパティと Footer プロパティはヘッダとフッタの内容を決定し、それらの Style プロパティはそれぞれの外観を決定します。</value>
+  </data>
+  <data name="HeaderFooterTitle" xml:space="preserve">
+    <value>ヘッダとフッタ</value>
+  </data>
+  <data name="HistogramDesc" xml:space="preserve">
+    <value>ヒストグラム</value>
+  </data>
+  <data name="HistogramTag" xml:space="preserve">
+    <value>ヒストグラムチャートは、非分類データの分布を指定された幅のビンに分割して調べるために使用されます。これらの各ビンに含まれるデータ項目の頻度をプロットします。このサンプルには以下が含まれます: \n \n 1. 列を含むヒストグラムチャート。\n 2. 度数多角形：ヒストグラムチャートの変形。列が曲線に置き換えられます。複数のデータセットを比較するのに役立ちます。\n 3. 正規曲線：連続的な確率変数の確率分布を示すベル型曲線。ガウス曲線とも呼ばれます。\n 4. 累積度数多角形：一般に ogives として知られている、チャート上の連続した度数の累計を示します。</value>
+  </data>
+  <data name="HistogramTitle" xml:space="preserve">
+    <value>ヒストグラム</value>
+  </data>
+  <data name="HitTestDesc" xml:space="preserve">
+    <value>ヒットテスト</value>
+  </data>
+  <data name="HitTestTag" xml:space="preserve">
+    <value>FlexChart の HitTest メソッドの使い方を示します。
+    HitTest メソッドは、ポイントを受け取って最も近いチャート要素を返します。クリック可能な領域やドリルダウンなどのインタラクティブな機能を提供するために使用できます。
+    チャートの上でマウスを動かすと、マウスの位置に最も近いチャート要素に関する情報が表示されます。</value>
+  </data>
+  <data name="HitTestTitle" xml:space="preserve">
+    <value>ヒットテスト</value>
+  </data>
+  <data name="ImageExportDesc" xml:space="preserve">
+    <value>画像のエクスポート</value>
+  </data>
+  <data name="ImageExportTag" xml:space="preserve">
+    <value>チャートを画像としてエクスポートします。</value>
+  </data>
+  <data name="ImageExportTitle" xml:space="preserve">
+    <value>画像のエクスポート</value>
+  </data>
+  <data name="IntroductionDesc" xml:space="preserve">
+    <value>FlexChart の基本機能</value>
+  </data>
+  <data name="IntroductionTag" xml:space="preserve">
+    <value>FlexChart の基本機能を示します。チャートはデータソースにバインドされており、ユーザーがチャートタイプ、パレット、系列の積み重ね、および回転を選択できます。
+    マウスをチャート要素に合わせると、そのデータポイントの詳細を示すツールチップが表示されます。
+    \n FlexChart の最も単純な使用方法は以下のとおりです。
+    \n 1.チャートの DataSource プロパティにデータオブジェクトの配列を設定します。
+    2.チャートの BindingX プロパティに、X 値（この例では果物名）を含むプロパティの名前を設定します。
+    3.１つ以上の Series オブジェクトにチャートの Series 配列を追加し、Y 値を含むプロパティの名前（この例では March、April、May などの月名）をそれぞれの Binding プロパティに設定します。</value>
+  </data>
+  <data name="IntroductionTitle" xml:space="preserve">
+    <value>FlexChart の基本機能</value>
+  </data>
+  <data name="LabelsDesc" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+  <data name="LabelsTag" xml:space="preserve">
+    <value>FlexChart の選択機能を示します。
+    SelectionMode プロパティは、ユーザーがチャートをクリックしたときに系列とポイントのどちらが選択されるかを決定します。</value>
+  </data>
+  <data name="LabelsTitle" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+  <data name="LegendDesc" xml:space="preserve">
+    <value>凡例</value>
+  </data>
+  <data name="LegendTag" xml:space="preserve">
+    <value>FlexChart の凡例プロパティの使用方法を示します。
+    サンプルでは次の処理を行います:
+    1.凡例の表示位置を設定します（"Auto"、"Left"、"Top"、"Right"、"Bottom"）。
+    2.凡例の向き設定します
+    3.凡例のテキスト折り返しモードを設定します（"None"、"Wrap"、"Truncate"）。
+    4.凡例の項目 のmaxWidth プロパティに0以上の値を設定します。凡例のテキスト折り返しを無効にするには0を設定します。
+    5.各系列の LegendGroup プロパティを設定して、凡例内の項目をグループ化します。各グループ内の凡例項目は凡例の方向プロパティによって配置され、凡例グループは凡例の位置に基づいて配置されます。</value>
+  </data>
+  <data name="LegendTitle" xml:space="preserve">
+    <value>凡例</value>
+  </data>
+  <data name="NumericAxisGroupingDesc" xml:space="preserve">
+    <value>数値軸のグループ化</value>
+  </data>
+  <data name="NumericAxisGroupingTag" xml:space="preserve">
+    <value>数値軸ラベルのグループ化を示します。</value>
+  </data>
+  <data name="NumericAxisGroupingTitle" xml:space="preserve">
+    <value>数値軸のグループ化</value>
+  </data>
+  <data name="ParetoDesc" xml:space="preserve">
+    <value>パレート図</value>
+  </data>
+  <data name="ParetoTag" xml:space="preserve">
+    <value>パレート図は、降順でソートされた列と累積合計の割合を表す立上り線で構成される特殊なヒストグラムチャートです。パレート図では、最も重要な問題の分析や是正措置の優先順位付けが容易になります。</value>
+  </data>
+  <data name="ParetoTitle" xml:space="preserve">
+    <value>パレート図</value>
+  </data>
+  <data name="PieCharSelectionDesc" xml:space="preserve">
+    <value>選択（FlexPie）</value>
+  </data>
+  <data name="PieChartDesc" xml:space="preserve">
+    <value>FlexPie の基本機能</value>
+  </data>
+  <data name="PieChartSelectionTitle" xml:space="preserve">
+    <value>選択（FlexPie）</value>
+  </data>
+  <data name="PieChartSliceDesc" xml:space="preserve">
+    <value>切片の色（FlexPie）</value>
+  </data>
+  <data name="PieChartSliceTitle" xml:space="preserve">
+    <value>切片の色（FlexPie）</value>
+  </data>
+  <data name="PieChartTitle" xml:space="preserve">
+    <value>FlexPie の基本機能</value>
+  </data>
+  <data name="PieIntroductionTag" xml:space="preserve">
+    <value>FlexPie の基本機能を示します。これはチャートにデータソースをバインドします。
+    マウスをチャート要素に合わせると、そのデータポイントの詳細を示すツールチップが表示されます。</value>
+  </data>
+  <data name="PieSelectionTag" xml:space="preserve">
+    <value>FlexPie の選択機能を示します。</value>
+  </data>
+  <data name="PieSliceColorTag" xml:space="preserve">
+    <value>FlexPie における切片の色をカスタマイズする方法を示します。色の強さは、対応するデータ値に依存します。また、新しいデータを読み込んだり、既存のデータを更新したりするときのアニメーションも示します。</value>
+  </data>
+  <data name="PlotAreasDesc" xml:space="preserve">
+    <value>プロット領域</value>
+  </data>
+  <data name="PlotAreasTag" xml:space="preserve">
+    <value>複数のプロット領域がある FlexChart を示します。</value>
+  </data>
+  <data name="PlotAreasTitle" xml:space="preserve">
+    <value>プロット領域</value>
+  </data>
+  <data name="RangedHistogramDesc" xml:space="preserve">
+    <value>範囲ヒストグラム</value>
+  </data>
+  <data name="RangedHistogramTag" xml:space="preserve">
+    <value>範囲ヒストグラムの主な機能を示します。
+    カテゴリカルと非カテゴリー別のデータを研究するために使用できるユニークなヒストグラムチャートです。オーバーフローおよびアンダーフロービンをサポートするだけでなく、複数のビニングオプションを提供します。</value>
+  </data>
+  <data name="RangedHistogramTitle" xml:space="preserve">
+    <value>範囲ヒストグラム</value>
+  </data>
+  <data name="SelectionDesc" xml:space="preserve">
+    <value>選択（FlexChart）</value>
+  </data>
+  <data name="SelectionTag" xml:space="preserve">
+    <value>FlexChart の選択機能を示します。
+    SelectionMode プロパティは、ユーザーがチャートをクリックしたときに系列とポイントのどちらが選択されるかを決定します。</value>
+  </data>
+  <data name="SelectionTitle" xml:space="preserve">
+    <value>選択（FlexChart）</value>
+  </data>
+  <data name="SeriesBindingDesc" xml:space="preserve">
+    <value>系列のバインディング</value>
+  </data>
+  <data name="SeriesBindingTag" xml:space="preserve">
+    <value>FlexChart を使用して複数のデータソース（系列ごとに１つずつ）からのデータを表示する方法を示します。
+    このサンプルは以下のことを行います。
+    1.チャートの BindingX および Binding プロパティに 'x' および 'y' を設定します。
+    2.Series オブジェクトをチャートの Series 配列に追加し、'x' プロパティと 'y' プロパティを持つオブジェクトの配列をその DataSource プロパティに設定します。
+    3.２つ目の Series オブジェクトをチャートの Series 配列に追加し、１つ目とは別の、'x' プロパティと 'Y' プロパティを持つオブジェクトの配列をその DataSource プロパティに設定します。
+    別の方法として、BindingX および Binding プロパティをチャートではなく Series オブジェクトで設定することもできます。このケースでは、バインディング名がすべての系列で同じであるため、このようにする必要はありません。</value>
+  </data>
+  <data name="SeriesBindingTitle" xml:space="preserve">
+    <value>系列のバインディング</value>
+  </data>
+  <data name="TreeMapDesc" xml:space="preserve">
+    <value>ツリーマップ</value>
+  </data>
+  <data name="TreeMapNodeColorDesc" xml:space="preserve">
+    <value>ツリーマップのノードの色</value>
+  </data>
+  <data name="TreeMapNodeColorTag" xml:space="preserve">
+    <value>ツリーマップを使用して、２つの量的変数を同時に表示できます。１つは各長方形のサイズで表され、もう１つはその色で表されます。\n \n このサンプルでは、TreeMap.NodeRendering イベントを使用して各ノードの色を指定する方法を示します。</value>
+  </data>
+  <data name="TreeMapNodeColorTitle" xml:space="preserve">
+    <value>ツリーマップのノードの色</value>
+  </data>
+  <data name="TreeMapTag" xml:space="preserve">
+    <value>TreeMap コントロールの主な機能を示しています。\n TreeMap チャートは、ネストされた長方形の形式で階層データを視覚化するコンパクトな方法であり、各長方形の領域は各カテゴリの数量を表します。</value>
+  </data>
+  <data name="TreeMapTitle" xml:space="preserve">
+    <value>ツリーマップ</value>
+  </data>
+  <data name="TrendLineDesc" xml:space="preserve">
+    <value>傾向線</value>
+  </data>
+  <data name="TrendLineTag" xml:space="preserve">
+    <value>FlexChart 内に傾向線を表示します。
+    TrendLine の FitType を設定することで、異なる傾向線を使用することができます。プロット上の点はマウスによりドラッグすることができ、傾向線とその式は自動的に更新されます。</value>
+  </data>
+  <data name="TrendLineTitle" xml:space="preserve">
+    <value>傾向線</value>
+  </data>
+  <data name="WaterfallDesc" xml:space="preserve">
+    <value>ウォーターフォール</value>
+  </data>
+  <data name="WaterfallTag" xml:space="preserve">
+    <value>FlexChart でウォーターフォール系列を表示します。
+    ウォーターフォール系列は、通常、一連の変化によって開始位置がどのように増減するかを示すために使用されます。</value>
+  </data>
+  <data name="WaterfallTitle" xml:space="preserve">
+    <value>ウォーターフォール</value>
+  </data>
+  <data name="ZonesDesc" xml:space="preserve">
+    <value>ゾーン</value>
+  </data>
+  <data name="ZonesTag" xml:space="preserve">
+    <value>生徒の成績の散布図を作成し、ゾーンを使用して各成績範囲を強調しています。
+    ゾーンは FlexChart の Rendering イベントで描画しています。静的な値が計算されてプロットされます。</value>
+  </data>
+  <data name="ZonesTitle" xml:space="preserve">
+    <value>ゾーン</value>
+  </data>
+  <data name="ZoomDesc" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="ZoomTag" xml:space="preserve">
+    <value>FlexChart コントロールのカスタムズームを実装する方法を示します。
+    プロット領域でマウスを使用して矩形領域を選択します。選択した領域にチャートがズームインします。その後、チャートの上にある［ズームのリセット］ボタンをクリックすると、チャートが元のビューに戻ります。</value>
+  </data>
+  <data name="ZoomTitle" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexChartエクスプローラー</value>
+  </data>
+  <data name="BreakEvenDesc" xml:space="preserve">
+    <value>Break-Even Chart</value>
+  </data>
+  <data name="BreakEvenTag" xml:space="preserve">
+    <value>Break-Even chart is a chart that shows the sales volume level at which total costs equal sales.</value>
+  </data>
+  <data name="BreakEvenTitle" xml:space="preserve">
+    <value>Break-Even</value>
+  </data>
+</root>

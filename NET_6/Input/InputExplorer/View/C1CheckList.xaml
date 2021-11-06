@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="InputExplorer.C1CheckList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:InputExplorer.Properties"
+             mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             d:DesignHeight="600" d:DesignWidth="800" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <c1:C1ListView x:Name="CheckList" Margin="5" SelectionChanged="OnSelectionChanged" DisplayMemberPath="Country"
+                       ItemsSource="{Binding Customers}" ShowCheckBoxes="True"/>
+        <c1:C1TabControl UnselectedContentMode="Collapsed" Grid.Column="1">
+            <c1:C1TabItem Header="{x:Static res:Resources.PropertiesTabHeader}">
+                <c1:C1PropertyGrid SelectedObject="{Binding ElementName=CheckList}" AddingPropertyBox="C1PropertyGrid_AddingPropertyBox" DefaultCategoryName="Miscellaneous" />
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="{x:Static res:Resources.MethodsTabHeader}">
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <c1:C1Button Content="{x:Static res:Resources.SelectAllMethod}" Margin="5" Click="OnSelectAllClick"/>
+                        <c1:C1Button Content="{x:Static res:Resources.UnselectAllMethod}" Margin="5" Grid.Column="1" Click="OnUnselectAllClick"/>
+                    </Grid>
+                </StackPanel>
+            </c1:C1TabItem>
+            <c1:C1TabItem Header="{x:Static res:Resources.EventsTabHeader}">
+                <c1:C1Expander Header="{x:Static res:Resources.SelectionChangedEventExpenderHeader}" ExpandDirection="Down" IsExpanded="True">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <GroupBox Header="{x:Static res:Resources.SelectedItemsEvent}">
+                            <c1:C1ListView DisplayMemberPath="Country" ItemsSource="{Binding ElementName=CheckList,Path=SelectedItems}"/>
+                        </GroupBox>
+                        <GroupBox Header="{x:Static res:Resources.AddItemsEvent}" Grid.Row="1">
+                            <c1:C1ListView DisplayMemberPath="Country" x:Name="AddItemsViewer"/>
+                        </GroupBox>
+                        <GroupBox Header="{x:Static res:Resources.RemoveItemsEvent}" Grid.Row="2">
+                            <c1:C1ListView DisplayMemberPath="Country" x:Name="RemoveItemsViewer"/>
+                        </GroupBox>
+                    </Grid>
+                </c1:C1Expander>
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+    </Grid>
+</UserControl>

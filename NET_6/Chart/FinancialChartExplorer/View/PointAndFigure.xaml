@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="FinancialChartExplorer.PointAndFigure"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FinancialChartExplorer"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <local:EnumConverter x:Key="EmConverter" />
+            <Style TargetType="c1:C1ComboBox" x:Key="CompanyStyle">
+                <Setter Property="Margin" Value="10 0" />
+                <Setter Property="Width" Value="150" />
+                <Setter Property="DisplayMemberPath" Value="Name"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Symbol" VerticalAlignment="Center"/>
+            <c1:C1ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"/>
+        </StackPanel>
+        <c1:C1FinancialChart x:Name="financialChart" ChartType="PointAndFigure" BindingX="date" Binding="High,Low,Open,Close,Volume" Grid.Row="1" ToolTipContent="{}{value}">
+            <c1:C1FinancialChart.Options>
+                <c1:PointAndFigureOptions BoxSize="1" ReversalAmount="3" />
+            </c1:C1FinancialChart.Options>
+            <c1:FinancialSeries >
+                <c1:FinancialSeries.Style>
+                    <c1:ChartStyle Stroke="Black" />
+                </c1:FinancialSeries.Style>
+                <c1:FinancialSeries.AltStyle>
+                    <c1:ChartStyle Stroke="Red" />
+                </c1:FinancialSeries.AltStyle>
+            </c1:FinancialSeries>
+            <c1:C1FinancialChart.AxisX>
+                <c1:Axis MajorGrid="True" />
+            </c1:C1FinancialChart.AxisX>
+        </c1:C1FinancialChart>
+        <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="2">
+            <TextBlock Text="Data Fields" Margin="10 0" VerticalAlignment="Center"/>
+            <c1:C1ComboBox ItemsSource="{Binding DataFields}" SelectedItem="{Binding ElementName=financialChart, Path=Options.DataFields, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100"/>
+            <TextBlock Text="Reversal" Margin="10 0" VerticalAlignment="Center"/>
+            <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Options.ReversalAmount, Mode=TwoWay}" Minimum="2" Maximum="5" Width="80"/>
+            <TextBlock Text="Scaling" Margin="30 0 10 0" VerticalAlignment="Center"/>
+            <c1:C1ComboBox ItemsSource="{Binding Scalings}" SelectedItem="{Binding ElementName=financialChart, Path=Options.Scaling, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100" SelectionChanged="ComboBox_SelectionChanged"/>
+            <TextBlock Text="Box Size" Margin="30 0 10 0" VerticalAlignment="Center"/>
+            <c1:C1NumericBox x:Name="boxSize" IsEnabled="False" Value="{Binding ElementName=financialChart, Path=Options.BoxSize, Mode=TwoWay}" Minimum="1" Maximum="100" Width="80"/>
+            <TextBlock Text="ATR Period" Margin="30 0 10 0" VerticalAlignment="Center"/>
+            <c1:C1NumericBox x:Name="period" IsEnabled="False" Value="{Binding ElementName=financialChart, Path=Options.Period, Mode=TwoWay}" Minimum="7" Maximum="30" Width="80"/>
+            <CheckBox VerticalAlignment="Center" Content="Square Grid" Margin="30 0 10 0" IsChecked="{Binding ElementName=financialChart, Path=Options.SquareGrid, Mode=TwoWay}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
