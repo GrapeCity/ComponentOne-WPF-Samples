@@ -2,6 +2,7 @@
 using FlexGridExplorer.Resources;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Controls;
 
 namespace FlexGridExplorer
@@ -25,6 +26,28 @@ namespace FlexGridExplorer
             }
             grid.Columns["CountryID"].DataMap = new GridDataMap { ItemsSource = dct, SelectedValuePath = "Key", DisplayMemberPath = "Value" };
             grid.MinColumnWidth = 85;
+        }
+
+        List<string> _selectionModes;
+        public List<string> SelectionModes
+        {
+            get
+            {
+                if (_selectionModes == null)
+                    _selectionModes = Enum.GetNames(typeof(GridSelectionMode)).ToList();
+                return _selectionModes;
+            }
+        }
+        
+        List<string> _mouseOverModes;
+        public List<string> MouseOverModes
+        {
+            get
+            {
+                if (_mouseOverModes == null)
+                    _mouseOverModes = Enum.GetNames(typeof(GridMouseOverMode)).ToList();
+                return _mouseOverModes;
+            }
         }
     }
 }

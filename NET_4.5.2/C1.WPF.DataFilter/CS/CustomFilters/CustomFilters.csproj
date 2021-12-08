@@ -130,10 +130,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>1.0.20212.56</Version>
+      <Version>1.0.20213.60</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>1.0.20212.56</Version>
+      <Version>1.0.20213.60</Version>
     </PackageReference>
     <PackageReference Include="System.Linq.Parallel">
       <Version>4.3.0</Version>

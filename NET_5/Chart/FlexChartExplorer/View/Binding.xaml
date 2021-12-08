@@ -25,10 +25,10 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <ComboBox x:Name="cbChartType" VerticalAlignment="Center" Width="210"
+            <Chart:C1ComboBox x:Name="cbChartType" VerticalAlignment="Center" Width="210"
                       ItemsSource="{Binding DataContext.ChartTypes}" ItemTemplate="{StaticResource cbChartTypeTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
+            </Chart:C1ComboBox>
             <CheckBox x:Name="cbInterpolateNulls" Content="InterpolateNulls" Margin="10 0" VerticalAlignment="Center"
                       IsChecked="{Binding ElementName=flexChart, Path=Options.InterpolateNulls, Mode=TwoWay}">
             </CheckBox>

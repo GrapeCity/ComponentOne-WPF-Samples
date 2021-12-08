@@ -20,7 +20,7 @@
             <c1:C1ComboBox Height="30" Name="indicatorPlacement" Placeholder="Indicator Placement" SelectedValueChanged="indicatorPlacement_SelectedValueChanged">
                 <c1:C1ComboBoxItem Content="Top"/>
                 <c1:C1ComboBoxItem Content="Bottom" IsSelected="True" />
-                <c1:C1ComboBoxItem Content="Left" IsEnabled="False" />
+                <c1:C1ComboBoxItem Content="Left" IsEnabled="False"/>
                 <c1:C1ComboBoxItem Content="Right" IsEnabled="False" />
             </c1:C1ComboBox>
             <TextBlock Margin="5 0" VerticalAlignment="Center" Text="Indicator Brush:" />

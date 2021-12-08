@@ -40,6 +40,8 @@ namespace DateTimeEditorsExplorer
 
         private void dateFormatCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (e.AddedItems.Count == 0) return;
+
             // use custom date format from dateFormatCombo.SelectedItem
             dateTimePicker.CustomDateFormat = (string)dateFormatCombo.SelectedItem;
             // use text mask acceptable for the selected date format
@@ -69,6 +71,7 @@ namespace DateTimeEditorsExplorer
 
         private void timeFormatCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (e.AddedItems.Count == 0) return;
             // use custom time format from timeFormatCombo.SelectedItem
             dateTimePicker.CustomTimeFormat = (string)timeFormatCombo.SelectedItem;
             // use text mask acceptable for the selected time format

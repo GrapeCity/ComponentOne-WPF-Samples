@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using C1.WPF.Grid;
 
 namespace FlexGridExplorer
 {
@@ -39,14 +41,36 @@ namespace FlexGridExplorer
                 var img = GetStarImage();
                 img.Opacity = OFF;
                 img.MouseLeftButtonDown += img_MouseLeftButtonDown;
+                img.TouchDown += img_TouchDown;
                 Children.Add(img);
             }
         }
+
+        private void img_TouchDown(object? sender, TouchEventArgs e)
+        {
+            // calculate rating based on the index of the star
+            Image img = sender as Image;
+            RatingCell cell = img.Parent as RatingCell;
+            int index = cell.Children.IndexOf(img);
+            if (index > 0 || e.GetTouchPoint(img).Position.X > img.Width / 3)
+            {
+                index++;
+            }
+
+            // apply the new rating
+            cell.Rating = index;
+            OnPropertyChanged(cell, "Rating");
+            Animate(img);
+        }
+
         public int Rating
         {
             get { return (int)GetValue(RatingProperty); }
             set { SetValue(RatingProperty, value); }
         }
+        
+        public GridCellRange Range{ get; set; }
+
         void img_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             // calculate rating based on the index of the star
@@ -60,6 +84,7 @@ namespace FlexGridExplorer
 
             // apply the new rating
             cell.Rating = index;
+            OnPropertyChanged(cell, "Rating");
             Animate(img);
         }
         static Image GetStarImage()
@@ -118,5 +143,16 @@ namespace FlexGridExplorer
                 return;
             }
         }
+
+        protected void OnPropertyChanged(object sender, string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(sender, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

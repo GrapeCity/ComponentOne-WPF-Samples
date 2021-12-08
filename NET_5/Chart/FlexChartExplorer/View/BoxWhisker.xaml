@@ -11,30 +11,25 @@
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="enumConverter" />
-            <Style TargetType="ComboBox">
-                <Setter Property="Width" Value="220"></Setter>
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <TextBlock>
-                                <TextBlock.Inlines>
-                                    <Run Text="Quartile Calculation: "/>
-                                    <Run Text="{Binding .}"/>
-                                </TextBlock.Inlines>
-                            </TextBlock>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
+            <DataTemplate x:Key="cbItemTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="Quartile Calculation: "/>
+                        <Run Text="{Binding .}"/>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
         </Grid.Resources>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <ComboBox ItemsSource="{Binding DataContext.Calculations}"
-                      x:Name="cboQuartileCalculation" SelectedIndex="0"
-                      SelectionChanged="cboQuartileCalculation_SelectionChanged"></ComboBox>
+            <Chart:C1ComboBox Width="220" ItemsSource="{Binding DataContext.Calculations}"
+                              x:Name="cboQuartileCalculation" SelectedIndex="0"
+                              ItemTemplate="{StaticResource cbItemTemplate}"
+                              SelectionChanged="cboQuartileCalculation_SelectionChanged"/>
+            
             <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowMeanLine" Checked="CheckedChanged" Unchecked="CheckedChanged">Show mean line</CheckBox>
             <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowMeanMarks" IsChecked="True" Checked="CheckedChanged" Unchecked="CheckedChanged">Show mean marks</CheckBox>
             <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowOutliers" IsChecked="True" Checked="CheckedChanged" Unchecked="CheckedChanged">Show outliers</CheckBox>

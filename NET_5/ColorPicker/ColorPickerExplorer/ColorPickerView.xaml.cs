@@ -11,6 +11,12 @@ namespace ColorPickerExplorer
         {
             InitializeComponent();
             this.DataContext = new SampleDataSource();
+            Loaded += ColorPickerView_Loaded;
+        }
+
+        private void ColorPickerView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

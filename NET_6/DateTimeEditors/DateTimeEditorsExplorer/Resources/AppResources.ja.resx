@@ -130,7 +130,7 @@
     <value>DateTimePicker の応用</value>
   </data>
   <data name="DateTimePickerAdvancedTitle" xml:space="preserve">
-    <value>DateTimePicker の応用</value>
+    <value>の応用</value>
   </data>
   <data name="DateTimePickerAdvanceTag" xml:space="preserve">
     <value>日付と時刻の形式をカスタマイズし、マスクとプレースホルダーテキストを設定します。</value>

@@ -113,5 +113,14 @@ namespace CalendarExplorer.Resources {
                 return ResourceManager.GetString("OverviewTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CalendarExplorer.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
     }
 }

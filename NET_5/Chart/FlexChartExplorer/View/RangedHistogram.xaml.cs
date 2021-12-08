@@ -19,7 +19,6 @@ namespace FlexChartExplorer
             Tag = AppResources.RangedHistogramTag;
         }
 
-
         public object[] Data
         {
             get
@@ -171,10 +170,10 @@ namespace FlexChartExplorer
             }
         }
 
-        private void cbMode_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void cbMode_SelectedIndexChanged(object sender, C1.WPF.Core.PropertyChangedEventArgs<int> e)
         {
-            var mode = cbMode.SelectedIndex;
-            switch (mode)
+            if (tbBinNum == null) return;
+            switch (cbMode.SelectedIndex)
             {
                 case 0:
                     //Automatic
@@ -192,6 +191,6 @@ namespace FlexChartExplorer
                     tbBinWidth.IsEnabled = false;
                     break;
             }
-        }        
+        }
     }
 }

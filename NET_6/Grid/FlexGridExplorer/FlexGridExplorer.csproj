@@ -65,46 +65,46 @@
     <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\cars.xml" />
     <EmbeddedResource Include="Resources\data.zip" />
-    <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20213.60" />
+    <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20213.61" />
     <EmbeddedResource Include="Resources\Stores.txt" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid.Excel">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <Resource Include="Resources\filter.svg" />
     <Resource Include="Resources\Roboto-Regular.ttf" />

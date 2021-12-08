@@ -22,6 +22,7 @@ namespace CoreExplorer
         {
             InitializeComponent();
             Tag = CoreExplorer.Resources.AppResources.DragDropManagerTag;
+            btnPlay.Content = CoreExplorer.Resources.AppResources.PlayAgain;
 
             for (int i = 0; i < 8; ++i)
             {

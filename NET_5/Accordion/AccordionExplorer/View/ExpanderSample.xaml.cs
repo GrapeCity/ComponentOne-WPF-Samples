@@ -32,12 +32,14 @@ namespace AccordionExplorer
 
         private void OnExpandDirectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ExpanderControl.ExpandDirection = e.AddedItems.Cast<ExpandDirection>().First();
+            if(e.AddedItems.Count > 0)
+                ExpanderControl.ExpandDirection = e.AddedItems.Cast<ExpandDirection>().First();
         }
 
         private void OnExpandIconAlignmentChanged(object sender, SelectionChangedEventArgs e)
         {
-            ExpanderControl.ExpandIconAlignment = e.AddedItems.Cast<ExpanderIconAlignment>().First();
+            if (e.AddedItems.Count > 0)
+                ExpanderControl.ExpandIconAlignment = e.AddedItems.Cast<ExpanderIconAlignment>().First();
         }
     }
 }

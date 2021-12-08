@@ -6,6 +6,9 @@
             <TabItem Header="Basic">
                 <my:Basic x:Name="basic1" />
             </TabItem>
+            <TabItem Header="Advanced">
+                <my:Advanced x:Name="adv1" />
+            </TabItem>
         </TabControl>
 
     </Grid>

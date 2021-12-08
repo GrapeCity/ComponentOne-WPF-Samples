@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Controls>
 	<Group name="データ管理" isExpanded="true">
-		<Control name="DataGrid" isTop="true" isNew="true" assembly="C1.WPF.DataGrid">
+		<Control name="DataGrid" isTop="true" assembly="C1.WPF.DataGrid">
 			<Feature assemblyName="DataGridSamples.4.exe" type="DataGridSamples.DemoGrid" source="C1.WPF.DataGrid\CS\DataGridSamples\DataGrid\DataGridPage.xaml">
 				<Description>C1DataGrid コントロールを使用すると、表形式のデータを簡単に表示、編集、分析できます。 このデモでは、ソート、フィルタリング、グループ化、固定列、列/行のサイズ変更など、デフォルトでサポートされているすべての機能を示します。</Description>
 				<Properties>
@@ -45,7 +45,7 @@
 				<Description>C1DataGrid でフィルターを簡単にカスタマイズする方法を示します。</Description>
 				<SubFeatures>
 					<SubFeature name="フィルター行" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\FilterRow\FilterRowPage.xaml" type="DataGridSamples.FilterRow" />
-					<SubFeature name="フルテキストフィルター" assemblyName="DataGridSamples.4.exe" isNew="true" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\FullTextSearch\FullTextSearchPage.xaml" type="DataGridSamples.FullTextSearch" />
+					<SubFeature name="フルテキストフィルター" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\FullTextSearch\FullTextSearchPage.xaml" type="DataGridSamples.FullTextSearch" />
 					<SubFeature name="自動フィルター" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\AutoFilter\AutoFilterPage.xaml" type="DataGridSamples.AutoFilter" />
 					<SubFeature name="カスタムフィルター" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\CustomFilters\CustomFilters.xaml" type="DataGridSamples.CustomFilters" />
 					<SubFeature name="既定 - Excel ライク" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\DefaultFilter\DefaultFilterPage.xaml" type="DataGridSamples.DefaultFilter" />
@@ -108,10 +108,10 @@
 				</SubFeatures>
 			</Feature>
 		</Control>
-		<Control name="FlexGrid" isTop="true" isNew="true" assembly="C1.WPF.FlexGrid.4">
-      <Feature type="ShowCase.ShowCaseSample" name="ShowCase" assemblyName="ShowCase.exe" source="C1.WPF.FlexGrid\CS\ShowCase\ShowCase\ShowCaseSample.xaml" >
+		<Control name="FlexGrid" isTop="true" assembly="C1.WPF.FlexGrid.4">
+      <Feature type="ShowCase.ShowCaseSample" name="ショーケース" assemblyName="ShowCase.exe" source="C1.WPF.FlexGrid\CS\ShowCase\ShowCase\ShowCaseSample.xaml" >
         <Description>
-          The modern, high-performance FlexGrid control comes with flexible data binding and an easy-to-use API for maximum configuration and customization.
+          最新の高性能 FlexGrid コントロールには、柔軟なデータバインディングと、最大限の構成とカスタマイズを実現する使いやすい API が付属しています。
         </Description>
       </Feature>
       <Feature type="MainTestApplication.Financial" assemblyName="FlexGridSamples.exe" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Financial\Financial.xaml">
@@ -122,11 +122,11 @@
 					<SubFeature name="フィルタリング" assemblyName="FlexGridSamples.exe" type="MainTestApplication.Filtering" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\Filtering.xaml" >
 						<Description>このデモでは、列フィルタリングを有効にする方法を示します。ユーザーは、列ヘッダーのドロップダウンをクリックしてフィルターを設定できます。アクティブなフィルタは、列見出しのアイコンで示されます。フィルタは、連結モードと非連結モードで使用できます。</Description>
 					</SubFeature>
-					<SubFeature name="フルテキストフィルター" assemblyName="FlexGridSamples.exe" isNew="true" type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml" >
+					<SubFeature name="フルテキストフィルター" assemblyName="FlexGridSamples.exe" type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml" >
 						<Description>このデモでは、FullTextFilter を使用してすべての列にわたってデータをフィルター処理して強調表示する方法を示します。</Description>
 					</SubFeature>
-                    <SubFeature name="Filter Row" assemblyName="FlexGridSamples.exe" isNew="true" type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
-                        <Description>Displays a row whose cells filter the corresponding column as text is typed.</Description>
+                    <SubFeature name="フィルター行" assemblyName="FlexGridSamples.exe" type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
+                        <Description>テキストが入力されると、セルが対応する列をフィルタリングする行を表示します。</Description>
                     </SubFeature>
 				</SubFeatures>
 			</Feature>
@@ -155,9 +155,9 @@
 			<Feature name="編集" type="MainTestApplication.Editing" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Editing\Editing.xaml" assemblyName="FlexGridSamples.exe">
 				<Description>C1FlexGrid は、Excel 形式の編集をサポートしています。セルに値を入力し、Enter キーまたは矢印キーを使用して次のセルに移動します。または、F2 キーを押してフルエディットモードにします。矢印キーはエディタ内をナビゲートします。オートコンプリートとバリューマッピングされたカラムも内蔵されています。ColumnValueConverter を作成して ValueConverter プロパティのカラムに割り当てるだけです。トランザクションによる編集もサポートされています。ここで使用する Customer クラスは IEditableObject を実装しているため、新しい行に移動する前に Esc キーを押して変更を元に戻すことができます（注：灰色の列は読み取り専用です）。</Description>
 			</Feature>
-			<Feature name="Mouse Hover" type="MainTestApplication.MouseHover" isNew="true" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
+			<Feature name="マウスホバー" type="MainTestApplication.MouseHover" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
                assemblyName="FlexGridSamples.exe">
-				<Description>Mouse Hover demonstration.</Description>
+				<Description>マウスホバーのデモです。</Description>
 			</Feature>
 		</Control>
 		<Control name="FlexSheet" assembly="C1.WPF.FlexSheet">
@@ -197,7 +197,7 @@
 				<Description>表とキューブのデータを細分化するピボットグリッドとチャートを作成し、リアルタイムの情報、洞察、結果を数秒で表示します。使いやすいコントロールは、Microsoft Excel® ピボットテーブルをモデルにしているため、すべてのユーザーにとって強力で使い慣れています。</Description>
 			</Feature>
     </Control>
-    <Control name="DataFilter" assembly="C1.WPF.DataFilter" isNew="true">
+    <Control name="DataFilter" assembly="C1.WPF.DataFilter" >
       <Feature
         name="フィルター付き従業員リスト" type="EmployeesListWithFilter.DataFilterSample" assemblyName="EmployeesListWithFilter.exe"
         source="C1.WPF.DataFilter\CS\EmployeesListWithFilter\Samples\DataFilterSample.xaml">
@@ -215,9 +215,9 @@
         <Description>このサンプルでは、さまざまな集計式とフィルターサマリーのカスタム形式を使用する方法を示します。</Description>
       </Feature>
       <Feature
-        name="Filter Editor" type="FilterEditor.FilterEditorSample" isNew="true" assemblyName="FilterEditor.exe"
+        name="フィルターエディター" type="FilterEditor.FilterEditorSample" assemblyName="FilterEditor.exe"
         source="C1.WPF.DataFilter\CS\FilterEditor\Samples\FilterEditorControl.xaml">
-        <Description>The FilterEditor allows end-users to create complex filter criteria. The TreeView based filtering UI can be attached to any control or information screen. For every operation control shows drop-down hints with available options.</Description>
+        <Description>FilterEditor を使用すると、エンドユーザーは複雑なフィルター基準を作成できます。TreeView ベースのフィルタリング UI は、任意のコントロールまたは情報画面にアタッチできます。すべての操作について、コントロールは利用可能なオプションを含むドロップダウンヒントを表示します。</Description>
       </Feature>
     </Control>
   </Group>
@@ -429,16 +429,16 @@
 		<Control name="FlexChart" isTop="true" isNew="true" assembly="C1.WPF.FlexChart">
 			<Feature name="Flex Chart">
 				<SubFeatures>
-          <SubFeature name="Showcase" isNew="true" assemblyName="FlexChartShowcase.exe" type="FlexChartShowcase.ShowcaseControl" source="C1.WPF.FlexChart\CS\FlexChartShowcase\Samples\ShowcaseControl.xaml">
-            <Description>The modern, high-performance FlexChart control comes with flexible data binding and an easy-to-use API for maximum configuration and customization. Chart types range from basic to complex to support all your data visualization needs.</Description>
+          <SubFeature name="ショーケース" assemblyName="FlexChartShowcase.exe" type="FlexChartShowcase.ShowcaseControl" source="C1.WPF.FlexChart\CS\FlexChartShowcase\Samples\ShowcaseControl.xaml">
+            <Description>最新の高性能 FlexChart コントロールには、柔軟なデータバインディングと、最大限の構成とカスタマイズを実現する使いやすい API が付属しています。 グラフの種類は、基本的なものから複雑なものまであり、すべてのデータ視覚化のニーズをサポートします。</Description>
           </SubFeature>
 					<SubFeature name="概要" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Introduction" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Introduction.xaml">
 						<Description>FlexChart の基本機能を示します。チャートはデータソースにバインドされており、ユーザーがチャートタイプ、系列の積み重ね、および回転を選択できます。</Description>
 					</SubFeature>
-					<SubFeature name="アニメーション" assemblyName="AnimationDemoWPF.exe" isNew="true" type="AnimationDemo.Views.FlexChartAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\FlexChartAnimation.xaml">
+					<SubFeature name="アニメーション" assemblyName="AnimationDemoWPF.exe" type="AnimationDemo.Views.FlexChartAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\FlexChartAnimation.xaml">
 						<Description>FlexChart には、新規データの読み込み、更新、および追加のための高度なアニメーションオプションが付属しています。</Description>
 					</SubFeature>
-					<SubFeature name="カスタムアニメーション" assemblyName="AnimationDemoWPF.exe" isNew="true" type="AnimationDemo.Views.CustomAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\CustomAnimation.xaml">
+					<SubFeature name="カスタムアニメーション" assemblyName="AnimationDemoWPF.exe" type="AnimationDemo.Views.CustomAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\CustomAnimation.xaml">
 						<Description>このビューでは、AnimationTransform イベントでチャートアニメーションをカスタマイズする方法を示します。</Description>
 					</SubFeature>
 					<SubFeature name="バインディング" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Binding" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Binding.xaml" >
@@ -492,6 +492,9 @@
 					<SubFeature name="エラーバー" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.ErrorBar" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\ErrorBar.xaml" >
 						<Description>エラーバーは、エラーと標準偏差のマージンを一目で確認するのに役立ちます。</Description>
 					</SubFeature>
+          <SubFeature name="Break Even" isNew="true" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.BreakEven" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\BreakEven.xaml" >
+            <Description>This view shows BreakEven Series in FlexChart.</Description>
+          </SubFeature>
 				</SubFeatures>
 			</Feature>
 			<Feature name="Flex Pie" isExpander="true">
@@ -499,13 +502,13 @@
 					<SubFeature name="概要" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.PieIntroduction" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\PieIntroduction.xaml">
 						<Description>このビューでは、FlexPie の基本機能を示します。</Description>
 					</SubFeature>
-					<SubFeature name="アニメーション" assemblyName="AnimationDemoWPF.exe" isNew="true" type="AnimationDemo.Views.FlexPieAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\FlexPieAnimation.xaml">
+					<SubFeature name="アニメーション" assemblyName="AnimationDemoWPF.exe" type="AnimationDemo.Views.FlexPieAnimation" source="C1.WPF.FlexChart\CS\AnimationDemo\Views\FlexPieAnimation.xaml">
 						<Description>FlexPie には、新規データの読み込み、更新、および追加のための高度なアニメーションオプションが付属しています。</Description>
 					</SubFeature>
 					<SubFeature name="選択" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.PieSelection" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\PieSelection.xaml">
 						<Description>このビューでは、FlexPie の選択機能を示します。</Description>
 					</SubFeature>
-					<SubFeature name="複数の円グラフ" assemblyName="FlexChartExplorer.4.exe" isNew="true" type="FlexChartExplorer.MultiPie" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\MultiPie.xaml">
+					<SubFeature name="複数の円グラフ" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.MultiPie" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\MultiPie.xaml">
 						<Description>複数のコンマ区切りフィールドがバインディングで指定されている場合、複数の円グラフを描画します。</Description>
 					</SubFeature>
 				</SubFeatures>
@@ -604,7 +607,7 @@
 				<Description>データの構造と関係を示す階層図を作成します。C1OrgChart コントロールは、プラットフォームの豊富なデータバインディングメカニズムを活用します。</Description>
 			</Feature>
 			<Feature name="階層" source="C1.WPF.OrgChart\CS\HierarchicalDataTemplate\HierarchicalDataTemplate\HierarchicalDataTemplateSample.xaml" type="HierarchicalDataTemplateWPF.HierarchicalDataTemplateSample" assemblyName="HierarchicalDataTemplate2010.4.exe">
-				<Description>DataTemplateSelectorクラスとHierarchicalDataTemplateクラスを使用したC1OrgChartの高度なバインディングシナリオを示します。</Description>
+				<Description>DataTemplateSelector クラスと HierarchicalDataTemplate クラスを使用した C1OrgChart の高度なバインディングシナリオを示します。</Description>
 			</Feature>
 		</Control>
 		<Control name="Sparkline" assembly="C1.WPF.Sparkline">
@@ -617,7 +620,7 @@
 			<Feature name="データバインディング" assemblyName="SparklineSamples.4.exe" type="SparklineSamples.RegionSales" source="C1.WPF.Sparkline\CS\SparklineSamples\RegionSales.xaml">
 				<Description>このデモでは、データバインドされた ListBox 内にスパークラインを表示します。</Description>
 			</Feature>
-			<Feature name="FlexGrid との統合" assemblyName="SparklineSamples.4.exe" type="SparklineSamples.FlexGridIntegration" isNew="true" source="C1.WPF.Sparkline\CS\SparklineSamples\FlexGridIntegration.xaml">
+			<Feature name="FlexGrid との統合" assemblyName="SparklineSamples.4.exe" type="SparklineSamples.FlexGridIntegration" source="C1.WPF.Sparkline\CS\SparklineSamples\FlexGridIntegration.xaml">
 				<Description>このデモでは、FlexGrid の列の CellTemplates 内でスパークラインを使用する方法を示します。</Description>
 			</Feature>
 		</Control>
@@ -913,7 +916,7 @@
 	<Group name="レポートおよびドキュメント">
 		<Control name="Excel" assembly="C1.WPF.Excel">
 			<Feature assemblyName="ExcelSamples.4.exe" type="ExcelSamples.ExcelCreator" source="C1.WPF.Excel\CS\ExcelSamples\ExcelCreator.xaml">
-				<Description>C1Excelコンポーネントの基本的な機能を示します。</Description>
+				<Description>C1Excel コンポーネントの基本的な機能を示します。</Description>
 			</Feature>
 		</Control>
 		<Control name="FlexReport" assembly="C1.WPF.FlexReport">
@@ -963,9 +966,14 @@
 			</Feature>
 		</Control>
     <Control name="PrintDocument" assembly="C1.WPF.PrintDocument" isNew="true">
-      <Feature assemblyName="DataBinding.exe" type="DataBinding.DataBoundDoc" source="C1.PrintDocument\CS\DataBinding\DataBoundDoc.xaml">
+      <Feature name="Generate reports" assemblyName="SimpleReports.exe" type="SimpleReports.CustomReport" source="C1.WPF.PrintDocument\CS\SimpleReports\CustomReport.xaml" isNew="true">
         <Description>
-          The C1PrintDocument component can be used to create rich documents containing tables, hyperlinks, input controls, images and more. You can easily add content to C1PrintDocument with its block, inline and direct rendering methods, and then print or export to PDF, Word, Excel and more. This demo shows the basics of data binding and scripting in C1PrintDocument.
+          The sample contains methods that use the PrintDocument classes to create simple reports.
+        </Description>
+      </Feature>
+      <Feature name="Binding" assemblyName="DataBinding.exe" type="DataBinding.DataBoundDoc" source="C1.WPF.PrintDocument\CS\DataBinding\DataBoundDoc.xaml">
+        <Description>
+          C1PrintDocument コンポーネントを使用して、テーブル、ハイパーリンク、入力コントロール、画像などを含むリッチドキュメントを作成できます。ブロック、インライン、およびダイレクトレンダリングメソッドを使用してコンテンツを C1PrintDocument に簡単に追加し、PDF、Word、Excel などに印刷またはエクスポートできます。このデモは、C1PrintDocument でのデータバインディングとスクリプトの基本を示します。
         </Description>
       </Feature>
     </Control>
@@ -975,7 +983,7 @@
 			<Feature assemblyName="BarCodesSample.4.exe" type="BarCodesSample.DemoPage" source="C1.WPF.BarCode\CS\BarCodeSamples\BarCodeSamples\DemoPage.xaml">
 				<Description>C1BarCode コントロールは、異なるタイプのバーコードと QR コードを生成します。</Description>
 			</Feature>
-			<Feature name="新しいバーコードタイプ" isNew="true" assemblyName="BarCodesSample.4.exe" type="BarCodesSample.NewBarcode" source="C1.WPF.BarCode\CS\BarCodeSamples\BarCodeSamples\NewBarcodes.xaml">
+			<Feature name="新しいバーコードタイプ" assemblyName="BarCodesSample.4.exe" type="BarCodesSample.NewBarcode" source="C1.WPF.BarCode\CS\BarCodeSamples\BarCodeSamples\NewBarcodes.xaml">
 				<Description>2018 年に追加された新しいバーコードおよび QR コードの種類を確認できます。</Description>
 			</Feature>
 		</Control>
@@ -1243,7 +1251,7 @@
 			</Feature>
 		</Control>
 		<Control name="Toolbar" assembly="C1.WPF.Toolbar">
-			<Feature name="Simplified Ribbon" type="ToolbarSamples.SimplifiedRibbon" source="C1.WPF.Toolbar\CS\ToolbarSamples\SimplifiedRibbon.xaml" isNew="true" assemblyName="ToolbarSamples.4.exe">
+			<Feature name="Simplified Ribbon" type="ToolbarSamples.SimplifiedRibbon" source="C1.WPF.Toolbar\CS\ToolbarSamples\SimplifiedRibbon.xaml" assemblyName="ToolbarSamples.4.exe">
 				<Description>Simplified Ribbon は、クリーンでコンパクトなツールバーとリボンのハイブリッドです。コントロールを折りたたんでコンパクトな単一行表示にしたり、展開して完全なリボンの外観に切り替えることができます。</Description>
 			</Feature>
 			<Feature type="ToolbarSamples.Toolbar" source="C1.WPF.Toolbar\CS\ToolbarSamples\Toolbar.xaml" assemblyName="ToolbarSamples.4.exe">
@@ -1299,7 +1307,7 @@
 			<Feature name="ドラッグ＆ドロップ" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\ItemsControls\C1TreeViewDragDrop.xaml" type="BasicControls.DemoTreeViewDragDrop">
 				<Description>ドラッグ＆ドロップ操作の組み込みサポートを示します。</Description>
 			</Feature>
-			<Feature name="外部へのドラッグ" isNew="true" assemblyName="C1TreeViewDragDropSample2010.4.exe" source="C1.WPF\CS\C1TreeViewDragDropSample\C1TreeViewDragDropSample2010\Interaction.xaml" type="C1TreeViewDragDropSample2010.Interaction">
+			<Feature name="外部へのドラッグ" assemblyName="C1TreeViewDragDropSample2010.4.exe" source="C1.WPF\CS\C1TreeViewDragDropSample\C1TreeViewDragDropSample2010\Interaction.xaml" type="C1TreeViewDragDropSample2010.Interaction">
 				<Description>TreeView は、他のコントロールやアプリケーションとのドラッグ＆ドロップ操作をサポートしています。</Description>
 			</Feature>
 			<Feature name="データバインド" assemblyName="BasicControls.4.exe" source="C1.WPF\CS\BasicControls\ItemsControls\SimpleC1TreeViewPage.xaml" type="BasicControls.DemoSimpleC1TreeView">

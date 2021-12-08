@@ -10,18 +10,21 @@
     mc:Ignorable="d">
 
     <Grid>
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel x:Name="stackPanel" Orientation="Horizontal">
-            <StackPanel Orientation="Horizontal">
-                <Label VerticalAlignment="Center">BinWidth :  </Label>
-                <TextBox x:Name="tbBinWidth" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="TextBox_TextChanged"/>
-                <CheckBox Content="Normal Curve" x:Name="cbShow" VerticalAlignment="Center" Margin="10 0 20 0" Checked="cbShow_Checked" Unchecked="cbShow_UnChecked"/>
-                <ComboBox x:Name="comboBoxAppearanceType" Margin="10" ItemsSource="{Binding DataContext.Type}" SelectionChanged="ComboBoxAppearanceType_SelectionChanged"/>
-                <CheckBox Content="Cumulative Mode" x:Name="cumulativeShow" VerticalAlignment="Center" Margin="10 0 20 0" Checked="cumulativeShow_Checked" Unchecked="cumulativeShow_UnChecked"/>
-            </StackPanel>
+            <Label VerticalAlignment="Center">BinWidth :</Label>
+            <TextBox x:Name="tbBinWidth" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="TextBox_TextChanged"/>
+            <CheckBox Content="Normal Curve" x:Name="cbShow" VerticalAlignment="Center" Margin="10 0 20 0" Checked="cbShow_Checked" Unchecked="cbShow_UnChecked"/>
+            <Chart:C1ComboBox x:Name="comboBoxAppearanceType" Margin="10" ItemsSource="{Binding DataContext.Type}"
+                              SelectedValue="{Binding ElementName=histogramSeries, Path=AppearanceType, Mode=TwoWay}"/>
+            <CheckBox Content="Cumulative Mode" x:Name="cumulativeShow" VerticalAlignment="Center" Margin="10 0 20 0" Checked="cumulativeShow_Checked"
+                      Unchecked="cumulativeShow_UnChecked"/>
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" ChartType="Histogram" ItemsSource="{Binding DataContext.Data}" Grid.Row="1" Binding="Y" BindingX="X" Rendered="flexChart_Rendered">
             <Chart:FlexChart.AxisX>

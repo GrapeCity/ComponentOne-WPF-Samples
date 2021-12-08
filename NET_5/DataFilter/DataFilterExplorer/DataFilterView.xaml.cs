@@ -11,6 +11,12 @@ namespace DataFilterExplorer
         {
             InitializeComponent();
             this.DataContext = new SampleDataSource();
+            Loaded += DataFilterView_Loaded;
+        }
+
+        private void DataFilterView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

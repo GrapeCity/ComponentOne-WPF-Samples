@@ -21,7 +21,7 @@ namespace FlexChartExplorer
     /// </summary>
     public partial class BoxWhisker : UserControl
     {
-        private List<string> _calculations = null;
+        private List<string> _calculations = DataCreator.CreateQuartileCalculations();
         private List<ClassScore> _data = null;
         public BoxWhisker()
         {
@@ -29,18 +29,7 @@ namespace FlexChartExplorer
             Tag = AppResources.BoxWhiskerTag;
         }
 
-        public List<string> Calculations
-        {
-            get
-            {
-                if (_calculations == null)
-                {
-                    _calculations = DataCreator.CreateQuartileCalculations();
-                }
-
-                return _calculations;
-            }
-        }
+        public List<string> Calculations => _calculations;
 
         public List<ClassScore> Data
         {
@@ -88,16 +77,13 @@ namespace FlexChartExplorer
 
         private void cboQuartileCalculation_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (boxWhiskerA == null || boxWhiskerB == null || boxWhiskerC == null) return;
+            if (boxWhiskerA == null || boxWhiskerB == null || boxWhiskerC == null || e.AddedItems.Count == 0) return;
 
-            var comboBox = sender as ComboBox;
-            if (comboBox.SelectedValue != null)
-            {
-                var calculation = (QuartileCalculation)Enum.Parse(typeof(QuartileCalculation), comboBox.SelectedValue.ToString());
-                boxWhiskerA.QuartileCalculation = calculation;
-                boxWhiskerB.QuartileCalculation = calculation;
-                boxWhiskerC.QuartileCalculation = calculation;
-            }
+            var calculation = (QuartileCalculation)Enum.Parse(typeof(QuartileCalculation), e.AddedItems[0].ToString());
+            boxWhiskerA.QuartileCalculation = calculation;
+            boxWhiskerB.QuartileCalculation = calculation;
+            boxWhiskerC.QuartileCalculation = calculation;
+
         }
     }
 }

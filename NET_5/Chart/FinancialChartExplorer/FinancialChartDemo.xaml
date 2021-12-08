@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FinancialChartExplorer"
+             xmlns:res="clr-namespace:FinancialChartExplorer.Resources"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500">
     <UserControl.DataContext>
@@ -60,8 +61,8 @@
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <TextBlock Text="FinancialChart Explorer" FontWeight="Bold" FontSize="25" VerticalAlignment="Bottom" />
-                    <TextBlock Text="A showcase for the new WPF FinancialChart." Grid.Row="1" />
+                    <TextBlock Text="{x:Static res:AppResources.FinancialChartTitle}" FontWeight="Bold" FontSize="25" VerticalAlignment="Bottom" />
+                    <TextBlock Text="{x:Static res:AppResources.FinancialChartDescription}" Grid.Row="1" />
                 </Grid>
             </StackPanel>
         </Border>

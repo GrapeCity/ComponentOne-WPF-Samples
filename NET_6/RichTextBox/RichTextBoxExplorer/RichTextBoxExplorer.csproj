@@ -41,28 +41,28 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox.Ribbon">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

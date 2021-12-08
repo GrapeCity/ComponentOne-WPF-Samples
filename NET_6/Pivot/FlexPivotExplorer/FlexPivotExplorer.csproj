@@ -38,10 +38,10 @@
     </PackageReference>
     <PackageReference Include="C1.PivotEngine" Version="5.0.20213.235" />
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.Zip" Version="2.0.20202.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />

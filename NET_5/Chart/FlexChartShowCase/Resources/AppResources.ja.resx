@@ -120,4 +120,7 @@
   <data name="Desc" xml:space="preserve">
     <value>このサンプルではチャートの主要な機能を示します。</value>
   </data>
+  <data name="ExportText" xml:space="preserve">
+    <value>エクスポート</value>
+  </data>
 </root>

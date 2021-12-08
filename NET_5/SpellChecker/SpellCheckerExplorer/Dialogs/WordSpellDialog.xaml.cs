@@ -6,6 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using C1.WPF.SpellChecker;
 using C1.WPF.Core;
+using System.Collections.ObjectModel;
 
 namespace SpellCheckerExplorer
 {
@@ -28,6 +29,7 @@ namespace SpellCheckerExplorer
         bool _updatingText;             // ignore changes while updating            
         Brush _errorForeground = new SolidColorBrush(Colors.Red);
         Dictionary<string, string> _changeAll = new Dictionary<string, string>();
+        public ObservableCollection<string> Items { get; set; } = new ObservableCollection<string>();
 
         #endregion
 
@@ -205,7 +207,7 @@ namespace SpellCheckerExplorer
                 _btnAdd.IsEnabled = false;
 
                 // no suggestions
-                _listSuggestions.Items.Clear();
+                Items.Clear();
             }
             else
             {
@@ -312,7 +314,7 @@ namespace SpellCheckerExplorer
         // update suggestions in the list
         void UpdateSuggestions(string word)
         {
-            _listSuggestions.Items.Clear();
+            Items.Clear();
             string[] suggestions = _spell.GetSuggestions(word);
             if (suggestions.Length > 0)
             {
@@ -320,13 +322,14 @@ namespace SpellCheckerExplorer
                 {
                     AddSuggestion(suggestion);
                 }
-                _listSuggestions.SelectedIndex = 0;
+
+                _listSuggestions.SelectedItem = _listSuggestions.Items[0];
                 _listSuggestions.IsEnabled = true;
             }
             else
             {
                 AddSuggestion(_lblNoSuggestions.Text);
-                _listSuggestions.SelectedIndex = -1;
+                //_listSuggestions.SelectedIndex = -1;
                 _listSuggestions.IsEnabled = false;
             }
         }
@@ -334,21 +337,7 @@ namespace SpellCheckerExplorer
         // suggestions in list are TextBlock elements
         void AddSuggestion(string suggestion)
         {
-            TextBlock tb = new TextBlock();
-            C1TapHelper th = new C1TapHelper(tb);
-            th.DoubleTapped += th_DoubleTapped;
-            tb.Text = suggestion;
-            _listSuggestions.Items.Add(tb);
-        }
-
-        // double-click selects word and changes it
-        void th_DoubleTapped(object sender, C1TappedEventArgs e)
-        {
-            var tb = _listSuggestions.SelectedItem as TextBlock;
-            if (tb != null && tb.Text == _textChangeTo)
-            {
-                _btnChange_Click(this, null);
-            }
+            Items.Add(suggestion);
         }
 
         // disable ChangeAll button when deleting words
@@ -374,7 +363,17 @@ namespace SpellCheckerExplorer
 
                 // update suggest button
                 string text = _textChangeTo;
-                if (text.IndexOf(' ') < 0 && !_listSuggestions.Items.Contains(text))
+                bool contain = false;
+                foreach (var item in _listSuggestions.Items)
+                {
+                    if (item.Content.ToString() == text)
+                    {
+                        contain = true;
+                        break;
+                    }
+                }
+
+                if (text.IndexOf(' ') < 0 && !contain)
                 {
                     bool enable = true;
                     for (int i = 0; i < text.Length && enable; i++)
@@ -401,15 +400,14 @@ namespace SpellCheckerExplorer
         #region event handlers
 
         // update ChangeTo text when a suggestion is selected
-        private void _listSuggestions_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void _listSuggestions_SelectionChanged(object sender, SelectionChangedEventArgs<int> e)
         {
-            var tb = _listSuggestions.SelectedItem as TextBlock;
-            if (tb != null && tb.Text != _lblNoSuggestions.Text)
+            if (_listSuggestions.SelectedItem == null) return;
+            if (_listSuggestions.SelectedItem != _lblNoSuggestions.Text)
             {
-                _textChangeTo = tb.Text;
+                _textChangeTo = _listSuggestions.SelectedItem.ToString();
             }
         }
-
         // move to the next error (ignore the current one)
         void _btnIgnore_Click(object sender, RoutedEventArgs e)
         {
@@ -535,5 +533,13 @@ namespace SpellCheckerExplorer
         }
 
         #endregion
+
+        private void _listSuggestions_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (_listSuggestions.SelectedItem == _textChangeTo)
+            {
+                _btnChange_Click(this, null);
+            }
+        }
     }
 }

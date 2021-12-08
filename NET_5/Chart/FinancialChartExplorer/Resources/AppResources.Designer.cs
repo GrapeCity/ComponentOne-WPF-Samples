@@ -22,7 +22,7 @@ namespace FinancialChartExplorer.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    public class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace FinancialChartExplorer.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FinancialChartExplorer.Resources.AppResources", typeof(AppResources).Assembly);
@@ -51,7 +51,7 @@ namespace FinancialChartExplorer.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Analytics.
         /// </summary>
-        internal static string Analytics {
+        public static string Analytics {
             get {
                 return ResourceManager.GetString("Analytics", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Created by Richard Arms, Arms CandleVolume charts are a combination of EquiVolume and CandleVolume charts..
         /// </summary>
-        internal static string ArmsCandleTag {
+        public static string ArmsCandleTag {
             get {
                 return ResourceManager.GetString("ArmsCandleTag", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Arms CandleVolume.
         /// </summary>
-        internal static string ArmsCandleVolume {
+        public static string ArmsCandleVolume {
             get {
                 return ResourceManager.GetString("ArmsCandleVolume", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to CandleVolume.
         /// </summary>
-        internal static string CandleVolume {
+        public static string CandleVolume {
             get {
                 return ResourceManager.GetString("CandleVolume", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to CandleVolume charts are identical to standard Candlestick charts, except that the width of each bar is determined by a fifth value, volume..
         /// </summary>
-        internal static string CandleVolumeTag {
+        public static string CandleVolumeTag {
             get {
                 return ResourceManager.GetString("CandleVolumeTag", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Chart Types.
         /// </summary>
-        internal static string ChartTypesTitle {
+        public static string ChartTypesTitle {
             get {
                 return ResourceManager.GetString("ChartTypesTitle", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ColumnVolume.
         /// </summary>
-        internal static string ColumnVolume {
+        public static string ColumnVolume {
             get {
                 return ResourceManager.GetString("ColumnVolume", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ColumnVolume charts are similar to Column charts, except that they accept a second value, volume, which dictates the width of each bar..
         /// </summary>
-        internal static string ColumnVolumeTag {
+        public static string ColumnVolumeTag {
             get {
                 return ResourceManager.GetString("ColumnVolumeTag", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to EquiVolume.
         /// </summary>
-        internal static string EquiVolume {
+        public static string EquiVolume {
             get {
                 return ResourceManager.GetString("EquiVolume", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to EquiVolume charts are similar to Candlestick charts, but they only show the high and low values. In addition, the width of each bar is determined by a fifth value, volume..
         /// </summary>
-        internal static string EquiVolumeTag {
+        public static string EquiVolumeTag {
             get {
                 return ResourceManager.GetString("EquiVolumeTag", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Event Annotations.
         /// </summary>
-        internal static string EventAnnotations {
+        public static string EventAnnotations {
             get {
                 return ResourceManager.GetString("EventAnnotations", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Event annotations are used to mark important events that can be attached to a specific data point on the FinancialChart. Hovering over the event annotation will reveal the full details of the event..
         /// </summary>
-        internal static string EventAnnotationsTag {
+        public static string EventAnnotationsTag {
             get {
                 return ResourceManager.GetString("EventAnnotationsTag", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Fibonacci Tool.
         /// </summary>
-        internal static string FibonacciTool {
+        public static string FibonacciTool {
             get {
                 return ResourceManager.GetString("FibonacciTool", resourceCulture);
             }
@@ -180,16 +180,34 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Fibonacci tool is used for trend analysis in financial charts. With the help of range selector, you can choose data range for calculation..
         /// </summary>
-        internal static string FibonacciToolTag {
+        public static string FibonacciToolTag {
             get {
                 return ResourceManager.GetString("FibonacciToolTag", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A showcase for the new WPF FinancialChart..
+        /// </summary>
+        public static string FinancialChartDescription {
+            get {
+                return ResourceManager.GetString("FinancialChartDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FinancialChart Explorer.
+        /// </summary>
+        public static string FinancialChartTitle {
+            get {
+                return ResourceManager.GetString("FinancialChartTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Heikin-Ashi charts are a variation of Japanese candlestick charts that were designed to remove noise from candlesticks and behave much like a moving average. These charts can be used to identify trends, potential reversal points, and other technical analysis patterns..
         /// </summary>
-        internal static string HeikinAshiTag {
+        public static string HeikinAshiTag {
             get {
                 return ResourceManager.GetString("HeikinAshiTag", resourceCulture);
             }
@@ -198,7 +216,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Heikin-Ashi.
         /// </summary>
-        internal static string HeikinAshiTitle {
+        public static string HeikinAshiTitle {
             get {
                 return ResourceManager.GetString("HeikinAshiTitle", resourceCulture);
             }
@@ -207,7 +225,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Indicators.
         /// </summary>
-        internal static string Indicators {
+        public static string Indicators {
             get {
                 return ResourceManager.GetString("Indicators", resourceCulture);
             }
@@ -216,7 +234,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to A technical indicator is a set of derived data that is calculated by applying one or more formulas to the original set of data. Technical indicators are generally used to forecast the asset&apos;s market direction and generally plotted separately from the original data since the Y-axis scales differ..
         /// </summary>
-        internal static string IndicatorsTag {
+        public static string IndicatorsTag {
             get {
                 return ResourceManager.GetString("IndicatorsTag", resourceCulture);
             }
@@ -225,7 +243,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Interaction.
         /// </summary>
-        internal static string Interaction {
+        public static string Interaction {
             get {
                 return ResourceManager.GetString("Interaction", resourceCulture);
             }
@@ -234,7 +252,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Kagi.
         /// </summary>
-        internal static string Kagi {
+        public static string Kagi {
             get {
                 return ResourceManager.GetString("Kagi", resourceCulture);
             }
@@ -243,7 +261,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to A Kagi chart displays supply and demand trends using a sequence of linked vertical lines. The thickness and direction of the lines vary depending on the price movement. If closing prices go in the direction of the previous Kagi line, then that Kagi line is extended. However, if the closing price reverses by the preset reversal amount, a new Kagi line is charted in the next column in the opposite direction. Thin lines indicate that the price breaks the previous low (supply) while thick lines indicate that th [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string KagiTag {
+        public static string KagiTag {
             get {
                 return ResourceManager.GetString("KagiTag", resourceCulture);
             }
@@ -252,7 +270,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Line Break.
         /// </summary>
-        internal static string LineBreak {
+        public static string LineBreak {
             get {
                 return ResourceManager.GetString("LineBreak", resourceCulture);
             }
@@ -261,7 +279,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to A Line Break or Three Line Break chart uses vertical boxes or lines to illustrate the price changes of an asset or market. Movements are depicted with box colors and styles; movements that continue the trend of the previous box are colored similarly while movements that trend oppositely are indicated with a different color and/or style. The opposite trend is only drawn if its value exceeds the extreme value of the previous n number of boxes or lines, which is determined by the newLineBreaks option..
         /// </summary>
-        internal static string LineBreakTag {
+        public static string LineBreakTag {
             get {
                 return ResourceManager.GetString("LineBreakTag", resourceCulture);
             }
@@ -270,7 +288,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Markers.
         /// </summary>
-        internal static string Markers {
+        public static string Markers {
             get {
                 return ResourceManager.GetString("Markers", resourceCulture);
             }
@@ -279,7 +297,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Markers display a text area on the FinancialChart that displays the data values based on the mouse cursor&apos;s position on the chart. Markers also support optional vertical and horizontal lines to enable a cross-hair effect..
         /// </summary>
-        internal static string MarkersTag {
+        public static string MarkersTag {
             get {
                 return ResourceManager.GetString("MarkersTag", resourceCulture);
             }
@@ -288,7 +306,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Moving Average.
         /// </summary>
-        internal static string MovingAverage {
+        public static string MovingAverage {
             get {
                 return ResourceManager.GetString("MovingAverage", resourceCulture);
             }
@@ -297,7 +315,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Moving average trend lines are used to analyze data by creating a series of averages of the original data set..
         /// </summary>
-        internal static string MovingAveragesTag {
+        public static string MovingAveragesTag {
             get {
                 return ResourceManager.GetString("MovingAveragesTag", resourceCulture);
             }
@@ -306,7 +324,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Overlays.
         /// </summary>
-        internal static string Overlays {
+        public static string Overlays {
             get {
                 return ResourceManager.GetString("Overlays", resourceCulture);
             }
@@ -315,7 +333,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Overlays, like technical indicators, are a set of derived data that is calculated by applying one or more formulas to the original set of data. Overlays are generally used to forecast an asset&apos;s market direction and generally plotted with the original data set since the the Y-axis scales are the same..
         /// </summary>
-        internal static string OverlaysTag {
+        public static string OverlaysTag {
             get {
                 return ResourceManager.GetString("OverlaysTag", resourceCulture);
             }
@@ -324,7 +342,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Point&amp;Figure.
         /// </summary>
-        internal static string PointFigure {
+        public static string PointFigure {
             get {
                 return ResourceManager.GetString("PointFigure", resourceCulture);
             }
@@ -333,7 +351,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Point and Figure chart consists of columns of X&apos;s and O&apos;s that represent filtered price movements. X-Columns represent rising prices and O-Columns represent falling prices..
         /// </summary>
-        internal static string PointFigureTag {
+        public static string PointFigureTag {
             get {
                 return ResourceManager.GetString("PointFigureTag", resourceCulture);
             }
@@ -342,7 +360,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Range Selector.
         /// </summary>
-        internal static string RangeSelector {
+        public static string RangeSelector {
             get {
                 return ResourceManager.GetString("RangeSelector", resourceCulture);
             }
@@ -351,7 +369,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The RangeSelector allows end users to adjust the FinancialChart&apos;s visible range of data at runtime. The example below demonstrates the typical use case for the RangeSelector and how to apply a custom style..
         /// </summary>
-        internal static string RangeSelectorTag {
+        public static string RangeSelectorTag {
             get {
                 return ResourceManager.GetString("RangeSelectorTag", resourceCulture);
             }
@@ -360,7 +378,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Renko.
         /// </summary>
-        internal static string Renko {
+        public static string Renko {
             get {
                 return ResourceManager.GetString("Renko", resourceCulture);
             }
@@ -369,16 +387,25 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The Renko chart uses bricks of uniform size to chart the price movement. When a price moves to a greater or lesser value than the preset boxSize option required to draw a new brick, a new brick is drawn in the succeeding column. The change in box color and direction signifies a trend reversal..
         /// </summary>
-        internal static string RenkoTag {
+        public static string RenkoTag {
             get {
                 return ResourceManager.GetString("RenkoTag", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FinancialChartExplorer.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trend Lines.
         /// </summary>
-        internal static string TrendLines {
+        public static string TrendLines {
             get {
                 return ResourceManager.GetString("TrendLines", resourceCulture);
             }
@@ -387,7 +414,7 @@ namespace FinancialChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Trend lines are used to visualize trends in data and to help analyze the problems of prediction..
         /// </summary>
-        internal static string TrendLinesTag {
+        public static string TrendLinesTag {
             get {
                 return ResourceManager.GetString("TrendLinesTag", resourceCulture);
             }

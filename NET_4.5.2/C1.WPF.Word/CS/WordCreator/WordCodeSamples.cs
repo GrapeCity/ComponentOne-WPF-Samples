@@ -23,6 +23,8 @@ using Microsoft.Win32;
 namespace Word.Creator
 {
     using C1.Util;
+    using C1.WPF.RichTextBox;
+    using C1.WPF.RichTextBox.Documents;
     using C1.WPF.Word;
     using C1.WPF.Word.Objects;
 
@@ -83,6 +85,9 @@ namespace Word.Creator
                     break;
                 case "Graphics":
                     CreateDocumentGraphics(word);
+                    break;
+                case "Rich Text":
+                    CreateDocumentFromRtf(word);
                     break;
             }
 
@@ -704,6 +709,36 @@ namespace Word.Creator
             rtf.DrawString("Simple Bezier", font, Colors.Black, new Rect(500, 150, 100, 100));
         }
 
+        #endregion
+
+        #region ** richtext
+        private static string _asmName = new AssemblyName(Assembly.GetExecutingAssembly().FullName).Name;
+        static void CreateDocumentFromRtf(C1WordDocument doc)
+        {            
+            var stream = Application.GetResourceStream(new Uri("/" + _asmName + ";component/Resources/dickens.htm", UriKind.Relative)).Stream;
+            var html = new StreamReader(stream).ReadToEnd();
+            var richTB = new C1RichTextBox();
+            richTB.HtmlFilter.ConvertingHtmlNode += OnConvertingHtmlNode;
+            richTB.Html = html;
+            richTB.HtmlFilter.ConvertingHtmlNode -= OnConvertingHtmlNode;
+
+            //This string rtfText can be used well in MS Word
+            var rtfText = new RtfFilter().ConvertFromDocument(richTB.Document);
+            doc.ParseRtfText(rtfText);
+        }
+
+        static void OnConvertingHtmlNode(object sender, ConvertingHtmlNodeEventArgs e)
+        {
+            var element = e.HtmlNode as C1HtmlElement;
+            if (element != null && element.Name == "img")
+            {
+                string src;
+                if (element.Attributes.TryGetValue("src", out src) && src.StartsWith("images"))
+                {
+                    element.Attributes["src"] = "/" + _asmName + ";component/Resources/" + src;
+                }
+            }
+        }
         #endregion
     }
 }

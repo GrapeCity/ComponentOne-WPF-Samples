@@ -18,17 +18,12 @@ namespace FlexGridExplorer
             {
                 selectionMode.Items.Add(value.ToString());
             }
-            selectionMode.SelectedIndex = selectionMode.Items.IndexOf(GridSelectionMode.CellRange.ToString());
+            selectionMode.SelectedItem = GridSelectionMode.CellRange.ToString();
             lblShowMarquee.Text = AppResources.ShowMarquee;
 
             var data = Customer.GetCustomerList(100);
             grid.ItemsSource = data;
             grid.MinColumnWidth = 85;
-        }
-
-        private void selectionMode_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            grid.SelectionMode = (GridSelectionMode)Enum.Parse(typeof(GridSelectionMode), selectionMode.Items[selectionMode.SelectedIndex].ToString());
         }
 
         private void grid_SelectionChanging(object sender, GridCellRangeEventArgs e)
@@ -49,6 +44,12 @@ namespace FlexGridExplorer
             {
                 lblSelection.Text = "";
             }
+        }
+
+        private void selectionMode_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (selectionMode.SelectedItem != null)
+                grid.SelectionMode = (GridSelectionMode)Enum.Parse(typeof(GridSelectionMode), selectionMode.SelectedItem.ToString());
         }
     }
 }

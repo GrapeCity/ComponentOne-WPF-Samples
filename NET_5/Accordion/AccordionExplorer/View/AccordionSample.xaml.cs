@@ -1,19 +1,6 @@
-﻿using C1.WPF;
-using C1.WPF.Accordion;
-using C1.WPF.Input;
+﻿using C1.WPF.Accordion;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AccordionExplorer
 {
@@ -30,9 +17,9 @@ namespace AccordionExplorer
 
         void ExpandModeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (accordion != null)
+            if (accordion != null && e.AddedItems.Count > 0)
             {
-                accordion.ExpandMode = (ExpandMode) Enum.Parse(typeof(ExpandMode), (string)((sender as ComboBox).SelectedItem as ComboBoxItem).Content);
+                accordion.ExpandMode = (ExpandMode) Enum.Parse(typeof(ExpandMode), (string)e.AddedItems[0]);
             }
         }
     }

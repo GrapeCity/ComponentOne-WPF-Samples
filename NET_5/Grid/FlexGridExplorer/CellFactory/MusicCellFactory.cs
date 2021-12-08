@@ -1,5 +1,7 @@
 ﻿using C1.WPF.Grid;
 using System;
+using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows;
 #if SILVERLIGHT
 using C1.Silverlight.FlexGrid;
@@ -66,12 +68,35 @@ namespace FlexGridExplorer
             else if (cellContent is RatingCell ratingCell)
             {
                 var col = Grid.Columns[range.Column];
+                var row = Grid.Rows[range.Row];
                 var cellValue = Grid.GetCellValue(range);
                 ratingCell.Rating = Convert.ToInt32(cellValue);
+                ratingCell.Range = range;
+                if (row.DataItem is Song)
+                    ratingCell.PropertyChanged += RatingCellOnPropertyChanged;
             }
             else
             {
                 base.BindCellContent(cellType, range, cellContent);
+            }
+        }
+
+        private void RatingCellOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "Rating")
+            {
+                var ratingCell = sender as RatingCell;
+
+                if (ratingCell != null)
+                {
+                    Grid.SetCellValue(ratingCell.Range, ratingCell.Rating);
+                    var task = Grid.StartEditingAsync(ratingCell.Range.Row, ratingCell.Range.Column);
+                    var res = task.Status == TaskStatus.RanToCompletion && task.Result;
+                    if (!res)
+                        return;
+                }
+
+                Grid.FinishEditing();
             }
         }
 
@@ -81,8 +106,14 @@ namespace FlexGridExplorer
             {
                 nodeCell.IsCollapsedChanged -= OnIsCollapsedChanged;
             }
-            else
+            else 
             {
+                if (cellContent is RatingCell ratingCell)
+                {
+                    var row = Grid.Rows[range.Row];
+                    if (row.DataItem is Song)
+                        ratingCell.PropertyChanged -= RatingCellOnPropertyChanged;
+                }
                 base.UnbindCellContent(cellType, range, cellContent);
             }
         }

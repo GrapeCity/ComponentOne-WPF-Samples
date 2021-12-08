@@ -159,6 +159,12 @@
   <data name="FibonacciToolTag" xml:space="preserve">
     <value>フィボナッチツールは、株価チャートのトレンド分析に使用されます。範囲セレクタを使用すると、計算対象のデータ範囲を選択できます。</value>
   </data>
+  <data name="FinancialChartDescription" xml:space="preserve">
+    <value>新しい WPFFinancialChart のショーケースです。</value>
+  </data>
+  <data name="FinancialChartTitle" xml:space="preserve">
+    <value>FinancialChart エクスプローラー</value>
+  </data>
   <data name="HeikinAshiTag" xml:space="preserve">
     <value>平均足チャートは日本のローソク足チャートのバリエーションで、ローソク足チャートからノイズを取り除き、移動平均によく似た動作をするように設計されています。このチャートを使用すると、トレンド、潜在的反転ポイントなどのテクニカル分析パターンを見極めることができます。</value>
   </data>
@@ -227,5 +233,8 @@
   </data>
   <data name="TrendLinesTag" xml:space="preserve">
     <value>傾向線は、データの傾向を視覚化し、予測の問題点を分析するために使用されます。</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FinancialChartエクスプローラー</value>
   </data>
 </root>

@@ -1,18 +1,16 @@
-﻿using System;
+﻿using C1.WPF.Core;
+using C1.WPF.Grid;
+using C1.WPF.Menu;
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Net.Http;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using C1.WPF.Grid;
-
 using System.Windows.Media;
-using C1.WPF.Core;
 using System.Windows.Media.Imaging;
-using System.Diagnostics;
 using System.Windows.Shapes;
-using C1.WPF.Menu;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.IO;
 
 namespace GridShowCase
 {
@@ -30,7 +28,6 @@ namespace GridShowCase
             Tag = Properties.Resources.Tag;
             flexGrid.Rows.CollectionChanged += FlexGridOnCollectionChanged;
         }
-
 
         private void FlexGridOnCollectionChanged(object sender, EventArgs e)
         {
@@ -268,7 +265,7 @@ namespace GridShowCase
                     }
                     bitmapIcon.Source = bitmapImage;
                 }
-                catch { }
+                catch (Exception ex) { }
             }
         }
 

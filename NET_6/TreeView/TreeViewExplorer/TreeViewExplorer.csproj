@@ -60,13 +60,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TreeView">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="System.Linq" Version="4.3.0" />
   </ItemGroup>

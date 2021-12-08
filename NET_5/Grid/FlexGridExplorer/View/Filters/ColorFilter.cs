@@ -20,8 +20,8 @@ namespace FlexGridExplorer
 
         public void SetColors(List<Color> colors) => _colorFilterPresenter.SetColors(colors);
 
-        public override Expression Expression 
-        { 
+        public override Expression Expression
+        {
             get
             {
                 var colors = _colorFilterPresenter.GetSelectedColors();
@@ -69,6 +69,11 @@ namespace FlexGridExplorer
 
     public class ColorFilterPresenter : ItemsControl
     {
+        public ColorFilterPresenter()
+        {
+            DefaultStyleKey = typeof(ColorFilterPresenter);
+        }
+
         private bool _isInitializing = false;
         public List<Color> Colors { get; set; }
 

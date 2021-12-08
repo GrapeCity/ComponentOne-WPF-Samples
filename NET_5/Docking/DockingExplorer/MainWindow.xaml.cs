@@ -12,6 +12,7 @@ namespace DockingExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = DockingExplorer.Resources.AppResources.Title;
         }
 
         static List<C1DockTabControl> floatingList = new List<C1DockTabControl>();

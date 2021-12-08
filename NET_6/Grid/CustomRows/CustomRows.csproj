@@ -3,6 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <None Remove=".gclicx" />
@@ -12,16 +13,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20213.140-beta</Version>
+      <Version>6.0.20213.156</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

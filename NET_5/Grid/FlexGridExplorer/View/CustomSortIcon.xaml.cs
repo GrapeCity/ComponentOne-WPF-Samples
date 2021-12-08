@@ -45,48 +45,49 @@ namespace FlexGridExplorer
             grid.ItemsSource = data;
         }
 
-        private void SortIconPositionChanged(object sender, EventArgs e)
+        private void sortIconTemplate_SelectedIndexChanged(object sender, PropertyChangedEventArgs<int> e)
         {
-            grid.SortIconPosition = (GridSortIconPosition)Enum.Parse(typeof(GridSortIconPosition), (string)sortIconPosition.Items[sortIconPosition.SelectedIndex]);
-        }
-
-        private void SortIconTemplateChanged(object sender, EventArgs e)
-        {
-            switch (sortIconTemplate.SelectedIndex)
+            switch (e.NewValue)
             {
                 case 0:
                     grid.SortAscendingIconTemplate = Resources["SortAscendingIcon"] as C1IconTemplate;
                     grid.SortDescendingIconTemplate = null;
+                    grid.SortIndeterminateIconTemplate = null;
                     break;
                 case 1:
                     grid.SortAscendingIconTemplate = Resources["Sort2AscendingIcon"] as C1IconTemplate;
                     grid.SortDescendingIconTemplate = Resources["Sort2DescendingIcon"] as C1IconTemplate;
+                    grid.SortIndeterminateIconTemplate = Resources["Sort2Icon"] as C1IconTemplate;
                     break;
                 case 2:
                     grid.SortAscendingIconTemplate = C1IconTemplate.TriangleUp;
                     grid.SortDescendingIconTemplate = null;
+                    grid.SortIndeterminateIconTemplate = null;
                     break;
                 case 3:
                     grid.SortAscendingIconTemplate = C1IconTemplate.TriangleNorth;
                     grid.SortDescendingIconTemplate = null;
+                    grid.SortIndeterminateIconTemplate = null;
                     break;
                 case 4:
                     grid.SortAscendingIconTemplate = C1IconTemplate.ChevronUp;
                     grid.SortDescendingIconTemplate = null;
+                    grid.SortIndeterminateIconTemplate = null;
                     break;
                 case 5:
                     grid.SortAscendingIconTemplate = C1IconTemplate.ArrowUp;
                     grid.SortDescendingIconTemplate = null;
+                    grid.SortIndeterminateIconTemplate = null;
                     break;
             }
         }
 
-        private void HeaderAlignmentChanged(object sender, SelectionChangedEventArgs e)
+        private void headerAlignment_SelectedIndexChanged(object sender, PropertyChangedEventArgs<int> e)
         {
             foreach (var column in grid.Columns)
             {
 
-                switch (headerAlignment.SelectedIndex)
+                switch (e.NewValue)
                 {
                     case 0:
                         column.HeaderHorizontalAlignment = HorizontalAlignment.Left;
@@ -103,6 +104,12 @@ namespace FlexGridExplorer
                 }
             }
             grid.Refresh(GridCellType.ColumnHeader);
+        }
+
+        private void sortIconPosition_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+                grid.SortIconPosition = (GridSortIconPosition)Enum.Parse(typeof(GridSortIconPosition), (string)e.AddedItems[0]);
         }
     }
 }

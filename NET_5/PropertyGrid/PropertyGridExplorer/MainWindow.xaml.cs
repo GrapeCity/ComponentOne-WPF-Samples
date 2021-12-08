@@ -10,6 +10,7 @@ namespace PropertyGridExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = Properties.Resources.Title;
         }
     }
 }

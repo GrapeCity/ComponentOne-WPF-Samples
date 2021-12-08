@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapsExplorer", "MapsExplorer.csproj", "{43BC3343-131D-4FEC-AFE1-30C07932496D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapsExplorer", "MapsExplorer.csproj", "{43BC3343-131D-4FEC-AFE1-30C07932496D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +14,9 @@ Global
 		GCRelease|Any CPU = GCRelease|Any CPU
 		GCRelease|Mixed Platforms = GCRelease|Mixed Platforms
 		GCRelease|x86 = GCRelease|x86
+		GRAPECITY|Any CPU = GRAPECITY|Any CPU
+		GRAPECITY|Mixed Platforms = GRAPECITY|Mixed Platforms
+		GRAPECITY|x86 = GRAPECITY|x86
 		Release|Any CPU = Release|Any CPU
 		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x86 = Release|x86
@@ -34,6 +37,12 @@ Global
 		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GCRelease|Mixed Platforms.Build.0 = Release|x86
 		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GCRelease|x86.ActiveCfg = Release|x86
 		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GCRelease|x86.Build.0 = Release|x86
+		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GRAPECITY|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GRAPECITY|Any CPU.Build.0 = Debug|Any CPU
+		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GRAPECITY|Mixed Platforms.ActiveCfg = Release|x86
+		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GRAPECITY|Mixed Platforms.Build.0 = Release|x86
+		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GRAPECITY|x86.ActiveCfg = Release|x86
+		{43BC3343-131D-4FEC-AFE1-30C07932496D}.GRAPECITY|x86.Build.0 = Release|x86
 		{43BC3343-131D-4FEC-AFE1-30C07932496D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43BC3343-131D-4FEC-AFE1-30C07932496D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{43BC3343-131D-4FEC-AFE1-30C07932496D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU

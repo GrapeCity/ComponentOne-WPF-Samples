@@ -11,6 +11,12 @@ namespace RibbonExplorer
         {
             InitializeComponent();
             this.DataContext = new SampleDataSource();
+            Loaded += RibbonExplorerView_Loaded;
+        }
+
+        private void RibbonExplorerView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

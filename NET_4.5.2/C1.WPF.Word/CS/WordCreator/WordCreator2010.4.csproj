@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,9 +11,9 @@
     <RootNamespace>Word.Creator</RootNamespace>
     <AssemblyName>WordCreator.4</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <TargetFrameworkProfile/>
+    <TargetFrameworkProfile />
     <FileAlignment>512</FileAlignment>
-<ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
 </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -164,6 +164,7 @@
   <ItemGroup>
     <Reference Include="C1.WPF.Bitmap.4.5.2" />
     <Reference Include="C1.WPF.DX.4.5.2" />
+    <Reference Include="C1.WPF.RichTextBox.4.5.2" />
     <Reference Include="C1.WPF.Toolbar.4.5.2" />
     <Reference Include="C1.WPF.Word.4.5.2" />
     <Reference Include="C1.WPF.Zip.4.5.2" />
@@ -174,6 +175,14 @@
     <EmbeddedResource Include="Resources\flow.txt" />
     <EmbeddedResource Include="Resources\Word.png" />
     <EmbeddedResource Include="Resources\quotes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\dickens.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\01.jpg" />
+    <Resource Include="Resources\images\02.jpg" />
+    <Resource Include="Resources\images\c1logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

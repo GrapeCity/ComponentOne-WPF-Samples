@@ -159,6 +159,12 @@
   <data name="FibonacciToolTag" xml:space="preserve">
     <value>Fibonacci tool is used for trend analysis in financial charts. With the help of range selector, you can choose data range for calculation.</value>
   </data>
+  <data name="FinancialChartDescription" xml:space="preserve">
+    <value>A showcase for the new WPF FinancialChart.</value>
+  </data>
+  <data name="FinancialChartTitle" xml:space="preserve">
+    <value>FinancialChart Explorer</value>
+  </data>
   <data name="HeikinAshiTag" xml:space="preserve">
     <value>Heikin-Ashi charts are a variation of Japanese candlestick charts that were designed to remove noise from candlesticks and behave much like a moving average. These charts can be used to identify trends, potential reversal points, and other technical analysis patterns.</value>
   </data>
@@ -227,5 +233,8 @@
   </data>
   <data name="TrendLinesTag" xml:space="preserve">
     <value>Trend lines are used to visualize trends in data and to help analyze the problems of prediction.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FinancialChartExplorer</value>
   </data>
 </root>

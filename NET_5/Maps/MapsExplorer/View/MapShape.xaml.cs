@@ -105,12 +105,9 @@ namespace MapsExplorer
 
         private void countriesCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var comboBox = sender as ComboBox;
-            if (comboBox != null)
-            {
-                Location location = comboBox.SelectedItem == null ? Location.USA : location = (Location)((KeyValuePair<Location, string>)countriesCombo.SelectedItem).Key;
-                InitialMapsByLocaltion(maps, location);
-            }
+            if (e.AddedItems.Count == 0) return;
+            Location location = (Location)((KeyValuePair<Location, string>)e.AddedItems[0]).Key;
+            InitialMapsByLocaltion(maps, location);
         }
     }
 }

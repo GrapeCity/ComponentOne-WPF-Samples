@@ -1,7 +1,13 @@
 ﻿<UserControl x:Class="FlexGridExplorer.MouseHover"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FlexGridExplorer"
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <UserControl.Resources>
+        <local:EnumConverter x:Key="enumConverter" />
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -10,24 +16,14 @@
         <StackPanel Orientation="Horizontal">
 
             <TextBlock VerticalAlignment="Center" Text="MouseOverMode:" Margin="10 0" />
-            <c1:C1ComboBox x:Name="cbMouseOverMode" Width="100" SelectedItem="{Binding MouseOverMode,ElementName=grid,Mode=TwoWay}">
-                <c1:GridMouseOverMode>None</c1:GridMouseOverMode>
-                <c1:GridMouseOverMode>Selection</c1:GridMouseOverMode>
-                <c1:GridMouseOverMode>Cell</c1:GridMouseOverMode>
-                <c1:GridMouseOverMode>Row</c1:GridMouseOverMode>
-                <c1:GridMouseOverMode>Column</c1:GridMouseOverMode>
-            </c1:C1ComboBox>
+            <c1:C1ComboBox x:Name="cbMouseOverMode" Width="100"
+                           SelectedItem="{Binding MouseOverMode,ElementName=grid,Mode=TwoWay, Converter={StaticResource enumConverter}}"
+                           ItemsSource="{Binding DataContext.MouseOverModes}"/>
 
             <TextBlock VerticalAlignment="Center" Text="SelectionMode:" Margin="10 0" />
-            <c1:C1ComboBox x:Name="cbSelectionMode" Width="100" SelectedItem="{Binding SelectionMode,ElementName=grid,Mode=TwoWay}">
-                <c1:GridSelectionMode>None</c1:GridSelectionMode>
-                <c1:GridSelectionMode>Cell</c1:GridSelectionMode>
-                <c1:GridSelectionMode>CellRange</c1:GridSelectionMode>
-                <c1:GridSelectionMode>Row</c1:GridSelectionMode>
-                <c1:GridSelectionMode>RowRange</c1:GridSelectionMode>
-                <c1:GridSelectionMode>Column</c1:GridSelectionMode>
-                <c1:GridSelectionMode>ColumnRange</c1:GridSelectionMode>
-            </c1:C1ComboBox>
+            <c1:C1ComboBox x:Name="cbSelectionMode" Width="100"
+                           SelectedItem="{Binding SelectionMode,ElementName=grid,Mode=TwoWay, Converter={StaticResource enumConverter}}"
+                           ItemsSource="{Binding DataContext.SelectionModes}"/>
 
             <TextBlock VerticalAlignment="Center" Text="Hover Brush:" Margin="10 0" />
             <c1:C1ColorPicker Width="100" Height="30" Name="indicatorBrush" SelectedBrush="{Binding MouseOverBrush, ElementName=grid, Mode=TwoWay}" />

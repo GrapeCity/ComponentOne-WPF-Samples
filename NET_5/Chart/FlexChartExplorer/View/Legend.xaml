@@ -47,38 +47,34 @@
                     </TextBlock.Inlines>
                 </TextBlock>
             </DataTemplate>
-            <Style TargetType="ComboBox">
-                <Setter Property="VerticalAlignment" Value="Center" />
-            </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10 0">
-            <ComboBox Width="210" x:Name="cbPosition" 
+            <Chart:C1ComboBox Width="210" x:Name="cbPosition"  Margin="0 10 0 10"
                       ItemsSource="{Binding DataContext.LegendPosition}" 
                       ItemTemplate="{StaticResource cbPositionTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=LegendPosition, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
-            <ComboBox Width="200" Margin="10" x:Name="cbOrientation" 
+            </Chart:C1ComboBox>
+            <Chart:C1ComboBox Width="200" Margin="10" x:Name="cbOrientation" 
                       ItemsSource="{Binding DataContext.LegendOrientation}" 
                       ItemTemplate="{StaticResource cbOrientationTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=LegendOrientation, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
-            <ComboBox Width="200" Margin="10" x:Name="cbTextWrapping" 
+            </Chart:C1ComboBox>
+            <Chart:C1ComboBox Width="200" Margin="10" x:Name="cbTextWrapping" 
                       ItemsSource="{Binding DataContext.LegendTextWrapping}" 
                       ItemTemplate="{StaticResource cbTextWrappingTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=LegendTextWrapping, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
-            <ComboBox Width="200" Margin="10" x:Name="cbMaxWidth" 
+            </Chart:C1ComboBox>
+            <Chart:C1ComboBox Width="200" Margin="10" x:Name="cbMaxWidth"
                       ItemsSource="{Binding DataContext.LegendMaxWidth}" 
                       ItemTemplate="{StaticResource cbMaxWidthTemplate}"
-                      SelectedIndex="0"
                       SelectedValue="{Binding ElementName=flexChart, Path=LegendMaxWidth, Mode=OneWayToSource, Converter={StaticResource maxWidthConverter}}"
                       >
-            </ComboBox>
-            <CheckBox x:Name="cbCheckBox" Content="Group Legend" Margin="12"
+            </Chart:C1ComboBox>
+            <CheckBox x:Name="cbCheckBox" Content="Group Legend" Margin="12" VerticalAlignment="Center"
                       Checked="cbCheckBox_Checked" Unchecked="cbCheckBox_Checked" IsChecked="True" />
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" ItemsSource="{Binding DataContext.Data}" BindingX="Fruit" Grid.Row="1"

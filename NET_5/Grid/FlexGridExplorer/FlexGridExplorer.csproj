@@ -11,6 +11,7 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
     <None Remove="Images\Album.png" />
     <None Remove="Images\Artist.png" />
     <None Remove="Images\Collapsed.png" />
@@ -61,45 +62,49 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\cars.xml" />
     <EmbeddedResource Include="Resources\data.zip" />
-    <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20212.57" />
+    <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20213.61" />
     <EmbeddedResource Include="Resources\Stores.txt" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid.Excel">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <Resource Include="Resources\filter.svg" />
     <Resource Include="Resources\Roboto-Regular.ttf" />

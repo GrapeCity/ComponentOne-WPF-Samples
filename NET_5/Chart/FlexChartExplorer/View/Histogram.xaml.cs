@@ -116,10 +116,6 @@ namespace FlexChartExplorer
         private void flexChart_Rendered(object sender, C1.WPF.Chart.RenderEventArgs e)
         {
             tbBinWidth.Text = histogramSeries.BinWidth.ToString("0");
-            if (comboBoxAppearanceType.SelectedIndex == -1)
-            {
-                comboBoxAppearanceType.SelectedIndex = 0;
-            }           
         }
 
         private void cbShow_Checked(object sender, System.Windows.RoutedEventArgs e)
@@ -130,11 +126,6 @@ namespace FlexChartExplorer
         private void cbShow_UnChecked(object sender, System.Windows.RoutedEventArgs e)
         {
             histogramSeries.NormalCurve.Visible = false;
-        }
-
-        private void ComboBoxAppearanceType_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            histogramSeries.AppearanceType = Type[comboBoxAppearanceType.SelectedIndex];
         }
 
         private void cumulativeShow_Checked(object sender, System.Windows.RoutedEventArgs e)

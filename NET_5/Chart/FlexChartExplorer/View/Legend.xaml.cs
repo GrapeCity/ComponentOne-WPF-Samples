@@ -24,6 +24,12 @@ namespace FlexChartExplorer
         {
             this.InitializeComponent();
             Tag = AppResources.LegendTag;
+            Loaded += Legend_Loaded;
+        }
+
+        private void Legend_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            cbMaxWidth.SelectedIndex = 0;
         }
 
         public List<FruitsDataItem> Data

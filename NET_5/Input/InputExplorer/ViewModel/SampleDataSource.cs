@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
 namespace InputExplorer
 {
@@ -21,6 +20,14 @@ namespace InputExplorer
                 new SampleItem(Properties.Resources.TagEditorDemoTitle,
                                 Properties.Resources.TagEditorDemoTitle,
                                 new DemoTagEditor()),
+
+                new SampleItem(Properties.Resources.CheckListTitle,
+                                Properties.Resources.CheckListTitle,
+                                new C1CheckList()),
+                
+                new SampleItem(Properties.Resources.MultiSelect,
+                                Properties.Resources.MultiSelect,
+                                new C1MultiSelect()),
             };
         }
 

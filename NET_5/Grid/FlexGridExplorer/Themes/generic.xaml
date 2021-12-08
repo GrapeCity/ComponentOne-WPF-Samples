@@ -47,4 +47,47 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="local:ColorFilterPresenter">
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ColorFilterPresenter">
+                    <ItemsPresenter Margin="5" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Resources>
+            <Style TargetType="CheckBox">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="CheckBox">
+                            <Grid>
+                                <Ellipse Fill="{Binding Path=Background, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=CheckBox}}" Width="30" Height="30" Margin="0 5 10 5"/>
+                                <Path Height="18" Width="18" Fill="White" Stretch="UniformToFill" VerticalAlignment="Center" Margin="-10 0 0 0"
+                                      Data="M3.1039878E-06,5.9149554 L2.6090951,5.1227895 L3.8818195,7.1946091 C3.8818195,7.1946091 9.7088028,6.9388943E-17 9.7088028,6.9388943E-17 C9.7088028,6.9388943E-17 10.499998,0.11624356 10.499998,0.11624356 C10.499998,0.11624356 4.1827894,10.1161 4.1827894,10.1161 z">
+                                    <Path.Style>
+                                        <Style TargetType="Path">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Path=IsChecked, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=CheckBox}}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Path.Style>
+                                </Path>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Style.Resources>
+    </Style>
 </ResourceDictionary>

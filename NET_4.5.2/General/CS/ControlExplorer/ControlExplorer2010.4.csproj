@@ -410,6 +410,10 @@
       <Project>{073d7e08-1ce8-43c3-a05c-201fad23b062}</Project>
       <Name>DataBinding</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.WPF.PrintDocument\CS\SimpleReports\SimpleReports.csproj">
+      <Project>{b0710606-28c4-4bd1-8e67-ab6a3876df3b}</Project>
+      <Name>SimpleReports</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\C1.WPF.Sparkline\CS\SparklineSamples\SparklineSamples2010.4.csproj">
       <Project>{098b2718-4e02-4421-b8b8-3ccef81a640d}</Project>
       <Name>SparklineSamples2010.4</Name>
@@ -506,10 +510,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>1.0.20212.56</Version>
+      <Version>1.0.20213.60</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>1.0.20212.56</Version>
+      <Version>1.0.20213.60</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

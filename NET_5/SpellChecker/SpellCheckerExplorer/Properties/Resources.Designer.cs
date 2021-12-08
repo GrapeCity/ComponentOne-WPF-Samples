@@ -113,5 +113,14 @@ namespace SpellCheckerExplorer.Properties {
                 return ResourceManager.GetString("SpellCheckerTextDemoTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SpellCheckerExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
     }
 }

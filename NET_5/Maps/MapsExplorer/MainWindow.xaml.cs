@@ -21,6 +21,7 @@ namespace MapsExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = MapsExplorer.Properties.Resources.Title;
         }
     }
 }

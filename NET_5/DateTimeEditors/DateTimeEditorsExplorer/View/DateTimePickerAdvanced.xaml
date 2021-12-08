@@ -402,11 +402,11 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Style="{DynamicResource captionInputContainer}" Margin="0 0 0 10">
                     <TextBlock Style="{DynamicResource captionStyle}" Width="120">Custom Date Format:</TextBlock>
-                    <ComboBox x:Name="dateFormatCombo" Style="{DynamicResource inputStyle}" Width="150" SelectionChanged="dateFormatCombo_SelectionChanged" />
+                    <c1:C1ComboBox x:Name="dateFormatCombo" Style="{DynamicResource inputStyle}" Width="150" SelectionChanged="dateFormatCombo_SelectionChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Style="{DynamicResource captionInputContainer}" Margin="0 0 0 10">
                     <TextBlock Style="{DynamicResource captionStyle}" Width="120">Custom Time Format:</TextBlock>
-                    <ComboBox x:Name="timeFormatCombo" Style="{DynamicResource inputStyle}" Width="150" SelectionChanged="timeFormatCombo_SelectionChanged" />
+                    <c1:C1ComboBox x:Name="timeFormatCombo" Style="{DynamicResource inputStyle}" Width="150" SelectionChanged="timeFormatCombo_SelectionChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Style="{DynamicResource captionInputContainer}" Margin="0 0 0 10">
                     <TextBlock Style="{DynamicResource captionStyle}" Width="120">Date Placeholder:</TextBlock>

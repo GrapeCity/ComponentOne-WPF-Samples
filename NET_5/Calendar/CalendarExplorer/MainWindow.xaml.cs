@@ -10,6 +10,7 @@ namespace CalendarExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = CalendarExplorer.Resources.AppResources.Title;
         }
     }
 }

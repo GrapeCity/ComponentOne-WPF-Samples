@@ -4,14 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:FlexChartExplorer"
     DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
     <UserControl.Resources>
-        <Style TargetType="ComboBox">
-            <Setter Property="VerticalAlignment" Value="Center" />
-        </Style>
         <local:EnumConverter x:Key="enumConverter" />
         <DataTemplate x:Key="cbOverlappingTemplate">
             <TextBlock>
@@ -36,25 +33,25 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10 0">
-            <ComboBox Width="120" x:Name="cbDataShape" 
+            <c1:C1ComboBox Width="120" x:Name="cbDataShape" Height="30"
                       ItemsSource="{Binding DataContext.DataShapes}" 
                       ItemTemplate="{StaticResource cbDataShapeTemplate}"
-                      SelectedValue="{Binding DataContext.DataShape, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
-            <ComboBox Width="210" Margin="10" x:Name="cbOverlapping" 
+                      SelectedValue="{Binding DataContext.DataShape, Mode=TwoWay, Converter={StaticResource enumConverter}}"/>
+
+            <c1:C1ComboBox Width="210" Margin="10 0 0 0" x:Name="cbOverlapping" Height="30"
                       ItemsSource="{Binding DataContext.Overlappings}" 
                       ItemTemplate="{StaticResource cbOverlappingTemplate}"
-                      SelectedValue="{Binding ElementName=flexChart, Path=DataLabel.Overlapping, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
-            <CheckBox x:Name="cbLabelBorder" Content="Label border" VerticalAlignment="Center"
-                      IsChecked="{Binding ElementName=flexChart, Path=DataLabel.Border, Mode=TwoWay}">
-            </CheckBox>
+                      SelectedValue="{Binding ElementName=flexChart, Path=DataLabel.Overlapping, Mode=TwoWay, Converter={StaticResource enumConverter}}"/>
+
+            <CheckBox x:Name="cbLabelBorder" Content="Label border" VerticalAlignment="Center" Margin="10 0 0 0"
+                      IsChecked="{Binding ElementName=flexChart, Path=DataLabel.Border, Mode=TwoWay}"/>
+
         </StackPanel>
-        <Chart:FlexChart x:Name="flexChart" ChartType="Scatter" ItemsSource="{Binding DataContext.Data}" Grid.Row="1" LegendPosition="None">
-            <Chart:FlexChart.DataLabel>
-                <Chart:DataLabel Content="{}{pointIndex}" Position="Auto" ConnectingLine="True"/>
-            </Chart:FlexChart.DataLabel>
-            <Chart:Series SeriesName="Points" BindingX="X" Binding="Y"/>
-        </Chart:FlexChart>
+        <c1:FlexChart x:Name="flexChart" ChartType="Scatter" ItemsSource="{Binding DataContext.Data}" Grid.Row="1" LegendPosition="None">
+            <c1:FlexChart.DataLabel>
+                <c1:DataLabel Content="{}{pointIndex}" Position="Auto" ConnectingLine="True"/>
+            </c1:FlexChart.DataLabel>
+            <c1:Series SeriesName="Points" BindingX="X" Binding="Y"/>
+        </c1:FlexChart>
     </Grid>
 </UserControl>

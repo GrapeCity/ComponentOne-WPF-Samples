@@ -149,5 +149,14 @@ namespace MenuExplorer.Properties {
                 return ResourceManager.GetString("DropDownMenuTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MenuExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
     }
 }

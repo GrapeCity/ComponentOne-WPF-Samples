@@ -69,30 +69,30 @@
                 </Style>
             </StackPanel.Resources>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Indicator Type" Margin="10 0"/>
-                <ComboBox x:Name="cbIndicatorType" ItemsSource="{Binding IndicatorType}" SelectedIndex="0" Width="180"/>
+                <TextBlock Text="Indicator Type" Margin="10 0" VerticalAlignment="Center"/>
+                <c1:C1ComboBox x:Name="cbIndicatorType" ItemsSource="{Binding IndicatorType}" SelectedIndex="0" Width="180"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" x:Name="spNormalOptions" Margin="0 5"
                         Visibility="{Binding ElementName=cbIndicatorType, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter='0 1 2 3'}">
-                <TextBlock Text="Period" Margin="50 0 10 0"/>
+                <TextBlock Text="Period" Margin="50 0 10 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbPeriod" Value="14" ValueChanged="OnPeriodValueChanged"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" x:Name="spMacdOptions" Margin="0 5"
                         Visibility="{Binding ElementName=cbIndicatorType, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=4}">
-                <TextBlock Text="Fast Period" Margin="28 0 10 0"/>
+                <TextBlock Text="Fast Period" Margin="28 0 10 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbFastPeriod" Value="12" ValueChanged="OnFastPeriodValueChanged"/>
-                <TextBlock Text="Slow Period"/>
+                <TextBlock Text="Slow Period" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbSlowPeriod" Value="26" ValueChanged="OnSlowPeriodValueChanged" />
-                <TextBlock Text="Signal Smoothing Period"/>
+                <TextBlock Text="Signal Smoothing Period" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbSmoothingPeriod" Value="9" ValueChanged="OnSmoothingPeriodValueChanged"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" x:Name="spStochasticOptions" Margin="0 5" 
                         Visibility="{Binding ElementName=cbIndicatorType, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=5}">
-                <TextBlock Text="K Period" Margin="40 0 10 0"/>
+                <TextBlock Text="K Period" Margin="40 0 10 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbKPeriod" Value="14" ValueChanged="OnKPeriodValueChanged"/>
-                <TextBlock Text="D Period"/>
+                <TextBlock Text="D Period" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbDPeriod" Value="3" ValueChanged="OnDPeriodValueChanged" />
-                <TextBlock Text="Signal Smoothing Period"/>
+                <TextBlock Text="Signal Smoothing Period" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbStochasticSmoothingPeriod" Minimum="1" Value="1" ValueChanged="OnStochasticSmoothingPeriodValueChanged"/>
             </StackPanel>
         </StackPanel>

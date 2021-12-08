@@ -51,7 +51,7 @@ namespace FlexPivotExplorer
                 menuViews.Label = "Views";
                 menuViews.IconTemplate = C1IconTemplate.Edit;
                 menuViews.VerticalAlignment = VerticalAlignment.Center;
-                ToolTipService.SetToolTip(menuViews, "Select a predefined FlexPivot view.");
+                ToolTipService.SetToolTip(menuViews, Properties.Resources.PredefinedPivotViewTooltip);
                 foreach (var id in views.Keys)
                 {
                     var mi = new C1ButtonTool();
@@ -70,7 +70,7 @@ namespace FlexPivotExplorer
                 collapseAllView.Label = "CollapseAll";
                 collapseAllView.IconTemplate = C1IconTemplate.ArrowDown;
                 collapseAllView.VerticalAlignment = VerticalAlignment.Center;
-                ToolTipService.SetToolTip(collapseAllView, "Collapse all the subtotals rows and columns.");
+                ToolTipService.SetToolTip(collapseAllView, Properties.Resources.CollapseSubTotalRowsColumnsTooltip);
                 collapseAllView.Click += collapseAllView_Click;
                 pivotPage.MainMenu.Items.Insert(11, collapseAllView);
             };

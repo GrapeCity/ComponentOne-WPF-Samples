@@ -15,6 +15,7 @@ namespace FlexGridExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = AppResources.Title;
         }
     }
 }

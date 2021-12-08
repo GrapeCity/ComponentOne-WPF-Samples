@@ -104,7 +104,7 @@
                                         <c1:C1ToggleButtonTool x:Name="MenuZeros" Label="{Binding Path=ShowZeros, Source={StaticResource Resources}}" IsChecked="True" Style="{StaticResource menuItem}" />
                                     </c1:C1MenuTool>
                                     <!-- customize chart -->
-                                    <c1:C1MenuTool x:Name="_mnuChart" Label="{Binding Path=Chart, Source={StaticResource Resources}}" VerticalAlignment="Center" ToolTipService.ToolTip="Customize Chart view">
+                                    <c1:C1MenuTool x:Name="_mnuChart" Label="{Binding Path=Chart, Source={StaticResource Resources}}" VerticalAlignment="Center" ToolTipService.ToolTip="{Binding Path=CustomizeChartView, Source={StaticResource Resources}}">
                                         <c1:C1MenuTool.IconTemplate>
                                             <c1:C1IconTemplate>
                                                 <c1:C1BitmapIcon Source="../Resources/chart.png" ShowAsMonochrome="False" />

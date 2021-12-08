@@ -182,6 +182,10 @@ namespace FlexChartExplorer
                "Pareto",
                "A Pareto is a special histogram chart with columns sorted in descending order and a rising line that represents the cumulative total percentage. Pareto charts makes it easier to analyze most significant issues and prioritise corrective actions.",
                new Pareto()));
+            _allItems.Add(new SampleItem("BreakEven",
+               "Break-Even",
+                "Break-Even chart is a chart that shows the sales volume level at which total costs equal sales.",
+                new BreakEven()));
         }
 
         public ObservableCollection<SampleItem> AllItems

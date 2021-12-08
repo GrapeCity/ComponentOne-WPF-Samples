@@ -23,6 +23,7 @@ namespace FlexChartExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = FlexChartExplorer.Resources.AppResources.Title;
         }
     }
 }

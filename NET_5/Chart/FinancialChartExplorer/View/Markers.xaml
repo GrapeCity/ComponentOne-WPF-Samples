@@ -55,25 +55,25 @@
                         </TextBlock.Inlines>
                     </TextBlock>
                 </DataTemplate>
-                <Style TargetType="ComboBox">
+                <Style TargetType="c1:C1ComboBox">
                     <Setter Property="Margin" Value="20 5"/>
                     <Setter Property="Width" Value="180"/>
                 </Style>
             </StackPanel.Resources>
             <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="cbAlignment"
+                <c1:C1ComboBox x:Name="cbAlignment"
                           ItemsSource="{Binding Alignments}"
                           ItemTemplate="{StaticResource AlignmentTemplate}"
                           SelectedValue="{Binding ElementName=marker, Path=Alignment, Mode=TwoWay, Converter={StaticResource EnumConverter}}"
                           IsEnabled="{Binding ElementName=cbSnpping, Path=IsChecked, Converter={StaticResource ReversedConverter}}"/>
-                <ComboBox x:Name="cbInteraction" 
+                <c1:C1ComboBox x:Name="cbInteraction" 
                           ItemsSource="{Binding Interactions}"
                           ItemTemplate="{StaticResource InteractionTemplate}"
                           SelectedValue="{Binding ElementName=marker, Path=Interaction, Mode=TwoWay, Converter={StaticResource EnumConverter}}"
                           IsEnabled="{Binding ElementName=cbSnpping, Path=IsChecked, Converter={StaticResource ReversedConverter}}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="cbMarkerLine"
+                <c1:C1ComboBox x:Name="cbMarkerLine"
                           ItemsSource="{Binding MarkerLines}"
                           ItemTemplate="{StaticResource MarkerLinesTemplate}"
                           SelectedValue="{Binding ElementName=marker, Path=Lines, Mode=TwoWay, Converter={StaticResource EnumConverter}}"

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="C1-ball.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\CustomDialogs.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="View\DataBinding.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SchedulerExplorer.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Calendar">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DateTimeEditors">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Docking">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Ribbon">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Schedule">
+      <Version>5.0.20213.155-beta</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

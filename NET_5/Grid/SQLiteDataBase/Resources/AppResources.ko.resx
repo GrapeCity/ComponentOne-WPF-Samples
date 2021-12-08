@@ -121,4 +121,7 @@
     <value>데이터베이스에 새 레코드를 입력하려면 여기를 클릭하십시오.</value>
     <comment>Click here to enter a new record to the data base</comment>
   </data>
+  <data name="LoadingMessage" xml:space="preserve">
+    <value>Loading data from database...</value>
+  </data>
 </root>

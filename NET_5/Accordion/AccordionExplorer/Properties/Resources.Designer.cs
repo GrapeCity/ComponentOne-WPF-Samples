@@ -70,7 +70,7 @@ namespace AccordionExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AccordionTitle.
+        ///   Looks up a localized string similar to Accordion.
         /// </summary>
         public static string AccordionTitle {
             get {
@@ -88,11 +88,20 @@ namespace AccordionExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ExpanderTitle.
+        ///   Looks up a localized string similar to Expander.
         /// </summary>
         public static string ExpanderTitle {
             get {
                 return ResourceManager.GetString("ExpanderTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AccordionExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

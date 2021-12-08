@@ -7,10 +7,21 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="C1-ball.ico" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Strings\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -25,8 +36,15 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Strings\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\C1MultiSelect.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
     <Page Update="View\DemoMaskedTextBox.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
@@ -36,22 +54,34 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Docking">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.PropertyGrid">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TabControl">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -3,23 +3,30 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20212.57" />
+    <None Remove=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20213.61" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.7" />

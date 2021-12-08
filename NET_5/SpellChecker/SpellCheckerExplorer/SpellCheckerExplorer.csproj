@@ -7,6 +7,7 @@
     <ApplicationIcon>c1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
     <None Remove="Resources\batchcheck.png" />
     <None Remove="Resources\C1SpellChecker.png" />
     <None Remove="Resources\C1Spell_en-US.dct" />
@@ -32,6 +33,7 @@
     <Resource Include="Resources\France.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\test.txt" />
     <Resource Include="Resources\spelldialog.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -64,22 +66,25 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox.Ribbon">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.SpellChecker">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

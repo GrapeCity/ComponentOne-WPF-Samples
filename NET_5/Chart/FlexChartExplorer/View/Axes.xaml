@@ -5,37 +5,30 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:FlexChartExplorer"
     DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
 
     <Grid>
         <Grid.Resources>
-            <Style TargetType="ComboBox">
-                <Setter Property="VerticalAlignment" Value="Center" />
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <TextBlock>
-                                <TextBlock.Inlines>
-                                    <Run Text="X Label angle: "/>
-                                    <Run Text="{Binding .}"/>
-                                </TextBlock.Inlines>
-                            </TextBlock>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
+            <DataTemplate x:Key="cbItemTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="X Label angle: "/>
+                        <Run Text="{Binding .}"/>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <ComboBox Width="200" Margin="10" x:Name="cbLabelAngle" 
+            <Chart:C1ComboBox Width="200" Margin="10" x:Name="cbLabelAngle" 
+                              ItemTemplate="{StaticResource cbItemTemplate}"
                       ItemsSource="{Binding DataContext.LabelAngles}"
                       SelectedValue="{Binding ElementName=flexChart, Path=AxisX.LabelAngle, Mode=TwoWay}">
-            </ComboBox>
+            </Chart:C1ComboBox>
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" ItemsSource="{Binding DataContext.Data}" BindingX="Time"
                              Grid.Row="1">

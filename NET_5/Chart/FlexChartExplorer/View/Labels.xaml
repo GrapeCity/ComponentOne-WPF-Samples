@@ -10,9 +10,6 @@
     DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
     <UserControl.Resources>
-        <Style TargetType="ComboBox">
-            <Setter Property="VerticalAlignment" Value="Center" />
-        </Style>
         <local:EnumConverter x:Key="enumConverter" />
         <DataTemplate x:Key="cbChartTypeTemplate">
             <TextBlock>
@@ -37,16 +34,16 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10 0">
-            <ComboBox Width="210" x:Name="cbChartType" 
+            <Chart:C1ComboBox Width="210" x:Name="cbChartType" 
                       ItemsSource="{Binding DataContext.ChartTypes}" 
                       ItemTemplate="{StaticResource cbChartTypeTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
-            <ComboBox Width="200" Margin="10 0" x:Name="cbLabelPosition" 
+            </Chart:C1ComboBox>
+            <Chart:C1ComboBox Width="200" Margin="10 0" x:Name="cbLabelPosition" 
                       ItemsSource="{Binding DataContext.LabelPositions}" 
                       ItemTemplate="{StaticResource cbLabelPositionTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=DataLabel.Position, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
+            </Chart:C1ComboBox>
             <CheckBox x:Name="cbLabelBorder" Content="Label border" VerticalAlignment="Center"
                       IsChecked="{Binding ElementName=flexChart, Path=DataLabel.Border, Mode=TwoWay}">
             </CheckBox>

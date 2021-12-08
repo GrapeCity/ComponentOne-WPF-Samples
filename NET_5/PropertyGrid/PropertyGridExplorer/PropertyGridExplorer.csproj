@@ -8,7 +8,13 @@
     <RootNamespace>PropertyGridExplorer</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="C1-ball.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -47,8 +53,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -136,11 +136,11 @@ namespace DataFilterExplorer.Resources {
         ///   Looks up a localized string similar to Demonstrates using C1DataFilter control to show custom filters.
         ///There is C1TreeView and C1DataFilter on the window.
         ///The C1TreeView uses CustomContentPresenter to shows data.
-        ///The C1DataFilter uses three custom filters:
+        ///The C1DataFilter uses next custom filters:
         ///ColorFilter based on CustomFilter, allows to choose the color of the car;
         ///MapFilter based on CustomFilter, allows to choose the store on map;
         ///ModelFilter based on CustomFilter, allows to choose the model of the car;
-        ///PriceFilter based on ChecklistFilter, allows to choose the price range  [rest of string was truncated]&quot;;.
+        ///PriceFilter based on ChecklistFilter, allows to choose the price range o [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string CustomFiltersTag {
             get {
@@ -222,6 +222,15 @@ namespace DataFilterExplorer.Resources {
         internal static string LoadingMessage {
             get {
                 return ResourceManager.GetString("LoadingMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataFilterExplorer.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
         

@@ -133,4 +133,7 @@
     <value>ツールストリップ</value>
     <comment>Toolstrip</comment>
   </data>
+  <data name="Title" xml:space="preserve">
+    <value>Ribbonエクスプローラー</value>
+  </data>
 </root>

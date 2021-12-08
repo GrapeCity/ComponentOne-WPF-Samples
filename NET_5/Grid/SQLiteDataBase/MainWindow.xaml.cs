@@ -58,8 +58,6 @@ namespace SQLiteDataBase
                 grid.CellFactory = new SkeletonLoadingCellFactory();
             }
             catch (SqliteException) { throw; }
-
-            grid.NewRowPlaceholder = AppResources.AddNewRecord;
         }
 
         static string GetRandomString(string[] arr)

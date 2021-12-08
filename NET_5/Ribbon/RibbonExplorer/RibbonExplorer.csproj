@@ -6,6 +6,12 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\Images\closeSolution.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -110,22 +116,25 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

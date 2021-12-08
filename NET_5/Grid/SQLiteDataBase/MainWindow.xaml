@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:SQLiteDataBase.Resources"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="SQLiteDataBase" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -16,7 +17,7 @@
             <c1:C1TextBox x:Name="filter" Margin="4" HorizontalAlignment="Left" Width="400" />
             <TextBlock x:Name="LoadingMessage" VerticalAlignment="Center" Margin="4"/>
         </StackPanel>
-        <c1:FlexGrid x:Name="grid" AutoGeneratingColumn="OnAutoGeneratingColumn" NewRowPosition="Top" HeadersVisibility="All" Grid.Row="1">
+        <c1:FlexGrid x:Name="grid" AutoGeneratingColumn="OnAutoGeneratingColumn" NewRowPosition="Top" NewRowPlaceholder="{x:Static res:AppResources.AddNewRecord}" HeadersVisibility="All" Grid.Row="1">
             <i:Interaction.Behaviors>
                 <c1:FullTextFilterBehavior FilterEntry="{Binding Source={x:Reference filter}}"/>
             </i:Interaction.Behaviors>

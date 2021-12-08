@@ -141,4 +141,7 @@
     <value>複数の言語で C1SpellChecker を使用したデモです。</value>
     <comment>Demo using C1SpellChecker with multiple languages</comment>
   </data>
+  <data name="Title" xml:space="preserve">
+    <value>SpellCheckerエクスプローラー</value>
+  </data>
 </root>

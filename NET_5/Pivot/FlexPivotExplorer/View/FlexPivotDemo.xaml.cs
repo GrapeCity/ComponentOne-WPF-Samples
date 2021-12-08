@@ -56,7 +56,7 @@ namespace FlexPivotExplorer
                 menuViews.Label = "Views";
                 menuViews.IconTemplate = C1IconTemplate.Edit;
                 menuViews.VerticalAlignment = VerticalAlignment.Center;
-                ToolTipService.SetToolTip(menuViews, "Select a predefined FlexPivot view.");
+                ToolTipService.SetToolTip(menuViews, Properties.Resources.PredefinedPivotViewTooltip);
                 foreach (var id in views.Keys)
                 {
                     var mi = new C1ButtonTool();

@@ -2,7 +2,7 @@
 <Controls>
   <Group name="데이터 관리" isExpanded="true">
     <Control name="DataGrid" 
-             isTop="true" isNew="true"
+             isTop="true" 
          assembly="C1.WPF.DataGrid">
       <Feature assemblyName="DataGridSamples.4.exe" type="DataGridSamples.DemoGrid" source="C1.WPF.DataGrid\CS\DataGridSamples\DataGrid\DataGridPage.xaml">
         <Description>C1DataGrid 컨트롤을 사용하면 표 형식 데이터를 쉽게 표시, 편집, 분석할 수 있습니다. 이 데모는 정렬, 필터링, 그룹화, 고정된 열, 열/행 크기 조정 등 기본적으로 지원되는 모든 기능을 보여줍니다.</Description>
@@ -57,7 +57,7 @@
         <SubFeatures>
           <SubFeature name="필터 행" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\FilterRow\FilterRowPage.xaml" 
                       type="DataGridSamples.FilterRow"/>
-          <SubFeature name="전체 텍스트 검색" assemblyName="DataGridSamples.4.exe" isNew="true"
+          <SubFeature name="전체 텍스트 검색" assemblyName="DataGridSamples.4.exe" 
                       source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\FullTextSearch\FullTextSearchPage.xaml"
                       type="DataGridSamples.FullTextSearch"/>
           <SubFeature name="자동 필터" assemblyName="DataGridSamples.4.exe" source="C1.WPF.DataGrid\CS\DataGridSamples\Filters\AutoFilter\AutoFilterPage.xaml"
@@ -143,7 +143,7 @@
       </Feature>
     </Control>
     <Control name="FlexGrid"
-         isTop="true" isNew="true"
+         isTop="true" 
          assembly="C1.WPF.FlexGrid.4">
       <Feature type="ShowCase.ShowCaseSample" name="ShowCase" assemblyName="ShowCase.exe" source="C1.WPF.FlexGrid\CS\ShowCase\ShowCase\ShowCaseSample.xaml" >
         <Description>
@@ -162,11 +162,11 @@
                type="MainTestApplication.Filtering" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\Filtering.xaml">
             <Description>이 데모는 열 필터링을 사용 설정하는 방법을 보여줍니다. 열 머리글의 드롭다운을 클릭하여 필터를 설정할 수 있습니다. 활성 필터는 열 머리글에 아이콘으로 표시됩니다. 필터는 바인딩 및 바인딩 해제 모드에서 사용할 수 있습니다.</Description>
           </SubFeature>
-          <SubFeature name="전체 텍스트 필터" assemblyName="FlexGridSamples.exe" isNew="true"
+          <SubFeature name="전체 텍스트 필터" assemblyName="FlexGridSamples.exe" 
                type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml">
             <Description>이 데모는 FullTextFilter를 사용하여 여러 열의 데이터를 필터링하고 강조 표시하는 방법을 보여줍니다.</Description>
           </SubFeature>
-          <SubFeature name="필터 행" assemblyName="FlexGridSamples.exe" isNew="true"
+          <SubFeature name="필터 행" assemblyName="FlexGridSamples.exe" 
                  type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml">
                 <Description>텍스트가 입력되면 셀이 해당 열을 필터링하는 행을 표시합니다.</Description>
           </SubFeature>
@@ -208,7 +208,7 @@
                assemblyName="FlexGridSamples.exe">
         <Description>C1FlexGrid는 Excel 스타일 편집을 지원합니다. 셀에 값을 입력하고 Enter 또는 화살표 키를 사용하여 다음 셀로 이동하면 됩니다. 또는 F2 키를 눌러 전체 편집 모드로 전환할 수 있습니다. 이 모드에서는 화살표 키를 사용하여 편집기 내에서 이동할 수 있습니다. 자동 완성 및 값에 매핑된 열도 기본 제공됩니다. ColumnValueConverter를 만들어 열의 ValueConverter 속성에 할당하기만 하면 됩니다. 트랜잭션 방식 편집도 지원됩니다. 여기서 사용되는 Customer 클래스는 IEditableObject를 구현하므로, 새 행으로 이동하기 전에 Escape 키를 눌러 변경 사항을 취소할 수 있습니다. (참고: 회색 열은 읽기 전용입니다.)</Description>
       </Feature>
-	  <Feature name="마우스로 가리키기" type="MainTestApplication.MouseHover" isNew="true" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
+	  <Feature name="마우스로 가리키기" type="MainTestApplication.MouseHover" source="C1.WPF.FlexGrid\CS\FlexGridSamples\MouseHover\MouseHover.xaml"
                assemblyName="FlexGridSamples.exe">
 		 <Description>마우스로 가리키기 데모</Description>
 	  </Feature>
@@ -258,7 +258,7 @@
         <Description>표와 큐브 데이터를 자르고 나누는 피벗 그리드와 차트를 만들어 실시간 정보, 분석 및 결과를 순식간에 제공합니다. 사용하기 쉬운 컨트롤은 Microsoft Excel® 피벗 테이블을 모델로 제작되어 강력한 기능을 제공하고 모든 사용자에게 친숙합니다.</Description>
       </Feature>
     </Control>
-    <Control name="DataFilter" assembly="C1.WPF.DataFilter" isNew="true">
+    <Control name="DataFilter" assembly="C1.WPF.DataFilter" >
       <Feature
         name="필터가 있는 고용주 목록" type="EmployeesListWithFilter.DataFilterSample" assemblyName="EmployeesListWithFilter.exe"
 		source="C1.WPF.DataFilter\CS\EmployeesListWithFilter\Samples\DataFilterSample.xaml">
@@ -276,7 +276,7 @@
         <Description>이 샘플에서는 필터 요약의 여러 집계 식 및 사용자 정의 형식을 사용하는 방법을 보여줍니다.</Description>
       </Feature>
       <Feature
-        name="필터 편집기" type="FilterEditor.FilterEditorSample" isNew="true" assemblyName="FilterEditor.exe"
+        name="필터 편집기" type="FilterEditor.FilterEditorSample" assemblyName="FilterEditor.exe"
 		source="C1.WPF.DataFilter\CS\FilterEditor\Samples\FilterEditorControl.xaml">
         <Description>최종 사용자는 FilterEditor를 사용하여 복잡한 필터 기준을 만들 수 있습니다. 모든 컨트롤 또는 정보 화면에 TreeView 기반 필터링 UI를 연결할 수 있습니다. 모든 작업 컨트롤에 사용 가능한 옵션이 포함된 드롭다운 힌트가 표시됩니다.</Description>
       </Feature>
@@ -534,7 +534,7 @@
        assembly="C1.WPF.FlexChart">
       <Feature name="Flex 차트">
         <SubFeatures>
-          <SubFeature name="쇼케이스" isNew="true" assemblyName="FlexChartShowcase.exe" type="FlexChartShowcase.ShowcaseControl" source="C1.WPF.FlexChart\CS\FlexChartShowcase\Samples\ShowcaseControl.xaml">
+          <SubFeature name="쇼케이스" assemblyName="FlexChartShowcase.exe" type="FlexChartShowcase.ShowcaseControl" source="C1.WPF.FlexChart\CS\FlexChartShowcase\Samples\ShowcaseControl.xaml">
             <Description>최신의 고성능 FlexChart 컨트롤은 최대한의 구성 및 사용자 정의를 위해 유연한 데이터 바인딩 및 사용하기 쉬운 API와 함께 제공됩니다. 차트에는 모든 데이터 시각화를 지원하기 위해 기본 유형에서 복잡한 유형에 이르기까지 다양한 유형이 있습니다.</Description>
           </SubFeature>
           <SubFeature name="소개" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.Introduction" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\Introduction.xaml">
@@ -599,6 +599,9 @@
           <SubFeature name="오차 막대" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.ErrorBar" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\ErrorBar.xaml">
             <Description>오차 막대는 오차 및 표준 편차의 범위를 한눈에 확인하는 데 도움이 됩니다.</Description>
           </SubFeature>
+          <SubFeature name="Break Even" isNew="true" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.BreakEven" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\BreakEven.xaml" >
+            <Description>This view shows BreakEven Series in FlexChart.</Description>
+          </SubFeature>
         </SubFeatures>
       </Feature>
       <Feature name="Flex Pie" isExpanded="true">
@@ -613,7 +616,7 @@
           <SubFeature name="선택" assemblyName="FlexChartExplorer.4.exe" type="FlexChartExplorer.PieSelection" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\PieSelection.xaml">
             <Description>이 보기는 FlexPie의 선택 기능을 보여줍니다.</Description>
           </SubFeature>
-          <SubFeature name="여러 원형 차트" assemblyName="FlexChartExplorer.4.exe" isNew="true"
+          <SubFeature name="여러 원형 차트" assemblyName="FlexChartExplorer.4.exe" 
                       type="FlexChartExplorer.MultiPie" source="C1.WPF.FlexChart\CS\FlexChartExplorer\View\MultiPie.xaml">
             <Description>바인딩에 쉼표로 구분된 여러 필드가 지정된 경우 여러 원형 차트를 그릴 수 있습니다.</Description>
           </SubFeature>
@@ -1226,8 +1229,13 @@
         <Description>앱에서 쉽게 Microsoft Word 문서를 만들고 저장할 수 있습니다. Word 문서로 수행할 수 있는 기본 작업을 보여줍니다.</Description>
       </Feature>
     </Control>
-    <Control name="PrintDocument" assembly="C1.WPF.PrintDocument" isNew="true">
-      <Feature assemblyName="DataBinding.exe" type="DataBinding.DataBoundDoc" source="C1.PrintDocument\CS\DataBinding\DataBoundDoc.xaml">
+    <Control name="PrintDocument" assembly="C1.WPF.PrintDocument" >
+      <Feature name="Generate reports" assemblyName="SimpleReports.exe" type="SimpleReports.CustomReport" source="C1.WPF.PrintDocument\CS\SimpleReports\CustomReport.xaml" isNew="true">
+        <Description>
+          The sample contains methods that use the PrintDocument classes to create simple reports.
+        </Description>
+      </Feature>
+      <Feature name="Binding" assemblyName="DataBinding.exe" type="DataBinding.DataBoundDoc" source="C1.WPF.PrintDocument\CS\DataBinding\DataBoundDoc.xaml">
         <Description>
           The C1PrintDocument component can be used to create rich documents containing tables, hyperlinks, input controls, images and more. You can easily add content to C1PrintDocument with its block, inline and direct rendering methods, and then print or export to PDF, Word, Excel and more. This demo shows the basics of data binding and scripting in C1PrintDocument.
         </Description>
@@ -1605,7 +1613,7 @@
       </Feature>
     </Control>
     <Control name="도구 모음" assembly="C1.WPF.Toolbar">
-      <Feature name="간소화된 리본" type="ToolbarSamples.SimplifiedRibbon" source="C1.WPF.Toolbar\CS\ToolbarSamples\SimplifiedRibbon.xaml" isNew="true" assemblyName="ToolbarSamples.4.exe">
+      <Feature name="간소화된 리본" type="ToolbarSamples.SimplifiedRibbon" source="C1.WPF.Toolbar\CS\ToolbarSamples\SimplifiedRibbon.xaml" assemblyName="ToolbarSamples.4.exe">
         <Description>간소화된 리본은 도구 모음과 리본이 혼합된 컴팩트한 디자인입니다. 컨트롤을 축소하여 한 줄로 간단하게 표시하거나, 확대하여 전체 리본 모양으로 전환할 수 있습니다.</Description>
       </Feature>
       <Feature type="ToolbarSamples.Toolbar" source="C1.WPF.Toolbar\CS\ToolbarSamples\Toolbar.xaml" assemblyName="ToolbarSamples.4.exe">

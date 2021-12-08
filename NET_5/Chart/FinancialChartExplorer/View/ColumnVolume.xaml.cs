@@ -40,9 +40,9 @@ namespace FinancialChartExplorer
 
         void OnSymbolSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (financialChart != null)
+            if (financialChart != null && e.AddedItems.Count > 0)
             {
-                Company c = cbSymbol.SelectedValue as Company;
+                var c = e.AddedItems[0] as Company;
                 var data = dataService.GetSymbolData(c.Symbol);
                 financialChart.BeginUpdate();
                 financialChart.ItemsSource = data;

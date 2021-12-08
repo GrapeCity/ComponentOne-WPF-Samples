@@ -120,11 +120,9 @@ namespace FlexChartExplorer
         {
             if (flexChart == null) return;
 
-            ComboBox cb = sender as ComboBox;
-            int idx = cb.SelectedIndex;
             Axis ax = flexChart.AxisX;
 
-            switch (idx)
+            switch (cbMajorUnit.SelectedIndex)
             {
                 case 0:
                     ax.MajorUnit = double.NaN;

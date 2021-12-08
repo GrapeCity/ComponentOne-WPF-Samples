@@ -17,24 +17,18 @@
         <c1:C1TextBoxBase Text="{Binding ElementName=maskedTextBox, Path=Value}" HorizontalAlignment="Left" Width="300" IsReadOnly="True" />
 
         <TextBlock Text="Mask templates" FontWeight="Bold" Margin="5" />
-        <ListView x:Name="lstMaskTemplates" ItemsSource="{x:Static local:C1MaskedTextBoxSettings.MaskTemplates}" 
-                    BorderThickness="0"
-                    SelectionChanged="lstMaskTemplates_SelectionChanged" >
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal"></StackPanel>
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-            <ListView.ItemTemplate>
+        <c1:C1ListView x:Name="lstMaskTemplates" ItemsSource="{x:Static local:C1MaskedTextBoxSettings.MaskTemplates}" Height="80"
+                    BorderThickness="0" SelectionChanged="lstMaskTemplates_SelectionChanged_1" Orientation="Horizontal" >
+            <c1:C1ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Margin="4" Background="LightBlue">
+                    <StackPanel Margin="4" Background="LightBlue" Height="60">
                         <TextBlock Text="{Binding Path=Name, StringFormat='Name: {0}'}" />
                         <TextBlock Text="{Binding Path=Mask, StringFormat='Mask: {0}'}" />
                         <TextBlock Text="{Binding Path=SampleResult, StringFormat='Example: {0}'}" />
                     </StackPanel>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </c1:C1ListView.ItemTemplate>
+        </c1:C1ListView>
 
         <TextBlock Text="Custom Mask" FontWeight="Bold" Margin="5" />
         <c1:C1TextBoxBase x:Name="txtCustomMask" Text="{Binding Mask}" Width="300" HorizontalAlignment="Left" />

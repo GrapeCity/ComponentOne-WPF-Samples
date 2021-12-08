@@ -8,6 +8,7 @@
     <ApplicationIcon>c1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
     <None Remove="Resources\16X16_Absolute.png" />
     <None Remove="Resources\16X16_DataCoordinates.png" />
     <None Remove="Resources\16X16_Relative.png" />
@@ -25,6 +26,9 @@
     <None Remove="Resources\Square.png" />
     <None Remove="Resources\Text.png" />
     <None Remove="Resources\Triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\16X16_Absolute.png">
@@ -89,18 +93,18 @@
   <ItemGroup>
     <EmbeddedResource Update="Resources\AppResources.resx">
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Chart">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DX">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

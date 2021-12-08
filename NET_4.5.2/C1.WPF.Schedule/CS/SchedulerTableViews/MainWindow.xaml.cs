@@ -26,7 +26,7 @@ namespace SchedulerTableViews
         //----------------------------------------
         #region ** fields
         private const string USHolidaysFile = "US32Holidays.ics";
-        private const string USHolidaysDownloadUri = "http://ical.mac.com/ical/US32Holidays.ics";
+        private const string USHolidaysDownloadUri = "http://www.mozilla.org/projects/calendar/caldata/USHolidays.ics";
         private static string TEMP_DIR = System.Environment.GetEnvironmentVariable("tmp");
 
         private SchedulerTableViews.C1NwindDataSetTableAdapters.AppointmentsTableAdapter appointmentsTableAdapter = new SchedulerTableViews.C1NwindDataSetTableAdapters.AppointmentsTableAdapter();

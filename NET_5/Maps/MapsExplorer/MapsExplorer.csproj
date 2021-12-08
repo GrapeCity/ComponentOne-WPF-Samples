@@ -16,6 +16,7 @@
     <Compile Remove="View\Cities.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
     <None Remove="Resources\2.5_day_depth.kml" />
     <None Remove="Resources\Cities100K.txt" />
     <None Remove="Resources\database.xml" />
@@ -34,6 +35,7 @@
     <Page Remove="View\Cities.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\2.5_day_depth.kml" />
     <EmbeddedResource Include="Resources\Cities100K.txt" />
     <EmbeddedResource Include="Resources\gdp-ppp.txt" />
@@ -68,10 +70,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

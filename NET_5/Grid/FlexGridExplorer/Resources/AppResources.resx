@@ -430,4 +430,13 @@
   <data name="AdvancedFilteringDesc" xml:space="preserve">
     <value>Shows how to use filter controls in advanced scenarios.</value>
   </data>
+  <data name="ShowSort" xml:space="preserve">
+    <value>Show sort icons</value>
+  </data>
+  <data name="HeaderAlignment" xml:space="preserve">
+    <value>Header Alignment</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexGridExplorer</value>
+  </data>
 </root>

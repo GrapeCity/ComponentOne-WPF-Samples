@@ -26,6 +26,7 @@ namespace FlexPivotExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = Properties.Resources.Title;
         }
     }
 }

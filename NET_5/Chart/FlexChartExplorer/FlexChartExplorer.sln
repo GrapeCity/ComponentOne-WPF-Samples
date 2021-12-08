@@ -8,6 +8,7 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 		GCDebug|Any CPU = GCDebug|Any CPU
 		GCRelease|Any CPU = GCRelease|Any CPU
+		GRAPECITY|Any CPU = GRAPECITY|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -17,6 +18,8 @@ Global
 		{B2F19BFC-D098-48DD-9BB2-980ED098C13B}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
 		{B2F19BFC-D098-48DD-9BB2-980ED098C13B}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
 		{B2F19BFC-D098-48DD-9BB2-980ED098C13B}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{B2F19BFC-D098-48DD-9BB2-980ED098C13B}.GRAPECITY|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F19BFC-D098-48DD-9BB2-980ED098C13B}.GRAPECITY|Any CPU.Build.0 = Release|Any CPU
 		{B2F19BFC-D098-48DD-9BB2-980ED098C13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2F19BFC-D098-48DD-9BB2-980ED098C13B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

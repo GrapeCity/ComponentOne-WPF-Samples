@@ -20,7 +20,7 @@
                     </TextBlock.Inlines>
                 </TextBlock>
             </DataTemplate>
-            <Style TargetType="ComboBox">
+            <Style TargetType="Chart:C1ComboBox">
                 <Style.Setters>
                     <Setter Property="Width" Value="250" />
                     <Setter Property="Margin" Value="10" />
@@ -32,10 +32,10 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <ComboBox x:Name="cbChartType" VerticalAlignment="Center"
+        <Chart:C1ComboBox x:Name="cbChartType" VerticalAlignment="Center"
                       ItemsSource="{Binding DataContext.ChartTypes}" ItemTemplate="{StaticResource cbChartTypeTemplate}"
                       SelectedValue="{Binding ElementName=financialSeries, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-        </ComboBox>
+        </Chart:C1ComboBox>
         <Chart:FlexChart x:Name="flexChart" ItemsSource="{Binding DataContext.Data}" Grid.Row="1">
             <Chart:Series Binding="Volume" BindingX="Time" ChartType="Column" SeriesName="Volume">
                 <Chart:Series.AxisY>

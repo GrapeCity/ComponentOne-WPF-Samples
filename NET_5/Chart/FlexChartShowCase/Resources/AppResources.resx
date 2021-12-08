@@ -120,4 +120,7 @@
   <data name="Desc" xml:space="preserve">
     <value>The sample demonstrate the most important chart features.</value>
   </data>
+  <data name="ExportText" xml:space="preserve">
+    <value>Export</value>
+  </data>
 </root>

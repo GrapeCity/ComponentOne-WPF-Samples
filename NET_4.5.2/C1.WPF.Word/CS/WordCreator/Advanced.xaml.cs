@@ -28,10 +28,7 @@ namespace Word.Creator
         {
             get 
             {
-                yield return btnPaperSize;
-                yield return btnTableOfContent;
-                yield return btnTables;
-                yield return btnTextFlow;
+                yield return btnRtf;
             }
         }
     }

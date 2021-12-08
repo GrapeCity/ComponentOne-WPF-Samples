@@ -19,6 +19,7 @@ namespace CoreExplorer
         {
             InitializeComponent();
             this.Tag = AppResources.DemoProgressBarDescription;
+            this.btnRunAgain.Content = AppResources.RunAgain;
             worker.ProgressChanged += Worker_ProgressChanged;
             worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
             worker.DoWork += Worker_DoWork;

@@ -166,7 +166,13 @@
     <value>Binding</value>
   </data>
   <data name="BindingTag" xml:space="preserve">
-    <value>This view shows how you can use the FlexChart to show two sets of values from a single array of data. This is the most common usage scenario for the FlexChart.\r The sample does the following:\r \n 1.Set the chart's DataSource property to an array of data objects. Each data object has values for 'date', 'sales', and 'downloads'.\r 2.Set the chart's bindingX property to 'date'.\r 3.Add a Series object to the chart's series array and set its binding property to 'sales'.\r 4.Add a second Series object to the chart's series array and set its binding property to 'downloads'.\r \n In addition to binding, this sample shows the effect of the interpolateNulls and legendToggle properties.When you set interpolateNulls to true, the chart fills in gaps created by null values in the data.When you set legendToggle to true, the chart toggles the visibility of the series when you click its name in the legend.</value>
+    <value>This view shows how you can use the FlexChart to show two sets of values from a single array of data. This is the most common usage scenario for the FlexChart.
+    The sample does the following:
+    1.Set the chart's DataSource property to an array of data objects. Each data object has values for 'date', 'sales', and 'downloads'.
+    2.Set the chart's bindingX property to 'date'.
+    3.Add a Series object to the chart's series array and set its binding property to 'sales'.
+    4.Add a second Series object to the chart's series array and set its binding property to 'downloads'.
+    In addition to binding, this sample shows the effect of the interpolateNulls and legendToggle properties.When you set interpolateNulls to true, the chart fills in gaps created by null values in the data.When you set legendToggle to true, the chart toggles the visibility of the series when you click its name in the legend.</value>
   </data>
   <data name="BindingTitle" xml:space="preserve">
     <value>Binding</value>
@@ -184,7 +190,9 @@
     <value>Bubble</value>
   </data>
   <data name="BubbleTag" xml:space="preserve">
-    <value>This view shows how to create bubble charts using the FlexChart control.\r Bubble charts are similar to other chart types, except in addition to X and Y you must specify a binding for the bubble size.This is done by setting the binding property to a comma - delimited string that specifies the name of the properties to be used for the Y and size values for each bubble.\r In this example, the chart is bound to a list containing objects with 'x', 'y', and 'size' properties.The chart contains a single series and its binding property is set to the string 'y,size'.</value>
+    <value>This view shows how to create bubble charts using the FlexChart control.
+    Bubble charts are similar to other chart types, except in addition to X and Y you must specify a binding for the bubble size.This is done by setting the binding property to a comma - delimited string that specifies the name of the properties to be used for the Y and size values for each bubble.
+    In this example, the chart is bound to a list containing objects with 'x', 'y', and 'size' properties.The chart contains a single series and its binding property is set to the string 'y,size'.</value>
   </data>
   <data name="BubbleTitle" xml:space="preserve">
     <value>Bubble</value>
@@ -214,13 +222,15 @@
     <value>Financial Chart</value>
   </data>
   <data name="FinancialTag" xml:space="preserve">
-    <value>This view shows how to create financial charts with the FlexChart control.\r The FlexChart supports two types of financial chart: Candlestick and HiLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source.</value>
+    <value>This view shows how to create financial charts with the FlexChart control.
+    The FlexChart supports two types of financial chart: Candlestick and HiLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source.</value>
   </data>
   <data name="HeaderFooterDesc" xml:space="preserve">
     <value>Header And Footer</value>
   </data>
   <data name="HeaderFooterTag" xml:space="preserve">
-    <value>This view shows how you can add a header and a footer to the chart.\r The header and footer properties determine the content, and the headerStyle and footerStyle properties determine the appearance of the header and footer.</value>
+    <value>This view shows how you can add a header and a footer to the chart.
+    The header and footer properties determine the content, and the headerStyle and footerStyle properties determine the appearance of the header and footer.</value>
   </data>
   <data name="HeaderFooterTitle" xml:space="preserve">
     <value>Header And Footer</value>
@@ -229,7 +239,11 @@
     <value>Histogram</value>
   </data>
   <data name="HistogramTag" xml:space="preserve">
-    <value>A Histogram chart is used to study the distribution of non-categorical data by dividing it into bins of specified width. It plots the frequency of data items that fall in each of these bins. This sample shows: \n \n 1. Histogram chart with columns \n 2. Frequency Polygon: A variation of Histogram charts where the columns are replaced by a curve.These are helpful for comparing multiple sets of data. \n 3. Normal Curve: A bell - shaped curve, also known as Gaussian curve, which shows the probability distribution of a continuous random variable. \n 4. Cumulative Frequency Polygons: Popularly known as ogives, shows the running total of frequencies on the chart.</value>
+    <value>A Histogram chart is used to study the distribution of non-categorical data by dividing it into bins of specified width. It plots the frequency of data items that fall in each of these bins. This sample shows: 
+    1. Histogram chart with columns 
+    2. Frequency Polygon: A variation of Histogram charts where the columns are replaced by a curve.These are helpful for comparing multiple sets of data. 
+    3. Normal Curve: A bell - shaped curve, also known as Gaussian curve, which shows the probability distribution of a continuous random variable. 
+    4. Cumulative Frequency Polygons: Popularly known as ogives, shows the running total of frequencies on the chart.</value>
   </data>
   <data name="HistogramTitle" xml:space="preserve">
     <value>Histogram</value>
@@ -238,7 +252,9 @@
     <value>Hit Test</value>
   </data>
   <data name="HitTestTag" xml:space="preserve">
-    <value>This view demonstrates the use of the FlexChart's hitTest method.\r The hitTest method takes a point and returns the nearest chart element.It can be used to provide interactive features such as clickable regions, drill - downs, etc.\r Move mouse over chart to see information about the chart element that is closest to the mouse.</value>
+    <value>This view demonstrates the use of the FlexChart's hitTest method.
+    The hitTest method takes a point and returns the nearest chart element.It can be used to provide interactive features such as clickable regions, drill - downs, etc.
+    Move mouse over chart to see information about the chart element that is closest to the mouse.</value>
   </data>
   <data name="HitTestTitle" xml:space="preserve">
     <value>Hit Test</value>
@@ -256,7 +272,12 @@
     <value>Introduction</value>
   </data>
   <data name="IntroductionTag" xml:space="preserve">
-    <value>This view shows the FlexChart's basic features. It binds the chart to a data source and allows you to select the chart type, series stacking, and rotation.\r If you move the mouse over a chart element, a tooltip will appear showing details about the data point.\r The simplest way to use the FlexChart is to:\r \n 1.Set the chart's DataSource property to an array of data objects.\r 2.Set the chart's bindingX property to the name of the property that contains the X values (in this example fruit names).\r 3.Add one or more Series objects to the chart's series array and set their binding property to the name of the property that contains the Y values (in this example the months of March, April, and May).</value>
+    <value>This view shows the FlexChart's basic features. It binds the chart to a data source and allows you to select the chart type, series stacking, and rotation.
+    If you move the mouse over a chart element, a tooltip will appear showing details about the data point.
+    The simplest way to use the FlexChart is to:
+    1.Set the chart's DataSource property to an array of data objects.
+    2.Set the chart's bindingX property to the name of the property that contains the X values (in this example fruit names).
+    3.Add one or more Series objects to the chart's series array and set their binding property to the name of the property that contains the Y values (in this example the months of March, April, and May).</value>
   </data>
   <data name="IntroductionTitle" xml:space="preserve">
     <value>Introduction</value>
@@ -274,7 +295,13 @@
     <value>Legend</value>
   </data>
   <data name="LegendTag" xml:space="preserve">
-    <value>This view shows how you can use the FlexChart legend properties. \n The sample does the following: \n \n 1.Set legend position property to decide how you locate the legend.such as \"Auto\", \"Left\", \"Top\", \"Right\" and \"Bottom\". \n 2.Set legend orientations. \n 3.Set the mode of legend text wrapping.such as \"None\", \"Wrap\" and \"Truncate\". \n 4.Set a value more than 0 to legend item maxWidth property, set 0 to disable legend textWrapping. \n 5.Set the LegendGroup property of each series to group items within the legend.  Legend items within each group are arranged by the legend orientation property while the legend groups are arranged based on the legend position.</value>
+    <value>This view shows how you can use the FlexChart legend properties. 
+    The sample does the following: 
+    1.Set legend position property to decide how you locate the legend.such as "Auto", "Left", "Top", "Right" and "Bottom". 
+    2.Set legend orientations. 
+    3.Set the mode of legend text wrapping.such as "None", "Wrap" and "Truncate". 
+    4.Set a value more than 0 to legend item maxWidth property, set 0 to disable legend textWrapping. 
+    5.Set the LegendGroup property of each series to group items within the legend.  Legend items within each group are arranged by the legend orientation property while the legend groups are arranged based on the legend position.</value>
   </data>
   <data name="LegendTitle" xml:space="preserve">
     <value>Legend</value>
@@ -316,7 +343,8 @@
     <value>PieChart</value>
   </data>
   <data name="PieIntroductionTag" xml:space="preserve">
-    <value>This view shows the FlexPie's basic features. It binds the chart to a data source.\r If you move the mouse over a chart element, a tooltip will appear showing details about the data point.</value>
+    <value>This view shows the FlexPie's basic features. It binds the chart to a data source.
+    If you move the mouse over a chart element, a tooltip will appear showing details about the data point.</value>
   </data>
   <data name="PieSelectionTag" xml:space="preserve">
     <value>This view shows the FlexPie's selection feature.</value>
@@ -337,7 +365,8 @@
     <value>Ranged Histogram</value>
   </data>
   <data name="RangedHistogramTag" xml:space="preserve">
-    <value>This view shows main functionality of Ranged Histogram. \n \n An unique Histogram chart that can be used to study categorical as well as non-categorical data. Provides multiple binning options as well as support for Overflow and Underflow bins.</value>
+    <value>This view shows main functionality of Ranged Histogram. 
+    An unique Histogram chart that can be used to study categorical as well as non-categorical data. Provides multiple binning options as well as support for Overflow and Underflow bins.</value>
   </data>
   <data name="RangedHistogramTitle" xml:space="preserve">
     <value>Ranged Histogram</value>
@@ -346,7 +375,8 @@
     <value>Selection</value>
   </data>
   <data name="SelectionTag" xml:space="preserve">
-    <value>This view demonstrates the FlexChart's selection feature.\r The selectionMode property determines whether the chart should select series or points when the user clicks on the chart.</value>
+    <value>This view demonstrates the FlexChart's selection feature.
+    The selectionMode property determines whether the chart should select series or points when the user clicks on the chart.</value>
   </data>
   <data name="SelectionTitle" xml:space="preserve">
     <value>Selection</value>
@@ -355,7 +385,12 @@
     <value>Series Binding</value>
   </data>
   <data name="SeriesBindingTag" xml:space="preserve">
-    <value>This view shows how you can use the FlexChart to show data from multiple data sources, one per series.\r The sample does the following:\r \n 1.Set the chart's bindingX and binding properties to 'x' and 'y'.\r 2.Add a Series object to the chart's series array and set its DataSource property to an array of objects that have 'x' and 'y' properties.\r 3.Add a second Series object to the chart's series array and set its DataSource property to a different array of objects that have 'x' and 'y' properties.\r \n Alternatively, we could have set the bindingX and binding properties on the Series objects instead of setting then on the chart.In this case this was not necessary because the binding names are the same for all series.</value>
+    <value>This view shows how you can use the FlexChart to show data from multiple data sources, one per series.
+    The sample does the following:
+    1.Set the chart's bindingX and binding properties to 'x' and 'y'.
+    2.Add a Series object to the chart's series array and set its DataSource property to an array of objects that have 'x' and 'y' properties.
+    3.Add a second Series object to the chart's series array and set its DataSource property to a different array of objects that have 'x' and 'y' properties.
+    Alternatively, we could have set the bindingX and binding properties on the Series objects instead of setting then on the chart.In this case this was not necessary because the binding names are the same for all series.</value>
   </data>
   <data name="SeriesBindingTitle" xml:space="preserve">
     <value>Series Binding</value>
@@ -367,13 +402,15 @@
     <value>TreeMap Node Color</value>
   </data>
   <data name="TreeMapNodeColorTag" xml:space="preserve">
-    <value>TreeMaps can be used to display two quantitive variables simultaneously, one represented by each rectangle's size and the other represented by its colour. \n \n This view demonstrates how you can use TreeMap.NodeRendering event to specify color of each node.</value>
+    <value>TreeMaps can be used to display two quantitive variables simultaneously, one represented by each rectangle's size and the other represented by its colour. 
+    This view demonstrates how you can use TreeMap.NodeRendering event to specify color of each node.</value>
   </data>
   <data name="TreeMapNodeColorTitle" xml:space="preserve">
     <value>TreeMap Node Color</value>
   </data>
   <data name="TreeMapTag" xml:space="preserve">
-    <value>This view shows main functionality of TreeMap control. \n TreeMap charts are compact way of visualizing hierarchical data in form of nested rectangles with area of each rectangle depicting the quantity of each category.</value>
+    <value>This view shows main functionality of TreeMap control. 
+    TreeMap charts are compact way of visualizing hierarchical data in form of nested rectangles with area of each rectangle depicting the quantity of each category.</value>
   </data>
   <data name="TreeMapTitle" xml:space="preserve">
     <value>TreeMap</value>
@@ -382,7 +419,8 @@
     <value>Trend Line</value>
   </data>
   <data name="TrendLineTag" xml:space="preserve">
-    <value>This view shows TrendLine in FlexChart.\r You can use different trendline types by setting the FitType property of TrendLine. The points on the plot can be dragged by mouse which updates the trend line and its equation automatically.</value>
+    <value>This view shows TrendLine in FlexChart.
+    You can use different trendline types by setting the FitType property of TrendLine. The points on the plot can be dragged by mouse which updates the trend line and its equation automatically.</value>
   </data>
   <data name="TrendLineTitle" xml:space="preserve">
     <value>Trend Line</value>
@@ -391,7 +429,8 @@
     <value>Waterfall</value>
   </data>
   <data name="WaterfallTag" xml:space="preserve">
-    <value>This view shows Waterfall Series in FlexChart.\r The Waterfall series is normally used to demonstrate how the starting position either increases or decreases through a series of changes.</value>
+    <value>This view shows Waterfall Series in FlexChart.
+    The Waterfall series is normally used to demonstrate how the starting position either increases or decreases through a series of changes.</value>
   </data>
   <data name="WaterfallTitle" xml:space="preserve">
     <value>Waterfall</value>
@@ -400,7 +439,8 @@
     <value>Zones</value>
   </data>
   <data name="ZonesTag" xml:space="preserve">
-    <value>The view creates a scatter chart of student grades, highlighting each grade range using zones.\r The zones are drawn in rendering event of FlexChart. Statistic values are calculated and plotted.</value>
+    <value>The view creates a scatter chart of student grades, highlighting each grade range using zones.
+    The zones are drawn in rendering event of FlexChart. Statistic values are calculated and plotted.</value>
   </data>
   <data name="ZonesTitle" xml:space="preserve">
     <value>Zones</value>
@@ -409,9 +449,22 @@
     <value>Zoom</value>
   </data>
   <data name="ZoomTag" xml:space="preserve">
-    <value>This view shows how to implement a custom zoom for the FlexChart control.\r Use the mouse or touch to select a rectangular area on the plot area.The chart will zoom in on the selected area.When you are done, click the 'Reset Zoom' button below the chart to return to the original view.</value>
+    <value>This view shows how to implement a custom zoom for the FlexChart control.
+    Use the mouse or touch to select a rectangular area on the plot area.The chart will zoom in on the selected area.When you are done, click the 'Reset Zoom' button below the chart to return to the original view.</value>
   </data>
   <data name="ZoomTitle" xml:space="preserve">
     <value>Zoom</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexChartExplorer</value>
+  </data>
+  <data name="BreakEvenDesc" xml:space="preserve">
+    <value>Break-Even Chart</value>
+  </data>
+  <data name="BreakEvenTag" xml:space="preserve">
+    <value>Break-Even chart is a chart that shows the sales volume level at which total costs equal sales.</value>
+  </data>
+  <data name="BreakEvenTitle" xml:space="preserve">
+    <value>Break-Even</value>
   </data>
 </root>

@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="4">
             <TextBlock Text="Theme" VerticalAlignment="Center"/>
-            <ComboBox x:Name="Themes" Margin="4 0 0 0" SelectionChanged="OnThemeChanged"/>
+            <c1:C1ComboBox x:Name="Themes" Margin="4 0 0 0" SelectionChanged="OnThemeChanged"/>
         </StackPanel>
         <c1:FlexGrid x:Name="grid" Margin="12" Grid.Row="1" Style="{StaticResource ExpressionDark}" SelectionMode="RowRange"/>
     </Grid>

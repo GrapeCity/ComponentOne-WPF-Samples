@@ -113,5 +113,14 @@ namespace TabControlExplorer.Properties {
                 return ResourceManager.GetString("TabPositionTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TabControlExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
     }
 }

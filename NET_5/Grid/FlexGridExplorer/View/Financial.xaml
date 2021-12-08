@@ -182,19 +182,21 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                     <TextBlock Text="Update Interval:" VerticalAlignment="Center" Width="95" Margin="0,0,5,0"/>
-                    <ComboBox x:Name="_cmbUpdateInterval" SelectedIndex="0" Width="90" VerticalAlignment="Center" SelectionChanged="_cmbUpdateInterval_SelectionChanged">
-                        <ComboBoxItem Content="1000 ms" />
-                        <ComboBoxItem Content="500 ms" />
-                    </ComboBox>
+                    <c1:C1ComboBox x:Name="_cmbUpdateInterval" Width="90" VerticalAlignment="Center"
+                                   SelectionChanged="_cmbUpdateInterval_SelectionChanged">
+                        <c1:C1ComboBoxItem Content="1000 ms" />
+                        <c1:C1ComboBoxItem Content="500 ms" />
+                    </c1:C1ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                     <TextBlock Text="Batch Size: " VerticalAlignment="Center" Width="95" Margin="0,0,5,0" />
-                    <ComboBox x:Name="_cmbBatchSize" SelectedIndex="1" Width="90" VerticalAlignment="Center" SelectionChanged="_cmbBatchSize_SelectionChanged" >
-                        <ComboBoxItem Content="500 items" />
-                        <ComboBoxItem Content="100 items" />
-                        <ComboBoxItem Content="10 items" />
-                        <ComboBoxItem Content="1 item" />
-                    </ComboBox>
+                    <c1:C1ComboBox x:Name="_cmbBatchSize" Width="90" VerticalAlignment="Center"
+                                   SelectionChanged="_cmbBatchSize_SelectionChanged" >
+                        <c1:C1ComboBoxItem Content="500 items" />
+                        <c1:C1ComboBoxItem Content="100 items" />
+                        <c1:C1ComboBoxItem Content="10 items" />
+                        <c1:C1ComboBoxItem Content="1 item" />
+                    </c1:C1ComboBox>
                 </StackPanel>
             </StackPanel>
         </c1:C1Expander>

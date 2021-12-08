@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Globalization;
 using System.IO;
@@ -20,6 +21,7 @@ namespace FlexPivotExplorer
         MemoryStream stream;
         RadioButton sel;
         bool firstLoad = true;
+        public ObservableCollection<string> Logs { get; set; } = new ObservableCollection<string>();
 
         public DataEngine()
         {
@@ -61,8 +63,7 @@ namespace FlexPivotExplorer
             //label.Text = string.Format("{0} sec.", time);
 
             // update log
-            int idx = lstBoxLogs.Items.Count - 1;
-            lstBoxLogs.Items[idx] = string.Format("Updated {0}: {1} sec.", type, time);
+            Logs[Logs.Count - 1] = $"Updated {type}: {time} sec.";
             ScrollListBox();
             updating = false;
         }
@@ -70,8 +71,7 @@ namespace FlexPivotExplorer
         private void FlexPivotEngine_CancelUpdating(object sender, EventArgs e)
         {
             string time = DateTime.Now.Subtract(updateTime).TotalSeconds.ToString("n2");
-            int idx = lstBoxLogs.Items.Count - 1;
-            lstBoxLogs.Items[idx] = string.Format("Updating {0} canceled: {1} sec.", GetDataType(), time);
+            Logs[Logs.Count - 1] = $"Updating {GetDataType()} canceled: {time} sec.";
             ScrollListBox();
         }
 
@@ -82,14 +82,13 @@ namespace FlexPivotExplorer
                 return;
 
             updateTime = DateTime.Now;
-            lstBoxLogs.Items.Add(string.Format("Updating {0}...", type));
+            Logs.Add($"Updating {type}...");
             ScrollListBox();
         }
 
         private void ScrollListBox()
         {
-            lstBoxLogs.Items.MoveCurrentToLast();
-            lstBoxLogs.ScrollIntoView(lstBoxLogs.Items.CurrentItem);
+            lstBoxLogs.BringIndexIntoView(Logs.Count -1);
         }
 
         private void DataTable_Click(object sender, RoutedEventArgs e)
@@ -189,7 +188,7 @@ namespace FlexPivotExplorer
             // start log
             int count = int.Parse(sel.Tag.ToString());
             addTime = DateTime.Now;
-            lstBoxLogs.Items.Add(string.Format("Creating {0} rows...", count.ToString("n0")));
+            Logs.Add($"Creating {count.ToString("n0")} rows...");
             ScrollListBox();
             return count;
         }
@@ -198,8 +197,7 @@ namespace FlexPivotExplorer
         void EndAddingRows(int count)
         {
             string time = DateTime.Now.Subtract(addTime).TotalSeconds.ToString("n2");
-            int idx = lstBoxLogs.Items.Count - 1;
-            lstBoxLogs.Items[idx] = string.Format("Created {0} rows: {1} sec.", count.ToString("n0"), time);
+            Logs[Logs.Count - 1] = $"Created {count.ToString("n0")} rows: {time} sec.";
             ScrollListBox();
         }
 

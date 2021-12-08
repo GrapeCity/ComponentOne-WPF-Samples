@@ -110,6 +110,9 @@ namespace FlexChartExplorer
             _allItems.Add(new SampleItem(AppResources.ParetoTitle,
                AppResources.ParetoDesc,
                new Pareto()));
+            _allItems.Add(new SampleItem(AppResources.BreakEvenTitle,
+                AppResources.BreakEvenDesc,
+                new BreakEven()));
         }
 
         public ObservableCollection<SampleItem> AllItems

@@ -64,14 +64,12 @@ namespace FlexChartExplorer
 
         private void cbShow_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            pieChart.Binding = bindings[cbShow.SelectedIndex];
-            // adjust titles
-            pieChart.Titles = AdjustTitles(pieChart.Binding.Split(','));
-        }
-
-        private void UserControl_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-            cbShow.SelectedIndex = 0;
+            if (cbShow.SelectedItem != null)
+            {
+                pieChart.Binding = bindings[cbShow.SelectedIndex];
+                // adjust titles
+                pieChart.Titles = AdjustTitles(pieChart.Binding.Split(','));
+            }
         }
     }
 

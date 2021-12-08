@@ -12,17 +12,17 @@
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="enumConverter" />
-            <Style TargetType="ComboBox" x:Key="leftPcComboBoxStyle">
+            <Style TargetType="Chart:C1ComboBox" x:Key="leftPcComboBoxStyle">
                 <Setter Property="Width" Value="160" />
                 <Setter Property="Margin" Value="10 5 5 5" />
             </Style>
-            <Style TargetType="ComboBox" x:Key="rightPcComboBoxStyle">
+            <Style TargetType="Chart:C1ComboBox" x:Key="rightPcComboBoxStyle">
                 <Setter Property="Width" Value="190" />
                 <Setter Property="Margin" Value="5" />
             </Style>
             <local:BooleanConverter x:Key="booleanConverter" />
             <local:VisibilityConverter x:Key="visibilityConverter" />
-            <Style TargetType="ComboBox">
+            <Style TargetType="Chart:C1ComboBox">
                 <Setter Property="Margin" Value="10" />
             </Style>
             <DataTemplate x:Key="cbMaxDepthTemplate">
@@ -39,13 +39,11 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel x:Name="stackPanel" Orientation="Horizontal">
-            <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="cbMaxDepth"
+            <Chart:C1ComboBox x:Name="cbMaxDepth"
                       SelectedValue="{Binding ElementName=treeMap, Path=MaxDepth, Mode=TwoWay}" 
                       ItemsSource="{Binding DataContext.MaxDepths}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbMaxDepthTemplate}">
-                </ComboBox>
-            </StackPanel>
+            </Chart:C1ComboBox>
         </StackPanel>
         <Chart:C1TreeMap x:Name="treeMap" Grid.Row="1" MaxDepth="2" Binding="CurrentSales" BindingName="Type" ChildItemsPath="Items"
                          ItemsSource="{Binding DataContext.Data}" LegendPosition="None" NodeRendering="treeMap_NodeRendering" ToolTipContent="Current Sales:{CurrentSales:C0}&#x000A;Previous Sales:{PreviousSales:C0}">

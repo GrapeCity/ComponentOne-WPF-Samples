@@ -10,7 +10,7 @@
     <Grid Background="White">
         <!-- show songs in a FlexGrid -->
         <c1:FlexGrid x:Name="_flexiTunes" Grid.Row="2"
-                     IsReadOnly="true"
+                     IsReadOnly="False"
                      HeadersVisibility="Column"
                      GridLinesVisibility="None"
                      Background="White"
@@ -27,9 +27,9 @@
                      AutoGenerateColumns="False" >
             <c1:FlexGrid.Columns>
                 <c1:GridColumn Binding="Name" Header="Title" AllowDragging="False" Width="300" />
-                <c1:GridColumn Binding="Duration" HorizontalAlignment="Right" AllowFiltering="False" />
-                <c1:GridColumn Binding="Size" HorizontalAlignment="Right" />
-                <c1:GridColumn Binding="Rating" HorizontalAlignment="Left" Width="200" Aggregate="Average" />
+                <c1:GridColumn Binding="Duration" HorizontalAlignment="Right" AllowFiltering="False" IsReadOnly="True" />
+                <c1:GridColumn Binding="Size" HorizontalAlignment="Right" IsReadOnly="True"/>
+                <c1:GridColumn Binding="Rating" HorizontalAlignment="Left" Width="200" Aggregate="Average" IsReadOnly="True"/>
             </c1:FlexGrid.Columns>
         </c1:FlexGrid>
     </Grid>

@@ -51,21 +51,9 @@
     			<RowDefinition Height="Auto" />
     			<RowDefinition Height="*" />
     		</Grid.RowDefinitions>
-    		<Button x:Name="btnPaperSize" Style="{StaticResource btnStyle}" Grid.Row="0" Content="Paper Sizes" Margin="0,0,5,0" />
+    		<Button x:Name="btnRtf" Style="{StaticResource btnStyle}" Grid.Row="0" Content="Rich Text" Margin="0,0,5,0" />
     		<Border Grid.Row="0" Grid.Column="1" Style="{StaticResource CE_TextBkg}">
-    			<TextBlock Style="{StaticResource CE_Text}" Text="Creates a document containing multiple paper sizes and orientations." />
-    		</Border>
-    		<Button x:Name="btnTables" Style="{StaticResource btnStyle}" Grid.Row="2" Content="Tables" Margin="0,0,5,0" />
-    		<Border Style="{StaticResource CE_TextBkg}" Grid.Row="2" Grid.Column="1">	
-    			<TextBlock Style="{StaticResource CE_Text}" Text="Creates a document with NorthWind information. Shows how to do tables with indentation and alignment." />
-    		</Border>	
-    		<Button x:Name="btnTableOfContent" Style="{StaticResource btnStyle}" Grid.Row="4" Content="Table of Contents" Margin="0,0,5,0" />
-			<Border Style="{StaticResource CE_TextBkg}" Grid.Row="4" Grid.Column="1">
-    			<TextBlock Style="{StaticResource CE_Text}" Text="Creates a document with a Table of Contents. Shows how to move pages within the document." />
-    		</Border>	
-    		<Button x:Name="btnTextFlow" Style="{StaticResource btnStyle}" Grid.Row="6" Content="Text Flow" Margin="0,0,5,0" />
-    		<Border Style="{StaticResource CE_TextBkg}" Grid.Row="6" Grid.Column="1">
-    			<TextBlock Style="{StaticResource CE_Text}" Text="Shows how to flow text into columns and pages." />
+    			<TextBlock Style="{StaticResource CE_Text}" Text="Creates a document from C1RichTextBox." />
     		</Border>
     	</Grid>
     </ScrollViewer>

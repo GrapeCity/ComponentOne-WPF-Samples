@@ -21,6 +21,7 @@ namespace ColorPickerExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = ColorPickerExplorer.Resources.AppResources.Title;
         }
     }
 }

@@ -10,16 +10,10 @@
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="EmConverter" />
-            <Style TargetType="ComboBox" x:Key="CompanyStyle">
+            <Style TargetType="c1:C1ComboBox" x:Key="CompanyStyle">
                 <Setter Property="Margin" Value="10 0" />
                 <Setter Property="Width" Value="150" />
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Name}"/>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
+                <Setter Property="DisplayMemberPath" Value="Name"/>
             </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
@@ -28,8 +22,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <TextBlock Text="Symbol"/>
-            <ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"/>
+            <TextBlock Text="Symbol" VerticalAlignment="Center"/>
+            <c1:C1ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"/>
         </StackPanel>
         <c1:C1FinancialChart x:Name="financialChart" ChartType="PointAndFigure" BindingX="date" Binding="High,Low,Open,Close,Volume" Grid.Row="1" ToolTipContent="{}{value}">
             <c1:C1FinancialChart.Options>
@@ -48,17 +42,17 @@
             </c1:C1FinancialChart.AxisX>
         </c1:C1FinancialChart>
         <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="2">
-            <TextBlock Text="Data Fields" Margin="10 0"/>
-            <ComboBox ItemsSource="{Binding DataFields}" SelectedItem="{Binding ElementName=financialChart, Path=Options.DataFields, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100"/>
-            <TextBlock Text="Reversal" Margin="10 0"/>
+            <TextBlock Text="Data Fields" Margin="10 0" VerticalAlignment="Center"/>
+            <c1:C1ComboBox ItemsSource="{Binding DataFields}" SelectedItem="{Binding ElementName=financialChart, Path=Options.DataFields, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100"/>
+            <TextBlock Text="Reversal" Margin="10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox Value="{Binding ElementName=financialChart, Path=Options.ReversalAmount, Mode=TwoWay}" Minimum="2" Maximum="5" Width="80"/>
-            <TextBlock Text="Scaling" Margin="30 0 10 0"/>
-            <ComboBox ItemsSource="{Binding Scalings}" SelectedItem="{Binding ElementName=financialChart, Path=Options.Scaling, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100" SelectionChanged="ComboBox_SelectionChanged"/>
-            <TextBlock Text="Box Size" Margin="30 0 10 0"/>
+            <TextBlock Text="Scaling" Margin="30 0 10 0" VerticalAlignment="Center"/>
+            <c1:C1ComboBox ItemsSource="{Binding Scalings}" SelectedItem="{Binding ElementName=financialChart, Path=Options.Scaling, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100" SelectionChanged="ComboBox_SelectionChanged"/>
+            <TextBlock Text="Box Size" Margin="30 0 10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox x:Name="boxSize" IsEnabled="False" Value="{Binding ElementName=financialChart, Path=Options.BoxSize, Mode=TwoWay}" Minimum="1" Maximum="100" Width="80"/>
-            <TextBlock Text="ATR Period" Margin="30 0 10 0"/>
+            <TextBlock Text="ATR Period" Margin="30 0 10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox x:Name="period" IsEnabled="False" Value="{Binding ElementName=financialChart, Path=Options.Period, Mode=TwoWay}" Minimum="7" Maximum="30" Width="80"/>
-            <CheckBox Content="Square Grid" Margin="30 0 10 0" IsChecked="{Binding ElementName=financialChart, Path=Options.SquareGrid, Mode=TwoWay}" />
+            <CheckBox VerticalAlignment="Center" Content="Square Grid" Margin="30 0 10 0" IsChecked="{Binding ElementName=financialChart, Path=Options.SquareGrid, Mode=TwoWay}" />
         </StackPanel>
     </Grid>
 </UserControl>

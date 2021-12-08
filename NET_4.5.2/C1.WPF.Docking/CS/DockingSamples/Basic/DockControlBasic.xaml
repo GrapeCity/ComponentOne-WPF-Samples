@@ -12,7 +12,7 @@
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>
                 <c1:C1DockTabControl>
-                    <c1:C1DockTabItem Header="Tab 3" TabShape="Sloped">
+                    <c1:C1DockTabItem Header="Tab 3" TabShape="Sloped" CanUserFloat="False">
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>

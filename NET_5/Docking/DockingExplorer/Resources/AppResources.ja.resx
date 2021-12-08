@@ -135,4 +135,7 @@
   <data name="VisualStudioTitle" xml:space="preserve">
     <value>Visual Studio のような外観</value>
   </data>
+  <data name="Title" xml:space="preserve">
+    <value>Dockingエクスプローラー</value>
+  </data>
 </root>

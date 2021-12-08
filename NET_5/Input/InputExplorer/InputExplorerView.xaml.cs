@@ -11,6 +11,12 @@ namespace InputExplorer
         {
             InitializeComponent();
             this.DataContext = new SampleDataSource();
+            Loaded += InputExplorerView_Loaded;
+        }
+
+        private void InputExplorerView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

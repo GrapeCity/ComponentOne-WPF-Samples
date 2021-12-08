@@ -11,6 +11,7 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
     <None Remove="Resources\1f4c4-Document.48.png" />
     <None Remove="Resources\assistant.png" />
     <None Remove="Resources\Computer.png" />
@@ -51,6 +52,7 @@
     <None Remove="Resources\User.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\departments.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -58,10 +60,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TreeView">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="System.Linq" Version="4.3.0" />
   </ItemGroup>
@@ -119,5 +124,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\LoadOnDemand.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
   </ItemGroup>
 </Project>

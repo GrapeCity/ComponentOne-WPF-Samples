@@ -1,6 +1,7 @@
 ﻿<UserControl x:Class="DateTimeEditorsExplorer.DateTimeEditorsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
     <Grid>
         <Grid.Resources>
             <Style TargetType="TextBlock" x:Key="titleStyle">
@@ -23,8 +24,7 @@
                 <Setter Property="Margin" Value="10 5" />
                 <Setter Property="Foreground" Value="Gray" />
             </Style>
-            <Style TargetType="ListBox">
-                <Setter Property="SelectedIndex" Value="0" />
+            <Style TargetType="c1:C1ListView">
                 <Setter Property="ItemTemplate">
                     <Setter.Value>
                         <DataTemplate>
@@ -38,8 +38,8 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="lbSamples" Width="200" ItemsSource="{Binding AllItems}" />
-        <Grid DataContext="{Binding ElementName=lbSamples, Path=SelectedValue}" Grid.Column="1">
+        <c1:C1ListView x:Name="lbSamples" Width="200" ItemsSource="{Binding AllItems}" BorderThickness="0 1 1 0"/>
+        <Grid DataContext="{Binding ElementName=lbSamples, Path=SelectedItem}" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />

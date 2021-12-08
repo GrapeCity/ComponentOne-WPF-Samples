@@ -34,20 +34,20 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" x:Name="panel">
-            <ComboBox x:Name="cbItemPosition"
+            <Chart:C1ComboBox x:Name="cbItemPosition"
                       ItemsSource="{Binding DataContext.Positions}"
                       ItemTemplate="{StaticResource cbItemPositionTemplate}"
                       Margin="10 5 5 5"
                       Width="250"
                       SelectedValue="{Binding ElementName=pieChart, Path=SelectedItemPosition, Mode=TwoWay, Converter={StaticResource enumConverter}}">
-            </ComboBox>
-            <ComboBox x:Name="cbItemOffset"
+            </Chart:C1ComboBox>
+            <Chart:C1ComboBox x:Name="cbItemOffset"
                       Width="210"
                       Margin="5"
                       ItemsSource="{Binding DataContext.Offsets}"
                       ItemTemplate="{StaticResource cbItemOffsetTemplate}"
                       SelectedValue="{Binding ElementName=pieChart, Path=SelectedItemOffset, Mode=TwoWay}">
-            </ComboBox>
+            </Chart:C1ComboBox>
         </StackPanel>
         <Chart:FlexPie x:Name="pieChart" Binding="April" Grid.Row="1" BindingName="Fruit" ItemsSource="{Binding DataContext.Data}" SelectionMode="Point">
             <Chart:FlexPie.DataLabel>

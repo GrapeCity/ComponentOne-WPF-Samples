@@ -33,30 +33,4 @@
         <Setter Property="IsMoveToPointEnabled" Value="True" />
     </Style>
     
-    <Style x:Key="colorComboStyle" TargetType="ComboBox" BasedOn="{StaticResource inputStyle}">
-        <Setter Property="ItemsSource">
-            <Setter.Value>
-                <x:Array Type="Brush">
-                    <SolidColorBrush Color="Red" />
-                    <SolidColorBrush Color="Orange" />
-                    <SolidColorBrush Color="Yellow" />
-                    <SolidColorBrush Color="Green" />
-                    <SolidColorBrush Color="Blue" />
-                    <SolidColorBrush Color="LightBlue" />
-                    <SolidColorBrush Color="Brown" />
-                    <SolidColorBrush Color="White" />
-                    <SolidColorBrush Color="Black" />
-                </x:Array>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="ItemTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <Border Background="{Binding}" Margin="2" Height="10" />
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-    </Style>
-    
 </ResourceDictionary>

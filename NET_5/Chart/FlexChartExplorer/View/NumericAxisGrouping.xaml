@@ -11,27 +11,26 @@
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="enumConverter" />
-            <Style TargetType="ComboBox">
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <TextBlock>
-                                <TextBlock.Inlines>
-                                    <Run Text="Axis Y Group Separator: "/>
-                                    <Run Text="{Binding .}" />
-                                </TextBlock.Inlines>
-                            </TextBlock>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <ComboBox ItemsSource="{Binding GroupSeparator}" SelectedValue="{Binding ElementName=flexChart, Path=AxisY.GroupSeparator, Mode=TwoWay, Converter={StaticResource enumConverter}}" Width="240" Margin="10 0 20 0"/>
+            <c1:C1ComboBox ItemsSource="{Binding GroupSeparator}"
+                      SelectedValue="{Binding ElementName=flexChart, Path=AxisY.GroupSeparator, Mode=TwoWay, Converter={StaticResource enumConverter}}"
+                      Width="240" Margin="10 0 20 0">
+                <c1:C1ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <TextBlock.Inlines>
+                                <Run Text="Axis Y Group Separator: "/>
+                                <Run Text="{Binding .}" />
+                            </TextBlock.Inlines>
+                        </TextBlock>
+                    </DataTemplate>
+                </c1:C1ComboBox.ItemTemplate>
+            </c1:C1ComboBox>
         </StackPanel>
         <c1:FlexChart x:Name="flexChart" Background="White" ChartType="SplineSymbols" BindingX="Month" 
                         ItemsSource="{Binding Data}" Grid.Row="1" ToolTipContent="{}{y}">

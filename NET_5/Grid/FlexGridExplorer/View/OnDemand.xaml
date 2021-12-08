@@ -15,7 +15,7 @@
         <c1:C1TextBox x:Name="search" Margin="4" TextChanged="search_TextChanged"/>
         <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" HeadersVisibility="Column" IsReadOnly="True" Grid.Row="1">
             <c1:FlexGrid.Columns>
-                <c1:GridImageColumn Binding="Thumbnail" Header=" " Width="62" PlaceHolder="/FlexGridExplorer;component/Images/default.png"/>
+                <c1:GridImageColumn Binding="Thumbnail" Header=" " Width="62" Placeholder="/FlexGridExplorer;component/Images/default.png"/>
                 <c1:GridHyperlinkColumn Binding="Link" ContentBinding="Title" Header="Title" TargetName="_blank" MinWidth="300" Width="*"/>
                 <c1:GridColumn Binding="ChannelTitle" Header="Channel"/>
             </c1:FlexGrid.Columns>

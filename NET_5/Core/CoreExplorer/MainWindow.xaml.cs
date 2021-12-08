@@ -10,6 +10,7 @@ namespace CoreExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = CoreExplorer.Resources.AppResources.Title;
         }
     }
 }

@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
             <Label x:Name="lblMode" VerticalAlignment="Center"/>
-            <ComboBox x:Name="showItemsPicker" HorizontalAlignment="Stretch"/>
+            <c1:C1ComboBox x:Name="showItemsPicker" HorizontalAlignment="Stretch"/>
         </StackPanel>
         <c1:FlexGrid x:Name="grid" Grid.Row="2" AutoGenerateColumns="False" HeadersVisibility="All" SelectionMode="Row">
             <c1:FlexGrid.Columns>

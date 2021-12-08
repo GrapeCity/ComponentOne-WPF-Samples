@@ -11,12 +11,12 @@ namespace FlexPivotExplorer
         {
             InitializeComponent();
             this.DataContext = new SampleDataSource();
+            Loaded += FlexPivotView_Loaded;
         }
 
-        private void lbSamples_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void FlexPivotView_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            SampleItem selectedItem = e.AddedItems[0] as SampleItem;
-            grid.DataContext = selectedItem;
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

@@ -24,11 +24,12 @@ namespace FlexChartExplorer
         {
             this.InitializeComponent();
             EnumConverter enumConverter = new EnumConverter();
-            cbChartType.SetBinding(ComboBox.SelectedValueProperty, new System.Windows.Data.Binding() { ElementName = "flexChart", Path = new PropertyPath("ChartType"), 
+
+            cbChartType.SetBinding(C1.WPF.Input.C1ComboBox.SelectedValueProperty, new System.Windows.Data.Binding() { ElementName = "flexChart", Path = new PropertyPath("ChartType"), 
                 Mode = BindingMode.TwoWay, Converter = enumConverter });
-            cbPalette.SetBinding(ComboBox.SelectedValueProperty, new System.Windows.Data.Binding() { ElementName = "flexChart", Path = new PropertyPath("Palette"), 
+            cbPalette.SetBinding(C1.WPF.Input.C1ComboBox.SelectedValueProperty, new System.Windows.Data.Binding() { ElementName = "flexChart", Path = new PropertyPath("Palette"), 
                 Mode = BindingMode.TwoWay, Converter = enumConverter });
-            cbStacked.SetBinding(ComboBox.SelectedValueProperty, new System.Windows.Data.Binding() { ElementName = "flexChart", Path = new PropertyPath("Stacking"), 
+            cbStacked.SetBinding(C1.WPF.Input.C1ComboBox.SelectedValueProperty, new System.Windows.Data.Binding() { ElementName = "flexChart", Path = new PropertyPath("Stacking"), 
                 Mode = BindingMode.TwoWay, Converter = enumConverter });
             cbRotate.SetBinding(CheckBox.IsCheckedProperty, new System.Windows.Data.Binding() { ElementName = "flexChart", Path = new PropertyPath("Rotated"), 
                 Mode = BindingMode.TwoWay });
@@ -101,8 +102,8 @@ namespace FlexChartExplorer
                 {
                     series.StackingGroup = -1;
                 }
-            }
         }
+    }
 
     public class GroupCheckBoxVisibilityConverter : IMultiValueConverter
     {

@@ -11,6 +11,12 @@ namespace CoreExplorer
         {
             InitializeComponent();
             this.DataContext = new SampleDataSource();
+            Loaded += CoreView_Loaded;
+        }
+
+        private void CoreView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

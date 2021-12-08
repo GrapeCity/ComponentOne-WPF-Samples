@@ -7,6 +7,7 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
     <None Remove="Resources\simple.htm" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +48,7 @@
     <Resource Include="Resources\manager.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\departments.xml" />
     <EmbeddedResource Include="Resources\employeesDepartment.xml" />
   </ItemGroup>
@@ -108,19 +110,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.SpellChecker">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

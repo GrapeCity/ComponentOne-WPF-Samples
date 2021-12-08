@@ -95,5 +95,14 @@ namespace PropertyGridExplorer.Properties {
                 return ResourceManager.GetString("PropertyGridDemoTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PropertyGridExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
     }
 }

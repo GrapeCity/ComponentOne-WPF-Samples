@@ -81,6 +81,15 @@ namespace FlexPivotExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collapse all the subtotals rows and columns..
+        /// </summary>
+        public static string CollapseSubTotalRowsColumnsTooltip {
+            get {
+                return ResourceManager.GetString("CollapseSubTotalRowsColumnsTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows a custom calculated column in FlexPivotGrid
         ///This project shows sales by country and category.It also shows a couple calculated columns that show the difference in product sales a custom total calculation..
         /// </summary>
@@ -173,9 +182,9 @@ namespace FlexPivotExplorer.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Shows how you can use FlexPivot to analyze multiple fields in one view.
-        ///The C1FlexPivotFieldList class has a new MaxItems property.This property allows you to determine how many fields are allowed in each field list (Rows, Columns, Filters, and Values).
+        ///The C1FlexPivotFieldList class has a new MaxItems property. This property allows you to determine how many fields are allowed in each field list (Rows, Columns, Filters, and Values).
         ///If you set the MaxItems of the Values list to a number higher than one, users will be able to add multiple fields to the values list, and the analysis will be performed on all of them at once.
-        ///You can also use the MaxItems property on the Rows, Columns, a [rest of string was truncated]&quot;;.
+        ///You can also use the MaxItems property on the Rows, Columns,  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string MultiValue {
             get {
@@ -194,9 +203,9 @@ namespace FlexPivotExplorer.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Shows how you can customize the FlexPivotPage control.
-        ///The sample creates a default view that is persisted across sessions in isolated storage.It also adds a new menu to the FlexPivotPage that contains a list of predefined views.
+        ///The sample creates a default view that is persisted across sessions in isolated storage. It also adds a new menu to the FlexPivotPage that contains a list of predefined views.
         ///The IsolatedStorageSettings.ApplicationSettings class allows you to save and load application settings very easily.
-        ///The predefined views defined in this application show how you can use the FlexPivotField.Format property to group date values and analyze sales by year, month, and [rest of string was truncated]&quot;;.
+        ///The predefined views defined in this application show how you can use the FlexPivotField.Format property to group date values and analyze sales by year, month, an [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Page {
             get {
@@ -232,6 +241,15 @@ namespace FlexPivotExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select a predefined FlexPivot view..
+        /// </summary>
+        public static string PredefinedPivotViewTooltip {
+            get {
+                return ResourceManager.GetString("PredefinedPivotViewTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to customize the FlexPivotPage component by creating a custom template based on the default one.
         ///The sample creates a custom template(located in App.xaml) for the FlexPivotPage, this template is a customized version of the default one, the changes made to the template are:
         ///The FlexPivotPanel is located on the right side of the FlexPivotPage.
@@ -249,6 +267,15 @@ namespace FlexPivotExplorer.Properties {
         public static string TemplateTitle {
             get {
                 return ResourceManager.GetString("TemplateTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FlexPivotExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
         

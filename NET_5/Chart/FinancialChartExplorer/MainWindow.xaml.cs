@@ -24,6 +24,7 @@ namespace FinancialChartExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = FinancialChartExplorer.Resources.AppResources.Title;
         }
     }
 }

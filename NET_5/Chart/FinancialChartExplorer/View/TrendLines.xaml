@@ -22,14 +22,14 @@
 
         </c1:C1FinancialChart>
         <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="1">
-            <TextBlock Text="Fit Type" Margin="10 0"/>
-            <ComboBox ItemsSource="{Binding FitType}" SelectedValue="{Binding ElementName=trendLine, Path=FitType, Converter={StaticResource EmConverter}, Mode=TwoWay}" Width="100" />
-            <TextBlock Text="Order" Margin="30 0 10 0"/>
+            <TextBlock Text="Fit Type" Margin="10 0" VerticalAlignment="Center"/>
+            <c1:C1ComboBox ItemsSource="{Binding FitType}" SelectedValue="{Binding ElementName=trendLine, Path=FitType, Converter={StaticResource EmConverter}, Mode=TwoWay}" Width="100" />
+            <TextBlock Text="Order" Margin="30 0 10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox Value="{Binding ElementName=trendLine, Path=Order, Mode=TwoWay}" Minimum="2" Maximum="10" Width="80"/>
-            <CheckBox x:Name="chkForecast" Margin="30 0 10 0" Content="Forecast" Checked="chkForecast_CheckedChanged" Unchecked="chkForecast_CheckedChanged" />
-            <TextBlock Text="Forward" Margin="30 0 10 0"/>
+            <CheckBox x:Name="chkForecast" VerticalAlignment="Center" Margin="30 0 10 0" Content="Forecast" Checked="chkForecast_CheckedChanged" Unchecked="chkForecast_CheckedChanged" />
+            <TextBlock Text="Forward" Margin="30 0 10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox Value="{Binding Forward, Mode=TwoWay}" Minimum="0" Maximum="100" Width="80"/>
-            <TextBlock Text="Backward" Margin="30 0 10 0"/>
+            <TextBlock Text="Backward" Margin="30 0 10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox Value="{Binding Backward, Mode=TwoWay}" Minimum="0" Maximum="100" Width="80"/>
         </StackPanel> 
     </Grid>

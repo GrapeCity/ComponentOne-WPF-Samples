@@ -88,6 +88,15 @@ namespace DockingExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DockingExplorer.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Visual studio.
         /// </summary>
         internal static string VisualStudioDescription {

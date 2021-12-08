@@ -11,6 +11,12 @@ namespace PropertyGridExplorer
         {
             InitializeComponent();
             DataContext = new SampleDataSource();
+            Loaded += PropertyGridExplorerView_Loaded;
+        }
+
+        private void PropertyGridExplorerView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

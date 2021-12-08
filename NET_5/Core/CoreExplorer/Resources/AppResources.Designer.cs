@@ -151,11 +151,38 @@ namespace CoreExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Play Again.
+        /// </summary>
+        internal static string PlayAgain {
+            get {
+                return ResourceManager.GetString("PlayAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Run Again.
+        /// </summary>
+        internal static string RunAgain {
+            get {
+                return ResourceManager.GetString("RunAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The C1TapHelper, C1ZoomHelper, and C1DragHelper classes help listening to drag and zoom gestures supporting inertiaand  either using the mouse or fingers..
         /// </summary>
         internal static string Tag {
             get {
                 return ResourceManager.GetString("Tag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CoreExplorer.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

@@ -10,6 +10,7 @@ namespace InputExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = InputExplorer.Properties.Resources.Title;
         }
     }
 }

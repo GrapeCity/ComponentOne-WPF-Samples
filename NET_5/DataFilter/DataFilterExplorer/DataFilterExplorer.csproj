@@ -9,6 +9,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
     <None Remove="Resources\cars.xml" />
     <None Remove="Resources\filter.png" />
     <None Remove="Resources\refresh.png" />
@@ -16,6 +17,7 @@
     <None Remove="Resources\Stores.txt" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\cars.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -23,26 +25,29 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>1.0.20212.57</Version>
+      <Version>1.0.20213.61</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>1.0.20212.57</Version>
+      <Version>1.0.20213.61</Version>
     </PackageReference>
-    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20212.57" />
+    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20213.61" />
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.5" />

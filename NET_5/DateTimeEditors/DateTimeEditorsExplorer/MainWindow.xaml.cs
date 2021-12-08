@@ -10,6 +10,7 @@ namespace DateTimeEditorsExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = DateTimeEditorsExplorer.Resources.AppResources.Title;
         }
     }
 }

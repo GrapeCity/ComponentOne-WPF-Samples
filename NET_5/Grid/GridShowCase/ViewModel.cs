@@ -1,15 +1,10 @@
 ﻿using C1.DataCollection;
-using C1.WPF.Grid;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Windows;
-using System.Windows.Data;
 using System.Windows.Input;
-using System.Windows.Media;
 
 namespace GridShowCase
 {
@@ -86,7 +81,9 @@ namespace GridShowCase
             get { return _selectedSize; }
             set
             {
-                _selectedSize = value; OnPropertyChanged(); RefreshDataSize();
+                _selectedSize = value;
+                OnPropertyChanged();
+                RefreshDataSize();
             }
         }
 

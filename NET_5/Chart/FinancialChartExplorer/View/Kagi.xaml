@@ -10,16 +10,10 @@
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="EmConverter" />
-            <Style TargetType="ComboBox" x:Key="CompanyStyle">
+            <Style TargetType="c1:C1ComboBox" x:Key="CompanyStyle">
                 <Setter Property="Margin" Value="10 0" />
                 <Setter Property="Width" Value="150" />
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Name}"/>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
+                <Setter Property="DisplayMemberPath" Value="Name"/>
             </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
@@ -28,8 +22,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <TextBlock Text="Symbol"/>
-            <ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"/>
+            <TextBlock Text="Symbol" VerticalAlignment="Center"/>
+            <c1:C1ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"/>
         </StackPanel>
         <c1:C1FinancialChart x:Name="financialChart" ChartType="Kagi" BindingX="Date" Binding="High,Low,Open,Close,Volume" Grid.Row="1">
             <c1:C1FinancialChart.Options>
@@ -38,12 +32,12 @@
             <c1:FinancialSeries />
         </c1:C1FinancialChart>
         <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="2">
-            <TextBlock Text="Reversal Amount" Margin="10 0"/>
+            <TextBlock Text="Reversal Amount" Margin="10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox x:Name="reversalAmount" Value="{Binding ElementName=financialChart, Path=Options.ReversalAmount, Mode=TwoWay}" Minimum="1" Maximum="100" Width="80"/>
-            <TextBlock Text="Range Mode" Margin="30 0 10 0"/>
-            <ComboBox x:Name="rangeMode" ItemsSource="{Binding RangeMode}" Width="100" SelectionChanged="OnRangeModeChanged"/>
-            <TextBlock Text="Data Fields" Margin="30 0 10 0"/>
-            <ComboBox ItemsSource="{Binding DataFields}" SelectedItem="{Binding ElementName=financialChart, Path=Options.DataFields, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100"/>
+            <TextBlock Text="Range Mode" Margin="30 0 10 0" VerticalAlignment="Center"/>
+            <c1:C1ComboBox x:Name="rangeMode" ItemsSource="{Binding RangeMode}" Width="100" SelectionChanged="OnRangeModeChanged"/>
+            <TextBlock Text="Data Fields" Margin="30 0 10 0" VerticalAlignment="Center"/>
+            <c1:C1ComboBox ItemsSource="{Binding DataFields}" SelectedItem="{Binding ElementName=financialChart, Path=Options.DataFields, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100"/>
         </StackPanel>
     </Grid>
 </UserControl>

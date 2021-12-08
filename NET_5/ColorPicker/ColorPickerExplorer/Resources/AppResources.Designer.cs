@@ -86,5 +86,14 @@ namespace ColorPickerExplorer.Resources {
                 return ResourceManager.GetString("Tag", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ColorPickerExplorer.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
     }
 }

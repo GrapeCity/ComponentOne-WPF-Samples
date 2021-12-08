@@ -33,6 +33,7 @@ namespace FlexChartExplorer
             InitializeComponent();
             Tag = AppResources.ErrorBarTag;
         }
+
         public List<string> ChartTypes
         {
             get
@@ -100,10 +101,9 @@ namespace FlexChartExplorer
 
         private void cboErrorAmounts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var comboBox = sender as ComboBox;
-            if (comboBox.SelectedValue != null && errorBarSeries != null)
+            if (e.AddedItems.Count > 0 && errorBarSeries != null)
             {
-                var value = (ErrorAmount)Enum.Parse(typeof(ErrorAmount), comboBox.SelectedValue.ToString());
+                var value = (ErrorAmount)Enum.Parse(typeof(ErrorAmount), e.AddedItems[0].ToString());
                 switch (value)
                 {
                     case ErrorAmount.FixedValue:

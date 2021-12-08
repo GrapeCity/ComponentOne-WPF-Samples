@@ -61,7 +61,7 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Demo.
+        ///   Looks up a localized string similar to Get smooth zooming, panning, and mapping between screen and geographical coordinates with ComponentOne Maps for WPF..
         /// </summary>
         public static string Demo {
             get {
@@ -79,7 +79,7 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Earthquakes.
+        ///   Looks up a localized string similar to  Shows a databound C1VectorLayer that visualizes earthquake data with a custom data template..
         /// </summary>
         public static string Earthquakes {
             get {
@@ -97,7 +97,7 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Factories.
+        ///   Looks up a localized string similar to Display items on the map using C1MapItemsLayer and provide item virtualization using C1MapVirtualLayer..
         /// </summary>
         public static string Factories {
             get {
@@ -115,7 +115,7 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GeoRSS.
+        ///   Looks up a localized string similar to Shows data items loaded from a GeoRSS feed bound to a C1VectorLayer in C1Maps..
         /// </summary>
         public static string Flicker {
             get {
@@ -133,7 +133,7 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Grid.
+        ///   Looks up a localized string similar to Shows how you can draw vector shapes and lines at exact geographic coordinates..
         /// </summary>
         public static string Grid {
             get {
@@ -151,7 +151,16 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to KML.
+        ///   Looks up a localized string similar to Loading data....
+        /// </summary>
+        public static string LoadingData {
+            get {
+                return ResourceManager.GetString("LoadingData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load and display vector data from KML files to render shapes on the map, or to provide a complete map created by vector drawings..
         /// </summary>
         public static string MapChart {
             get {
@@ -169,7 +178,7 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ShapeFile.
+        ///   Looks up a localized string similar to Load and display vector data from Shapefiles to render shapes on the map..
         /// </summary>
         public static string MapShape {
             get {
@@ -187,7 +196,7 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Marks.
+        ///   Looks up a localized string similar to Generate and display C1VectorMarks on the map at specified coordinates..
         /// </summary>
         public static string Marks {
             get {
@@ -201,6 +210,24 @@ namespace MapsExplorer.Properties {
         public static string MarksTitle {
             get {
                 return ResourceManager.GetString("MarksTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the place or location:.
+        /// </summary>
+        public static string SearchLabel {
+            get {
+                return ResourceManager.GetString("SearchLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MapsExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

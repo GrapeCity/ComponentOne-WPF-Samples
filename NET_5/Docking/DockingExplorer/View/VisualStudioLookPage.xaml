@@ -274,27 +274,6 @@
                                     </TreeView>
                                 </Grid>
                             </local:TabItem>
-
-                            <!--<local:TabItem Header="Toolbox">
-                                <StackPanel>
-                                    <c1:C1Expander Header="Silverlight Controls" IsExpanded="True" Margin="3">
-                                        <ListBox BorderThickness="0">
-                                            <local:IconText Icon="/DockingExplorer;component/Resources/pointer.png" Text="Pointer" />
-                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_chart.png" Text="Chart" />
-                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_accordion.png" Text="Accordion" />
-                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_datagrid.png" Text="DataGrid" />
-                                        </ListBox>
-                                    </c1:C1Expander>
-                                    <c1:C1Expander Header="WPF Controls" IsExpanded="True" Margin="2 0 2 2">
-                                        <ListBox BorderThickness="0">
-                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_chart.png" Text="Chart" />
-                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_datagrid.png" Text="DataGrid" />
-                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1silverlight_book.png" Text="Book" />
-                                            <local:IconText Icon="/DockingExplorer;component/Resources/c1winforms_chart3D_16.png" Text="3D Chart" />
-                                        </ListBox>
-                                    </c1:C1Expander>
-                                </StackPanel>
-                            </local:TabItem>-->
                         </c1:C1DockTabControl>
                         <c1:C1DockTabControl Dock="Left" DockWidth="220">
                             <local:TabItem Header="Solution Explorer">
@@ -727,11 +706,11 @@
                                     <Border Background="#FFF3F3F3" BorderThickness="0 0 0 1" BorderBrush="#FFA0ACB7" />
                                     <ToolBar Margin="0 2">
                                         <TextBlock Text="Show output from: " VerticalAlignment="Center" />
-                                        <ComboBox Width="100" Margin="0 -2">
-                                            <sys:String>Build</sys:String>
-                                            <sys:String>Debug</sys:String>
-                                            <sys:String>General</sys:String>
-                                        </ComboBox>
+                                        <c1:C1ComboBox Width="100" Margin="0 -2">
+                                            <c1:C1ComboBoxItem Content="Build"/>
+                                            <c1:C1ComboBoxItem Content="Debug"/>
+                                            <c1:C1ComboBoxItem Content="General"/>
+                                        </c1:C1ComboBox>
                                         <Separator />
                                         <Button ToolTipService.ToolTip="Go to Previous Message">
                                             <Image Stretch="None" Source="/DockingExplorer;component/Resources/gotopreviousmessage.png" />

@@ -37,27 +37,25 @@
                     </TextBlock.Inlines>
                 </TextBlock>
             </DataTemplate>
-            <Style TargetType="ComboBox">
-                <Setter Property="VerticalAlignment" Value="Center" />
-            </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10 0">
-            <ComboBox Width="210" x:Name="cbChartType" 
+            <Chart:C1ComboBox Width="210" x:Name="cbChartType" Margin="0 10 0 10"
                       ItemsSource="{Binding DataContext.ChartTypes}" 
-                      ItemTemplate="{StaticResource cbChartTypeTemplate}">
-            </ComboBox>
-            <ComboBox Width="200" Margin="10" x:Name="cbPalette" 
+                      ItemTemplate="{StaticResource cbChartTypeTemplate}"
+                              SelectedValue="{Binding ElementName=flexChart, Path=ChartType, Mode=TwoWay}">
+            </Chart:C1ComboBox>
+            <Chart:C1ComboBox Width="200" Margin="10" x:Name="cbPalette" 
                       ItemsSource="{Binding DataContext.Palettes}" 
                       ItemTemplate="{StaticResource cbPaletteTemplate}">
-            </ComboBox>
-            <ComboBox Width="200" Margin="10" x:Name="cbStacked" 
+            </Chart:C1ComboBox>
+            <Chart:C1ComboBox Width="200" Margin="10" x:Name="cbStacked" 
                       ItemsSource="{Binding DataContext.Stackings}" 
                       ItemTemplate="{StaticResource cbStackedTemplate}">
-            </ComboBox>
+            </Chart:C1ComboBox>
             <CheckBox Margin="10" x:Name="cbRotate" Content="Rotate" VerticalAlignment="Center" />
             <CheckBox Margin="10" x:Name="cbGroup" Content="Stacked Group" VerticalAlignment="Center" Checked="cbGroup_CheckedChanged" Unchecked="cbGroup_CheckedChanged">
                 <CheckBox.Visibility>

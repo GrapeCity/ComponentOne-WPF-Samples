@@ -12,17 +12,17 @@
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="enumConverter" />
-            <Style TargetType="ComboBox" x:Key="leftPcComboBoxStyle">
+            <Style TargetType="Chart:C1ComboBox" x:Key="leftPcComboBoxStyle">
                 <Setter Property="Width" Value="160" />
                 <Setter Property="Margin" Value="10 5 5 5" />
             </Style>
-            <Style TargetType="ComboBox" x:Key="rightPcComboBoxStyle">
+            <Style TargetType="Chart:C1ComboBox" x:Key="rightPcComboBoxStyle">
                 <Setter Property="Width" Value="190" />
                 <Setter Property="Margin" Value="5" />
             </Style>
             <local:BooleanConverter x:Key="booleanConverter" />
             <local:VisibilityConverter x:Key="visibilityConverter" />
-            <Style TargetType="ComboBox">
+            <Style TargetType="Chart:C1ComboBox">
                 <Setter Property="Margin" Value="10" />
             </Style>
             <DataTemplate x:Key="cbChartTypeTemplate">
@@ -56,21 +56,21 @@
         </Grid.RowDefinitions>
         <StackPanel x:Name="stackPanel" Orientation="Horizontal">
             <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="cbChartType"
+                <Chart:C1ComboBox x:Name="cbChartType"
                       SelectedValue="{Binding ElementName=treeMap, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}" 
                       ItemsSource="{Binding DataContext.ChartTypes}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbChartTypeTemplate}">
-                </ComboBox>
-                <ComboBox x:Name="cbPalette"
+                </Chart:C1ComboBox>
+                <Chart:C1ComboBox x:Name="cbPalette"
                       SelectedValue="{Binding ElementName=treeMap, Path=Palette, Mode=TwoWay, Converter={StaticResource enumConverter}}" 
                       ItemsSource="{Binding DataContext.Palettes}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbPaletteTemplate}">
-                </ComboBox>
-                <ComboBox x:Name="cbMaxDepth"
+                </Chart:C1ComboBox>
+                <Chart:C1ComboBox x:Name="cbMaxDepth"
                       SelectedValue="{Binding ElementName=treeMap, Path=MaxDepth, Mode=TwoWay}" 
                       ItemsSource="{Binding DataContext.MaxDepths}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbMaxDepthTemplate}">
-                </ComboBox>
+                </Chart:C1ComboBox>
                 <CheckBox x:Name="cbLabels" Content="Labels" VerticalAlignment="Center"
                           IsChecked="True" Checked="cbLabels_Checked" Unchecked="cbLabels_Checked">
                 </CheckBox>

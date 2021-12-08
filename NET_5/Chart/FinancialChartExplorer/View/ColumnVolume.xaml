@@ -8,26 +8,14 @@
              mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Grid.Resources>
-            <Style TargetType="ComboBox">
-                <Setter Property="Margin" Value="10 0" />
-                <Setter Property="Width" Value="150" />
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Name}"/>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <TextBlock Text="Symbol"/>
-            <ComboBox x:Name="cbSymbol" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"/>
+            <TextBlock Text="Symbol" VerticalAlignment="Center"/>
+            <c1:C1ComboBox x:Name="cbSymbol" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"
+                           Margin="10 0" Width="150" DisplayMemberPath="Name" SelectedIndex="0"/>
         </StackPanel>
         <c1:C1FinancialChart x:Name="financialChart" ToolTipContent="{}Date: {Date}&#x000A;Close: {Close}&#x000A;Volume: {Volume}" BindingX="Date" ChartType="ColumnVolume" Binding="Close,Volume" Grid.Row="1"/>
     </Grid>

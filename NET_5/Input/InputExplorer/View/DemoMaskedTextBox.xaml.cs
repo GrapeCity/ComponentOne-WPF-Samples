@@ -22,7 +22,7 @@ namespace InputExplorer
             this.DataContext = dataContext;
         }
 
-        private void lstMaskTemplates_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void lstMaskTemplates_SelectionChanged_1(object sender, C1.WPF.Core.SelectionChangedEventArgs<int> e)
         {
             var maskTemplate = lstMaskTemplates.SelectedItem as MaskTemplate;
             dataContext.Mask = maskTemplate.Mask;

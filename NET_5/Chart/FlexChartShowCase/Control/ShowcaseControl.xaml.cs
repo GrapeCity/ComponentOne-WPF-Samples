@@ -43,7 +43,7 @@ namespace FlexChartShowcase
             checkMultiplePlots.IsChecked = true;
 
             cbPalette.ItemsSource = Enum.GetNames(typeof(Palette)).ToList();
-            cbPalette.SetBinding(ComboBox.SelectedValueProperty, new Binding() { ElementName = "flexChart", Path = new PropertyPath("Palette"), Mode = BindingMode.TwoWay, Converter = new EnumConverter() });
+            //cbPalette.SetBinding(ComboBox.SelectedValueProperty, new Binding() { ElementName = "flexChart", Path = new PropertyPath("Palette"), Mode = BindingMode.TwoWay, Converter = new EnumConverter() });
         }
 
         private void FlexChart_Rendered(object sender, RenderEventArgs e)

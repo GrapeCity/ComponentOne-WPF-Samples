@@ -12,17 +12,17 @@
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="enumConverter" />
-            <Style TargetType="ComboBox" x:Key="leftPcComboBoxStyle">
+            <Style TargetType="Chart:C1ComboBox" x:Key="leftPcComboBoxStyle">
                 <Setter Property="Width" Value="160" />
                 <Setter Property="Margin" Value="10 5 5 5" />
             </Style>
-            <Style TargetType="ComboBox" x:Key="rightPcComboBoxStyle">
+            <Style TargetType="Chart:C1ComboBox" x:Key="rightPcComboBoxStyle">
                 <Setter Property="Width" Value="190" />
                 <Setter Property="Margin" Value="5" />
             </Style>
              <local:BooleanConverter x:Key="booleanConverter" />
             <local:VisibilityConverter x:Key="visibilityConverter" />
-            <Style TargetType="ComboBox">
+            <Style TargetType="Chart:C1ComboBox">
                 <Setter Property="Margin" Value="10" />
             </Style>
             <DataTemplate x:Key="cbInnerRadiusTemplate">
@@ -80,41 +80,41 @@
         </Grid.RowDefinitions>
         <StackPanel x:Name="stackPanel" Orientation="Horizontal">
             <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="cbInnerRadius"
+                <Chart:C1ComboBox x:Name="cbInnerRadius"
                       SelectedValue="{Binding ElementName=pieChart, Path=InnerRadius, Mode=TwoWay}" 
                       ItemsSource="{Binding DataContext.Radius}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbInnerRadiusTemplate}">
-                </ComboBox>
-                <ComboBox x:Name="cbOffset"
+                </Chart:C1ComboBox>
+                <Chart:C1ComboBox x:Name="cbOffset"
                       SelectedValue="{Binding ElementName=pieChart, Path=Offset, Mode=TwoWay}"
                       ItemsSource="{Binding DataContext.Offsets}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbOffsetTemplate}">
-                </ComboBox>
+                </Chart:C1ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="cbStartAngle"
+                <Chart:C1ComboBox x:Name="cbStartAngle"
                       SelectedValue="{Binding ElementName=pieChart, Path=StartAngle, Mode=TwoWay}"
                       ItemsSource="{Binding DataContext.StartAngles}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbStartAngleTemplate}">
-                </ComboBox>
-                <ComboBox x:Name="cbPalette"
+                </Chart:C1ComboBox>
+                <Chart:C1ComboBox x:Name="cbPalette"
                       SelectedValue="{Binding ElementName=pieChart, Path=Palette, Mode=TwoWay, Converter={StaticResource enumConverter}}"
                       ItemsSource="{Binding DataContext.Palettes}" Style="{StaticResource rightPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbPaletteTemplate}">
-                </ComboBox>
+                </Chart:C1ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="cbLabels"
+                <Chart:C1ComboBox x:Name="cbLabels"
                       SelectedValue="{Binding ElementName=pieChart, Path=DataLabel.Position, Mode=TwoWay, Converter={StaticResource enumConverter}}"
                       ItemsSource="{Binding LabelPositions}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbLabelsTemplate}">
-                </ComboBox>
-                <ComboBox x:Name="cbLabelBorder"
+                </Chart:C1ComboBox>
+                <Chart:C1ComboBox x:Name="cbLabelBorder"
                       Visibility="{Binding ElementName=cbLabels, Path=SelectedValue, Converter={StaticResource visibilityConverter}}" 
                       SelectedValue="{Binding ElementName=pieChart, Path=DataLabel.Border, Mode=TwoWay}" 
                       ItemsSource="{Binding DataContext.LabelsBorders}" Style="{StaticResource rightPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbLabelBorderTemplate}">
-                </ComboBox>
+                </Chart:C1ComboBox>
             </StackPanel>
         </StackPanel>
         <Chart:FlexPie x:Name="pieChart" Grid.Row="1" Binding="April" BindingName="Fruit" ItemsSource="{Binding DataContext.Data}">

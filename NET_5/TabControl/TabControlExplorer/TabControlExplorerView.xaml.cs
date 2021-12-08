@@ -11,6 +11,12 @@ namespace TabControlExplorer
         {
             InitializeComponent();
             this.DataContext = new SampleDataSource();
+            Loaded += TabControlExplorerView_Loaded;
+        }
+
+        private void TabControlExplorerView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

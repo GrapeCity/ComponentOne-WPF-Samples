@@ -19,7 +19,7 @@ namespace TreeViewExplorer.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -111,6 +111,33 @@ namespace TreeViewExplorer.Properties {
         public static string IntroductionTitle {
             get {
                 return ResourceManager.GetString("IntroductionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This sample shows how to load C1TreeViewItem on demand to improve application loading performance..
+        /// </summary>
+        public static string LoadOnDemand {
+            get {
+                return ResourceManager.GetString("LoadOnDemand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load On Demand.
+        /// </summary>
+        public static string LoadOnDemandTitle {
+            get {
+                return ResourceManager.GetString("LoadOnDemandTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TreeViewExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

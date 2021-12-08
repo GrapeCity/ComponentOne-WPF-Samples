@@ -166,8 +166,13 @@
     <value>バインディング</value>
   </data>
   <data name="BindingTag" xml:space="preserve">
-    <value>FlexChart を使用して単一のデータ配列から２つの値セットを表示する方法を示します。これは FlexChart の最も一般的な使用例です。\r
-このサンプルは以下のことを行います。\r \n 1.チャートの DataSource プロパティにデータオブジェクトの配列を設定します。各データオブジェクトには 'date'、'sales'、'downloads' の値が含まれています。\r 2.チャートの BindingX プロパティに 'date' を設定します。\r 3.Series オブジェクトにチャートの Series 配列を追加し、その Binding プロパティに 'sales' を設定します。\r 4.２つ目の Series オブジェクトをチャートの Series 配列に追加し、その Binding プロパティに 'downloads' を設定します。\r \n バインディングに加えて、このサンプルは InterpolateNulls プロパティと LegendToggle プロパティの効果も示します。InterpolateNulls をtrueに設定すると、データ内の null 値によって生じたギャップが埋められます。LegendToggle をtrueに設定すると、凡例の系列名をクリックしたときにその系列のチャートへの表示/非表示が切り替わります。</value>
+    <value>FlexChart を使用して単一のデータ配列から２つの値セットを表示する方法を示します。これは FlexChart の最も一般的な使用例です。
+このサンプルは以下のことを行います。
+1.チャートの DataSource プロパティにデータオブジェクトの配列を設定します。各データオブジェクトには 'date'、'sales'、'downloads' の値が含まれています。
+2.チャートの BindingX プロパティに 'date' を設定します。
+3.Series オブジェクトにチャートの Series 配列を追加し、その Binding プロパティに 'sales' を設定します。
+4.２つ目の Series オブジェクトをチャートの Series 配列に追加し、その Binding プロパティに 'downloads' を設定します。
+バインディングに加えて、このサンプルは InterpolateNulls プロパティと LegendToggle プロパティの効果も示します。InterpolateNulls をtrueに設定すると、データ内の null 値によって生じたギャップが埋められます。LegendToggle をtrueに設定すると、凡例の系列名をクリックしたときにその系列のチャートへの表示/非表示が切り替わります。</value>
   </data>
   <data name="BindingTitle" xml:space="preserve">
     <value>バインディング</value>
@@ -185,7 +190,9 @@
     <value>バブルチャート</value>
   </data>
   <data name="BubbleTag" xml:space="preserve">
-    <value>FlexChart コントロールを使用してバブルチャートを作成する方法を示します。\r バブルチャートと他のチャートタイプとの違いは、バブルチャートでは X と Y に加えてバブルサイズのバインディングも指定することです。バブルサイズのバインディングを指定するには、各バブルの Y およびサイズ値に使用するプロパティの名前をカンマで区切って Binding プロパティに設定します。\r この例のチャートには、'x'、'y'、'size' の各プロパティを持つオブジェクトのリストがバインドされています。チャートの系列は１つで、その Binding プロパティが文字列 'y, size' に設定されています。</value>
+    <value>FlexChart コントロールを使用してバブルチャートを作成する方法を示します。
+    バブルチャートと他のチャートタイプとの違いは、バブルチャートでは X と Y に加えてバブルサイズのバインディングも指定することです。バブルサイズのバインディングを指定するには、各バブルの Y およびサイズ値に使用するプロパティの名前をカンマで区切って Binding プロパティに設定します。
+    この例のチャートには、'x'、'y'、'size' の各プロパティを持つオブジェクトのリストがバインドされています。チャートの系列は１つで、その Binding プロパティが文字列 'y, size' に設定されています。</value>
   </data>
   <data name="BubbleTitle" xml:space="preserve">
     <value>バブルチャート</value>
@@ -215,13 +222,15 @@
     <value>株価チャート</value>
   </data>
   <data name="FinancialTag" xml:space="preserve">
-    <value>FlexChart コントロールを使用して株価チャートを作成する方法を示します。\r FlexChart は、Candlestick と HiLowOpenClose の２種類の株価チャートをサポートしています。これらを使用するには、使用するタイプを ChartType プロパティに設定し、高値、安値、始値、終値を含むデータソースフィールドを指定する文字列を系列の Binding プロパティに設定します。</value>
+    <value>FlexChart コントロールを使用して株価チャートを作成する方法を示します。
+    FlexChart は、Candlestick と HiLowOpenClose の２種類の株価チャートをサポートしています。これらを使用するには、使用するタイプを ChartType プロパティに設定し、高値、安値、始値、終値を含むデータソースフィールドを指定する文字列を系列の Binding プロパティに設定します。</value>
   </data>
   <data name="HeaderFooterDesc" xml:space="preserve">
     <value>ヘッダとフッタ</value>
   </data>
   <data name="HeaderFooterTag" xml:space="preserve">
-    <value>ヘッダとフッタをチャートに追加する方法を示します。\r Header プロパティと Footer プロパティはヘッダとフッタの内容を決定し、それらの Style プロパティはそれぞれの外観を決定します。</value>
+    <value>ヘッダとフッタをチャートに追加する方法を示します。
+    Header プロパティと Footer プロパティはヘッダとフッタの内容を決定し、それらの Style プロパティはそれぞれの外観を決定します。</value>
   </data>
   <data name="HeaderFooterTitle" xml:space="preserve">
     <value>ヘッダとフッタ</value>
@@ -239,7 +248,9 @@
     <value>ヒットテスト</value>
   </data>
   <data name="HitTestTag" xml:space="preserve">
-    <value>FlexChart の HitTest メソッドの使い方を示します。\r HitTest メソッドは、ポイントを受け取って最も近いチャート要素を返します。クリック可能な領域やドリルダウンなどのインタラクティブな機能を提供するために使用できます。\r チャートの上でマウスを動かすと、マウスの位置に最も近いチャート要素に関する情報が表示されます。</value>
+    <value>FlexChart の HitTest メソッドの使い方を示します。
+    HitTest メソッドは、ポイントを受け取って最も近いチャート要素を返します。クリック可能な領域やドリルダウンなどのインタラクティブな機能を提供するために使用できます。
+    チャートの上でマウスを動かすと、マウスの位置に最も近いチャート要素に関する情報が表示されます。</value>
   </data>
   <data name="HitTestTitle" xml:space="preserve">
     <value>ヒットテスト</value>
@@ -257,7 +268,12 @@
     <value>FlexChart の基本機能</value>
   </data>
   <data name="IntroductionTag" xml:space="preserve">
-    <value>FlexChart の基本機能を示します。チャートはデータソースにバインドされており、ユーザーがチャートタイプ、パレット、系列の積み重ね、および回転を選択できます。\r マウスをチャート要素に合わせると、そのデータポイントの詳細を示すツールチップが表示されます。\r \n FlexChart の最も単純な使用方法は以下のとおりです。\r \n 1.チャートの DataSource プロパティにデータオブジェクトの配列を設定します。\r 2.チャートの BindingX プロパティに、X 値（この例では果物名）を含むプロパティの名前を設定します。\r 3.１つ以上の Series オブジェクトにチャートの Series 配列を追加し、Y 値を含むプロパティの名前（この例では March、April、May などの月名）をそれぞれの Binding プロパティに設定します。</value>
+    <value>FlexChart の基本機能を示します。チャートはデータソースにバインドされており、ユーザーがチャートタイプ、パレット、系列の積み重ね、および回転を選択できます。
+    マウスをチャート要素に合わせると、そのデータポイントの詳細を示すツールチップが表示されます。
+    \n FlexChart の最も単純な使用方法は以下のとおりです。
+    \n 1.チャートの DataSource プロパティにデータオブジェクトの配列を設定します。
+    2.チャートの BindingX プロパティに、X 値（この例では果物名）を含むプロパティの名前を設定します。
+    3.１つ以上の Series オブジェクトにチャートの Series 配列を追加し、Y 値を含むプロパティの名前（この例では March、April、May などの月名）をそれぞれの Binding プロパティに設定します。</value>
   </data>
   <data name="IntroductionTitle" xml:space="preserve">
     <value>FlexChart の基本機能</value>
@@ -266,7 +282,8 @@
     <value>ラベル</value>
   </data>
   <data name="LabelsTag" xml:space="preserve">
-    <value>FlexChart の選択機能を示します。\r SelectionMode プロパティは、ユーザーがチャートをクリックしたときに系列とポイントのどちらが選択されるかを決定します。</value>
+    <value>FlexChart の選択機能を示します。
+    SelectionMode プロパティは、ユーザーがチャートをクリックしたときに系列とポイントのどちらが選択されるかを決定します。</value>
   </data>
   <data name="LabelsTitle" xml:space="preserve">
     <value>ラベル</value>
@@ -275,7 +292,13 @@
     <value>凡例</value>
   </data>
   <data name="LegendTag" xml:space="preserve">
-    <value>FlexChart の凡例プロパティの使用方法を示します。\r サンプルでは次の処理を行います:\r 1.凡例の表示位置を設定します（\"Auto\"、\"Left\"、\"Top\"、\"Right\"、\"Bottom\"）。\r 2.凡例の向き設定します\r 3.凡例のテキスト折り返しモードを設定します（\"None\"、\"Wrap\"、\"Truncate\"）。\r 4.凡例の項目 のmaxWidth プロパティに0以上の値を設定します。凡例のテキスト折り返しを無効にするには0を設定します。\r 5.各系列の LegendGroup プロパティを設定して、凡例内の項目をグループ化します。各グループ内の凡例項目は凡例の方向プロパティによって配置され、凡例グループは凡例の位置に基づいて配置されます。</value>
+    <value>FlexChart の凡例プロパティの使用方法を示します。
+    サンプルでは次の処理を行います:
+    1.凡例の表示位置を設定します（"Auto"、"Left"、"Top"、"Right"、"Bottom"）。
+    2.凡例の向き設定します
+    3.凡例のテキスト折り返しモードを設定します（"None"、"Wrap"、"Truncate"）。
+    4.凡例の項目 のmaxWidth プロパティに0以上の値を設定します。凡例のテキスト折り返しを無効にするには0を設定します。
+    5.各系列の LegendGroup プロパティを設定して、凡例内の項目をグループ化します。各グループ内の凡例項目は凡例の方向プロパティによって配置され、凡例グループは凡例の位置に基づいて配置されます。</value>
   </data>
   <data name="LegendTitle" xml:space="preserve">
     <value>凡例</value>
@@ -317,7 +340,8 @@
     <value>FlexPie の基本機能</value>
   </data>
   <data name="PieIntroductionTag" xml:space="preserve">
-    <value>FlexPie の基本機能を示します。これはチャートにデータソースをバインドします。\r マウスをチャート要素に合わせると、そのデータポイントの詳細を示すツールチップが表示されます。</value>
+    <value>FlexPie の基本機能を示します。これはチャートにデータソースをバインドします。
+    マウスをチャート要素に合わせると、そのデータポイントの詳細を示すツールチップが表示されます。</value>
   </data>
   <data name="PieSelectionTag" xml:space="preserve">
     <value>FlexPie の選択機能を示します。</value>
@@ -338,7 +362,8 @@
     <value>範囲ヒストグラム</value>
   </data>
   <data name="RangedHistogramTag" xml:space="preserve">
-    <value>範囲ヒストグラムの主な機能を示します。\r カテゴリカルと非カテゴリー別のデータを研究するために使用できるユニークなヒストグラムチャートです。オーバーフローおよびアンダーフロービンをサポートするだけでなく、複数のビニングオプションを提供します。</value>
+    <value>範囲ヒストグラムの主な機能を示します。
+    カテゴリカルと非カテゴリー別のデータを研究するために使用できるユニークなヒストグラムチャートです。オーバーフローおよびアンダーフロービンをサポートするだけでなく、複数のビニングオプションを提供します。</value>
   </data>
   <data name="RangedHistogramTitle" xml:space="preserve">
     <value>範囲ヒストグラム</value>
@@ -347,7 +372,8 @@
     <value>選択（FlexChart）</value>
   </data>
   <data name="SelectionTag" xml:space="preserve">
-    <value>FlexChart の選択機能を示します。\r SelectionMode プロパティは、ユーザーがチャートをクリックしたときに系列とポイントのどちらが選択されるかを決定します。</value>
+    <value>FlexChart の選択機能を示します。
+    SelectionMode プロパティは、ユーザーがチャートをクリックしたときに系列とポイントのどちらが選択されるかを決定します。</value>
   </data>
   <data name="SelectionTitle" xml:space="preserve">
     <value>選択（FlexChart）</value>
@@ -356,7 +382,12 @@
     <value>系列のバインディング</value>
   </data>
   <data name="SeriesBindingTag" xml:space="preserve">
-    <value>FlexChart を使用して複数のデータソース（系列ごとに１つずつ）からのデータを表示する方法を示します。\r このサンプルは以下のことを行います。\r \n 1.チャートの BindingX および Binding プロパティに 'x' および 'y' を設定します。\r 2.Series オブジェクトをチャートの Series 配列に追加し、'x' プロパティと 'y' プロパティを持つオブジェクトの配列をその DataSource プロパティに設定します。\r 3.２つ目の Series オブジェクトをチャートの Series 配列に追加し、１つ目とは別の、'x' プロパティと 'Y' プロパティを持つオブジェクトの配列をその DataSource プロパティに設定します。\r \n 別の方法として、BindingX および Binding プロパティをチャートではなく Series オブジェクトで設定することもできます。このケースでは、バインディング名がすべての系列で同じであるため、このようにする必要はありません。</value>
+    <value>FlexChart を使用して複数のデータソース（系列ごとに１つずつ）からのデータを表示する方法を示します。
+    このサンプルは以下のことを行います。
+    1.チャートの BindingX および Binding プロパティに 'x' および 'y' を設定します。
+    2.Series オブジェクトをチャートの Series 配列に追加し、'x' プロパティと 'y' プロパティを持つオブジェクトの配列をその DataSource プロパティに設定します。
+    3.２つ目の Series オブジェクトをチャートの Series 配列に追加し、１つ目とは別の、'x' プロパティと 'Y' プロパティを持つオブジェクトの配列をその DataSource プロパティに設定します。
+    別の方法として、BindingX および Binding プロパティをチャートではなく Series オブジェクトで設定することもできます。このケースでは、バインディング名がすべての系列で同じであるため、このようにする必要はありません。</value>
   </data>
   <data name="SeriesBindingTitle" xml:space="preserve">
     <value>系列のバインディング</value>
@@ -383,7 +414,8 @@
     <value>傾向線</value>
   </data>
   <data name="TrendLineTag" xml:space="preserve">
-    <value>FlexChart 内に傾向線を表示します。\r TrendLine の FitType を設定することで、異なる傾向線を使用することができます。プロット上の点はマウスによりドラッグすることができ、傾向線とその式は自動的に更新されます。</value>
+    <value>FlexChart 内に傾向線を表示します。
+    TrendLine の FitType を設定することで、異なる傾向線を使用することができます。プロット上の点はマウスによりドラッグすることができ、傾向線とその式は自動的に更新されます。</value>
   </data>
   <data name="TrendLineTitle" xml:space="preserve">
     <value>傾向線</value>
@@ -392,7 +424,8 @@
     <value>ウォーターフォール</value>
   </data>
   <data name="WaterfallTag" xml:space="preserve">
-    <value>FlexChart でウォーターフォール系列を表示します。\r ウォーターフォール系列は、通常、一連の変化によって開始位置がどのように増減するかを示すために使用されます。</value>
+    <value>FlexChart でウォーターフォール系列を表示します。
+    ウォーターフォール系列は、通常、一連の変化によって開始位置がどのように増減するかを示すために使用されます。</value>
   </data>
   <data name="WaterfallTitle" xml:space="preserve">
     <value>ウォーターフォール</value>
@@ -401,7 +434,8 @@
     <value>ゾーン</value>
   </data>
   <data name="ZonesTag" xml:space="preserve">
-    <value>生徒の成績の散布図を作成し、ゾーンを使用して各成績範囲を強調しています。\r ゾーンは FlexChart の Rendering イベントで描画しています。静的な値が計算されてプロットされます。</value>
+    <value>生徒の成績の散布図を作成し、ゾーンを使用して各成績範囲を強調しています。
+    ゾーンは FlexChart の Rendering イベントで描画しています。静的な値が計算されてプロットされます。</value>
   </data>
   <data name="ZonesTitle" xml:space="preserve">
     <value>ゾーン</value>
@@ -410,9 +444,22 @@
     <value>ズーム</value>
   </data>
   <data name="ZoomTag" xml:space="preserve">
-    <value>FlexChart コントロールのカスタムズームを実装する方法を示します。\r プロット領域でマウスを使用して矩形領域を選択します。選択した領域にチャートがズームインします。その後、チャートの上にある［ズームのリセット］ボタンをクリックすると、チャートが元のビューに戻ります。</value>
+    <value>FlexChart コントロールのカスタムズームを実装する方法を示します。
+    プロット領域でマウスを使用して矩形領域を選択します。選択した領域にチャートがズームインします。その後、チャートの上にある［ズームのリセット］ボタンをクリックすると、チャートが元のビューに戻ります。</value>
   </data>
   <data name="ZoomTitle" xml:space="preserve">
     <value>ズーム</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexChartエクスプローラー</value>
+  </data>
+  <data name="BreakEvenDesc" xml:space="preserve">
+    <value>Break-Even Chart</value>
+  </data>
+  <data name="BreakEvenTag" xml:space="preserve">
+    <value>Break-Even chart is a chart that shows the sales volume level at which total costs equal sales.</value>
+  </data>
+  <data name="BreakEvenTitle" xml:space="preserve">
+    <value>Break-Even</value>
   </data>
 </root>

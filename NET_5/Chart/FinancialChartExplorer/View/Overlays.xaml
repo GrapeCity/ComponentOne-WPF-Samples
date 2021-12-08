@@ -79,43 +79,43 @@
                 <local:IntToVisibilityConverter x:Key="ITVConverter" />
             </StackPanel.Resources>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Overlay" Margin="10 0"/>
-                <ComboBox x:Name="cbOverlays" ItemsSource="{Binding OverlayTypes}" Width="120"/>
+                <TextBlock Text="Overlay" Margin="10 0" VerticalAlignment="Center"/>
+                <c1:C1ComboBox x:Name="cbOverlays" ItemsSource="{Binding OverlayTypes}" Width="120"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" x:Name="spBollingerOptions" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=0}">
-                <TextBlock Text="Period" Margin="15 0 0 0"/>
+                <TextBlock Text="Period" Margin="15 0 0 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbPeriod" Value="20" Minimum="2" Maximum="86" ValueChanged="cbPeriod_ValueChanged"/>
-                <TextBlock Text="Multiplier"/>
+                <TextBlock Text="Multiplier" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbMultiplier" Value="2" Minimum="1" Maximum="100" ValueChanged="cbMultiplier_ValueChanged"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" x:Name="spEnvelopesOptions" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=1}" Margin="0 10">
-                <TextBlock Text="Period" Margin="15 0 0 0"/>
+                <TextBlock Text="Period" Margin="15 0 0 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbEnvelopesPeriod" Value="20" Minimum="2" Maximum="86" ValueChanged="cbEnvelopesPeriod_ValueChanged"/>
-                <TextBlock Text="Size"/>
+                <TextBlock Text="Size" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbSize" Value="0.03" Minimum="0" Maximum="1" Format="P" ValueChanged="cbSize_ValueChanged"/>
-                <TextBlock Text="Type" Margin="0 0 10 0"/>
-                <ComboBox x:Name="cbTypes" ItemsSource="{Binding Types}" Width="120" SelectedValue="{Binding ElementName=overlayChart, Path=Series[2].Type, Converter={StaticResource EnumConverter}}"/>
+                <TextBlock Text="Type" Margin="0 0 10 0" VerticalAlignment="Center"/>
+                <c1:C1ComboBox x:Name="cbTypes" ItemsSource="{Binding Types}" Width="120" SelectedValue="{Binding ElementName=overlayChart, Path=Series[2].Type, Converter={StaticResource EnumConverter}}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" x:Name="ichimokuConversion" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=2}">
-                <TextBlock Text="Conversion Period" Margin="15 0 0 0"/>
+                <TextBlock Text="Conversion Period" Margin="15 0 0 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="conversionNumberic" Value="9" Minimum="1" Maximum="100" ValueChanged="conversionNumberic_ValueChanged"/>
-                <TextBlock Text="Base Period"/>
+                <TextBlock Text="Base Period" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="baseNumberic" Value="26" Minimum="1" Maximum="100" ValueChanged="baseNumberic_ValueChanged"/>
-                <TextBlock Text="Leading Period"/>
+                <TextBlock Text="Leading Period" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="leadingNumberic" Value="52" Minimum="1" Maximum="100" ValueChanged="leadingNumberic_ValueChanged"/>
-                <TextBlock Text="Lagging Period"/>
+                <TextBlock Text="Lagging Period" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="laggingNumberic" Value="26" Minimum="1" Maximum="100" ValueChanged="laggingNumberic_ValueChanged"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" x:Name="spAlligatorrOptions" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=3}">
-                <TextBlock Text="JawPeriod" Margin="15 0 0 0"/>
+                <TextBlock Text="JawPeriod" Margin="15 0 0 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbJawPeriod" Value="13" Minimum="1" Maximum="100" ValueChanged="cbJawPeriod_ValueChanged"/>
-                <TextBlock Text="JawPeriod" Margin="15 0 0 0"/>
+                <TextBlock Text="JawPeriod" Margin="15 0 0 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbTeethPeriod" Value="8" Minimum="1" Maximum="100" ValueChanged="cbTeethPeriod_ValueChanged"/>
-                <TextBlock Text="LipsPeriod" Margin="15 0 0 0"/>
+                <TextBlock Text="LipsPeriod" Margin="15 0 0 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbLipsPeriod" Value="5" Minimum="1" Maximum="100" ValueChanged="cbLipsPeriod_ValueChanged"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" x:Name="spZigZagOptions" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=4}">               
-                <TextBlock Text="Distance" Margin="15 0 0 0"/>
+            <StackPanel Orientation="Horizontal" x:Name="spZigZagOptions" Margin="0 10" Visibility="{Binding ElementName=cbOverlays, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=4}">
+                <TextBlock Text="Distance" Margin="15 0 0 0" VerticalAlignment="Center"/>
                 <c1:C1NumericBox x:Name="cbDistance" Value="5" Minimum="1" Maximum="100" ValueChanged="cbDistance_ValueChanged"/>
             </StackPanel>
         </StackPanel>

@@ -140,7 +140,7 @@ This project shows sales by country and category.It also shows a couple calculat
   </data>
   <data name="MultiValue" xml:space="preserve">
     <value>Shows how you can use FlexPivot to analyze multiple fields in one view.
-The C1FlexPivotFieldList class has a new MaxItems property.This property allows you to determine how many fields are allowed in each field list (Rows, Columns, Filters, and Values).
+The C1FlexPivotFieldList class has a new MaxItems property. This property allows you to determine how many fields are allowed in each field list (Rows, Columns, Filters, and Values).
 If you set the MaxItems of the Values list to a number higher than one, users will be able to add multiple fields to the values list, and the analysis will be performed on all of them at once.
 You can also use the MaxItems property on the Rows, Columns, and Filters lists if you want to limit the number of fields users can add to those lists. It rarely makes sense to have more than three or four Row or Column fields for example.</value>
   </data>
@@ -149,7 +149,7 @@ You can also use the MaxItems property on the Rows, Columns, and Filters lists i
   </data>
   <data name="Page" xml:space="preserve">
     <value>Shows how you can customize the FlexPivotPage control.
-The sample creates a default view that is persisted across sessions in isolated storage.It also adds a new menu to the FlexPivotPage that contains a list of predefined views.
+The sample creates a default view that is persisted across sessions in isolated storage. It also adds a new menu to the FlexPivotPage that contains a list of predefined views.
 The IsolatedStorageSettings.ApplicationSettings class allows you to save and load application settings very easily.
 The predefined views defined in this application show how you can use the FlexPivotField.Format property to group date values and analyze sales by year, month, and weekday.</value>
   </data>
@@ -194,5 +194,14 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
   </data>
     <data name="ConditionalFormattingTitle" xml:space="preserve">
     <value>Conditional Formatting</value>
+  </data>
+  <data name="PredefinedPivotViewTooltip" xml:space="preserve">
+    <value>Select a predefined FlexPivot view.</value>
+  </data>
+  <data name="CollapseSubTotalRowsColumnsTooltip" xml:space="preserve">
+    <value>Collapse all the subtotals rows and columns.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexPivotExplorer</value>
   </data>
 </root>

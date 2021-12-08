@@ -212,16 +212,30 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
     <value>TopN フィルター</value>
     <comment>Top N Filter</comment>
   </data>
-    <data name="GroupRangesDesc" xml:space="preserve">
-    <value>Shows how to work with group ranges</value>
+  <data name="GroupRangesDesc" xml:space="preserve">
+    <value>グループ範囲の操作方法を示します。</value>
+      <comment>Shows how to work with group ranges.</comment>
   </data>
-    <data name="GroupRangesTitle" xml:space="preserve">
-    <value>Group Ranges</value>
+  <data name="GroupRangesTitle" xml:space="preserve">
+      <value>グループの範囲</value>
+    <comment>Group Ranges</comment>
   </data>
   <data name="ConditionalFormattingDesc" xml:space="preserve">
-    <value>Shows how to use apply conditional formatting to an FlexPivot control</value>
+    <value>FlexPivot コントロールに条件付き書式を適用する方法を示します。</value>
+    <comment>Shows how to use apply conditional formatting to an FlexPivot control.</comment>
   </data>
-    <data name="ConditionalFormattingTitle" xml:space="preserve">
-    <value>Conditional Formatting</value>
+  <data name="ConditionalFormattingTitle" xml:space="preserve">
+      <value>条件付き書式</value>
+    <comment>Conditional Formatting</comment>
+  </data>
+  <data name="PredefinedPivotViewTooltip" xml:space="preserve">
+    <value>事前定義された FlexPivot ビューを選択します。</value>
+  </data>
+  <data name="CollapseSubTotalRowsColumnsTooltip" xml:space="preserve">
+    <value>すべての小計の行と列を折りたたみます。</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexPivotエクスプローラー</value>
+    <comment>FlexPivotExplorer</comment>
   </data>
 </root>

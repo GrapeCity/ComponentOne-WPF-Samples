@@ -11,27 +11,24 @@
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="enumConverter" />
-            <Style TargetType="ComboBox">
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <TextBlock>
-                                <TextBlock.Inlines>
-                                    <Run Text="Axis X Group Separator: "/>
-                                    <Run Text="{Binding .}" />
-                                </TextBlock.Inlines>
-                            </TextBlock>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
+            <DataTemplate x:Key="cbItemTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="Axis X Group Separator: "/>
+                        <Run Text="{Binding .}" />
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <ComboBox ItemsSource="{Binding GroupSeparator}" SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupSeparator, Mode=TwoWay, Converter={StaticResource enumConverter}}" Width="240"  Margin="10 0 20 0"/>
+            <c1:C1ComboBox ItemsSource="{Binding GroupSeparator}"
+                           ItemTemplate="{StaticResource cbItemTemplate}"
+                           SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupSeparator, Mode=TwoWay, Converter={StaticResource enumConverter}}"
+                           Width="240"  Margin="10 0 20 0"/>
         </StackPanel>
         <c1:FlexChart x:Name="flexChart" Background="White" ChartType="Column" BindingX="Country" 
                         ItemsSource="{Binding Data}" ToolTipContent="{}{x}&#x0a;{seriesName}&#x0a;{y:n0}" Header="World GDP Ranking" Grid.Row="1" >

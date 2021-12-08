@@ -265,7 +265,7 @@ namespace SpellCheckerExplorer
                 {
                     AddSuggestion(suggestion);
                 }
-                _listSuggestions.SelectedItem = _listSuggestions.Items[0];
+                _listSuggestions.SelectedItem = _listSuggestions.Items[0].Content;
                 _listSuggestions.IsEnabled = true;
             }
             else

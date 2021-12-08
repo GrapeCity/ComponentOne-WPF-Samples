@@ -22,6 +22,7 @@ namespace SpellCheckerExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = Properties.Resources.Title;
         }
     }
 }

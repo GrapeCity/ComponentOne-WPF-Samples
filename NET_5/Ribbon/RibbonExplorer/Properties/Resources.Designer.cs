@@ -79,6 +79,15 @@ namespace RibbonExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RibbonExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The lighter C1ToolStrip control provides a simple row of buttons for basic applications and tool windows..
         /// </summary>
         public static string ToolStrip {

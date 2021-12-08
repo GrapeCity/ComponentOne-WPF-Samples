@@ -12,7 +12,7 @@ namespace DataFilterExplorer
             int range = 25 * 365;
             DateProductionLine = DateTime.Today.AddDays(-gen.Next(range));
         }
-        
+
         public string Brand { get; set; }
         public string Model { get; set; }
         public double Price { get; set; }
@@ -21,7 +21,7 @@ namespace DataFilterExplorer
         public string TransmissAutomatic { get; set; }
         public DateTime DateProductionLine { get; set; }
 
-        [Browsable(false)]
+        //[Browsable(false)]
         public int ID { get; set; }
         [Browsable(false)]
         public Int16 HP { get; set; }
@@ -38,6 +38,7 @@ namespace DataFilterExplorer
         [Browsable(false)]
         public string Hyperlink { get; set; }
         [Browsable(false)]
+        [Display(AutoGenerateField =false)]
         public byte[] Picture { get; set; }
     }
 }

@@ -195,4 +195,10 @@
   <data name="SamplePage_MsgBoxText" xml:space="preserve">
     <value>サンプルの読み込み中にエラーが発生しました。\r\nSQL Server Compact 4.0 がインストールされていることを確認してください。</value>
   </data>
+  <data name="NoTextFound_Text" xml:space="preserve">
+    <value>No text found</value>
+  </data>
+  <data name="NoSampleFound_Text" xml:space="preserve">
+    <value>Sorry, this sample was not found at the moment. You can browse and download all samples at https://www.grapecity.com/en/samples?display_limit=25.</value>
+  </data>
 </root>

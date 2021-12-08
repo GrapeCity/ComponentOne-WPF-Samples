@@ -121,4 +121,7 @@
     <value>クリックしてデータベースに新しいレコードを入力してください</value>
     <comment>Click here to enter a new record to the data base</comment>
   </data>
+  <data name="LoadingMessage" xml:space="preserve">
+    <value>データベースからデータをロードしています...</value>
+  </data>
 </root>

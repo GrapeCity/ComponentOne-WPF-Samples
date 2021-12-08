@@ -1,6 +1,8 @@
 ﻿using C1.WPF.Core;
 using C1.WPF.Maps;
 using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
@@ -11,10 +13,13 @@ using System.Windows.Shapes;
 
 namespace MapsExplorer
 {
-    public partial class MapChart : UserControl
+    public partial class MapChart : UserControl, INotifyPropertyChanged
     {
         Countries countries = new Countries();
         VectorLayer vl;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public ObservableCollection<Legend> Legends { get; set; } = new ObservableCollection<Legend>();
 
         public MapChart()
         {
@@ -53,18 +58,20 @@ namespace MapsExplorer
             }
 
             // create palette
-            ColorValues cvals = new ColorValues();
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 241, 244, 255), Value = 0 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 241, 244, 255), Value = 5000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 224, 224, 246), Value = 10000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 203, 205, 255), Value = 20000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 179, 182, 230), Value = 50000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 156, 160, 240), Value = 100000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 127, 132, 243), Value = 200000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 89, 97, 230), Value = 500000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 56, 64, 217), Value = 1000000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 19, 26, 148), Value = 2000000 });
-            cvals.Add(new ColorValue() { Color = Color.FromArgb(255, 0, 3, 74), Value = 1.001 * countries.GetMax() });
+            ColorValues cvals = new ColorValues
+            {
+                new ColorValue() { Color = Color.FromArgb(255, 241, 244, 255), Value = 0 },
+                new ColorValue() { Color = Color.FromArgb(255, 241, 244, 255), Value = 5000 },
+                new ColorValue() { Color = Color.FromArgb(255, 224, 224, 246), Value = 10000 },
+                new ColorValue() { Color = Color.FromArgb(255, 203, 205, 255), Value = 20000 },
+                new ColorValue() { Color = Color.FromArgb(255, 179, 182, 230), Value = 50000 },
+                new ColorValue() { Color = Color.FromArgb(255, 156, 160, 240), Value = 100000 },
+                new ColorValue() { Color = Color.FromArgb(255, 127, 132, 243), Value = 200000 },
+                new ColorValue() { Color = Color.FromArgb(255, 89, 97, 230), Value = 500000 },
+                new ColorValue() { Color = Color.FromArgb(255, 56, 64, 217), Value = 1000000 },
+                new ColorValue() { Color = Color.FromArgb(255, 19, 26, 148), Value = 2000000 },
+                new ColorValue() { Color = Color.FromArgb(255, 0, 3, 74), Value = 1.001 * countries.GetMax() }
+            };
 
             countries.Converter = cvals;
 
@@ -104,54 +111,36 @@ namespace MapsExplorer
         {
             // create legend
 
-            legend.Items.Clear();
+            Legends.Clear();
 
-            ColorValues cvals = (ColorValues)countries.Converter;
+            var cvals = (ColorValues)countries.Converter;
 
             int cnt = cvals.Count;
-            double sz = 20;
 
             for (int i = 0; i < cnt - 1; i++)
             {
                 ColorValue cv = cvals[i];
-                ListBoxItem lbi = new ListBoxItem()
-                {
-                    Height = sz,
-                    Margin = new Thickness(0),
-                    Padding = new Thickness(0)
-                };
-                StackPanel sp = new StackPanel() { Orientation = Orientation.Horizontal };
-                LinearGradientBrush lgb = new LinearGradientBrush() { StartPoint = new Point(0, 0), EndPoint = new Point(0, 1) };
+                var lgb = new LinearGradientBrush() { StartPoint = new Point(0, 0), EndPoint = new Point(0, 1) };
                 lgb.GradientStops.Add(new GradientStop() { Color = cv.Color, Offset = 0 });
                 lgb.GradientStops.Add(new GradientStop() { Color = cvals[i + 1].Color, Offset = 1 });
 
-                sp.Children.Add(new Rectangle()
+                Legends.Add(new Legend
                 {
-                    Width = sz,
-                    Height = sz,
-                    Fill = lgb,
-                    Stroke = new SolidColorBrush(Colors.LightGray),
-                    StrokeThickness = 0.5
+                    RectangleBrush = lgb,
+                    Name = cv.Value.ToString()
                 });
-                sp.Children.Add(new TextBlock()
-                {
-                    Height = sz,
-                    Text = cv.Value.ToString(),
-                    VerticalAlignment = VerticalAlignment.Center,
-                    Margin = new Thickness(5, 0, 0, 0)
-                });
-                lbi.Content = sp;
-                legend.Items.Add(lbi);
             }
-            legend.Items.Add(new ListBoxItem() { Height = sz });
+            OnPropertyChanged(nameof(Legends));
         }
 
-        private void legend_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        protected void OnPropertyChanged(string name = null)
         {
-            foreach (var item in e.AddedItems)
-            {
-                ((ListBoxItem)item).IsSelected = false;
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
+    }
+    public class Legend
+    {
+        public LinearGradientBrush RectangleBrush { get; set; }
+        public string Name { get; set; }
     }
 }

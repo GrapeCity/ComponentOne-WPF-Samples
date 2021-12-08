@@ -20,9 +20,9 @@
             <c1:MovingAverage x:Name="ma" />
         </c1:C1FinancialChart>
         <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="1">
-            <TextBlock Text="Moving Average Type" Margin="10 0"/>
-            <ComboBox ItemsSource="{Binding MovingAverageType}" SelectedValue="{Binding ElementName=ma, Path=Type, Converter={StaticResource EmConverter}, Mode=TwoWay}" Width="100" />
-            <TextBlock Text="Period" Margin="30 0 10 0"/>
+            <TextBlock Text="Moving Average Type" Margin="10 0" VerticalAlignment="Center"/>
+            <c1:C1ComboBox ItemsSource="{Binding MovingAverageType}" SelectedValue="{Binding ElementName=ma, Path=Type, Converter={StaticResource EmConverter}, Mode=TwoWay}" Width="100" />
+            <TextBlock Text="Period" Margin="30 0 10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox Value="{Binding ElementName=ma, Path=Period, Mode=TwoWay}" Minimum="1" Maximum="100" Width="80"/>
         </StackPanel>
     </Grid>

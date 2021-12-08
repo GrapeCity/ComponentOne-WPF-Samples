@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False">
+        <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible">
             <c1:FlexGrid.Columns>
                 <c1:GridColumn Binding="Active" MinWidth="70" Width="0.5*" FilterLoading="OnActiveFilterLoading"/>
                 <c1:GridColumn Binding="Id" IsReadOnly="true" MinWidth="100" Width="*"/>

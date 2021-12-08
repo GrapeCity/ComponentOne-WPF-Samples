@@ -19,6 +19,13 @@ namespace FlexGridExplorer
             InitializeComponent();
             Tag = AppResources.FinancialDescription;
             PopulateFinancialGrid();
+            Loaded += Financial_Loaded;
+        }
+
+        private void Financial_Loaded(object sender, RoutedEventArgs e)
+        {
+            _cmbUpdateInterval.SelectedIndex = 0;
+            _cmbBatchSize.SelectedIndex = 1;
         }
 
         void PopulateFinancialGrid()
@@ -55,26 +62,6 @@ namespace FlexGridExplorer
         {
             _financialData.AutoUpdate = ((CheckBox)sender).IsChecked.Value;
         }
-        void _cmbUpdateInterval_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (_financialData != null)
-            {
-                var cmb = sender as ComboBox;
-                var val = ((ComboBoxItem)cmb.SelectedItem).Content as string;
-                val = val.Split(' ')[0].Trim();
-                _financialData.UpdateInterval = int.Parse(val);
-            }
-        }
-        void _cmbBatchSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (_financialData != null)
-            {
-                var cmb = sender as ComboBox;
-                var val = ((ComboBoxItem)cmb.SelectedItem).Content as string;
-                val = val.Split(' ')[0].Trim();
-                _financialData.BatchSize = int.Parse(val);
-            }
-        }
         void _chkOwnerDrawFinancial_Click(object sender, RoutedEventArgs e)
         {
             UpdateCellFactory();
@@ -90,6 +77,26 @@ namespace FlexGridExplorer
         private void OnClearFilter(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             _srchCompanies.Text = "";
+        }
+
+        private void _cmbUpdateInterval_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_financialData != null && e.AddedItems.Count > 0)
+            {
+                var val = e.AddedItems[0] as string;
+                val = val.Split(' ')[0].Trim();
+                _financialData.UpdateInterval = int.Parse(val);
+            }
+        }
+
+        private void _cmbBatchSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_financialData != null && e.AddedItems.Count > 0)
+            {
+                var val = e.AddedItems[0] as string;
+                val = val.Split(' ')[0].Trim();
+                _financialData.BatchSize = int.Parse(val);
+            }
         }
     }
 }

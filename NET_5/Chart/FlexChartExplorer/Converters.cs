@@ -30,6 +30,7 @@ namespace FlexChartExplorer
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null) return null;
             return Enum.Parse(targetType, value.ToString());
         }
     }

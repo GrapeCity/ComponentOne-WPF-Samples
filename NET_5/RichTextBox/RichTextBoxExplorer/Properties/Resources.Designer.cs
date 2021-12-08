@@ -115,6 +115,15 @@ namespace RichTextBoxExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RichTextBoxExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This sample shows C1RichTextBox with a simpler editing toolstrip..
         /// </summary>
         public static string ToolStrip {

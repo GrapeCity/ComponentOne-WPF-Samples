@@ -18,8 +18,9 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <ComboBox ItemsSource="{Binding GroupSeparator}" SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupSeparator, Mode=TwoWay, Converter={StaticResource enumConverter}}" Width="200" Margin="10 0 20 0">
-                <ComboBox.ItemTemplate>
+            <c1:C1ComboBox ItemsSource="{Binding GroupSeparator}" Width="250" Margin="10 0 20 0"
+                      SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupSeparator, Mode=TwoWay, Converter={StaticResource enumConverter}}">
+                <c1:C1ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
                             <TextBlock.Inlines>
@@ -28,13 +29,14 @@
                             </TextBlock.Inlines>
                         </TextBlock>
                     </DataTemplate>
-                </ComboBox.ItemTemplate>
-            </ComboBox>
-            <ComboBox ItemsSource="{Binding ExpansionOptions}" SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupVisibilityLevel, Mode=TwoWay, Converter={StaticResource groupVisibilityConverter}}"
-                      SelectedIndex="3" Width="200" Margin="10 0 20 0" />
-            <ComboBox ItemsSource="{Binding MajorUnitOptions}" 
-                      SelectedValue="Default" Width="132" Margin="10 0 20 0" SelectionChanged="cbMajorUnit_SelectionChanged">
-                <ComboBox.ItemTemplate>
+                </c1:C1ComboBox.ItemTemplate>
+            </c1:C1ComboBox>
+            <c1:C1ComboBox ItemsSource="{Binding ExpansionOptions}" x:Name="cbExpansion"
+                      SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupVisibilityLevel, Mode=TwoWay, Converter={StaticResource groupVisibilityConverter}}"
+                      SelectedIndex="3" Width="250" Margin="10 0 20 0" />
+            <c1:C1ComboBox ItemsSource="{Binding MajorUnitOptions}" x:Name="cbMajorUnit"
+                      SelectedValue="Default" Width="150" Margin="10 0 20 0" SelectionChanged="cbMajorUnit_SelectionChanged">
+                <c1:C1ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
                             <TextBlock.Inlines>
@@ -43,14 +45,14 @@
                             </TextBlock.Inlines>
                         </TextBlock>
                     </DataTemplate>
-                </ComboBox.ItemTemplate>
-            </ComboBox>
+                </c1:C1ComboBox.ItemTemplate>
+            </c1:C1ComboBox>
             <CheckBox x:Name="cbLabelMin" Content="Label Min" VerticalAlignment="Center"
-                      IsChecked="{Binding ElementName=flexChart, Path=AxisX.LabelMin, Mode=TwoWay}" Margin="10 0 20 0">
-            </CheckBox>
+                      IsChecked="{Binding ElementName=flexChart, Path=AxisX.LabelMin, Mode=TwoWay}" Margin="10 0 20 0"/>
+
             <CheckBox x:Name="cbLabelMax" Content="Label Max" VerticalAlignment="Center"
-                      IsChecked="{Binding ElementName=flexChart, Path=AxisX.LabelMax, Mode=TwoWay}" Margin="10 0 20 0">
-            </CheckBox>
+                      IsChecked="{Binding ElementName=flexChart, Path=AxisX.LabelMax, Mode=TwoWay}" Margin="10 0 20 0"/>
+
         </StackPanel>
         <c1:FlexChart x:Name="flexChart" Background="White" ChartType="Line" BindingX="Time" 
                         ItemsSource="{Binding Data}" Grid.Row="1" ToolTipContent="{}{y}">

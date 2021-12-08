@@ -1,4 +1,5 @@
 ﻿using C1.WPF.Grid;
+using C1.WPF.Input;
 using FlexGridExplorer.Resources;
 using GrapeCity.Documents.Excel;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 
 namespace FlexGridExplorer
 {
@@ -97,7 +99,9 @@ namespace FlexGridExplorer
             var columns = grid.Columns.Select(x => x.ColumnName).ToList();
             Grouping_0.ItemsSource = columns;
             Groupings = new List<string>();
-            ValidColumns = columns;
+            // Last Order Date Field is mapped into 2 different columns with
+            // different formats.
+            ValidColumns = columns.Distinct().ToList();
 
             #endregion
         }
@@ -271,90 +275,11 @@ namespace FlexGridExplorer
 
         #region Playground Event(s)
 
-        #region Themes Event(s)
-
-        private void Themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (Themes.SelectedValue.Equals("Classic"))
-            {
-                grid.Style = FlexGrid.ClassicStyle;
-            }
-            else
-            {
-                grid.Style = Resources.MergedDictionaries[0][Themes.SelectedValue as string] as Style;
-            }
-        }
-
-        #endregion
-
         #region Grouping Event(s)
 
         private void Grouping_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             IsGroupingClicked = true;
-        }
-
-        private void Grouping_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (IsGroupingClicked)
-            {
-                IsGroupingClicked = false;
-                var comboBox = sender as ComboBox;
-                var stackPanel = comboBox.Parent as StackPanel;
-                var selectedValue = comboBox.SelectedValue?.ToString();
-                var addButton = stackPanel.Children[2] as Button;
-
-                if (!string.IsNullOrEmpty(selectedValue))
-                {
-                    if (Groupings.Contains(selectedValue))
-                    {
-                        MessageBox.Show("This grouping already exists");
-                        comboBox.SelectedItem = e.RemovedItems[0];
-                        return;
-                    }
-                    var children = GroupingStack.Children;
-                    var indexOf = children.IndexOf(stackPanel);
-                    if (Groupings.Count == indexOf - 1)
-                    {
-                        Groupings.Add(selectedValue);
-                        ListCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(selectedValue));
-                    }
-                    else
-                    {
-                        Groupings[indexOf - 1] = selectedValue;
-                        ListCollectionView.GroupDescriptions[indexOf - 1] = new PropertyGroupDescription(selectedValue);
-                    }
-                    addButton.IsEnabled = true;
-
-
-                    for (int i = 1; i < children.Count; i++)
-                    {
-                        var child = children[i] as StackPanel;
-                        if (child != stackPanel)
-                        {
-                            var childCombo = child.Children[1] as ComboBox;
-                            var items = new List<string>(childCombo.ItemsSource as IEnumerable<string>);
-                            items.Remove(selectedValue);
-                            var removedItems = e.RemovedItems;
-                            if (removedItems.Count == 1)
-                            {
-                                var removedItem = removedItems[0].ToString();
-                                items.Add(removedItem);
-                            }
-
-                            var childComboSelectedValue = childCombo.SelectedValue;
-                            childCombo.ClearValue(ItemsControl.ItemsSourceProperty);
-                            var orderedItems = ValidColumns.Intersect(items);
-                            childCombo.ItemsSource = orderedItems;
-                            childCombo.SelectedValue = childComboSelectedValue;
-                        }
-                    }
-                }
-                else
-                {
-                    addButton.IsEnabled = false;
-                }
-            }
         }
 
         private void AddGroup_Click(object sender, RoutedEventArgs e)
@@ -374,11 +299,12 @@ namespace FlexGridExplorer
 
             var newStack = new StackPanel() { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 10, 0, 0) };
             var textBlock = new TextBlock() { Text = "Group By", VerticalAlignment = System.Windows.VerticalAlignment.Center, Margin = new Thickness(0, 0, 5, 0) };
-            var comboBox = new ComboBox() { Width = 200, Margin = new Thickness(0, 0, 5, 0) };
+            var comboBox = new C1ComboBox() { Width = 200, Margin = new Thickness(0, 0, 5, 0) };
             var items = new List<string>(ValidColumns);
             items.RemoveAll(x => Groupings.Contains(x));
             comboBox.ItemsSource = items;
-            comboBox.SelectionChanged += Grouping_SelectionChanged;
+            comboBox.SelectedItemChanged += Grouping_0_SelectedItemChanged;
+            comboBox.KeyDown += Grouping_KeyDown;
             comboBox.PreviewMouseDown += Grouping_PreviewMouseDown;
             var addButton = new Button()
             {
@@ -395,7 +321,10 @@ namespace FlexGridExplorer
 
             newStack.Children.Add(textBlock);
             newStack.Children.Add(comboBox);
-            newStack.Children.Add(addButton);
+            if (GroupingStack.Children.Count < ValidColumns.Count)
+            {
+                newStack.Children.Add(addButton);
+            }
             newStack.Children.Add(removeButton);
             GroupingStack.Children.Add(newStack);
         }
@@ -403,11 +332,14 @@ namespace FlexGridExplorer
         private void RemoveGroup_Click(object sender, RoutedEventArgs e)
         {
             var stackPanel = (sender as Button).Parent as StackPanel;
-            var stackCombo = stackPanel.Children[1] as ComboBox;
+            var stackCombo = stackPanel.Children[1] as C1ComboBox;
             var selectedValue = stackCombo.SelectedValue?.ToString();
 
             var indexOfGroup = Groupings.IndexOf(selectedValue);
-            ListCollectionView.GroupDescriptions.RemoveAt(indexOfGroup);
+            if (indexOfGroup >= 0 && indexOfGroup < ListCollectionView.GroupDescriptions.Count)
+            {
+                ListCollectionView.GroupDescriptions.RemoveAt(indexOfGroup);
+            }
 
             var parentChildren = GroupingStack.Children;
             var indexOf = parentChildren.IndexOf(stackPanel);
@@ -421,7 +353,7 @@ namespace FlexGridExplorer
             for (int i = 1; i < parentChildren.Count; i++)
             {
                 var child = parentChildren[i] as StackPanel;
-                var childCombo = child.Children[1] as ComboBox;
+                var childCombo = child.Children[1] as C1ComboBox;
                 var items = new List<string>(childCombo.ItemsSource as IEnumerable<string>);
                 if (!string.IsNullOrEmpty(selectedValue))
                 {
@@ -437,7 +369,7 @@ namespace FlexGridExplorer
 
             var lastStack = parentChildren[parentChildren.Count - 1] as StackPanel;
             var textBlock = lastStack.Children[0];
-            var comboBox = lastStack.Children[1] as ComboBox;
+            var comboBox = lastStack.Children[1] as C1ComboBox;
             var comboBoxSelectedValue = comboBox.SelectedValue?.ToString();
             lastStack.Children.Clear();
             lastStack.Children.Add(textBlock);
@@ -485,7 +417,7 @@ namespace FlexGridExplorer
             };
             stackPanel.Children.Add(textBlock);
 
-            var comboBox = new ComboBox()
+            var comboBox = new C1ComboBox()
             {
                 Width = 200,
                 Margin = new Thickness(0, 0, 5, 0),
@@ -496,7 +428,8 @@ namespace FlexGridExplorer
             ValidColumns = columns;
 
             comboBox.ItemsSource = columns;
-            comboBox.SelectionChanged += Grouping_SelectionChanged;
+            comboBox.SelectedItemChanged += Grouping_0_SelectedItemChanged;
+            comboBox.KeyDown += Grouping_KeyDown;
             comboBox.PreviewMouseDown += Grouping_PreviewMouseDown;
             stackPanel.Children.Add(comboBox);
 
@@ -515,8 +448,90 @@ namespace FlexGridExplorer
 
         }
 
+        private void Grouping_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                IsGroupingClicked = true;
+            }
+        }
+
         #endregion
 
         #endregion
+
+        private void Grouping_0_SelectedItemChanged(object sender, C1.WPF.Core.PropertyChangedEventArgs<object> e)
+        {
+            if (IsGroupingClicked && e.NewValue != null)
+            {
+                IsGroupingClicked = false;
+                var comboBox = sender as C1ComboBox;
+                var stackPanel = comboBox.Parent as StackPanel;
+                var selectedValue = comboBox.SelectedValue?.ToString();
+                var addButton = stackPanel.Children[2] as Button;
+
+                if (!string.IsNullOrEmpty(selectedValue))
+                {
+                    if (Groupings.Contains(selectedValue))
+                    {
+                        MessageBox.Show("This grouping already exists");
+                        comboBox.SelectedItem = e.OldValue;
+                        return;
+                    }
+                    var children = GroupingStack.Children;
+                    var indexOf = children.IndexOf(stackPanel);
+                    if (Groupings.Count == indexOf - 1)
+                    {
+                        Groupings.Add(selectedValue);
+                        ListCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(selectedValue));
+                    }
+                    else
+                    {
+                        Groupings[indexOf - 1] = selectedValue;
+                        ListCollectionView.GroupDescriptions[indexOf - 1] = new PropertyGroupDescription(selectedValue);
+                    }
+                    addButton.IsEnabled = true;
+
+
+                    for (int i = 1; i < children.Count; i++)
+                    {
+                        var child = children[i] as StackPanel;
+                        if (child != stackPanel)
+                        {
+                            var childCombo = child.Children[1] as C1ComboBox;
+                            var items = new List<string>(childCombo.ItemsSource as IEnumerable<string>);
+                            items.Remove(selectedValue);
+                            if (e.OldValue != null)
+                                items.Add(e.OldValue.ToString());
+
+                            var childComboSelectedValue = childCombo.SelectedValue;
+                            childCombo.ClearValue(ItemsControl.ItemsSourceProperty);
+                            var orderedItems = ValidColumns.Intersect(items);
+                            childCombo.ItemsSource = orderedItems;
+                            childCombo.SelectedValue = childComboSelectedValue;
+                        }
+                    }
+                }
+                else
+                {
+                    addButton.IsEnabled = false;
+                }
+            }
+        }
+
+        private void Themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                if ("Classic".Equals(e.AddedItems[0]))
+                {
+                    grid.Style = FlexGrid.ClassicStyle;
+                }
+                else
+                {
+                    grid.Style = Resources.MergedDictionaries[0][e.AddedItems[0]] as Style;
+                }
+            }
+        }
     }
 }

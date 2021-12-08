@@ -22,7 +22,7 @@
                     <c1:C1DockTabItem Header="Tab 1" >
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
-                    <c1:C1DockTabItem Header="Tab 2" >
+                    <c1:C1DockTabItem CanUserFloat="False" Header="Tab 2" >
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>

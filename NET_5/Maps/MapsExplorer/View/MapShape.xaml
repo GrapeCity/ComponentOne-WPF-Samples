@@ -13,14 +13,10 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Text="Country:" VerticalAlignment="Center"></TextBlock>
-                    <ComboBox x:Name="countriesCombo" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="5 0 0 0" Width="200" Height="30" SelectionChanged="countriesCombo_SelectionChanged">
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Value}"></TextBlock>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
-                    </ComboBox>
+                    <TextBlock Text="Country:" VerticalAlignment="Center"/>
+                    <c1:C1ComboBox x:Name="countriesCombo" VerticalContentAlignment="Center"
+                                   Margin="5 0 0 0" Width="200" Height="30" SelectionChanged="countriesCombo_SelectionChanged"
+                                   DisplayMemberPath="Value"/>
                 </StackPanel>
                 <c1:C1Maps x:Name="maps" Center="-115, 50" Grid.Row="1"/>
             </Grid>

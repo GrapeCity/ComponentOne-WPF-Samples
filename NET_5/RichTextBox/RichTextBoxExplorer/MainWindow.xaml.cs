@@ -10,6 +10,7 @@ namespace RichTextBoxExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = Properties.Resources.Title;
         }
     }
 }

@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
     DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
-    mc:Ignorable="d" Loaded="UserControl_Loaded">
+    mc:Ignorable="d">
 
     <Grid>
         <Grid.Resources>
@@ -25,13 +25,13 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" x:Name="panel">
-            <ComboBox x:Name="cbShow"
-                      ItemsSource="{Binding DataContext.ShowOptions}"
-                      ItemTemplate="{StaticResource cbShow}"
-                      Margin="10 5 5 5"
-                      Width="250"
-                      SelectionChanged="cbShow_SelectionChanged">
-            </ComboBox>
+            <Chart:C1ComboBox x:Name="cbShow"
+                              ItemsSource="{Binding DataContext.ShowOptions}"
+                              ItemTemplate="{StaticResource cbShow}"
+                              Margin="10 5 5 5"
+                              Width="250"
+                              SelectedIndex="0"
+                              SelectionChanged="cbShow_SelectionChanged" />
         </StackPanel>
         <Chart:FlexPie x:Name="pieChart" Grid.Row="1" BindingName="Name" ItemsSource="{Binding DataContext.Data}" ToolTipContent="{}{Name} : {value}" >
         </Chart:FlexPie>

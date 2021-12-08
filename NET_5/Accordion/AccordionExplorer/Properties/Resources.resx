@@ -121,12 +121,15 @@
     <value>The C1Accordion control is a container that that can hold a series of expandable and collapsible panes for storing text, images, and controls. The C1Accordion control is an ItemsControl, which means that the control is designed to host a series of objects. The C1Expander class represents the items, or accordion panes, that can be hosted by the C1Accordion control</value>
   </data>
   <data name="AccordionTitle" xml:space="preserve">
-    <value>AccordionTitle</value>
+    <value>Accordion</value>
   </data>
   <data name="ExpanderDesc" xml:space="preserve">
     <value>C1Expander allows you to create an expandable and collapsible information panel that can include text, images, and controls. Choose from four expand directions and position of the expand button.</value>
   </data>
   <data name="ExpanderTitle" xml:space="preserve">
-    <value>ExpanderTitle</value>
+    <value>Expander</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>AccordionExplorer</value>
   </data>
 </root>

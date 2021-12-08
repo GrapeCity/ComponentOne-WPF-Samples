@@ -140,7 +140,14 @@ namespace CalendarExplorer
 
         private void CbDayOfWeek_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
         {
-            calendar.FirstDayOfWeek = (DayOfWeek)cbDayOfWeek.SelectedItem;
+            if (cbDayOfWeek.SelectedItem != null)
+            {
+                calendar.FirstDayOfWeek = (DayOfWeek)cbDayOfWeek.SelectedItem;
+            }
+            else
+            {
+                calendar.FirstDayOfWeek = null;
+            }    
         }
 
         private void DpMaxDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)

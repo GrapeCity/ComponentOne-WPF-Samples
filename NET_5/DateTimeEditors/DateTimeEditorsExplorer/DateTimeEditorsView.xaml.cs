@@ -11,6 +11,12 @@ namespace DateTimeEditorsExplorer
         {
             InitializeComponent();
             this.DataContext = new SampleDataSource();
+            Loaded += DateTimeEditorsView_Loaded;
+        }
+
+        private void DateTimeEditorsView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

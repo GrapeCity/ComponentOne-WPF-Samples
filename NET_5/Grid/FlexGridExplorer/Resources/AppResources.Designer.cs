@@ -628,6 +628,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Header Alignment.
+        /// </summary>
+        public static string HeaderAlignment {
+            get {
+                return ResourceManager.GetString("HeaderAlignment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inactive.
         /// </summary>
         public static string InactiveLabel {
@@ -862,6 +871,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show sort icons.
+        /// </summary>
+        public static string ShowSort {
+            get {
+                return ResourceManager.GetString("ShowSort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sort.
         /// </summary>
         public static string Sort {
@@ -930,6 +948,15 @@ namespace FlexGridExplorer.Resources {
         public static string Thursday {
             get {
                 return ResourceManager.GetString("Thursday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FlexGridExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
         

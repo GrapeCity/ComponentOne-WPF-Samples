@@ -3,31 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:FinancialChartExplorer"
              xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
              mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Grid.Resources>
-            <Style TargetType="ComboBox">
-                <Setter Property="Margin" Value="10 0" />
-                <Setter Property="Width" Value="150" />
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Name}"/>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <TextBlock Text="Symbol"/>
-            <ComboBox x:Name="cbSymbol" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"/>
+            <TextBlock Text="Symbol" VerticalAlignment="Center"/>
+            <Chart:C1ComboBox x:Name="cbSymbol" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"
+                           Margin="10 0" Width="150" DisplayMemberPath="Name" SelectedIndex="0"/>
         </StackPanel>
         <Chart:C1FinancialChart x:Name="financialChart" ToolTipContent="{}Date: {Date}&#x000A;Open: {Open}&#x000A;High: {High}&#x000A;Low: {Low}&#x000A;Close: {Close}" ChartType="HeikinAshi" BindingX="Date" Binding="High,Low,Open,Close,Volume" Grid.Row="1">
             <Chart:FinancialSeries />

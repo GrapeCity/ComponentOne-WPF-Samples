@@ -61,6 +61,15 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AddItems.
+        /// </summary>
+        public static string AddItemsEvent {
+            get {
+                return ResourceManager.GetString("AddItemsEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add Tag.
         /// </summary>
         public static string AddTag {
@@ -84,6 +93,33 @@ namespace InputExplorer.Properties {
         public static string AddText {
             get {
                 return ResourceManager.GetString("AddText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to use C1CheckList.
+        /// </summary>
+        public static string CheckListDes {
+            get {
+                return ResourceManager.GetString("CheckListDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CheckList.
+        /// </summary>
+        public static string CheckListTitle {
+            get {
+                return ResourceManager.GetString("CheckListTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Events.
+        /// </summary>
+        public static string EventsTabHeader {
+            get {
+                return ResourceManager.GetString("EventsTabHeader", resourceCulture);
             }
         }
         
@@ -160,6 +196,42 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Methods.
+        /// </summary>
+        public static string MethodsTabHeader {
+            get {
+                return ResourceManager.GetString("MethodsTabHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MultiSelect.
+        /// </summary>
+        public static string MultiSelect {
+            get {
+                return ResourceManager.GetString("MultiSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to use C1MultiSelect.
+        /// </summary>
+        public static string MultiSelectDes {
+            get {
+                return ResourceManager.GetString("MultiSelectDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Properties.
+        /// </summary>
+        public static string PropertiesTabHeader {
+            get {
+                return ResourceManager.GetString("PropertiesTabHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The C1RangeSlider control extends the basic slider control and provides two thumbs, making it possible for users to select a range. Users can drag each thumb individually or drag the center to modify both at the same time..
         /// </summary>
         public static string RangeSlider {
@@ -178,6 +250,42 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RemoveItems.
+        /// </summary>
+        public static string RemoveItemsEvent {
+            get {
+                return ResourceManager.GetString("RemoveItemsEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select All.
+        /// </summary>
+        public static string SelectAllMethod {
+            get {
+                return ResourceManager.GetString("SelectAllMethod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SelectedItems.
+        /// </summary>
+        public static string SelectedItemsEvent {
+            get {
+                return ResourceManager.GetString("SelectedItemsEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SelectionChangedEvent.
+        /// </summary>
+        public static string SelectionChangedEventExpenderHeader {
+            get {
+                return ResourceManager.GetString("SelectionChangedEventExpenderHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to use C1TagEditor..
         /// </summary>
         public static string TagEditorDemoDes {
@@ -192,6 +300,24 @@ namespace InputExplorer.Properties {
         public static string TagEditorDemoTitle {
             get {
                 return ResourceManager.GetString("TagEditorDemoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to InputExplorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unselect All.
+        /// </summary>
+        public static string UnselectAllMethod {
+            get {
+                return ResourceManager.GetString("UnselectAllMethod", resourceCulture);
             }
         }
     }

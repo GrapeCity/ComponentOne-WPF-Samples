@@ -168,7 +168,7 @@ namespace GridShowCase
             dynamic sources = JsonConvert.DeserializeObject(ApiHelper.GetJsonString(api));
             foreach (dynamic item in sources)
             {
-                result.Add(new Country { Name = ((string)item.Value), Image = "https://www.countryflags.io/" + ((string)item.Name) + "/flat/32.png" }); ;
+                result.Add(new Country { Name = ((string)item.Value), Image = "https://flagcdn.com/w20/" + ((string)item.Name).ToLower() + ".png" }); ;
             }
             result = new ObservableCollection<Country>(result.OrderBy(s => s.Name));
             return result;

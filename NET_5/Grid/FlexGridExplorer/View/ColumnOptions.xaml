@@ -4,21 +4,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FlexGridExplorer"
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:EnumConverter x:Key="enumConverter" />
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-
             <TextBlock VerticalAlignment="Center" Text="ColumnOptionsMenuVisibility:" Margin="10 0" />
-            <c1:C1ComboBox Width="100" SelectedItem="{Binding ColumnOptionsMenuVisibility,ElementName=grid,Mode=TwoWay}">
-                <c1:GridColumnOptionsMenuVisibility>MouseOver</c1:GridColumnOptionsMenuVisibility>
-                <c1:GridColumnOptionsMenuVisibility>Visible</c1:GridColumnOptionsMenuVisibility>
-                <c1:GridColumnOptionsMenuVisibility>Collapsed</c1:GridColumnOptionsMenuVisibility>
-            </c1:C1ComboBox>
+            <c1:C1ComboBox Name="Combo" Width="100" ItemsSource="{Binding DataContext.ColumnOption}"
+                           SelectedItemChanged="C1ComboBox_SelectedItemChanged"/>
         </StackPanel>
         <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" ColumnOptionsMenuVisibility="Visible" ColumnOptionsLoading="OnColumnOptionsLoading" Grid.Row="1">
             <c1:FlexGrid.Columns>

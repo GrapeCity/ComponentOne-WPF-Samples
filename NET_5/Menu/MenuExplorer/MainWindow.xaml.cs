@@ -10,6 +10,7 @@ namespace MenuExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = MenuExplorer.Properties.Resources.Title;
         }
     }
 }

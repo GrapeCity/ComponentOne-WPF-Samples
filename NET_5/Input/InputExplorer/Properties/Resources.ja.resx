@@ -139,9 +139,75 @@
     <value>範囲スライダー</value>
   </data>
   <data name="MaskedDemoDes" xml:space="preserve">
-    <value>Shows how to use C1MaskedTextBox with different settings of Mask and TextMaskFormat.</value>
+  <value>Mask と TextMaskFormat のさまざまな設定で C1MaskedTextBox を使用する方法を示します。</value>
+</data>
+  <data name="MaskedDemoTitle" xml:space="preserve">
+  <value>マスクテキストボックス</value>
+</data>
+  <data name="TagEditorDemoDes" xml:space="preserve">
+    <value>C1TagEditorの使用方法を示します。</value>
   </data>
-    <data name="MaskedDemoTitle" xml:space="preserve">
-    <value>Masked TextBox</value>
+  <data name="TagEditorDemoTitle" xml:space="preserve">
+    <value>タグエディタ</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Inputエクスプローラー</value>
+  </data>
+  <data name="AddTag" xml:space="preserve">
+    <value>Add Tag</value>
+  </data>
+  <data name="AddTagButton" xml:space="preserve">
+    <value>AddTag</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add Text</value>
+  </data>
+  <data name="InputTagContent" xml:space="preserve">
+    <value>Input tag's content:</value>
+  </data>
+  <data name="InputText" xml:space="preserve">
+    <value>Input text:</value>
+  </data>
+  <data name="AddItemsEvent" xml:space="preserve">
+    <value>AddItems</value>
+  </data>
+  <data name="CheckListDes" xml:space="preserve">
+    <value>Shows how to use C1CheckList</value>
+  </data>
+  <data name="CheckListTitle" xml:space="preserve">
+    <value>CheckList</value>
+  </data>
+  <data name="EventsTabHeader" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="MethodsTabHeader" xml:space="preserve">
+    <value>Methods</value>
+  </data>
+  <data name="PropertiesTabHeader" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="RemoveItemsEvent" xml:space="preserve">
+    <value>RemoveItems</value>
+  </data>
+  <data name="SelectAllMethod" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="SelectedItemsEvent" xml:space="preserve">
+    <value>SelectedItems</value>
+  </data>
+  <data name="SelectionChangedEventExpenderHeader" xml:space="preserve">
+    <value>SelectionChangedEvent</value>
+  </data>
+  <data name="UnselectAllMethod" xml:space="preserve">
+    <value>Unselect All</value>
+  </data>
+  <data name="UnselectAllMethod" xml:space="preserve">
+    <value>Unselect All</value>
+  </data>
+  <data name="MultiSelect" xml:space="preserve">
+    <value>MultiSelect</value>
+  </data>
+  <data name="MultiSelectDes" xml:space="preserve">
+    <value>Shows how to use C1MultiSelect</value>
   </data>
 </root>

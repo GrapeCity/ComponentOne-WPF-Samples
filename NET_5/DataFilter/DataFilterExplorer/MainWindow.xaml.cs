@@ -25,6 +25,7 @@ namespace DataFilterExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = DataFilterExplorer.Resources.AppResources.Title;
         }
     }
 }

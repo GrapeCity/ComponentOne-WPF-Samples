@@ -138,8 +138,9 @@
                 <local:GridBitmapIconColumn Binding="Country" Header="Country" SortMemberPath="Country.Name" GroupMemberPath="Country.Name" AllowGrouping="True" Width="200" ColumnName="Country" BitmapSourceBinding="Country.Image" DefaultBitmapSource="/GridShowCase;component/Resources/Images/noflag.png" IconWidth="25">
                     <c1:GridColumn.CellEditingTemplate>
                         <DataTemplate>
-                            <ComboBox ItemsSource="{Binding Countries, Source={StaticResource viewmodel}}" SelectedValue="{Binding Country, Mode=TwoWay}">
-                                <ComboBox.ItemTemplate>
+                            <c1:C1ComboBox ItemsSource="{Binding Countries, Source={StaticResource viewmodel}}"
+                                           SelectedValue="{Binding Country, Mode=TwoWay}">
+                                <c1:C1ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
                                             <Grid.ColumnDefinitions>
@@ -150,8 +151,8 @@
                                             <TextBlock Grid.Column="1" Margin="4 0 0 0" VerticalAlignment="Center" Text="{Binding Name}" />
                                         </Grid>
                                     </DataTemplate>
-                                </ComboBox.ItemTemplate>
-                            </ComboBox>
+                                </c1:C1ComboBox.ItemTemplate>
+                            </c1:C1ComboBox>
                         </DataTemplate>
                     </c1:GridColumn.CellEditingTemplate>
                 </local:GridBitmapIconColumn>

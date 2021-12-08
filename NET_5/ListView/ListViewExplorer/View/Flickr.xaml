@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="ListViewExplorer.Flickr"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid>
+        <StackPanel x:Name="loading" VerticalAlignment="Center">
+            <TextBlock Text="Retrieving data from Flickr..." TextAlignment="Center" />
+            <!--<c1:C1ProgressBar IsIndeterminate="True"/>-->
+        </StackPanel>
+        <Button x:Name="retry" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Retry" Visibility="Collapsed" Click="Retry_Click" />
+        <c1:C1ListView x:Name="listView"
+                      Background="Transparent" 
+                      Foreground="White" 
+                      SelectedBackground="#FF0C5C81" 
+                      Visibility="Collapsed" 
+                      Orientation="Horizontal"
+                      Zoom="1" 
+                      ItemWidth="240" 
+                      ItemHeight="192" 
+                      ZoomMode="Enabled" 
+                      ViewportGap="0" 
+                      ViewportPreviewGap="0" 
+                      RefreshWhileScrolling="False">
+            <c1:C1ListView.PreviewItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Gray">
+                        <Image Source="{Binding Thumbnail}" Stretch="UniformToFill" />
+                    </Grid>
+                </DataTemplate>
+            </c1:C1ListView.PreviewItemTemplate>
+            <c1:C1ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image Source="{Binding Content}" Stretch="UniformToFill" />
+                        <TextBlock Text="{Binding Title}" Margin="4 0 0 4" VerticalAlignment="Bottom" />
+                    </Grid>
+                </DataTemplate>
+            </c1:C1ListView.ItemTemplate>
+            <c1:C1ListView.ItemContainerStyle>
+                <!--This style allows showing the preview while the full image is being loaded-->
+                <Style TargetType="c1:ListViewItemView">
+                    <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="Padding" Value="2" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="c1:ListViewItemView">
+                                <Grid>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Normal" />
+                                            <VisualState x:Name="PointerOver">
+                                                <Storyboard>
+                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="PointerOverBorder" />
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="DesignBrush" Storyboard.TargetName="SelectedBackground">
+                                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                                            <DiscreteObjectKeyFrame.Value>
+                                                                <SolidColorBrush Color="#FF5F37BE" />
+                                                            </DiscreteObjectKeyFrame.Value>
+                                                        </DiscreteObjectKeyFrame>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
+                                                <Storyboard>
+                                                    <DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Content" />
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="PreviewStates">
+                                            <VisualState x:Name="Full">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                                        <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                            <DiscreteObjectKeyFrame.Value>
+                                                                <Visibility>Visible</Visibility>
+                                                            </DiscreteObjectKeyFrame.Value>
+                                                        </DiscreteObjectKeyFrame>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Preview">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                                        <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                            <DiscreteObjectKeyFrame.Value>
+                                                                <Visibility>Collapsed</Visibility>
+                                                            </DiscreteObjectKeyFrame.Value>
+                                                        </DiscreteObjectKeyFrame>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="SelectionStates">
+                                            <VisualState x:Name="Unselected">
+                                                <Storyboard>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Selected">
+                                                <Storyboard>
+                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="SelectionBackground" />
+                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="SelectedBorder" />
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <CheckBox x:Name="CheckBox" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}" IsChecked="{TemplateBinding IsSelected}"
+                                          Opacity="0" Foreground="{TemplateBinding Foreground}"/>
+                                    <Path x:Name="HintingCheckMark" Data="F1 M133.1,17.9 L137.2,13.2 L144.6,19.6 L156.4,5.8 L161.2,9.9 L145.6,28.4 z" Fill="{TemplateBinding SelectedBackground}" HorizontalAlignment="Right" Margin="{TemplateBinding BorderThickness}" Opacity="0" Stretch="Uniform" VerticalAlignment="Top" Width="6" />
+                                    <Grid x:Name="Hinting">
+                                        <Border x:Name="ContentBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                                            <Grid>
+                                                <Rectangle x:Name="SelectionBackground" Fill="{TemplateBinding SelectedBackground}" Opacity="0" />
+                                                <Rectangle x:Name="PointerOverBorder" Fill="{TemplateBinding MouseOverBrush}" IsHitTestVisible="False" Opacity="0" />
+                                                <Grid Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                                    <ContentControl x:Name="PreviewElement" Content="{TemplateBinding PreviewContent}" ContentTemplate="{TemplateBinding PreviewContentTemplate}" Visibility="Visible" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+                                                    <ContentPresenter x:Name="Content" Visibility="Collapsed" />
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                        <c1:C1BrushBuilder x:Name="SelectedBackground" Input="{TemplateBinding SelectedBackground}" DesignColor="#FF4617B4" DesignBrush="#FF4617B4" />
+                                        <Border x:Name="SelectedBorder" IsHitTestVisible="False" Opacity="0" BorderBrush="{Binding Output,ElementName=SelectedBackground}" BorderThickness="{TemplateBinding BorderThickness}">
+                                            <Grid x:Name="SelectedCheckMark" Height="15" Width="15" HorizontalAlignment="Right" IsHitTestVisible="False" VerticalAlignment="Top">
+                                                <Path x:Name="SelectedEarmark" Data="M0,0 L40,0 L40,40 z" Fill="{Binding Output,ElementName=SelectedBackground}" Stretch="Fill" />
+                                                <Path Data="F1 M133.1,17.9 L137.2,13.2 L144.6,19.6 L156.4,5.8 L161.2,9.9 L145.6,28.4 z" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Right" Stretch="Uniform" VerticalAlignment="Top" Width="6" Margin="2" />
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </c1:C1ListView.ItemContainerStyle>
+        </c1:C1ListView>
+    </Grid>
+</UserControl>

@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <c1:C1TextBox x:Name="filter" Margin="4" Placeholder="{x:Static res:AppResources.FilterPlaceholderText}"/>
+        <c1:C1TextBox x:Name="filter" Margin="4" Placeholder="{x:Static res:AppResources.FilterPlaceholderText}" HorizontalAlignment="Left" MinWidth="250"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <CheckBox x:Name="matchCaseCheckbox" Content="Match case" Margin="4"/>
             <CheckBox x:Name="matchWholeWordCheckBox" Content="Match whole word" Margin="4" />

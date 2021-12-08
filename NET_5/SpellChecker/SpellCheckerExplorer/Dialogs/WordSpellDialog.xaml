@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
-             Title="Spelling" ResizeMode="NoResize"
+             Title="Spelling" ResizeMode="NoResize" x:Name="userControl"
              mc:Ignorable="d" Width="520" Height="300" KeyDown="C1SpellDialog_KeyDown">
     <Window.Resources>
         <SolidColorBrush x:Key="SystemWindowColor" Color="{x:Static SystemColors.WindowColor}" />
@@ -44,11 +44,14 @@
         <!-- show error -->
         <TextBlock x:Name="_lblNotInDictionary" Style="{StaticResource Label}"      Text="Not in Dictionary"/>
         <TextBlock x:Name="_lblRepeatedWord"	Style="{StaticResource Label}"      Text="Repeated Word:" Visibility="Collapsed"/>
-        <c1:C1RichTextBox x:Name="_txtError" Style="{StaticResource DialogItem}" Grid.Row="1" Grid.RowSpan="3" TextChanged="_txtError_TextChanged" />
+        <c1:C1RichTextBox x:Name="_txtError" Style="{StaticResource DialogItem}" Grid.Row="1" Grid.RowSpan="3"
+                          TextChanged="_txtError_TextChanged" />
 
         <!-- show suggestions -->
         <TextBlock x:Name="_lblSuggestions"		Style="{StaticResource Label}"      Text="Suggestions:" Grid.Row="4" />
-        <ListBox x:Name="_listSuggestions"	    Style="{StaticResource DialogItem}"  Grid.Row="5" Grid.RowSpan="3" SelectionChanged="_listSuggestions_SelectionChanged" />
+        <c1:C1ListView x:Name="_listSuggestions"	    Style="{StaticResource DialogItem}"  Grid.Row="5" Grid.RowSpan="3"
+                       PreviewMouseDoubleClick="_listSuggestions_PreviewMouseDoubleClick"
+                 ItemsSource="{Binding Items, ElementName=userControl}" BorderThickness="1" SelectionChanged="_listSuggestions_SelectionChanged" />
 
         <!-- commands -->
         <Button x:Name="_btnIgnore"			    Style="{StaticResource Button}" Grid.Column="1" Grid.Row="1" Content="Ignore"       Click="_btnIgnore_Click" />

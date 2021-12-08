@@ -20,9 +20,6 @@
                     </TextBlock.Inlines>
                 </TextBlock>
             </DataTemplate>
-            <Style TargetType="ComboBox">
-                <Setter Property="VerticalAlignment" Value="Center" />
-            </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -31,12 +28,12 @@
         <WrapPanel x:Name="wrapPanel" Orientation="Horizontal" >
             <WrapPanel Orientation="Horizontal">
                 <CheckBox Margin="10" x:Name="cbCategory" Content="By Category" VerticalAlignment="Center" IsChecked="False" Checked="cbCategory_Checked" Unchecked="cbCategory_Unchecked"/>
-                <ComboBox Width="200" Margin="10" x:Name="cbMode" 
+                <Chart:C1ComboBox Width="200" Margin="10" x:Name="cbMode"
                       ItemsSource="{Binding DataContext.Mode}" 
                       ItemTemplate="{StaticResource cbModeTemplate}"
                       SelectedValue="{Binding ElementName=histogramSeries, Path=BinMode, Mode=TwoWay, Converter={StaticResource enumConverter}}"
-                          SelectionChanged="cbMode_SelectionChanged">
-                </ComboBox>
+                      SelectedIndexChanged="cbMode_SelectedIndexChanged" >
+                </Chart:C1ComboBox>
                 <StackPanel Orientation="Horizontal">
                     <CheckBox Margin="10" x:Name="cbOverflow" Content="Overflow bin" VerticalAlignment="Center" IsChecked="False" Checked="cbOverflow_Checked"  Unchecked="cbOverflow_Unchecked"/>
                     <TextBox x:Name="tbOverflow" IsEnabled="{Binding ElementName=cbOverflow, Path=IsChecked, Mode=TwoWay}" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbOverflow_TextChanged"/>

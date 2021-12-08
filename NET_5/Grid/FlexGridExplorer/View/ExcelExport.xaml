@@ -25,103 +25,116 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <c1:C1Accordion Grid.Row="0" Grid.Column="1" ExpandMode="Collapsible" >
-            <c1:C1Expander Header="Export Options" IsExpanded="False" ExpandIconAlignment="Left">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0" Margin="6">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
+            <c1:C1Expander Header="Export Options" IsExpanded="False" ExpandIconAlignment="Left" MaxHeight="300">
+                <c1:C1ScrollViewer>
+                    <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".5*"/>
+                                <ColumnDefinition Width=".5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                TextDecorations="Underline"
+                                Margin="0,4,0,4"
+                                FontSize="14"
+                                FontWeight="Bold">
+                                Row(s) Export Options:
+                            </TextBlock>
+                            <WrapPanel Grid.Row="1" Grid.Column="0">
+                                <CheckBox x:Name="checkRowsVisibleOnly" Margin="0,4,0,4">Visible Only</CheckBox>
+                                <CheckBox x:Name="checkRowsRenderFrozen" Margin="10,4,0,4">Render Frozen</CheckBox>
+                                <CheckBox x:Name="checkRowsSelectedOnly" Margin="10,4,0,4">Selected Only</CheckBox>
+                                <CheckBox x:Name="checkRowsExcludeEmpty" Margin="10,4,0,4">Exclude Empty</CheckBox>
+                                <CheckBox x:Name="checkRowsRenderGroups" Margin="10,4,0,4">Render Groups</CheckBox>
+                            </WrapPanel>
+                            <WrapPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Margin="0,10,0,0">
+                                <TextBlock Margin="0,4,0,4">Specific Ranges:</TextBlock>
+                                <TextBox x:Name="txtRowRanges" MinWidth="100" Margin="10,4,0,4"/>
+                                <CheckBox x:Name="checkRowsExcludeRange" VerticalAlignment="Center" Margin="10,4,0,4">Exclude Range</CheckBox>
+                            </WrapPanel>
+                            <TextBlock Grid.Row="0" Grid.Column="1" TextDecorations="Underline" Margin="4"
+                                   FontSize="14" FontWeight="Bold">Column(s) Export Options:</TextBlock>
+                            <WrapPanel Grid.Row="1" Grid.Column="1">
+                                <CheckBox x:Name="checkColumnsVisibleOnly" Margin="0,4,0,4">Visible Only</CheckBox>
+                                <CheckBox x:Name="checkColumnsRenderFrozen" Margin="10,4,0,4">Render Frozen</CheckBox>
+                                <CheckBox x:Name="checkColumnsSelectedOnly" Margin="10,4,0,4">Selected Only</CheckBox>
+                            </WrapPanel>
+                            <WrapPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="0,10,0,0">
+                                <TextBlock Margin="0,4,0,4">Specific Ranges:</TextBlock>
+                                <TextBox x:Name="txtColRanges" MinWidth="100" Margin="10,4,0,4"/>
+                                <CheckBox x:Name="checkColumnsExcludeRange" VerticalAlignment="Center" Margin="10,4,0,4">Exclude Range</CheckBox>
+                            </WrapPanel>
+                        </Grid>
+                        <Grid Grid.Row="1" Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" >
+                                <TextBlock TextDecorations="Underline" FontSize="14" FontWeight="Bold">Grid Header Visibility Options:</TextBlock>
+                                <WrapPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                    <CheckBox x:Name="checkHeadersAll" Margin="2" Click="CheckHeadersAll_Checked">All</CheckBox>
+                                    <CheckBox x:Name="checkHeadersRow" Margin="2" Click="CheckHeadersRow_Checked">Row</CheckBox>
+                                    <CheckBox x:Name="checkHeadersColumn" Margin="2" Click="CheckHeadersRow_Checked" IsChecked="True">Column</CheckBox>
+                                </WrapPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0" >
+                                <TextBlock TextDecorations="Underline" FontSize="14" FontWeight="Bold">Other Options:</TextBlock>
+                                <WrapPanel Margin="0,10,0,0">
+                                    <CheckBox x:Name="checkMerged" Margin="2">Render Merged Ranges</CheckBox>
+                                    <CheckBox x:Name="checkFormatted" Margin="2" IsChecked="True">Render Formatted Values</CheckBox>
+                                    <CheckBox x:Name="checkRenderImages" Margin="2">Render Images</CheckBox>
+                                </WrapPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </c1:C1ScrollViewer>
+            </c1:C1Expander>
+            <c1:C1Expander Header="Showcase Playground" IsExpanded="False"  ExpandIconAlignment="Left" MaxHeight="300">
+                <c1:C1ScrollViewer>
+                    <Grid>
+                        <Grid.RowDefinitions>
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0" TextDecorations="Underline" Margin="4"
-                                   FontSize="14" FontWeight="Bold">Row(s) Export Options:</TextBlock>
-                        <WrapPanel Grid.Row="1" Grid.Column="0"  ItemWidth="130">
-                            <CheckBox x:Name="checkRowsVisibleOnly" Margin="2" >Visible Only</CheckBox>
-                            <CheckBox x:Name="checkRowsRenderFrozen" Margin="2">Render Frozen</CheckBox>
-                            <CheckBox x:Name="checkRowsSelectedOnly" Margin="2">Selected Only</CheckBox>
-                            <CheckBox x:Name="checkRowsExcludeEmpty" Margin="2">Exclude Empty</CheckBox>
-                            <CheckBox x:Name="checkRowsRenderGroups" Margin="2">Render Groups</CheckBox>
-                        </WrapPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Margin="0,10,0,0">
-                            <TextBlock Margin="0,0,4,0">Specific Ranges:</TextBlock>
-                            <TextBox x:Name="txtRowRanges" MinWidth="100" Margin="0,0,4,0"/>
-                            <CheckBox x:Name="checkRowsExcludeRange" VerticalAlignment="Center">Exclude Range</CheckBox>
-                        </StackPanel>
-                        <TextBlock Grid.Row="0" Grid.Column="1" TextDecorations="Underline" Margin="4"
-                                   FontSize="14" FontWeight="Bold">Column(s) Export Options:</TextBlock>
-                        <WrapPanel Grid.Row="1" Grid.Column="1" ItemWidth="130">
-                            <CheckBox x:Name="checkColumnsVisibleOnly" Margin="2">Visible Only</CheckBox>
-                            <CheckBox x:Name="checkColumnsRenderFrozen" Margin="2">Render Frozen</CheckBox>
-                            <CheckBox x:Name="checkColumnsSelectedOnly" Margin="2">Selected Only</CheckBox>
-                        </WrapPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="0,10,0,0">
-                            <TextBlock Margin="0,0,4,0">Specific Ranges:</TextBlock>
-                            <TextBox x:Name="txtColRanges" MinWidth="100" Margin="0,0,4,0"/>
-                            <CheckBox x:Name="checkColumnsExcludeRange" VerticalAlignment="Center">Exclude Range</CheckBox>
-                        </StackPanel>
-                    </Grid>
-                    <Grid Grid.Row="1" Margin="6">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" >
-                            <TextBlock TextDecorations="Underline" FontSize="14" FontWeight="Bold">Grid Header Visibility Options:</TextBlock>
-                            <WrapPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <CheckBox x:Name="checkHeadersAll" Margin="2" Click="CheckHeadersAll_Checked">All</CheckBox>
-                                <CheckBox x:Name="checkHeadersRow" Margin="2" Click="CheckHeadersRow_Checked">Row</CheckBox>
-                                <CheckBox x:Name="checkHeadersColumn" Margin="2" Click="CheckHeadersRow_Checked" IsChecked="True">Column</CheckBox>
-                            </WrapPanel>
+                        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
+                            <TextBlock FontSize="14" TextDecorations="Underline" FontWeight="SemiBold">Pick a different theme to showcase style export:</TextBlock>
+                            <c1:C1ComboBox x:Name="Themes" Margin="0,10,20,4" SelectionChanged="Themes_SelectionChanged"/>
                         </StackPanel>
-                        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0" >
-                            <TextBlock TextDecorations="Underline" FontSize="14" FontWeight="Bold">Other Options:</TextBlock>
-                            <WrapPanel Margin="0,10,0,0">
-                                <CheckBox x:Name="checkMerged" Margin="2">Render Merged Ranges</CheckBox>
-                                <CheckBox x:Name="checkFormatted" Margin="2" IsChecked="True">Render Formatted Values</CheckBox>
-                                <CheckBox x:Name="checkRenderImages" Margin="2">Render Images</CheckBox>
-                            </WrapPanel>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </c1:C1Expander>
-            <c1:C1Expander Header="Showcase Playground" IsExpanded="False"  ExpandIconAlignment="Left">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
-                        <TextBlock FontSize="14" TextDecorations="Underline" FontWeight="SemiBold">Pick a different theme to showcase style export:</TextBlock>
-                        <ComboBox x:Name="Themes" Margin="0,10,20,4" SelectionChanged="Themes_SelectionChanged"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
-                        <StackPanel Orientation="Vertical" Name="GroupingStack" >
-                            <TextBlock TextDecorations="Underline" FontSize="14" FontWeight="SemiBold">Grouping Options:</TextBlock>
-                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <TextBlock Text="Group By" VerticalAlignment="Center" Margin="0,0,5,0"/>
-                                <ComboBox x:Name="Grouping_0" Width="200" Margin="0,0,5,0" SelectionChanged="Grouping_SelectionChanged" PreviewMouseDown="Grouping_PreviewMouseDown"/>
-                                <Button MinWidth="20" ToolTip="Add another group" Margin="0,0,5,0" IsEnabled="False" Click="AddGroup_Click">+</Button>
+                        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
+                            <StackPanel Orientation="Vertical" Name="GroupingStack" >
+                                <TextBlock TextDecorations="Underline" FontSize="14" FontWeight="SemiBold">Grouping Options:</TextBlock>
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                    <TextBlock Text="Group By" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                                    <c1:C1ComboBox x:Name="Grouping_0" Width="200" Margin="0,0,5,0"
+                                               SelectedItemChanged="Grouping_0_SelectedItemChanged"
+                                               PreviewMouseDown="Grouping_PreviewMouseDown" KeyDown="Grouping_KeyDown"/>
+                                    <c1:C1Button MinWidth="20" ToolTip="Add another group" Margin="0,0,5,0" IsEnabled="False" Click="AddGroup_Click">+</c1:C1Button>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Width="280" HorizontalAlignment="Left" Margin="0,10,0,0">
+                                <c1:C1Button Click="GroupingClear_Click">Clear Grouping(s)</c1:C1Button>
                             </StackPanel>
                         </StackPanel>
-                        <StackPanel Width="280" HorizontalAlignment="Left" Margin="0,10,0,0">
-                            <Button Click="GroupingClear_Click">Clear Grouping(s)</Button>
-                        </StackPanel>
-                    </StackPanel>
-                </Grid>
+                    </Grid>
+                </c1:C1ScrollViewer>
             </c1:C1Expander>
         </c1:C1Accordion>
         <c1:C1ToolStrip ToolIconSize="16" ToolLabelVisibility="Visible" ToolOrientation="Vertical" Grid.Row="0" Grid.Column="0" >

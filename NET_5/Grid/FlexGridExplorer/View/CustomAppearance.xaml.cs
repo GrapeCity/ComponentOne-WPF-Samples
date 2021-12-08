@@ -40,7 +40,8 @@ namespace FlexGridExplorer
 
         private void OnThemeChanged(object sender, SelectionChangedEventArgs e)
         {
-            grid.Style = Resources.MergedDictionaries[0][Themes.SelectedValue as string] as Style;
+            if(e.AddedItems.Count > 0)
+                grid.Style = Resources.MergedDictionaries[0][e.AddedItems[0] as string] as Style;
         }
     }
 }

@@ -2,6 +2,9 @@
 using C1.WPF.Grid;
 using C1.WPF.Menu;
 using FlexGridExplorer.Resources;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -16,6 +19,13 @@ namespace FlexGridExplorer
             Tag = AppResources.ColumnOptionsDescription;
 
             grid.ItemsSource = Customer.GetCustomerList(100);
+            Loaded += ColumnOptions_Loaded;
+        }
+
+        private void ColumnOptions_Loaded(object sender, RoutedEventArgs e)
+        {
+            if(grid.ColumnOptionsMenuVisibility.HasValue)
+                Combo.SelectedItem = grid.ColumnOptionsMenuVisibility.Value.ToString();
         }
 
         private void OnIdColumnOptionsLoading(object sender, GridColumnOptionsLoadingEventArgs e)
@@ -63,6 +73,24 @@ namespace FlexGridExplorer
 
             e.Menu.Items.Add(menuItem);
 
+        }
+
+        List<string> _columnOptions;
+        public List<string> ColumnOption
+        {
+            get
+            {
+                if (_columnOptions == null)
+                    _columnOptions = Enum.GetNames(typeof(GridColumnOptionsMenuVisibility)).ToList();
+                return _columnOptions;
+            }
+        }
+
+        private void C1ComboBox_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
+        {
+            if (Combo.SelectedItem == null) return;
+            grid.ColumnOptionsMenuVisibility
+                = (GridColumnOptionsMenuVisibility)Enum.Parse(typeof(GridColumnOptionsMenuVisibility), Combo.SelectedItem.ToString());
         }
     }
 }

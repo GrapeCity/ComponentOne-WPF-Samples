@@ -130,7 +130,7 @@
     <value>DateTimePicker Advanced</value>
   </data>
   <data name="DateTimePickerAdvancedTitle" xml:space="preserve">
-    <value>DateTimePicker Advanced</value>
+    <value>Advanced</value>
   </data>
   <data name="DateTimePickerAdvanceTag" xml:space="preserve">
     <value>Customize the date and time format and set the mask and placeholder text.</value>

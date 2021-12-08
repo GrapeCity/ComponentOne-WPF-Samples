@@ -43,37 +43,30 @@
                     </TextBlock.Inlines>
                 </TextBlock>
             </DataTemplate>
-            <Style TargetType="ComboBox">
-                <Setter Property="Margin" Value="10" />
-            </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10 0">
-            <ComboBox ItemsSource="{Binding DataContext.ChartTypes}"
-                      x:Name="cboChartType"
-                      SelectedIndex="0"
+            <Chart:C1ComboBox ItemsSource="{Binding DataContext.ChartTypes}"
+                      x:Name="cboChartType" SelectedIndex="0"
                       ItemTemplate="{StaticResource cboChartTypeTemplate}"
-                      SelectedValue="{Binding ElementName=errorBarSeries, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}"></ComboBox>
-            <ComboBox ItemsSource="{Binding DataContext.ErrorAmounts}"
-                      x:Name="cboErrorAmounts" 
-                      SelectedIndex="0"
+                      SelectedValue="{Binding ElementName=errorBarSeries, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}"/>
+            <Chart:C1ComboBox ItemsSource="{Binding DataContext.ErrorAmounts}"
+                      x:Name="cboErrorAmounts" Margin="10 0 0 0" SelectedIndex="0"
                       ItemTemplate="{StaticResource cboErrorAmountTemplate}"
                       SelectionChanged="cboErrorAmounts_SelectionChanged"
-                      SelectedValue="{Binding ElementName=errorBarSeries,Path=ErrorAmount,Mode=TwoWay,Converter={StaticResource enumConverter}}"></ComboBox>
-            <ComboBox ItemsSource="{Binding DataContext.Directions}"
-                      x:Name="cboDirections" 
-                      SelectedIndex="0"
+                      SelectedValue="{Binding ElementName=errorBarSeries,Path=ErrorAmount,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
+            <Chart:C1ComboBox ItemsSource="{Binding DataContext.Directions}"
+                      x:Name="cboDirections"  Margin="10 0 0 0" SelectedIndex="0"
                       ItemTemplate="{StaticResource cboDirectionTemplate}"
-                      SelectedValue="{Binding ElementName=errorBarSeries,Path=Direction,Mode=TwoWay,Converter={StaticResource enumConverter}}"></ComboBox>
-            <ComboBox ItemsSource="{Binding DataContext.EndStyles}"
-                      x:Name="cboEndStyle" 
-                      SelectedIndex="0"
+                      SelectedValue="{Binding ElementName=errorBarSeries,Path=Direction,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
+            <Chart:C1ComboBox ItemsSource="{Binding DataContext.EndStyles}"
+                      x:Name="cboEndStyle"  Margin="10 0 0 0" SelectedIndex="0"
                       ItemTemplate="{StaticResource cboEndStyleTemplate}"
-                      SelectedValue="{Binding ElementName=errorBarSeries,Path=EndStyle,Mode=TwoWay,Converter={StaticResource enumConverter}}"></ComboBox>
-            <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated}">Rotate</CheckBox>
+                      SelectedValue="{Binding ElementName=errorBarSeries,Path=EndStyle,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
+            <CheckBox VerticalAlignment="Center" Margin="10,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated}">Rotate</CheckBox>
         </StackPanel>
         <Chart:FlexChart BindingX="Country" ItemsSource="{Binding DataContext.Data}" Grid.Row="1" x:Name="flexChart" ToolTipContent="{}{y}">
             <Chart:ErrorBar x:Name="errorBarSeries" Binding="Sales" ErrorValue="5">

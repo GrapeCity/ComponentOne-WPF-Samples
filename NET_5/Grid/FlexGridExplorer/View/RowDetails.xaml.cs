@@ -19,7 +19,7 @@ namespace FlexGridExplorer
             showItemsPicker.Items.Add(GridDetailVisibilityMode.ExpandMultiple.ToString());
             showItemsPicker.Items.Add(GridDetailVisibilityMode.ExpandSingle.ToString());
             showItemsPicker.Items.Add(GridDetailVisibilityMode.Selection.ToString());
-            showItemsPicker.SelectionChanged += (s, e) =>
+            showItemsPicker.SelectedItemChanged += (s, e) =>
             {
                 switch (showItemsPicker.SelectedIndex)
                 {
@@ -34,7 +34,8 @@ namespace FlexGridExplorer
                         break;
                 }
             };
-            showItemsPicker.SelectedIndex = 1;
+
+            showItemsPicker.SelectedItem = GridDetailVisibilityMode.ExpandSingle.ToString();
 
             var data = Customer.GetCustomerList(1000);
             var view = new ListCollectionView(data);

@@ -33,6 +33,9 @@ namespace TreeViewExplorer
             _allItems.Add(new SampleItem(Resources.DragDropTitle,
                 Resources.DragDropTitle,
                 new DemoTreeViewDragDrop()));
+            _allItems.Add(new SampleItem(Resources.LoadOnDemandTitle,
+                Resources.LoadOnDemandTitle,
+                new LoadOnDemand()));
         }
 
         public ObservableCollection<SampleItem> AllItems

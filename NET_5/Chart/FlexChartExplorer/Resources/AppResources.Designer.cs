@@ -205,7 +205,12 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows how you can use the FlexChart to show two sets of values from a single array of data. This is the most common usage scenario for the FlexChart.\r The sample does the following:\r \n 1.Set the chart&apos;s DataSource property to an array of data objects. Each data object has values for &apos;date&apos;, &apos;sales&apos;, and &apos;downloads&apos;.\r 2.Set the chart&apos;s bindingX property to &apos;date&apos;.\r 3.Add a Series object to the chart&apos;s series array and set its binding property to &apos;sales&apos;.\r 4.Add a second Series object to the c [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to This view shows how you can use the FlexChart to show two sets of values from a single array of data. This is the most common usage scenario for the FlexChart.
+        ///    The sample does the following:
+        ///    1.Set the chart&apos;s DataSource property to an array of data objects. Each data object has values for &apos;date&apos;, &apos;sales&apos;, and &apos;downloads&apos;.
+        ///    2.Set the chart&apos;s bindingX property to &apos;date&apos;.
+        ///    3.Add a Series object to the chart&apos;s series array and set its binding property to &apos;sales&apos;.
+        ///    4.Add a second Series obj [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string BindingTag {
             get {
@@ -250,6 +255,33 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Break-Even Chart.
+        /// </summary>
+        internal static string BreakEvenDesc {
+            get {
+                return ResourceManager.GetString("BreakEvenDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Break-Even chart is a chart that shows the sales volume level at which total costs equal sales..
+        /// </summary>
+        internal static string BreakEvenTag {
+            get {
+                return ResourceManager.GetString("BreakEvenTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Break-Even.
+        /// </summary>
+        internal static string BreakEvenTitle {
+            get {
+                return ResourceManager.GetString("BreakEvenTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bubble.
         /// </summary>
         internal static string BubbleDesc {
@@ -259,7 +291,9 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows how to create bubble charts using the FlexChart control.\r Bubble charts are similar to other chart types, except in addition to X and Y you must specify a binding for the bubble size.This is done by setting the binding property to a comma - delimited string that specifies the name of the properties to be used for the Y and size values for each bubble.\r In this example, the chart is bound to a list containing objects with &apos;x&apos;, &apos;y&apos;, and &apos;size&apos; properties.The chart contains a single series an [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to This view shows how to create bubble charts using the FlexChart control.
+        ///    Bubble charts are similar to other chart types, except in addition to X and Y you must specify a binding for the bubble size.This is done by setting the binding property to a comma - delimited string that specifies the name of the properties to be used for the Y and size values for each bubble.
+        ///    In this example, the chart is bound to a list containing objects with &apos;x&apos;, &apos;y&apos;, and &apos;size&apos; properties.The chart contains a single ser [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string BubbleTag {
             get {
@@ -349,7 +383,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows how to create financial charts with the FlexChart control.\r The FlexChart supports two types of financial chart: Candlestick and HiLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source..
+        ///   Looks up a localized string similar to This view shows how to create financial charts with the FlexChart control.
+        ///    The FlexChart supports two types of financial chart: Candlestick and HiLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source..
         /// </summary>
         internal static string FinancialTag {
             get {
@@ -367,7 +402,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows how you can add a header and a footer to the chart.\r The header and footer properties determine the content, and the headerStyle and footerStyle properties determine the appearance of the header and footer..
+        ///   Looks up a localized string similar to This view shows how you can add a header and a footer to the chart.
+        ///    The header and footer properties determine the content, and the headerStyle and footerStyle properties determine the appearance of the header and footer..
         /// </summary>
         internal static string HeaderFooterTag {
             get {
@@ -394,7 +430,10 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Histogram chart is used to study the distribution of non-categorical data by dividing it into bins of specified width. It plots the frequency of data items that fall in each of these bins. This sample shows: \n \n 1. Histogram chart with columns \n 2. Frequency Polygon: A variation of Histogram charts where the columns are replaced by a curve.These are helpful for comparing multiple sets of data. \n 3. Normal Curve: A bell - shaped curve, also known as Gaussian curve, which shows the probability distribut [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to A Histogram chart is used to study the distribution of non-categorical data by dividing it into bins of specified width. It plots the frequency of data items that fall in each of these bins. This sample shows: 
+        ///    1. Histogram chart with columns 
+        ///    2. Frequency Polygon: A variation of Histogram charts where the columns are replaced by a curve.These are helpful for comparing multiple sets of data. 
+        ///    3. Normal Curve: A bell - shaped curve, also known as Gaussian curve, which shows the probability dis [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HistogramTag {
             get {
@@ -421,7 +460,9 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view demonstrates the use of the FlexChart&apos;s hitTest method.\r The hitTest method takes a point and returns the nearest chart element.It can be used to provide interactive features such as clickable regions, drill - downs, etc.\r Move mouse over chart to see information about the chart element that is closest to the mouse..
+        ///   Looks up a localized string similar to This view demonstrates the use of the FlexChart&apos;s hitTest method.
+        ///    The hitTest method takes a point and returns the nearest chart element.It can be used to provide interactive features such as clickable regions, drill - downs, etc.
+        ///    Move mouse over chart to see information about the chart element that is closest to the mouse..
         /// </summary>
         internal static string HitTestTag {
             get {
@@ -475,7 +516,11 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows the FlexChart&apos;s basic features. It binds the chart to a data source and allows you to select the chart type, series stacking, and rotation.\r If you move the mouse over a chart element, a tooltip will appear showing details about the data point.\r The simplest way to use the FlexChart is to:\r \n 1.Set the chart&apos;s DataSource property to an array of data objects.\r 2.Set the chart&apos;s bindingX property to the name of the property that contains the X values (in this example fruit names).\r 3.Add [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to This view shows the FlexChart&apos;s basic features. It binds the chart to a data source and allows you to select the chart type, series stacking, and rotation.
+        ///    If you move the mouse over a chart element, a tooltip will appear showing details about the data point.
+        ///    The simplest way to use the FlexChart is to:
+        ///    1.Set the chart&apos;s DataSource property to an array of data objects.
+        ///    2.Set the chart&apos;s bindingX property to the name of the property that contains the X values (in this example fruit names) [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string IntroductionTag {
             get {
@@ -529,7 +574,13 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows how you can use the FlexChart legend properties. \n The sample does the following: \n \n 1.Set legend position property to decide how you locate the legend.such as \&quot;Auto\&quot;, \&quot;Left\&quot;, \&quot;Top\&quot;, \&quot;Right\&quot; and \&quot;Bottom\&quot;. \n 2.Set legend orientations. \n 3.Set the mode of legend text wrapping.such as \&quot;None\&quot;, \&quot;Wrap\&quot; and \&quot;Truncate\&quot;. \n 4.Set a value more than 0 to legend item maxWidth property, set 0 to disable legend textWrapping. \n 5.Set the LegendGroup property of each series to group i [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to This view shows how you can use the FlexChart legend properties. 
+        ///    The sample does the following: 
+        ///    1.Set legend position property to decide how you locate the legend.such as &quot;Auto&quot;, &quot;Left&quot;, &quot;Top&quot;, &quot;Right&quot; and &quot;Bottom&quot;. 
+        ///    2.Set legend orientations. 
+        ///    3.Set the mode of legend text wrapping.such as &quot;None&quot;, &quot;Wrap&quot; and &quot;Truncate&quot;. 
+        ///    4.Set a value more than 0 to legend item maxWidth property, set 0 to disable legend textWrapping. 
+        ///    5.Set the LegendGroup property of each series to group it [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LegendTag {
             get {
@@ -655,7 +706,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows the FlexPie&apos;s basic features. It binds the chart to a data source.\r If you move the mouse over a chart element, a tooltip will appear showing details about the data point..
+        ///   Looks up a localized string similar to This view shows the FlexPie&apos;s basic features. It binds the chart to a data source.
+        ///    If you move the mouse over a chart element, a tooltip will appear showing details about the data point..
         /// </summary>
         internal static string PieIntroductionTag {
             get {
@@ -718,7 +770,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows main functionality of Ranged Histogram. \n \n An unique Histogram chart that can be used to study categorical as well as non-categorical data. Provides multiple binning options as well as support for Overflow and Underflow bins..
+        ///   Looks up a localized string similar to This view shows main functionality of Ranged Histogram. 
+        ///    An unique Histogram chart that can be used to study categorical as well as non-categorical data. Provides multiple binning options as well as support for Overflow and Underflow bins..
         /// </summary>
         internal static string RangedHistogramTag {
             get {
@@ -745,7 +798,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view demonstrates the FlexChart&apos;s selection feature.\r The selectionMode property determines whether the chart should select series or points when the user clicks on the chart..
+        ///   Looks up a localized string similar to This view demonstrates the FlexChart&apos;s selection feature.
+        ///    The selectionMode property determines whether the chart should select series or points when the user clicks on the chart..
         /// </summary>
         internal static string SelectionTag {
             get {
@@ -772,7 +826,11 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows how you can use the FlexChart to show data from multiple data sources, one per series.\r The sample does the following:\r \n 1.Set the chart&apos;s bindingX and binding properties to &apos;x&apos; and &apos;y&apos;.\r 2.Add a Series object to the chart&apos;s series array and set its DataSource property to an array of objects that have &apos;x&apos; and &apos;y&apos; properties.\r 3.Add a second Series object to the chart&apos;s series array and set its DataSource property to a different array of objects that have &apos;x&apos; and &apos;y&apos; properties.\r \n Al [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to This view shows how you can use the FlexChart to show data from multiple data sources, one per series.
+        ///    The sample does the following:
+        ///    1.Set the chart&apos;s bindingX and binding properties to &apos;x&apos; and &apos;y&apos;.
+        ///    2.Add a Series object to the chart&apos;s series array and set its DataSource property to an array of objects that have &apos;x&apos; and &apos;y&apos; properties.
+        ///    3.Add a second Series object to the chart&apos;s series array and set its DataSource property to a different array of objects that have &apos;x&apos; and &apos;y&apos; properties [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SeriesBindingTag {
             get {
@@ -786,6 +844,15 @@ namespace FlexChartExplorer.Resources {
         internal static string SeriesBindingTitle {
             get {
                 return ResourceManager.GetString("SeriesBindingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FlexChartExplorer.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
         
@@ -808,7 +875,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TreeMaps can be used to display two quantitive variables simultaneously, one represented by each rectangle&apos;s size and the other represented by its colour. \n \n This view demonstrates how you can use TreeMap.NodeRendering event to specify color of each node..
+        ///   Looks up a localized string similar to TreeMaps can be used to display two quantitive variables simultaneously, one represented by each rectangle&apos;s size and the other represented by its colour. 
+        ///    This view demonstrates how you can use TreeMap.NodeRendering event to specify color of each node..
         /// </summary>
         internal static string TreeMapNodeColorTag {
             get {
@@ -826,7 +894,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows main functionality of TreeMap control. \n TreeMap charts are compact way of visualizing hierarchical data in form of nested rectangles with area of each rectangle depicting the quantity of each category..
+        ///   Looks up a localized string similar to This view shows main functionality of TreeMap control. 
+        ///    TreeMap charts are compact way of visualizing hierarchical data in form of nested rectangles with area of each rectangle depicting the quantity of each category..
         /// </summary>
         internal static string TreeMapTag {
             get {
@@ -853,7 +922,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows TrendLine in FlexChart.\r You can use different trendline types by setting the FitType property of TrendLine. The points on the plot can be dragged by mouse which updates the trend line and its equation automatically..
+        ///   Looks up a localized string similar to This view shows TrendLine in FlexChart.
+        ///    You can use different trendline types by setting the FitType property of TrendLine. The points on the plot can be dragged by mouse which updates the trend line and its equation automatically..
         /// </summary>
         internal static string TrendLineTag {
             get {
@@ -880,7 +950,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows Waterfall Series in FlexChart.\r The Waterfall series is normally used to demonstrate how the starting position either increases or decreases through a series of changes..
+        ///   Looks up a localized string similar to This view shows Waterfall Series in FlexChart.
+        ///    The Waterfall series is normally used to demonstrate how the starting position either increases or decreases through a series of changes..
         /// </summary>
         internal static string WaterfallTag {
             get {
@@ -907,7 +978,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The view creates a scatter chart of student grades, highlighting each grade range using zones.\r The zones are drawn in rendering event of FlexChart. Statistic values are calculated and plotted..
+        ///   Looks up a localized string similar to The view creates a scatter chart of student grades, highlighting each grade range using zones.
+        ///    The zones are drawn in rendering event of FlexChart. Statistic values are calculated and plotted..
         /// </summary>
         internal static string ZonesTag {
             get {
@@ -934,7 +1006,8 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This view shows how to implement a custom zoom for the FlexChart control.\r Use the mouse or touch to select a rectangular area on the plot area.The chart will zoom in on the selected area.When you are done, click the &apos;Reset Zoom&apos; button below the chart to return to the original view..
+        ///   Looks up a localized string similar to This view shows how to implement a custom zoom for the FlexChart control.
+        ///    Use the mouse or touch to select a rectangular area on the plot area.The chart will zoom in on the selected area.When you are done, click the &apos;Reset Zoom&apos; button below the chart to return to the original view..
         /// </summary>
         internal static string ZoomTag {
             get {

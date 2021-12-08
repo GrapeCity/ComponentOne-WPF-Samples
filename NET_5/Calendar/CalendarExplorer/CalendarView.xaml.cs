@@ -11,6 +11,12 @@ namespace CalendarExplorer
         {
             InitializeComponent();
             DataContext = new SampleDataSource();
+            Loaded += CalendarView_Loaded;
+        }
+
+        private void CalendarView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            lbSamples.SelectedItem = lbSamples.Items[0];
         }
     }
 }

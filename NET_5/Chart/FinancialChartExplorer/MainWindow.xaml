@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FinancialChartExplorer"
+        xmlns:local="clr-namespace:FinancialChartExplorer" 
+        xmlns:res="clr-namespace:FinancialChartExplorer.Resources"
         mc:Ignorable="d"
-        Title="FinancialChart Explorer" Height="350" Width="525" WindowState="Maximized">
+        Title="{x:Static res:AppResources.FinancialChartTitle}" Height="350" Width="525" WindowState="Maximized">
     <Grid>
         <local:FinancialChartDemo />
     </Grid>

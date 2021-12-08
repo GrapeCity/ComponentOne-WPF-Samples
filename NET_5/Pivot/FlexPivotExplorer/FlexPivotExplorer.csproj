@@ -6,6 +6,7 @@
     <ApplicationIcon>c1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".gclicx" />
     <None Remove="Resources\chart.png" />
     <None Remove="Resources\dataengine.xml" />
     <None Remove="Resources\export.png" />
@@ -27,16 +28,20 @@
     <Content Include="Resources\dataengine.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\nwind.zip" />
     <EmbeddedResource Include="Resources\FlexPivotViews.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataEngine">
-      <Version>5.0.20212.219</Version>
+      <Version>5.0.20213.235</Version>
     </PackageReference>
-    <PackageReference Include="C1.PivotEngine" Version="5.0.20212.219" />
+    <PackageReference Include="C1.PivotEngine" Version="5.0.20213.235" />
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>5.0.20213.155</Version>
+    </PackageReference>
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>5.0.20212.100</Version>
+      <Version>5.0.20213.155</Version>
     </PackageReference>
     <PackageReference Include="C1.Zip" Version="2.0.20202.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />

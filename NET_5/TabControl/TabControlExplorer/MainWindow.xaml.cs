@@ -10,6 +10,7 @@ namespace TabControlExplorer
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = Properties.Resources.Title;
         }
     }
 }
