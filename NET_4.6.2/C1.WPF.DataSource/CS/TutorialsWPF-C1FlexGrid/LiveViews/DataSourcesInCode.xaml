@@ -1,0 +1,17 @@
+﻿<Window x:Class="TutorialsWPF.DataSourcesInCode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+        Title="DataSourcesInCode" Height="507" Width="945">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="394*" />
+            <RowDefinition Height="42"/>
+        </Grid.RowDefinitions>
+        <!-- Data binding of the following controls is specified in code. -->
+        <ComboBox HorizontalAlignment="Left" Margin="5" Name="comboBox1" Width="221" SelectionChanged="comboBox1_SelectionChanged" />
+        <c1:C1FlexGrid Grid.Row="1" AutoGenerateColumns="True" Name="dataGrid1" Margin="0,0,0,23" />
+        <Button Grid.Row="2" Content="Save Changes" Height="23" HorizontalAlignment="Right" Name="btnSaveChanges" Width="102" Margin="0,0,31,10" Click="btnSaveChanges_Click" />
+    </Grid>
+</Window>

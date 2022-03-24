@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ChartSamples.InteractiveChart" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c1chart="clr-namespace:C1.WPF.C1Chart;assembly=C1.WPF.C1Chart.4.6.2" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<UserControl.Resources>
+	<Style TargetType="c1chart:C1Chart">
+			<Setter Property="Foreground" Value="#666666" />
+			<Setter Property="CustomPalette">
+				<Setter.Value>
+					<ResourceDictionary>
+						<SolidColorBrush x:Key="0" Color="#16ABA9" />
+						<SolidColorBrush x:Key="1" Color="#EB7A2A" />
+						<SolidColorBrush x:Key="2" Color="#F2CA04" />
+						<SolidColorBrush x:Key="3" Color="#DC5B20" />
+						<SolidColorBrush x:Key="4" Color="#8EBC00" />
+						<SolidColorBrush x:Key="5" Color="#25A0DA" />
+						<SolidColorBrush x:Key="6" Color="#25A0DA" />
+						<SolidColorBrush x:Key="7" Color="#309B46" />
+						<SolidColorBrush x:Key="8" Color="#24C6D2" />
+						<SolidColorBrush x:Key="9" Color="#8A8065" />
+					</ResourceDictionary>
+				</Setter.Value>
+			</Setter>	       	
+        </Style>
+</UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 0 10">
+                <TextBlock VerticalAlignment="Center" Text="Axis:" Margin="0 0 4 0" />
+                <RadioButton VerticalAlignment="Center" Margin="4 0" x:Name="rbX" Checked="rb_Checked" Background="White" />
+                <TextBlock VerticalAlignment="Center" Text="X" Margin="0 0 4 0" />
+                <RadioButton VerticalAlignment="Center" Margin="4 0" x:Name="rbY" Checked="rb_Checked" Background="White" />
+                <TextBlock VerticalAlignment="Center" Text="Y" Margin="0 0 4 0" />
+                <RadioButton VerticalAlignment="Center" Margin="4 0" x:Name="rbXY" Checked="rb_Checked" IsChecked="true" Background="White" />
+                <TextBlock VerticalAlignment="Center" Text="XY" Margin="0 0 4 0" />
+                <Button VerticalAlignment="Center" Margin="15 0" Content="ZoomOut" Click="Button_Click" Foreground="Black" Height="22" Width="100" />
+            </StackPanel>
+        </Border>
+        <c1chart:C1Chart Grid.Row="1" x:Name="c1chart" ChartType="Line">
+            <c1chart:C1Chart.Actions>
+                <c1chart:ZoomAction Fill="#50ffffff" />
+                <c1chart:TranslateAction Modifiers="Shift" />
+                <c1chart:ScaleAction Modifiers="Control" />
+            </c1chart:C1Chart.Actions>
+            <c1chart:C1Chart.View>
+                <c1chart:ChartView>
+                    <c1chart:ChartView.AxisX>
+                        <c1chart:Axis>
+                            <c1chart:Axis.ScrollBar>
+                                <c1chart:AxisScrollBar Visibility="Collapsed" />
+                            </c1chart:Axis.ScrollBar>
+                        </c1chart:Axis>
+                    </c1chart:ChartView.AxisX>
+                    <c1chart:ChartView.AxisY>
+                        <c1chart:Axis>
+                            <c1chart:Axis.ScrollBar>
+                                <c1chart:AxisScrollBar Visibility="Collapsed" />
+                            </c1chart:Axis.ScrollBar>
+                        </c1chart:Axis>
+                    </c1chart:ChartView.AxisY>
+                </c1chart:ChartView>
+            </c1chart:C1Chart.View>
+            <c1chart:C1ChartLegend Grid.Row="1" x:Name="legend" />
+        </c1chart:C1Chart>
+
+        <Border Margin="10 10 0 0" Grid.Row="2">
+            <StackPanel Orientation="Vertical" Cursor="Hand">
+                <TextBlock>Mouse button - zoom</TextBlock>
+                <TextBlock>Ctrl + Mouse button - scale</TextBlock>
+                <TextBlock>Shift + Mouse button - translate(scroll)</TextBlock>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

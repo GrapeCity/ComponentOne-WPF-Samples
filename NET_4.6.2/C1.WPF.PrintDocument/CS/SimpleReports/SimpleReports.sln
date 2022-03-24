@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleReports", "SimpleReports.csproj", "{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0710606-28C4-4BD1-8E67-AB6A3876DF3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB0818F6-F0F5-4F9F-A14E-FFF9261FCE38}
+	EndGlobalSection
+EndGlobal

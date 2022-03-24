@@ -1,0 +1,230 @@
+﻿<Window xmlns:Schedule="clr-namespace:C1.WPF.Schedule;assembly=C1.WPF.Schedule.Extended.4.6.2"  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"  x:Class="SchedulerTableViews.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchedulerTableViews"
+        mc:Ignorable="d" Icon="Resources/C1-ball.ico"
+        Title="Scheduler Table Views" Height="800" Width="1024" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/C1.WPF.4.6.2;component/themes/Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Padding @ C1ToolbarToggleButton -->
+            <Thickness x:Key="ToolbarButtonPadding">4</Thickness>
+
+            <c1:C1ToolbarCommandConverter x:Key="commandConverter" />
+
+            <sys:String x:Key="DelButtonGeomerty">M180.607,10.607l-79.696,79.697l79.696,79.697L170,180.607l-79.696-79.696l-79.696,79.696L0,170.001l79.696-79.697L0,10.607 L10.607,0.001l79.696,79.696L170,0.001L180.607,10.607z</sys:String>
+
+            <sys:String x:Key="RecButtonGeomerty">M17,17H7V14L3,18L7,22V19H19V13H17M7,7H17V10L21,6L17,2V5H5V11H7V7Z</sys:String>
+
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1:C1SimplifiedRibbon x:Name="toolbar" >
+            <c1:C1SimplifiedTabItem Header="Home" >
+                <c1:C1SimplifiedRibbonGroup Header="New">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarButton LabelTitle="New Appointment"  
+                        Command="c1:C1Scheduler.NewAppointmentDialogCommand" CommandTarget="{Binding ElementName=scheduler}"
+                        LargeImageSource="Resources\newAppButton.LargeImage.png" SmallImageSource="Resources\newAppButton.SmallImage.png"/>
+                </c1:C1SimplifiedRibbonGroup>
+                <c1:C1SimplifiedRibbonGroup Header="Go To">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarButton LabelTitle="Today" Click="gotoToday_Click"
+                        LargeImageSource="Resources\todayButton.LargeImage.png"
+                        SmallImageSource="Resources\todayButton.SmallImage.png"/>
+                    <c1:C1ToolbarButton LabelTitle="Next 7 Days" Click="next7days_Click" 
+                        LargeImageSource="Resources\next7Button.LargeImage.png"
+                        SmallImageSource="Resources\next7Button.SmallImage.png"/>
+                </c1:C1SimplifiedRibbonGroup>
+                <c1:C1SimplifiedRibbonGroup Header="Arrange">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarToggleButton x:Name="dayButton" LabelTitle="Day" GroupName="view"
+                            Click="calendarView_Click"
+                            CommandTarget="{Binding ElementName=scheduler}" 
+                            Command="c1:C1Scheduler.ChangeStyleCommand" 
+                            CommandParameter="{Binding Path=OneDayStyle, ElementName=scheduler}"
+                            LargeImageSource="Resources\dayButton.LargeImage.png"
+                            SmallImageSource="Resources\dayButton.SmallImage.png"/>
+                    <c1:C1ToolbarToggleButton x:Name="workWeekButton" LabelTitle="Work Week" GroupName="view"
+                            Click="calendarView_Click"
+                            CommandTarget="{Binding ElementName=scheduler}" 
+                            Command="c1:C1Scheduler.ChangeStyleCommand" 
+                            CommandParameter="{Binding Path=WorkingWeekStyle, ElementName=scheduler}"
+                            LargeImageSource="Resources\workweekButton.LargeImage.png"
+                            SmallImageSource="Resources\workweekButton.SmallImage.png"/>
+                    <c1:C1ToolbarToggleButton x:Name="weekButton" LabelTitle="Week" GroupName="view"
+                            Click="calendarView_Click"
+                            CommandTarget="{Binding ElementName=scheduler}" 
+                            Command="c1:C1Scheduler.ChangeStyleCommand" 
+                            CommandParameter="{Binding Path=WeekStyle, ElementName=scheduler}"
+                            LargeImageSource="Resources\weekButton.LargeImage.png"
+                            SmallImageSource="Resources\weekButton.SmallImage.png"/>
+                    <c1:C1ToolbarToggleButton x:Name="monthButton" IsChecked="True" LabelTitle="Month" GroupName="view"
+                            Click="calendarView_Click"
+                            CommandTarget="{Binding ElementName=scheduler}" 
+                            Command="c1:C1Scheduler.ChangeStyleCommand" 
+                            CommandParameter="{Binding Path=MonthStyle, ElementName=scheduler}"
+                            LargeImageSource="Resources\monthButton.LargeImage.png"
+                            SmallImageSource="Resources\monthButton.SmallImage.png"/>
+                    <c1:C1ToolbarToggleButton x:Name="timelineButton" LabelTitle="Schedule View" GroupName="view"
+                            Click="calendarView_Click"
+                            CommandTarget="{Binding ElementName=scheduler}" 
+                            Command="c1:C1Scheduler.ChangeStyleCommand" 
+                            CommandParameter="{Binding Path=TimeLineStyle, ElementName=scheduler}"
+                            LargeImageSource="Resources\timelineButton.LargeImage.png"
+                            SmallImageSource="Resources\timelineButton.SmallImage.png"/>
+                </c1:C1SimplifiedRibbonGroup>
+                <c1:C1SimplifiedRibbonGroup Header="Table Views">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarToggleButton x:Name="listButton" LabelTitle="List" 
+                            Checked="listButton_Checked" GroupName="tableViews"                     
+                            LargeImageSource="Resources\listButton.LargeImage.png" SmallImageSource="Resources\listButton.SmallImage.png"/>
+                    <c1:C1ToolbarToggleButton x:Name="activeButton" LabelTitle="Active" 
+                            Checked="activeButton_Checked" GroupName="tableViews"
+                            LargeImageSource="Resources\activeButton.LargeImage.png" SmallImageSource="Resources\activeButton.SmallImage.png"/>
+                </c1:C1SimplifiedRibbonGroup>
+            </c1:C1SimplifiedTabItem>
+            <c1:C1SimplifiedTabItem Header="Settings">
+                <c1:C1SimplifiedRibbonGroup Header="Office Theme" >
+                    <c1:C1ToolbarDropDown x:Name="themeDropDown" LabelTitle="{Binding SelectedItem, ElementName=themeList}" ToolTip="Change Office Theme" 
+                                          Margin="4,0,0,0" Width="100" DropDownWidth="100" SmallImageSource="Resources\themeCombo.SmallImage.png">
+                        <c1:C1ToolbarDropDown.Content>
+                            <c1:C1ListBox x:Name="themeList" SelectionMode="Single" SelectionChanged="themeList_SelectionChanged">
+                                <sys:String>White</sys:String>
+                                <sys:String>Colorful</sys:String>
+                                <sys:String>Dark Gray</sys:String>
+                                <sys:String>Black</sys:String>
+                            </c1:C1ListBox>
+                        </c1:C1ToolbarDropDown.Content>
+                    </c1:C1ToolbarDropDown>
+                </c1:C1SimplifiedRibbonGroup>
+                <c1:C1SimplifiedRibbonGroup Header="Agenda Settings" >
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarDropDown x:Name="agendaDropDown" Header="Display Dates" ToolTip="Agenda Display Range" 
+                                          Margin="4,0,0,0" Width="100" DropDownWidth="100">
+                        <c1:C1ToolbarDropDown.Content>
+                            <c1:C1ListBox x:Name="agendaRange" SelectionMode="Single" SelectionChanged="agendaRange_SelectionChanged">
+                                <sys:String>Today</sys:String>
+                                <sys:String>Week</sys:String>
+                                <sys:String>All Days</sys:String>
+                            </c1:C1ListBox>
+                        </c1:C1ToolbarDropDown.Content>
+                    </c1:C1ToolbarDropDown>
+                    <CheckBox x:Name="showAgendaChk" Content="Show Agenda" IsChecked="True" IsThreeState="False" Margin="2" 
+                              Checked="showAgendaChk_Checked" Unchecked="showAgendaChk_Unchecked" >
+                    </CheckBox>
+                </c1:C1SimplifiedRibbonGroup>
+            </c1:C1SimplifiedTabItem>
+            <c1:C1SimplifiedTabItem Header="Appointment" x:Name="appointmentTab" Visibility="Collapsed">
+                <c1:C1SimplifiedRibbonGroup Header="Actions">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarButton LabelTitle="Open" 
+                            LargeImageSource="Resources\openAppButton.LargeImage.png" SmallImageSource="Resources\openAppButton.SmallImage.png"
+                            CommandTarget="{Binding ElementName=scheduler}" CommandParameter="{Binding}"
+                            Command="c1:C1Scheduler.EditAppointmentDialogCommand"/>
+                    <c1:C1ToolbarItem  Click="delete_Click" x:Name="delBtn" IsEnabled="True" Content="Delete">
+                        <c1:C1ToolbarItem.LargeIcon>
+                            <c1:C1PathIcon Width="20" Height="20" Margin="6" Data="{StaticResource DelButtonGeomerty}" />
+                        </c1:C1ToolbarItem.LargeIcon>
+                        <c1:C1ToolbarItem.MediumIcon>
+                            <c1:C1PathIcon Width="12" Height="12" Margin="1" Data="{StaticResource DelButtonGeomerty}" />
+                        </c1:C1ToolbarItem.MediumIcon>
+                    </c1:C1ToolbarItem>
+                </c1:C1SimplifiedRibbonGroup>
+                <c1:C1SimplifiedRibbonGroup Header="Options">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarItem Content="Recurrence" x:Name="recBtn" HorizontalContentAlignment="Center" 
+                            CommandTarget="{Binding ElementName=scheduler}" CommandParameter="{Binding}"
+                            Command="c1:C1Scheduler.EditRecurrenceDialogCommand">
+                        <c1:C1ToolbarItem.LargeIcon>
+                            <c1:C1PathIcon Width="24" Height="24" Margin="4" Data="{StaticResource RecButtonGeomerty}" />
+                        </c1:C1ToolbarItem.LargeIcon>
+                        <c1:C1ToolbarItem.MediumIcon>
+                            <c1:C1PathIcon Width="16" Height="16" Data="{StaticResource RecButtonGeomerty}" />
+                        </c1:C1ToolbarItem.MediumIcon>
+                    </c1:C1ToolbarItem>
+                </c1:C1SimplifiedRibbonGroup>
+                <c1:C1SimplifiedRibbonGroup Header="Tags">
+                    <c1:C1ToolbarToggleButton x:Name="privateButton" LabelTitle="Private" IsChecked="{Binding Private, Mode=TwoWay}"
+                            SmallImageSource="Resources\privateButton.SmallImage.png"/>
+                    <c1:C1ToolbarToggleButton x:Name="highImportanceButton" LabelTitle="High" 
+                            Checked="highImportance_Checked" Unchecked="highImportance_Unchecked"
+                            SmallImageSource="Resources\highimportanceButton.SmallImage.png"/>
+                    <c1:C1ToolbarToggleButton x:Name="lowImportanceButton" LabelTitle="Low" 
+                            Checked="lowImportance_Checked" Unchecked="lowImportance_Unchecked"
+                            SmallImageSource="Resources\lowimportanceButton.SmallImage.png"/>
+                </c1:C1SimplifiedRibbonGroup>
+            </c1:C1SimplifiedTabItem>
+        </c1:C1SimplifiedRibbon>
+        <Grid Grid.Row="1">
+            <Grid x:Name="calendarView">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <c1:C1Calendar x:Name="calendar" MaxSelectionCount="42" 
+                               SelectedDates="{Binding ElementName=scheduler, Path=VisibleDates, Mode=OneWay}" 
+                               BoldedDates="{Binding ElementName=scheduler, Path=BoldedDates, Mode=OneWay}" 
+                               GenerateAdjacentMonthDays="true"/>
+                <GridSplitter Grid.Column="1" Width="2" ResizeBehavior="PreviousAndNext" Grid.RowSpan="2"/>
+                <c1:C1Scheduler x:Name="scheduler" Grid.Column="2" Grid.RowSpan="2" 
+                                StyleChanged="scheduler_StyleChanged"
+                                PreviewMouseLeftButtonDown="scheduler_MouseLeftButtonDown">
+                    <c1:C1Scheduler.Settings>
+                        <c1:C1SchedulerSettings SetReminder="False" ShowReminderDialog="False"/>
+                    </c1:C1Scheduler.Settings>
+                </c1:C1Scheduler>
+                <Schedule:C1AgendaView x:Name="agendaView" Grid.Column="0" Grid.Row="1" MinHeight="200" MaxHeight="300"
+                          SelectedAppointmentsChanged="tableView_SelectedAppointmentsChanged" 
+                          Scheduler="{Binding ElementName=scheduler}"/>
+            </Grid>
+            <Schedule:C1TableView x:Name="tableView" Visibility="Collapsed" 
+                      SelectedAppointmentsChanged="tableView_SelectedAppointmentsChanged"
+                      Scheduler="{Binding ElementName=scheduler}"/>
+
+        </Grid>
+    </Grid>
+</Window>

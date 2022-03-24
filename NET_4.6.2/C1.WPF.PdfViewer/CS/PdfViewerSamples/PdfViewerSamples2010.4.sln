@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerSamples2010.4", "PdfViewerSamples2010.4.csproj", "{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

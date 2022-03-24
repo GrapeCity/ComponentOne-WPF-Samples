@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="FlexRadarIntro.PolarChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FlexRadarIntro"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <StackPanel.Resources>
+                <Style TargetType="c1:C1NumericBox">
+                    <Setter Property="Width" Value="50" />
+                </Style>
+                <local:AnimationSettingsToBoolConverter x:Key="animCnv" />
+            </StackPanel.Resources>
+            <TextBlock Text="Function in polar coordinates: r(ϕ) = cos(kϕ) + a     where k= "/>
+            <c1:C1NumericBox x:Name="numericUpDownStartAngle" Value="10" Minimum="0" Maximum="20" ValueChanged="OnNumericBoxValueChanged" />
+            <TextBlock Text="a= " Margin="20 0 0 0" />
+            <c1:C1NumericBox x:Name="numericUpDown2" Value="2" Minimum="0" Maximum="5" Increment="0.1" Format="f1" ValueChanged="OnNumericBoxValueChanged" />
+            <CheckBox Margin="8" VerticalAlignment="Center" Content="Animation" IsChecked="{Binding ElementName=polarChart,Path=AnimationSettings,Converter={StaticResource animCnv}}" />
+        </StackPanel>
+        <c1:C1FlexRadar x:Name="polarChart" BindingX="X" Binding="Y" ChartType="LineSymbols" Grid.Row="1">
+            <c1:RadarSeries SymbolSize="4" />
+            <c1:C1FlexRadar.AxisY>
+                <c1:Axis Min="0" AxisLine="False" MajorGrid="True" MajorTickMarks="None" />
+            </c1:C1FlexRadar.AxisY>
+            <c1:C1FlexRadar.AxisX>
+                <c1:Axis MajorUnit="45" />
+            </c1:C1FlexRadar.AxisX>
+        </c1:C1FlexRadar>
+    </Grid>
+</UserControl>

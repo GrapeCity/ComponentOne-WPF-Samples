@@ -1,0 +1,70 @@
+﻿<UserControl
+  x:Class="Orders.EditOrders"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="clr-namespace:Orders"
+  xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+  Loaded="UserControl_Loaded">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <c1:C1DataSource Name="dataSource" ContextType="local:NORTHWNDEntities">
+            <!-- An EntityViewSource of Orders that also loads Customer and Order_Details.Product entities along with orders. -->
+            <c1:EntityViewSource AutoLoad="False" EntitySetName="Orders" Include="Customer, Order_Details.Product">
+                <c1:EntityViewSource.FilterDescriptors>
+                    <!-- Filter orders by customer city on the server.-->
+                    <c1:FilterDescriptor PropertyPath="Customer.City" Operator="IsEqualTo"/>
+                </c1:EntityViewSource.FilterDescriptors>
+            </c1:EntityViewSource>
+        </c1:C1DataSource>
+      
+        <!-- A combo box showing cities. -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin ="10">
+            <TextBlock Margin="0,0,7,0">Orders from customers in city:</TextBlock>
+            <ComboBox x:Name="comboBox" ItemsSource="{StaticResource Cities}" MinWidth="200" SelectionChanged="ComboBox_SelectionChanged" />
+        </StackPanel>
+
+        <!-- A DataGrid showing orders, bound to the EntityViewSource defined above. -->
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" Name="dataGrid1"
+                  SelectionChanged="DataGrid1_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="OrderID" Binding="{Binding OrderID}" />
+                <DataGridTextColumn Header="OrderDate" Binding="{Binding OrderDate, StringFormat=d}" />
+                <DataGridTextColumn Header="CustomerName" Binding="{Binding Customer.CompanyName}" Width="*"/>
+                <DataGridTextColumn Header="TotalCost" Binding="{Binding TotalCost, StringFormat=c}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Controls for the Orders data grid.-->
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right">
+            <Button Width="70" Margin="0,2,1,2" Click="addOrder">Add</Button>
+            <Button Width="70" Margin="0,2,1,2" Click="deleteOrder">Delete</Button>
+        </StackPanel>
+
+        <!-- A DataGrid showing order detials of the selected Order. Its data binding is specified in code. -->
+        <DataGrid Grid.Row="3" AutoGenerateColumns="False" Name="dataGrid2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ProductID" Binding="{Binding ProductID}" />
+                <DataGridTextColumn Header="ProductName" Binding="{Binding Product.ProductName}" Width="*"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="UnitPrice" Binding="{Binding UnitPrice, StringFormat=c}" />
+                <DataGridTextColumn Header="Discount" Binding="{Binding Discount}" />
+                <DataGridTextColumn Header="TotalCost" Binding="{Binding TotalCost, StringFormat=c}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+      
+        <!-- Controls for the Order Details data grid. -->
+        <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Right">
+            <!-- If this check box is checked, only the order details for discontinued products are shown. -->
+            <CheckBox Content="Show only discontinued products" Margin="0,0,50,0" Height="16" Name="checkDiscontinued" Checked="checkDiscontinued_Changed" Unchecked="checkDiscontinued_Changed" />
+            <Button Width="70" Margin="0,2,1,2" Click="addOrderDetail">Add</Button>
+            <Button Width="70" Margin="0,2,1,2" Click="deleteOrderDetail">Delete</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

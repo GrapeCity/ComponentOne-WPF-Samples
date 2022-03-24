@@ -1,0 +1,38 @@
+﻿<Window x:Class="CustomGroupingView.MainWindow" Title="Custom Grouping View" Width="1024" Height="800" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Window.Resources>
+         <ResourceDictionary>
+             <ResourceDictionary x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type c1:C1Scheduler}, ResourceId=custom_theme}" Source="CustomViews.xaml" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="192" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ToolBar Grid.Row="0" Grid.ColumnSpan="2">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="NoWrap" Margin="4,2" Text="Contacts navigation:" />
+            <Button Content="|&lt;&lt;" Margin="2" Command="c1:C1Scheduler.NavigateToPreviousGroupCommand" CommandParameter="Home" CommandTarget="{Binding ElementName=c1Scheduler1}" />
+            <Button Content="&lt;&lt;" Margin="2" Command="c1:C1Scheduler.NavigateToPreviousGroupCommand" CommandParameter="Page" CommandTarget="{Binding ElementName=c1Scheduler1}" />
+            <Button Content="&lt;" Margin="2" Command="c1:C1Scheduler.NavigateToPreviousGroupCommand" CommandTarget="{Binding ElementName=c1Scheduler1}" />
+            <Button Content="&gt;" Margin="2" Command="c1:C1Scheduler.NavigateToNextGroupCommand" CommandTarget="{Binding ElementName=c1Scheduler1}" />
+            <Button Content="&gt;&gt;" Margin="2" Command="c1:C1Scheduler.NavigateToNextGroupCommand" CommandParameter="Page" CommandTarget="{Binding ElementName=c1Scheduler1}" />
+            <Button Content="&gt;&gt;|" Margin="2" Command="c1:C1Scheduler.NavigateToNextGroupCommand" CommandParameter="End" CommandTarget="{Binding ElementName=c1Scheduler1}" />
+            <Separator />
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="NoWrap" Margin="4,2" Text="Contacts per page:" />
+            <c1:C1NumericBox Margin="2" Value="{Binding GroupPageSize, ElementName=c1Scheduler1, Mode=TwoWay}" Minimum="2" Maximum="5" MinWidth="35" RangeValidationMode="Always" />
+        </ToolBar>
+        <c1:C1Calendar x:Name="cal1" Grid.Row="1" Grid.Column="0" CalendarHelper="{Binding CalendarHelper, ElementName=c1Scheduler1, Mode=OneWay}" SelectedDates="{Binding VisibleDates, ElementName=c1Scheduler1, Mode=OneWay}" BoldedDates="{Binding BoldedDates, ElementName=c1Scheduler1, Mode=OneWay}" MaxSelectionCount="42" />
+        <c1:C1Scheduler x:Name="c1Scheduler1" Grid.Row="1" Grid.Column="1" Style="{Binding WorkingWeekStyle, ElementName=c1Scheduler1}" Theme="{DynamicResource {ComponentResourceKey TypeInTargetAssembly=c1:C1Scheduler, ResourceId=custom_theme}}">
+            <c1:C1Scheduler.Settings>
+                <c1:C1SchedulerSettings FirstVisibleTime="7:00:00" />
+            </c1:C1Scheduler.Settings>
+        </c1:C1Scheduler>
+    </Grid>
+</Window>

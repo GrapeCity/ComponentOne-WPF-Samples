@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="StockChart.ucAutoComplateComandTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls ="clr-namespace:StockChart.Controls"
+             xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=DotNetProjects.Input.Toolkit"
+             xmlns:local="clr-namespace:StockChart"
+             mc:Ignorable="d" 
+             d:DesignHeight="36" d:DesignWidth="300" x:Name="userContorl">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <controls:ucAutoCompleteTextBox x:Name="txtSymbol" Placeholder="{Binding ElementName=userContorl, Path=Placeholder}" ItemsSource="{Binding ElementName=userContorl, Path=ItemsSource}"
+                                        Symbol="{Binding ElementName=userContorl, Path=Text, Mode=TwoWay}" Background="#424242" Foreground="#AAAAAA" />
+
+        <Button x:Name="btnLoad" Grid.Column="2" Width="40" Style="{StaticResource BlueButton}" Content="{Binding ElementName=userContorl, Path=ButtonContent}" Command="{Binding ElementName=userContorl, Path= Command1, Mode=TwoWay}" CommandParameter="{Binding ElementName=txtSymbol, Path=Symbol, Mode=TwoWay}" />
+
+
+    </Grid>
+</UserControl>

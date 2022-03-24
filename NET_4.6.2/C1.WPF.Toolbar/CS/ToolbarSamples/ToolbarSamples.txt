@@ -1,0 +1,14 @@
+﻿Toolstrip (ToolStrip.xaml)
+=======================
+Shows lightweight C1ToolbarStrip control that supports horizontal and vertical
+orientation and overflow handling.
+
+Toolbar (Toolbar.xaml)
+===========================
+Represents C1Toolbar control that supports grouping, separators and different
+button types..
+
+Commands (ToolbarCommands.xaml)
+================================
+Shows C1Toolbar with command support and various size of toolbar buttons.
+

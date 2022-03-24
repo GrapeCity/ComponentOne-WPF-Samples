@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="DrillDown.TreemapDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DrillDown"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="10">
+        <Grid.Resources>
+            <local:IntToVisibilityConverter x:Key="ITVConverter"/>
+            <local:ShowNavigateConverter x:Key="SNConverter"/>
+            <Style TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="Margin" Value="0 5"/>
+            </Style>
+            <Style TargetType="ComboBox">
+                <Setter Property="Margin" Value="10 0"/>
+            </Style>
+        </Grid.Resources>
+        <c1:C1TreeMap
+                        x:Name="treemap"
+                        Margin="10"
+                        DataContext="{Binding TreemapDataLayer}"
+                        ItemsSource="{Binding ItemsSource}"
+                        Binding="Sales"
+                        BindingName="Type"
+                        MaxDepth="1"
+                        ChildItemsPath="Items" >
+            <c1:C1TreeMap.DataLabel>
+                <c1:DataLabel Content="{}{Type}" Position="Center"/>
+            </c1:C1TreeMap.DataLabel>
+        </c1:C1TreeMap>
+    </Grid>
+</UserControl>

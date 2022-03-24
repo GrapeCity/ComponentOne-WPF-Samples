@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ChartSamples.TrendLineEditor" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.6.2" xmlns:local="clr-namespace:ChartSamples">
+
+    <Grid x:Name="LayoutRoot">
+        <Border>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Margin="0, 4, 4,0" Text="Fit:" VerticalAlignment="Center" />
+                    <ComboBox Margin="4,0" x:Name="cbFit" Width="100" VerticalAlignment="Center" SelectionChanged="cbFit_SelectionChanged" />
+                </StackPanel>
+                <StackPanel x:Name="hOrder" Orientation="Horizontal">
+                    <TextBlock Margin="4,0" Text="Order:" VerticalAlignment="Center" />
+                    <c1:C1NumericBox Margin="4,0" x:Name="nbOrder" VerticalAlignment="Center" Width="50" Minimum="2" Maximum="10" Value="2" ValueChanged="nbOrder_ValueChanged" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

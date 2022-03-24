@@ -1,0 +1,23 @@
+﻿<Window x:Class="TutorialsWPF.CustomColumns"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CustomColumns" Height="545" Width="943" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:my="clr-namespace:TutorialsWPF">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+      
+        <!-- The EntityViewSource in this C1DataSource is a used as a base for a live view with custom fields defined in code. -->
+        <c1:C1DataSource Name="c1DataSource1" ContextType="my:NORTHWNDEntities">
+            <c1:EntityViewSource EntitySetName="Products" />
+        </c1:C1DataSource>
+        
+        <c1:C1FlexGrid Grid.Row="0" AutoGenerateColumns="True" Margin="10,10,0,0" Name="dataGrid1" />
+        
+        <!-- A button that adds a new product. -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Width="70" Margin="0,10,5,5" Click="addItem">Add</Button>
+        </StackPanel>
+    </Grid>
+</Window>

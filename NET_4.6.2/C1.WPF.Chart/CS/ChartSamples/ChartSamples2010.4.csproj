@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B09AAE5-73DB-4284-829D-95734E7528CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChartSamples</RootNamespace>
+    <AssemblyName>ChartSamples.4</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+<FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;CLR40</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CLR40</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+    </Reference>
+    <Reference Include="PresentationFramework">
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+    </Reference>
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3D\Elevation.xaml.cs">
+      <DependentUpon>Elevation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3D\Function3D.xaml.cs">
+      <DependentUpon>Function3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Aggregation\AggregateChart.xaml.cs">
+      <DependentUpon>AggregateChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\MovAverage.xaml.cs">
+      <DependentUpon>MovAverage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\MovingAverageEditor.xaml.cs">
+      <DependentUpon>MovingAverageEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Parametric.xaml.cs">
+      <DependentUpon>Parametric.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\TrendLineEditor.xaml.cs">
+      <DependentUpon>TrendLineEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\TrendLines.xaml.cs">
+      <DependentUpon>TrendLines.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Aggregation\AggregateDateAxis.xaml.cs">
+      <DependentUpon>AggregateDateAxis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Aggregation\AggregateCategoryAxis.xaml.cs">
+      <DependentUpon>AggregateCategoryAxis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Aggregation\AggregateRange.xaml.cs">
+      <DependentUpon>AggregateRange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Appearance\Animation.xaml.cs">
+      <DependentUpon>Animation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Appearance\Bubble.xaml.cs">
+      <DependentUpon>Bubble.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Appearance\LoadAnimation.xaml.cs">
+      <DependentUpon>LoadAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Appearance\StackedPie.xaml.cs">
+      <DependentUpon>StackedPie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Axes\AxisOrigin.xaml.cs">
+      <DependentUpon>AxisOrigin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Axes\AxisTicks.xaml.cs">
+      <DependentUpon>AxisTicks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Axes\CustomLabels.xaml.cs">
+      <DependentUpon>CustomLabels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Axes\DependentAxes.xaml.cs">
+      <DependentUpon>DependentAxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Axes\LogAxes.xaml.cs">
+      <DependentUpon>LogAxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Axes\TickEditor.xaml.cs">
+      <DependentUpon>TickEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basics\ImageExport.xaml.cs">
+      <DependentUpon>ImageExport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basics\Labels.xaml.cs">
+      <DependentUpon>Labels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basics\Radar.xaml.cs">
+      <DependentUpon>Radar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Appearance\ChartThemes.xaml.cs">
+      <DependentUpon>ChartThemes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basics\RangeBarChart.xaml.cs">
+      <DependentUpon>RangeBarChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Combination\ComplexChart.xaml.cs">
+      <DependentUpon>ComplexChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Combination\FinancialChart.xaml.cs">
+      <DependentUpon>FinancialChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Combination\PlotAreasHorizontal.xaml.cs">
+      <DependentUpon>PlotAreasHorizontal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interaction\DragDrop.xaml.cs">
+      <DependentUpon>DragDrop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interaction\Markers.xaml.cs">
+      <DependentUpon>Markers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interaction\MouseMarker.xaml.cs">
+      <DependentUpon>MouseMarker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interaction\Selection.xaml.cs">
+      <DependentUpon>Selection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interaction\SimpleMarker.xaml.cs">
+      <DependentUpon>SimpleMarker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Data.cs" />
+    <Compile Include="Basics\Gallery.xaml.cs">
+      <DependentUpon>Gallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interaction\InteractiveChart.xaml.cs">
+      <DependentUpon>InteractiveChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Axes\MultipleAxes.xaml.cs">
+      <DependentUpon>MultipleAxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Performance\Dynamic.xaml.cs">
+      <DependentUpon>Dynamic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Performance\LargeData.xaml.cs">
+      <DependentUpon>LargeData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Appearance\Scatter.xaml.cs">
+      <DependentUpon>Scatter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AnimationHelper.cs" />
+    <Compile Include="Tools\Product.cs" />
+    <Compile Include="Tools\SampleData.cs" />
+    <Compile Include="Tools\WeatherData.cs" />
+    <Compile Include="Interaction\ZoomChartControl.xaml.cs">
+      <DependentUpon>ZoomChartControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="3D\Elevation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="3D\Function3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Aggregation\AggregateDateAxis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Aggregation\AggregateCategoryAxis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Aggregation\AggregateRange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Appearance\LoadAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Appearance\StackedPie.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Appearance\ChartThemes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Basics\ImageExport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Basics\RangeBarChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Combination\FinancialChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Combination\PlotAreasHorizontal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interaction\DragDrop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interaction\Markers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interaction\MouseMarker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interaction\SimpleMarker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Axes\MultipleAxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Aggregation\AggregateChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Advanced\MovAverage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Advanced\MovingAverageEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Advanced\Parametric.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Advanced\TrendLineEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Advanced\TrendLines.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Appearance\Animation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Appearance\Bubble.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Axes\AxisOrigin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Axes\AxisTicks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Axes\CustomLabels.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Axes\DependentAxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Axes\LogAxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Axes\TickEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Basics\Labels.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Basics\Radar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Combination\ComplexChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Basics\Gallery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interaction\InteractiveChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interaction\Selection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Performance\Dynamic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Performance\LargeData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Appearance\Scatter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interaction\ZoomChartControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Resources\weather.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\flower_blue.png" />
+    <Resource Include="Resources\flower_red.png" />
+    <Resource Include="Resources\flower_white.png" />
+    <Resource Include="Resources\flower_yellow.png" />
+    <Resource Include="Resources\view_1_1.png" />
+    <Resource Include="Resources\zoom_in.png" />
+    <Resource Include="Resources\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\weatherYear.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="C1.WPF.C1Chart.Extended.4.6.2" />
+    <Reference Include="C1.WPF.C1Chart3D.4.6.2" />
+    <Reference Include="C1.WPF.C1Chart.4.6.2" />
+    <Reference Include="C1.WPF.DX.4.6.2" />
+    <Reference Include="C1.WPF.Extended.4.6.2" />
+    <Reference Include="C1.WPF.FlexGrid.4.6.2" />
+    <Reference Include="C1.WPF.4.6.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\browsers.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\elevation.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <C1_MSBuildToolsVersion>v4.0</C1_MSBuildToolsVersion>
+    <C1_MSBuildToolsVersion Condition="$(VisualStudioVersion) != '10.0' And $(VisualStudioVersion) != '11.0'">v12.0</C1_MSBuildToolsVersion>
+  </PropertyGroup>
+</Project>

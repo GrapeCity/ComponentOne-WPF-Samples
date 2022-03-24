@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ChartSamples.MovAverage" mc:Ignorable="d" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1chart="clr-namespace:C1.WPF.C1Chart;assembly=C1.WPF.C1Chart.4.6.2" xmlns:samples="clr-namespace:ChartSamples" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <UserControl.Resources>
+        <Style TargetType="c1chart:C1Chart">
+			<Setter Property="Foreground" Value="#666666" />
+			<Setter Property="CustomPalette">
+				<Setter.Value>
+					<ResourceDictionary>
+						<SolidColorBrush x:Key="0" Color="#16ABA9" />
+						<SolidColorBrush x:Key="1" Color="#EB7A2A" />
+						<SolidColorBrush x:Key="2" Color="#F2CA04" />
+						<SolidColorBrush x:Key="3" Color="#DC5B20" />
+						<SolidColorBrush x:Key="4" Color="#8EBC00" />
+						<SolidColorBrush x:Key="5" Color="#25A0DA" />
+						<SolidColorBrush x:Key="6" Color="#25A0DA" />
+						<SolidColorBrush x:Key="7" Color="#309B46" />
+						<SolidColorBrush x:Key="8" Color="#24C6D2" />
+						<SolidColorBrush x:Key="9" Color="#8A8065" />
+					</ResourceDictionary>
+				</Setter.Value>
+			</Setter>	       	
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 0 10">
+                <TextBlock Text="1st" VerticalAlignment="Center" Margin="0,0,2,0" />
+                <samples:MovingAverageEditor Margin="2,0" x:Name="maEditor1" VerticalAlignment="Center" />
+                <TextBlock Text="2nd" VerticalAlignment="Center" Margin="10,0,2,0" />
+                <samples:MovingAverageEditor Margin="2,0" x:Name="maEditor2" VerticalAlignment="Center" />
+            </StackPanel>
+        </Border>
+
+        <c1chart:C1Chart x:Name="chart" Grid.Row="1">
+            <c1chart:C1ChartLegend DockPanel.Dock="Bottom" />
+        </c1chart:C1Chart>
+
+    </Grid>
+</UserControl>

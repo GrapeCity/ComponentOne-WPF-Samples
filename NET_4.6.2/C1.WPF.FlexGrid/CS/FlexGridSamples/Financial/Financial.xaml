@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="MainTestApplication.Financial"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MainTestApplication"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid Background="White">
+        <Grid.Resources>
+            <Style x:Key="excelBlue" TargetType="c1:C1FlexGrid">
+                <Setter Property="BorderBrush" Value="#FFA3AEB9"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="GridLinesVisibility" Value="All"/>
+                <Setter Property="ShowMarquee" Value="True"/>
+                <Setter Property="RowBackground" Value="Transparent"/>
+                <Setter Property="AlternatingRowBackground" Value="Transparent"/>
+                <Setter Property="CursorBackground" Value="Transparent"/>
+                <Setter Property="EditorBackground" Value="Transparent"/>
+                <Setter Property="TopLeftCellBackground" Value="#FFA9C4E9"/>
+                <Setter Property="RowHeaderBackground" Value="#FFE4ECF7"/>
+                <Setter Property="RowHeaderSelectedBackground" Value="#FFFFD58D"/>
+                <Setter Property="GridLinesBrush" Value="#FFD0D7E5"/>
+                <Setter Property="HeaderGridLinesBrush" Value="#FF9EB6CE"/>
+                <Setter Property="SelectionBackground" Value="#FFEAECF5"/>
+                <Setter Property="ColumnHeaderSelectedBackground">
+                    <Setter.Value>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF8D79B" Offset="0"/>
+                            <GradientStop Color="#FFF1C263" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ColumnHeaderBackground">
+                    <Setter.Value>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF6FAFB" Offset="0"/>
+                            <GradientStop Color="#FFD5DDEA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Width="200" Margin="10,0,1,0">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Allow Freezing:" VerticalAlignment="Center" Width="95" Margin="0,0,5,0" />
+                <ComboBox x:Name="_cmbAllowFreezing" SelectedIndex="3" Width="90" VerticalAlignment="Center" SelectionChanged="_cmbAllowFreezing_SelectionChanged" >
+                    <ComboBoxItem Content="None" />
+                    <ComboBoxItem Content="Rows" />
+                    <ComboBoxItem Content="Columns" />
+                    <ComboBoxItem Content="Both" />
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Custom Cells:" VerticalAlignment="Center" Width="95" Margin="0,0,5,0" />
+                <CheckBox x:Name="_chkOwnerDrawFinancial" IsChecked="False" VerticalAlignment="Center" Click="_chkOwnerDrawFinancial_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Auto Update:" VerticalAlignment="Center" Width="95" Margin="0,0,5,0" />
+                <CheckBox x:Name="_chkAutoUpdate" IsChecked="True" VerticalAlignment="Center" Click="_chkAutoUpdate_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Update Interval:" VerticalAlignment="Center" Width="95" Margin="0,0,5,0"/>
+                <ComboBox x:Name="_cmbUpdateInterval" SelectedIndex="0" Width="90" VerticalAlignment="Center" SelectionChanged="_cmbUpdateInterval_SelectionChanged">
+                    <ComboBoxItem Content="1000 ms" />
+                    <ComboBoxItem Content="500 ms" />
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Batch Size: " VerticalAlignment="Center" Width="95" Margin="0,0,5,0" />
+                <ComboBox x:Name="_cmbBatchSize" SelectedIndex="1" Width="90" VerticalAlignment="Center" SelectionChanged="_cmbBatchSize_SelectionChanged" >
+                    <ComboBoxItem Content="500 items" />
+                    <ComboBoxItem Content="100 items" />
+                    <ComboBoxItem Content="10 items" />
+                    <ComboBoxItem Content="1 item" />
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        <c1:C1FlexGrid x:Name="_flexFinancial" 
+			Style="{StaticResource excelBlue}"
+			IsReadOnly="true"
+			MinColumnWidth="10" MaxColumnWidth="300"
+			AutoGenerateColumns="False" Grid.Row="2" HorizontalAlignment="Left">
+            <c1:C1FlexGrid.Columns>
+                <c1:Column Binding="{Binding Symbol}" Width="100" />
+                <c1:Column Binding="{Binding Name}" Width="250" />
+                <c1:Column Binding="{Binding Bid}" Width="150" Format="n2" HorizontalAlignment="Right" />
+                <c1:Column Binding="{Binding Ask}" Width="150" Format="n2" HorizontalAlignment="Right" />
+                <c1:Column Binding="{Binding LastSale}" Width="150" Format="n2" HorizontalAlignment="Right" />
+                <c1:Column Binding="{Binding BidSize}" Width="100" Format="n0" HorizontalAlignment="Right" />
+                <c1:Column Binding="{Binding AskSize}" Width="100" Format="n0" HorizontalAlignment="Right" />
+                <c1:Column Binding="{Binding LastSize}" Width="100" Format="n0" HorizontalAlignment="Right" />
+                <c1:Column Binding="{Binding Volume}" Width="100" Format="n0" HorizontalAlignment="Right" />
+                <c1:Column Binding="{Binding QuoteTime}" Width="100" Format="hh:mm:ss" HorizontalAlignment="Center" />
+                <c1:Column Binding="{Binding TradeTime}" Width="100" Format="hh:mm:ss" HorizontalAlignment="Center" />
+            </c1:C1FlexGrid.Columns>
+        </c1:C1FlexGrid>
+        <Grid Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <local:SearchBox x:Name="_srchCompanies" Width="200" HorizontalAlignment="Right" Grid.Column="0" />
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <TextBlock Text="Financial Info: " VerticalAlignment="Center"/>
+                <TextBlock x:Name="_txtCompanies" Text="Companies" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

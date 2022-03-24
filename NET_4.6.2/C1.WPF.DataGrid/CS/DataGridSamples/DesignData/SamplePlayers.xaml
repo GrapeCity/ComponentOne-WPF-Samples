@@ -1,0 +1,12 @@
+﻿<local:PlayersCollection 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="clr-namespace:DataGridSamples">
+    <local:Player Name="Roger Federer" Birthday="08/08/1981" Birthplace="Basel, Switzerland" Residence="Bottmingen, Switzerland" Height="6'1 (185 cm)" Weight="187 lbs (85 kg)" Plays="Right-handed" TurnedPro="1998" Coach="None" Website="www.rogerfederer.com" Photo="rogerf.jpg"/>
+    <local:Player Name="Rafael Nadal" Birthday="06/03/1986" Birthplace="Manacor, Mallorca, Spain" Residence="Manacor, Mallorca, Spain" Height="6'1 (185 cm) " Weight="188 lbs (85 kg)" Plays=" Left-handed " TurnedPro="2001" Coach="Toni Nadal" Website="www.rafaelnadal.com" Photo="rafaeln.jpg"/>
+    <local:Player Name="Novak Djokovic" Birthday="05/22/1987" Birthplace="Belgrade, Serbia" Residence="Monte Carlo, Monaco" Height="6'2 (188 cm) " Weight="176 lbs (80 kg)" Plays="Right-handed" TurnedPro="2003" Coach="Marian Vajda" Website="www.novak-djokovic.com" Photo="novakd.jpg"/>
+    <local:Player Name="Andy Murray" Birthday="05/15/1987" Birthplace="Dunblane, Scotland " Residence="Dunblane, Scotland" Height="6'3 (190 cm) " Weight="185 lbs (84 kg)" Plays="Right-handed" TurnedPro="2005" Coach="Miles Maclagan" Website="www.andymurray.com" Photo="andym.jpg"/>
+    <local:Player Name="Juan Martin Del Potro" Birthday="09/23/1988" Birthplace="Tandil, Argentina" Residence="Tandil, Argentina" Height="6'6 (198 cm) " Weight="182 lbs (83 kg)" Plays="Right-handed" TurnedPro="2005" Coach="Franco Davin" Website="" Photo="juandp.jpg"/>
+    <local:Player Name="Andy Roddick" Birthday="08/30/1982" Birthplace="Omaha, Nebraska, USA" Residence="Austin, Texas, USA" Height="6'2 (188 cm) " Weight="195 lbs (88 kg)" Plays="Right-handed" TurnedPro="2000" Coach="Larry Stefanki" Website="www.AndyRoddick.com" Photo="andyr.jpg"/>
+    <local:Player Name="Nikolay Davydenko" Birthday="06/02/1981" Birthplace="Severodonezk, Ukraine" Residence=" Volgograd, Russia" Height="5'10 (178 cm)" Weight="154 lbs (70 kg)" Plays="Right-handed" TurnedPro="1999" Coach="Eduard Davydenko" Website="" Photo="nikolayd.jpg"/>
+</local:PlayersCollection>

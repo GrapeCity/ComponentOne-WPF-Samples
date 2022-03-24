@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl mc:Ignorable="d" x:Class="C1_Demo.DemoInputs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="LabelText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Foreground" Value="#FF5a5a5a" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Margin" Value="0 5 0 0" />
+        </Style>
+        <Style x:Key="DataImage" TargetType="Image">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="120" />
+        </Style>
+    </UserControl.Resources>
+    <Border x:Name="LayoutRoot" BorderBrush="#FFCBD2DB" BorderThickness="3" Background="White" Padding="1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Background="White" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border BorderBrush="#FFCBD2DB" BorderThickness="0,0,0,3" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE9ECF0" Offset="0" />
+                            <GradientStop Color="#FFDDE1E7" Offset="0.2" />
+                            <GradientStop Color="#FFCCD3DC" Offset="0.2" />
+                            <GradientStop Color="#FFFAFAFB" Offset="0.647" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Border Grid.Row="1" Margin="0,1,0,0" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE0E4EA" Offset="0" />
+                            <GradientStop Color="White" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Grid x:Name="shirticon" HorizontalAlignment="Right" Margin="10,0,15,0" Width="36" Height="36">
+                    <Path Fill="#FF507494" Stretch="Fill" Stroke="Black" StrokeThickness="0" Margin="0,3,0,5" UseLayoutRounding="False" Data="M31.000008,0.86882716 L30.947176,1.0368316 L31.082758,0.95300084 L37.917007,7.3696976 L33.25,15.912928 L31.000008,14.177939 L31.000008,30.870001 L6.9170074,30.870001 L6.9170074,14.177933 L4.6670074,15.912928 L0,7.3696976 L6.83425,0.95300084 L6.97932,1.0426986 L6.9170074,0.86882716 L13.466552,0.033016779 C14.314708,1.482425 16.066101,3.0001175 18.476849,3.0001173 C20.887596,3.0001175 22.488249,1.582105 23.636662,0.033037119 z" />
+                    <Path Fill="White" Stretch="Fill" Stroke="Black" StrokeThickness="0" Margin="2,5,2,7" UseLayoutRounding="False" Data="M2.1254659,11.5 L5.1143575,17.480196 L8.7603979,14.678911 L8.7493238,33.26915 L29.320787,33.352478 L29.268471,14.480932 L32.882904,17.417238 L35.851341,11.92654 L30.15399,6.4169326 L24.383696,5.8646441 C24.383696,5.8646441 21.54063,9.0938931 18.374149,9.0105629 C15.207668,8.9272327 12.717715,5.9372377 12.717715,5.9372377 L7.419683,6.7183952 z" />
+                    <Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Margin="9,6,9,9" Data="M-1.1120412,0.79596603 C-1.1120412,0.79596603 2.3453286,0.35795632 2.3453286,0.35795632 C2.9796703,1.6296959 5.2009349,3.2886715 8.3715744,3.3710725 C11.543283,3.4535012 13.842772,1.7089937 14.952869,0.19936639 L18.872292,0.65476614 C17.497799,3.044225 16.858858,4.7607598 18,7.2189307 L18,25 L0,25 L0,7.2982264 C0.83915865,4.2849846 -0.039938655,2.801424 -1.1120412,0.79596603 z" UseLayoutRounding="False">
+                        <Path.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFCBEC05" Offset="0" />
+                                <GradientStop Color="#FF5B9200" Offset="1" />
+                            </LinearGradientBrush>
+                        </Path.Fill>
+                    </Path>
+                    <Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="6.716" HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Top" Width="4.735" UseLayoutRounding="False" Data="M7.4993863,8.6012163 L3.9717643,11.652826 L5.6458483,15.318884 L8.5382767,13.189479 C8.5382767,13.189479 9.3232861,11.376676 7.4993863,8.6012163 z">
+                        <Path.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFCBEC05" Offset="0" />
+                                <GradientStop Color="#FF5B9200" Offset="1" />
+                            </LinearGradientBrush>
+                        </Path.Fill>
+                    </Path>
+                    <Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="6.508" Margin="0,7,4,0" VerticalAlignment="Top" UseLayoutRounding="False" Data="M7.5990028,8.551363 L3.921895,12.128575 L5.4465532,15.060637 L8.5382767,12.44417 C8.5382767,12.44417 9.4229021,11.326822 7.5990028,8.551363 z" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="4.832">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1" />
+                                <SkewTransform AngleX="0" AngleY="0" />
+                                <RotateTransform Angle="0" />
+                                <TranslateTransform X="0.19200038909912109" />
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                        <Path.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFCBEC05" Offset="0" />
+                                <GradientStop Color="#FF5B9200" Offset="1" />
+                            </LinearGradientBrush>
+                        </Path.Fill>
+                    </Path>
+                </Grid>
+                <TextBlock x:Name="shirttitle" Margin="15,0,1,0" Text="Shirt Options" TextWrapping="NoWrap" FontFamily="Trebuchet MS" FontSize="20" Foreground="#FF507494" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Grid Grid.Row="1" HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Model:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1ComboBox SelectedItem="{Binding Model,Mode=TwoWay}" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0">
+                                <c1:C1ComboBoxItem Content="Man" />
+                                <c1:C1ComboBoxItem Content="Woman" />
+                                <c1:C1ComboBoxItem Content="Child" />
+                                <c1:C1ComboBoxItem Content="Baby" />
+                            </c1:C1ComboBox>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Size:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1ComboBox SelectedItem="{Binding Size,Mode=TwoWay}" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0">
+                                <c1:C1ComboBoxItem Content="S" />
+                                <c1:C1ComboBoxItem Content="M" />
+                                <c1:C1ComboBoxItem Content="L" />
+                                <c1:C1ComboBoxItem Content="XL" />
+                            </c1:C1ComboBox>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Color:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1ColorPicker SelectedColor="{Binding Color,Mode=TwoWay}" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Add Image:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1FilePicker SelectedFiles="{Binding Image,Mode=TwoWay}" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Image Size:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <Slider Value="{Binding ImageSize,Mode=TwoWay}" Width="150" Height="24" Margin="0,0,46,0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Add Text:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1TextBoxBase Text="{Binding Text,Mode=TwoWay}" TextWrapping="Wrap" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Text Color:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1ColorPicker Width="150" Height="24" SelectedColor="{Binding TextColor,Mode=TwoWay}" Margin="0,0,46,0" CornerRadius="0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Text Size:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <Slider Value="{Binding TextSize,Mode=TwoWay}" Width="150" Height="24" Margin="0,0,46,0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Place:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1DropDownButton x:Name="PlacesDropDown" Width="150" Height="24" Margin="1,1,46,1" CornerRadius="0">
+                                <c1:C1DropDownButton.Header>
+                                    <ContentControl VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
+                                        <TextBlock x:Name="selection" Text="« Pick one »" FontSize="12" Foreground="#FF3B76A2" TextAlignment="left" />
+                                    </ContentControl>
+                                </c1:C1DropDownButton.Header>
+                                <c1:C1TreeView x:Name="treeSelection" Width="150" KeyDown="C1TreeView_KeyDown" ItemClick="C1TreeView_ItemClicked" AllowDragDrop="False">
+                                    <c1:C1TreeViewItem Header="Sleeve">
+                                        <c1:C1TreeViewItem Header="Left" />
+                                        <c1:C1TreeViewItem Header="Right" />
+                                    </c1:C1TreeViewItem>
+                                    <c1:C1TreeViewItem Header="Front">
+                                        <c1:C1TreeViewItem Header="Center" />
+                                        <c1:C1TreeViewItem Header="Top Right" />
+                                        <c1:C1TreeViewItem Header="Top Left" />
+                                    </c1:C1TreeViewItem>
+                                    <c1:C1TreeViewItem Header="Back">
+                                        <c1:C1TreeViewItem Header="Center" />
+                                        <c1:C1TreeViewItem Header="Top Right" />
+                                        <c1:C1TreeViewItem Header="Top Left" />
+                                    </c1:C1TreeViewItem>
+                                </c1:C1TreeView>
+                            </c1:C1DropDownButton>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5" Height="20">
+                            <TextBlock Text="Quality Printing:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="16" VerticalAlignment="Center" Width="130" />
+                            <c1:C1RangeSlider Width="150" LowerValue="{Binding LowQuality,Mode=TwoWay}" UpperValue="{Binding HighQuality,Mode=TwoWay}" Margin="0,0,46,0" />
+                        </StackPanel>
+                </Grid>
+            </Grid>
+            <Grid x:Name="info" Background="White" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border BorderBrush="#FFCBD2DB" BorderThickness="0,0,0,3" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE9ECF0" Offset="0" />
+                            <GradientStop Color="#FFDDE1E7" Offset="0.2" />
+                            <GradientStop Color="#FFCCD3DC" Offset="0.2" />
+                            <GradientStop Color="#FFFAFAFB" Offset="0.647" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Grid x:Name="infoicon" HorizontalAlignment="Right" Margin="10,0,15,0" Width="36" Height="38">
+                    <Rectangle Fill="#FF507494" Stroke="Black" StrokeThickness="0" Margin="0,4,0,7" />
+                    <Rectangle Fill="White" Stroke="Black" StrokeThickness="0" Margin="2,6,2,9" />
+                    <Rectangle Fill="#FFCFDFEE" Stroke="Black" StrokeThickness="0" Margin="3,7,3,10" />
+                    <Ellipse HorizontalAlignment="Left" Margin="6,8,0,19" Width="12" Height="12" Fill="#FF507494" />
+                    <Path Stretch="Fill" Margin="4,0,16,10" UseLayoutRounding="False" Data="M32,18.5 C32,18.5 0,18.5 0,18.5 C0,8.282732 -5.2903476,0 16,0 C37.388386,0 32,8.282732 32,18.5 z" Height="10" VerticalAlignment="Bottom" Fill="#FF507494" d:LayoutOverrides="VerticalAlignment" />
+                    <Ellipse Stroke="White" Margin="8,10,0,20" HorizontalAlignment="Left" Width="8">
+                        <Ellipse.Fill>
+                            <LinearGradientBrush EndPoint="0.7,0.528" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF4E3B6" Offset="0" />
+                                <GradientStop Color="#FFE6C29F" Offset="1" />
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Path Stretch="Fill" Stroke="White" Margin="6,0,0,12" UseLayoutRounding="False" Data="M32,18.5 C32,18.5 0,18.5 0,18.5 C0,8.282732 -5.2903476,0 16,0 C37.388386,0 32,8.282732 32,18.5 z" HorizontalAlignment="Left" Width="12" Height="6" VerticalAlignment="Bottom" d:LayoutOverrides="VerticalAlignment">
+                        <Path.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFCBEC05" Offset="0" />
+                                <GradientStop Color="#FF5B9200" Offset="1" />
+                            </LinearGradientBrush>
+                        </Path.Fill>
+                    </Path>
+                    <Rectangle Fill="White" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Right" Margin="0,12,5,14" Width="10" />
+                    <Rectangle Stroke="Black" StrokeThickness="0" Height="2" HorizontalAlignment="Right" Margin="0,13,6,0" VerticalAlignment="Top" Width="8" Fill="#FF507494" />
+                    <Rectangle Fill="#FF507494" Stroke="Black" StrokeThickness="0" Height="2" HorizontalAlignment="Right" Margin="0,17,6,0" VerticalAlignment="Top" Width="8" />
+                    <Rectangle Fill="#FF507494" Stroke="Black" StrokeThickness="0" Height="2" HorizontalAlignment="Right" Margin="0,0,6,15" VerticalAlignment="Bottom" Width="8" />
+                </Grid>
+                <TextBlock x:Name="infotitle" Margin="15,0,1,0" Text="Your Info" TextWrapping="NoWrap" FontFamily="Trebuchet MS" FontSize="20" Foreground="#FF507494" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Border Grid.Row="1" Margin="0,1,0,0" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE0E4EA" Offset="0" />
+                            <GradientStop Color="White" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                    <Grid Grid.Row="1" HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Name:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1TextBoxBase Text="{Binding Name,Mode=TwoWay}" TextWrapping="Wrap" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Address:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1TextBoxBase Text="{Binding Address,Mode=TwoWay}" TextWrapping="Wrap" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Country:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1ComboBox SelectedItem="{Binding Country,Mode=TwoWay}" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0">
+                                <c1:C1ComboBoxItem Height="24" Content="Argentina" />
+                                <c1:C1ComboBoxItem Height="24" Content="Australia" />
+                                <c1:C1ComboBoxItem Height="24" Content="Brazil" />
+                                <c1:C1ComboBoxItem Height="24" Content="Canada" />
+                                <c1:C1ComboBoxItem Height="24" Content="China" />
+                                <c1:C1ComboBoxItem Height="24" Content="England" />
+                                <c1:C1ComboBoxItem Height="24" Content="Finland" />
+                                <c1:C1ComboBoxItem Height="24" Content="France" />
+                                <c1:C1ComboBoxItem Height="24" Content="Germany" />
+                                <c1:C1ComboBoxItem Height="24" Content="India" />
+                                <c1:C1ComboBoxItem Height="24" Content="Israel" />
+                                <c1:C1ComboBoxItem Height="24" Content="Ireland" />
+                                <c1:C1ComboBoxItem Height="24" Content="Italy" />
+                                <c1:C1ComboBoxItem Height="24" Content="Japan" />
+                                <c1:C1ComboBoxItem Height="24" Content="Mexico" />
+                                <c1:C1ComboBoxItem Height="24" Content="Norway" />
+                                <c1:C1ComboBoxItem Height="24" Content="New Zealand" />
+                                <c1:C1ComboBoxItem Height="24" Content="Russia" />
+                                <c1:C1ComboBoxItem Height="24" Content="Singapore" />
+                                <c1:C1ComboBoxItem Height="24" Content="South Korea" />
+                                <c1:C1ComboBoxItem Height="24" Content="Spain" />
+                                <c1:C1ComboBoxItem Height="24" Content="Sweeden" />
+                                <c1:C1ComboBoxItem Height="24" Content="United States" />
+                                <c1:C1ComboBoxItem Height="24" Content="Uruguay" />
+                            </c1:C1ComboBox>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Phone Number:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1MaskedTextBox Text="{Binding Phone,Mode=TwoWay}" TextWrapping="Wrap" Mask="(###) 999-9999" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0" />
+                        </StackPanel>
+                    </Grid>
+            </Grid>
+            <Grid x:Name="payment" Background="White" Grid.RowSpan="2" Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border BorderBrush="#FFCBD2DB" BorderThickness="0,1,0,3" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE9ECF0" Offset="0" />
+                            <GradientStop Color="#FFDDE1E7" Offset="0.2" />
+                            <GradientStop Color="#FFCCD3DC" Offset="0.2" />
+                            <GradientStop Color="#FFFAFAFB" Offset="0.647" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Grid x:Name="payicon" HorizontalAlignment="Right" Margin="10,0,15,0" Width="36" Height="36">
+                	<Path Data="M27,22 C28.656857,22 30,23.343145 30,25 C30,26.656855 28.656857,28 27,28 C25.343145,28 24,26.656855 24,25 C24,23.343145 25.343145,22 27,22 z M15,22 C16.656857,22 18,23.343145 18,25 C18,26.656855 16.656857,28 15,28 C13.343145,28 12,26.656855 12,25 C12,23.343145 13.343145,22 15,22 z M0.94736856,0.00036644656 L6.6315789,0.00036644656 C7.3865132,-0.014216999 7.8453951,0.40869179 8.0104389,0.87380636 L9.1170998,4.6669459 L35.111843,4.6669459 C35.60236,4.6669459 36,5.1126637 36,5.6624832 C36,5.6624832 30.671053,19.6 30.671053,19.6 C30.671053,19.6 10.687502,19.6 10.687502,19.6 C10.687502,19.6 5.6153293,2.8003137 5.6153288,2.8003137 L0.94736856,2.8003137 C0.42415178,2.8003137 0,2.3824537 0,1.8669983 L0,0.93368238 C0,0.41822633 0.42415178,0.00036606265 0.94736856,0.00036644656 z" Fill="#FF507494" Margin="0,3,0,5" Stretch="Fill" Stroke="Black" StrokeThickness="0" UseLayoutRounding="False" />
+                	<Path Data="M17.257507,16.871002 C17.809792,16.871002 18.257507,17.318718 18.257507,17.871002 C18.257507,18.423286 17.809792,18.871002 17.257507,18.871002 C16.705223,18.871002 16.257507,18.423286 16.257507,17.871002 C16.257507,17.318718 16.705223,16.871002 17.257507,16.871002 z M5.2575073,16.871002 C5.8097925,16.871002 6.2575073,17.318718 6.2575073,17.871002 C6.2575073,18.423286 5.8097925,18.871002 5.2575073,18.871002 C4.7052221,18.871002 4.2575073,18.423286 4.2575073,17.871002 C4.2575073,17.318718 4.7052221,16.871002 5.2575073,16.871002 z M0,0 L22.999998,0 C22.999998,0 19.023422,10.065001 19.023422,10.065001 C19.023422,10.065001 3.1443186,10.065001 3.1443186,10.065001 C3.1443186,10.065001 0,0 0,0 z" Fill="White" Margin="9.742,10,3.258,7" RenderTransformOrigin="0.748152538371244,0.919347155022721" Stretch="Fill" Stroke="Black" StrokeThickness="0" UseLayoutRounding="False" />
+                	<Path Stretch="Fill" Stroke="Black" StrokeThickness="0" Margin="12,12,6,17" UseLayoutRounding="False" Data="M13.57537,14.941284 C13.57537,14.941284 31.79311,14.899822 31.79311,14.899822 C31.79311,14.899822 29.085524,20.464838 29.085524,20.464838 C29.085524,20.464838 15.698898,20.487696 15.698898,20.487696 C15.698898,20.487696 13.57537,14.941284 13.57537,14.941284 z">
+                		<Path.Fill>
+                			<LinearGradientBrush EndPoint="0.406,0.859" StartPoint="0.209,0.075">
+                				<GradientStop Color="#FF89B9E7" />
+                				<GradientStop Color="#FF4775A9" Offset="1" />
+                			</LinearGradientBrush>
+                		</Path.Fill>
+                	</Path>
+                </Grid>
+                <TextBlock x:Name="paytitle" Margin="15,0,1,0" Text="Payment" TextWrapping="NoWrap" FontFamily="Trebuchet MS" FontSize="20" Foreground="#FF507494" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Border Grid.Row="1" Margin="0,1,0,0" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE0E4EA" Offset="0" />
+                            <GradientStop Color="White" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Grid Grid.Row="1" HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                            <RowDefinition MinHeight="30" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Delivery Terms:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1DateTimePicker DateTime="{Binding Delivery,Mode=TwoWay}" Height="24" Width="196" TimeFormat="ShortTime" AllowNull="True" Margin="0" CornerRadius="0" DateWatermark="Enter date" TimeWatermark="Enter time" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Payment Terms:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1NumericBox Value="{Binding Payment,Mode=TwoWay}" Width="119" Height="24" CornerRadius="0" />
+                            <TextBlock Text="days" TextWrapping="Wrap" VerticalAlignment="Center" Height="19" Margin="5,0,46,0" Width="26" HorizontalAlignment="Left" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Credit Card Number:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1MaskedTextBox Text="{Binding CreditCard,Mode=TwoWay}" TextWrapping="Wrap" Mask="999-999-999" Width="150" Height="24" Margin="0,0,46,0" CornerRadius="0" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,0">
+                            <TextBlock Text="Total Amount:" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,0,10,0" TextAlignment="Right" Height="19" VerticalAlignment="Center" Width="130" />
+                            <c1:C1TextBoxBase Text="{Binding Total,Mode=TwoWay}" TextWrapping="Wrap" Width="119" Height="24" HorizontalContentAlignment="Right" CornerRadius="0" />
+                            <TextBlock Text="USD" TextWrapping="Wrap" VerticalAlignment="Center" Height="19" Margin="5,0,46,0" Width="26" HorizontalAlignment="Left" />
+                        </StackPanel>
+                </Grid>
+            </Grid>
+            <Rectangle HorizontalAlignment="Left" Margin="0" Width="2" Grid.Column="1" Grid.RowSpan="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="-0,0.5" StartPoint="1,0.5">
+                        <GradientStop Color="#FFA6B4C9" Offset="0.5" />
+                        <GradientStop Color="#FFF8F9FA" Offset="0.5" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+    </Border>
+</UserControl>

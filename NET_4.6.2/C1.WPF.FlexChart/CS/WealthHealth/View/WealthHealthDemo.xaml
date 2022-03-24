@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="WealthHealth.WealthHealthDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WealthHealth"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="Root">
+        <Grid.DataContext>
+            <local:WealthHealthViewModel />
+        </Grid.DataContext>
+        <Grid.Resources>
+            <local:IntToStringConverter x:Key="ISConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="LightGray" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Image Source="/WealthHealth.4;component/Resources/C1.png" Width="80" Height="80"/>
+                <Grid Margin="20 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="The Wealth &amp; Health of Nations" FontWeight="Bold" FontSize="25" VerticalAlignment="Bottom" />
+                    <TextBlock Text="A dynamic chart based on Grapminder's Wealth &amp; Health of Nations." Grid.Row="1" />
+                </Grid>
+            </StackPanel>
+        </Border>
+        <Grid Grid.Row="1" Margin="20 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="300" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="TextWrapping" Value="Wrap" />
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock Text="This chart shows the evolution of income, life expectancy, and population in 178 nations over a period of 210 years. Slide the gauge or press the play button and enjoy the show."/>
+                <TextBlock x:Name="tbTip" Text="Try clicking a bubble to track a country's evolution through the animation" />
+                <TextBlock x:Name="tbTrack" Visibility="Collapsed">
+                    <TextBlock.Inlines>
+                        <Run Text="Now tracking " />
+                        <Run Text="{Binding TrackContent}" FontWeight="Bold" FontSize="15" />
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="20 0" Cursor="Hand">
+                <Slider Width="200" Minimum="1800" Maximum="2009" Interval="1" Value="{Binding Year, Converter={StaticResource ISConverter}}"/>
+                <ToggleButton Width="30" Height="30" Content="{Binding Content}" IsChecked="True" FontFamily="Segoe UI Symbol" Command="{Binding PlayAnimation}" Margin="10 0" />
+            </StackPanel>
+        </Grid>
+        <c1:C1FlexChart x:Name="flexChart" RenderMode="Direct2D" ToolTipContent="{}{Name}&#x000A;{YearPopulation:#,##0,,} million people" ItemsSource="{Binding Countries}" ChartType="Bubble" LegendPosition="None" BindingX="YearIncome" Grid.Row="2" Panel.ZIndex="1" SelectionMode="Point" MouseDown="flexChart_MouseDown">
+            <c1:Series Binding="YearLifeExpectancy,YearPopulation" SymbolRendering="Series_SymbolRendering" />
+            <c1:C1FlexChart.AxisX>
+                <c1:Axis Title="income per captia (inflation-adjusted US dollars)" MajorGrid="False" AxisLine="True" Min="300" Max="100000" LogBase="10" />
+            </c1:C1FlexChart.AxisX>
+            <c1:C1FlexChart.AxisY>
+                <c1:Axis Title="life expectancy (years)" MajorGrid="False" AxisLine="True" Min="20" Max="85" MajorUnit="10" />
+            </c1:C1FlexChart.AxisY>
+            <c1:C1FlexChart.Options>
+                <c1:ChartOptions BubbleMinSize="5" BubbleMaxSize="100" />
+            </c1:C1FlexChart.Options>
+            <c1:C1FlexChart.SelectionStyle>
+                <c1:ChartStyle Stroke="DarkOrange" StrokeThickness="2" />
+            </c1:C1FlexChart.SelectionStyle>
+        </c1:C1FlexChart>
+        <local:Watermarker Year="{Binding Year}" ParentChart="{Binding ElementName=flexChart}" Grid.Row="2" Panel.ZIndex="0" Background="Transparent"/>
+    </Grid>
+</UserControl>

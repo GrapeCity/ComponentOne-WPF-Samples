@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellCheckerSamples.4", "SpellCheckerSamples\SpellCheckerSamples.4.csproj", "{360E3F55-9F4D-4339-88A0-9275EC58463A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A21D58FB-053A-48C4-89EB-2D2E69BE5929}"
+	ProjectSection(SolutionItems) = preProject
+		readme-guids.txt = readme-guids.txt
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCDebug|Mixed Platforms = GCDebug|Mixed Platforms
+		GCDebug|x86 = GCDebug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|Mixed Platforms = GCRelease|Mixed Platforms
+		GCRelease|x86 = GCRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Debug|x86.ActiveCfg = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Debug|x86.Build.0 = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCDebug|Any CPU.ActiveCfg = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCDebug|Mixed Platforms.ActiveCfg = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCDebug|Mixed Platforms.Build.0 = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCDebug|x86.ActiveCfg = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCDebug|x86.Build.0 = Debug|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCRelease|Any CPU.ActiveCfg = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCRelease|Mixed Platforms.ActiveCfg = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCRelease|Mixed Platforms.Build.0 = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCRelease|x86.ActiveCfg = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.GCRelease|x86.Build.0 = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Release|Any CPU.ActiveCfg = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Release|Mixed Platforms.Build.0 = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Release|x86.ActiveCfg = Release|x86
+		{360E3F55-9F4D-4339-88A0-9275EC58463A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

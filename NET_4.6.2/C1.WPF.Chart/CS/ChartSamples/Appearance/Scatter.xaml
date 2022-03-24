@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ChartSamples.Scatter" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1c="clr-namespace:C1.WPF.C1Chart;assembly=C1.WPF.C1Chart.4.6.2" xmlns:local="clr-namespace:ChartSamples">
+    <UserControl.Resources>
+        <Style x:Key="sstyle" TargetType="{x:Type c1c:PlotElement}">
+            <Setter Property="Opacity" Value="1" />
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+                        <TranslateTransform />
+                        <RotateTransform />
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+            <EventSetter Event="Loaded" Handler="Symbol_Loaded" />
+        </Style>
+        <Style x:Key="cstyle" TargetType="{x:Type c1c:PlotElement}">
+            <Setter Property="StrokeThickness" Value="2" />
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0" ScaleY="0" />
+                        <TranslateTransform />
+                        <RotateTransform />
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="c1c:PlotElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[2].Angle" To="720" Duration="0:0:5" DecelerationRatio="1" />
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[0].ScaleX" To="1" Duration="0:0:5" DecelerationRatio="1" />
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Children[0].ScaleY" To="1" Duration="0:0:5" DecelerationRatio="1" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <Border Grid.Row="0" Margin="0,0,0,10">
+        <StackPanel Margin="10" Orientation="Horizontal">
+          <Button Name="btnNew" Content="NewData" Margin="0 0 10 0" Click="btnNew_Click" Height="20" Padding="4,0" />
+          <Button Name="btnReplay" Content="Replay" Margin="10 0" Click="btnReplay_Click" Height="20" Padding="4,0" />
+          <Label Content="Functions:" Foreground="{DynamicResource text_Brush}" VerticalAlignment="Center" Height="20" Padding="4,0,0,0" />
+          <ComboBox Name="set" Margin="10 0" SelectionChanged="set_SelectionChanged" Height="20" Padding="4,1,4,0">
+            <ComboBoxItem Content="Trigonometric" IsSelected="True" />
+            <ComboBoxItem Content="Parametric" />
+          </ComboBox>
+          <CheckBox Name="cbAxes" Foreground="{DynamicResource text_Brush}" VerticalAlignment="Center" Content="Show axes" Margin="10 0" Click="cbAxes_Click" Height="20" Padding="4,0,0,0" />
+        </StackPanel>
+      </Border>
+      <Border Grid.Row="1">
+            <c1c:C1Chart Grid.Column="1" Margin="0" Name="c1Chart1" ChartType="LineSymbolsSmoothed"><!--Theme="{DynamicResource {ComponentResourceKey TypeInTargetAssembly=c1c:C1Chart,
+                ResourceId=MediaPlayer}}"-->
+            </c1c:C1Chart>
+        </Border>
+    </Grid>
+</UserControl>

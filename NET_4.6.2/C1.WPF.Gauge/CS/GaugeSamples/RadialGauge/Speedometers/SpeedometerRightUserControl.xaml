@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="GaugeSamples.SpeedometerRightUserControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <c1:C1RadialGauge x:Name="gauge" Value="40" PointerOrigin=".15,.85" PointerLength="0.825" StartAngle="90" SweepAngle="-90" Radius="1.5" Minimum="0" Maximum="150" CoverVisibility="Collapsed" Background="Transparent" BorderThickness="0" Margin="20" PointerFill="#FBB258" >
+        <c1:C1RadialGauge.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" AutoReverse="True" BeginTime="00:00:00" Storyboard.TargetName="gauge" Storyboard.TargetProperty="(c1:C1Gauge.Value)">
+                            <SplineDoubleKeyFrame KeyTime="00:00:03.00" Value="150" KeySpline="0,0.5,0.5,1" />
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </c1:C1RadialGauge.Triggers>
+        <c1:C1RadialGauge.FaceTemplate>
+            <DataTemplate>
+                <Grid RenderTransformOrigin="0.5, 0.5">
+                    <Grid.RenderTransform>
+                        <RotateTransform Angle="90" />
+                    </Grid.RenderTransform>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.03*" />
+                        <RowDefinition Height="0.02*" />
+                        <RowDefinition Height="0.848*" />
+                        <RowDefinition Height="0.072*" />
+                        <RowDefinition Height="0.03*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.032*" />
+                        <ColumnDefinition Width="0.018*" />
+                        <ColumnDefinition Width="0.867*" />
+                        <ColumnDefinition Width="0.05*" />
+                        <ColumnDefinition Width="0.033*" />
+                    </Grid.ColumnDefinitions>
+                    <Path Stretch="Uniform" Stroke="#FF8D8D8D" Data="M371.66751,0.5 C398.54837,98.324493 406.9313,186.78342 391.16183,284.59363 C405.31677,305.35202 415.47299,351.00616 386.32697,380.46704 C359.79633,407.28427 319.9631,403.50571 292.96335,390.98608 C195.27484,406.7576 98.225914,399.52081 0.52357554,371.66711 C0.50038487,371.35764 0.50000364,371.0484 0.5,370.73914 C0.50000364,166.55817 166.59108,0.97830737 371.66751,0.5 z" Grid.ColumnSpan="5" Grid.RowSpan="5">
+                        <Path.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFA0A0A0" />
+                                <GradientStop Color="#FFFFFFFF" Offset="0.799" />
+                                <GradientStop Color="#FFC4C4C4" Offset="1" />
+                            </LinearGradientBrush>
+                        </Path.Fill>
+                    </Path>
+                    <Path Stretch="Uniform" Stroke="#FF8D8D8D" Data="M371.66751,-0.88071233 C398.54837,96.943787 404.33206,192.68999 388.56259,290.50061 C400.33197,307.50589 414.90622,349.21121 388.24902,378.96298 C361.45685,408.86542 315.66614,395.47595 298.66266,388.61816 C200.97397,404.38968 95.764549,398.90549 -1.9378005,371.05179 C-1.9609913,370.74231 -2.261415,370.75574 -2.2614188,370.44647 C-1.091743,272.38522 39.302441,180.92236 105.74311,113.2928 C176.39317,41.378529 275.98953,-3.5868359 371.66751,-0.88071233 z" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3">
+                        <Path.Fill>
+                            <SolidColorBrush Color="#F5F5F5"/>
+                        </Path.Fill>
+                    </Path>
+                    <Path Data="M339.83496,400.3598 C338.22495,384.3598 350.2038,296.3598 414.20099,232.35982 C463.99948,176 538.63409,153.43927 587.95782,153.43927 C593.4881,177.30829 597.28088,195.27232 598.47644,208 C598.47644,208 487.99896,191.99997 416.00192,264 C347.8858,332.11899 339.83496,400.3598 339.83496,400.3598 z" Fill="#88BDE6" Stretch="Uniform" Grid.Column="2" Grid.Row="2" />
+                </Grid>
+            </DataTemplate>
+        </c1:C1RadialGauge.FaceTemplate>
+        <c1:C1GaugeMark Interval="30" />
+        <c1:C1GaugeLabel Interval="30" Location="0.9" Foreground="Black" />
+        <c1:C1GaugeMark Interval="10" />
+    </c1:C1RadialGauge>
+</UserControl>

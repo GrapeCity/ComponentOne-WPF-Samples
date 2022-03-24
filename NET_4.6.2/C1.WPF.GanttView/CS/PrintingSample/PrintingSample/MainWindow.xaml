@@ -1,0 +1,94 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrintingSample"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" x:Class="PrintingSample.MainWindow"
+        mc:Ignorable="d"
+        xmlns:GanttView="clr-namespace:C1.GanttView;assembly=C1.WPF.GanttView.4.6.2"
+        Title="PrintingSample" Height="600" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <CheckBox x:Name="_chkDates" Content="Print Specific Dates:" VerticalAlignment="Center" Click="_chkDates_Click"></CheckBox>
+            <TextBlock Text="     Start:   " VerticalAlignment="Center"/>
+            <c1:C1DatePicker x:Name="StartDate" IsEnabled="False" SelectedDate="2013/6/5"></c1:C1DatePicker>
+            <TextBlock Text="     End: " VerticalAlignment="Center"/>
+            <c1:C1DatePicker x:Name="EndDate" IsEnabled="False" SelectedDate="2013/6/13"></c1:C1DatePicker>
+            <TextBlock Text="    Margins: " VerticalAlignment="Center"/>
+            <ComboBox x:Name="_cmbMargins" SelectedIndex="2" Width="80">
+                <ComboBoxItem Content="0.25 inch" />
+                <ComboBoxItem Content="0.5 inch" />
+                <ComboBoxItem Content="1 inch" />
+            </ComboBox>
+            <Button Content="PrintCustomerStyle" Width="120" Click="OnPrintCustomerStyleClick" Margin="10,0,0,0"/>
+            <Button Content="PreviewCustomerStyle" Width="140" Click="OnPreviewCustomerStyleClick" Margin="10,0,0,0"/>
+            <Button Content="Print..." Width="80" Click="_btnBasicPrint_Click" Margin="10,0,0,0"/>
+        </StackPanel >
+        <c1:C1GanttView x:Name="gv" Grid.Row="1" StartDate="2013/6/5" ShowToolbar="False">
+            <c1:C1GanttView.Columns>
+                <GanttView:TaskPropertyColumn Property="Mode" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Name"/>
+                <GanttView:TaskPropertyColumn Property="Duration"/>
+                <GanttView:TaskPropertyColumn Property="DurationUnits"/>
+                <GanttView:TaskPropertyColumn Property="Start" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Finish" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="PercentComplete" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintType" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintDate" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Predecessors" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Deadline" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Calendar" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ResourceNames" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Notes" Visible="False"/>
+            </c1:C1GanttView.Columns>
+            <c1:C1GanttView.Tasks>
+                <GanttView:Task Name="Planning" Start="2013/6/5" Duration="2" PercentComplete="100%">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="2"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="3"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="8"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task></GanttView:Task>
+                <GanttView:Task Name="Analysis" Start="2013/6/7" Duration="3" PercentComplete="100%" Deadline="2013/6/15" ConstraintDate="2013/6/7" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="4"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task></GanttView:Task>
+                <GanttView:Task Name="Design" Start="2013/6/13" Duration="2" PercentComplete="50%">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="6"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="9"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task></GanttView:Task>
+                <GanttView:Task Name="Implementation" Start="2013/6/17" Duration="4" PercentComplete="25%" ConstraintDate="2013/6/17" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="3"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="8"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task></GanttView:Task>
+                <GanttView:Task Name="Documentation" Start="2013/6/21" Duration="2" Deadline="2013/6/26">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="7"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task></GanttView:Task>
+                <GanttView:Task Name="Support" Start="2013/6/25" Duration="2">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="4"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+            </c1:C1GanttView.Tasks>
+        </c1:C1GanttView>
+
+    </Grid>
+</Window>
