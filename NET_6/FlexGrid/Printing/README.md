@@ -1,5 +1,5 @@
 ## Printing
-#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_6/Grid/Printing)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_6/FlexGrid/Printing)
 ____
 #### Demonstrates the printing features of the FlexGrid control.
 ____

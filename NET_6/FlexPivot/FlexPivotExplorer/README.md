@@ -1,5 +1,5 @@
 ## FlexPivotExplorer
-#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_6/Pivot/FlexPivotExplorer)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_6/FlexPivot/FlexPivotExplorer)
 ____
 #### Shows samples of FlexPivot controls
 ____

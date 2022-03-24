@@ -5,6 +5,8 @@ ____
 ____
 Shows the following controls
 
+* C1Button
+* C1ToggleButton
 * C1TextBox
 * C1ComboBox
 * C1FilePicker
@@ -13,4 +15,5 @@ Shows the following controls
 * C1HyperlinkButton
 * C1DateTimePicker
 * C1DatePicker
-* C1RangeSlider
+* C1DropDownButton
+* C1SplitButton

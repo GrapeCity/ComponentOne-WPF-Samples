@@ -10,4 +10,4 @@ Included samples:
 * Grouping.xaml - demonstrates C1Scheduler grouping functionality.
 * DataBinding.xaml - demonstrates C1Scheduler binding functionality.
 * CustomDialogs.xaml - demonstrates C1Scheduler custom dialogs functionality.
-
+* DatabaseBinding.xaml - demonstrates C1Scheduler database binding functionality.

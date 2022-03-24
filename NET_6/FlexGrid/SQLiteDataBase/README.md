@@ -1,5 +1,5 @@
 ## SQLiteDataBase
-#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_6/Grid/SQLiteDataBase)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_6/FlexGrid/SQLiteDataBase)
 ____
 #### Demonstrates binding a SQLite database to FlexGrid control.
 ____
