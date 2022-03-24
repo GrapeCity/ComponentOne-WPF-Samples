@@ -1,9 +1,0 @@
-//Here are specified the samples that will be packed in setup's and Xamarin Store component.
-// Add the [Setup] prefix to include the sample in the shipped samples (Setup & Xamarin Store Component)
-// Add the [Store] prefix to the samples that will be published in one of the stores.(The code is not released)
-// DO NOT include XuniExplorer in the setup because it contains publish settings that can't become public.
-
-[Store] General\CS\AdventureViewer
-[Store] General\CS\DashboardDemo
-[Store] General\CS\ControlExplorer
-[Store] C1.WPF.Schedule\CS\SchedulerTableViews

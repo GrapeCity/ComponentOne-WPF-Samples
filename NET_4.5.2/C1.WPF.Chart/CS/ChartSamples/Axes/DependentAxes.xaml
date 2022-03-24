@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<UserControl x:Class="ChartSamples.DependentAxes" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c1chart="clr-namespace:C1.WPF.C1Chart;assembly=C1.WPF.C1Chart.4.5.2" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  
-    <Grid x:Name="LayoutRoot">
-    <c1chart:C1Chart x:Name="chart" ChartType="Line" />
-  </Grid>
-</UserControl>

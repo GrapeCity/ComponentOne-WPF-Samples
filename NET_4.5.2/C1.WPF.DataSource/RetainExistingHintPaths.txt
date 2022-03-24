@@ -1,5 +1,0 @@
-This file is a marker for the sample cleanup process.
-
-Its existance indicates that if the parent folder of a reference
-with a HintPath exists, then the HintPath should not be removed
-if the project is at or below this file in the directory tree.

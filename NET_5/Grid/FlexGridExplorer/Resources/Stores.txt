@@ -1,5 +1,0 @@
-﻿1	New York	40.67,-73.94	United States of America
-2	Chicago	41.84,-87.68	United States of America
-3	Dallas	32.79,-96.77	United States of America
-4	Houston	29.77,-95.39	United States of America
-5	Los Angeles	34.11,-118.41	United States of America

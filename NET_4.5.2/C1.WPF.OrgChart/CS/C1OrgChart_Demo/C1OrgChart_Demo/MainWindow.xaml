@@ -1,9 +1,0 @@
-﻿<Window x:Class="TestWPF.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:TestWPF"
-        FontFamily="Lucida Sans Unicode"   
-        WindowStartupLocation="CenterScreen"
-        Title="ComponentOne C1OrgChart" Height="450" Width="725" >
-    <local:OrgChartSample />
-</Window>
