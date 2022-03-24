@@ -19,7 +19,7 @@ namespace PropertyGridExplorer.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -57,6 +57,42 @@ namespace PropertyGridExplorer.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to use custom editors to improve user interface in some specific cases.
+        /// </summary>
+        public static string CustomEditorsDesc {
+            get {
+                return ResourceManager.GetString("CustomEditorsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Editors.
+        /// </summary>
+        public static string CustomEditorsTitle {
+            get {
+                return ResourceManager.GetString("CustomEditorsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows the properties of a data annotated object.
+        /// </summary>
+        public static string DataObjectPropertiesDesc {
+            get {
+                return ResourceManager.GetString("DataObjectPropertiesDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data-Object Properties.
+        /// </summary>
+        public static string DataObjectPropertiesTitle {
+            get {
+                return ResourceManager.GetString("DataObjectPropertiesTitle", resourceCulture);
             }
         }
         

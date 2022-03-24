@@ -25,7 +25,7 @@ namespace DataFilterExplorer
         public ConditionalFiltersSample()
         {
             InitializeComponent();
-            Tag = AppResources.ConditionalFiltersTag;
+            Tag = AppResources.ConditionalFiltersDescription;
             //Get Cars list
             _carsTable = DataProvider.GetCarTable();
             var data = new C1DataCollection<Car>(DataProvider.GetCarDataCollection(_carsTable));

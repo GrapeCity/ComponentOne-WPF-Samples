@@ -10,7 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 
-using C1.C1Schedule;
+using C1.Schedule;
 using C1.WPF;
 using C1.WPF.Core;
 using C1.WPF.Docking;
@@ -263,7 +263,7 @@ namespace SchedulerExplorer
                 return;
             object item = uiItem.DataContext;
             // the second check is required for WPF 4
-            if (item == null || !item.GetType().IsSubclassOf(typeof(C1.C1Schedule.BasePersistableObject)))
+            if (item == null || !item.GetType().IsSubclassOf(typeof(BasePersistableObject)))
                 return;
             sourceListBox.SelectedItem = item;
         }
@@ -387,9 +387,9 @@ namespace SchedulerExplorer
 						res.MenuCaption = str;
 						obj = res;
 					}
-					else if (ItemType == typeof(C1.C1Schedule.Label))
+					else if (ItemType == typeof(C1.Schedule.Label))
 					{
-						obj = new C1.C1Schedule.Label(str, str);
+						obj = new C1.Schedule.Label(str, str);
 					}
 					else if (ItemType == typeof(Status))
 					{

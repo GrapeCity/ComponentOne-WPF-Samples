@@ -6,7 +6,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
-using C1.C1Schedule;
+using C1.Schedule;
 using C1.WPF;
 using C1.WPF.Schedule;
 using System.Windows.Input;

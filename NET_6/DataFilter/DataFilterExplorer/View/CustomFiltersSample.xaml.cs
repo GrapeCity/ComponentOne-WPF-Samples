@@ -16,7 +16,7 @@ namespace DataFilterExplorer
         public CustomFiltersSample()
         {
             InitializeComponent();
-            Tag = AppResources.CustomFiltersTag;
+            Tag = AppResources.CustomFiltersDescription;
             _data = DataProvider.GetCarsInStores().ToList();
             c1DataFilter.ItemsSource = _data;
             UpdateTreeViewData(_data);

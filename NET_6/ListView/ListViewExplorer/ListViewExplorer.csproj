@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -23,18 +24,18 @@
     <EmbeddedResource Include=".gclicx" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="1.0.20213.61" />
+    <PackageReference Include="C1.DataCollection" Version="1.0.20221.65" />
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

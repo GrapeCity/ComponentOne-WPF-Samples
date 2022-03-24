@@ -35,7 +35,7 @@
                     <Path Data="M6.5,0 L8.5,0 L8.5,8 L6.5,8 z M0,0 L1,0 L1,1 L2,1 L2,2 L3,2 L3,3 L4,3 L4,5 L3,5 L3,6 L2,6 L2,7 L1,7 L1,8 L0,8 z" Fill="Black" Stretch="Fill" />
                 </c1:C1Button>
                 <Label Foreground="{DynamicResource text_Brush}" Content="Group page size:" VerticalAlignment="Center" />
-                <c1:C1NumericBox Margin="2" VerticalAlignment="Center" Value="{Binding GroupPageSize, ElementName=sched1, Mode=TwoWay}" Minimum="1" Maximum="5" MinWidth="35" />
+                <c1:C1NumericBox Margin="2" VerticalAlignment="Center" Value="{Binding GroupPageSize, ElementName=sched1, Mode=TwoWay}" Minimum="1" Maximum="5" MinWidth="35" RangeValidationMode="Always" />
                 <Label Foreground="{DynamicResource text_Brush}" Content="View:" VerticalAlignment="Center" />
                 <c1:C1ComboBox x:Name="views" SelectedIndex="4" SelectionChanged="views_SelectionChanged" Margin="5" IsEditable="False"  Width="100" ToolTip="Change View">
                     <c1:C1ComboBoxItem Content="Day"/>
@@ -48,8 +48,9 @@
         </Border>
 
         <c1:C1Calendar Name="calendar1" Grid.Row="1" Grid.Column="0" MaxSelectionCount="42" 
-                           BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
-                           SelectionChanged="selected_date_changed"/>
+                       MinDate="{Binding Start, ElementName=sched1}" MaxDate="{Binding End, ElementName=sched1}"
+                       BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
+                       SelectionChanged="selected_date_changed"/>
 
         <c1:C1Scheduler Grid.Row="1" Grid.Column="1" x:Name="sched1" GroupPageSize="2" Margin="10,0,0,0" Style="{Binding TimeLineStyle, RelativeSource={RelativeSource Self}}" BorderThickness="1">
             <c1:C1Scheduler.Settings>

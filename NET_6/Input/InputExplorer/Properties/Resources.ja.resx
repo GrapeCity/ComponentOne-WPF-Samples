@@ -139,58 +139,67 @@
     <value>範囲スライダー</value>
   </data>
   <data name="MaskedDemoDes" xml:space="preserve">
-  <value>Mask と TextMaskFormat のさまざまな設定で C1MaskedTextBox を使用する方法を示します。</value>
-</data>
+    <value>Mask と TextMaskFormat のさまざまな設定で C1MaskedTextBox を使用する方法を示します。</value>
+  </data>
   <data name="MaskedDemoTitle" xml:space="preserve">
-  <value>マスクテキストボックス</value>
-</data>
+    <value>マスクテキストボックス</value>
+  </data>
   <data name="TagEditorDemoDes" xml:space="preserve">
-    <value>C1TagEditorの使用方法を示します。</value>
+    <value>C1TagEditor の使用方法を示します。</value>
   </data>
   <data name="TagEditorDemoTitle" xml:space="preserve">
     <value>タグエディタ</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Inputエクスプローラー</value>
+    <value>Input エクスプローラー</value>
   </data>
   <data name="AddTag" xml:space="preserve">
-    <value>Add Tag</value>
+    <value>タグの追加</value>
+    <comment>Add Tag</comment>
   </data>
   <data name="AddTagButton" xml:space="preserve">
     <value>AddTag</value>
   </data>
   <data name="AddText" xml:space="preserve">
-    <value>Add Text</value>
+    <value>テキストの追加</value>
+    <comment>Add Text</comment>
   </data>
   <data name="InputTagContent" xml:space="preserve">
-    <value>Input tag's content:</value>
+    <value>タグのコンテンツを入力:</value>
+    <comment>Input tag's content:</comment>
   </data>
   <data name="InputText" xml:space="preserve">
-    <value>Input text:</value>
+    <value>テキストを入力:</value>
   </data>
   <data name="AddItemsEvent" xml:space="preserve">
     <value>AddItems</value>
   </data>
   <data name="CheckListDes" xml:space="preserve">
-    <value>Shows how to use C1CheckList</value>
+    <value>C1CheckListの使用方法を示します</value>
+    <comment>Shows how to use C1CheckList</comment>
   </data>
   <data name="CheckListTitle" xml:space="preserve">
     <value>CheckList</value>
   </data>
   <data name="EventsTabHeader" xml:space="preserve">
-    <value>Events</value>
+    <value>イベント</value>
+    <comment>Events</comment>
   </data>
   <data name="MethodsTabHeader" xml:space="preserve">
-    <value>Methods</value>
+    <value>メソッド</value>
+    <comment>Methods</comment>
   </data>
   <data name="PropertiesTabHeader" xml:space="preserve">
-    <value>Properties</value>
+    <value>プロパティ</value>
+    <comment>Properties</comment>
   </data>
   <data name="RemoveItemsEvent" xml:space="preserve">
     <value>RemoveItems</value>
+    <comment>RemoveItems</comment>
   </data>
   <data name="SelectAllMethod" xml:space="preserve">
-    <value>Select All</value>
+    <value>すべて選択</value>
+    <comment>Select All</comment>
   </data>
   <data name="SelectedItemsEvent" xml:space="preserve">
     <value>SelectedItems</value>
@@ -199,15 +208,14 @@
     <value>SelectionChangedEvent</value>
   </data>
   <data name="UnselectAllMethod" xml:space="preserve">
-    <value>Unselect All</value>
-  </data>
-  <data name="UnselectAllMethod" xml:space="preserve">
-    <value>Unselect All</value>
+    <value>すべて選択解除</value>
+    <comment>Unselect All</comment>
   </data>
   <data name="MultiSelect" xml:space="preserve">
     <value>MultiSelect</value>
   </data>
   <data name="MultiSelectDes" xml:space="preserve">
-    <value>Shows how to use C1MultiSelect</value>
+    <value>C1MultiSelectの使用方法を示します</value>
+    <comment>Shows how to use C1MultiSelect</comment>
   </data>
 </root>

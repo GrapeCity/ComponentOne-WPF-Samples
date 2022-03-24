@@ -7,10 +7,29 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
-    <Content Include="C1-ball.ico" />
+    <None Remove="Database\Appointment.mdf" />
+    <None Remove="Database\Appointment_log.ldf" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="C1-ball.ico" />
+    <Content Include="Database\Appointment.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\Appointment_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Database\C1DataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>C1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
@@ -29,6 +48,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Update="Database\C1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>C1DataSet.Designer.cs</LastGenOutput>
+    </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -41,34 +64,38 @@
     <Page Update="View\DataBinding.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
+    <Page Update="View\DatabaseBinding.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SchedulerExplorer.gclicx" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Calendar">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Schedule">
-      <Version>6.0.20213.156-beta</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 </Project>

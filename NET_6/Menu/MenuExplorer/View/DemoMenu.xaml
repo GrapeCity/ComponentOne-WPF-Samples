@@ -30,14 +30,14 @@
                             <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/newTeamProject.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
-                    <c1:C1MenuItem Header="File..." InputGestureText="Ctrl+N">
+                    <c1:C1MenuItem Header="File..." HotKey="Ctrl+N">
                         <c1:C1MenuItem.Icon>
                             <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/newFile.png" />
                         </c1:C1MenuItem.Icon>
                     </c1:C1MenuItem>
                 </c1:C1MenuItem>
                 <c1:C1MenuItem Header="Open" Click="C1MenuItem_Click">
-                    <c1:C1MenuItem Header="Project..." InputGestureText="Ctrl+O">
+                    <c1:C1MenuItem Header="Project..." HotKey="Ctrl+O">
                         <c1:C1MenuItem.Icon>
                             <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/openProject.png" />
                         </c1:C1MenuItem.Icon>
@@ -61,7 +61,7 @@
                     </c1:C1MenuItem.Icon>
                 </c1:C1MenuItem>
                 <c1:C1MenuSeparator />
-                <c1:C1MenuItem Header="Save" InputGestureText="Ctrl+S">
+                <c1:C1MenuItem Header="Save" HotKey="Ctrl+S">
                     <c1:C1MenuItem.Icon>
                         <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/save.png" />
                     </c1:C1MenuItem.Icon>
@@ -77,13 +77,13 @@
                         <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/pageSetup.png" />
                     </c1:C1MenuItem.Icon>
                 </c1:C1MenuItem>
-                <c1:C1MenuItem Header="Print" InputGestureText="Ctrl+P" Click="C1MenuItem_Click">
+                <c1:C1MenuItem Header="Print" HotKey="Ctrl+P" Click="C1MenuItem_Click">
                     <c1:C1MenuItem.Icon>
                         <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/print.png" />
                     </c1:C1MenuItem.Icon>
                 </c1:C1MenuItem>
                 <c1:C1MenuSeparator />
-                <c1:C1MenuItem Header="Exit" InputGestureText="Alt+F4" Click="C1MenuItem_Click" />
+                <c1:C1MenuItem Header="Exit" HotKey="Alt+F4" Click="C1MenuItem_Click" />
             </c1:C1MenuItem>
             <c1:C1MenuItem Header="Edit" Click="C1MenuItem_Click">
                 <c1:C1MenuItem Header="Undo" Click="C1MenuItem_Click">

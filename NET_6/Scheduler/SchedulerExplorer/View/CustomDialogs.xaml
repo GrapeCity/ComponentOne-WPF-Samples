@@ -184,10 +184,16 @@
                 <ColumnDefinition Width="197" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <c1:C1Calendar Name="calendar1" Grid.Column="0" MaxSelectionCount="42" 
-                               BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
-                               SelectionChanged="selected_date_changed"/>
-            <c1:C1Scheduler x:Name="sched1" Margin="10 -1 0 0" BorderThickness="1" Grid.Column="1" BorderBrush="{StaticResource BorderBrush}" EditAppointmentTemplate="{StaticResource customEditAppointmentTemplate}" SelectFromListTemplate="{StaticResource customSelectFromListSceneTemplate}" ShowRemindersTemplate="{StaticResource customShowRemindersTemplate}" EditRecurrenceTemplate="{StaticResource customEditRecurrenceTemplate}" />
+            <c1:C1Calendar x:Name="calendar1" Grid.Column="0" MaxSelectionCount="42" 
+                           MinDate="{Binding Start, ElementName=sched1}" MaxDate="{Binding End, ElementName=sched1}"
+                           BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
+                           SelectionChanged="selected_date_changed"/>
+            <c1:C1Scheduler x:Name="sched1" Margin="10 -1 0 0" BorderThickness="1" Grid.Column="1" 
+                            BorderBrush="{StaticResource BorderBrush}" SmallVisualIntervalScale="{Binding SelectedItem, ElementName=scale}"
+                            EditAppointmentTemplate="{StaticResource customEditAppointmentTemplate}" 
+                            SelectFromListTemplate="{StaticResource customSelectFromListSceneTemplate}" 
+                            ShowRemindersTemplate="{StaticResource customShowRemindersTemplate}" 
+                            EditRecurrenceTemplate="{StaticResource customEditRecurrenceTemplate}" />
         </Grid>
     </Grid>
 </UserControl>

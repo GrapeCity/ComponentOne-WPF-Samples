@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using C1.C1Schedule;
+using C1.Schedule;
 using C1.WPF.Calendar;
 using C1.WPF.Schedule;
 using SchedulerExplorer.Resources;
@@ -27,11 +27,11 @@ namespace SchedulerExplorer
             // add some resources
             Resource res = new Resource();
             res.Text = "Meeting room";
-            res.Color = Color.FromArgb(255, 218, 186, 198);
+            res.Color = System.Drawing.Color.FromArgb(255, 218, 186, 198);
             sched1.DataStorage.ResourceStorage.Resources.Add(res);
             Resource res1 = new Resource();
             res1.Text = "Conference hall";
-            res1.Color = Color.FromArgb(255, 220, 236, 201);
+            res1.Color = System.Drawing.Color.FromArgb(255, 220, 236, 201);
             sched1.DataStorage.ResourceStorage.Resources.Add(res1);
 
             // add some contacts

@@ -20,7 +20,7 @@ namespace DataFilterExplorer
         public FilterEditorSample()
         {
             InitializeComponent();
-            Tag = AppResources.FilterEditorTag;
+            Tag = AppResources.FilterEditorDescription;
             C1DataCollection<Car> data = new C1DataCollection<Car>(DataProvider.GetCars());
             filterEditor.ItemsSource = data;
             flexGrid.ItemsSource = data;

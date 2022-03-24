@@ -4,23 +4,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
 
+    <UserControl.Resources>
+        <DataTemplate x:Key="ItemTemplate">
+            <TextBlock Text="{Binding Name}" Margin="10 0 0 0"/>
+        </DataTemplate>
+    </UserControl.Resources>
+    
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
             <c1:C1Button Content="Group By Born" Click="Button_Click" Padding="10 3 10 3"/>
-            <c1:C1Button Content="Group By Resident" Click="Button_Click_1" Margin="20 0 0 0" Padding="10 3 10 3"/>
+            <c1:C1Button Content="Group By Resident" Click="Button_Click_1" Margin="30 0 0 0" Padding="10 3 10 3"/>
         </StackPanel>
 
-        <c1:C1ListView Grid.Row="1" x:Name="listView" SelectionMode="Single" Margin="10 0 10 10" DisplayMemberPath="Name"
-                       ItemHeight="30" SelectedBackground="#99c9ef">
+        <c1:C1ListView Grid.Row="1" x:Name="listView" SelectionMode="Single" Margin="10 0 10 10"
+                       ItemHeight="30" SelectedBackground="#99c9ef" ItemTemplate="{StaticResource ItemTemplate}">
             <c1:C1ListView.GroupStyle>
                 <GroupStyle>
                     <GroupStyle.HeaderTemplate>
                         <DataTemplate>
-                            <TextBlock FontWeight="Bold" FontSize="19" Text="{Binding Group}" Height="35" Margin="-10 0 0 0"/>
+                            <TextBlock FontWeight="Bold" FontSize="19" Text="{Binding Group}" Height="35"/>
                         </DataTemplate>
                     </GroupStyle.HeaderTemplate>
                 </GroupStyle>

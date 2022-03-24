@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.IsolatedStorage;
 using System.Linq;
-using System.Security;
-using System.Security.Permissions;
 using System.Windows;
 using System.Windows.Controls;
-using C1.C1Schedule;
+using C1.Schedule;
 using C1.WPF.Calendar;
 using C1.WPF.Core;
 using C1.WPF.DateTimeEditors;
@@ -16,7 +14,6 @@ using C1.WPF.Schedule;
 using SchedulerExplorer.Resources;
 using DateList = C1.WPF.Schedule.DateList;
 using System.Globalization;
-using C1.WPF.Input;
 
 namespace SchedulerExplorer
 {
@@ -140,95 +137,34 @@ namespace SchedulerExplorer
             UpdateCalendarSelection();
         }
 
-        // Detect whether or not this application has the requested permission
-        private bool IsPermissionGranted(CodeAccessPermission requestedPermission)
-        {
-            try
-            {
-                // Try and get this permission
-                requestedPermission.Demand();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
         void Import_Click(Object sender, RoutedEventArgs e)
         {
-            if (IsPermissionGranted(new FileIOPermission(PermissionState.Unrestricted)))
-            {
-                // Import previously save data from .xml, .ics or .dat file.
-                C1Scheduler.ImportCommand.Execute(null, scheduler1);
-            }
-            else
-            {
-                try
-                {
-                    IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForApplication();
-                    using (IsolatedStorageFileStream stream =
-                        new IsolatedStorageFileStream("C1ScheduleData.xml", FileMode.Open, storage))
-                    {
-                        scheduler1.DataStorage.Import(stream, FileFormatEnum.XML);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("There is no permission to load data.",
-                            "ComponentOne WPF Sample Explorer", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    return;
-                }
-                MessageBox.Show("There is no permission to load data. Data have been loaded from the isolated storage.",
-                    "ComponentOne WPF Sample Explorer", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
+            // Import previously save data from .xml, .ics or .dat file.
+            C1Scheduler.ImportCommand.Execute(null, scheduler1);
         }
 
         void Export_Click(Object sender, RoutedEventArgs e)
         {
-            if (IsPermissionGranted(new FileIOPermission(PermissionState.Unrestricted)))
-            {
-                // Export all data to file.
-                C1Scheduler.ExportCommand.Execute(null, scheduler1);
-            }
-            else
-            {
-                try
-                {
-                    IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForApplication();
-                    using (IsolatedStorageFileStream stream =
-                        new IsolatedStorageFileStream("C1ScheduleData.xml", FileMode.Create, storage))
-                    {
-                        scheduler1.DataStorage.Export(stream, FileFormatEnum.XML);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("There is no permission to save data.",
-                        Application.Current.MainWindow.Title, MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    return;
-                }
-                MessageBox.Show("There is no permission to save file. Data have been saved to the isolated storage.",
-                    Application.Current.MainWindow.Title, MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
+            // Export all data to file.
+            C1Scheduler.ExportCommand.Execute(null, scheduler1);
         }
 
         void selected_date_changed(object sender, CalendarSelectionChangedEventArgs e)
         {
-            if (!_updatingSelection)
-            {
-                var calendar = sender as C1Calendar;
-                if (calendar?.SelectedDate == default(DateTime))
-                    return;
-
-                scheduler1.VisibleDates.BeginUpdate();
-                scheduler1.VisibleDates.Clear();
-                foreach (var d in calendar.SelectedDates)
+                if (!_updatingSelection)
                 {
-                    scheduler1.VisibleDates.Add(d);
+                    var calendar = sender as C1Calendar;
+                    if (calendar?.SelectedDate == default(DateTime))
+                        return;
+
+                    scheduler1.VisibleDates.BeginUpdate();
+                    scheduler1.VisibleDates.Clear();
+                    foreach (var d in calendar.SelectedDates)
+                    {
+                        scheduler1.VisibleDates.Add(d);
+                    }
+                    scheduler1.VisibleDates.EndUpdate();
                 }
-                scheduler1.VisibleDates.EndUpdate();
-            }
         }
 
         void UpdateCalendarSelection()

@@ -118,18 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CarListDescription" xml:space="preserve">
-    <value>Cars List</value>
-  </data>
-  <data name="CarListTag" xml:space="preserve">
     <value>This sample demonstrates how to use C1DataFilter control to filter the C1FlexGrid control. Also demonstrates how to modify automatically generated filters, save and restore filter expressions.</value>
   </data>
   <data name="CarListTitle" xml:space="preserve">
     <value>Cars List</value>
   </data>
   <data name="ConditionalFiltersDescription" xml:space="preserve">
-    <value>Conditional Filters</value>
-  </data>
-  <data name="ConditionalFiltersTag" xml:space="preserve">
     <value>Demonstrate using new conditional filters that accept multiple conditions and a new full text filter.</value>
   </data>
   <data name="ConditionalFiltersTitle" xml:space="preserve">
@@ -138,10 +132,7 @@
   <data name="CreatingRecordsMessage" xml:space="preserve">
     <value>Creating {0:N0} records...</value>
   </data>
-  <data name="CustomFilterDescription" xml:space="preserve">
-    <value>Custom Filters</value>
-  </data>
-  <data name="CustomFiltersTag" xml:space="preserve">
+  <data name="CustomFiltersDescription" xml:space="preserve">
     <value>Demonstrates using C1DataFilter control to show custom filters.
 There is C1TreeView and C1DataFilter on the window.
 The C1TreeView uses CustomContentPresenter to shows data.
@@ -155,9 +146,6 @@ PriceFilter based on ChecklistFilter, allows to choose the price range of cars.<
     <value>Custom Filters</value>
   </data>
   <data name="FilterEditorDescription" xml:space="preserve">
-    <value>Filter Editor</value>
-  </data>
-  <data name="FilterEditorTag" xml:space="preserve">
     <value>This sample shows the basic features of C1FilterEditor.
 This sample demonstrates basic functionality of the C1FilterEditor control. 
 The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions "And" and "Or" or a filter for a data source property. 
@@ -170,9 +158,6 @@ That allows to filter FlexGrid content based on multiple conditions selected in 
     <value>Filter Editor</value>
   </data>
   <data name="FilterSummaryDescription" xml:space="preserve">
-    <value>Filter Summary</value>
-  </data>
-  <data name="FilterSummaryTag" xml:space="preserve">
     <value>This sample demonstrates how to use the FilterSummary for the Checklist filter. Also shows how to use different aggregate expressions and custom format of filter summaries.</value>
   </data>
   <data name="FilterSummaryTitle" xml:space="preserve">

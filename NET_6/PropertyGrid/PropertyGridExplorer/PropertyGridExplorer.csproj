@@ -48,16 +48,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\DataObjectProperties.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="View\CustomEditors.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
     <Page Update="View\AutoProperties.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="2*" />
             </Grid.ColumnDefinitions>
-            <c1:C1FilterEditor x:Name="filterEditor" Grid.Column="0" Grid.Row="0">
+            <c1:C1FilterEditor x:Name="filterEditor" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" MinHeight="120">
                 <c1:C1FilterEditor.Expression>
                     <c1:CombinationExpression FilterCombination="Or">
                         <c1:CombinationExpression.Expressions>

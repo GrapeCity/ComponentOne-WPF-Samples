@@ -27,6 +27,27 @@ namespace DockingExplorer
             Tag = AppResources.OverviewTag;
             dockControl.ItemDockModeChanged += new EventHandler<C1.WPF.Docking.ItemDockModeChangedEventArgs>(MainWindow.dockControl_ItemDockModeChanged);
 
+            Loaded += delegate
+            {
+                foreach (var item in dockControl.Items)
+                {
+                    if (item is C1DockGroup dockGroup)
+                    {
+                        foreach (var dockItem in dockGroup.Items)
+                        {
+                            if (dockItem is C1DockTabControl tabControl && tabControl.DockMode == DockMode.Hidden)
+                            {
+                                tabControl.DockMode = DockMode.Docked;
+                            }
+                        }
+                    }
+                    else if (item is C1DockTabControl tabControl && tabControl.DockMode == DockMode.Hidden)
+                    {
+                        tabControl.DockMode = DockMode.Docked;
+                    }
+                }
+            };
+
             Unloaded += delegate
             {
                 foreach (Window w in Application.Current.Windows)

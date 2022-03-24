@@ -118,10 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CarListDescription" xml:space="preserve">
-    <value>車両リスト</value>
-    <comment>Cars List</comment>
-  </data>
-  <data name="CarListTag" xml:space="preserve">
     <value>このサンプルは、C1DataFilter コントロールを使用して C1FlexGrid コントロールをフィルタリングする方法を示します。また、自動生成されたフィルターを変更する方法、フィルター式を保存および復元する方法についても説明します。</value>
     <comment>This sample demonstrates how to use C1DataFilter control to filter the C1FlexGrid control. Also demonstrates how to modify automatically generated filters, save and restore filter expressions.</comment>
   </data>
@@ -129,17 +125,13 @@
     <value>車両リスト</value>
     <comment>Cars List</comment>
   </data>
-  <data name="ConditionalFiltersTag" xml:space="preserve">
+  <data name="ConditionalFiltersDescription" xml:space="preserve">
     <value>複数の条件を受け入れる新しい条件付きフィルターと新しいフルテキストフィルターを使用してデモンストレーションします。</value>
   </data>
   <data name="ConditionalFiltersTitle" xml:space="preserve">
     <value>条件付きフィルター</value>
   </data>
-  <data name="CustomFilterDescription" xml:space="preserve">
-    <value>カスタムフィルター</value>
-    <comment>Custom Filters</comment>
-  </data>
-  <data name="CustomFiltersTag" xml:space="preserve">
+  <data name="CustomFiltersDescription" xml:space="preserve">
     <value>C1DataFilterコントロールを使用してカスタムフィルターを表示する方法を示します。
  ウィンドウには C1TreeView と C1DataFilter があります。
 C1TreeView は、CustomContentPresenter を使用してデータを表示します。
@@ -162,10 +154,6 @@ PriceFilter based on ChecklistFilter, allows to choose the price range of cars.<
     <comment>Custom Filters</comment>
   </data>
   <data name="FilterEditorDescription" xml:space="preserve">
-    <value>フィルターエディター</value>
-    <comment>Filter Editor</comment>
-  </data>
-  <data name="FilterEditorTag" xml:space="preserve">
     <value>このサンプルは、C1FilterEditor コントロールの基本的な機能を示します。
 FilterEditor コントロールは、ツリーの形式でフィルターを表します。ツリーノードは、論理条件「And」および「Or」、またはデータソースプロパティのフィルターにすることができます。
 C1FilterEditor.SetExpression メソッドは、事前定義されたフィルターをロードするために使用されます。
@@ -185,10 +173,6 @@ That allows to filter FlexGrid content based on multiple conditions selected in 
     <comment>Filter Editor</comment>
   </data>
   <data name="FilterSummaryDescription" xml:space="preserve">
-    <value>フィルターの概要</value>
-    <comment>Filter Summary</comment>
-  </data>
-  <data name="FilterSummaryTag" xml:space="preserve">
     <value>このサンプルは、チェックリストフィルターに FilterSummary を使用する方法を示します。また、さまざまな集計式とフィルターサマリーのカスタム形式を使用する方法も示します。</value>
     <comment>This sample demonstrates how to use the FilterSummary for the Checklist filter. Also shows how to use different aggregate expressions and custom format of filter summaries.</comment>
   </data>
@@ -207,9 +191,6 @@ That allows to filter FlexGrid content based on multiple conditions selected in 
   </data>
   <data name="Title" xml:space="preserve">
     <value>DataFilterエクスプローラー</value>
-  </data>
-  <data name="ConditionalFiltersDescription" xml:space="preserve">
-    <value>Conditional Filters</value>
   </data>
   <data name="CreatingRecordsMessage" xml:space="preserve">
     <value>Creating {0:N0} records...</value>

@@ -1,0 +1,17 @@
+﻿<UserControl mc:Ignorable="d" x:Class="PropertyGridExplorer.DataObjectProperties" d:DesignHeight="304" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <!-- Control instance -->
+    <Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="250" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <c1:C1ListView x:Name="listView" SelectedIndex="0"/>
+            <c1:C1PropertyGrid x:Name="propertyGrid" AutoGenerateProperties="True" ShowDescription="True" ShowResetButton="True" SelectedObject="{Binding ElementName=listView,Path=SelectedItem}" Grid.Column="1"/>
+        </Grid>
+    </Border>
+</UserControl>

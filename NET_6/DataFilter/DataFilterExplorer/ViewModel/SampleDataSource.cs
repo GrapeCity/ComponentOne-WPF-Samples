@@ -12,28 +12,28 @@ namespace DataFilterExplorer
         {
             _allItems.Add(new SampleItem(
                 AppResources.CarListTitle,
-                AppResources.CarListDescription,
+                AppResources.CarListTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new CarsListControl())));
             _ = _allItems[0].Sample.Value; //Force first page is loaded immediately
             _allItems.Add(new SampleItem(
                 AppResources.FilterSummaryTitle,
-                AppResources.FilterSummaryDescription,
+                AppResources.FilterSummaryTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new FilterSummarySample())));
             _allItems.Add(new SampleItem(
                 AppResources.ConditionalFiltersTitle,
-                AppResources.ConditionalFiltersDescription,
+                AppResources.ConditionalFiltersTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new ConditionalFiltersSample())));
             _allItems.Add(new SampleItem(
                 AppResources.FilterEditorTitle,
-                AppResources.FilterEditorDescription,
+                AppResources.FilterEditorTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new FilterEditorSample())));
             _allItems.Add(new SampleItem(
                 AppResources.CustomFilterTitle,
-                AppResources.CustomFilterDescription,
+                AppResources.CustomFilterTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new CustomFiltersSample())));
             _allItems.Add(new SampleItem(
                 AppResources.VirtualSourceTitle,
-                AppResources.VirtualSourceDescription,
+                AppResources.VirtualSourceTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new VirtualSource())));
         }
 

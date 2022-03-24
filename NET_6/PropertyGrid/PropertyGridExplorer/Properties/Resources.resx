@@ -123,7 +123,7 @@
   <data name="PropertyGridDemoTitle" xml:space="preserve">
     <value>Demo</value>
   </data>
-    <data name="PropertyGridAutoPropsDesc" xml:space="preserve">
+  <data name="PropertyGridAutoPropsDesc" xml:space="preserve">
     <value>Shows how to use C1PropertyGrid to change properties of an object</value>
   </data>
   <data name="PropertyGridAutoPropsTitle" xml:space="preserve">
@@ -131,5 +131,17 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>PropertyGridExplorer</value>
+  </data>
+  <data name="CustomEditorsDesc" xml:space="preserve">
+    <value>Shows how to use custom editors to improve user interface in some specific cases</value>
+  </data>
+  <data name="CustomEditorsTitle" xml:space="preserve">
+    <value>Custom Editors</value>
+  </data>
+  <data name="DataObjectPropertiesDesc" xml:space="preserve">
+    <value>Shows the properties of a data annotated object</value>
+  </data>
+  <data name="DataObjectPropertiesTitle" xml:space="preserve">
+    <value>Data-Object Properties</value>
   </data>
 </root>

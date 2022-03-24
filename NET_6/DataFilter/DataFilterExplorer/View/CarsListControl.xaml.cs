@@ -21,7 +21,7 @@ namespace DataFilterExplorer
         public CarsListControl()
         {
             InitializeComponent();
-            Tag = AppResources.CarListTag;
+            Tag = AppResources.CarListDescription;
             //Get Cars list
             _carsTable = DataProvider.GetCarTable();
             var data = new C1DataCollection<Car>(DataProvider.GetCarDataCollection(_carsTable));

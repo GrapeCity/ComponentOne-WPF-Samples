@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ApplicationIcon>c1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AxisScrollbar.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Chart">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DX">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

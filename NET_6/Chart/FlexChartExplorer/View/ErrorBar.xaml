@@ -50,20 +50,20 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10 0">
             <Chart:C1ComboBox ItemsSource="{Binding DataContext.ChartTypes}"
-                      x:Name="cboChartType" SelectedIndex="0"
+                      x:Name="cboChartType" SelectedIndex="0" MinWidth="180"
                       ItemTemplate="{StaticResource cboChartTypeTemplate}"
                       SelectedValue="{Binding ElementName=errorBarSeries, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}"/>
             <Chart:C1ComboBox ItemsSource="{Binding DataContext.ErrorAmounts}"
-                      x:Name="cboErrorAmounts" Margin="10 0 0 0" SelectedIndex="0"
+                      x:Name="cboErrorAmounts" Margin="10 0 0 0" SelectedIndex="0" MinWidth="180"
                       ItemTemplate="{StaticResource cboErrorAmountTemplate}"
                       SelectionChanged="cboErrorAmounts_SelectionChanged"
                       SelectedValue="{Binding ElementName=errorBarSeries,Path=ErrorAmount,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
             <Chart:C1ComboBox ItemsSource="{Binding DataContext.Directions}"
-                      x:Name="cboDirections"  Margin="10 0 0 0" SelectedIndex="0"
+                      x:Name="cboDirections"  Margin="10 0 0 0" SelectedIndex="0" MinWidth="120"
                       ItemTemplate="{StaticResource cboDirectionTemplate}"
                       SelectedValue="{Binding ElementName=errorBarSeries,Path=Direction,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
             <Chart:C1ComboBox ItemsSource="{Binding DataContext.EndStyles}"
-                      x:Name="cboEndStyle"  Margin="10 0 0 0" SelectedIndex="0"
+                      x:Name="cboEndStyle"  Margin="10 0 0 0" SelectedIndex="0"  MinWidth="120"
                       ItemTemplate="{StaticResource cboEndStyleTemplate}"
                       SelectedValue="{Binding ElementName=errorBarSeries,Path=EndStyle,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
             <CheckBox VerticalAlignment="Center" Margin="10,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated}">Rotate</CheckBox>

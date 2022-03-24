@@ -454,12 +454,15 @@
     <value>FlexChartエクスプローラー</value>
   </data>
   <data name="BreakEvenDesc" xml:space="preserve">
-    <value>Break-Even Chart</value>
+    <value>損益分岐点チャート</value>
+    <comment>Break-Even Chart</comment>
   </data>
   <data name="BreakEvenTag" xml:space="preserve">
-    <value>Break-Even chart is a chart that shows the sales volume level at which total costs equal sales.</value>
+    <value>損益分岐点チャートは、総コストが売上高と等しくなる販売量レベルを示すチャートです。</value>
+    <comment>Break-Even chart is a chart that shows the sales volume level at which total costs equal sales.</comment>
   </data>
   <data name="BreakEvenTitle" xml:space="preserve">
-    <value>Break-Even</value>
+    <value>損益分岐点</value>
+    <comment>Break-Even</comment>
   </data>
 </root>

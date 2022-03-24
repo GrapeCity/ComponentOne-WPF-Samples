@@ -12,7 +12,7 @@ namespace ListViewExplorer
             Tag = AppResources.CustomTemplateDescription;
             C1ListView.ItemsSource = Person.Generate(1000000);
 
-            cbSelectionMode.SelectedIndex = 1;
+            cbSelectionMode.SelectedIndex = 0;
             cbShowCheckBox.IsChecked = true;
 
             C1ListView.Orientation = Orientation.Vertical;

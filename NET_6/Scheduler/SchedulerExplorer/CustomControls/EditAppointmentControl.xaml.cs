@@ -7,13 +7,14 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 
-using C1.C1Schedule;
+using C1.Schedule;
 using C1.WPF;
 using C1.WPF.DateTimeEditors;
 using C1.WPF.Schedule;
 using C1.WPF.Core;
 using C1.WPF.Docking;
 using C1.WPF.Localization;
+using C1.Schedule;
 
 namespace SchedulerExplorer
 {
@@ -79,7 +80,7 @@ namespace SchedulerExplorer
                     ((System.ComponentModel.INotifyPropertyChanged)_appointment).PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(appointment_PropertyChanged);
                     if (_appointment.ParentCollection != null)
                     {
-                        _scheduler = ((C1ScheduleStorage)_appointment.ParentCollection.ParentStorage.ScheduleStorage).Scheduler;
+                        _scheduler = (C1Scheduler)((C1.WPF.Schedule.C1ScheduleStorage)_appointment.ParentCollection.ParentStorage.ScheduleStorage).Scheduler;
                         if (_appointment.AllDayEvent)
                         {
                             _defaultStart = _scheduler.CalendarHelper.StartDayTime;

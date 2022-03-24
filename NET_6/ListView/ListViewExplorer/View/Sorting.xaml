@@ -6,7 +6,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <c1:C1Button x:Name="btnSort" Margin="10 0 0 10" HorizontalAlignment="Left" Click="btnSort_Click" />
-        <c1:C1ListView x:Name="listView" Grid.Row="1" ItemHeight="30" DisplayMemberPath="Name"/>
+        <c1:C1ListView x:Name="listView" Grid.Row="1" ItemHeight="30" DisplayMemberPath="Name" Margin="10 0 10 10"/>
 
     </Grid>
 </UserControl>

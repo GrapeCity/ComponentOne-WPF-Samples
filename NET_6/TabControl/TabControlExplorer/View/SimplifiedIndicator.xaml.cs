@@ -26,7 +26,7 @@ namespace TabControlExplorer
             {
                 try
                 {
-                    Dock val = (Dock)Enum.Parse(typeof(Dock), e.NewValue as string);
+                    Dock val = (Dock)Enum.Parse(typeof(Dock), (e.NewValue as C1ComboBoxItem).Content as string);
                     if (val == Dock.Left || val == Dock.Right)
                     {
                         (indicatorPlacement.Items[0] as C1ComboBoxItem).IsEnabled = false;
@@ -69,7 +69,7 @@ namespace TabControlExplorer
             {
                 try
                 {
-                    c1Tab.IndicatorPlacement = (Dock)Enum.Parse(typeof(Dock), e.NewValue as string);
+                    c1Tab.IndicatorPlacement = (Dock)Enum.Parse(typeof(Dock), (e.NewValue as C1ComboBoxItem).Content as string);
                 }
                 catch { }
             }
@@ -81,7 +81,7 @@ namespace TabControlExplorer
             {
                 try
                 {
-                    c1Tab.IndicatorVisibility = (Visibility)Enum.Parse(typeof(Visibility), e.NewValue as string);
+                    c1Tab.IndicatorVisibility = (Visibility)Enum.Parse(typeof(Visibility), (e.NewValue as C1ComboBoxItem).Content as string);
                 }
                 catch { }
             }

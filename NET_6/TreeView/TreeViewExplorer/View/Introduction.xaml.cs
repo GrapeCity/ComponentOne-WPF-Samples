@@ -131,5 +131,23 @@ namespace TreeViewExplorer
 
         #endregion
 
+        private void cbShowCheckBox_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (WindowExplorerTreeView == null) return;
+            WindowExplorerTreeView.ShowCheckboxes = !WindowExplorerTreeView.ShowCheckboxes;
+        }
+
+        private void cbSelectionMode_SelectedIndexChanged(object sender, C1.WPF.Core.PropertyChangedEventArgs<int> e)
+        {
+            if (WindowExplorerTreeView == null) return;
+            if (e.NewValue == 0)
+                WindowExplorerTreeView.SelectionMode = C1.WPF.Core.C1SelectionMode.Single;
+
+            if (e.NewValue == 1)
+                WindowExplorerTreeView.SelectionMode = C1.WPF.Core.C1SelectionMode.Extended;
+
+            if (e.NewValue == 2)
+                WindowExplorerTreeView.SelectionMode = C1.WPF.Core.C1SelectionMode.Multiple;
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace ColorPickerExplorer.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -79,7 +79,7 @@ namespace ColorPickerExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose to include a basic color palette with preselected and standard colors, an advanced palette that users can use to completely customize their color selection, or both! ColorPicker for WPF even includes transparency, hexadecimal color, and RGB and HLS color model support to provide a rich visual color input interface..
+        ///   Looks up a localized string similar to Choose to include a basic color palette with preselected and standard colors, an advanced palette that users can use to completely customize their color selection, or both! ColorPicker for WPF even includes transparency, hexadecimal color, and RGB and HSL color model support to provide a rich visual color input interface..
         /// </summary>
         internal static string Tag {
             get {

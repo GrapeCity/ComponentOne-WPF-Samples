@@ -19,7 +19,7 @@ namespace MenuExplorer
                                 Properties.Resources.DropDownMenuTitle,
                                 new DropDownMenu()),
                 new SampleItem(Properties.Resources.DemoRadialMenuTitle,
-                                Properties.Resources.DemoRadialMenuDesc,
+                                Properties.Resources.DemoRadialMenuTitle,
                                 new DemoRadialMenu()),
                 new SampleItem(Properties.Resources.CustomRadialContextMenuTitle,
                                 Properties.Resources.CustomRadialContextMenuTitle,

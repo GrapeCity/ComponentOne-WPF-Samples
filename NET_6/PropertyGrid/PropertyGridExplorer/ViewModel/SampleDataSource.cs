@@ -14,7 +14,13 @@ namespace PropertyGridExplorer
                                 new Demo()),
                 new SampleItem(Properties.Resources.PropertyGridAutoPropsTitle,
                                 Properties.Resources.PropertyGridAutoPropsTitle,
-                                new AutoProperties())
+                                new AutoProperties()),
+                new SampleItem(Properties.Resources.CustomEditorsTitle,
+                                Properties.Resources.CustomEditorsTitle,
+                                new CustomEditors()),
+                new SampleItem(Properties.Resources.DataObjectPropertiesTitle,
+                                Properties.Resources.DataObjectPropertiesTitle,
+                                new DataObjectProperties())
             };
         }
 

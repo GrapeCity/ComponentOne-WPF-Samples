@@ -145,9 +145,9 @@
     <value>TreeViewエクスプローラー</value>
   </data>
   <data name="LoadOnDemand" xml:space="preserve">
-    <value>This sample shows how to load C1TreeViewItem on demand to improve application loading performance.</value>
+    <value>このサンプルでは、C1TreeViewItem をオンデマンドでロードし、アプリケーションの読み込みパフォーマンスを向上させる方法を示します。</value>
   </data>
   <data name="LoadOnDemandTitle" xml:space="preserve">
-    <value>Load On Demand</value>
+    <value>オンデマンドロード</value>
   </data>
 </root>

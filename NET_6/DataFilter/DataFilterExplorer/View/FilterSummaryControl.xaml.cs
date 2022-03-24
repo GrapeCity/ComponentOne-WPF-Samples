@@ -18,7 +18,7 @@ namespace DataFilterExplorer
         public FilterSummarySample()
         {
             InitializeComponent();
-            Tag = AppResources.FilterSummaryTag;
+            Tag = AppResources.FilterSummaryDescription;
             _data = new C1DataCollection<Car>(DataProvider.GetCars());
             flexGrid.ItemsSource = _data;
             c1DataFilter1.ItemsSource = _data;

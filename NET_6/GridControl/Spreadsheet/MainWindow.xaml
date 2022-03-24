@@ -1,0 +1,36 @@
+﻿<Window x:Class="Spreadsheet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Spreadsheet"
+        mc:Ignorable="d" Height="450" Width="800">
+    <Grid>
+        <c1:C1GridControl x:Name="grid" 
+                     FontSize="12" 
+                     GridLinesVisibility="All" 
+                     SelectionMode="CellRange"
+                     ShowMarquee="True"
+                     MouseOverMode="None"
+                     FocusVisualStyle="{x:Null}"
+                     BorderBrush="#d4d4d4">
+            <c1:C1GridControl.Adapter>
+                <local:SpreadsheetAdapter>
+                    <local:SpreadsheetAdapter.ColumnHeaderSelectedStyle>
+                        <Style TargetType="c1:GridControlCellView">
+                            <Setter Property="Background" Value="#e1e1e1"/>
+                            <Setter Property="Foreground" Value="#217346"/>
+                        </Style>
+                    </local:SpreadsheetAdapter.ColumnHeaderSelectedStyle>
+                    <local:SpreadsheetAdapter.RowHeaderSelectedStyle>
+                        <Style TargetType="c1:GridControlCellView">
+                            <Setter Property="Background" Value="#e1e1e1"/>
+                            <Setter Property="Foreground" Value="#217346"/>
+                        </Style>
+                    </local:SpreadsheetAdapter.RowHeaderSelectedStyle>
+                </local:SpreadsheetAdapter>
+            </c1:C1GridControl.Adapter>
+        </c1:C1GridControl>
+    </Grid>
+</Window>

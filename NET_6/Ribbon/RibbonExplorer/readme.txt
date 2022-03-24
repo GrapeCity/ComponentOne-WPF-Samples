@@ -6,4 +6,4 @@ C1Toolbarstrip- lightweight toolstrip control which can have vertical and horizo
 
 C1Toolbar - ribbon-like toolbar control with tabs, groups and commanding support.
 
-C1SimplifiedRibbon - ribbon-like control with new compact representation followed by MS Office 365 updates. 
+C1Ribbon - ribbon-like control with new compact representation followed by MS Office 365 updates. 

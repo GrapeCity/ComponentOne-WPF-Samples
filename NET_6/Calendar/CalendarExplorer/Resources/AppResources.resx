@@ -81,7 +81,7 @@
               <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="data">s
+          <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
@@ -123,7 +123,7 @@
   <data name="CustomUITitle" xml:space="preserve">
     <value>UI Customization</value>
   </data>
-  <data name="AdvancedCustomUIDescription" xml:space="preserve">  
+  <data name="AdvancedCustomUIDescription" xml:space="preserve">
     <value>Besides common properties like border, width, height... you can customize the calendar user interface via Day of Week, Day in Month, and Icon templates.</value>
   </data>
   <data name="AdvancedCustomUITitle" xml:space="preserve">
@@ -137,5 +137,17 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>CalendarExplorer</value>
+  </data>
+  <data name="WeekdaysDescription" xml:space="preserve">
+    <value>Shows how to customize Calendar to allow only selecting weekdays.</value>
+  </data>
+  <data name="WeekdaysTitle" xml:space="preserve">
+    <value>Weekdays</value>
+  </data>
+  <data name="WeekSelectionDescription" xml:space="preserve">
+    <value>Shows how to implement week-selection</value>
+  </data>
+  <data name="WeekSelectionTitle" xml:space="preserve">
+    <value>WeekSelection</value>
   </data>
 </root>

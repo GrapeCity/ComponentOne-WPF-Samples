@@ -19,7 +19,7 @@ namespace CalendarExplorer.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -120,6 +120,42 @@ namespace CalendarExplorer.Resources {
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to customize Calendar to allow only selecting weekdays..
+        /// </summary>
+        internal static string WeekdaysDescription {
+            get {
+                return ResourceManager.GetString("WeekdaysDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weekdays.
+        /// </summary>
+        internal static string WeekdaysTitle {
+            get {
+                return ResourceManager.GetString("WeekdaysTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to implement week-selection.
+        /// </summary>
+        internal static string WeekSelectionDescription {
+            get {
+                return ResourceManager.GetString("WeekSelectionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WeekSelection.
+        /// </summary>
+        internal static string WeekSelectionTitle {
+            get {
+                return ResourceManager.GetString("WeekSelectionTitle", resourceCulture);
             }
         }
     }

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>DocumentExplorer</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="View\OnDemand.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\DefaultDocument.pdf" />
+    <None Remove="Resources\DocumentWarning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Remove="View\OnDemand.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="C1-ball.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DefaultDocument.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.DataCollection" Version="1.0.20221.65" />
+    <PackageReference Include="C1.WPF.Core">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Document">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DocumentWarning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Export.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="View\Ssrs.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DocumentExplorer.gclicx" />
+  </ItemGroup>
+</Project>

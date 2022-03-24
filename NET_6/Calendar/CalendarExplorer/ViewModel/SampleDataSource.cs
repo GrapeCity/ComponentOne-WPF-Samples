@@ -25,7 +25,19 @@ namespace CalendarExplorer
                     AppResources.AdvancedCustomUITitle,
                     AppResources.AdvancedCustomUITitle,
                     AppResources.AdvancedCustomUIDescription,
-                    new AdvancedUI())
+                    new AdvancedUI()),
+
+                new SampleItem(
+                    AppResources.WeekdaysTitle,
+                    AppResources.WeekdaysTitle,
+                    AppResources.WeekdaysDescription,
+                    new Weekdays()),
+
+                new SampleItem(
+                    AppResources.WeekSelectionTitle,
+                    AppResources.WeekSelectionTitle,
+                    AppResources.WeekSelectionDescription,
+                    new WeekSelection()),
             };
         }
 

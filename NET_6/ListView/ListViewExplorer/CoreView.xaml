@@ -49,7 +49,7 @@
                 <TextBlock Text="{Binding Description}" Style="{StaticResource descriptionStyle}" />
             </Expander>
             <Border Grid.Row="2">
-                <ContentControl Content="{Binding Sample}" />
+                <ContentControl Content="{Binding Sample}" IsTabStop="False"/>
             </Border>
         </Grid>
     </Grid>

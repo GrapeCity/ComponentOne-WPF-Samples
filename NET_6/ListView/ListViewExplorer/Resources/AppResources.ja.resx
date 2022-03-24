@@ -121,81 +121,115 @@
     <value>Flickr</value>
   </data>
   <data name="FlickrDescription" xml:space="preserve">
-    <value>Shows how to load photos from Flickr, shows preview when photo is not fully loaded yet</value>
+    <value>Flickr から写真をロードする方法を示し、写真がまだ完全にロードされていない場合のプレビューを表示します。</value>
+    <comment>Shows how to load photos from Flickr, shows preview when photo is not fully loaded yet</comment>
   </data>
   <data name="CustomTemplateDescription" xml:space="preserve">
-    <value>Shows how to use custom DataTemplate with C1ListView.</value>
+    <value>C1ListView でカスタム DataTemplate を使用する方法を示します。</value>
+    <comment>Shows how to use custom DataTemplate with C1ListView.</comment>
   </data>
   <data name="CustomTemplateTitle" xml:space="preserve">
-    <value>Custom Template</value>
+    <value>カスタムテンプレート</value>
+    <comment>Custom Template</comment>
   </data>
   <data name="FilterDescription" xml:space="preserve">
-    <value>Shows how to filter a list or item just by tying in a text box.</value>
+    <value>テキストボックスに入力するだけでリストまたはアイテムをフィルタリングする方法を示します。</value>
+    <comment>Shows how to filter a list or item just by tying in a text box.</comment>
   </data>
   <data name="FilterTitle" xml:space="preserve">
-    <value>Filtering</value>
+    <value>フィルタリング</value>
+    <comment>Filtering</comment>
   </data>
   <data name="GroupDescription" xml:space="preserve">
-    <value>Display a grouped list of items.</value>
+    <value>アイテムのグループ化されたリストを表示します。</value>
+    <comment>Display a grouped list of items.</comment>
   </data>
   <data name="GroupTitle" xml:space="preserve">
-    <value>Grouping</value>
+    <value>グループ化</value>
+    <comment>Grouping</comment>
   </data>
   <data name="SortDescription" xml:space="preserve">
-    <value>You can easily sort the C1ListView asynchronously in either direction through the C1DataCollection.</value>
+    <value>C1DataCollection を使用して、C1ListView をどちらの方向にも非同期で簡単に並べ替えることができます。</value>
+    <comment>You can easily sort the C1ListView asynchronously in either direction through the C1DataCollection.</comment>
   </data>
   <data name="SortTitle" xml:space="preserve">
-    <value>Sorting</value>
+    <value>ソート</value>
+    <comment>Sorting</comment>
   </data>
   <data name="PagingDescription" xml:space="preserve">
-    <value>Get a ListView with paging using C1ListView, C1DataPager and C1DataCollection. Like the virtual mode and on-demand loading, paging is supported in C1ListView by the help of C1DataCollection.</value>
+    <value>C1ListView、C1DataPager、および C1DataCollection を使用して、ページングを使用して ListView を取得します。仮想モードやオンデマンドロードと同様に、ページングは C1DataCollection の助けを借りて C1ListView でサポートされています。</value>
+    <comment>Get a ListView with paging using C1ListView, C1DataPager and C1DataCollection. Like the virtual mode and on-demand loading, paging is supported in C1ListView by the help of C1DataCollection.</comment>
   </data>
   <data name="PagingTitle" xml:space="preserve">
-    <value>Paging</value>
+    <value>ページ化</value>
+    <comment>Paging</comment>
   </data>
   <data name="VirtualModeDescription" xml:space="preserve">
-    <value>C1ListView supports data virtualization for loading large data sets in chunks or pages as the user scrolls. The list knows the total number of rows but only loads and displays those that are visible to the user. This virtualization technique is supported by the help of C1DataCollection.</value>
+    <value>C1ListView は、ユーザーがスクロールするときにチャンクまたはページで大きなデータセットをロードするためのデータ仮想化をサポートします。リストは行の総数を知っていますが、ユーザーに表示されている行のみをロードして表示します。この仮想化手法は、C1DataCollection の助けを借りてサポートされています。</value>
+    <comment>C1ListView supports data virtualization for loading large data sets in chunks or pages as the user scrolls. The list knows the total number of rows but only loads and displays those that are visible to the user. This virtualization technique is supported by the help of C1DataCollection.</comment>
   </data>
   <data name="VirtualModeTitle" xml:space="preserve">
-    <value>Virtual Mode</value>
+    <value>仮想モード</value>
+    <comment>Virtual Mode</comment>
   </data>
   <data name="OnDemandDescription" xml:space="preserve">
-    <value>With on-demand loading, C1ListView loads items as the user scrolls. Since the list does not know the total number of rows, the scroll bar size and position changes as more data is loaded into view. This virtualization technique is supported by the help of C1DataCollection.</value>
+    <value>オンデマンドロードでは、C1ListView はユーザーがスクロールするとアイテムをロードします。リストには行の総数がわからないため、ビューに読み込まれるデータが増えると、スクロールバーのサイズと位置が変わります。 この仮想化手法は、C1DataCollection の助けを借りてサポートされています。</value>
+    <comment>With on-demand loading, C1ListView loads items as the user scrolls. Since the list does not know the total number of rows, the scroll bar size and position changes as more data is loaded into view. This virtualization technique is supported by the help of C1DataCollection.</comment>
   </data>
   <data name="OnDemandTitle" xml:space="preserve">
-    <value>On Demand</value>
+    <value>オンデマンド</value>
+    <comment>On Demand</comment>
   </data>
   <data name="Unbound" xml:space="preserve">
-    <value>Unbound</value>
+    <value>アンバウンド</value>
+    <comment>Unbound</comment>
   </data>
   <data name="UnbounDesc" xml:space="preserve">
-    <value>Shows how to add ListViewItem on xaml directly.</value>
+    <value>xaml に ListViewItem を直接追加する方法を示します。</value>
+    <comment>Shows how to add ListViewItem on xaml directly.</comment>
   </data>
   <data name="TileListView" xml:space="preserve">
-    <value>Tile List View</value>
+    <value>タイルリストビュー</value>
+    <comment>Tile List View</comment>
   </data>
   <data name="TileListViewTag" xml:space="preserve">
-    <value>Shows how Tile List View works.</value>
+    <value>タイルリストビューがどのように機能するかを示します。</value>
+    <comment>Shows how Tile List View works.</comment>
   </data>
   <data name="StylingDesc" xml:space="preserve">
-    <value>Shows how to customize style of items using ItemContainerStyle</value>
+    <value>ItemContainerStyle を使用して項目のスタイルをカスタマイズする方法を示します。</value>
+    <comment>Shows how to customize style of items using ItemContainerStyle</comment>
   </data>
   <data name="StylingTitle" xml:space="preserve">
-    <value>Item Container Style</value>
+    <value>項目コンテナスタイル</value>
+    <comment>Item Container Style</comment>
   </data>
   <data name="TemplateSelectorDesc" xml:space="preserve">
-    <value>Shows how to customize templete of items using TemplateSelector</value>
+    <value>テンプレートセレクタを使用して項目のテンプレートをカスタマイズする方法を示します。</value>
+    <comment>Shows how to customize templete of items using TemplateSelector</comment>
   </data>
   <data name="TemplateSelectorTitle" xml:space="preserve">
-    <value>Template Selector</value>
+    <value>テンプレートセレクタ</value>
+    <comment>Template Selector</comment>
   </data>
   <data name="StyleSelectorDesc" xml:space="preserve">
-    <value>Shows how ItemContainerStyleSelector works</value>
+    <value>ItemContainerStyleSelector がどのように機能するかを示します。</value>
+    <comment>Shows how ItemContainerStyleSelector works</comment>
   </data>
   <data name="StyleSelectorTitle" xml:space="preserve">
-    <value>Style Selector</value>
+    <value>スタイルセレクタ</value>
+    <comment>Style Selector</comment>
   </data>
   <data name="MainTitle" xml:space="preserve">
     <value>C1ListView Explorer</value>
+    <comment>C1ListView Explorer</comment>
+  </data>
+  <data name="CustomAppearanceDescription" xml:space="preserve">
+	<value>リストのアイテムのスタイルを設定する方法を示します。</value>
+    <comment>Shows how to style the items of the list.</comment>
+  </data>
+  <data name="CustomAppearanceTitle" xml:space="preserve">
+    <value>カスタム外観</value>
+    <comment>Custom Appearance</comment>
   </data>
 </root>

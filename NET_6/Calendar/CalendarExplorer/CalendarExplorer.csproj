@@ -49,19 +49,26 @@
     <Page Update="View\AdvancedUI.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
+    <Page Update="View\WeekSelection.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Weekdays.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Calendar">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20213.156</Version>
+      <Version>6.0.20221.205</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

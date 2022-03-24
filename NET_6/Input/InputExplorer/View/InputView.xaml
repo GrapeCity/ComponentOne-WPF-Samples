@@ -9,7 +9,7 @@
                 <c1:C1Button Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Click me" />
                 <c1:C1ToggleButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Toggle me" />
 
-                <c1:C1TextBoxBase TextWrapping="Wrap" Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Text="TextBoxBase"/>
+                <c1:C1TextBox TextWrapping="Wrap" Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Text="TextBoxBase"/>
 
                 <c1:C1ComboBox Width="200" Margin="10 20 10 20" VerticalAlignment="Center" IsTextSearchEnabled="True">
                     <c1:C1ComboBoxItem Content="Studio for Silverlight" />

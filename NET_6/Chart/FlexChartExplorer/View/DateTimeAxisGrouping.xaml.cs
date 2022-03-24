@@ -387,7 +387,7 @@ namespace FlexChartExplorer
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             string svalue = value as string;
-            return int.Parse(svalue.Substring(svalue.Length - 2));
+            return svalue!=null ? int.Parse(svalue.Substring(svalue.Length - 2)) : 0;
         }
     }
 }

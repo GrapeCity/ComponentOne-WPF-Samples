@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\Folder.png" />
+    <None Remove="Resources\GrapeCity.jpg" />
+    <None Remove="Resources\HousePlan.jpg" />
+    <None Remove="Resources\RecycleBin.png" />
+    <None Remove="Resources\Sheep.jpg" />
+    <None Remove="Resources\WarpEffect.cso" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="C1-ball.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Folder.png" />
+    <EmbeddedResource Include="Resources\GrapeCity.jpg" />
+    <EmbeddedResource Include="Resources\HousePlan.jpg" />
+    <EmbeddedResource Include="Resources\RecycleBin.png" />
+    <EmbeddedResource Include="Resources\Sheep.jpg" />
+    <EmbeddedResource Include="Resources\WarpEffect.cso" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.ja.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Transform.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup>
+    <!--<PreBuildEvent>
+      call "$(ProjectDir)Fxc\fxc.exe" /Tvs_4_0_level_9_1 /Emain /Fo "$(ProjectDir)Resources\WarpEffect.cso" "$(ProjectDir)Effects\WarpEffect.hlsl"
+    </PreBuildEvent>-->
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BitmapExplorer.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Bitmap">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DX">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>6.0.20221.205</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

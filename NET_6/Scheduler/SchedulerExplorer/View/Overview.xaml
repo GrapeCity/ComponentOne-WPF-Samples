@@ -57,6 +57,7 @@
             </c1sched:C1Scheduler>
 
             <c1:C1Calendar Name="calendar1" Grid.Column="0" MaxSelectionCount="42" 
+                           MinDate="{Binding Start, ElementName=scheduler1}" MaxDate="{Binding End, ElementName=scheduler1}"
                            BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
                            SelectionChanged="selected_date_changed"/>
 

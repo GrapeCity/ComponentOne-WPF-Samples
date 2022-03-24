@@ -30,7 +30,12 @@ namespace SchedulerExplorer
                     AppResources.DataBindingTitle,
                     AppResources.DataBindingTitle,
                     AppResources.DataBindingDescription,
-                    new DataBinding())
+                    new DataBinding()),
+                new SampleItem(
+                    AppResources.DatabaseBindingTitle,
+                    AppResources.DatabaseBindingTitle,
+                    AppResources.DatabaseBindingDescription,
+                    new DatabaseBinding())
             };
         }
 

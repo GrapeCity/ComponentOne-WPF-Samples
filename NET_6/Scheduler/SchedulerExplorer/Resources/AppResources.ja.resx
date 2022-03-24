@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="OverviewTitle" xml:space="preserve">
-    <value>カレンダーの境界線、幅、高さ、色などを変更できます。</value>
+    <value>概要</value>
     <comment>Overview</comment>
   </data>
   <data name="GroupingDescription" xml:space="preserve">
@@ -134,19 +134,25 @@
     <comment>The C1Scheduler control is a fully functional schedule that allows users to add, edit, and manage their appointments. You can customize the view of the scheduler, time scale and also load or save data.</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Calendarエクスプローラー</value>
+    <value>Schedulerエクスプローラー</value>
     <comment>SchedulerExplorer</comment>
   </data>
   <data name="CustomDialogsDescription" xml:space="preserve">
-    <value>Demonstrated Custom Dialogs for C1Scheduler</value>
+    <value>C1Scheduler のカスタムダイアログのデモです。</value>
   </data>
   <data name="CustomDialogsTitle" xml:space="preserve">
-    <value>Custom Dialogs</value>
+    <value>カスタムダイアログ</value>
   </data>
   <data name="DataBindingDescription" xml:space="preserve">
-    <value>Shows how to bind AppointmentStorage to the collection of a custom business objects.</value>
+    <value>AppointmentStorage をカスタムビジネスオブジェクトのコレクションにバインドする方法を示します。</value>
   </data>
   <data name="DataBindingTitle" xml:space="preserve">
-    <value>Data Binding</value>
+    <value>データバインディング</value>
+  </data>
+  <data name="DatabaseBindingDescription" xml:space="preserve">
+    <value>ADO.NET を使用して、スケジューラをデータベースのデータにバインドする方法を示します。</value>
+  </data>
+  <data name="DatabaseBindingTitle" xml:space="preserve">
+    <value>データベースバインディング</value>
   </data>
 </root>

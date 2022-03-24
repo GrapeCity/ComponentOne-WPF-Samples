@@ -124,7 +124,7 @@
     <value>概要</value>
   </data>
   <data name="Tag" xml:space="preserve">
-    <value>事前に選択された標準色を含む基本的なカラーパレット、ユーザーが色の選択を完全にカスタマイズできる高度なパレット、またはその両方を含めることができます。ColorPicker for WPF には、透明度、16進数カラー、RGB と HLS カラーモデルのサポートも含まれており、豊富なビジュアルカラー入力インターフェースを提供します。</value>
+    <value>事前に選択された標準色を含む基本的なカラーパレット、ユーザーが色の選択を完全にカスタマイズできる高度なパレット、またはその両方を含めることができます。ColorPicker for WPF には、透明度、16進数カラー、RGB と HSL カラーモデルのサポートも含まれており、豊富なビジュアルカラー入力インターフェースを提供します。</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>ColorPickerエクスプローラー</value>

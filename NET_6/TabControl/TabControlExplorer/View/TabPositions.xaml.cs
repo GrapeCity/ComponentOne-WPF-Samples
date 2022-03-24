@@ -22,7 +22,7 @@ namespace TabControlExplorer
         {
             try
             {
-                C1TabItemShape val = (C1TabItemShape)Enum.Parse(typeof(C1TabItemShape), e.NewValue as string);
+                C1TabItemShape val = (C1TabItemShape)Enum.Parse(typeof(C1TabItemShape), (e.NewValue as C1ComboBoxItem).Content as string);
                 if (c1Tab != null)
                 {
                     foreach (C1TabItem item in c1Tab.Items)
@@ -39,7 +39,7 @@ namespace TabControlExplorer
             {
                 try
                 {
-                    c1Tab.TabItemRotation = Convert.ToInt32(e.NewValue);
+                    c1Tab.TabItemRotation = Convert.ToInt32((e.NewValue as C1ComboBoxItem).Content);
                 }
                 catch { }
             }
@@ -51,7 +51,7 @@ namespace TabControlExplorer
             {
                 try
                 {
-                    c1Tab.TabStripPlacement = (Dock)Enum.Parse(typeof(Dock), e.NewValue as string);
+                    c1Tab.TabStripPlacement = (Dock)Enum.Parse(typeof(Dock), (e.NewValue as C1ComboBoxItem).Content as string);
                 } 
                 catch { }
             }

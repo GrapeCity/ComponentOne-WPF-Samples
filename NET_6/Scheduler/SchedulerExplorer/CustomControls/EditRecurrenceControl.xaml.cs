@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 
-using C1.C1Schedule;
+using C1.Schedule;
 using C1.WPF;
 using C1.WPF.DateTimeEditors;
 using C1.WPF.Schedule;
@@ -16,6 +16,7 @@ using System.Windows.Input;
 using C1.WPF.Core;
 using C1.WPF.Docking;
 using C1.WPF.Localization;
+using C1.Schedule;
 
 namespace SchedulerExplorer
 {
@@ -100,7 +101,7 @@ namespace SchedulerExplorer
                     _appointment = _parentWindow.Tag as Appointment;
                     if (_appointment != null && _appointment.ParentCollection != null)
                     {
-                        Scheduler = ((C1ScheduleStorage)_appointment.ParentCollection.ParentStorage.ScheduleStorage).Scheduler;
+                        Scheduler = (C1Scheduler)((C1.WPF.Schedule.C1ScheduleStorage)_appointment.ParentCollection.ParentStorage.ScheduleStorage).Scheduler;
                     }
                     if (_parentWindow.Resources.Contains("IsOld"))
                     {

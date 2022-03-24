@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:av="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="av" 
+             x:Class="SchedulerExplorer.DatabaseBinding" 
+             av:DesignWidth="928.973" av:DesignHeight="657.138">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Border Margin=" 0 0 0 10">
+            <StackPanel Margin="3" Orientation="Horizontal">
+                <Label Foreground="{DynamicResource text_Brush}" Content="View:" VerticalAlignment="Center" />
+                <c1:C1ComboBox x:Name="views" SelectedIndex="3" SelectionChanged="Views_SelectionChanged" Margin="5"
+                               IsEditable="False" Width="120" ToolTip="Change View">
+                    <c1:C1ComboBoxItem Content="Day"/>
+                    <c1:C1ComboBoxItem Content="Work Week"/>
+                    <c1:C1ComboBoxItem Content="Week"/>
+                    <c1:C1ComboBoxItem Content="Month"/>
+                    <c1:C1ComboBoxItem Content="Time Line"/>
+                </c1:C1ComboBox>
+            </StackPanel>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="197" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <c1:C1Calendar x:Name="calendar1" MaxSelectionCount="42" Margin="10 0 10 0"
+                           MinDate="{Binding Start, ElementName=scheduler}" MaxDate="{Binding End, ElementName=scheduler}"
+                           BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
+                           SelectionChanged="SelectedDate_changed"/>
+
+            <c1:C1Scheduler x:Name="scheduler" Grid.Column="1"/>
+
+        </Grid>
+    </Grid>
+</UserControl>
