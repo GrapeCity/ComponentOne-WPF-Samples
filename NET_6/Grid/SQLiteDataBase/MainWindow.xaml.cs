@@ -55,7 +55,6 @@ namespace SQLiteDataBase
                           LoadingMessage.Text = collection.IsLoading ? AppResources.LoadingMessage : "";
                   };
                 grid.ItemsSource = collection;
-                grid.CellFactory = new SkeletonLoadingCellFactory();
             }
             catch (SqliteException) { throw; }
         }
@@ -81,66 +80,4 @@ namespace SQLiteDataBase
         }
     }
 
-    public class SkeletonLoadingCellFactory : GridCellFactory
-    {
-        public override object GetCellContentType(GridCellType cellType, GridCellRange range)
-        {
-            if (cellType == GridCellType.Cell)
-            {
-                var row = Grid.Rows[range.Row] as GridBoundRow;
-                if (row != null && row.DataItem == null)
-                    return typeof(SkeletonLoadingCellContent);
-            }
-            return base.GetCellContentType(cellType, range);
-        }
-
-        public override FrameworkElement CreateCellContent(GridCellType cellType, GridCellRange range, object cellContentType)
-        {
-            if (cellContentType as Type == typeof(SkeletonLoadingCellContent))
-                return new SkeletonLoadingCellContent() { Padding = Grid.CellPadding };
-            return base.CreateCellContent(cellType, range, cellContentType);
-        }
-
-        public override void BindCellContent(GridCellType cellType, GridCellRange range, FrameworkElement cellContent)
-        {
-            if (cellContent is SkeletonLoadingCellContent skeleton)
-                skeleton.Start();
-            base.BindCellContent(cellType, range, cellContent);
-        }
-
-        public override void UnbindCellContent(GridCellType cellType, GridCellRange range, FrameworkElement cellContent)
-        {
-            if (cellContent is SkeletonLoadingCellContent skeleton)
-                skeleton.Stop();
-            base.UnbindCellContent(cellType, range, cellContent);
-        }
-    }
-
-    public class SkeletonLoadingCellContent : Control
-    {
-        public SkeletonLoadingCellContent()
-        {
-            DefaultStyleKey = typeof(SkeletonLoadingCellContent);
-        }
-
-        private Storyboard Storyboard { get; set; }
-
-        public override void OnApplyTemplate()
-        {
-            base.OnApplyTemplate();
-
-            Storyboard = ((System.Windows.Shapes.Rectangle)GetTemplateChild("Rectangle")).Resources["LoadingStoryboard"] as Storyboard;
-            Start();
-        }
-
-        public void Start()
-        {
-            Storyboard?.Begin();
-        }
-
-        public void Stop()
-        {
-            Storyboard?.Stop();
-        }
-    }
 }

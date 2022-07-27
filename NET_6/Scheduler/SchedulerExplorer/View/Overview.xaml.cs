@@ -12,7 +12,7 @@ using C1.WPF.DateTimeEditors;
 using C1.WPF.Input;
 using C1.WPF.Schedule;
 using SchedulerExplorer.Resources;
-using DateList = C1.WPF.Schedule.DateList;
+using DateList = C1.WPF.Calendar.DateList;
 using System.Globalization;
 
 namespace SchedulerExplorer
@@ -39,14 +39,14 @@ namespace SchedulerExplorer
 
             scheduler1.DataStorage.ContactStorage.ListChanged += new System.ComponentModel.ListChangedEventHandler(ContactStorage_ListChanged);
             scheduler1.LayoutUpdated += new EventHandler(scheduler1_LayoutUpdated);
-            scheduler1.VisibleDates.CollectionChanged += VisibleDates_CollectionChanged;
+        //    scheduler1.VisibleDates.CollectionChanged += VisibleDates_CollectionChanged;
 
         }
 
-        private void VisibleDates_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+  /*      private void VisibleDates_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             UpdateCalendarSelection();
-        }
+        }*/
 
         // Fill contact information after adding new contact from the Appointment form.
         void ContactStorage_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
@@ -89,7 +89,7 @@ namespace SchedulerExplorer
                 }
                 scale.IsEnabled = true;
             }
-            UpdateCalendarSelection();
+       //     UpdateCalendarSelection();
         }
 
         void views_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -134,7 +134,7 @@ namespace SchedulerExplorer
                 // Always call EndUpdate to apply all changes.
                 scheduler1.EndUpdate();
             }
-            UpdateCalendarSelection();
+        //    UpdateCalendarSelection();
         }
 
         void Import_Click(Object sender, RoutedEventArgs e)
@@ -149,7 +149,7 @@ namespace SchedulerExplorer
             C1Scheduler.ExportCommand.Execute(null, scheduler1);
         }
 
-        void selected_date_changed(object sender, CalendarSelectionChangedEventArgs e)
+   /*     void selected_date_changed(object sender, CalendarSelectionChangedEventArgs e)
         {
                 if (!_updatingSelection)
                 {
@@ -165,9 +165,9 @@ namespace SchedulerExplorer
                     }
                     scheduler1.VisibleDates.EndUpdate();
                 }
-        }
+        }*/
 
-        void UpdateCalendarSelection()
+    /*    void UpdateCalendarSelection()
         {
             if ( !_updatingSelection && (calendar1.SelectedDates == null || 
                 ( scheduler1.VisibleDates.Count != calendar1.SelectedDates.Count
@@ -177,6 +177,6 @@ namespace SchedulerExplorer
                 calendar1.SelectedDates = scheduler1.VisibleDates.ToList();
                 _updatingSelection = false;
             }
-        }
+        }*/
     }
 }

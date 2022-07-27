@@ -48,14 +48,6 @@ namespace DockingExplorer
                 }
             };
 
-            Unloaded += delegate
-            {
-                foreach (Window w in Application.Current.Windows)
-                {
-                    if (w is WPFWindow)
-                        w.Close();
-                }
-            };
         }
     }
 }

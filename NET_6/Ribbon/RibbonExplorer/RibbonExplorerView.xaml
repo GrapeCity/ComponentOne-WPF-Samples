@@ -48,11 +48,11 @@
             <Border BorderBrush="LightGray" BorderThickness="0 1 0 0">
                 <TextBlock Text="{Binding Title}" Style="{StaticResource titleStyle}"/>
             </Border>
-            <Expander Grid.Row="1" Style="{StaticResource ExpanderStyle}" BorderBrush="LightGray" BorderThickness="0 1 0 0">
+            <Expander Grid.Row="1" Style="{StaticResource ExpanderStyle}" BorderBrush="LightGray" BorderThickness="0 1 0 0" IsTabStop="False">
                 <TextBlock Text="{Binding Description}" Style="{StaticResource descriptionStyle}" />
             </Expander>
             <Border Grid.Row="2">
-                <ContentControl Content="{Binding Sample}" />
+                <ContentControl Content="{Binding Sample}" IsTabStop="False"/>
             </Border>
         </Grid>
     </Grid>

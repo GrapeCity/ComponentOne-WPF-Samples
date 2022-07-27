@@ -1,13 +1,14 @@
 ﻿<UserControl x:Class="ListViewExplorer.Flickr"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:resources="clr-namespace:ListViewExplorer.Resources" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
     <Grid>
         <StackPanel x:Name="loading" VerticalAlignment="Center">
-            <TextBlock Text="Retrieving data from Flickr..." TextAlignment="Center" />
+            <TextBlock Text="{x:Static resources:AppResources.FlickrRetrievingData}" TextAlignment="Center" />
             <!--<c1:C1ProgressBar IsIndeterminate="True"/>-->
         </StackPanel>
-        <Button x:Name="retry" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Retry" Visibility="Collapsed" Click="Retry_Click" />
+        <c1:C1Button x:Name="retry" HorizontalAlignment="Center" VerticalAlignment="Center" Content="x:Static resources:AppResources.Retry}" Visibility="Collapsed" Click="Retry_Click" />
         <c1:C1ListView x:Name="listView"
                       Background="Transparent" 
                       Foreground="White" 
@@ -104,7 +105,7 @@
                                             </VisualState>
                                         </VisualStateGroup>
                                     </VisualStateManager.VisualStateGroups>
-                                    <CheckBox x:Name="CheckBox" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    <c1:C1CheckBox x:Name="CheckBox" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                           Margin="{TemplateBinding Padding}" IsChecked="{TemplateBinding IsSelected}"
                                           Opacity="0" Foreground="{TemplateBinding Foreground}"/>
                                     <Path x:Name="HintingCheckMark" Data="F1 M133.1,17.9 L137.2,13.2 L144.6,19.6 L156.4,5.8 L161.2,9.9 L145.6,28.4 z" Fill="{TemplateBinding SelectedBackground}" HorizontalAlignment="Right" Margin="{TemplateBinding BorderThickness}" Opacity="0" Stretch="Uniform" VerticalAlignment="Top" Width="6" />

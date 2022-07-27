@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
-    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}" x:Name="root"
     mc:Ignorable="d">
 
     <Grid>
@@ -19,11 +19,12 @@
         </Grid.RowDefinitions>
         <StackPanel x:Name="stackPanel" Orientation="Horizontal">
             <Label VerticalAlignment="Center">BinWidth :</Label>
-            <TextBox x:Name="tbBinWidth" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="TextBox_TextChanged"/>
-            <CheckBox Content="Normal Curve" x:Name="cbShow" VerticalAlignment="Center" Margin="10 0 20 0" Checked="cbShow_Checked" Unchecked="cbShow_UnChecked"/>
+            <Chart:C1TextBox x:Name="tbBinWidth" Width="100" Foreground="{Binding Foreground, ElementName=root}"
+                             VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="TextBox_TextChanged"/>
+            <Chart:C1CheckBox Content="Normal Curve" x:Name="cbShow" VerticalAlignment="Center" Margin="10 0 20 0" Checked="cbShow_Checked" Unchecked="cbShow_UnChecked"/>
             <Chart:C1ComboBox x:Name="comboBoxAppearanceType" Margin="10" ItemsSource="{Binding DataContext.Type}"
                               SelectedValue="{Binding ElementName=histogramSeries, Path=AppearanceType, Mode=TwoWay}"/>
-            <CheckBox Content="Cumulative Mode" x:Name="cumulativeShow" VerticalAlignment="Center" Margin="10 0 20 0" Checked="cumulativeShow_Checked"
+            <Chart:C1CheckBox Content="Cumulative Mode" x:Name="cumulativeShow" VerticalAlignment="Center" Margin="10 0 20 0" Checked="cumulativeShow_Checked"
                       Unchecked="cumulativeShow_UnChecked"/>
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" ChartType="Histogram" ItemsSource="{Binding DataContext.Data}" Grid.Row="1" Binding="Y" BindingX="X" Rendered="flexChart_Rendered">

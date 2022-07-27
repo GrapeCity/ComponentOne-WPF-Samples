@@ -117,31 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-	<data name="PdfViewerDesc" xml:space="preserve">
-    <value>This sample shows how to display PDF document in FlexViewer.</value>
+  <data name="PdfViewerDesc" xml:space="preserve">
+    <value>このサンプルは、FlexViewer で PDF ドキュメントを表示する方法を示しています。</value>
+    <comment>This sample shows how to display PDF document in FlexViewer.</comment>
   </data>
-	<data name="PdfViewerTitle" xml:space="preserve">
-    <value>Pdf Viewer</value>
+  <data name="PdfViewerTitle" xml:space="preserve">
+    <value>Pdf ビューワ</value>
+    <comment>Pdf Viewer</comment>
   </data>
-	<data name="FlexReportDesc" xml:space="preserve">
-    <value>This sample shows how to display FlexReport in FlexViewer.</value>
+  <data name="FlexReportViewerDesc" xml:space="preserve">
+    <value>このサンプルは、FlexViewer で FlexReport を表示する方法を示します。</value>
+    <comment>This sample shows how to display FlexReport in FlexViewer.</comment>
   </data>
-	<data name="FlexReportTitle" xml:space="preserve">
-    <value>FlexReport Viewer</value>
+  <data name="FlexReportViewerTitle" xml:space="preserve">
+    <value>FlexReport ビューワ</value>
+    <comment>FlexReport Viewer</comment>
   </data>
-	<data name="SsrsViewerDesc" xml:space="preserve">
-    <value>This sample shows how to load and display Ssrs reports in FlexViewer.</value>
+  <data name="SsrsViewerDesc" xml:space="preserve">
+    <value>このサンプルは、FlexViewer で Ssrs レポートをロードして表示する方法を示します。</value>
+    <comment>This sample shows how to load and display Ssrs reports in FlexViewer.</comment>
   </data>
-	<data name="SsrsViewerTitle" xml:space="preserve">
-    <value>Ssrs Viewer</value>
+  <data name="SsrsViewerTitle" xml:space="preserve">
+    <value>Ssrs ビューワ</value>
+    <comment>Ssrs Viewer</comment>
   </data>
-	<data name="CustomAppearanceDesc" xml:space="preserve">
-    <value>This sample shows how to create a custom toolbar with FlexViewer.</value>
+  <data name="CustomAppearanceDesc" xml:space="preserve">
+    <value>このサンプルは、FlexViewer を使用してカスタムツールバーを作成する方法を示します。</value>
+    <comment>This sample shows how to create a custom toolbar with FlexViewer.</comment>
   </data>
-	<data name="CustomAppearanceTitle" xml:space="preserve">
-    <value>Custom Appearance</value>
+  <data name="CustomAppearanceTitle" xml:space="preserve">
+    <value>カスタム外観</value>
+    <comment>Custom Appearance</comment>
   </data>
-	<data name="Title" xml:space="preserve">
-    <value>FlexViewerExplorer</value>
+  <data name="Title" xml:space="preserve">
+    <value>FlexViewer エクスプローラ</value>
+    <comment>FlexViewerExplorer</comment>
   </data>
 </root>

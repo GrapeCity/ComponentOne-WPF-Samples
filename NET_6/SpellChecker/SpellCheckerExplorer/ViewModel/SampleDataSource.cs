@@ -12,15 +12,15 @@ namespace SpellCheckerExplorer
 
             AllItems.Add(new SampleItem(
                 Properties.Resources.SpellCheckerTextDemoTitle,
-                Properties.Resources.SpellCheckerTextDemoDescription,
+                Properties.Resources.SpellCheckerTextDemoTitle,
                 new SpellCheckerTextDemo()));
             AllItems.Add(new SampleItem(
                 Properties.Resources.SpellCheckerRtbDemoTitle,
-                Properties.Resources.SpellCheckerRtbDemoDescription,
+                Properties.Resources.SpellCheckerRtbDemoTitle,
                 new SpellCheckerRichTextBoxDemo()));
             AllItems.Add(new SampleItem(
                 Properties.Resources.MultiLanguageDemoTitle,
-                Properties.Resources.MultiLanguageDemoDescription,
+                Properties.Resources.MultiLanguageDemoTitle,
                 new MultiLanguageDemo()));
         }
 

@@ -171,28 +171,28 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
   <data name="TemplateTitle" xml:space="preserve">
     <value>Custom Template</value>
   </data>
-    <data name="CubeAnalysisDesc" xml:space="preserve">
+  <data name="CubeAnalysisDesc" xml:space="preserve">
     <value>Shows how to work with cube data source</value>
   </data>
-    <data name="CubeAnalysisTitle" xml:space="preserve">
+  <data name="CubeAnalysisTitle" xml:space="preserve">
     <value>Cube Analysis</value>
   </data>
-    <data name="TopNDemoDesc" xml:space="preserve">
+  <data name="TopNDemoDesc" xml:space="preserve">
     <value>Shows how to work with TopN filter</value>
   </data>
-    <data name="TopNDemoTitle" xml:space="preserve">
+  <data name="TopNDemoTitle" xml:space="preserve">
     <value>Top N Filter</value>
   </data>
   <data name="GroupRangesDesc" xml:space="preserve">
     <value>Shows how to work with group ranges</value>
   </data>
-    <data name="GroupRangesTitle" xml:space="preserve">
+  <data name="GroupRangesTitle" xml:space="preserve">
     <value>Group Ranges</value>
   </data>
   <data name="ConditionalFormattingDesc" xml:space="preserve">
     <value>Shows how to use apply conditional formatting to an FlexPivot control</value>
   </data>
-    <data name="ConditionalFormattingTitle" xml:space="preserve">
+  <data name="ConditionalFormattingTitle" xml:space="preserve">
     <value>Conditional Formatting</value>
   </data>
   <data name="PredefinedPivotViewTooltip" xml:space="preserve">
@@ -203,5 +203,17 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
   </data>
   <data name="Title" xml:space="preserve">
     <value>FlexPivotExplorer</value>
+  </data>
+  <data name="CollapseAll" xml:space="preserve">
+    <value>Collapse All</value>
+  </data>
+  <data name="ConditionFormat" xml:space="preserve">
+    <value>Conditional Formatting</value>
+  </data>
+  <data name="GroupPrice" xml:space="preserve">
+    <value>Group prices</value>
+  </data>
+  <data name="SaleByCountry" xml:space="preserve">
+    <value>Sales by Country and Person</value>
   </data>
 </root>

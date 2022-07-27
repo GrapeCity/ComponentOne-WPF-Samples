@@ -32,11 +32,15 @@ namespace DataFilterExplorer
         {
             CombinationExpression filterExpression = null;
 
-            if (File.Exists(pathToXmlFile))
+            try
             {
-                filterExpression = LoadFilterFromFile(pathToXmlFile);
-                filterEditor.Expression = filterExpression;
+                if (File.Exists(pathToXmlFile))
+                {
+                    filterExpression = LoadFilterFromFile(pathToXmlFile);
+                    filterEditor.Expression = filterExpression;
+                }
             }
+            catch { }
 
             await filterEditor.ApplyFilterAsync();
         }
@@ -60,12 +64,16 @@ namespace DataFilterExplorer
 
         private void SaveFilterToFile(string filePath)
         {
-            var expression = filterEditor.Expression;
-            var xmlSerializer = new XmlSerializer(typeof(CombinationExpression));
-            using (var fs = File.Create(filePath))
+            try
             {
-                xmlSerializer.Serialize(fs, expression);
+                var expression = filterEditor.Expression;
+                var xmlSerializer = new XmlSerializer(typeof(CombinationExpression));
+                using (var fs = File.Create(filePath))
+                {
+                    xmlSerializer.Serialize(fs, expression);
+                }
             }
+            catch { }
         }
     }    
 }

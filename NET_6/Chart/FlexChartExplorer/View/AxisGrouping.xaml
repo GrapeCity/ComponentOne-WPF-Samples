@@ -6,6 +6,7 @@
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:FlexChartExplorer"
              DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             xmlns:res="clr-namespace:FlexChartExplorer.Resources"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -31,7 +32,8 @@
                            Width="240"  Margin="10 0 20 0"/>
         </StackPanel>
         <c1:FlexChart x:Name="flexChart" Background="White" ChartType="Column" BindingX="Country" 
-                        ItemsSource="{Binding Data}" ToolTipContent="{}{x}&#x0a;{seriesName}&#x0a;{y:n0}" Header="World GDP Ranking" Grid.Row="1" >
+                      ItemsSource="{Binding Data}" ToolTipContent="{}{x}&#x0a;{seriesName}&#x0a;{y:n0}"
+                      Header="{x:Static res:AppResources.WorldGDPRanking}" Grid.Row="1" >
             <c1:FlexChart.HeaderStyle>
                 <c1:ChartStyle FontSize="20" FontFamily="GenericSansSerif"/>
             </c1:FlexChart.HeaderStyle>

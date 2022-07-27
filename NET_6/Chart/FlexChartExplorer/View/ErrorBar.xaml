@@ -66,7 +66,7 @@
                       x:Name="cboEndStyle"  Margin="10 0 0 0" SelectedIndex="0"  MinWidth="120"
                       ItemTemplate="{StaticResource cboEndStyleTemplate}"
                       SelectedValue="{Binding ElementName=errorBarSeries,Path=EndStyle,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
-            <CheckBox VerticalAlignment="Center" Margin="10,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated}">Rotate</CheckBox>
+            <Chart:C1CheckBox VerticalAlignment="Center" Margin="10,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated}">Rotate</Chart:C1CheckBox>
         </StackPanel>
         <Chart:FlexChart BindingX="Country" ItemsSource="{Binding DataContext.Data}" Grid.Row="1" x:Name="flexChart" ToolTipContent="{}{y}">
             <Chart:ErrorBar x:Name="errorBarSeries" Binding="Sales" ErrorValue="5">

@@ -69,21 +69,15 @@ namespace HierarchicalRows
             var tasks = new List<Task> { task1, task2, task3 };
             #endregion
 
-            grid.Rows.CollectionChanged += OnRowsCollectionChanged;
             grid.CellFactory = new TasksCellFactory();
-            grid.ItemsSource = Task.GetAllTasks(tasks);
-        }
+            var allTasks = Task.GetAllTasks(tasks).ToList();
+            grid.ItemsSource = allTasks;
 
-        private void OnRowsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
-        {
-            if (e.Action == NotifyCollectionChangedAction.Reset)
+            for (int i = 0; i < allTasks.Count; i++)
             {
-                foreach (var row in grid.Rows)
-                {
-                    var task = row.DataItem as Task;
-                    task.PropertyChanged += OnTaskPropertyChanged;
-                    row.IsVisible = task.IsVisible;
-                }
+                var task = allTasks[i];
+                task.PropertyChanged += OnTaskPropertyChanged;
+                grid.Rows[i].IsVisible = task.IsVisible;
             }
         }
 
@@ -120,7 +114,21 @@ namespace HierarchicalRows
             if (e.Property.Name == "WBS")
                 e.Column.Width = GridLength.Auto;
             if (e.Property.Name == "Duration")
-                e.Column.ValueConverter = DelegateConverter.Create((value, type, parameter, culture) => string.Format("{0:N1} days?", ((TimeSpan)value).TotalDays));
+                e.Column.ValueConverter = DelegateConverter.Create(
+                    (value, type, parameter, culture) => string.Format("{0:N1} days?", ((TimeSpan)value).TotalDays),
+                    (value, type, parameter, culture) =>
+                    {
+                        var str = value?.ToString() ?? "";
+                        TimeSpan timeSpan;
+                        if (TimeSpan.TryParse(str, out timeSpan))
+                            return timeSpan;
+                        if (str.EndsWith(" days?"))
+                            str = str.Substring(0, str.Length - " days?".Length);
+                        double totalDays;
+                        if (double.TryParse(str, out totalDays))
+                            return TimeSpan.FromDays(totalDays);
+                        return TimeSpan.Zero;
+                    });
             if (e.Column is GridDateTimeColumn)
                 e.Column.Format = "ddd d/M/yyyy";
         }

@@ -39,10 +39,6 @@ namespace SpellCheckerExplorer
             // center dialog on screen
             //CenterOnScreen();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-
-            // allow users to see the text in the control being checked
-            Background = new SolidColorBrush(Color.FromArgb(40, 0, 0, 0));
-
         }
 
         #region object model
@@ -314,13 +310,13 @@ namespace SpellCheckerExplorer
         // update suggestions in the list
         void UpdateSuggestions(string word)
         {
-            Items.Clear();
+            _listSuggestions.Items.Clear();
             string[] suggestions = _spell.GetSuggestions(word);
             if (suggestions.Length > 0)
             {
                 foreach (var suggestion in suggestions)
                 {
-                    AddSuggestion(suggestion);
+                    _listSuggestions.Items.Add(suggestion);
                 }
 
                 _listSuggestions.SelectedItem = _listSuggestions.Items[0];
@@ -328,16 +324,10 @@ namespace SpellCheckerExplorer
             }
             else
             {
-                AddSuggestion(_lblNoSuggestions.Text);
+                _listSuggestions.Items.Add(_lblNoSuggestions.Text);
                 //_listSuggestions.SelectedIndex = -1;
                 _listSuggestions.IsEnabled = false;
             }
-        }
-
-        // suggestions in list are TextBlock elements
-        void AddSuggestion(string suggestion)
-        {
-            Items.Add(suggestion);
         }
 
         // disable ChangeAll button when deleting words

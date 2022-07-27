@@ -1,5 +1,6 @@
 ﻿using C1.WPF.Grid;
 using C1.WPF.Input;
+using C1.WPF.Core;
 using FlexGridExplorer.Resources;
 using GrapeCity.Documents.Excel;
 using System;
@@ -17,8 +18,8 @@ namespace FlexGridExplorer
     /// </summary>
     public partial class ExcelExport : UserControl
     {
-        private Dictionary<CheckBox, GridRowColRangesOptions> RowOptions { get; set; }
-        private Dictionary<CheckBox, GridRowColRangesOptions> ColumnOptions { get; set; }
+        private Dictionary<C1CheckBox, GridRowColRangesOptions> RowOptions { get; set; }
+        private Dictionary<C1CheckBox, GridRowColRangesOptions> ColumnOptions { get; set; }
 
         private ListCollectionView ListCollectionView { get; set; }
 
@@ -79,14 +80,14 @@ namespace FlexGridExplorer
 
             #region Option(s)
 
-            RowOptions = new Dictionary<CheckBox, GridRowColRangesOptions>() {
+            RowOptions = new Dictionary<C1CheckBox, GridRowColRangesOptions>() {
                 { checkRowsVisibleOnly, GridRowColRangesOptions.VisibleOnly },
                 { checkRowsRenderFrozen, GridRowColRangesOptions.RenderFrozen },
                 { checkRowsSelectedOnly, GridRowColRangesOptions.SelectedOnly },
                 { checkRowsExcludeRange, GridRowColRangesOptions.ExludeRange },
                 { checkRowsExcludeEmpty, GridRowColRangesOptions.ExcludeEmpty },
                 { checkRowsRenderGroups, GridRowColRangesOptions.RenderGroups } };
-            ColumnOptions = new Dictionary<CheckBox, GridRowColRangesOptions>() {
+            ColumnOptions = new Dictionary<C1CheckBox, GridRowColRangesOptions>() {
                 { checkColumnsVisibleOnly, GridRowColRangesOptions.VisibleOnly },
                 { checkColumnsRenderFrozen, GridRowColRangesOptions.RenderFrozen },
                 { checkColumnsSelectedOnly,GridRowColRangesOptions.SelectedOnly },

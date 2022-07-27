@@ -57,10 +57,10 @@
                     <DataTemplate>
                         <StackPanel Margin="8">
                             <TextBlock Text="Spell Dialog Options" />
-                            <RadioButton Content="Built-In" IsChecked="True" Checked="RadioButton_Checked" />
-                            <RadioButton Content="Customized" Checked="RadioButton_Checked" />
-                            <RadioButton Content="Default Style" Checked="RadioButton_Checked" />
-                            <RadioButton Content="Word Style" Checked="RadioButton_Checked" />
+                            <c1:C1RadioButton Content="Built-In" IsChecked="True" Checked="RadioButton_Checked" />
+                            <c1:C1RadioButton Content="Customized" Checked="RadioButton_Checked" />
+                            <c1:C1RadioButton Content="Default Style" Checked="RadioButton_Checked" />
+                            <c1:C1RadioButton Content="Word Style" Checked="RadioButton_Checked" />
                         </StackPanel>
                     </DataTemplate>
                 </c1:C1DropDownTool.ContentTemplate>

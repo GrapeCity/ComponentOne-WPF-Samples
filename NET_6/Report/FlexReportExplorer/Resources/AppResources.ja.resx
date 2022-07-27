@@ -117,20 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-	<data name="ExportTitle" xml:space="preserve">
-    <value>Export</value>
+  <data name="ExportTitle" xml:space="preserve">
+    <value>エクスポート</value>
+    <comment>Export</comment>
   </data>
-	<data name="ExportDesc" xml:space="preserve">
-    <value>Shows how to export content of FlexReport to various format.</value>
+  <data name="ExportDesc" xml:space="preserve">
+    <value>FlexReport のコンテンツをさまざまな形式にエクスポートする方法を示します。</value>
+    <comment>Shows how to export content of FlexReport to various format.</comment>
   </data>
-	<data name="PrintTitle" xml:space="preserve">
-    <value>Print</value>
+  <data name="PrintTitle" xml:space="preserve">
+    <value>印刷</value>
+    <comment>Print</comment>
   </data>
-	<data name="PrintDesc" xml:space="preserve">
-    <value>Shows how to print a FlexReport object.</value>
+  <data name="PrintDesc" xml:space="preserve">
+    <value>FlexReport オブジェクトを印刷する方法を示します。</value>
+    <comment>Shows how to print a FlexReport object.</comment>
   </data>
   <data name="MainTitle" xml:space="preserve">
-    <value>FlexReport Explorer</value>
+    <value>FlexReport エクスプローラ</value>
     <comment>FlexReport Explorer</comment>
-  </data>  
+  </data>
 </root>

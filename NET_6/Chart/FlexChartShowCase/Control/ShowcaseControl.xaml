@@ -292,21 +292,21 @@
             <!--Row 1-->
             <c1:C1ComboBox Grid.Row="1" Grid.Column="0" Width="100" Height="32" Margin="10" x:Name="cbPalette" VerticalAlignment="Center"
                            SelectedValue="{Binding ElementName=flexChart, Path=Palette, Mode=TwoWay, Converter={StaticResource enumConverter}}"/>
-            <CheckBox Grid.Row="1" Grid.Column="1" Content="Multiple Plot Areas" x:Name="checkMultiplePlots" Checked="checkMultiplePlots_Checked" Unchecked="checkMultiplePlots_Checked" VerticalAlignment="Center"/>
+            <c1:C1CheckBox Grid.Row="1" Grid.Column="1" Content="Multiple Plot Areas" x:Name="checkMultiplePlots" Checked="checkMultiplePlots_Checked" Unchecked="checkMultiplePlots_Checked" VerticalAlignment="Center"/>
             <!--<Button Grid.Row="1" Grid.Column="3" Margin="180 0 0 0" Height="32" Content="Refresh" x:Name="btnRefresh" Click="BtnRefresh_Click"/>-->
 
-            <Button Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Background="White" Width="80" Height="32" Margin="0 0 20 0" BorderBrush="Transparent" BorderThickness="0"
+            <c1:C1Button Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Background="White" Width="80" Height="32" Margin="0 0 20 0" BorderBrush="Transparent" BorderThickness="0"
                     x:Name="btnExport" Click="BtnExport_Click" Template="{StaticResource ButtonTemplate}">
-                <Button.Content>
+                <c1:C1Button.Content>
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/FlexChartShowcase;component/Resources/Export.png" Height="16" Width="16"/>
                         <TextBlock Text="{x:Static res:AppResources.ExportText}" Margin="5 0 0 0" FontSize="14"/>
                     </StackPanel>
-                </Button.Content>
-            </Button>
+                </c1:C1Button.Content>
+            </c1:C1Button>
         </Grid>
 
-        <c1:FlexChart x:Name="flexChart" Grid.Row="1" Margin="50, 5, 20, 100">
+        <c1:FlexChart x:Name="flexChart" Grid.Row="1" PlotMargin="50 50 150 80">
             <c1:FlexChart.HeaderStyle>
                 <c1:ChartStyle FontSize="20" FontFamily="GenericSansSerif"/>
             </c1:FlexChart.HeaderStyle>

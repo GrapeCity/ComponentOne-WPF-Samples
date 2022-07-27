@@ -12,8 +12,8 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10 0">
-            <Button Content="New" Width="100" Click="Button_Click" />
-            <Button Content="Save" Width="100" Margin="20 0" Click="OnSaveButtonClick" />
+            <Chart:C1Button Content="New" Width="100" Click="Button_Click" />
+            <Chart:C1Button Content="Save" Width="100" Margin="20 0" Click="OnSaveButtonClick" />
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" Grid.Row="1" ChartType="Scatter" BindingX="XVals" Binding="YVals" ToolTipContent="{}{y}">
             <Chart:Series x:Name="series" SymbolSize="15" />

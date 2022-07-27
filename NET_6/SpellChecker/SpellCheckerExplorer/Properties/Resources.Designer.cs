@@ -19,7 +19,7 @@ namespace SpellCheckerExplorer.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -57,6 +57,51 @@ namespace SpellCheckerExplorer.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Spelling.
+        /// </summary>
+        public static string CheckSpelling {
+            get {
+                return ResourceManager.GetString("CheckSpelling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to load dictionary.
+        /// </summary>
+        public static string DictionaryFailed {
+            get {
+                return ResourceManager.GetString("DictionaryFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loaded main dictionary.
+        /// </summary>
+        public static string DictionaryOk {
+            get {
+                return ResourceManager.GetString("DictionaryOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to load {0} dictionary: {1}.
+        /// </summary>
+        public static string FailedToLoadDictionary {
+            get {
+                return ResourceManager.GetString("FailedToLoadDictionary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loaded {0} dictionary ({1:n0} words)..
+        /// </summary>
+        public static string LoadDictionary {
+            get {
+                return ResourceManager.GetString("LoadDictionary", resourceCulture);
             }
         }
         
@@ -120,6 +165,15 @@ namespace SpellCheckerExplorer.Properties {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to words.
+        /// </summary>
+        public static string Word {
+            get {
+                return ResourceManager.GetString("Word", resourceCulture);
             }
         }
     }

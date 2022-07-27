@@ -71,9 +71,9 @@
                       ItemsSource="{Binding DataContext.MaxDepths}" Style="{StaticResource leftPcComboBoxStyle}"
                       ItemTemplate="{StaticResource cbMaxDepthTemplate}">
                 </Chart:C1ComboBox>
-                <CheckBox x:Name="cbLabels" Content="Labels" VerticalAlignment="Center"
+                <Chart:C1CheckBox x:Name="cbLabels" Content="Labels" VerticalAlignment="Center"
                           IsChecked="True" Checked="cbLabels_Checked" Unchecked="cbLabels_Checked">
-                </CheckBox>
+                </Chart:C1CheckBox>
             </StackPanel>
         </StackPanel>
         <Chart:C1TreeMap x:Name="treeMap" Grid.Row="1" MaxDepth="2" Binding="sales" BindingName="type" ChildItemsPath="items"

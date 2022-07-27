@@ -17,7 +17,7 @@
         <c1:C1ComboBox x:Name="selectionMode" SelectionChanged="selectionMode_SelectionChanged" HorizontalAlignment="Left"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <TextBlock x:Name="lblShowMarquee" Text="ShowMarquee" VerticalAlignment="Center" />
-            <CheckBox Margin="5,0" x:Name="switchMarquee" IsChecked="{Binding ElementName=grid, Path=ShowMarquee, Mode=TwoWay}" VerticalAlignment="Center"/>
+            <c1:C1CheckBox Margin="5,0" x:Name="switchMarquee" IsChecked="{Binding ElementName=grid, Path=ShowMarquee, Mode=TwoWay}" VerticalAlignment="Center"/>
         </StackPanel>
         <TextBlock x:Name="lblSelection" Grid.Row="2"/>
         <c1:FlexGrid x:Name="grid" Grid.Row="3" HeadersVisibility="All" ShowMarquee="True" AllowResizing="Both" SelectionChanging="grid_SelectionChanging" SelectionChanged="grid_SelectionChanged" Style="{x:Static c1:FlexGrid.ClassicStyle}"/>

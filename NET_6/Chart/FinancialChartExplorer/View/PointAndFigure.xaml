@@ -52,7 +52,7 @@
             <c1:C1NumericBox x:Name="boxSize" IsEnabled="False" Value="{Binding ElementName=financialChart, Path=Options.BoxSize, Mode=TwoWay}" Minimum="1" Maximum="100" Width="80"/>
             <TextBlock Text="ATR Period" Margin="30 0 10 0" VerticalAlignment="Center"/>
             <c1:C1NumericBox x:Name="period" IsEnabled="False" Value="{Binding ElementName=financialChart, Path=Options.Period, Mode=TwoWay}" Minimum="7" Maximum="30" Width="80"/>
-            <CheckBox VerticalAlignment="Center" Content="Square Grid" Margin="30 0 10 0" IsChecked="{Binding ElementName=financialChart, Path=Options.SquareGrid, Mode=TwoWay}" />
+            <c1:C1CheckBox VerticalAlignment="Center" Content="Square Grid" Margin="30 0 10 0" IsChecked="{Binding ElementName=financialChart, Path=Options.SquareGrid, Mode=TwoWay}" />
         </StackPanel>
     </Grid>
 </UserControl>

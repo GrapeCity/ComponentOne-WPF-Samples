@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
+    xmlns:res="clr-namespace:FlexChartExplorer.Resources"
     mc:Ignorable="d">
 
     <Grid>
@@ -15,8 +16,8 @@
             <RowDefinition />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-        <Chart:FlexChart Footer="Chart Footer"
-                         Header="Chart Header"
+        <Chart:FlexChart Footer="{x:Static res:AppResources.ChartFooter}"
+                         Header="{x:Static res:AppResources.ChartHeader}"
                          HeaderStyle="{StaticResource titleFont}" FooterStyle="{StaticResource titleFont}" 
                          Binding="YVals" BindingX="XVals" ChartType="SplineSymbols" x:Name="flexChart"
                          MouseLeftButtonDown="flexChart_MouseLeftButtonDown"

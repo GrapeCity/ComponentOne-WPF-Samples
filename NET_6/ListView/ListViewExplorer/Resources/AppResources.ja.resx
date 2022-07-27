@@ -221,15 +221,57 @@
     <comment>Style Selector</comment>
   </data>
   <data name="MainTitle" xml:space="preserve">
-    <value>C1ListView Explorer</value>
+    <value>C1ListView エクスプローラ</value>
     <comment>C1ListView Explorer</comment>
   </data>
   <data name="CustomAppearanceDescription" xml:space="preserve">
-	<value>リストのアイテムのスタイルを設定する方法を示します。</value>
+    <value>リストのアイテムのスタイルを設定する方法を示します。</value>
     <comment>Shows how to style the items of the list.</comment>
   </data>
   <data name="CustomAppearanceTitle" xml:space="preserve">
     <value>カスタム外観</value>
     <comment>Custom Appearance</comment>
+  </data>
+  <data name="FlickrRetrievingData" xml:space="preserve">
+    <value>Flickr からデータを取得しています...</value>
+    <comment>Retrieving data from Flickr...</comment>
+  </data>
+  <data name="GroupByBorn" xml:space="preserve">
+    <value>Born によるグループ化</value>
+  </data>
+  <data name="GroupByResident" xml:space="preserve">
+    <value>Resident によるグループ化</value>
+  </data>
+  <data name="Orientation" xml:space="preserve">
+    <value>方向：</value>
+    <comment>Orientation:</comment>
+  </data>
+  <data name="Placeholder" xml:space="preserve">
+    <value>ここにフィルターを入力</value>
+    <comment>Type here to filter</comment>
+  </data>
+  <data name="SelectionMode" xml:space="preserve">
+    <value>選択モード</value>
+    <comment>Selection Mode</comment>
+  </data>
+  <data name="ShowCheckBox" xml:space="preserve">
+    <value>チェックボックスの表示</value>
+    <comment>Show Check Box</comment>
+  </data>
+  <data name="ShowSelectAll" xml:space="preserve">
+    <value>全て選択の表示</value>
+    <comment>Show Select All</comment>
+  </data>
+  <data name="SortAscendingly" xml:space="preserve">
+    <value>昇順でソート</value>
+    <comment>Sort ascendingly</comment>
+  </data>
+  <data name="SortDescendingly" xml:space="preserve">
+    <value>降順でソート</value>
+    <comment>Sort descendingly</comment>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>再試行</value>
+    <comment>Retry</comment>
   </data>
 </root>

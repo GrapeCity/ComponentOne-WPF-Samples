@@ -20,7 +20,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <CheckBox Content="Show Equation" x:Name="cbShow" VerticalAlignment="Center" Margin="10 0 20 0"/>
+            <c1:C1CheckBox Content="Show Equation" x:Name="cbShow" VerticalAlignment="Center" Margin="10 0 20 0"/>
             <c1:C1ComboBox ItemsSource="{Binding FitTypes}"
                            SelectedValue="{Binding ElementName=trendLine, Path=FitType, Mode=TwoWay, Converter={StaticResource enumConverter}}"
                            Width="150">
@@ -37,7 +37,7 @@
             </c1:C1ComboBox>
             <TextBlock Text="Order: " Margin="20 0 10 0" VerticalAlignment="Center" Visibility="{Binding ElementName=trendLine, Path=FitType, Converter={StaticResource orderVisibilityConverter}}" />
             <c1:C1NumericBox Value="{Binding ElementName=trendLine, Path=Order, Mode=TwoWay}" Visibility="{Binding ElementName=trendLine, Path=FitType, Converter={StaticResource orderVisibilityConverter}}" Minimum="1" Maximum="9" Width="100" />
-            <CheckBox Margin="8,2" VerticalAlignment="Center" Content="Animation" IsChecked="{Binding ElementName=flexChart,Path=AnimationSettings,Converter={StaticResource animCnv}}" />
+            <c1:C1CheckBox Margin="8,2" VerticalAlignment="Center" Content="Animation" IsChecked="{Binding ElementName=flexChart,Path=AnimationSettings,Converter={StaticResource animCnv}}" />
         </StackPanel>
         <c1:C1RichTextBox x:Name="rich" IsReadOnly="True" BorderThickness="0" Margin="20" Grid.Row="1" Panel.ZIndex="1" 
                           VerticalAlignment="Top" HorizontalAlignment="Left" Background="{x:Null}"

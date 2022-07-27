@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:FlexChartExplorer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
+    xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml" x:Name="root"
     DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
 
@@ -27,7 +27,7 @@
         </Grid.RowDefinitions>
         <WrapPanel x:Name="wrapPanel" Orientation="Horizontal" >
             <WrapPanel Orientation="Horizontal">
-                <CheckBox Margin="10" x:Name="cbCategory" Content="By Category" VerticalAlignment="Center" IsChecked="False" Checked="cbCategory_Checked" Unchecked="cbCategory_Unchecked"/>
+                <Chart:C1CheckBox Margin="10" x:Name="cbCategory" Content="By Category" VerticalAlignment="Center" IsChecked="False" Checked="cbCategory_Checked" Unchecked="cbCategory_Unchecked"/>
                 <Chart:C1ComboBox Width="200" Margin="10" x:Name="cbMode"
                       ItemsSource="{Binding DataContext.Mode}" 
                       ItemTemplate="{StaticResource cbModeTemplate}"
@@ -35,20 +35,20 @@
                       SelectedIndexChanged="cbMode_SelectedIndexChanged" >
                 </Chart:C1ComboBox>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox Margin="10" x:Name="cbOverflow" Content="Overflow bin" VerticalAlignment="Center" IsChecked="False" Checked="cbOverflow_Checked"  Unchecked="cbOverflow_Unchecked"/>
-                    <TextBox x:Name="tbOverflow" IsEnabled="{Binding ElementName=cbOverflow, Path=IsChecked, Mode=TwoWay}" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbOverflow_TextChanged"/>
+                    <Chart:C1CheckBox Margin="10" x:Name="cbOverflow" Content="Overflow bin" VerticalAlignment="Center" IsChecked="False" Checked="cbOverflow_Checked"  Unchecked="cbOverflow_Unchecked"/>
+                    <Chart:C1TextBox x:Name="tbOverflow"  Foreground="{Binding Foreground, ElementName=root}" IsEnabled="{Binding ElementName=cbOverflow, Path=IsChecked, Mode=TwoWay}" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbOverflow_TextChanged"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox Margin="10" x:Name="cbUnderflow" Content="Underflow bin" VerticalAlignment="Center" IsChecked="False" Checked="cbUnderflow_Checked"  Unchecked="cbUnderflow_Unchecked"/>
-                    <TextBox x:Name="tbUnderflow" IsEnabled="{Binding ElementName=cbUnderflow, Path=IsChecked, Mode=TwoWay}" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbUnderflow_TextChanged"/>
+                    <Chart:C1CheckBox Margin="10" x:Name="cbUnderflow" Content="Underflow bin" VerticalAlignment="Center" IsChecked="False" Checked="cbUnderflow_Checked"  Unchecked="cbUnderflow_Unchecked"/>
+                    <Chart:C1TextBox x:Name="tbUnderflow"  Foreground="{Binding Foreground, ElementName=root}" IsEnabled="{Binding ElementName=cbUnderflow, Path=IsChecked, Mode=TwoWay}" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbUnderflow_TextChanged"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label VerticalAlignment="Center" Margin="10">BinWidth :</Label>
-                    <TextBox x:Name="tbBinWidth" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbBinWidth_TextChanged"/>
+                    <Chart:C1TextBox x:Name="tbBinWidth"  Foreground="{Binding Foreground, ElementName=root}" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbBinWidth_TextChanged"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label VerticalAlignment="Center" Margin="10">Number of Bins :</Label>
-                    <TextBox x:Name="tbBinNum" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbBinNum_TextChanged"/>
+                    <Chart:C1TextBox x:Name="tbBinNum"  Foreground="{Binding Foreground, ElementName=root}" Width="100" VerticalAlignment="Center" TextAlignment="Right" PreviewTextInput="NumberValidationTextBox" TextChanged="tbBinNum_TextChanged"/>
                 </StackPanel>
             </WrapPanel>
         </WrapPanel>

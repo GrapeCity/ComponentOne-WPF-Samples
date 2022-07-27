@@ -467,4 +467,22 @@
   <data name="BreakEvenTitle" xml:space="preserve">
     <value>Break-Even</value>
   </data>
+  <data name="C1CopyRight" xml:space="preserve">
+    <value>copyright (c) ComponentOne</value>
+  </data>
+  <data name="ChartFooter" xml:space="preserve">
+    <value>Chart Footer</value>
+  </data>
+  <data name="ChartHeader" xml:space="preserve">
+    <value>Chart Header</value>
+  </data>
+  <data name="MonthlySale" xml:space="preserve">
+    <value>Monthly Sales Summary</value>
+  </data>
+  <data name="WorldGDPRanking" xml:space="preserve">
+    <value>World GDP Ranking</value>
+  </data>
+  <data name="Factors" xml:space="preserve">
+    <value>Factors Influencing Purchase Decisions</value>
+  </data>
 </root>

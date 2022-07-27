@@ -60,6 +60,20 @@ namespace CalendarExplorer
 
             cbSelectionMode.ItemsSource = Enum.GetValues(typeof(SelectionMode)).Cast<SelectionMode>();
             cbSelectionMode.SelectedItemChanged += cbSelectionMode_SelectedItemChanged;
+
+            //calendar.DisplayDate = new DateTime(2023, 1, 1);
+            calendar.SelectionChanging += Calendar_SelectionChanging;
+            calendar.SelectionChanged += Calendar_SelectionChanged;
+        }
+
+        private void Calendar_SelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void Calendar_SelectionChanging(object sender, CalendarSelectionChangingEventArgs e)
+        {
+            
         }
 
         private void cbSelectionMode_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)

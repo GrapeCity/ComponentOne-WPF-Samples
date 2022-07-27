@@ -147,4 +147,7 @@
   <data name="FlexGridSetting" xml:space="preserve">
     <value>FlexGrid Settings</value>
   </data>
+  <data name="PrintingTitle" xml:space="preserve">
+    <value>FlexGrid printing example</value>
+  </data>
 </root>

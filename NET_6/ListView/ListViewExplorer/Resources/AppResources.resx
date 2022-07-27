@@ -204,4 +204,37 @@
   <data name="CustomAppearanceTitle" xml:space="preserve">
     <value>Custom Appearance</value>
   </data>
+  <data name="FlickrRetrievingData" xml:space="preserve">
+    <value>Retrieving data from Flickr...</value>
+  </data>
+  <data name="GroupByBorn" xml:space="preserve">
+    <value>Group By Born</value>
+  </data>
+  <data name="GroupByResident" xml:space="preserve">
+    <value>Group By Resident</value>
+  </data>
+  <data name="Orientation" xml:space="preserve">
+    <value>Orientation:</value>
+  </data>
+  <data name="Placeholder" xml:space="preserve">
+    <value>Type here to filter</value>
+  </data>
+  <data name="SelectionMode" xml:space="preserve">
+    <value>Selection Mode</value>
+  </data>
+  <data name="ShowCheckBox" xml:space="preserve">
+    <value>Show Check Box</value>
+  </data>
+  <data name="ShowSelectAll" xml:space="preserve">
+    <value>Show Select All</value>
+  </data>
+  <data name="SortAscendingly" xml:space="preserve">
+    <value>Sort ascendingly</value>
+  </data>
+  <data name="SortDescendingly" xml:space="preserve">
+    <value>Sort descendingly</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
 </root>

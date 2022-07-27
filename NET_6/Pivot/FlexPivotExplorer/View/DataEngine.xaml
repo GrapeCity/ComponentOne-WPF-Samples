@@ -18,19 +18,19 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <GroupBox Header="Use System.Data.DataTable" Grid.Column="0" Margin="0,0,10,0">
-                <StackPanel VerticalAlignment="Center">
-                    <RadioButton GroupName="dt" Tag="100000" Click="DataTable_Click">100,000 rows</RadioButton>
-                    <RadioButton GroupName="dt" Tag="500000" Click="DataTable_Click">500,000 rows</RadioButton>
-                    <RadioButton GroupName="dt" Tag="1000000" Click="DataTable_Click">1,000,000 rows</RadioButton>
-                </StackPanel>
+                <c1:C1WrapPanel >
+                    <c1:C1RadioButton Margin="4" GroupName="dt" Tag="100000" Click="DataTable_Click">100,000 rows</c1:C1RadioButton>
+                    <c1:C1RadioButton Margin="4" GroupName="dt" Tag="500000" Click="DataTable_Click">500,000 rows</c1:C1RadioButton>
+                    <c1:C1RadioButton Margin="4" GroupName="dt" Tag="1000000" Click="DataTable_Click">1,000,000 rows</c1:C1RadioButton>
+                </c1:C1WrapPanel>
             </GroupBox>
             <GroupBox Header="Use C1.DataEngine.Table" Grid.Column="1" Margin="10,0,10,0">
-                <StackPanel VerticalAlignment="Center">
-                    <RadioButton GroupName="det" Tag="100000" Click="DataEngineTable_Click">100,000 rows</RadioButton>
-                    <RadioButton GroupName="det" Tag="500000" Click="DataEngineTable_Click">500,000 rows</RadioButton>
-                    <RadioButton GroupName="det" Tag="1000000" Click="DataEngineTable_Click">1,000,000 rows</RadioButton>
-                    <RadioButton GroupName="det" Tag="5000000" Click="DataEngineTable_Click">5,000,000 rows</RadioButton>
-                </StackPanel>
+                <c1:C1WrapPanel >
+                    <c1:C1RadioButton Margin="4" GroupName="det" Tag="100000" Click="DataEngineTable_Click">100,000 rows</c1:C1RadioButton>
+                    <c1:C1RadioButton Margin="4" GroupName="det" Tag="500000" Click="DataEngineTable_Click">500,000 rows</c1:C1RadioButton>
+                    <c1:C1RadioButton Margin="4" GroupName="det" Tag="1000000" Click="DataEngineTable_Click">1,000,000 rows</c1:C1RadioButton>
+                    <c1:C1RadioButton Margin="4" GroupName="det" Tag="5000000" Click="DataEngineTable_Click">5,000,000 rows</c1:C1RadioButton>
+                </c1:C1WrapPanel>
             </GroupBox>
             <c1:C1ListView x:Name="lstBoxLogs" ItemsSource="{Binding Logs, ElementName=userControl}" Grid.Column="2"
                            MouseOverBrush="Transparent" SelectedBackground="Transparent" BorderThickness="1" Margin="0 10 0 0"/>

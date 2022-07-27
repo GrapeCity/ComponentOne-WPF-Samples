@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RibbonExplorer"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" x:Name="root"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <local:C1ToolbarCommand x:Key="cmdPaste" LabelTitle=" Paste" />
@@ -170,6 +170,6 @@
                 </c1:RibbonGroup>
             </c1:RibbonTabItem>
         </c1:C1Ribbon>
-        <TextBox x:Name="tb" Grid.Row="1" IsReadOnly="True" VerticalScrollBarVisibility="Visible" />
+        <c1:C1TextBox x:Name="tb" Grid.Row="1" VerticalScrollBarVisibility="Visible" Foreground="{Binding Foreground, ElementName=root}"/>
     </Grid>
 </UserControl>

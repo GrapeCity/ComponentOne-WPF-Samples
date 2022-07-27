@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Accordion")]
+[assembly: AssemblyTitle("BarCodeExplorer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("GrapeCity, Inc.")]
-[assembly: AssemblyProduct("ComponentOne Accordion")]
+[assembly: AssemblyProduct("ComponentOne BarCode")]
 [assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

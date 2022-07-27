@@ -10,9 +10,9 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-            <Button x:Name="button1" Content="Load Image" Click="LoadImage" Margin="0 0 10 0" Width="120" Height="30" />
-            <Button x:Name="button2" Content="Export Image" Click="ExportImage" Margin="0 0 10 0" Width="120" Height="30" />
-            <Button x:Name="button3" Content="Restart" Click="Restart" Width="120" Height="30" />
+            <c1:C1Button x:Name="button1" Content="Load Image" Click="LoadImage" Margin="0 0 10 0" Width="120" Height="30" />
+            <c1:C1Button x:Name="button2" Content="Export Image" Click="ExportImage" Margin="0 0 10 0" Width="120" Height="30" />
+            <c1:C1Button x:Name="button3" Content="Restart" Click="Restart" Width="120" Height="30" />
         </StackPanel>
         <Grid Name="imageGrid" Grid.Row="1" Margin="0 0 0 4" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Image Stretch="None" Name="image" />

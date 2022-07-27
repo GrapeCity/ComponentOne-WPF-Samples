@@ -19,8 +19,8 @@ namespace Spreadsheet
         private Dictionary<int, double> _rowSizes = new Dictionary<int, double>();
         private ColumnInfo DefaultColumnInfo = new ColumnInfo(new GridLength(65), 27, double.PositiveInfinity, true);
         private RowInfo DefaultRowInfo = new RowInfo(new GridLength(20), 0, double.PositiveInfinity, true);
-        private int ROWS_COUNT = 10_000;
-        private int COLUMNS_COUNT = 10_000;
+        private int ROWS_COUNT = 1_000_000_000;
+        private int COLUMNS_COUNT = 1_000_000_000;
 
         #endregion
 
@@ -73,7 +73,7 @@ namespace Spreadsheet
             }
         }
 
-        public override GridControlRange NavigableRange => new GridControlRange(1, 1, RowsCount, ColumnsCount);
+        public override GridControlRange NavigableRange => new GridControlRange(1, 1, ROWS_COUNT, COLUMNS_COUNT);
 
         public override int GetFrozenColumns()
         {
@@ -219,7 +219,7 @@ namespace Spreadsheet
             }
             if (cell.Content is RowHeaderCell rowHeaderCell)
             {
-                rowHeaderCell.Header = (range.Row).ToString();
+                rowHeaderCell.Header = (range.Row).ToString("N0");
             }
             var textBlock = cell.Content as TextBlock;
             if (textBlock != null)

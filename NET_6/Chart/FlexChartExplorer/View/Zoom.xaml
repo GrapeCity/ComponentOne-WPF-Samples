@@ -16,8 +16,8 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button Width="100" Height="30" Content="Reset Zoom" Click="Button_Click" Margin="8" HorizontalAlignment="Left"/>
-            <CheckBox Margin="8" VerticalAlignment="Center" Content="Animation" IsChecked="{Binding ElementName=flexChart,Path=AnimationSettings,Converter={StaticResource animCnv}}" />
+            <Chart:C1Button Width="100" Height="30" Content="Reset Zoom" Click="Button_Click" Margin="8" HorizontalAlignment="Left"/>
+            <Chart:C1CheckBox Margin="8" VerticalAlignment="Center" Content="Animation" IsChecked="{Binding ElementName=flexChart,Path=AnimationSettings,Converter={StaticResource animCnv}}" />
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" ChartType="LineSymbols" ToolTip="{x:Null}" Background="White" Grid.Row="1" >
             <Chart:Series x:Name="Function1" SeriesName="Function 1" BindingX="XVals" Binding="YVals"/>

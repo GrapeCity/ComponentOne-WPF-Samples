@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" 
              x:Class="SchedulerExplorer.Overview" 
              av:DesignWidth="928.973" av:DesignHeight="657.138"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:res="clr-namespace:SchedulerExplorer.Resources"
              xmlns:c1sched="clr-namespace:C1.WPF.Schedule;assembly=C1.WPF.Schedule">
 
     <Grid>
@@ -17,26 +17,26 @@
         <Border Grid.Row="0" Margin=" 0 0 0 10">
             <StackPanel Margin="3" Orientation="Horizontal">
 
-                <Label Foreground="{DynamicResource text_Brush}" Content="View:" VerticalAlignment="Center" />
-                <c1:C1ComboBox x:Name="views" SelectedIndex="3" SelectionChanged="views_SelectionChanged" Margin="5" IsEditable="False" Width="90" ToolTip="Change View">
+                <Label Content="View:" VerticalAlignment="Center" />
+                <c1:C1ComboBox x:Name="views" SelectedIndex="3" SelectionChanged="views_SelectionChanged" Margin="5" IsEditable="False" ToolTip="Change View">
                     <c1:C1ComboBoxItem Content="Day"/>
                     <c1:C1ComboBoxItem Content="Work Week"/>
                     <c1:C1ComboBoxItem Content="Week"/>
                     <c1:C1ComboBoxItem Content="Month"/>
                     <c1:C1ComboBoxItem Content="Time Line"/>
                 </c1:C1ComboBox>
-                <Label Foreground="{DynamicResource text_Brush}" Content="Time Scale:" VerticalAlignment="Center" />
+                <Label Content="Time Scale:" VerticalAlignment="Center" />
                 <c1:C1ComboBox x:Name="scale" SelectedIndex="2" IsEnabled="False" Margin="5" IsEditable="False" Width="90" 
                           ToolTip="Change Time Scale"/>
 
-                <c1:C1CheckBox Foreground="{DynamicResource text_Brush}" VerticalAlignment="Center" Content="Show work time only" Margin="5" IsChecked="{Binding ShowWorkTimeOnly, ElementName=scheduler1}" />
+                <c1:C1CheckBox VerticalAlignment="Center" Content="Show work time only" Margin="5" IsChecked="{Binding ShowWorkTimeOnly, ElementName=scheduler1}" />
 
-                <c1:C1Button Name="Import" Margin="5" IsEnabled="True" Click="Import_Click" Padding="5,0">Load...
+                <c1:C1Button Name="Import" Margin="5" IsEnabled="True" Click="Import_Click" Padding="5,0" Content="{x:Static res:AppResources.Load}">
                     <c1:C1Button.ToolTip>
                         <TextBlock>Load data from file</TextBlock>
                     </c1:C1Button.ToolTip>
                 </c1:C1Button>
-                <c1:C1Button Name="Export" Margin="5" IsEnabled="True" Click="Export_Click" Padding="5,0">Save...
+                <c1:C1Button Name="Export" Margin="5" IsEnabled="True" Click="Export_Click" Padding="5,0" Content="{x:Static res:AppResources.Save}">
                     <c1:C1Button.ToolTip>
                         <TextBlock>Save data to file</TextBlock>
                     </c1:C1Button.ToolTip>
@@ -45,7 +45,7 @@
         </Border>
         <Grid SnapsToDevicePixels="True" Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="197" />
+                <ColumnDefinition Width="280" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
@@ -56,10 +56,10 @@
                 </c1sched:C1Scheduler.Settings>
             </c1sched:C1Scheduler>
 
-            <c1:C1Calendar Name="calendar1" Grid.Column="0" MaxSelectionCount="42" 
+            <c1:C1MultiMonthCalendar Name="calendar1" Grid.Column="0" MaxSelectionCount="42" MonthCount="3"
                            MinDate="{Binding Start, ElementName=scheduler1}" MaxDate="{Binding End, ElementName=scheduler1}"
-                           BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
-                           SelectionChanged="selected_date_changed"/>
+                           BorderThickness="1" SelectionMode="Extended"
+                           SelectedDates="{Binding ElementName=scheduler1, Path=VisibleDates, Mode=OneWay}" />
 
         </Grid>
     </Grid>

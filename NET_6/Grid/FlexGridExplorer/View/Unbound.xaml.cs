@@ -1,5 +1,6 @@
 ﻿using C1.WPF.Grid;
 using FlexGridExplorer.Resources;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -24,25 +25,16 @@ namespace FlexGridExplorer
         /// </summary>
         private void PopulateUnboundGrid()
         {
-            // allow merging
-            grid.AllowMerging = GridAllowMerging.All;
-
             // add rows/columns to the unbound grid
-            for (int i = 0; i < 12; i++) // three years, four quarters per year
-            {
-                grid.Columns.Add(new GridColumn() { HeaderHorizontalAlignment = HorizontalAlignment.Center });
-            }
-            for (int i = 0; i < 500; i++)
-            {
-                grid.Rows.Add(new GridRow());
-            }
+            grid.Columns.AddRange(Enumerable.Range(0, 12).Select(i => new GridColumn() { HeaderHorizontalAlignment = HorizontalAlignment.Center }));
+            grid.Rows.AddRange(Enumerable.Range(0, 500).Select(i => new GridRow()));
 
             // populate the unbound grid with some stuff
             for (int r = 0; r < grid.Rows.Count; r++)
             {
                 for (int c = 0; c < grid.Columns.Count; c++)
                 {
-                    grid[r, c] = string.Format("cell [{0},{1}]", r, c);
+                    grid[r, c] = $"cell [{r},{c}]";
                 }
             }
 
@@ -54,7 +46,7 @@ namespace FlexGridExplorer
             for (int c = 0; c < ch.Columns.Count; c++)
             {
                 ch[0, c] = 2017 + c / 4; // year
-                ch[1, c] = string.Format("Q {0}", c % 4 + 1); // quarter
+                ch[1, c] = $"Q {c % 4 + 1}"; // quarter
             }
 
             // allow merging the first fixed row
@@ -68,7 +60,7 @@ namespace FlexGridExplorer
                 rh.Columns[c].Width = new GridLength(60);
                 for (int r = 0; r < rh.Rows.Count; r++)
                 {
-                    rh[r, c] = string.Format("hdr {0},{1}", c == 0 ? r / 2 : r, c);
+                    rh[r, c] = $"hdr {(c == 0 ? r / 2 : r)},{c}";
                 }
             }
 
@@ -77,6 +69,9 @@ namespace FlexGridExplorer
 
             grid.RowHeaders.Columns[0].Width = GridLength.Auto;
             grid.RowHeaders.Columns[1].Width = GridLength.Auto;
+
+            // allow merging
+            grid.AllowMerging = GridAllowMerging.All;
         }
     }
 

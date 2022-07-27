@@ -23,18 +23,18 @@
     <EmbeddedResource Include="Resources\FlexCommonTasks_XML.flxr" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="1.0.20221.65" />
+    <PackageReference Include="C1.DataCollection" Version="1.0.20222.106" />
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Report">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

@@ -64,7 +64,7 @@ namespace Printing
                     pp.PrintTicket.PageOrientation = _cmbOrientation.SelectedIndex == 1 ?
                         System.Printing.PageOrientation.Portrait : System.Printing.PageOrientation.Landscape;
                 }
-                pp.DocumentName = "FlexGrid printing example";
+                pp.DocumentName = Properties.Resources.PrintingTitle;
                 // print the grid
                 _flex.Print(pp);
             }

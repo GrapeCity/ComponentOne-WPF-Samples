@@ -1,23 +1,12 @@
-﻿using System;
+﻿using C1.WPF.SpellChecker;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.ComponentModel;
+using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using C1.WPF.SpellChecker;
-using System.Reflection;
-using System.IO;
-using System.ComponentModel;
-using C1.WPF.Core;
-using C1.WPF.Docking;
-using System.Net;
+using Res = SpellCheckerExplorer.Properties.Resources;
 
 namespace SpellCheckerExplorer
 {
@@ -62,11 +51,11 @@ namespace SpellCheckerExplorer
             if (_c1SpellChecker.MainDictionary.State == DictionaryState.Loaded)
             {
                 _btnBatch.IsEnabled = _btnModal.IsEnabled = true;
-                WriteLine("loaded main dictionary ({0:n0} words).", _c1SpellChecker.MainDictionary.WordCount);
+                WriteLine($"{Res.DictionaryOk} ({0:n0} {Res.Word}).", _c1SpellChecker.MainDictionary.WordCount);
             }
             else
             {
-                WriteLine("failed to load dictionary: {0}", _c1SpellChecker.MainDictionary.State);                    
+                WriteLine($"{Res.DictionaryFailed}: {0}", _c1SpellChecker.MainDictionary.State);                    
             }
             // load user dictionary
             //UserDictionary ud = _c1SpellChecker.UserDictionary;

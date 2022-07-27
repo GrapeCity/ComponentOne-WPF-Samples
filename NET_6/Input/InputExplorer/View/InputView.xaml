@@ -9,6 +9,11 @@
                 <c1:C1Button Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Click me" />
                 <c1:C1ToggleButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Toggle me" />
 
+                <c1:C1CheckBox Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Check me" IsThreeState="True" />
+
+                <c1:C1RadioButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Check me" IsChecked="True" GroupName="inputView"/>
+                <c1:C1RadioButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Check me" GroupName="inputView"/>
+
                 <c1:C1TextBox TextWrapping="Wrap" Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Text="TextBoxBase"/>
 
                 <c1:C1ComboBox Width="200" Margin="10 20 10 20" VerticalAlignment="Center" IsTextSearchEnabled="True">
@@ -40,15 +45,15 @@
 
                 <c1:C1DatePicker Width="120" Margin="10 20 10 20" VerticalAlignment="Center" />
 
-                <c1:C1DropDownButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Header="Header" AutoSizeMode="GrowAndShrink">
+                <c1:C1DropDownButton Width="140" Margin="10 20 10 20" VerticalAlignment="Center" Header="DropDownButton" AutoSizeMode="GrowAndShrink">
                     <c1:C1DropDownButton.Content>
-                        <TextBox Text="Content" Margin="8"/>
+                        <c1:C1TextBox Text="Content" Margin="8" Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Control}}"/>
                     </c1:C1DropDownButton.Content>
                 </c1:C1DropDownButton>
 
-                <c1:C1SplitButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Header="Header" AutoSizeMode="GrowAndShrink">
+                <c1:C1SplitButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Header="SplitButton" AutoSizeMode="GrowAndShrink">
                     <c1:C1SplitButton.Content>
-                        <TextBox Text="Content" Margin="8"/>
+                        <c1:C1TextBox Text="Content" Margin="8" Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Control}}"/>
                     </c1:C1SplitButton.Content>
                 </c1:C1SplitButton>
 

@@ -13,16 +13,16 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10,0,16,0">
-            <Button Content="Load Image" Click="Load_Clicked" Width="120" Height="30" />
-            <Button Content="Export Image" Click="Export_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
-            <Button Content="Restart" Click="Restart_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
-            <Button Content="Crop to Selection" Click="Crop_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
-            <Button Content="Rotate CCW" Click="RotateCCW_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
-            <Button Content="Rotate CW" Click="RotateCW_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
-            <Button Content="Flip Horizontal" Click="FlipH_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
-            <Button Content="Flip Vertical" Click="FlipV_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
-            <Button Content="Scale to 160%" Click="ScaleIn_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
-            <Button Content="Scale to 62.5%" Click="ScaleOut_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Load Image" Click="Load_Clicked" Width="120" Height="30" />
+            <c1:C1Button Content="Export Image" Click="Export_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Restart" Click="Restart_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Crop to Selection" Click="Crop_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Rotate CCW" Click="RotateCCW_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Rotate CW" Click="RotateCW_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Flip Horizontal" Click="FlipH_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Flip Vertical" Click="FlipV_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Scale to 160%" Click="ScaleIn_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Scale to 62.5%" Click="ScaleOut_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
         </StackPanel>
         <Grid Name="imageGrid" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>

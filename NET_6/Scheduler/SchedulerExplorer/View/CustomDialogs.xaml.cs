@@ -1,30 +1,17 @@
 ﻿using C1.Schedule;
-using C1.WPF.Calendar;
 using C1.WPF.Schedule;
 using SchedulerExplorer.Resources;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
-using System.IO.IsolatedStorage;
 using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 
 namespace SchedulerExplorer
 {
     public partial class CustomDialogs : UserControl
     {
-        bool _updatingSelection = false;
         public CustomDialogs()
         {
             Language = System.Windows.Markup.XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.Name);
@@ -41,12 +28,6 @@ namespace SchedulerExplorer
 
             sched1.DataStorage.ContactStorage.ListChanged += new System.ComponentModel.ListChangedEventHandler(ContactStorage_ListChanged);
             sched1.LayoutUpdated += new EventHandler(scheduler1_LayoutUpdated);
-            sched1.VisibleDates.CollectionChanged += VisibleDates_CollectionChanged;
-        }
-
-        private void VisibleDates_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            UpdateCalendarSelection();
         }
 
         // Fill contact information after adding new contact from the Appointment form.
@@ -90,8 +71,6 @@ namespace SchedulerExplorer
                 }
                 scale.IsEnabled = true;
             }
-
-            UpdateCalendarSelection();
         }
 
         void views_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -136,7 +115,6 @@ namespace SchedulerExplorer
                 // Always call EndUpdate to apply all changes.
                 sched1.EndUpdate();
             }
-            UpdateCalendarSelection();
         }
 
         void Import_Click(Object sender, RoutedEventArgs e)
@@ -149,38 +127,6 @@ namespace SchedulerExplorer
         {
             // Export all data to file.
             C1Scheduler.ExportCommand.Execute(null, sched1);
-        }
-
-        void selected_date_changed(object sender, CalendarSelectionChangedEventArgs e)
-        {
-            if (!_updatingSelection)
-            {
-                var calendar = sender as C1Calendar;
-                if (calendar?.SelectedDate == default(DateTime))
-                    return;
-                sched1.VisibleDates.BeginUpdate();
-                sched1.VisibleDates.Clear();
-
-                foreach (var d in calendar.SelectedDates)
-                {
-                    sched1.VisibleDates.Add(d);
-                }
-
-                sched1.VisibleDates.EndUpdate();
-
-            }
-        }
-
-        void UpdateCalendarSelection()
-        {
-            if (!_updatingSelection && (calendar1.SelectedDates == null ||
-                (sched1.VisibleDates.Count != calendar1.SelectedDates.Count
-                || (calendar1.SelectedDates.Count > 0 && sched1.VisibleDates[0] != calendar1.SelectedDates[0]))))
-            {
-                _updatingSelection = true;
-                calendar1.SelectedDates = sched1.VisibleDates.ToList();
-                _updatingSelection = false;
-            }
         }
     }
 }

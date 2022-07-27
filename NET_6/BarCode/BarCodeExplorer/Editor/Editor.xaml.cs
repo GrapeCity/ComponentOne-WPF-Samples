@@ -79,6 +79,7 @@ namespace BarCodeExplorer
                         editor.DataContext = new TextEntity() { Text = "Welcome to use C1BarCode control" };
                         break;
                 }
+                control.Foreground = editor.Foreground;
                 editor.CurrentEditorControl.Children.Add(control);
             }
         }

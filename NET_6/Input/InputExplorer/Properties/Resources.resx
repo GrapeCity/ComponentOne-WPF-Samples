@@ -204,4 +204,13 @@
   <data name="MultiSelectDes" xml:space="preserve">
     <value>Shows how to use C1MultiSelect</value>
   </data>
+  <data name="EnterTag" xml:space="preserve">
+    <value>Enter Tag</value>
+  </data>
+  <data name="ValidationFormDescription" xml:space="preserve">
+    <value>Show how to use built-in validation through standard INotifyDataErrorInfo</value>
+  </data>
+  <data name="ValidationFormTitle" xml:space="preserve">
+    <value>Validation Form</value>
+  </data>
 </root>

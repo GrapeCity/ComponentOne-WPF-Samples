@@ -22,10 +22,10 @@
         </Grid.RowDefinitions>
         <c1:C1ToolStrip ToolIconSize="16" ToolLabelVisibility="Visible" ToolOrientation="Vertical">
             <c1:C1ButtonTool x:Name="exportButton" Label="{x:Static res:AppResources.ExportTitle}" IconTemplate="{StaticResource ExportIconTemplate}" Click="OnExport"/>
-            <CheckBox x:Name="checkSaveHeaders" IsChecked="True" Margin="5" VerticalAlignment="Center">Save Headers</CheckBox>
-            <CheckBox x:Name="checkVisibleRows" Margin="5" VerticalAlignment="Center">Visible Rows</CheckBox>
-            <CheckBox x:Name="checkVisibleColumns" Margin="5" VerticalAlignment="Center">Visible Columns</CheckBox>
-            <CheckBox x:Name="checkFormatted" IsChecked="True" Margin="5" VerticalAlignment="Center">Formatted</CheckBox>
+            <c1:C1CheckBox x:Name="checkSaveHeaders" IsChecked="True" Margin="5" VerticalAlignment="Center">Save Headers</c1:C1CheckBox>
+            <c1:C1CheckBox x:Name="checkVisibleRows" Margin="5" VerticalAlignment="Center">Visible Rows</c1:C1CheckBox>
+            <c1:C1CheckBox x:Name="checkVisibleColumns" Margin="5" VerticalAlignment="Center">Visible Columns</c1:C1CheckBox>
+            <c1:C1CheckBox x:Name="checkFormatted" IsChecked="True" Margin="5" VerticalAlignment="Center">Formatted</c1:C1CheckBox>
         </c1:C1ToolStrip>
         <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" AllowMerging="Cells" AllowResizing="Both" Style="{DynamicResource ExpressionDark}" Grid.Row="1">
             <c1:FlexGrid.Columns>

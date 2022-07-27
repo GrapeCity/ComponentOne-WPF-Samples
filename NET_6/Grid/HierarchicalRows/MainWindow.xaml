@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HierarchicalRows"
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="1000">
+        Title="Hierarchical Rows" Height="500" Width="1000">
     <Grid>
         <c1:FlexGrid x:Name="grid" HeadersVisibility="All" AutoGeneratingColumn="OnAutoGeneratingColumn" AllowFiltering="False" AllowSorting="False"/>
     </Grid>

@@ -26,7 +26,7 @@
             <DataTemplate x:Key="cbOrientationTemplate">
                 <TextBlock>
                     <TextBlock.Inlines>
-                        <Run Text="Palette: "/>
+                        <Run Text="Orientation: "/>
                         <Run Text="{Binding .}"/>
                     </TextBlock.Inlines>
                 </TextBlock>
@@ -74,7 +74,7 @@
                       SelectedValue="{Binding ElementName=flexChart, Path=LegendMaxWidth, Mode=OneWayToSource, Converter={StaticResource maxWidthConverter}}"
                       >
             </Chart:C1ComboBox>
-            <CheckBox x:Name="cbCheckBox" Content="Group Legend" Margin="12" VerticalAlignment="Center"
+            <Chart:C1CheckBox x:Name="cbCheckBox" Content="Group Legend" Margin="12" VerticalAlignment="Center"
                       Checked="cbCheckBox_Checked" Unchecked="cbCheckBox_Checked" IsChecked="True" />
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" ItemsSource="{Binding DataContext.Data}" BindingX="Fruit" Grid.Row="1"

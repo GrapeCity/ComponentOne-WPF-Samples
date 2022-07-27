@@ -19,7 +19,7 @@ namespace InputExplorer.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -111,6 +111,15 @@ namespace InputExplorer.Properties {
         public static string CheckListTitle {
             get {
                 return ResourceManager.GetString("CheckListTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Tag.
+        /// </summary>
+        public static string EnterTag {
+            get {
+                return ResourceManager.GetString("EnterTag", resourceCulture);
             }
         }
         
@@ -318,6 +327,24 @@ namespace InputExplorer.Properties {
         public static string UnselectAllMethod {
             get {
                 return ResourceManager.GetString("UnselectAllMethod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show how to use built-in validation through standard INotifyDataErrorInfo.
+        /// </summary>
+        public static string ValidationFormDescription {
+            get {
+                return ResourceManager.GetString("ValidationFormDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation Form.
+        /// </summary>
+        public static string ValidationFormTitle {
+            get {
+                return ResourceManager.GetString("ValidationFormTitle", resourceCulture);
             }
         }
     }

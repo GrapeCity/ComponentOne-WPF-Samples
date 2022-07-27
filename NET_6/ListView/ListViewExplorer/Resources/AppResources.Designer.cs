@@ -22,7 +22,7 @@ namespace ListViewExplorer.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    public class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ListViewExplorer.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ListViewExplorer.Resources.AppResources", typeof(AppResources).Assembly);
@@ -51,7 +51,7 @@ namespace ListViewExplorer.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to style the items of the list..
         /// </summary>
-        internal static string CustomAppearanceDescription {
+        public static string CustomAppearanceDescription {
             get {
                 return ResourceManager.GetString("CustomAppearanceDescription", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Custom Appearance.
         /// </summary>
-        internal static string CustomAppearanceTitle {
+        public static string CustomAppearanceTitle {
             get {
                 return ResourceManager.GetString("CustomAppearanceTitle", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to use custom DataTemplate with C1ListView..
         /// </summary>
-        internal static string CustomTemplateDescription {
+        public static string CustomTemplateDescription {
             get {
                 return ResourceManager.GetString("CustomTemplateDescription", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Custom Template.
         /// </summary>
-        internal static string CustomTemplateTitle {
+        public static string CustomTemplateTitle {
             get {
                 return ResourceManager.GetString("CustomTemplateTitle", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to filter a list or item just by tying in a text box..
         /// </summary>
-        internal static string FilterDescription {
+        public static string FilterDescription {
             get {
                 return ResourceManager.GetString("FilterDescription", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Filtering.
         /// </summary>
-        internal static string FilterTitle {
+        public static string FilterTitle {
             get {
                 return ResourceManager.GetString("FilterTitle", resourceCulture);
             }
@@ -117,25 +117,52 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to load photos from Flickr, shows preview when photo is not fully loaded yet.
         /// </summary>
-        internal static string FlickrDescription {
+        public static string FlickrDescription {
             get {
                 return ResourceManager.GetString("FlickrDescription", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retrieving data from Flickr....
+        /// </summary>
+        public static string FlickrRetrievingData {
+            get {
+                return ResourceManager.GetString("FlickrRetrievingData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flickr.
         /// </summary>
-        internal static string FlickrTitle {
+        public static string FlickrTitle {
             get {
                 return ResourceManager.GetString("FlickrTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Group By Born.
+        /// </summary>
+        public static string GroupByBorn {
+            get {
+                return ResourceManager.GetString("GroupByBorn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group By Resident.
+        /// </summary>
+        public static string GroupByResident {
+            get {
+                return ResourceManager.GetString("GroupByResident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Display a grouped list of items..
         /// </summary>
-        internal static string GroupDescription {
+        public static string GroupDescription {
             get {
                 return ResourceManager.GetString("GroupDescription", resourceCulture);
             }
@@ -144,7 +171,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Grouping.
         /// </summary>
-        internal static string GroupTitle {
+        public static string GroupTitle {
             get {
                 return ResourceManager.GetString("GroupTitle", resourceCulture);
             }
@@ -153,7 +180,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to C1ListView Explorer.
         /// </summary>
-        internal static string MainTitle {
+        public static string MainTitle {
             get {
                 return ResourceManager.GetString("MainTitle", resourceCulture);
             }
@@ -162,7 +189,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to With on-demand loading, C1ListView loads items as the user scrolls. Since the list does not know the total number of rows, the scroll bar size and position changes as more data is loaded into view. This virtualization technique is supported by the help of C1DataCollection..
         /// </summary>
-        internal static string OnDemandDescription {
+        public static string OnDemandDescription {
             get {
                 return ResourceManager.GetString("OnDemandDescription", resourceCulture);
             }
@@ -171,16 +198,25 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to On Demand.
         /// </summary>
-        internal static string OnDemandTitle {
+        public static string OnDemandTitle {
             get {
                 return ResourceManager.GetString("OnDemandTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Orientation:.
+        /// </summary>
+        public static string Orientation {
+            get {
+                return ResourceManager.GetString("Orientation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Get a ListView with paging using C1ListView, C1DataPager and C1DataCollection. Like the virtual mode and on-demand loading, paging is supported in C1ListView by the help of C1DataCollection..
         /// </summary>
-        internal static string PagingDescription {
+        public static string PagingDescription {
             get {
                 return ResourceManager.GetString("PagingDescription", resourceCulture);
             }
@@ -189,16 +225,79 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Paging.
         /// </summary>
-        internal static string PagingTitle {
+        public static string PagingTitle {
             get {
                 return ResourceManager.GetString("PagingTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Type here to filter.
+        /// </summary>
+        public static string Placeholder {
+            get {
+                return ResourceManager.GetString("Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retry.
+        /// </summary>
+        public static string Retry {
+            get {
+                return ResourceManager.GetString("Retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selection Mode.
+        /// </summary>
+        public static string SelectionMode {
+            get {
+                return ResourceManager.GetString("SelectionMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Check Box.
+        /// </summary>
+        public static string ShowCheckBox {
+            get {
+                return ResourceManager.GetString("ShowCheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Select All.
+        /// </summary>
+        public static string ShowSelectAll {
+            get {
+                return ResourceManager.GetString("ShowSelectAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort ascendingly.
+        /// </summary>
+        public static string SortAscendingly {
+            get {
+                return ResourceManager.GetString("SortAscendingly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort descendingly.
+        /// </summary>
+        public static string SortDescendingly {
+            get {
+                return ResourceManager.GetString("SortDescendingly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You can easily sort the C1ListView asynchronously in either direction through the C1DataCollection..
         /// </summary>
-        internal static string SortDescription {
+        public static string SortDescription {
             get {
                 return ResourceManager.GetString("SortDescription", resourceCulture);
             }
@@ -207,7 +306,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sorting.
         /// </summary>
-        internal static string SortTitle {
+        public static string SortTitle {
             get {
                 return ResourceManager.GetString("SortTitle", resourceCulture);
             }
@@ -216,7 +315,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how ItemContainerStyleSelector works.
         /// </summary>
-        internal static string StyleSelectorDesc {
+        public static string StyleSelectorDesc {
             get {
                 return ResourceManager.GetString("StyleSelectorDesc", resourceCulture);
             }
@@ -225,7 +324,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Style Selector.
         /// </summary>
-        internal static string StyleSelectorTitle {
+        public static string StyleSelectorTitle {
             get {
                 return ResourceManager.GetString("StyleSelectorTitle", resourceCulture);
             }
@@ -234,7 +333,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to customize style of items using ItemContainerStyle.
         /// </summary>
-        internal static string StylingDesc {
+        public static string StylingDesc {
             get {
                 return ResourceManager.GetString("StylingDesc", resourceCulture);
             }
@@ -243,7 +342,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Item Container Style.
         /// </summary>
-        internal static string StylingTitle {
+        public static string StylingTitle {
             get {
                 return ResourceManager.GetString("StylingTitle", resourceCulture);
             }
@@ -252,7 +351,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to customize templete of items using TemplateSelector.
         /// </summary>
-        internal static string TemplateSelectorDesc {
+        public static string TemplateSelectorDesc {
             get {
                 return ResourceManager.GetString("TemplateSelectorDesc", resourceCulture);
             }
@@ -261,7 +360,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Template Selector.
         /// </summary>
-        internal static string TemplateSelectorTitle {
+        public static string TemplateSelectorTitle {
             get {
                 return ResourceManager.GetString("TemplateSelectorTitle", resourceCulture);
             }
@@ -270,7 +369,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tile List View.
         /// </summary>
-        internal static string TileListView {
+        public static string TileListView {
             get {
                 return ResourceManager.GetString("TileListView", resourceCulture);
             }
@@ -279,7 +378,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how Tile List View works..
         /// </summary>
-        internal static string TileListViewTag {
+        public static string TileListViewTag {
             get {
                 return ResourceManager.GetString("TileListViewTag", resourceCulture);
             }
@@ -288,7 +387,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Unbound.
         /// </summary>
-        internal static string Unbound {
+        public static string Unbound {
             get {
                 return ResourceManager.GetString("Unbound", resourceCulture);
             }
@@ -297,7 +396,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to add ListViewItem on xaml directly..
         /// </summary>
-        internal static string UnbounDesc {
+        public static string UnbounDesc {
             get {
                 return ResourceManager.GetString("UnbounDesc", resourceCulture);
             }
@@ -306,7 +405,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to C1ListView supports data virtualization for loading large data sets in chunks or pages as the user scrolls. The list knows the total number of rows but only loads and displays those that are visible to the user. This virtualization technique is supported by the help of C1DataCollection..
         /// </summary>
-        internal static string VirtualModeDescription {
+        public static string VirtualModeDescription {
             get {
                 return ResourceManager.GetString("VirtualModeDescription", resourceCulture);
             }
@@ -315,7 +414,7 @@ namespace ListViewExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Virtual Mode.
         /// </summary>
-        internal static string VirtualModeTitle {
+        public static string VirtualModeTitle {
             get {
                 return ResourceManager.GetString("VirtualModeTitle", resourceCulture);
             }

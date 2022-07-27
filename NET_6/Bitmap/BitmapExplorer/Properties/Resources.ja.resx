@@ -118,27 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CropDemoDesc" xml:space="preserve">
-    <value>Shows how to use C1Bitmap to crop an image.
-Drag the mouse over the picture to crop it. You can also load your own image.</value>
+    <value>C1Bitmap を使用して画像を切り抜く方法を示します。
+画像の上にマウスをドラッグしてトリミングします。 独自の画像を読み込むこともできます。</value>
+    <comment>Shows how to use C1Bitmap to crop an image.
+Drag the mouse over the picture to crop it. You can also load your own image.</comment>
   </data>
   <data name="CropDemoTitle" xml:space="preserve">
     <value>Crop</value>
+    <comment>Crop</comment>
   </data>
   <data name="FaceWrapDemoDesc" xml:space="preserve">
-    <value>Shows how to use C1Bitmap and vertex shader to distort an image.
-Drag the mouse over the picture to warp it. You can also load your own image.</value>
+    <value>C1Bitmap と頂点シェーダーを使用して画像を歪める方法を示します。
+画像の上にマウスをドラッグして、画像を歪めます独自の画像を読み込むこともできます。</value>
+    <comment>Shows how to use C1Bitmap and vertex shader to distort an image.
+Drag the mouse over the picture to warp it. You can also load your own image.</comment>
   </data>
   <data name="FaceWrapDemoTitle" xml:space="preserve">
     <value>FaceWrap</value>
+    <comment>FaceWrap</comment>
   </data>
   <data name="TransformDemoDesc" xml:space="preserve">
-    <value>Allows various transformations of a bitmap image, such as cropping, scaling, rotation, and flipping.</value>
+    <value>トリミング、拡大縮小、回転、反転など、ビットマップ画像のさまざまな変換を可能にします。</value>
+    <comment>Allows various transformations of a bitmap image, such as cropping, scaling, rotation, and flipping.</comment>
   </data>
   <data name="TransformDemoTitle" xml:space="preserve">
     <value>Transform</value>
+    <comment>Transform</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Bitmapエクスプローラー</value>
+    <value>Bitmap エクスプローラー</value>
     <comment>BitmapExplorer</comment>
   </data>
 </root>

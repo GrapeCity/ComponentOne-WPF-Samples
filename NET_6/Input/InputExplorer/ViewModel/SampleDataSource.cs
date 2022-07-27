@@ -28,6 +28,10 @@ namespace InputExplorer
                 new SampleItem(Properties.Resources.MultiSelect,
                                 Properties.Resources.MultiSelect,
                                 new C1MultiSelect()),
+
+                new SampleItem(Properties.Resources.ValidationFormTitle,
+                                Properties.Resources.ValidationFormTitle,
+                                new ValidationForm()),
             };
         }
 

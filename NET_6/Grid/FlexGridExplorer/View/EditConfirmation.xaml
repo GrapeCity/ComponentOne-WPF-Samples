@@ -8,6 +8,11 @@
       d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
+        <Grid.Resources>
+            <Style TargetType="c1:C1CheckBox">
+                <Setter Property="Foreground" Value="Black" />
+            </Style>
+        </Grid.Resources>
         <c1:FlexGrid x:Name="grid" Grid.Row="1" 
                  AutoGenerateColumns="False" 
                  BeginningEdit="OnBeginningEdit" 

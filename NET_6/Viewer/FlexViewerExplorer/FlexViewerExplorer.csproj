@@ -401,28 +401,28 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Document">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DX">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ImportServices">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Report">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TreeView">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Viewer">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -150,7 +150,8 @@ namespace BitmapExplorer
 
         void ApplyTransform(BaseTransform t)
         {
-            var newBitmap = _bitmap.Transform(t);
+            // apply transformation to original image to don't lose quality at multiple transformations
+            var newBitmap = _savedCopy.Transform(t);
             _bitmap.Dispose();
             _bitmap = newBitmap;
             UpdateImage();
@@ -186,6 +187,11 @@ namespace BitmapExplorer
         {
             int px = (int)(_bitmap.PixelWidth * 1.6f + 0.5f);
             int py = (int)(_bitmap.PixelHeight * 1.6f + 0.5f);
+            if (px*py > 100000000) 
+            {
+                // don't try scaling if size exceeds max allowable bitmap size
+                return;
+            }
             ApplyTransform(new Scaler(px, py, InterpolationMode.HighQualityCubic));
         }
 
@@ -193,7 +199,7 @@ namespace BitmapExplorer
         {
             int px = (int)(_bitmap.PixelWidth * 0.625f + 0.5f);
             int py = (int)(_bitmap.PixelHeight * 0.625f + 0.5f);
-            if (px > 0 && py > 0)
+            if (px > 16 && py > 16)
             {
                 ApplyTransform(new Scaler(px, py, InterpolationMode.HighQualityCubic));
             }

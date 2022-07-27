@@ -45,13 +45,13 @@
             </c1:FlexChart.AxisY>
         </c1:FlexChart>
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
-            <RadioButton Content="5 Days" Tag="5D" Checked="HandleRadioButtonChecked" />
-            <RadioButton Content="10 Days" Tag="10D" Checked="HandleRadioButtonChecked"/>
-            <RadioButton Content="1 Month" Tag="1M" Checked="HandleRadioButtonChecked"/>
-            <RadioButton Content="6 Months" IsChecked="True" Tag="6M" Checked="HandleRadioButtonChecked"/>
-            <RadioButton Content="1 Year" Tag="1Y" Checked="HandleRadioButtonChecked"/>
-            <RadioButton Content="5 Years" Tag="5Y" Checked="HandleRadioButtonChecked"/>
-            <RadioButton Content="10 Years" Tag="10Y" Checked="HandleRadioButtonChecked"/>
+            <c1:C1RadioButton Margin="4,0" Content="5 Days" Tag="5D" Checked="HandleRadioButtonChecked" />
+            <c1:C1RadioButton Margin="4,0" Content="10 Days" Tag="10D" Checked="HandleRadioButtonChecked"/>
+            <c1:C1RadioButton Margin="4,0" Content="1 Month" Tag="1M" Checked="HandleRadioButtonChecked"/>
+            <c1:C1RadioButton Margin="4,0" Content="6 Months" IsChecked="True" Tag="6M" Checked="HandleRadioButtonChecked"/>
+            <c1:C1RadioButton Margin="4,0" Content="1 Year" Tag="1Y" Checked="HandleRadioButtonChecked"/>
+            <c1:C1RadioButton Margin="4,0" Content="5 Years" Tag="5Y" Checked="HandleRadioButtonChecked"/>
+            <c1:C1RadioButton Margin="4,0" Content="10 Years" Tag="10Y" Checked="HandleRadioButtonChecked"/>
         </StackPanel>
         <c1:FlexChart x:Name="rangeChart" ToolTip="{x:Null}" BindingX="Date" LegendPosition="None" ChartType="Line" Grid.Row="3" Rendered="HandleRangeChartRendered">
             <c1:FlexChart.AxisX>

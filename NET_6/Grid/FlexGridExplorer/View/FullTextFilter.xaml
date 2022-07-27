@@ -17,10 +17,10 @@
         </Grid.RowDefinitions>
         <c1:C1TextBox x:Name="filter" Margin="4" Placeholder="{x:Static res:AppResources.FilterPlaceholderText}" HorizontalAlignment="Left" MinWidth="250"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <CheckBox x:Name="matchCaseCheckbox" Content="Match case" Margin="4"/>
-            <CheckBox x:Name="matchWholeWordCheckBox" Content="Match whole word" Margin="4" />
-            <CheckBox x:Name="treatSpacesAsAndOperator" Content="Treat Spaces As And Operator" Margin="4" />
-            <CheckBox x:Name="matchNumbers" Content="Match Numbers" Margin="4" />
+            <c1:C1CheckBox x:Name="matchCaseCheckbox" Content="Match case" Margin="4"/>
+            <c1:C1CheckBox x:Name="matchWholeWordCheckBox" Content="Match whole word" Margin="4" />
+            <c1:C1CheckBox x:Name="treatSpacesAsAndOperator" Content="Treat Spaces As And Operator" Margin="4" />
+            <c1:C1CheckBox x:Name="matchNumbers" Content="Match Numbers" Margin="4" />
         </StackPanel>
         <c1:FlexGrid x:Name="grid" IsReadOnly="True" Grid.Row="2">
             <i:Interaction.Behaviors>

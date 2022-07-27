@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using System.Xml.Linq;
+using Res = MapsExplorer.Properties.Resources;
 
 namespace MapsExplorer
 {
@@ -21,7 +22,8 @@ namespace MapsExplorer
         public Flicker()
         {
             InitializeComponent();
-            Tag = Properties.Resources.Flicker;
+            Tag = Res.Flicker;
+            txt.Text = Res.LoadingData;
             this.Loaded += Flicker_Loaded;
         }
 
@@ -43,7 +45,7 @@ namespace MapsExplorer
             {
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
-                    txt.Text = "Can't load data.";
+                    txt.Text = Res.CannotLoadData;
                     btnLoad.IsEnabled = tb.IsEnabled = true;
                 }));
             };
@@ -67,7 +69,7 @@ namespace MapsExplorer
 
             btnLoad.IsEnabledChanged += (s, e) =>
             {
-                btnLoad.Content = btnLoad.IsEnabled ? "Load" : "Loading...";
+                btnLoad.Content = btnLoad.IsEnabled ? Res.Load : Res.LoadingData;
             };
             maps.Zoom = 4;
         }
@@ -82,7 +84,7 @@ namespace MapsExplorer
                     _timer.Stop();
                     vl.UriSource = new Uri(source);
                     btnLoad.IsEnabled = tb.IsEnabled = false;
-                    txt.Text = "Loading data...";
+                    txt.Text = Res.LoadingData;
                     txt.Visibility = Visibility.Visible;
                     maps.Opacity = 0.5;
                 }

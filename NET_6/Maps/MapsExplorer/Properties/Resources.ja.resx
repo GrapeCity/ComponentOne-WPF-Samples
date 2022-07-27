@@ -182,12 +182,19 @@
     <comment>Marks</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Maps Explorer</value>
+    <value>Maps エクスプローラ</value>
+    <comment>Maps Explorer</comment>
   </data>
   <data name="LoadingData" xml:space="preserve">
     <value>データのロード...</value>
   </data>
   <data name="SearchLabel" xml:space="preserve">
     <value>検索するテキストを入力</value>
+  </data>
+  <data name="CannotLoadData" xml:space="preserve">
+    <value>データをロードできません</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>読み込み</value>
   </data>
 </root>

@@ -45,6 +45,7 @@ namespace MenuExplorer.Tools
         {
             window = new Window();
             window.Content = this;
+            window.Foreground = RichTextBox.Foreground;
             window.ShowInTaskbar = false;
             window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             window.SizeToContent = SizeToContent.WidthAndHeight;

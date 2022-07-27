@@ -150,4 +150,10 @@
   <data name="WeekSelectionTitle" xml:space="preserve">
     <value>WeekSelection</value>
   </data>
+  <data name="MultiMonthsDes" xml:space="preserve">
+    <value>The C1MultiMonthCalendar control displays multiple months calendar and allows users to select a date.</value>
+  </data>
+  <data name="MultiMonthsTitle" xml:space="preserve">
+    <value>MultiMonth Calendar</value>
+  </data>
 </root>

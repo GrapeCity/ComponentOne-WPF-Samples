@@ -9,6 +9,9 @@
     <None Remove=".gclicx" />
     <None Remove="Resources\C1Spell_en-US.dct" />
     <None Remove="Resources\dickens.htm" />
+    <None Remove="Resources\images\01.jpg" />
+    <None Remove="Resources\images\02.jpg" />
+    <None Remove="Resources\images\c1logo.png" />
     <None Remove="Resources\letter.htm" />
     <None Remove="Resources\letter.rtf" />
     <None Remove="Resources\simple.htm" />
@@ -19,6 +22,15 @@
   <ItemGroup>
     <Resource Include="Resources\C1Spell_en-US.dct" />
     <Resource Include="Resources\dickens.htm" />
+    <Resource Include="Resources\images\01.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\images\02.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\images\c1logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\letter.rtf" />
     <Resource Include="Resources\simple.htm" />
   </ItemGroup>
@@ -41,28 +53,28 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox.Ribbon">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

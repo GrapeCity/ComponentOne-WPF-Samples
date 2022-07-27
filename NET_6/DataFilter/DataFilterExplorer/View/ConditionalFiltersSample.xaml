@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:resources="clr-namespace:DataFilterExplorer.Resources" 
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
@@ -24,10 +25,10 @@
         </Grid.RowDefinitions>
 
         <c1:C1ToolStrip>
-            <CheckBox x:Name="cbAutoApply" Height="25" Content="Auto apply filter" IsChecked="True" Margin="4"
+            <c1:C1CheckBox x:Name="cbAutoApply" Height="25" Content="{x:Static resources:AppResources.AutoApplyFilter}" IsChecked="True" Margin="4"
                               Checked="CbAutoApply_CheckChanged" Unchecked="CbAutoApply_CheckChanged" />
-            <c1:C1ButtonTool Label="Apply filter" IconTemplate="{StaticResource FilterIcon}" Click="BtnApplyFilter_Click" ToolTipService.ToolTip="Apply filter" />
-            <c1:C1ButtonTool Label="Save filter" IconTemplate="{StaticResource SaveIcon}" Click="BtnSaveFilter_Click" ToolTipService.ToolTip="Save filter" />
+            <c1:C1ButtonTool Label="{x:Static resources:AppResources.ApplyFilter}" IconTemplate="{StaticResource FilterIcon}" Click="BtnApplyFilter_Click" ToolTipService.ToolTip="Apply filter" />
+            <c1:C1ButtonTool Label="{x:Static resources:AppResources.SaveFilter}" IconTemplate="{StaticResource SaveIcon}" Click="BtnSaveFilter_Click" ToolTipService.ToolTip="Save filter" />
         </c1:C1ToolStrip>
 
         <Grid Grid.Row="1">

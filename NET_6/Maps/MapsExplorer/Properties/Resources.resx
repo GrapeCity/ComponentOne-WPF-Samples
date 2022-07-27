@@ -174,5 +174,10 @@
   <data name="SearchLabel" xml:space="preserve">
     <value>Enter the place or location:</value>
   </data>
-  
+  <data name="CannotLoadData" xml:space="preserve">
+    <value>Can't load data.</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
 </root>

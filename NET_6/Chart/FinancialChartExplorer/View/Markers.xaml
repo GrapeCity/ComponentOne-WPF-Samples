@@ -24,7 +24,7 @@
                 <c1:Axis LabelAngle="45"/>
             </c1:C1FinancialChart.AxisX>
             <c1:C1FinancialChart.Layers>
-                <c1:C1LineMarker x:Name="marker" Lines="Both" Interaction="Move" Alignment="Auto" DragLines="True" PositionChanged="positionChanged"/>
+                <c1:C1LineMarker x:Name="marker" Lines="Both" Interaction="Move" Alignment="Auto" DragLines="True" DragContent="True" PositionChanged="positionChanged"/>
             </c1:C1FinancialChart.Layers>
         </c1:C1FinancialChart>
         <StackPanel Orientation="Vertical" Grid.Row="1">
@@ -78,7 +78,7 @@
                           ItemTemplate="{StaticResource MarkerLinesTemplate}"
                           SelectedValue="{Binding ElementName=marker, Path=Lines, Mode=TwoWay, Converter={StaticResource EnumConverter}}"
                           IsEnabled="{Binding ElementName=cbSnpping, Path=IsChecked, Converter={StaticResource ReversedConverter}}"/>
-                <CheckBox x:Name="cbSnpping" Content="Snapping" VerticalAlignment="Center" Margin="20 0" Checked="cbSnpping_Checked"  Unchecked="cbSnpping_Unchecked"/>
+                <c1:C1CheckBox x:Name="cbSnpping" Content="Snapping" VerticalAlignment="Center" Margin="20 0" Checked="cbSnpping_Checked"  Unchecked="cbSnpping_Unchecked"/>
             </StackPanel>
         </StackPanel>
     </Grid>

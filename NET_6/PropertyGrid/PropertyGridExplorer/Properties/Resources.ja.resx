@@ -117,7 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
   <data name="PropertyGridDemoDesc" xml:space="preserve">
     <value>固定のプロパティリストで C1PropertyGrid を使用する方法を示します</value>
   </data>
@@ -132,5 +131,21 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>PropertyGridエクスプローラー</value>
+  </data>
+  <data name="CustomEditorsDesc" xml:space="preserve">
+    <value>特定の場合にカスタムエディタを使用してユーザーインターフェイスを改善する方法を示します</value>
+    <comment>Shows how to use custom editors to improve user interface in some specific cases</comment>
+  </data>
+  <data name="CustomEditorsTitle" xml:space="preserve">
+    <value>カスタムエディタ</value>
+    <comment>Custom Editors</comment>
+  </data>
+  <data name="DataObjectPropertiesDesc" xml:space="preserve">
+    <value>データ注釈付きオブジェクトのプロパティを表示します</value>
+    <comment>Shows the properties of a data annotated object</comment>
+  </data>
+  <data name="DataObjectPropertiesTitle" xml:space="preserve">
+    <value>データオブジェクトのプロパティ</value>
+    <comment>Data-Object Properties</comment>
   </data>
 </root>

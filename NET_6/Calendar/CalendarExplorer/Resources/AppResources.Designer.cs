@@ -97,6 +97,24 @@ namespace CalendarExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The C1MultiMonthCalendar control displays multiple months calendar and allows users to select a date..
+        /// </summary>
+        internal static string MultiMonthsDes {
+            get {
+                return ResourceManager.GetString("MultiMonthsDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MultiMonth Calendar.
+        /// </summary>
+        internal static string MultiMonthsTitle {
+            get {
+                return ResourceManager.GetString("MultiMonthsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The C1Calendar control displays a one-month calendar and allows users to select a date..
         /// </summary>
         internal static string OverviewDescription {

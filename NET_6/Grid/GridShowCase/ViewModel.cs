@@ -3,6 +3,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -10,6 +11,7 @@ namespace GridShowCase
 {
     public class ViewModel : INotifyPropertyChanged
     {
+        private const string CountryColumnPath = "Country.Name";
         static Random _rnd = new Random();
         public ViewModel()
         {
@@ -33,7 +35,7 @@ namespace GridShowCase
             {
                 if (groupByProduct == null)
                 {
-                    groupByProduct = new RelayCommand(param => this.GroupBy(param, "ProductName"), param => true);
+                    groupByProduct = new RelayCommand(param => GroupBy(param, nameof(Product.ProductName)), param => true);
                 }
                 return groupByProduct;
             }
@@ -45,17 +47,33 @@ namespace GridShowCase
             {
                 if (groupByCountry == null)
                 {
-                    groupByCountry = new RelayCommand(param => this.GroupBy(param, "Country.Name"), param => true);
+                    groupByCountry = new RelayCommand(param => GroupBy(param, CountryColumnPath), param => true);
                 }
                 return groupByCountry;
             }
         }
-        
-        private async void GroupBy(object parameter, string ColumnName)
+
+        public bool IsGroupedByCountry
+        {
+            get
+            {
+                return Products?.GetGroupDescriptions().Any(gd => gd.GroupPath == CountryColumnPath) ?? false;
+            }
+        }
+
+        public bool IsGroupedByProduct
+        {
+            get
+            {
+                return Products?.GetGroupDescriptions().Any(gd => gd.GroupPath == nameof(Product.ProductName)) ?? false;
+            }
+        }
+
+        private async void GroupBy(object parameter, string columnName)
         {
             if ((bool)parameter == true)
             {
-                await Products.GroupAsync(ColumnName);
+                await Products.GroupAsync(columnName);
             }
             else
             {
@@ -99,10 +117,19 @@ namespace GridShowCase
                 products.Add(new Product(i) { Country = Countries[countryID], CountryId = countryID });
             }
 
+            Products?.DetachGroupChanged(OnGroupChanged);
             Products = new C1DataCollection<Product>(products);
+            Products.AttachGroupChanged(OnGroupChanged);
 
-            OnPropertyChanged("Products");
+            OnPropertyChanged(nameof(Products));
         }
+
+        private void OnGroupChanged(object sender, EventArgs e)
+        {
+            OnPropertyChanged(nameof(IsGroupedByCountry));
+            OnPropertyChanged(nameof(IsGroupedByProduct));
+        }
+
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

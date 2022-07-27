@@ -39,9 +39,6 @@ namespace SpellCheckerExplorer
             //CenterOnScreen();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-            // allow users to see the text in the control being checked
-            Background = new SolidColorBrush(Color.FromArgb(40, 0, 0, 0));
-
             // create brushes used to show regular and misspelled text
             _brNormalText = _txtChangeTo.Foreground;
             _brErrorText = new SolidColorBrush(Color.FromArgb(255, 150, 0, 0));
@@ -257,29 +254,23 @@ namespace SpellCheckerExplorer
         // update suggestions in the list
         void UpdateSuggestions(string word)
         {
-            Items.Clear();
+            _listSuggestions.Items.Clear();
             string[] suggestions = _spell.GetSuggestions(word);
             if (suggestions.Length > 0)
             {
                 foreach (var suggestion in suggestions)
                 {
-                    AddSuggestion(suggestion);
+                    _listSuggestions.Items.Add(suggestion);
                 }
                 _listSuggestions.SelectedItem = _listSuggestions.Items[0].Content;
                 _listSuggestions.IsEnabled = true;
             }
             else
             {
-                AddSuggestion(_lblNoSuggestions.Text);
+                _listSuggestions.Items.Add(_lblNoSuggestions.Text);
                 //_listSuggestions.SelectedIndex = -1;
                 _listSuggestions.IsEnabled = false;
             }
-        }
-
-        // suggestions in list are TextBlock elements
-        void AddSuggestion(string suggestion)
-        {
-            Items.Add(suggestion);
         }
 
         // disable ChangeAll button when deleting words

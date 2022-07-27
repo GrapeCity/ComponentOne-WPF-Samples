@@ -12,7 +12,7 @@ namespace FlexChartExplorer
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value.ToString();
+            return value?.ToString();
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -25,7 +25,7 @@ namespace FlexChartExplorer
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value.ToString();
+            return value?.ToString();
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -49,7 +49,7 @@ namespace FlexChartExplorer
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return ChartTypes.IndexOf(value.ToString());
+            return ChartTypes.IndexOf(value?.ToString());
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -80,7 +80,7 @@ namespace FlexChartExplorer
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var fitType = (FitType)Enum.Parse(typeof(FitType), value.ToString());
+            var fitType = (FitType)Enum.Parse(typeof(FitType), value?.ToString());
             return fitType == FitType.Fourier || fitType == FitType.Polynom ? Visibility.Visible : Visibility.Collapsed;
         }
 

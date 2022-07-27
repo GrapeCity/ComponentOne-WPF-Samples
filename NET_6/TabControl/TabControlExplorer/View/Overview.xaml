@@ -17,7 +17,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Border>
-        <c1:C1TabControl Grid.Row="1" Name="c1Tab" ItemContainerStyle="{StaticResource CustomStyle}" IndicatorVisibility="Collapsed" 
+        <c1:C1TabControl Grid.Row="1" Name="c1Tab" ItemContainerStyle="{StaticResource CustomStyle}" IndicatorVisibility="Collapsed" CanUserReorder="True"
                          TabStripMenuVisibility="Visible" TabItemClose="InEachTab" SelectedTabHeaderStyle="{StaticResource CustomSelectedStyle}">
             <c1:C1TabItem  Header="Sales Per Month" CanUserPin="True" />
             <c1:C1TabItem  Header="Sales Per Sales Agent" />

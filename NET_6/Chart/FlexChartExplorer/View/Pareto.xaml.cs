@@ -30,7 +30,7 @@ namespace FlexChartExplorer
             flexChart1.Series.Clear();
             
             flexChart1.ChartType = ChartType.RangedHistogram;
-            flexChart1.Header = "Factors Influencing Purchase Decisions";
+            flexChart1.Header = AppResources.Factors;
             flexChart1.HeaderStyle = new ChartStyle() { FontSize = 16 };
             flexChart1.AxisY.Title = "No. of Customers";
             flexChart1.AxisY.AxisLine = true;

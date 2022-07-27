@@ -29,12 +29,12 @@
                               x:Name="cboQuartileCalculation" SelectedIndex="0"
                               ItemTemplate="{StaticResource cbItemTemplate}"
                               SelectionChanged="cboQuartileCalculation_SelectionChanged"/>
-            
-            <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowMeanLine" Checked="CheckedChanged" Unchecked="CheckedChanged">Show mean line</CheckBox>
-            <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowMeanMarks" IsChecked="True" Checked="CheckedChanged" Unchecked="CheckedChanged">Show mean marks</CheckBox>
-            <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowOutliers" IsChecked="True" Checked="CheckedChanged" Unchecked="CheckedChanged">Show outliers</CheckBox>
-            <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowInnerPoints" Checked="CheckedChanged" Unchecked="CheckedChanged">Show inner points</CheckBox>
-            <CheckBox VerticalAlignment="Center" Margin="5,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated}">Rotate</CheckBox>
+
+            <Chart:C1CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowMeanLine" Checked="CheckedChanged" Unchecked="CheckedChanged">Show mean line</Chart:C1CheckBox>
+            <Chart:C1CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowMeanMarks" IsChecked="True" Checked="CheckedChanged" Unchecked="CheckedChanged">Show mean marks</Chart:C1CheckBox>
+            <Chart:C1CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowOutliers" IsChecked="True" Checked="CheckedChanged" Unchecked="CheckedChanged">Show outliers</Chart:C1CheckBox>
+            <Chart:C1CheckBox VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowInnerPoints" Checked="CheckedChanged" Unchecked="CheckedChanged">Show inner points</Chart:C1CheckBox>
+            <Chart:C1CheckBox VerticalAlignment="Center" Margin="5,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated}">Rotate</Chart:C1CheckBox>
         </StackPanel>
         <Chart:FlexChart BindingX="ClassName" ItemsSource="{Binding DataContext.Data}" Grid.Row="1" x:Name="flexChart" ToolTipContent="{}{seriesName} - {name}&#x000A;Min: {Min}&#x000A;First Quartile: {FirstQuartile}&#x000A;Mean: {Mean}&#x000A;Median: {Median}&#x000A;Third Quartile: {ThirdQuartile}&#x000A;Max: {Max}">
             <Chart:BoxWhisker Binding="SchoolA" 

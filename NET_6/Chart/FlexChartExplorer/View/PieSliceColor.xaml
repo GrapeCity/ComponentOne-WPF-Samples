@@ -17,9 +17,9 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" x:Name="panel">
-            <Button x:Name="btnNew" Margin="8" Padding="4" Content="New Data" Click="btnNew_Click"  />
-            <Button x:Name="btnUpdate" Margin="8" Padding="4" Content="Update" Click="btnUpdate_Click" />
-            <CheckBox Margin="8" VerticalAlignment="Center" Content="Animation" IsChecked="{Binding ElementName=pieChart,Path=AnimationSettings,Converter={StaticResource animCnv}}" />
+            <Chart:C1Button x:Name="btnNew" Margin="8" Padding="4" Content="New Data" Click="btnNew_Click"  />
+            <Chart:C1Button x:Name="btnUpdate" Margin="8" Padding="4" Content="Update" Click="btnUpdate_Click" />
+            <Chart:C1CheckBox Margin="8" VerticalAlignment="Center" Content="Animation" IsChecked="{Binding ElementName=pieChart,Path=AnimationSettings,Converter={StaticResource animCnv}}" />
         </StackPanel>
         <Chart:FlexPie x:Name="pieChart" Grid.Row="1" Binding="Value" BindingName="Name" LegendPosition="None" Loaded="pieChart_Loaded" SliceRendering="pieChart_SliceRendering" >
             <Chart:FlexPie.DataLabel>

@@ -34,3 +34,4 @@ Shows the following samples
 	- Export
 	- ColumnOptions
 	- ExcelExport
+	- VirtualMode

@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="CustomColumn.CustomColumnDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:GanttView="clr-namespace:C1.GanttView;assembly=C1.WPF.GanttView"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <c1:C1GanttView x:Name="gv" StartDate="2012/9/1">
+            <c1:C1GanttView.Columns>
+                <GanttView:TaskPropertyColumn Property="Mode" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Name"/>
+                <GanttView:CustomFieldColumn Name="ActualCost" Format="$#0" DataType="{x:Type System:Decimal}"/>
+                <GanttView:TaskPropertyColumn Property="Duration" />
+                <GanttView:TaskPropertyColumn Property="DurationUnits" />
+                <GanttView:TaskPropertyColumn Property="Start" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Finish" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="PercentComplete" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintType" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ConstraintDate" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Predecessors" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Deadline" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Calendar" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="ResourceNames" Visible="False"/>
+                <GanttView:TaskPropertyColumn Property="Notes" Visible="False"/>
+            </c1:C1GanttView.Columns>
+            <c1:C1GanttView.TaskResources>
+                <GanttView:Resource Name="Adam Miller" Cost="200" ID="1"></GanttView:Resource>
+                <GanttView:Resource Name="Ruth Radelet" Cost="500" ID="2"></GanttView:Resource>
+                <GanttView:Resource Name="Johnny Jewel" Cost="250" ID="3"></GanttView:Resource>
+                <GanttView:Resource Name="Nat Walker" Cost="400" ID="4"></GanttView:Resource>
+            </c1:C1GanttView.TaskResources>
+            <c1:C1GanttView.Tasks>
+                <GanttView:Task Mode="Manual" />
+                <GanttView:Task Name="Pursue a hare" Duration="3" DurationUnits="Days" Start="2012/6/22" ID="1" Mode="Automatic" ConstraintDate="2012/6/22" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                        <GanttView:ResourceRef Amount="0" ResourceID="3"/>
+                    </GanttView:Task.ResourceRefs>
+                </GanttView:Task>
+                <GanttView:Task Name="Hit the hare" Duration="12" DurationUnits="Minutes" Start="2012/6/27 9:00:00" ID="2" Mode="Automatic" ConstraintDate="2012/6/26" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="4"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="1"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Mode="Manual" />
+                <GanttView:Task Name="Skin that hare" Duration="2" DurationUnits="Days" Start="2012/6/28" ID="3" Mode="Automatic" ConstraintDate="2012/6/28" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="4"/>
+                        <GanttView:ResourceRef Amount="1" ResourceID="3"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="2"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Cook the hare" Duration="3" DurationUnits="Days" Start="2012/7/2 9:00:00" ID="4" Mode="Automatic" ConstraintDate="2012/6/29" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="2"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="3"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+                <GanttView:Task Name="Eat the hare" Duration="1" DurationUnits="Days" Start="2012/7/5 9:00:00" ID="5" Mode="Automatic" ConstraintDate="2012/6/30" ConstraintType="StartNoEarlierThan">
+                    <GanttView:Task.ResourceRefs>
+                        <GanttView:ResourceRef Amount="1" ResourceID="1"/>
+                    </GanttView:Task.ResourceRefs>
+                    <GanttView:Task.Predecessors>
+                        <GanttView:Predecessor PredecessorTaskID="4"></GanttView:Predecessor>
+                    </GanttView:Task.Predecessors>
+                </GanttView:Task>
+            </c1:C1GanttView.Tasks>
+        </c1:C1GanttView>
+
+    </Grid>
+</UserControl>

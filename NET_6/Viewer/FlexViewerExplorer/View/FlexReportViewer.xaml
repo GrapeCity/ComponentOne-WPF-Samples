@@ -30,7 +30,7 @@
                                     <ColumnDefinition Width="55"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Reports" FontSize="15" Background="WhiteSmoke" Padding="10,4,0,0"></TextBlock>
-                                <Button Click="Button_Click" Grid.Row="0" Grid.Column="1" BorderThickness="0" Background="WhiteSmoke" Padding="4" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="0">
+                                <c1:C1Button Click="Button_Click" Grid.Row="0" Grid.Column="1" BorderThickness="0" Background="WhiteSmoke" Padding="4" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="0">
                                     <Viewbox RenderTransformOrigin="0.5,0.5" Margin="0">
                                         <Viewbox.RenderTransform>
                                             <RotateTransform Angle="180"/>
@@ -42,7 +42,7 @@
                                             </Path>
                                         </Canvas>
                                     </Viewbox>
-                                </Button>
+                                </c1:C1Button>
 
                                 <c1:C1TreeView Grid.Row="1" x:Name="myTreeView" 
                                                Grid.ColumnSpan="2"

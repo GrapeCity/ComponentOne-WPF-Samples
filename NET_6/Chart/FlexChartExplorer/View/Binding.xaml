@@ -29,12 +29,12 @@
                       ItemsSource="{Binding DataContext.ChartTypes}" ItemTemplate="{StaticResource cbChartTypeTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}">
             </Chart:C1ComboBox>
-            <CheckBox x:Name="cbInterpolateNulls" Content="InterpolateNulls" Margin="10 0" VerticalAlignment="Center"
+            <Chart:C1CheckBox x:Name="cbInterpolateNulls" Content="InterpolateNulls" Margin="10 0" VerticalAlignment="Center"
                       IsChecked="{Binding ElementName=flexChart, Path=Options.InterpolateNulls, Mode=TwoWay}">
-            </CheckBox>
-            <CheckBox x:Name="cbLegendToggle" Content="LegendToggle" VerticalAlignment="Center"
+            </Chart:C1CheckBox>
+            <Chart:C1CheckBox x:Name="cbLegendToggle" Content="LegendToggle" VerticalAlignment="Center"
                       IsChecked="{Binding ElementName=flexChart, Path=LegendToggle, Mode=TwoWay}">
-            </CheckBox>
+            </Chart:C1CheckBox>
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" BindingX="Date" Grid.Row="1" ChartType="Line" ItemsSource="{Binding DataContext.Data}">
             <Chart:Series SeriesName="Downloads" Binding="Downloads"/>

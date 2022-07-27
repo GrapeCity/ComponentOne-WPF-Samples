@@ -41,7 +41,7 @@
                 <c1:C1ComboBoxItem Content="Collapsible" />
                 <c1:C1ComboBoxItem Content="Any" />
             </c1:C1ComboBox>
-            <CheckBox Content="Fill" IsChecked="{Binding Fill,ElementName=accordion}" Margin="20 4" VerticalAlignment="Center"/>
+            <c1:C1CheckBox Content="Fill" IsChecked="{Binding Fill,ElementName=accordion}" Margin="20 4" VerticalAlignment="Center"/>
         </StackPanel>
         <c1:C1Accordion x:Name="accordion" Width="300" Margin="25">
             <c1:C1Expander Header="Mail" IsExpanded="True">

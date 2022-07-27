@@ -155,4 +155,8 @@
     <value>FlexGrid 設定</value>
     <comment>FlexGrid Settings</comment>
   </data>
+  <data name="PrintingTitle" xml:space="preserve">
+    <value>FlexGrid の印刷例</value>
+    <comment>FlexGrid printing example</comment>
+  </data>
 </root>

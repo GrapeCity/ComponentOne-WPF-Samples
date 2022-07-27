@@ -54,34 +54,34 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

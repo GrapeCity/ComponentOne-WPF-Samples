@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:SpellCheckerExplorer.Properties"
              mc:Ignorable="d">
     <UserControl.Resources>
         <DataTemplate x:Key="DictionaryTemplate">
@@ -28,7 +29,7 @@
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                 <TextBlock Text="Pick a Language:" VerticalAlignment="Center" Margin="0 0 2 0"/>
                 <c1:C1ComboBox x:Name="cmbLanguage" Width="180" Margin="0 0 10 0" Height="34" />
-                <c1:C1Button Content="Check Spelling" Click="Button_Click" Width="140"/>
+                <c1:C1Button Content="{x:Static res:Resources.CheckSpelling}" Click="Button_Click" Width="140"/>
             </StackPanel>
         </Border>
 

@@ -1,4 +1,5 @@
 ﻿using FlexGridExplorer.Resources;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -10,7 +11,7 @@ namespace FlexGridExplorer
         {
             InitializeComponent();
             Tag = AppResources.CheckListDescription;
-            grid.ItemsSource = Customer.GetCities();
+            grid.ItemsSource = Customer.GetCities().ToList();
         }
 
         private void OnAutoGeneratingColumn(object sender, C1.WPF.Grid.GridAutoGeneratingColumnEventArgs e)

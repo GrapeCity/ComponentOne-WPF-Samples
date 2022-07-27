@@ -16,6 +16,12 @@ namespace CalendarExplorer
                     new Overview()),
 
                 new SampleItem(
+                    AppResources.MultiMonthsTitle,
+                    AppResources.MultiMonthsTitle,
+                    AppResources.MultiMonthsDes,
+                    new MultiMonths()),
+
+                new SampleItem(
                     AppResources.CustomUITitle,
                     AppResources.CustomUITitle,
                     AppResources.CustomUIDescription,

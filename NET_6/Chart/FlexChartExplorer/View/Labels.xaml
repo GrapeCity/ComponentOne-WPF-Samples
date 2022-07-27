@@ -44,9 +44,9 @@
                       ItemTemplate="{StaticResource cbLabelPositionTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=DataLabel.Position, Mode=TwoWay, Converter={StaticResource enumConverter}}">
             </Chart:C1ComboBox>
-            <CheckBox x:Name="cbLabelBorder" Content="Label border" VerticalAlignment="Center"
+            <Chart:C1CheckBox x:Name="cbLabelBorder" Content="Label border" VerticalAlignment="Center"
                       IsChecked="{Binding ElementName=flexChart, Path=DataLabel.Border, Mode=TwoWay}">
-            </CheckBox>
+            </Chart:C1CheckBox>
             <TextBlock Text="Angle:" Margin="10 0 10 0" VerticalAlignment="Center" />
             <c1:C1NumericBox Value="{Binding ElementName=flexChart, Path=DataLabel.Angle, Mode=TwoWay}" Minimum="-90" Maximum="90" Increment="30" Width="60" />
         </StackPanel>

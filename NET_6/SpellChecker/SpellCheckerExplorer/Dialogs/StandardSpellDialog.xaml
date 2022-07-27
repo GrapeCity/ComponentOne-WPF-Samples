@@ -4,10 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
-             mc:Ignorable="d" Title="Spelling" Width="520" Height="250" 
+             mc:Ignorable="d" Title="Spelling" Width="520" Height="300" 
              ResizeMode="NoResize" KeyDown="C1SpellDialog_KeyDown" x:Name="userControl">
     <Window.Resources>
-        <SolidColorBrush x:Key="SystemWindowColor" Color="{x:Static SystemColors.WindowColor}" />
         <Style x:Key="Label" TargetType="TextBlock">
             <Setter Property="Margin" Value="4" />
             <Setter Property="VerticalAlignment" Value="Center" />
@@ -16,14 +15,13 @@
         <Style x:Key="Button" TargetType="Button">
             <Setter Property="Margin" Value="4" />
             <Setter Property="Padding" Value="6" />
-            <Setter Property="Background" Value="{StaticResource SystemWindowColor}" />
         </Style>
         <Style x:Key="DialogItem" TargetType="Control">
             <Setter Property="Margin" Value="4" />
         </Style>
     </Window.Resources>
 
-    <Grid x:Name="LayoutRoot" Background="{StaticResource SystemWindowColor}">
+    <Grid x:Name="LayoutRoot" >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -54,7 +52,7 @@
         <!-- show suggestions -->
         <TextBlock x:Name="_lblSuggestions"		Style="{StaticResource Label}"      Text="Suggestions:" Grid.Row="2" />
         <c1:C1ListView x:Name="_listSuggestions" ItemsSource="{Binding Items, ElementName=userControl}" BorderThickness="1"
-                       PreviewMouseDoubleClick="_listSuggestions_PreviewMouseDoubleClick"
+                       PreviewMouseDoubleClick="_listSuggestions_PreviewMouseDoubleClick" Background="Transparent"
                        SelectionChanged="_listSuggestions_SelectionChanged"
                        Style="{StaticResource DialogItem}"  Grid.Column="1" Grid.Row="2" Grid.RowSpan="5"/>
 

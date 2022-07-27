@@ -34,8 +34,8 @@
                 <c1:C1Button x:Name="btnPrinterSettings" Grid.Column="1" Content="Settings..." Margin="5,0,0,0" Width="75" Click="btnPrinterSettings_Click"/>
             </Grid>
             <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal">
-                <RadioButton x:Name="rbtnPagesAll" Content="All Pages" VerticalAlignment="Center" Margin="0,0,20,0" IsChecked="True"/>
-                <RadioButton x:Name="rbtnPagesRange" Content="Range of Pages" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <c1:C1RadioButton x:Name="rbtnPagesAll" Content="All Pages" VerticalAlignment="Center" Margin="0,0,20,0" IsChecked="True"/>
+                <c1:C1RadioButton x:Name="rbtnPagesRange" Content="Range of Pages" VerticalAlignment="Center" Margin="0,0,5,0"/>
                 <c1:C1TextBox x:Name="tbPagesRange" Width="100" VerticalAlignment="Center"/>
             </StackPanel>
         </Grid>

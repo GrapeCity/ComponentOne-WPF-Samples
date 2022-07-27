@@ -145,4 +145,26 @@
     <value>Calendarエクスプローラー</value>
     <comment>CalendarExplorer</comment>
   </data>
+  <data name="WeekdaysDescription" xml:space="preserve">
+    <value>平日のみを選択できるようにカレンダーをカスタマイズする方法を示します。</value>
+    <comment>Shows how to customize Calendar to allow only selecting weekdays.</comment>
+  </data>
+  <data name="WeekdaysTitle" xml:space="preserve">
+    <value>平日</value>
+    <comment>Weekdays</comment>
+  </data>
+  <data name="WeekSelectionDescription" xml:space="preserve">
+    <value>週の選択を実装する方法を示します。</value>
+    <comment>Shows how to implement week-selection</comment>
+  </data>
+  <data name="WeekSelectionTitle" xml:space="preserve">
+    <value>週の選択</value>
+    <comment>WeekSelection</comment>
+  </data>
+  <data name="MultiMonthsDes" xml:space="preserve">
+    <value>MultiMonth Calendar</value>
+  </data>
+  <data name="MultiMonthsTitle" xml:space="preserve">
+    <value>MultiMonth Calendar</value>
+  </data>
 </root>

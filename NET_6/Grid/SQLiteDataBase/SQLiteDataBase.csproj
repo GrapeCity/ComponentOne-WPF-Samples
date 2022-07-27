@@ -13,25 +13,25 @@
     <EmbeddedResource Include=".gclicx" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20221.65" />
+    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20222.106" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20221.205</Version>
+      <Version>6.0.20222.263</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.7" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\AppResources.Designer.cs">

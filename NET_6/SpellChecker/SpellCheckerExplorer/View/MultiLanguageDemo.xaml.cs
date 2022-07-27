@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using C1.WPF.SpellChecker;
 using System.Reflection;
 using System.IO;
+using Res = SpellCheckerExplorer.Properties.Resources;
 
 namespace SpellCheckerExplorer
 {
@@ -67,11 +68,11 @@ namespace SpellCheckerExplorer
                 // dictionary loaded, update status
                 if (_c1SpellChecker.MainDictionary.State == DictionaryState.Loaded)
                 {
-                    WriteLine("Loaded {0} dictionary ({1:n0} words).", dctWrapper.Name, _c1SpellChecker.MainDictionary.WordCount);
+                    WriteLine(Res.LoadDictionary, dctWrapper.Name, _c1SpellChecker.MainDictionary.WordCount);
                 }
                 else
                 {
-                    WriteLine("Failed to load {0} dictionary: {1}", dctWrapper.Name, dict.State);
+                    WriteLine(Res.FailedToLoadDictionary, dctWrapper.Name, dict.State);
                 }
             }
         }

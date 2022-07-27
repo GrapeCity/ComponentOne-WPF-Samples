@@ -19,7 +19,7 @@ namespace FlexPivotExplorer.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -81,6 +81,15 @@ namespace FlexPivotExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collapse All.
+        /// </summary>
+        public static string CollapseAll {
+            get {
+                return ResourceManager.GetString("CollapseAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Collapse all the subtotals rows and columns..
         /// </summary>
         public static string CollapseSubTotalRowsColumnsTooltip {
@@ -127,6 +136,15 @@ namespace FlexPivotExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Conditional Formatting.
+        /// </summary>
+        public static string ConditionFormat {
+            get {
+                return ResourceManager.GetString("ConditionFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to work with cube data source.
         /// </summary>
         public static string CubeAnalysisDesc {
@@ -159,6 +177,15 @@ namespace FlexPivotExplorer.Properties {
         public static string DataEngineTitle {
             get {
                 return ResourceManager.GetString("DataEngineTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group prices.
+        /// </summary>
+        public static string GroupPrice {
+            get {
+                return ResourceManager.GetString("GroupPrice", resourceCulture);
             }
         }
         
@@ -246,6 +273,15 @@ namespace FlexPivotExplorer.Properties {
         public static string PredefinedPivotViewTooltip {
             get {
                 return ResourceManager.GetString("PredefinedPivotViewTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales by Country and Person.
+        /// </summary>
+        public static string SaleByCountry {
+            get {
+                return ResourceManager.GetString("SaleByCountry", resourceCulture);
             }
         }
         

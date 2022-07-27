@@ -1,19 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.IO.IsolatedStorage;
-using System.Linq;
+﻿using SchedulerExplorer.Resources;
 using System.Windows;
 using System.Windows.Controls;
-using C1.Schedule;
-using C1.WPF.Calendar;
-using C1.WPF.Core;
-using C1.WPF.DateTimeEditors;
-using C1.WPF.Input;
-using C1.WPF.Schedule;
-using SchedulerExplorer.Resources;
-using DateList = C1.WPF.Schedule.DateList;
-using System.Globalization;
 
 namespace SchedulerExplorer
 {
@@ -23,7 +10,6 @@ namespace SchedulerExplorer
     public partial class DataBinding : UserControl
     {
         AppointmentBOList _list = null;
-        bool _updatingSelection = false;
 
         public DataBinding()
         {
@@ -34,18 +20,6 @@ namespace SchedulerExplorer
             Tag = AppResources.DataBindingDescription;
             scheduler1.StyleChanged += new System.EventHandler<RoutedEventArgs>(scheduler1_StyleChanged);
             scheduler1_StyleChanged(null, null);
-            scheduler1.LayoutUpdated += new EventHandler(scheduler1_LayoutUpdated);
-            scheduler1.VisibleDates.CollectionChanged += VisibleDates_CollectionChanged;
-        }
-
-        void scheduler1_LayoutUpdated(object sender, EventArgs e)
-        {
-            UpdateCalendarSelection();
-        }
-
-        private void VisibleDates_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            UpdateCalendarSelection();
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
@@ -95,37 +69,6 @@ namespace SchedulerExplorer
             else
             {
                 btnTimeLine.IsChecked = true;
-            }
-            UpdateCalendarSelection();
-        }
-
-        void selected_date_changed(object sender, CalendarSelectionChangedEventArgs e)
-        {
-            if (!_updatingSelection)
-            {
-                var calendar = sender as C1Calendar;
-                if (calendar?.SelectedDate == default(DateTime))
-                    return;
-
-                scheduler1.VisibleDates.BeginUpdate();
-                scheduler1.VisibleDates.Clear();
-                foreach (var d in calendar.SelectedDates)
-                {
-                    scheduler1.VisibleDates.Add(d);
-                }
-                scheduler1.VisibleDates.EndUpdate();
-            }
-        }
-
-        void UpdateCalendarSelection()
-        {
-            if (!_updatingSelection && (calendar1.SelectedDates == null ||
-                (scheduler1.VisibleDates.Count != calendar1.SelectedDates.Count
-                || (calendar1.SelectedDates.Count > 0 && scheduler1.VisibleDates[0] != calendar1.SelectedDates[0]))))
-            {
-                _updatingSelection = true;
-                calendar1.SelectedDates = scheduler1.VisibleDates.ToList();
-                _updatingSelection = false;
             }
         }
     }

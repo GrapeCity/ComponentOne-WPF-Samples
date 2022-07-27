@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="ThemeExplorer.DataVisualization"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:ThemeExplorer">
+    <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree">
+        <c1:C1TabItem Margin="5,0" Header="Bar Code" BorderThickness="0" >
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+                <TextBlock Text="Select Barcode Type:" Margin="0,5,0,5"/>
+                <c1:C1ComboBox x:Name="BarcodeType" IsEditable="False" SelectedIndexChanged="BarcodeType_SelectedIndexChanged"/>
+                <TextBlock Text="Bar Code Type Description:" Margin="0,5,0,5" />
+                <TextBlock x:Name="BarCodeTypeDescription" TextWrapping="Wrap" Text="N/A" />
+                <TextBlock Text="Data:" Margin="0,5,0,5" />
+                <c1:C1TextBoxBase x:Name="BarcodeText" />
+                <c1:C1Button x:Name="GenerateBarCodeButton" Content="Regenerate Barcode Image" Margin="0,5,0,5" Click="GenerateBarCodeButton_Click" />
+                <c1:C1BarCode x:Name="BarCode" CaptionPosition="Below" />
+            </StackPanel>
+        </c1:C1TabItem>
+        <c1:C1TabItem Header="FlexChart" BorderThickness="0">
+            <c1:FlexChart x:Name="flexChart" BindingX="Date" ItemsSource="{Binding DataContext.Data}">
+                <c1:Series SeriesName="Downloads" Binding="Downloads"/>
+                <c1:Series SeriesName="Sales" Binding="Sales"/>
+                <c1:FlexChart.AxisX>
+                    <c1:Axis>
+                        <c1:Axis.Scrollbar>
+                            <c1:C1AxisScrollbar x:Name="axisXScrollbar" />
+                        </c1:Axis.Scrollbar>
+                    </c1:Axis>
+                </c1:FlexChart.AxisX>
+            </c1:FlexChart>
+        </c1:C1TabItem>
+        <c1:C1TabItem Header="FlexPie" BorderThickness="0">
+            <c1:FlexPie x:Name="pieChart" Binding="Age" BindingName="Residence" >
+                <c1:FlexPie.DataLabel>
+                    <c1:PieDataLabel Content="{}{y}"/>
+                </c1:FlexPie.DataLabel>
+            </c1:FlexPie>
+        </c1:C1TabItem>
+        <!-- Maps -->
+        <c1:C1TabItem Header="Maps" BorderThickness="0">
+            <c1:C1Maps Margin="5" />
+        </c1:C1TabItem>
+        <!--Sparkline-->
+        <c1:C1TabItem Header="Sparkline" BorderThickness="0">
+            <c1:C1Sparkline x:Name="sparkline" Margin="5" Width="600"/>
+        </c1:C1TabItem>
+    </c1:C1TabControl>
+</UserControl>

@@ -22,7 +22,7 @@ namespace DataFilterExplorer.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    public class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DataFilterExplorer.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DataFilterExplorer.Resources.AppResources", typeof(AppResources).Assembly);
@@ -51,7 +51,7 @@ namespace DataFilterExplorer.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,27 @@ namespace DataFilterExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply filter.
+        /// </summary>
+        public static string ApplyFilter {
+            get {
+                return ResourceManager.GetString("ApplyFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auto apply filter.
+        /// </summary>
+        public static string AutoApplyFilter {
+            get {
+                return ResourceManager.GetString("AutoApplyFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This sample demonstrates how to use C1DataFilter control to filter the C1FlexGrid control. Also demonstrates how to modify automatically generated filters, save and restore filter expressions..
         /// </summary>
-        internal static string CarListDescription {
+        public static string CarListDescription {
             get {
                 return ResourceManager.GetString("CarListDescription", resourceCulture);
             }
@@ -72,7 +90,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cars List.
         /// </summary>
-        internal static string CarListTitle {
+        public static string CarListTitle {
             get {
                 return ResourceManager.GetString("CarListTitle", resourceCulture);
             }
@@ -81,7 +99,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Demonstrate using new conditional filters that accept multiple conditions and a new full text filter..
         /// </summary>
-        internal static string ConditionalFiltersDescription {
+        public static string ConditionalFiltersDescription {
             get {
                 return ResourceManager.GetString("ConditionalFiltersDescription", resourceCulture);
             }
@@ -90,7 +108,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Conditional Filters.
         /// </summary>
-        internal static string ConditionalFiltersTitle {
+        public static string ConditionalFiltersTitle {
             get {
                 return ResourceManager.GetString("ConditionalFiltersTitle", resourceCulture);
             }
@@ -99,7 +117,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Creating {0:N0} records....
         /// </summary>
-        internal static string CreatingRecordsMessage {
+        public static string CreatingRecordsMessage {
             get {
                 return ResourceManager.GetString("CreatingRecordsMessage", resourceCulture);
             }
@@ -115,7 +133,7 @@ namespace DataFilterExplorer.Resources {
         ///ModelFilter based on CustomFilter, allows to choose the model of the car;
         ///PriceFilter based on ChecklistFilter, allows to choose the price range o [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string CustomFiltersDescription {
+        public static string CustomFiltersDescription {
             get {
                 return ResourceManager.GetString("CustomFiltersDescription", resourceCulture);
             }
@@ -124,7 +142,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Custom Filters.
         /// </summary>
-        internal static string CustomFilterTitle {
+        public static string CustomFilterTitle {
             get {
                 return ResourceManager.GetString("CustomFilterTitle", resourceCulture);
             }
@@ -138,7 +156,7 @@ namespace DataFilterExplorer.Resources {
         ///You can use the GetExpression method to get the current filter expression, which you can use for xml serialization.
         ///In this sample FlexGri [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string FilterEditorDescription {
+        public static string FilterEditorDescription {
             get {
                 return ResourceManager.GetString("FilterEditorDescription", resourceCulture);
             }
@@ -147,7 +165,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Filter Editor.
         /// </summary>
-        internal static string FilterEditorTitle {
+        public static string FilterEditorTitle {
             get {
                 return ResourceManager.GetString("FilterEditorTitle", resourceCulture);
             }
@@ -156,7 +174,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This sample demonstrates how to use the FilterSummary for the Checklist filter. Also shows how to use different aggregate expressions and custom format of filter summaries..
         /// </summary>
-        internal static string FilterSummaryDescription {
+        public static string FilterSummaryDescription {
             get {
                 return ResourceManager.GetString("FilterSummaryDescription", resourceCulture);
             }
@@ -165,7 +183,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Filter Summary.
         /// </summary>
-        internal static string FilterSummaryTitle {
+        public static string FilterSummaryTitle {
             get {
                 return ResourceManager.GetString("FilterSummaryTitle", resourceCulture);
             }
@@ -174,16 +192,43 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Loading records....
         /// </summary>
-        internal static string LoadingMessage {
+        public static string LoadingMessage {
             get {
                 return ResourceManager.GetString("LoadingMessage", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Load or generate Source.
+        /// </summary>
+        public static string LoadOrGenerate {
+            get {
+                return ResourceManager.GetString("LoadOrGenerate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset filter.
+        /// </summary>
+        public static string ResetFilter {
+            get {
+                return ResourceManager.GetString("ResetFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save filter.
+        /// </summary>
+        public static string SaveFilter {
+            get {
+                return ResourceManager.GetString("SaveFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DataFilterExplorer.
         /// </summary>
-        internal static string Title {
+        public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
             }
@@ -192,7 +237,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This sample demonstrate how C1DataFilter can be used with a virtualized source..
         /// </summary>
-        internal static string VirtualSourceDescription {
+        public static string VirtualSourceDescription {
             get {
                 return ResourceManager.GetString("VirtualSourceDescription", resourceCulture);
             }
@@ -201,7 +246,7 @@ namespace DataFilterExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Virtual Source.
         /// </summary>
-        internal static string VirtualSourceTitle {
+        public static string VirtualSourceTitle {
             get {
                 return ResourceManager.GetString("VirtualSourceTitle", resourceCulture);
             }

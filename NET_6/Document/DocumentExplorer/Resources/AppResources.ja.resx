@@ -117,26 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-	<data name="ExportTitle" xml:space="preserve">
-    <value>Export</value>
+  <data name="ExportTitle" xml:space="preserve">
+    <value>エクスポート</value>
+    <comment>Export</comment>
   </data>
-	<data name="ExportDesc" xml:space="preserve">
-    <value>Shows how to export content of C1Document to various format.</value>
+  <data name="ExportDesc" xml:space="preserve">
+    <value>C1Document のコンテンツをさまざまな形式にエクスポートする方法を示します。</value>
+    <comment>Shows how to export content of C1Document to various format.</comment>
   </data>
-	<data name="PrintTitle" xml:space="preserve">
-    <value>Print</value>
+  <data name="PrintTitle" xml:space="preserve">
+    <value>印刷</value>
+    <comment>Print</comment>
   </data>
-	<data name="PrintDesc" xml:space="preserve">
-    <value>Shows how to print a C1Document object.</value>
+  <data name="PrintDesc" xml:space="preserve">
+    <value>C1Document オブジェクトを印刷する方法を示します。</value>
+    <comment>Shows how to print a C1Document object.</comment>
   </data>
-	<data name="SsrsTitle" xml:space="preserve">
+  <data name="SsrsTitle" xml:space="preserve">
     <value>Ssrs</value>
+    <comment>Ssrs</comment>
   </data>
-	<data name="SsrsDesc" xml:space="preserve">
-    <value>Shows how to load Ssrs reports.</value>
+  <data name="SsrsDesc" xml:space="preserve">
+    <value>Ssrs レポートをロードする方法を示します。</value>
+    <comment>Shows how to load Ssrs reports.</comment>
   </data>
   <data name="MainTitle" xml:space="preserve">
-    <value>C1Document Explorer</value>
+    <value>C1Document エクスプローラ</value>
     <comment>C1Document Explorer</comment>
-  </data>  
+  </data>
 </root>

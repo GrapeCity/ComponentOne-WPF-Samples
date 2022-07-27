@@ -64,9 +64,9 @@
         <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" SnapsToDevicePixels="True" Padding="0 0 0 10">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                    <CheckBox x:Name="cbShowCheckBox" Content="Show Check Box" Click="cbShowCheckBox_Click" Margin="5" FontFamily="Segoe UI" FontSize="14" IsChecked="True"
+                    <c1:C1CheckBox x:Name="cbShowCheckBox" Content="Show Check Box" Click="cbShowCheckBox_Click" Margin="5" FontFamily="Segoe UI" FontSize="14" IsChecked="True"
                           VerticalAlignment="Center" VerticalContentAlignment="Center"/>
-                    <CheckBox x:Name="cbShowSelectAll" Content="Show Select All" Click="cbShowSelectAll_Click" Margin="20 5" FontFamily="Segoe UI" FontSize="14"
+                    <c1:C1CheckBox x:Name="cbShowSelectAll" Content="Show Select All" Click="cbShowSelectAll_Click" Margin="20 5" FontFamily="Segoe UI" FontSize="14"
                           VerticalAlignment="Center" VerticalContentAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">

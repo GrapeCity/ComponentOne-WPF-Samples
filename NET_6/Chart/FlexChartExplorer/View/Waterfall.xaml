@@ -20,10 +20,10 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <CheckBox Content="Is RelativeData" IsChecked="{Binding ElementName=wf, Path=RelativeData, Mode=TwoWay}"/>
-            <CheckBox Content="Show Connector Lines" Grid.Column="1" IsChecked="{Binding ElementName=wf, Path=ConnectorLines, Mode=TwoWay}"/>
-            <CheckBox Content="Show Total" Grid.Column="2" IsChecked="{Binding ElementName=wf, Path=ShowTotal, Mode=TwoWay}"/>
-            <CheckBox Content="Show Intermediate Total" Grid.Column="3" IsChecked="{Binding ElementName=wf, Path=ShowIntermediateTotal, Mode=TwoWay}" />
+            <c1:C1CheckBox Content="Is RelativeData" IsChecked="{Binding ElementName=wf, Path=RelativeData, Mode=TwoWay}"/>
+            <c1:C1CheckBox Content="Show Connector Lines" Grid.Column="1" IsChecked="{Binding ElementName=wf, Path=ConnectorLines, Mode=TwoWay}"/>
+            <c1:C1CheckBox Content="Show Total" Grid.Column="2" IsChecked="{Binding ElementName=wf, Path=ShowTotal, Mode=TwoWay}"/>
+            <c1:C1CheckBox Content="Show Intermediate Total" Grid.Column="3" IsChecked="{Binding ElementName=wf, Path=ShowIntermediateTotal, Mode=TwoWay}" />
         </Grid>
         <c1:FlexChart Grid.Row="1" ToolTipContent="{}{x}&#x000A;Value: {y}" Binding="Value" BindingX="Name" ItemsSource="{Binding Data}">
             <c1:Waterfall x:Name="wf" RelativeData="True" ConnectorLines="True" ShowTotal="True" Start="100" 

@@ -465,4 +465,22 @@
     <value>損益分岐点</value>
     <comment>Break-Even</comment>
   </data>
+  <data name="C1CopyRight" xml:space="preserve">
+    <value>Copyright (c) GrapeCity inc.</value>
+  </data>
+  <data name="ChartFooter" xml:space="preserve">
+    <value>チャートフッター</value>
+  </data>
+  <data name="ChartHeader" xml:space="preserve">
+    <value>チャートヘッダー</value>
+  </data>
+  <data name="Factors" xml:space="preserve">
+    <value>購入決定に影響を与える要因</value>
+  </data>
+  <data name="MonthlySale" xml:space="preserve">
+    <value>月次売上概要</value>
+  </data>
+  <data name="WorldGDPRanking" xml:space="preserve">
+    <value>世界GDPランキング</value>
+  </data>
 </root>

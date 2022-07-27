@@ -1,12 +1,12 @@
 ﻿using C1.PivotEngine;
 using C1.WPF.Core;
-using C1.WPF.Menu;
 using C1.WPF.Ribbon;
 using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Res = FlexPivotExplorer.Properties.Resources;
 
 namespace FlexPivotExplorer
 {
@@ -67,7 +67,7 @@ namespace FlexPivotExplorer
 
                 // add collapseall menu to page's main menu
                 collapseAllView = new C1ButtonTool();
-                collapseAllView.Label = "CollapseAll";
+                collapseAllView.Label = Res.CollapseAll;
                 collapseAllView.IconTemplate = C1IconTemplate.ArrowDown;
                 collapseAllView.VerticalAlignment = VerticalAlignment.Center;
                 ToolTipService.SetToolTip(collapseAllView, Properties.Resources.CollapseSubTotalRowsColumnsTooltip);

@@ -47,10 +47,10 @@
                     </DataTemplate>
                 </c1:C1ComboBox.ItemTemplate>
             </c1:C1ComboBox>
-            <CheckBox x:Name="cbLabelMin" Content="Label Min" VerticalAlignment="Center"
+            <c1:C1CheckBox x:Name="cbLabelMin" Content="Label Min" VerticalAlignment="Center"
                       IsChecked="{Binding ElementName=flexChart, Path=AxisX.LabelMin, Mode=TwoWay}" Margin="10 0 20 0"/>
 
-            <CheckBox x:Name="cbLabelMax" Content="Label Max" VerticalAlignment="Center"
+            <c1:C1CheckBox x:Name="cbLabelMax" Content="Label Max" VerticalAlignment="Center"
                       IsChecked="{Binding ElementName=flexChart, Path=AxisX.LabelMax, Mode=TwoWay}" Margin="10 0 20 0"/>
 
         </StackPanel>

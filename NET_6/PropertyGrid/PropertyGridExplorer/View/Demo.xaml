@@ -29,32 +29,30 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <StackPanel x:Name="stackControl1">
-                <CheckBox HorizontalAlignment="Left" Click="CheckBox_Click">
+                <c1:C1CheckBox HorizontalAlignment="Left" Click="CheckBox_Click">
                     <ContentControl x:Name="contentControl" Content="Content" Margin="0,10" Width="150" Height="40" d:LayoutOverrides="Width, Height" Background="#fff6aac9" Style="{DynamicResource ContentControlStyle1}" />
-                </CheckBox>
-                <CheckBox Click="CheckBox_Click">
+                </c1:C1CheckBox>
+                <c1:C1CheckBox Click="CheckBox_Click">
                     <TextBox x:Name="txtbox" TextWrapping="Wrap" Margin="0" Width="55" Height="56" />
-                </CheckBox>
-                <CheckBox HorizontalAlignment="Left" Click="CheckBox_Click">
+                </c1:C1CheckBox>
+                <c1:C1CheckBox HorizontalAlignment="Left" Click="CheckBox_Click">
                     <Button x:Name="targetButton" Content="click to change content" Margin="0,10" Width="150" Height="40" d:LayoutOverrides="Width, Height" />
-                </CheckBox>
+                </c1:C1CheckBox>
             </StackPanel>
-            <Border Grid.Column="1">
-                <c1:C1PropertyGrid x:Name="propertyGrid" AutoGenerateProperties="False" ShowDescription="True" ShowResetButton="True"  >
-                    <c1:C1PropertyGrid.PropertyAttributes>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Width" DefaultValue="120" MinimumValue="0" Category="Size" Description="Gets or sets the width of the element."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Height" DefaultValue="28" MinimumValue="0" Category="Size" Description="Gets or sets the suggested height of the element."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Background" Category="Colors" Description="Gets or sets a brush that describes the background of a control."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="BorderBrush" DefaultValue="FFAEAEAE" Category="Colors" Description="Gets or sets a brush that describes the border background of a control."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="HorizontalAlignment" DefaultValue="Stretch" Category="Others" Description="Gets or sets the horizontal alignment characteristics applied to this element when it is composed within a parent element, such as a panel or items control."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="IsEnabled" DefaultValue="true" Category="Others" Description="Gets or sets a value indicating whether this element is enabled in the user interface (UI). This is a dependency property."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Opacity" DefaultValue="0.8" MinimumValue="0" MaximumValue="1" Category="Others" Description="Gets or sets the opacity factor applied to the entire System.Windows.UIElement when it is rendered in the user interface (UI). This is a dependency property."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Content" Category="Others" Description="Gets or sets the content of a System.Windows.Controls.ContentControl."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="MaxWidth" DefaultValue="100" MinimumValue="0" Category="Size" Description="Gets or sets the maximum width constraint of the element."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="MaxHeight" DefaultValue="100" MinimumValue="0" Category="Size" Description="Gets or sets the maximum height constraint of the element."/>
-                    </c1:C1PropertyGrid.PropertyAttributes>
-                </c1:C1PropertyGrid>
-            </Border>
+            <c1:C1PropertyGrid x:Name="propertyGrid" Grid.Column="1" AutoGenerateProperties="False" ShowDescription="True" ShowResetButton="True"  >
+                <c1:C1PropertyGrid.PropertyAttributes>
+                    <c1:PropertyAttribute Browsable="True" MemberName="Width" DefaultValue="120" MinimumValue="0" Category="Size" Description="Gets or sets the width of the element."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="Height" DefaultValue="28" MinimumValue="0" Category="Size" Description="Gets or sets the suggested height of the element."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="Background" Category="Colors" Description="Gets or sets a brush that describes the background of a control."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="BorderBrush" DefaultValue="FFAEAEAE" Category="Colors" Description="Gets or sets a brush that describes the border background of a control."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="HorizontalAlignment" DefaultValue="Stretch" Category="Others" Description="Gets or sets the horizontal alignment characteristics applied to this element when it is composed within a parent element, such as a panel or items control."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="IsEnabled" DefaultValue="true" Category="Others" Description="Gets or sets a value indicating whether this element is enabled in the user interface (UI). This is a dependency property."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="Opacity" DefaultValue="0.8" MinimumValue="0" MaximumValue="1" Category="Others" Description="Gets or sets the opacity factor applied to the entire System.Windows.UIElement when it is rendered in the user interface (UI). This is a dependency property."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="Content" Category="Others" Description="Gets or sets the content of a System.Windows.Controls.ContentControl."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="MaxWidth" DefaultValue="100" MinimumValue="0" Category="Size" Description="Gets or sets the maximum width constraint of the element."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="MaxHeight" DefaultValue="100" MinimumValue="0" Category="Size" Description="Gets or sets the maximum height constraint of the element."/>
+                </c1:C1PropertyGrid.PropertyAttributes>
+            </c1:C1PropertyGrid>
         </Grid>
     </Border>
 </UserControl>

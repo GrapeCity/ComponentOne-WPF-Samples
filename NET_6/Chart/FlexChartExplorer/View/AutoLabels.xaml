@@ -43,7 +43,7 @@
                       ItemTemplate="{StaticResource cbOverlappingTemplate}"
                       SelectedValue="{Binding ElementName=flexChart, Path=DataLabel.Overlapping, Mode=TwoWay, Converter={StaticResource enumConverter}}"/>
 
-            <CheckBox x:Name="cbLabelBorder" Content="Label border" VerticalAlignment="Center" Margin="10 0 0 0"
+            <c1:C1CheckBox x:Name="cbLabelBorder" Content="Label border" VerticalAlignment="Center" Margin="10 0 0 0"
                       IsChecked="{Binding ElementName=flexChart, Path=DataLabel.Border, Mode=TwoWay}"/>
 
         </StackPanel>

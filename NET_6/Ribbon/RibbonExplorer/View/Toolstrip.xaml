@@ -76,12 +76,12 @@
                 </c1:C1DropDownTool.IconTemplate>
                 <c1:C1DropDownTool.ContentTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="8">
-                            <TextBlock Text="Toolstrip options" />
-                            <CheckBox Content="Is vertical" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
-                            <TextBlock Text="Overflow:" />
-                            <RadioButton Content="None" Checked="RadioButton_Checked" />
-                            <RadioButton Content="Menu" IsChecked="True" Checked="RadioButton_Checked" />
+                        <StackPanel Margin="5">
+                            <TextBlock Margin="5" Text="Toolstrip options" />
+                            <c1:C1CheckBox Margin="5" Content="Is vertical" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
+                            <TextBlock Margin="5" Text="Overflow:" />
+                            <c1:C1RadioButton Margin="5" Content="None" Checked="RadioButton_Checked" />
+                            <c1:C1RadioButton Margin="5" Content="Menu" IsChecked="True" Checked="RadioButton_Checked" />
                         </StackPanel>
                     </DataTemplate>
                 </c1:C1DropDownTool.ContentTemplate>

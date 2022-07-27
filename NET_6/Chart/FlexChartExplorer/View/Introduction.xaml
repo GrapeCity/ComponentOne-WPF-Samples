@@ -56,15 +56,15 @@
                       ItemsSource="{Binding DataContext.Stackings}" 
                       ItemTemplate="{StaticResource cbStackedTemplate}">
             </Chart:C1ComboBox>
-            <CheckBox Margin="10" x:Name="cbRotate" Content="Rotate" VerticalAlignment="Center" />
-            <CheckBox Margin="10" x:Name="cbGroup" Content="Stacked Group" VerticalAlignment="Center" Checked="cbGroup_CheckedChanged" Unchecked="cbGroup_CheckedChanged">
-                <CheckBox.Visibility>
+            <Chart:C1CheckBox Margin="10" x:Name="cbRotate" Content="Rotate" VerticalAlignment="Center" />
+            <Chart:C1CheckBox Margin="10" x:Name="cbGroup" Content="Stacked Group" VerticalAlignment="Center" Checked="cbGroup_CheckedChanged" Unchecked="cbGroup_CheckedChanged">
+                <Chart:C1CheckBox.Visibility>
                     <MultiBinding Converter="{StaticResource groupCheckBoxVisibilityConverter}">
                         <Binding ElementName="cbChartType" Path="SelectedValue"/>
                         <Binding ElementName="cbStacked" Path="SelectedValue"/>
                     </MultiBinding>
-                </CheckBox.Visibility>
-            </CheckBox>
+                </Chart:C1CheckBox.Visibility>
+            </Chart:C1CheckBox>
         </StackPanel>
         <Chart:FlexChart x:Name="flexChart" ItemsSource="{Binding DataContext.Data}" BindingX="Fruit" Grid.Row="1">
             <Chart:Series SeriesName="March" Binding="March"/>

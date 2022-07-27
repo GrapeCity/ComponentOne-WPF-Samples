@@ -20,6 +20,7 @@
         <c1:FlexGrid x:Name="grid" AutoGeneratingColumn="OnAutoGeneratingColumn" NewRowPosition="Top" NewRowPlaceholder="{x:Static res:AppResources.AddNewRecord}" HeadersVisibility="All" Grid.Row="1">
             <i:Interaction.Behaviors>
                 <c1:FullTextFilterBehavior FilterEntry="{Binding Source={x:Reference filter}}"/>
+                <c1:SkeletonLoadingBehavior/>
             </i:Interaction.Behaviors>
         </c1:FlexGrid>
         <TextBlock x:Name="message" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Creating records..." Grid.Row="1"/>

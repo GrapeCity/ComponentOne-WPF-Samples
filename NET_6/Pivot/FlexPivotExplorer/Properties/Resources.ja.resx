@@ -214,10 +214,10 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
   </data>
   <data name="GroupRangesDesc" xml:space="preserve">
     <value>グループ範囲の操作方法を示します。</value>
-      <comment>Shows how to work with group ranges.</comment>
+    <comment>Shows how to work with group ranges.</comment>
   </data>
   <data name="GroupRangesTitle" xml:space="preserve">
-      <value>グループの範囲</value>
+    <value>グループの範囲</value>
     <comment>Group Ranges</comment>
   </data>
   <data name="ConditionalFormattingDesc" xml:space="preserve">
@@ -225,7 +225,7 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
     <comment>Shows how to use apply conditional formatting to an FlexPivot control.</comment>
   </data>
   <data name="ConditionalFormattingTitle" xml:space="preserve">
-      <value>条件付き書式</value>
+    <value>条件付き書式</value>
     <comment>Conditional Formatting</comment>
   </data>
   <data name="PredefinedPivotViewTooltip" xml:space="preserve">
@@ -237,5 +237,17 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
   <data name="Title" xml:space="preserve">
     <value>FlexPivotエクスプローラー</value>
     <comment>FlexPivotExplorer</comment>
+  </data>
+  <data name="CollapseAll" xml:space="preserve">
+    <value>すべて折りたたむ</value>
+  </data>
+  <data name="ConditionFormat" xml:space="preserve">
+    <value>条件付き書式</value>
+  </data>
+  <data name="GroupPrice" xml:space="preserve">
+    <value>団体料金</value>
+  </data>
+  <data name="SaleByCountry" xml:space="preserve">
+    <value>国別および個人別売上高</value>
   </data>
 </root>

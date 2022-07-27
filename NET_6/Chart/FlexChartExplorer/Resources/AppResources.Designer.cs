@@ -19,10 +19,10 @@ namespace FlexChartExplorer.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    public class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace FlexChartExplorer.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FlexChartExplorer.Resources.AppResources", typeof(AppResources).Assembly);
@@ -51,7 +51,7 @@ namespace FlexChartExplorer.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to AutoLabels.
         /// </summary>
-        internal static string AutoLabelDesc {
+        public static string AutoLabelDesc {
             get {
                 return ResourceManager.GetString("AutoLabelDesc", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The demo shows automatic label positioning. When DataLabel.Position is Auto the chart performs automatic label layout trying to avoid their overlapping..
         /// </summary>
-        internal static string AutoLabelsTag {
+        public static string AutoLabelsTag {
             get {
                 return ResourceManager.GetString("AutoLabelsTag", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to AutoLabels.
         /// </summary>
-        internal static string AutoLabelsTitle {
+        public static string AutoLabelsTitle {
             get {
                 return ResourceManager.GetString("AutoLabelsTitle", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Axes.
         /// </summary>
-        internal static string AxesDesc {
+        public static string AxesDesc {
             get {
                 return ResourceManager.GetString("AxesDesc", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows the FlexChart with two y-axes..
         /// </summary>
-        internal static string AxesTag {
+        public static string AxesTag {
             get {
                 return ResourceManager.GetString("AxesTag", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Axes.
         /// </summary>
-        internal static string AxesTitle {
+        public static string AxesTitle {
             get {
                 return ResourceManager.GetString("AxesTitle", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Axis Binding.
         /// </summary>
-        internal static string AxisBindingDesc {
+        public static string AxisBindingDesc {
             get {
                 return ResourceManager.GetString("AxisBindingDesc", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows the FlexChart&apos;s axis binding feature..
         /// </summary>
-        internal static string AxisBindingTag {
+        public static string AxisBindingTag {
             get {
                 return ResourceManager.GetString("AxisBindingTag", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Axis Binding.
         /// </summary>
-        internal static string AxisBindingTitle {
+        public static string AxisBindingTitle {
             get {
                 return ResourceManager.GetString("AxisBindingTitle", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Axis Grouping.
         /// </summary>
-        internal static string AxisGroupingDesc {
+        public static string AxisGroupingDesc {
             get {
                 return ResourceManager.GetString("AxisGroupingDesc", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows grouping of axis labels..
         /// </summary>
-        internal static string AxisGroupingTag {
+        public static string AxisGroupingTag {
             get {
                 return ResourceManager.GetString("AxisGroupingTag", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Axis Grouping.
         /// </summary>
-        internal static string AxisGroupingTitle {
+        public static string AxisGroupingTitle {
             get {
                 return ResourceManager.GetString("AxisGroupingTitle", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Axis Labels.
         /// </summary>
-        internal static string AxisLabelsDesc {
+        public static string AxisLabelsDesc {
             get {
                 return ResourceManager.GetString("AxisLabelsDesc", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows various Axis options to avoid label overlapping..
         /// </summary>
-        internal static string AxisLabelsTag {
+        public static string AxisLabelsTag {
             get {
                 return ResourceManager.GetString("AxisLabelsTag", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Axis Labels.
         /// </summary>
-        internal static string AxisLabelsTitle {
+        public static string AxisLabelsTitle {
             get {
                 return ResourceManager.GetString("AxisLabelsTitle", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Binding.
         /// </summary>
-        internal static string BindingDesc {
+        public static string BindingDesc {
             get {
                 return ResourceManager.GetString("BindingDesc", resourceCulture);
             }
@@ -212,7 +212,7 @@ namespace FlexChartExplorer.Resources {
         ///    3.Add a Series object to the chart&apos;s series array and set its binding property to &apos;sales&apos;.
         ///    4.Add a second Series obj [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string BindingTag {
+        public static string BindingTag {
             get {
                 return ResourceManager.GetString("BindingTag", resourceCulture);
             }
@@ -221,7 +221,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Binding.
         /// </summary>
-        internal static string BindingTitle {
+        public static string BindingTitle {
             get {
                 return ResourceManager.GetString("BindingTitle", resourceCulture);
             }
@@ -230,7 +230,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Box &amp; Whisker.
         /// </summary>
-        internal static string BoxWhiskerDesc {
+        public static string BoxWhiskerDesc {
             get {
                 return ResourceManager.GetString("BoxWhiskerDesc", resourceCulture);
             }
@@ -239,7 +239,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The Box &amp; Whisker series is normally used to compare distributions between different sets of numerical data.
         /// </summary>
-        internal static string BoxWhiskerTag {
+        public static string BoxWhiskerTag {
             get {
                 return ResourceManager.GetString("BoxWhiskerTag", resourceCulture);
             }
@@ -248,7 +248,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Box &amp; Whisker.
         /// </summary>
-        internal static string BoxWhiskerTitle {
+        public static string BoxWhiskerTitle {
             get {
                 return ResourceManager.GetString("BoxWhiskerTitle", resourceCulture);
             }
@@ -257,7 +257,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Break-Even Chart.
         /// </summary>
-        internal static string BreakEvenDesc {
+        public static string BreakEvenDesc {
             get {
                 return ResourceManager.GetString("BreakEvenDesc", resourceCulture);
             }
@@ -266,7 +266,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Break-Even chart is a chart that shows the sales volume level at which total costs equal sales..
         /// </summary>
-        internal static string BreakEvenTag {
+        public static string BreakEvenTag {
             get {
                 return ResourceManager.GetString("BreakEvenTag", resourceCulture);
             }
@@ -275,7 +275,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Break-Even.
         /// </summary>
-        internal static string BreakEvenTitle {
+        public static string BreakEvenTitle {
             get {
                 return ResourceManager.GetString("BreakEvenTitle", resourceCulture);
             }
@@ -284,7 +284,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bubble.
         /// </summary>
-        internal static string BubbleDesc {
+        public static string BubbleDesc {
             get {
                 return ResourceManager.GetString("BubbleDesc", resourceCulture);
             }
@@ -295,7 +295,7 @@ namespace FlexChartExplorer.Resources {
         ///    Bubble charts are similar to other chart types, except in addition to X and Y you must specify a binding for the bubble size.This is done by setting the binding property to a comma - delimited string that specifies the name of the properties to be used for the Y and size values for each bubble.
         ///    In this example, the chart is bound to a list containing objects with &apos;x&apos;, &apos;y&apos;, and &apos;size&apos; properties.The chart contains a single ser [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string BubbleTag {
+        public static string BubbleTag {
             get {
                 return ResourceManager.GetString("BubbleTag", resourceCulture);
             }
@@ -304,16 +304,43 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bubble.
         /// </summary>
-        internal static string BubbleTitle {
+        public static string BubbleTitle {
             get {
                 return ResourceManager.GetString("BubbleTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to copyright (c) ComponentOne.
+        /// </summary>
+        public static string C1CopyRight {
+            get {
+                return ResourceManager.GetString("C1CopyRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chart Footer.
+        /// </summary>
+        public static string ChartFooter {
+            get {
+                return ResourceManager.GetString("ChartFooter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chart Header.
+        /// </summary>
+        public static string ChartHeader {
+            get {
+                return ResourceManager.GetString("ChartHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DateTime Axis Grouping.
         /// </summary>
-        internal static string DateTimeAxisGroupingDesc {
+        public static string DateTimeAxisGroupingDesc {
             get {
                 return ResourceManager.GetString("DateTimeAxisGroupingDesc", resourceCulture);
             }
@@ -322,7 +349,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows grouping of date-time axis labels..
         /// </summary>
-        internal static string DateTimeAxisGroupingTag {
+        public static string DateTimeAxisGroupingTag {
             get {
                 return ResourceManager.GetString("DateTimeAxisGroupingTag", resourceCulture);
             }
@@ -331,7 +358,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to DateTime Axis Grouping.
         /// </summary>
-        internal static string DateTimeAxisGroupingTitle {
+        public static string DateTimeAxisGroupingTitle {
             get {
                 return ResourceManager.GetString("DateTimeAxisGroupingTitle", resourceCulture);
             }
@@ -340,7 +367,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Error Bar.
         /// </summary>
-        internal static string ErrorBarDesc {
+        public static string ErrorBarDesc {
             get {
                 return ResourceManager.GetString("ErrorBarDesc", resourceCulture);
             }
@@ -349,7 +376,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The Error bar helps you see margins of error and standard deviations at a glance..
         /// </summary>
-        internal static string ErrorBarTag {
+        public static string ErrorBarTag {
             get {
                 return ResourceManager.GetString("ErrorBarTag", resourceCulture);
             }
@@ -358,16 +385,25 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Error Bar.
         /// </summary>
-        internal static string ErrorBarTitle {
+        public static string ErrorBarTitle {
             get {
                 return ResourceManager.GetString("ErrorBarTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Factors Influencing Purchase Decisions.
+        /// </summary>
+        public static string Factors {
+            get {
+                return ResourceManager.GetString("Factors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Financial Chart.
         /// </summary>
-        internal static string FinancialCharDesc {
+        public static string FinancialCharDesc {
             get {
                 return ResourceManager.GetString("FinancialCharDesc", resourceCulture);
             }
@@ -376,7 +412,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Financial Chart.
         /// </summary>
-        internal static string FinancialChartTitle {
+        public static string FinancialChartTitle {
             get {
                 return ResourceManager.GetString("FinancialChartTitle", resourceCulture);
             }
@@ -386,7 +422,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view shows how to create financial charts with the FlexChart control.
         ///    The FlexChart supports two types of financial chart: Candlestick and HiLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source..
         /// </summary>
-        internal static string FinancialTag {
+        public static string FinancialTag {
             get {
                 return ResourceManager.GetString("FinancialTag", resourceCulture);
             }
@@ -395,7 +431,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Header And Footer.
         /// </summary>
-        internal static string HeaderFooterDesc {
+        public static string HeaderFooterDesc {
             get {
                 return ResourceManager.GetString("HeaderFooterDesc", resourceCulture);
             }
@@ -405,7 +441,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view shows how you can add a header and a footer to the chart.
         ///    The header and footer properties determine the content, and the headerStyle and footerStyle properties determine the appearance of the header and footer..
         /// </summary>
-        internal static string HeaderFooterTag {
+        public static string HeaderFooterTag {
             get {
                 return ResourceManager.GetString("HeaderFooterTag", resourceCulture);
             }
@@ -414,7 +450,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Header And Footer.
         /// </summary>
-        internal static string HeaderFooterTitle {
+        public static string HeaderFooterTitle {
             get {
                 return ResourceManager.GetString("HeaderFooterTitle", resourceCulture);
             }
@@ -423,7 +459,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Histogram.
         /// </summary>
-        internal static string HistogramDesc {
+        public static string HistogramDesc {
             get {
                 return ResourceManager.GetString("HistogramDesc", resourceCulture);
             }
@@ -435,7 +471,7 @@ namespace FlexChartExplorer.Resources {
         ///    2. Frequency Polygon: A variation of Histogram charts where the columns are replaced by a curve.These are helpful for comparing multiple sets of data. 
         ///    3. Normal Curve: A bell - shaped curve, also known as Gaussian curve, which shows the probability dis [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HistogramTag {
+        public static string HistogramTag {
             get {
                 return ResourceManager.GetString("HistogramTag", resourceCulture);
             }
@@ -444,7 +480,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Histogram.
         /// </summary>
-        internal static string HistogramTitle {
+        public static string HistogramTitle {
             get {
                 return ResourceManager.GetString("HistogramTitle", resourceCulture);
             }
@@ -453,7 +489,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Hit Test.
         /// </summary>
-        internal static string HitTestDesc {
+        public static string HitTestDesc {
             get {
                 return ResourceManager.GetString("HitTestDesc", resourceCulture);
             }
@@ -464,7 +500,7 @@ namespace FlexChartExplorer.Resources {
         ///    The hitTest method takes a point and returns the nearest chart element.It can be used to provide interactive features such as clickable regions, drill - downs, etc.
         ///    Move mouse over chart to see information about the chart element that is closest to the mouse..
         /// </summary>
-        internal static string HitTestTag {
+        public static string HitTestTag {
             get {
                 return ResourceManager.GetString("HitTestTag", resourceCulture);
             }
@@ -473,7 +509,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Hit Test.
         /// </summary>
-        internal static string HitTestTitle {
+        public static string HitTestTitle {
             get {
                 return ResourceManager.GetString("HitTestTitle", resourceCulture);
             }
@@ -482,7 +518,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Image Export.
         /// </summary>
-        internal static string ImageExportDesc {
+        public static string ImageExportDesc {
             get {
                 return ResourceManager.GetString("ImageExportDesc", resourceCulture);
             }
@@ -491,7 +527,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Save FlexChart as image..
         /// </summary>
-        internal static string ImageExportTag {
+        public static string ImageExportTag {
             get {
                 return ResourceManager.GetString("ImageExportTag", resourceCulture);
             }
@@ -500,7 +536,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Image Export.
         /// </summary>
-        internal static string ImageExportTitle {
+        public static string ImageExportTitle {
             get {
                 return ResourceManager.GetString("ImageExportTitle", resourceCulture);
             }
@@ -509,7 +545,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Introduction.
         /// </summary>
-        internal static string IntroductionDesc {
+        public static string IntroductionDesc {
             get {
                 return ResourceManager.GetString("IntroductionDesc", resourceCulture);
             }
@@ -522,7 +558,7 @@ namespace FlexChartExplorer.Resources {
         ///    1.Set the chart&apos;s DataSource property to an array of data objects.
         ///    2.Set the chart&apos;s bindingX property to the name of the property that contains the X values (in this example fruit names) [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string IntroductionTag {
+        public static string IntroductionTag {
             get {
                 return ResourceManager.GetString("IntroductionTag", resourceCulture);
             }
@@ -531,7 +567,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Introduction.
         /// </summary>
-        internal static string IntroductionTitle {
+        public static string IntroductionTitle {
             get {
                 return ResourceManager.GetString("IntroductionTitle", resourceCulture);
             }
@@ -540,7 +576,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Labels.
         /// </summary>
-        internal static string LabelsDesc {
+        public static string LabelsDesc {
             get {
                 return ResourceManager.GetString("LabelsDesc", resourceCulture);
             }
@@ -549,7 +585,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view demonstrates how you can use the FlexChart&apos;s dataLabel property to add labels to each data point..
         /// </summary>
-        internal static string LabelsTag {
+        public static string LabelsTag {
             get {
                 return ResourceManager.GetString("LabelsTag", resourceCulture);
             }
@@ -558,7 +594,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Labels.
         /// </summary>
-        internal static string LabelsTitle {
+        public static string LabelsTitle {
             get {
                 return ResourceManager.GetString("LabelsTitle", resourceCulture);
             }
@@ -567,7 +603,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Legend.
         /// </summary>
-        internal static string LegendDesc {
+        public static string LegendDesc {
             get {
                 return ResourceManager.GetString("LegendDesc", resourceCulture);
             }
@@ -582,7 +618,7 @@ namespace FlexChartExplorer.Resources {
         ///    4.Set a value more than 0 to legend item maxWidth property, set 0 to disable legend textWrapping. 
         ///    5.Set the LegendGroup property of each series to group it [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string LegendTag {
+        public static string LegendTag {
             get {
                 return ResourceManager.GetString("LegendTag", resourceCulture);
             }
@@ -591,16 +627,25 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Legend.
         /// </summary>
-        internal static string LegendTitle {
+        public static string LegendTitle {
             get {
                 return ResourceManager.GetString("LegendTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Monthly Sales Summary.
+        /// </summary>
+        public static string MonthlySale {
+            get {
+                return ResourceManager.GetString("MonthlySale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Numeric Axis Grouping.
         /// </summary>
-        internal static string NumericAxisGroupingDesc {
+        public static string NumericAxisGroupingDesc {
             get {
                 return ResourceManager.GetString("NumericAxisGroupingDesc", resourceCulture);
             }
@@ -609,7 +654,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows grouping of numeric axis labels..
         /// </summary>
-        internal static string NumericAxisGroupingTag {
+        public static string NumericAxisGroupingTag {
             get {
                 return ResourceManager.GetString("NumericAxisGroupingTag", resourceCulture);
             }
@@ -618,7 +663,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Numeric Axis Grouping.
         /// </summary>
-        internal static string NumericAxisGroupingTitle {
+        public static string NumericAxisGroupingTitle {
             get {
                 return ResourceManager.GetString("NumericAxisGroupingTitle", resourceCulture);
             }
@@ -627,7 +672,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Pareto.
         /// </summary>
-        internal static string ParetoDesc {
+        public static string ParetoDesc {
             get {
                 return ResourceManager.GetString("ParetoDesc", resourceCulture);
             }
@@ -636,7 +681,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to A Pareto is a special histogram chart with columns sorted in descending order and a rising line that represents the cumulative total percentage. Pareto charts makes it easier to analyze most significant issues and prioritise corrective actions..
         /// </summary>
-        internal static string ParetoTag {
+        public static string ParetoTag {
             get {
                 return ResourceManager.GetString("ParetoTag", resourceCulture);
             }
@@ -645,7 +690,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Pareto.
         /// </summary>
-        internal static string ParetoTitle {
+        public static string ParetoTitle {
             get {
                 return ResourceManager.GetString("ParetoTitle", resourceCulture);
             }
@@ -654,7 +699,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to PieChart Selection.
         /// </summary>
-        internal static string PieCharSelectionDesc {
+        public static string PieCharSelectionDesc {
             get {
                 return ResourceManager.GetString("PieCharSelectionDesc", resourceCulture);
             }
@@ -663,7 +708,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to PieChart.
         /// </summary>
-        internal static string PieChartDesc {
+        public static string PieChartDesc {
             get {
                 return ResourceManager.GetString("PieChartDesc", resourceCulture);
             }
@@ -672,7 +717,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to PieChart Selection.
         /// </summary>
-        internal static string PieChartSelectionTitle {
+        public static string PieChartSelectionTitle {
             get {
                 return ResourceManager.GetString("PieChartSelectionTitle", resourceCulture);
             }
@@ -681,7 +726,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to PieChart Slice Color.
         /// </summary>
-        internal static string PieChartSliceDesc {
+        public static string PieChartSliceDesc {
             get {
                 return ResourceManager.GetString("PieChartSliceDesc", resourceCulture);
             }
@@ -690,7 +735,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to PieChart Slice Color.
         /// </summary>
-        internal static string PieChartSliceTitle {
+        public static string PieChartSliceTitle {
             get {
                 return ResourceManager.GetString("PieChartSliceTitle", resourceCulture);
             }
@@ -699,7 +744,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to PieChart.
         /// </summary>
-        internal static string PieChartTitle {
+        public static string PieChartTitle {
             get {
                 return ResourceManager.GetString("PieChartTitle", resourceCulture);
             }
@@ -709,7 +754,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view shows the FlexPie&apos;s basic features. It binds the chart to a data source.
         ///    If you move the mouse over a chart element, a tooltip will appear showing details about the data point..
         /// </summary>
-        internal static string PieIntroductionTag {
+        public static string PieIntroductionTag {
             get {
                 return ResourceManager.GetString("PieIntroductionTag", resourceCulture);
             }
@@ -718,7 +763,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows the FlexPie&apos;s selection feature..
         /// </summary>
-        internal static string PieSelectionTag {
+        public static string PieSelectionTag {
             get {
                 return ResourceManager.GetString("PieSelectionTag", resourceCulture);
             }
@@ -727,7 +772,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows how to customize FlexPie silce colors. The color intensity depends on the corresponding data value. It also demonstrates animation when loading new or updating existing data..
         /// </summary>
-        internal static string PieSliceColorTag {
+        public static string PieSliceColorTag {
             get {
                 return ResourceManager.GetString("PieSliceColorTag", resourceCulture);
             }
@@ -736,7 +781,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Plot Areas.
         /// </summary>
-        internal static string PlotAreasDesc {
+        public static string PlotAreasDesc {
             get {
                 return ResourceManager.GetString("PlotAreasDesc", resourceCulture);
             }
@@ -745,7 +790,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This view shows the FlexChart with several plot areas..
         /// </summary>
-        internal static string PlotAreasTag {
+        public static string PlotAreasTag {
             get {
                 return ResourceManager.GetString("PlotAreasTag", resourceCulture);
             }
@@ -754,7 +799,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Plot Areas.
         /// </summary>
-        internal static string PlotAreasTitle {
+        public static string PlotAreasTitle {
             get {
                 return ResourceManager.GetString("PlotAreasTitle", resourceCulture);
             }
@@ -763,7 +808,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Ranged Histogram.
         /// </summary>
-        internal static string RangedHistogramDesc {
+        public static string RangedHistogramDesc {
             get {
                 return ResourceManager.GetString("RangedHistogramDesc", resourceCulture);
             }
@@ -773,7 +818,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view shows main functionality of Ranged Histogram. 
         ///    An unique Histogram chart that can be used to study categorical as well as non-categorical data. Provides multiple binning options as well as support for Overflow and Underflow bins..
         /// </summary>
-        internal static string RangedHistogramTag {
+        public static string RangedHistogramTag {
             get {
                 return ResourceManager.GetString("RangedHistogramTag", resourceCulture);
             }
@@ -782,7 +827,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Ranged Histogram.
         /// </summary>
-        internal static string RangedHistogramTitle {
+        public static string RangedHistogramTitle {
             get {
                 return ResourceManager.GetString("RangedHistogramTitle", resourceCulture);
             }
@@ -791,7 +836,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Selection.
         /// </summary>
-        internal static string SelectionDesc {
+        public static string SelectionDesc {
             get {
                 return ResourceManager.GetString("SelectionDesc", resourceCulture);
             }
@@ -801,7 +846,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view demonstrates the FlexChart&apos;s selection feature.
         ///    The selectionMode property determines whether the chart should select series or points when the user clicks on the chart..
         /// </summary>
-        internal static string SelectionTag {
+        public static string SelectionTag {
             get {
                 return ResourceManager.GetString("SelectionTag", resourceCulture);
             }
@@ -810,7 +855,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Selection.
         /// </summary>
-        internal static string SelectionTitle {
+        public static string SelectionTitle {
             get {
                 return ResourceManager.GetString("SelectionTitle", resourceCulture);
             }
@@ -819,7 +864,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Series Binding.
         /// </summary>
-        internal static string SeriesBindingDesc {
+        public static string SeriesBindingDesc {
             get {
                 return ResourceManager.GetString("SeriesBindingDesc", resourceCulture);
             }
@@ -832,7 +877,7 @@ namespace FlexChartExplorer.Resources {
         ///    2.Add a Series object to the chart&apos;s series array and set its DataSource property to an array of objects that have &apos;x&apos; and &apos;y&apos; properties.
         ///    3.Add a second Series object to the chart&apos;s series array and set its DataSource property to a different array of objects that have &apos;x&apos; and &apos;y&apos; properties [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string SeriesBindingTag {
+        public static string SeriesBindingTag {
             get {
                 return ResourceManager.GetString("SeriesBindingTag", resourceCulture);
             }
@@ -841,7 +886,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Series Binding.
         /// </summary>
-        internal static string SeriesBindingTitle {
+        public static string SeriesBindingTitle {
             get {
                 return ResourceManager.GetString("SeriesBindingTitle", resourceCulture);
             }
@@ -850,7 +895,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to FlexChartExplorer.
         /// </summary>
-        internal static string Title {
+        public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
             }
@@ -859,7 +904,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TreeMap.
         /// </summary>
-        internal static string TreeMapDesc {
+        public static string TreeMapDesc {
             get {
                 return ResourceManager.GetString("TreeMapDesc", resourceCulture);
             }
@@ -868,7 +913,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TreeMap Node Color.
         /// </summary>
-        internal static string TreeMapNodeColorDesc {
+        public static string TreeMapNodeColorDesc {
             get {
                 return ResourceManager.GetString("TreeMapNodeColorDesc", resourceCulture);
             }
@@ -878,7 +923,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to TreeMaps can be used to display two quantitive variables simultaneously, one represented by each rectangle&apos;s size and the other represented by its colour. 
         ///    This view demonstrates how you can use TreeMap.NodeRendering event to specify color of each node..
         /// </summary>
-        internal static string TreeMapNodeColorTag {
+        public static string TreeMapNodeColorTag {
             get {
                 return ResourceManager.GetString("TreeMapNodeColorTag", resourceCulture);
             }
@@ -887,7 +932,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TreeMap Node Color.
         /// </summary>
-        internal static string TreeMapNodeColorTitle {
+        public static string TreeMapNodeColorTitle {
             get {
                 return ResourceManager.GetString("TreeMapNodeColorTitle", resourceCulture);
             }
@@ -897,7 +942,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view shows main functionality of TreeMap control. 
         ///    TreeMap charts are compact way of visualizing hierarchical data in form of nested rectangles with area of each rectangle depicting the quantity of each category..
         /// </summary>
-        internal static string TreeMapTag {
+        public static string TreeMapTag {
             get {
                 return ResourceManager.GetString("TreeMapTag", resourceCulture);
             }
@@ -906,7 +951,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TreeMap.
         /// </summary>
-        internal static string TreeMapTitle {
+        public static string TreeMapTitle {
             get {
                 return ResourceManager.GetString("TreeMapTitle", resourceCulture);
             }
@@ -915,7 +960,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Trend Line.
         /// </summary>
-        internal static string TrendLineDesc {
+        public static string TrendLineDesc {
             get {
                 return ResourceManager.GetString("TrendLineDesc", resourceCulture);
             }
@@ -925,7 +970,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view shows TrendLine in FlexChart.
         ///    You can use different trendline types by setting the FitType property of TrendLine. The points on the plot can be dragged by mouse which updates the trend line and its equation automatically..
         /// </summary>
-        internal static string TrendLineTag {
+        public static string TrendLineTag {
             get {
                 return ResourceManager.GetString("TrendLineTag", resourceCulture);
             }
@@ -934,7 +979,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Trend Line.
         /// </summary>
-        internal static string TrendLineTitle {
+        public static string TrendLineTitle {
             get {
                 return ResourceManager.GetString("TrendLineTitle", resourceCulture);
             }
@@ -943,7 +988,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Waterfall.
         /// </summary>
-        internal static string WaterfallDesc {
+        public static string WaterfallDesc {
             get {
                 return ResourceManager.GetString("WaterfallDesc", resourceCulture);
             }
@@ -953,7 +998,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view shows Waterfall Series in FlexChart.
         ///    The Waterfall series is normally used to demonstrate how the starting position either increases or decreases through a series of changes..
         /// </summary>
-        internal static string WaterfallTag {
+        public static string WaterfallTag {
             get {
                 return ResourceManager.GetString("WaterfallTag", resourceCulture);
             }
@@ -962,16 +1007,25 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Waterfall.
         /// </summary>
-        internal static string WaterfallTitle {
+        public static string WaterfallTitle {
             get {
                 return ResourceManager.GetString("WaterfallTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to World GDP Ranking.
+        /// </summary>
+        public static string WorldGDPRanking {
+            get {
+                return ResourceManager.GetString("WorldGDPRanking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Zones.
         /// </summary>
-        internal static string ZonesDesc {
+        public static string ZonesDesc {
             get {
                 return ResourceManager.GetString("ZonesDesc", resourceCulture);
             }
@@ -981,7 +1035,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to The view creates a scatter chart of student grades, highlighting each grade range using zones.
         ///    The zones are drawn in rendering event of FlexChart. Statistic values are calculated and plotted..
         /// </summary>
-        internal static string ZonesTag {
+        public static string ZonesTag {
             get {
                 return ResourceManager.GetString("ZonesTag", resourceCulture);
             }
@@ -990,7 +1044,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Zones.
         /// </summary>
-        internal static string ZonesTitle {
+        public static string ZonesTitle {
             get {
                 return ResourceManager.GetString("ZonesTitle", resourceCulture);
             }
@@ -999,7 +1053,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Zoom.
         /// </summary>
-        internal static string ZoomDesc {
+        public static string ZoomDesc {
             get {
                 return ResourceManager.GetString("ZoomDesc", resourceCulture);
             }
@@ -1009,7 +1063,7 @@ namespace FlexChartExplorer.Resources {
         ///   Looks up a localized string similar to This view shows how to implement a custom zoom for the FlexChart control.
         ///    Use the mouse or touch to select a rectangular area on the plot area.The chart will zoom in on the selected area.When you are done, click the &apos;Reset Zoom&apos; button below the chart to return to the original view..
         /// </summary>
-        internal static string ZoomTag {
+        public static string ZoomTag {
             get {
                 return ResourceManager.GetString("ZoomTag", resourceCulture);
             }
@@ -1018,7 +1072,7 @@ namespace FlexChartExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Zoom.
         /// </summary>
-        internal static string ZoomTitle {
+        public static string ZoomTitle {
             get {
                 return ResourceManager.GetString("ZoomTitle", resourceCulture);
             }

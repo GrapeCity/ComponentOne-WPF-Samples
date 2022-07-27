@@ -118,19 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DemoDesc" xml:space="preserve">
-    <value>Shows how to use popular barcode types.</value>
+    <value>一般的なバーコードタイプの使用方法を示します。</value>
+    <comment>Shows how to use popular barcode types.</comment>
   </data>
-	<data name="DemoTitle" xml:space="preserve">
-    <value>Popular barcodes</value>
+  <data name="DemoTitle" xml:space="preserve">
+    <value>人気のバーコード</value>
+    <comment>Popular barcodes</comment>
   </data>
-	<data name="NewBarcodesDesc" xml:space="preserve">
-    <value>Shows how to use different types of barcodes.</value>
+  <data name="NewBarcodesDesc" xml:space="preserve">
+    <value>さまざまな種類のバーコードの使用方法を示します。</value>
+    <comment>Shows how to use different types of barcodes.</comment>
   </data>
-	<data name="NewBarcodesTitle" xml:space="preserve">
-    <value>More barcodes</value>
+  <data name="NewBarcodesTitle" xml:space="preserve">
+    <value>その他のバーコード</value>
+    <comment>More barcodes</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>BarCodeエクスプローラー</value>
+    <value>BarCode エクスプローラー</value>
     <comment>BarCodeExplorer</comment>
   </data>
 </root>

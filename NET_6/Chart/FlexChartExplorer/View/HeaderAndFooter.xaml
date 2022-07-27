@@ -6,12 +6,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
     DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    xmlns:res="clr-namespace:FlexChartExplorer.Resources"
     x:Name="page"
     mc:Ignorable="d">
 
     <Grid>
-        <Chart:FlexChart x:Name="flexChart" Footer="copyright (c) ComponentOne" Header="Monthly Sales Summary"
-                           Binding="Amount" BindingX="Month" ItemsSource="{Binding DataContext.Data}" ChartType="LineSymbols" ToolTipContent="{}{y}">
+        <Chart:FlexChart x:Name="flexChart" Footer="{x:Static res:AppResources.C1CopyRight}"
+                         Header="{x:Static res:AppResources.MonthlySale}"
+                         Binding="Amount" BindingX="Month" ItemsSource="{Binding DataContext.Data}" ChartType="LineSymbols" ToolTipContent="{}{y}">
             <Chart:FlexChart.HeaderStyle>
                 <Chart:ChartStyle FontSize="20" FontFamily="GenericSansSerif"/>
             </Chart:FlexChart.HeaderStyle>

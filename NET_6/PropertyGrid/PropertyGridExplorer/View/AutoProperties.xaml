@@ -10,12 +10,10 @@
                 <ColumnDefinition Width="Auto" MinWidth="250" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <CheckBox Click="CheckBox_Click">
+            <c1:C1CheckBox Click="CheckBox_Click">
                 <TextBox x:Name="txtbox" TextWrapping="Wrap" Margin="0" Width="55" Height="56" />
-            </CheckBox>
-            <Border Grid.Column="1">
-                    <c1:C1PropertyGrid x:Name="propertyGrid" AutoGenerateProperties="True" ShowDescription="True" ShowResetButton="True"  />
-            </Border>
+            </c1:C1CheckBox>
+            <c1:C1PropertyGrid x:Name="propertyGrid" Grid.Column="1" AutoGenerateProperties="True" ShowDescription="True" ShowResetButton="True"  />
         </Grid>
     </Border>
 </UserControl>

@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:FlexPivotExplorer.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="800">
     <Grid>
@@ -13,7 +14,7 @@
         </Grid.RowDefinitions>
         <c1:FlexPivotPage x:Name="flexPivotPage" />
         <StatusBar Grid.Row="1">
-            <TextBlock x:Name="txtStatus" Text="Conditional Formatting" />
+            <TextBlock x:Name="txtStatus" Text="{x:Static res:Resources.ConditionFormat}" />
         </StatusBar>
     </Grid>
 </UserControl>

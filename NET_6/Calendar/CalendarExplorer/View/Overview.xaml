@@ -72,16 +72,19 @@
                     </Style>
                 </StackPanel.Resources>
                 <Border>
-                    <CheckBox Content="Show navigation Buttons" x:Name="cbkShowNavigationButton" />
+                    <c1:C1CheckBox Content="Show navigation Buttons" x:Name="cbkShowNavigationButton" />
                 </Border>
                 <Border>
-                    <CheckBox Content="Show Header" x:Name="cbkShowHeader" />
+                    <c1:C1CheckBox Content="Show Header" x:Name="cbkShowHeader" />
                 </Border>
                 <Border>
-                    <CheckBox Content="Show Adjacent Days" x:Name="cbkShowAdjacentDay" />
+                    <c1:C1CheckBox Content="Show Adjacent Days" x:Name="cbkShowAdjacentDay" />
                 </Border>
             </StackPanel>
         </Grid>
-        <c1:C1Calendar x:Name="calendar" MaxHeight="430" MaxWidth="480" Grid.Row="1" Margin="5" BorderBrush="#555555" BorderThickness="0.5" SelectionMode="Multiple" MaxSelectionCount="10" />
+        <c1:C1Calendar x:Name="calendar" MaxHeight="430" MaxWidth="510" Grid.Row="1" Margin="5" BorderBrush="#555555"
+                       BorderThickness="0.5" SelectionMode="Multiple" MaxSelectionCount="10"
+                       
+                       />
     </Grid>
 </UserControl>

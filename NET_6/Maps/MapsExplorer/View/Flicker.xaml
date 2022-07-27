@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<UserControl x:Class="MapsExplorer.Flicker" Background="#FF374F5D" mc:Ignorable="d" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:local="clr-namespace:MapsExplorer" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+<UserControl x:Class="MapsExplorer.Flicker" Background="#FF374F5D" mc:Ignorable="d"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MapsExplorer"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:res="clr-namespace:MapsExplorer.Properties">
     <UserControl.Resources>
-        <local:SampleResources x:Key="Resources" />
         <c1:XElementConverter x:Key="xcnv" />
         <local:ImageConverter x:Key="icnv" />
         <Style x:Key="style" TargetType="c1:VectorPlacemark">
@@ -31,12 +37,12 @@
         <c1:C1Maps x:Name="maps" Opacity="0.5" Grid.Row="1" BorderBrush="#FF8FB4CC" BorderThickness="3">
             <c1:VectorLayer x:Name="vl" LabelVisibility="Visible" ItemStyle="{StaticResource style}" />
         </c1:C1Maps>
-        <TextBlock x:Name="txt" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=LoadingData, Source={StaticResource Resources}}" Grid.Row="1" />
+        <TextBlock x:Name="txt" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />
         <Border CornerRadius="2" BorderThickness="0" Margin="0,0,0,10" Background="#304756">
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Margin="3" Text="{Binding Path=SearchLabel, Source={StaticResource Resources}}" Foreground="#FFF0F8FE" />
-                <TextBox Margin="3" x:Name="tb" IsEnabled="False" Text="Uruguay/Montevideo" MinWidth="200" KeyDown="tb_KeyDown" />
-                <Button x:Name="btnLoad" Margin="3" IsEnabled="False" Content="Load" Width="80" Click="Button_Click" />
+                <TextBlock VerticalAlignment="Center" Margin="3" Text="{x:Static res:Resources.SearchLabel}" Foreground="#FFF0F8FE" />
+                <c1:C1TextBox Margin="3" x:Name="tb" IsEnabled="False" Text="Uruguay/Montevideo" MinWidth="200" KeyDown="tb_KeyDown" Foreground="{Binding Foreground, ElementName=maps}"/>
+                <c1:C1Button x:Name="btnLoad" Margin="3" IsEnabled="False" Content="Load" Width="80" Click="Button_Click" />
             </StackPanel>
         </Border>
     </Grid>

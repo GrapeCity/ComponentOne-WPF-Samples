@@ -1,5 +1,4 @@
 ﻿using C1.Schedule;
-using C1.WPF.Calendar;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,7 +13,6 @@ namespace SchedulerExplorer
     {
         SqlDataAdapter _appointmentsAdapter;
         DataSet _dataSet;
-        bool _updatingSelection = false;
 
         public DatabaseBinding()
         {
@@ -72,16 +70,10 @@ namespace SchedulerExplorer
             }
 
             scheduler.LayoutUpdated += Scheduler_LayoutUpdated;
-            scheduler.VisibleDates.CollectionChanged += VisibleDates_CollectionChanged;
             Tag = SchedulerExplorer.Resources.AppResources.DatabaseBindingDescription;
 
             DataContext = this;
             Unloaded += OnUnloaded;
-        }
-
-        private void VisibleDates_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            UpdateCalendarSelection();
         }
 
         private void Scheduler_LayoutUpdated(object sender, EventArgs e)
@@ -109,19 +101,6 @@ namespace SchedulerExplorer
                     views.SelectedIndex = 4;
                 }
             }
-            UpdateCalendarSelection();
-        }
-
-        void UpdateCalendarSelection()
-        {
-            if ( !_updatingSelection && (calendar1.SelectedDates == null || 
-                ( scheduler.VisibleDates.Count != calendar1.SelectedDates.Count
-                || (calendar1.SelectedDates.Count > 0 && scheduler.VisibleDates[0] != calendar1.SelectedDates[0]))))
-            {
-                _updatingSelection = true;
-                calendar1.SelectedDates = scheduler.VisibleDates.ToList();
-                _updatingSelection = false;
-            }
         }
 
         private void OnUnloaded(object sender, RoutedEventArgs e)
@@ -130,24 +109,6 @@ namespace SchedulerExplorer
             _appointmentsAdapter.Update(_dataSet.Tables["Appointments"]);
             _dataSet.AcceptChanges();
 
-        }
-
-        private void SelectedDate_changed(object sender, CalendarSelectionChangedEventArgs e)
-        {
-            if (!_updatingSelection)
-            {
-                var calendar = sender as C1Calendar;
-                if (calendar?.SelectedDate == default(DateTime))
-                    return;
-
-                scheduler.VisibleDates.BeginUpdate();
-                scheduler.VisibleDates.Clear();
-                foreach (var d in calendar.SelectedDates)
-                {
-                    scheduler.VisibleDates.Add(d);
-                }
-                scheduler.VisibleDates.EndUpdate();
-            }
         }
 
         private void Views_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -192,7 +153,6 @@ namespace SchedulerExplorer
                 // Always call EndUpdate to apply all changes.
                 scheduler.EndUpdate();
             }
-            UpdateCalendarSelection();
         }
     }
 

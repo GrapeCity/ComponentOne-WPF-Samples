@@ -85,8 +85,8 @@
                             <c1:RibbonToolSizeDefinition Size="Large"/>
                         </c1:RibbonGroupSizeDefinition>
                     </c1:RibbonGroup.GroupSizeDefinitions>
-                    <CheckBox Content="Group by Country" Margin="0,0,10,0" Command="{Binding GroupByCountry }" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center"/>
-                    <CheckBox Content="Group by Product" Command="{Binding GroupByProduct }" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center"/>
+                    <c1:C1CheckBox Content="Group by Country" IsChecked="{Binding IsGroupedByCountry, Mode=OneWay}" Margin="0,0,10,0" Command="{Binding GroupByCountry }" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center"/>
+                    <c1:C1CheckBox Content="Group by Product" IsChecked="{Binding IsGroupedByProduct, Mode=OneWay}" Command="{Binding GroupByProduct }" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center"/>
                 </c1:RibbonGroup>
             </c1:RibbonTabItem>
             <c1:RibbonTabItem Header="Export">
@@ -191,7 +191,7 @@
                 <c1:GridColumn Binding="Rating" Header="Rating" ColumnName="Rating" IsReadOnly="True" MinWidth="100" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center">
                     <c1:GridColumn.CellTemplate>
                         <DataTemplate>
-                            <local:RatingCell Rating="{Binding Rating}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                            <local:RatingCell Rating="{Binding Rating,Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
                         </DataTemplate>
                     </c1:GridColumn.CellTemplate>
                 </c1:GridColumn>

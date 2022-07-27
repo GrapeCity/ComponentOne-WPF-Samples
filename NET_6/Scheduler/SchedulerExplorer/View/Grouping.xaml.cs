@@ -1,18 +1,14 @@
-﻿using System;
+﻿using C1.Schedule;
+using SchedulerExplorer.Resources;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-using C1.Schedule;
-using C1.WPF.Calendar;
-using C1.WPF.Schedule;
-using SchedulerExplorer.Resources;
 
 namespace SchedulerExplorer
 {
     public partial class Grouping : UserControl
     {
-        bool _updatingSelection = false;
         public Grouping()
         {
             Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalization.CultureInfo.CurrentCulture.Name);
@@ -67,14 +63,8 @@ namespace SchedulerExplorer
             sched1.DataStorage.AppointmentStorage.Appointments.Add(app);
             app.Links.Add(cnt);
             sched1.LayoutUpdated += new EventHandler(sched1_LayoutUpdated);
-            sched1.VisibleDates.CollectionChanged += VisibleDates_CollectionChanged;
 
             sched1.GroupBy = "Contact";
-        }
-
-        private void VisibleDates_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            UpdateCalendarSelection();
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -125,7 +115,6 @@ namespace SchedulerExplorer
                     views.SelectedIndex = 4;
                 }
             }
-            UpdateCalendarSelection();
         }
 
         void views_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -137,52 +126,38 @@ namespace SchedulerExplorer
             switch (views.SelectedItems.FirstOrDefault())
             {
                 case "Day":
-                    sched1.ChangeStyle(sched1.OneDayStyle);
+                    SetStyle(sched1.OneDayStyle);
                     break;
                 case "Work Week":
-                    sched1.ChangeStyle(sched1.WorkingWeekStyle);
+                    SetStyle(sched1.WorkingWeekStyle);
                     break;
                 case "Week":
-                    sched1.ChangeStyle(sched1.WeekStyle);
+                    SetStyle(sched1.WeekStyle);
                     break;
                 case "Month":
-                    sched1.ChangeStyle(sched1.MonthStyle);
+                    SetStyle(sched1.MonthStyle);
                     break;
                 case "Time Line":
-                    sched1.ChangeStyle(sched1.TimeLineStyle);
+                    SetStyle(sched1.TimeLineStyle);
                     break;
             }
         }
-
-        void selected_date_changed(object sender, CalendarSelectionChangedEventArgs e)
+        private void SetStyle(Style style)
         {
-            if (!_updatingSelection)
+            if (!IsLoaded || sched1.Style == style)
             {
-                var calendar = sender as C1Calendar;
-                if (calendar?.SelectedDate == default(DateTime))
-                    return;
-                sched1.VisibleDates.BeginUpdate();
-                sched1.VisibleDates.Clear();
-                               
-                foreach (var d in calendar.SelectedDates)
-                {
-                    sched1.VisibleDates.Add(d);
-                }
-                
-                sched1.VisibleDates.EndUpdate();
-                
-            }   
-        }
-
-        void UpdateCalendarSelection()
-        {
-            if (!_updatingSelection && (calendar1.SelectedDates == null ||
-                (sched1.VisibleDates.Count != calendar1.SelectedDates.Count
-                || (calendar1.SelectedDates.Count > 0 && sched1.VisibleDates[0] != calendar1.SelectedDates[0]))))
+                return;
+            }
+            sched1.BeginUpdate();
+            try
             {
-                _updatingSelection = true;
-                calendar1.SelectedDates = sched1.VisibleDates.ToList();
-                _updatingSelection = false;
+                sched1.ChangeStyle(style);
+            }
+            finally
+            {
+                sched1_LayoutUpdated(null, null);
+                // Always call EndUpdate to apply all changes.
+                sched1.EndUpdate();
             }
         }
     }

@@ -22,7 +22,7 @@ namespace SchedulerExplorer.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    public class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SchedulerExplorer.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SchedulerExplorer.Resources.AppResources", typeof(AppResources).Assembly);
@@ -51,7 +51,7 @@ namespace SchedulerExplorer.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,27 @@ namespace SchedulerExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add New.
+        /// </summary>
+        public static string AddNew {
+            get {
+                return ResourceManager.GetString("AddNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string Clear {
+            get {
+                return ResourceManager.GetString("Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Demonstrated Custom Dialogs for C1Scheduler.
         /// </summary>
-        internal static string CustomDialogsDescription {
+        public static string CustomDialogsDescription {
             get {
                 return ResourceManager.GetString("CustomDialogsDescription", resourceCulture);
             }
@@ -72,7 +90,7 @@ namespace SchedulerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Custom Dialogs.
         /// </summary>
-        internal static string CustomDialogsTitle {
+        public static string CustomDialogsTitle {
             get {
                 return ResourceManager.GetString("CustomDialogsTitle", resourceCulture);
             }
@@ -81,7 +99,7 @@ namespace SchedulerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Demonstrates how you can bind Scheduler to data from database using ADO.Net..
         /// </summary>
-        internal static string DatabaseBindingDescription {
+        public static string DatabaseBindingDescription {
             get {
                 return ResourceManager.GetString("DatabaseBindingDescription", resourceCulture);
             }
@@ -90,7 +108,7 @@ namespace SchedulerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Database Binding.
         /// </summary>
-        internal static string DatabaseBindingTitle {
+        public static string DatabaseBindingTitle {
             get {
                 return ResourceManager.GetString("DatabaseBindingTitle", resourceCulture);
             }
@@ -99,7 +117,7 @@ namespace SchedulerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shows how to bind AppointmentStorage to the collection of a custom business objects..
         /// </summary>
-        internal static string DataBindingDescription {
+        public static string DataBindingDescription {
             get {
                 return ResourceManager.GetString("DataBindingDescription", resourceCulture);
             }
@@ -108,7 +126,7 @@ namespace SchedulerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Data Binding.
         /// </summary>
-        internal static string DataBindingTitle {
+        public static string DataBindingTitle {
             get {
                 return ResourceManager.GetString("DataBindingTitle", resourceCulture);
             }
@@ -117,7 +135,7 @@ namespace SchedulerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Demonstrated C1Scheduler grouping functionality.
         /// </summary>
-        internal static string GroupingDescription {
+        public static string GroupingDescription {
             get {
                 return ResourceManager.GetString("GroupingDescription", resourceCulture);
             }
@@ -126,16 +144,25 @@ namespace SchedulerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Grouping.
         /// </summary>
-        internal static string GroupingTitle {
+        public static string GroupingTitle {
             get {
                 return ResourceManager.GetString("GroupingTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Load....
+        /// </summary>
+        public static string Load {
+            get {
+                return ResourceManager.GetString("Load", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The C1Scheduler control is a fully functional schedule that allows users to add, edit, and manage their appointments. You can customize the view of the scheduler, time scale and also load or save data..
         /// </summary>
-        internal static string OverviewDescription {
+        public static string OverviewDescription {
             get {
                 return ResourceManager.GetString("OverviewDescription", resourceCulture);
             }
@@ -144,16 +171,25 @@ namespace SchedulerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Overview.
         /// </summary>
-        internal static string OverviewTitle {
+        public static string OverviewTitle {
             get {
                 return ResourceManager.GetString("OverviewTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save....
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SchedulerExplorer.
         /// </summary>
-        internal static string Title {
+        public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
             }

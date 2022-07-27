@@ -28,7 +28,7 @@ namespace ListViewExplorer
 
         private void UpdateButtonText()
         {
-            btnSort.Content = sortDirection != SortDirection.Ascending ? "Sort ascendingly" : "Sort descendingly";
+            btnSort.Content = sortDirection != SortDirection.Ascending ? AppResources.SortAscendingly: AppResources.SortDescendingly;
         }
     }
 }

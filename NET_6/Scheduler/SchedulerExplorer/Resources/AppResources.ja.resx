@@ -155,4 +155,16 @@
   <data name="DatabaseBindingTitle" xml:space="preserve">
     <value>データベースバインディング</value>
   </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>新規追加</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>クリア</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>読み込み…</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存…</value>
+  </data>
 </root>

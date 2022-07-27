@@ -9,7 +9,7 @@
       d:DesignHeight="400" d:DesignWidth="600">
     <UserControl.Resources>
         <c1:C1IconTemplate x:Key="funnelIcon">
-            <c1:C1SVGIcon Source="pack://application:,,,/Resources/filter.svg"/>
+            <c1:C1SVGIcon Source="pack://application:,,,/FlexGridExplorer;component/Resources/filter.svg"/>
         </c1:C1IconTemplate>
     </UserControl.Resources>
     <Grid>

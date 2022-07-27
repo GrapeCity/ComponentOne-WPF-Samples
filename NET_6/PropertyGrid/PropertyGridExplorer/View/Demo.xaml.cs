@@ -49,7 +49,7 @@ namespace PropertyGridExplorer
 
         private void UpdateCheckContent()
         {
-            CheckBox[] elements = this.stackControl1.Children.Cast<CheckBox>().Where(x => x.IsChecked.Value).ToArray();
+        C1CheckBox[] elements = this.stackControl1.Children.Cast<C1CheckBox>().Where(x => x.IsChecked.Value).ToArray();
             List<object> listelement = new List<object>();
             for (int i = 0; i < elements.Length; i++)
             {
