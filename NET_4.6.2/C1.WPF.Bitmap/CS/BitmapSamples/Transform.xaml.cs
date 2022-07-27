@@ -152,7 +152,7 @@ namespace BitmapSamples
 
         void ApplyTransform(BaseTransform t)
         {
-            var newBitmap = _bitmap.Transform(t);
+            var newBitmap = _savedCopy.Transform(t);
             _bitmap.Dispose();
             _bitmap = newBitmap;
             UpdateImage();

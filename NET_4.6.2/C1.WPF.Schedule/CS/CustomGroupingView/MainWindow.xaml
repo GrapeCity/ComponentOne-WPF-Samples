@@ -29,7 +29,7 @@
             <c1:C1NumericBox Margin="2" Value="{Binding GroupPageSize, ElementName=c1Scheduler1, Mode=TwoWay}" Minimum="2" Maximum="5" MinWidth="35" RangeValidationMode="Always" />
         </ToolBar>
         <c1:C1Calendar x:Name="cal1" Grid.Row="1" Grid.Column="0" CalendarHelper="{Binding CalendarHelper, ElementName=c1Scheduler1, Mode=OneWay}" SelectedDates="{Binding VisibleDates, ElementName=c1Scheduler1, Mode=OneWay}" BoldedDates="{Binding BoldedDates, ElementName=c1Scheduler1, Mode=OneWay}" MaxSelectionCount="42" />
-        <c1:C1Scheduler x:Name="c1Scheduler1" Grid.Row="1" Grid.Column="1" Style="{Binding WorkingWeekStyle, ElementName=c1Scheduler1}" Theme="{DynamicResource {ComponentResourceKey TypeInTargetAssembly=c1:C1Scheduler, ResourceId=custom_theme}}">
+        <c1:C1Scheduler x:Name="c1Scheduler1" Grid.Row="1" ShowWorkTimeOnly="True" Grid.Column="1" Style="{Binding OneDayStyle, ElementName=c1Scheduler1}" Theme="{DynamicResource {ComponentResourceKey TypeInTargetAssembly=c1:C1Scheduler, ResourceId=custom_theme}}">
             <c1:C1Scheduler.Settings>
                 <c1:C1SchedulerSettings FirstVisibleTime="7:00:00" />
             </c1:C1Scheduler.Settings>

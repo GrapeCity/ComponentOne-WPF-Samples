@@ -26,6 +26,15 @@ namespace BasicControls
             UndoCommand = new DelegateCommand<object>(ExecuteUndoCommand, GetCanExecuteUndoCommand);
             RedoCommand = new DelegateCommand<object>(ExecuteRedoCommand, GetCanExecuteRedoCommand);
             ClearFormatCommand = new DelegateCommand<object>(ExecuteClearFormatCommand, GetCanExecuteClearFormatCommand);
+
+            // add hot keys for commands
+            KeyGesture UndoCmdKeyGesture = new KeyGesture(Key.U, ModifierKeys.Control);
+            KeyBinding UndoKeyBinding = new KeyBinding(UndoCommand, UndoCmdKeyGesture);
+            this.InputBindings.Add(UndoKeyBinding);
+
+            KeyGesture RedoCmdKeyGesture = new KeyGesture(Key.R, ModifierKeys.Control);
+            KeyBinding RedoKeyBinding = new KeyBinding(RedoCommand, RedoCmdKeyGesture);
+            this.InputBindings.Add(RedoKeyBinding);
         }
 
         private void contextMenu_ItemClick(object sender, SourcedEventArgs e)

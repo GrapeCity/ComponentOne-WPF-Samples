@@ -43,10 +43,10 @@
             <ComboBox ItemsSource="{Binding Aggregates}" SelectedItem="{Binding Aggregate, Mode=TwoWay}" />
         </StackPanel>
 
-        <c1:C1FlexChart x:Name="chart" SelectionMode="Point" 
+        <c1:C1FlexChart x:Name="chart" SelectionMode="Point" SelectedSeries="{Binding ElementName=series}"
                         Grid.Row="3" BindingX="{Binding Group}" ItemsSource="{Binding Orders}"
                         ToolTip="{x:Null}" Footer="{Binding Group}" >
-            <c1:Series Binding="Amount" />
+            <c1:Series x:Name="series" Binding="Amount" />
             <c1:C1FlexChart.SelectionStyle>
                 <c1:ChartStyle StrokeThickness="3" Stroke="DarkBlue" />
             </c1:C1FlexChart.SelectionStyle>

@@ -201,8 +201,12 @@ namespace RichTextBoxSamples
                         var collection = new C1TextDecorationCollection();
                         if (value == null)
                         {
-                            foreach (var decoration in run.TextDecorations)
-                                collection.Add(decoration);
+                            if(run.TextDecorations != null)
+                            {
+                                foreach (var decoration in run.TextDecorations)
+                                    collection.Add(decoration);
+                            }
+                            
 
                             collection.Remove(C1TextDecorations.Underline[0]);
                             if (collection.Count == 0)

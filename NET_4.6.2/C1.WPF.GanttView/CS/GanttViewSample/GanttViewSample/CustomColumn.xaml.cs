@@ -47,7 +47,10 @@ namespace GanttViewSample
                         foreach (ResourceRef rr in task.ResourceRefs)
                         {
                             Resource r = rr.Resource;
-                            total += Convert.ToDecimal(rr.Amount * duration) * r.Cost;
+                            if (r != null)
+                            {
+                                total += Convert.ToDecimal(rr.Amount * duration) * r.Cost;
+                            }
                         }
                         task.SetFieldValue("ActualCost", total);
                     }

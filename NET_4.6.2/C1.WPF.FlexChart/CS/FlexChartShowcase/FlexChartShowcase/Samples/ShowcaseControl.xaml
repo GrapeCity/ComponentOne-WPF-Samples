@@ -527,7 +527,7 @@
 
         </Grid>
 
-        <c1:C1FlexChart x:Name="flexChart" Grid.Row="1" Margin="50, 5, 20, 100">
+        <c1:C1FlexChart x:Name="flexChart" Grid.Row="1" PlotMargin="50 50 150 80">
             <c1:C1FlexChart.HeaderStyle>
                 <c1:ChartStyle FontSize="20" FontFamily="GenericSansSerif"/>
             </c1:C1FlexChart.HeaderStyle>

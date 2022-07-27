@@ -24,7 +24,7 @@
                 <c1:Axis LabelAngle="45"/>
             </c1:C1FinancialChart.AxisX>
             <c1:C1FinancialChart.Layers>
-                <c1:C1LineMarker x:Name="marker" Lines="Both" Interaction="Move" Alignment="Auto" DragLines="True" PositionChanged="positionChanged"/>
+                <c1:C1LineMarker x:Name="marker" Lines="Both" Interaction="Move" Alignment="Auto" DragLines="True" DragContent="True" PositionChanged="positionChanged"/>
             </c1:C1FinancialChart.Layers>
         </c1:C1FinancialChart>
         <StackPanel Orientation="Vertical" Grid.Row="1">

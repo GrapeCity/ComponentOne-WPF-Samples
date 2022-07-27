@@ -62,7 +62,7 @@ namespace FinancialChartExplorer
         private void financialChart_MouseMove(object sender, MouseEventArgs e)
         {
             var pt = e.GetPosition(overlayChart);
-            var hitTest = overlayChart.HitTest(pt);
+            var hitTest = overlayChart.HitTest(pt, false);
             var ser = hitTest.Series;
             if (ser != null)
             {

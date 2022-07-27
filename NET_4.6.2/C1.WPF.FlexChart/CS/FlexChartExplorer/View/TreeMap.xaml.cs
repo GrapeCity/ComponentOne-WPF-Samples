@@ -46,7 +46,10 @@ namespace FlexChartExplorer
             get
             {
                 if (_palettes == null)
+                {
                     _palettes = Enum.GetNames(typeof(Palette)).ToList<string>();
+                    _palettes.Remove("Custom");
+                }
                 return _palettes;
             }
         }
