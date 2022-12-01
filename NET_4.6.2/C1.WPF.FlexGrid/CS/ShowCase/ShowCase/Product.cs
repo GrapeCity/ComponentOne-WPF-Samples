@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -157,12 +158,19 @@ namespace ShowCase
         public static ObservableCollection<Country> ReadAll()
         {
             var result = new ObservableCollection<Country>();
-            string api = "http://country.io/names.json";
+            string codes = null;
+            using (var manifestResourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ShowCase.Resources.countries.json")) 
+            {
+                using (var streamReader = new StreamReader(manifestResourceStream))
+                {
+                   codes = streamReader.ReadToEnd();
+                }
+            }
 
-            dynamic sources = JsonConvert.DeserializeObject(ApiHelper.GetJsonString(api));
+            dynamic sources = JsonConvert.DeserializeObject(codes);
             foreach (dynamic item in sources)
             {
-                result.Add(new Country { Name = ((string)item.Value), Image = "https://www.countryflags.io/" + ((string)item.Name) + "/flat/32.png" }); ;
+                result.Add(new Country { Name = ((string)item.name), Image = "/Showcase;component/Resources/flags/" + ((string)item.code) + ".png" }); ;
             }
 
             return result;
@@ -172,31 +180,6 @@ namespace ShowCase
         {
             if (obj != null && this.Name == ((Country)obj).Name) return 1;
             return -1;
-        }
-
-        class ApiHelper
-        {
-            public static string GetJsonString(string api)
-            {
-                string jsonString = string.Empty;
-                var webRequest = WebRequest.Create(api) as HttpWebRequest;
-                if (webRequest == null)
-                {
-                    return null;
-                }
-
-                webRequest.ContentType = "application/json";
-                webRequest.UserAgent = ".";
-
-                using (var s = webRequest.GetResponse().GetResponseStream())
-                {
-                    using (var sr = new StreamReader(s))
-                    {
-                        jsonString = sr.ReadToEnd();
-                    }
-                }
-                return jsonString;
-            }
         }
     }
     /// <summary>

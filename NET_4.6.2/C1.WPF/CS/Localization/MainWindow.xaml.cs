@@ -1,4 +1,5 @@
 ﻿using C1.WPF;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
@@ -56,6 +57,8 @@ namespace Localization
                 olap.OlapEngine.RowFields.Add("Name", "Residence");
                 olap.OlapEngine.ValueFields.Add("Age");
             };
+
+            listMsgBoxOptions.ItemsSource = Enum.GetValues(typeof(C1MessageBoxButton));
         }
 
         C1MessageBoxButton _selectedButton;

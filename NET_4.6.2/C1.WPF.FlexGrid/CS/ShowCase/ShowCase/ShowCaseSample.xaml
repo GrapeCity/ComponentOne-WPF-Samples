@@ -68,8 +68,8 @@
                         <c1:C1ToolbarDropDown.Menu>
                             <ContextMenu>
                                 <MenuItem Name="Condition1" IsCheckable="True" Header="Discount &lt; 10%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition1}"></MenuItem>
-                                <MenuItem Name="Condition2" IsCheckable="True" Header="Discount &lt; 20%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition2}"></MenuItem>
-                                <MenuItem Name="Condition3" IsCheckable="True" Header="Discount &gt; 30%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition3}"></MenuItem>
+                                <MenuItem Name="Condition2" IsCheckable="True" Header="Discount from 10 to 20%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition2}"></MenuItem>
+                                <MenuItem Name="Condition3" IsCheckable="True" Header="Discount &gt; 20%" Click="MenuItem_ConditionalFormating_Click" CommandParameter="{StaticResource Condition3}"></MenuItem>
                             </ContextMenu>
                         </c1:C1ToolbarDropDown.Menu>
                     </c1:C1ToolbarDropDown>
@@ -184,13 +184,17 @@
                         </DataTemplate>
                     </c1:Column.CellEditingTemplate>
                 </c1:Column>
-                <c1:Column Binding="{Binding Color}" Header="Color">
+                <c1:Column Binding="{Binding Color}" Header="Color" >
                     <c1:Column.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                <Rectangle Width="20" Height="20" Fill="{Binding Color}" Margin="0,0,5,0"></Rectangle>
-                                <Label Content="{Binding Color}"></Label>
-                            </StackPanel>
+                            <Grid VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Rectangle Width="20" Height="20" Fill="{Binding Color}"/>
+                                <Label Margin="3,0" Content="{Binding Color}" Grid.Column="1"/>
+                            </Grid>
                         </DataTemplate>
                     </c1:Column.CellTemplate>
                     <c1:Column.CellEditingTemplate>
@@ -211,10 +215,8 @@
                     <c1:Column.CellTemplate>
                         <DataTemplate>
                             <c1:C1Sparkline Data="{Binding Histories}" x:Name="_sparkLine" Grid.Column="3"
-                        Width="120"
-                        ShowMarkers="True"                                           
-                        MarkersColor="Red"
-                        SeriesColor="Gray"/>
+                                Width="120" ShowMarkers="True"                                           
+                                MarkersColor="Red" SeriesColor="Gray"/>
                         </DataTemplate>
                     </c1:Column.CellTemplate>
                 </c1:Column>

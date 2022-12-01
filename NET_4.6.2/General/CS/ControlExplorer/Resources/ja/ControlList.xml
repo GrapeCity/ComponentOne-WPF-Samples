@@ -124,11 +124,11 @@
 					</SubFeature>
 					<SubFeature name="フルテキストフィルター" assemblyName="FlexGridSamples.exe" type="MainTestApplication.FullTextFilter" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FullTextFilter.xaml" >
 						<Description>このデモでは、FullTextFilter を使用してすべての列にわたってデータをフィルター処理して強調表示する方法を示します。</Description>
-					</SubFeature>
-                    <SubFeature name="フィルター行" assemblyName="FlexGridSamples.exe" type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
-                        <Description>テキストが入力されると、セルが対応する列をフィルタリングする行を表示します。</Description>
-                    </SubFeature>
-				</SubFeatures>
+          </SubFeature>
+          <SubFeature name="フィルター行" assemblyName="FlexGridSamples.exe" type="MainTestApplication.FilterRow" source="C1.WPF.FlexGrid\CS\FlexGridSamples\Filtering\FilterRow.xaml" >
+            <Description>テキストが入力されると、セルが対応する列をフィルタリングする行を表示します。</Description>
+          </SubFeature>
+        </SubFeatures>
 			</Feature>
 			<Feature name="グループ化" assemblyName="FlexGridSamples.exe">
 				<SubFeatures>
@@ -931,24 +931,24 @@
 			</Feature>
 		</Control>
 		<Control name="FlexViewer" isTop="true" assembly="C1.WPF.FlexViewer">
-			<Feature name="Pdf Viewer" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PdfViewPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PdfViewPage.xaml" >
+			<Feature name="Pdf ビューワ" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PdfViewPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PdfViewPage.xaml" >
 				<Description>C1FlexViewerとC1PdfDocumentSourceを使用して簡単なPDFビューアを作成する方法を示します。</Description>
 			</Feature>
-			<Feature name="FlexReport Viewer" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.ViewerPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\ViewerPage.xaml" >
+			<Feature name="FlexReport ビューワ" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.ViewerPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\ViewerPage.xaml" >
 				<Description>このサンプルでは、C1FlexViewerPaneを使用してFlexReportで生成されたレポートを表示する方法を示します。</Description>
 			</Feature>
-			<Feature name="Ssrs Viewer" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.SsrsPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\SsrsPage.xaml" >
+			<Feature name="Ssrs ビューワ" assemblyName="FlexReportSamples.4.exe" type="FlexReportSamples.SsrsPage" source="C1.WPF.FlexReport\CS\FlexReportSamples\SsrsPage.xaml" >
 				<Description>このサンプルは、C1SSRSDocumentSourceコンポーネントをC1FlexViewerPaneとともに使用して、SSRSサーバーで使用可能なレポートをプレビューおよび印刷したり、さまざまな形式にレポートをエクスポートしたりする方法を示しています。</Description>
 			</Feature>
 		</Control>
 		<Control name="PdfDocumentSource" assembly="C1.WPF.Document" >
-			<Feature name="Viewer" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PdfViewPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PdfViewPage.xaml" >
+      <Feature name="Pdf ビューワ" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PdfViewPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PdfViewPage.xaml" >
 				<Description>C1FlexViewerとC1PdfDocumentSourceを使用して簡単なPDFビューアを作成する方法を示します。</Description>
 			</Feature>
-			<Feature name="Export" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.ExportPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\ExportPage.xaml" >
+			<Feature name="エクスポート" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.ExportPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\ExportPage.xaml" >
 				<Description>C1PdfDocumentSourceをビューアなしで使用して、コードからドキュメントをエクスポートする方法を示します。</Description>
 			</Feature>
-			<Feature name="Printing" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PrintPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PrintPage.xaml" >
+			<Feature name="印刷" assemblyName="PdfDocumentSourceSamples.4.exe" type="PdfDocumentSourceSamples.PrintPage" source="C1.WPF.Document\CS\PdfDocumentSourceSamples\PrintPage.xaml" >
 				<Description>C1PdfDocumentSourceをビューアなしで使用してコードからドキュメントを印刷する方法を示します。</Description>
 			</Feature>
 		</Control>

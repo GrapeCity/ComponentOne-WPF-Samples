@@ -85,6 +85,8 @@ namespace ShowCase
 
             C1Theme.ApplyTheme(LayoutRoot, theme);
 
+            flexGrid.Theme = theme?.GetNewResourceDictionary() ?? new ResourceDictionary();
+
             var adornerLayer = AdornerLayer.GetAdornerLayer(LayoutRoot);
             if (adornerLayer != null)
             {

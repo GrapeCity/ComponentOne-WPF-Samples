@@ -11,14 +11,17 @@
     <Border Grid.Row="1">
         <Grid x:Name="LayoutRoot">
             <Grid.RowDefinitions>
-                <RowDefinition />
+                <RowDefinition Height="Auto" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Button x:Name="Backward" Content="Backward" Height="25" Width="60" Margin="-200,0,0,80" Click="Backward_Click" />
-            <Button x:Name="Forward" Content="Forward" Height="25" Width="60" Margin="0,0,0,80" Click="Forward_Click" />
-            <CheckBox x:Name="Vertical" Content="Vertical" Height="30" Width="60" Margin="200,0,0,80" Checked="Vertical_Checked" Unchecked="Vertical_Unchecked" />
-            <TextBlock Name="notSupportedTb" Text="Sorry, C1Book doesn't support a partial trust environment." Style="{DynamicResource captionStyle}" Visibility="Collapsed" HorizontalAlignment="Center" FontSize="15" />
-            <c1:C1Book x:Name="book" Visibility="Collapsed" PageMode="OnePage" Width="300" Height="400" Grid.RowSpan="2">
+            <ToolBar >
+                <Button x:Name="Backward" Content="Backward" VerticalAlignment="Center" Margin="5" Click="Backward_Click" />
+                <Button x:Name="Forward" Content="Forward" VerticalAlignment="Center" Margin="5" Click="Forward_Click" />
+                <CheckBox x:Name="Vertical" Content="Vertical" VerticalAlignment="Center" Margin="5" Checked="Vertical_Checked" Unchecked="Vertical_Unchecked" />
+            </ToolBar>
+            <TextBlock Name="notSupportedTb" Text="Sorry, C1Book doesn't support a partial trust environment." Grid.Row="1"
+                       Style="{DynamicResource captionStyle}" Visibility="Collapsed" HorizontalAlignment="Center" FontSize="15" />
+            <c1:C1Book x:Name="book" Visibility="Collapsed" PageMode="OnePage" Width="300" Height="400" Grid.Row="1">
                 <c1:C1Book.ItemTemplate>
                     <DataTemplate>
                         <Grid>

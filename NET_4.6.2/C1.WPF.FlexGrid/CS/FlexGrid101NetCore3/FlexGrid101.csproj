@@ -176,28 +176,28 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20222.770</Version>
+      <Version>4.6.20223.777</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20222.770</Version>
+      <Version>4.6.20223.777</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20222.770</Version>
+      <Version>4.6.20223.777</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20222.770</Version>
+      <Version>4.6.20223.777</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid.GroupPanel">
-      <Version>4.6.20222.770</Version>
+      <Version>4.6.20223.777</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
-      <Version>4.6.20222.770</Version>
+      <Version>4.6.20223.777</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Gauge">
-      <Version>4.6.20222.770</Version>
+      <Version>4.6.20223.777</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Zip">
-      <Version>4.6.20222.770</Version>
+      <Version>4.6.20223.777</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

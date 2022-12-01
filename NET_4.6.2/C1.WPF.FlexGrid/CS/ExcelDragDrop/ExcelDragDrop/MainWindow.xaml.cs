@@ -177,10 +177,10 @@ namespace ExcelDragDrop
             _dragOffset = new Point(pt.X - rc.X - 20, pt.Y - rc.Y - 5);
 
             // check that the mouse is close to the edge of the selection
-            return Math.Abs(pt.X - rc.Left) < DRAG_THRESHOLD ||
-                Math.Abs(pt.X - rc.Right) < DRAG_THRESHOLD ||
-                Math.Abs(pt.Y - rc.Top) < DRAG_THRESHOLD ||
-                Math.Abs(pt.Y - rc.Bottom) < DRAG_THRESHOLD;
+            return (Math.Abs(pt.X - rc.Left) < DRAG_THRESHOLD && pt.Y - rc.Top > 0 && pt.Y - rc.Bottom < 0) ||
+                   (Math.Abs(pt.X - rc.Right) < DRAG_THRESHOLD && pt.Y - rc.Top > 0 && pt.Y - rc.Bottom < 0) ||
+                   (Math.Abs(pt.Y - rc.Top) < DRAG_THRESHOLD && pt.X - rc.Right < 0 && pt.X - rc.Left > 0) ||
+                   (Math.Abs(pt.Y - rc.Bottom) < DRAG_THRESHOLD && pt.X - rc.Right < 0 && pt.X - rc.Left > 0);
         }
         /// <summary>
         /// Gets an element's first ancestor of a given type.
