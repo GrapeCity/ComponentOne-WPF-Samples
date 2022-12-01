@@ -6,3 +6,4 @@ ____
 Shows basic samples of the following controls
 
 * C1Calendar
+* C1MultiMonthCalendar
