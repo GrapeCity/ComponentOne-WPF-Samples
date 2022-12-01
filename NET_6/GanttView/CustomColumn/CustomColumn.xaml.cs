@@ -19,6 +19,7 @@ namespace CustomColumn
         bool _updating;
         public CustomColumnDemo()
         {
+            this.Tag = CustomColumn.Properties.Resources.Tag;
             InitializeComponent();
             gv.Loaded += Gv_Loaded;
         }

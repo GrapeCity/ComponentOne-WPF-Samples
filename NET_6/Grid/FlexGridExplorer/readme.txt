@@ -35,3 +35,4 @@ Shows the following samples
 	- ColumnOptions
 	- ExcelExport
 	- VirtualMode
+	- PinColumn

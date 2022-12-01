@@ -13,6 +13,7 @@ namespace CustomColumn
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = CustomColumn.Properties.Resources.Title;
         }
     }
 }

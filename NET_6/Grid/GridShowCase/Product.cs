@@ -8,6 +8,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -163,14 +164,21 @@ namespace GridShowCase
         public static ObservableCollection<Country> ReadAll()
         {
             var result = new ObservableCollection<Country>();
-            string api = "http://country.io/names.json";
+            string codes = null;
+            using (var manifestResourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("GridShowCase.Resources.countries.json"))
+            {
+                using (var streamReader = new StreamReader(manifestResourceStream))
+                {
+                    codes = streamReader.ReadToEnd();
+                }
+            }
 
-            dynamic sources = JsonConvert.DeserializeObject(ApiHelper.GetJsonString(api));
+            dynamic sources = JsonConvert.DeserializeObject(codes);
             foreach (dynamic item in sources)
             {
-                result.Add(new Country { Name = ((string)item.Value), Image = "https://flagcdn.com/w20/" + ((string)item.Name).ToLower() + ".png" }); ;
+                result.Add(new Country { Name = ((string)item.name), Image = "/GridShowCase;component/Resources/flags/" + ((string)item.code) + ".png" }); ;
             }
-            result = new ObservableCollection<Country>(result.OrderBy(s => s.Name));
+
             return result;
         }
 

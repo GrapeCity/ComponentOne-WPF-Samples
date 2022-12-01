@@ -51,8 +51,8 @@
                         <c1:C1DropDownTool.Content>
                             <c1:C1MenuList BorderThickness="0" Orientation="Vertical" ItemClick="OnConditionalFormattingItemClick">
                                 <c1:C1MenuItem Name="Condition1" IsCheckable="True" Header="Discount &lt; 10%" CommandParameter="{StaticResource Condition1}"/>
-                                <c1:C1MenuItem Name="Condition2" IsCheckable="True" Header="Discount &lt; 20%" CommandParameter="{StaticResource Condition2}"/>
-                                <c1:C1MenuItem Name="Condition3" IsCheckable="True" Header="Discount &gt; 30%" CommandParameter="{StaticResource Condition3}"/>
+                                <c1:C1MenuItem Name="Condition2" IsCheckable="True" Header="Discount from 10 to 20%" CommandParameter="{StaticResource Condition2}"/>
+                                <c1:C1MenuItem Name="Condition3" IsCheckable="True" Header="Discount &gt; 20%" CommandParameter="{StaticResource Condition3}"/>
                             </c1:C1MenuList>
                         </c1:C1DropDownTool.Content>
                     </c1:C1DropDownTool>
@@ -142,7 +142,19 @@
                     </c1:GridColumn.CellEditingTemplate>
                 </local:GridBitmapIconColumn>
                 <c1:GridColumn Binding="ProductName" ColumnName="Product Name" Header="Product" AllowGrouping="True" MinWidth="100" Width="*"/>
-                <local:GridBitmapIconColumn Binding="Country" Header="Country" SortMemberPath="Country.Name" GroupMemberPath="Country.Name" AllowGrouping="True" Width="200" ColumnName="Country" BitmapSourceBinding="Country.Image" DefaultBitmapSource="/GridShowCase;component/Resources/Images/noflag.png" IconWidth="25">
+                <c1:GridColumn Binding="Country" Header="Country" SortMemberPath="Country.Name" GroupMemberPath="Country.Name" FilterMemberPath="Country.Name" AllowGrouping="True" Width="200" ColumnName="Country" >
+                    <c1:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Margin="4 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Country.Image , IsAsync=True}" />
+                                <TextBlock Grid.Column="1" Margin="4 0 0 0" VerticalAlignment="Center" Text="{Binding Country.Name}" />
+                            </Grid>
+                        </DataTemplate>
+                    </c1:GridColumn.CellTemplate>
                     <c1:GridColumn.CellEditingTemplate>
                         <DataTemplate>
                             <c1:C1ComboBox ItemsSource="{Binding Countries, Source={StaticResource viewmodel}}"
@@ -162,7 +174,7 @@
                             </c1:C1ComboBox>
                         </DataTemplate>
                     </c1:GridColumn.CellEditingTemplate>
-                </local:GridBitmapIconColumn>
+                </c1:GridColumn>
                 <local:GridColorColumn Binding="Color" ColumnName="Color" Header="Color" MinWidth="100" ColorRectangleSize="18">
                     <c1:GridColumn.CellEditingTemplate>
                         <DataTemplate>
@@ -188,12 +200,17 @@
                     </c1:GridColumn.CellTemplate>
                 </c1:GridColumn>-->
                 <c1:GridNumericColumn Binding="Discount" Format="P0" Header="Discount" ColumnName="Discount" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right" MinWidth="80" Width="0.5*"/>
-                <c1:GridColumn Binding="Rating" Header="Rating" ColumnName="Rating" IsReadOnly="True" MinWidth="100" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center">
+                <c1:GridColumn Binding="Rating" Header="Rating" ColumnName="Rating" MinWidth="100" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center">
                     <c1:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <local:RatingCell Rating="{Binding Rating,Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" RatingTapped="OnRatingTapped" />
+                        </DataTemplate>
+                    </c1:GridColumn.CellTemplate>
+                    <c1:GridColumn.CellEditingTemplate>
                         <DataTemplate>
                             <local:RatingCell Rating="{Binding Rating,Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
                         </DataTemplate>
-                    </c1:GridColumn.CellTemplate>
+                    </c1:GridColumn.CellEditingTemplate>
                 </c1:GridColumn>
                 <c1:GridColumn Binding="Active" Header="Active" MinWidth="50" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center"/>
             </c1:FlexGrid.Columns>

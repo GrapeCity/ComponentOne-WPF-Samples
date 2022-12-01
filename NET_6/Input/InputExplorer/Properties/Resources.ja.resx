@@ -227,9 +227,11 @@
     <value>タグの入力</value>
   </data>
   <data name="ValidationFormDescription" xml:space="preserve">
-    <value>Show how to use built-in validation through standard INotifyDataErrorInfo</value>
+    <value>標準の INotifyDataErrorInfo を介して組み込みの検証を使用する方法を示します。</value>
+    <comment>Show how to use built-in validation through standard INotifyDataErrorInfo</comment>
   </data>
   <data name="ValidationFormTitle" xml:space="preserve">
-    <value>Validation Form</value>
+    <value>検証フォーム</value>
+    <comment>Validation Form</comment>
   </data>
 </root>

@@ -1,5 +1,6 @@
 ﻿using C1.WPF.Grid;
 using FlexGridExplorer.Resources;
+using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using System.Windows.Data;
 
@@ -10,6 +11,8 @@ namespace FlexGridExplorer
     /// </summary>
     public partial class RowDetails : UserControl
     {
+        private ObservableCollection<Customer> _data;
+
         public RowDetails()
         {
             InitializeComponent();
@@ -37,9 +40,8 @@ namespace FlexGridExplorer
 
             showItemsPicker.SelectedItem = GridDetailVisibilityMode.ExpandSingle.ToString();
 
-            var data = Customer.GetCustomerList(1000);
-            var view = new ListCollectionView(data);
-            grid.ItemsSource = view;
+            _data = Customer.GetCustomerList(1000);
+            grid.ItemsSource = _data;
             grid.MinColumnWidth = 85;
         }
 

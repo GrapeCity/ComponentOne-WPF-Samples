@@ -38,14 +38,14 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Label Content="Country:"/>
-                            <Label Content="{Binding Country}" Grid.Column="1"/>
-                            <Label Content="City:" Grid.Row="1"/>
-                            <Label Content="{Binding City}" Grid.Row="1" Grid.Column="1"/>
-                            <Label Content="Address:" Grid.Row="2"/>
-                            <Label Content="{Binding Address}" Grid.Row="2" Grid.Column="1"/>
-                            <Label Content="PostalCode:" Grid.Row="3"/>
-                            <Label Content="{Binding PostalCode}" Grid.Row="3" Grid.Column="1"/>
+                            <TextBlock Text="Country:"/>
+                            <TextBlock Text="{Binding Country}" Grid.Column="1"/>
+                            <TextBlock Text="City:" Grid.Row="1"/>
+                            <TextBlock Text="{Binding City}" Grid.Row="1" Grid.Column="1"/>
+                            <TextBlock Text="Address:" Grid.Row="2"/>
+                            <TextBlock Text="{Binding Address}" Grid.Row="2" Grid.Column="1"/>
+                            <TextBlock Text="PostalCode:" Grid.Row="3"/>
+                            <TextBlock Text="{Binding PostalCode}" Grid.Row="3" Grid.Column="1"/>
                         </Grid>
                     </DataTemplate>
                 </c1:FlexGridDetailProvider>

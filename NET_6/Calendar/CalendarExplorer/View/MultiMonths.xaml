@@ -68,7 +68,7 @@
                 
                 <StackPanel>
                     <TextBlock Text="Month Count" />
-                    <c1:C1NumericBox Placeholder="Month Count" x:Name="txtMonthCount" Minimum="1" IsReadOnly="True"
+                    <c1:C1NumericBox Placeholder="Month Count" x:Name="txtMonthCount" Minimum="1"
                                      Value="{Binding MonthCount, ElementName=calendar, Mode=TwoWay}"/>
                 </StackPanel>
             </WrapPanel>

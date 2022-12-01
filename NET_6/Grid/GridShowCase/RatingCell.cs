@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using C1.WPF.Core;
@@ -40,6 +41,9 @@ namespace GridShowCase
             get { return (int)GetValue(RatingProperty); }
             set { SetValue(RatingProperty, value); }
         }
+
+        public event EventHandler<MouseButtonEventArgs> RatingTapped;
+
         void img_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             // calculate rating based on the index of the star
@@ -53,6 +57,7 @@ namespace GridShowCase
 
             // apply the new rating
             cell.Rating = index;
+            cell.OnRatingTapped(sender, e);
         }
         static C1Icon GetStarImage()
         {
@@ -67,6 +72,11 @@ namespace GridShowCase
             {
                 cell.Children[i].Opacity = i < cell.Rating ? ON : OFF;
             }
+        }
+
+        private void OnRatingTapped(object sender, MouseButtonEventArgs e)
+        {
+            RatingTapped?.Invoke(sender, e);
         }
     }
 }

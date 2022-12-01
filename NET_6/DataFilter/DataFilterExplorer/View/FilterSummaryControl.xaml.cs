@@ -1,6 +1,8 @@
 ﻿using C1.DataCollection;
 using C1.WPF.DataFilter;
 using DataFilterExplorer.Resources;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows;
@@ -51,6 +53,22 @@ namespace DataFilterExplorer
                     modelFilter.Maximum = _data.Max(x => (x as Car).Price);
                     modelFilter.Minimum = _data.Min(x => (x as Car).Price);
                     modelFilter.Format = "F0";
+                }
+
+                if ( f.PropertyName == "TransmissAutomatic")
+                {
+                    var taFilter = f as ChecklistFilter;
+                    taFilter.HeaderText = "Transmiss Automatic";
+                    taFilter.ItemsSource = new List<TransmissAutomatic>()
+                    {
+                        new TransmissAutomatic() { DisplayValue = "Yes", Value = "Yes" },
+                        new TransmissAutomatic() { DisplayValue = "No", Value = "No" },
+                        new TransmissAutomatic() { DisplayValue = "Empty", Value = null }
+                    };
+                    taFilter.DisplayMemberPath = "DisplayValue";
+                    taFilter.ValueMemberPath = "Value";
+                    taFilter.ShowSelectAll = false;
+
                 }
             }
         }

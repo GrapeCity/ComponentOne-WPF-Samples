@@ -61,6 +61,15 @@ namespace ThemeExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cell.
+        /// </summary>
+        public static string Cell {
+            get {
+                return ResourceManager.GetString("Cell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Common WPF Controls.
         /// </summary>
         public static string CommonWPFControls {
@@ -88,11 +97,74 @@ namespace ThemeExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Document.
+        /// </summary>
+        public static string Document {
+            get {
+                return ResourceManager.GetString("Document", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Font.
+        /// </summary>
+        public static string Font {
+            get {
+                return ResourceManager.GetString("Font", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input &amp; Editing.
         /// </summary>
         public static string InputEditing {
             get {
                 return ResourceManager.GetString("InputEditing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert.
+        /// </summary>
+        public static string Insert {
+            get {
+                return ResourceManager.GetString("Insert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line Number.
+        /// </summary>
+        public static string LineNumber {
+            get {
+                return ResourceManager.GetString("LineNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merge.
+        /// </summary>
+        public static string Merge {
+            get {
+                return ResourceManager.GetString("Merge", resourceCulture);
             }
         }
         
@@ -106,6 +178,15 @@ namespace ThemeExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Paragraph.
+        /// </summary>
+        public static string Paragraph {
+            get {
+                return ResourceManager.GetString("Paragraph", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reporting &amp; Documents.
         /// </summary>
         public static string ReportingDocuments {
@@ -115,11 +196,47 @@ namespace ThemeExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rows And Columns.
+        /// </summary>
+        public static string RowsAndColumns {
+            get {
+                return ResourceManager.GetString("RowsAndColumns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Scheduling.
         /// </summary>
         public static string Scheduling {
             get {
                 return ResourceManager.GetString("Scheduling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table.
+        /// </summary>
+        public static string Table {
+            get {
+                return ResourceManager.GetString("Table", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tables.
+        /// </summary>
+        public static string Tables {
+            get {
+                return ResourceManager.GetString("Tables", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Studio WPF Edition includes professional themes which expand your style possibilities..
+        /// </summary>
+        public static string Tag {
+            get {
+                return ResourceManager.GetString("Tag", resourceCulture);
             }
         }
         
@@ -138,6 +255,42 @@ namespace ThemeExplorer.Properties {
         public static string ThemeExplorer {
             get {
                 return ResourceManager.GetString("ThemeExplorer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theme Explorer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tools.
+        /// </summary>
+        public static string Tools {
+            get {
+                return ResourceManager.GetString("Tools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View.
+        /// </summary>
+        public static string View {
+            get {
+                return ResourceManager.GetString("View", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zoom.
+        /// </summary>
+        public static string Zoom {
+            get {
+                return ResourceManager.GetString("Zoom", resourceCulture);
             }
         }
     }

@@ -68,7 +68,7 @@ namespace DataFilterExplorer
                     {
                         new TransmissAutomatic() { DisplayValue = "Yes", Value = "Yes" },
                         new TransmissAutomatic() { DisplayValue = "No", Value = "No" },
-                        new TransmissAutomatic() { DisplayValue = "Empty", Value = string.Empty }
+                        new TransmissAutomatic() { DisplayValue = "Empty", Value = null }
                     };
                     taFilter.DisplayMemberPath = "DisplayValue";
                     taFilter.ValueMemberPath = "Value";
@@ -87,13 +87,7 @@ namespace DataFilterExplorer
             }
         }
 
-        private class TransmissAutomatic
-        {
-            public string DisplayValue { get; set; }
-            public object Value { get; set; }
-        }
-
-        private void CbAutoApply_CheckChanged(object sender, RoutedEventArgs e)
+         private void CbAutoApply_CheckChanged(object sender, RoutedEventArgs e)
         {
             if (c1DataFilter != null)
             {

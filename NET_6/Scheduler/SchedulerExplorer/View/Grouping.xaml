@@ -49,7 +49,7 @@
 
         <c1:C1MultiMonthCalendar Name="calendar1" Grid.Column="0" Grid.Row="1" MaxSelectionCount="42" MonthCount="3"
                        MinDate="{Binding Start, ElementName=sched1}" MaxDate="{Binding End, ElementName=sched1}"
-                       BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
+                       BorderThickness="1" SelectionMode="Extended"
                        SelectedDates="{Binding ElementName=sched1, Path=VisibleDates, Mode=OneWay}"
                        />
 

@@ -162,9 +162,10 @@
     <comment>WeekSelection</comment>
   </data>
   <data name="MultiMonthsDes" xml:space="preserve">
-    <value>MultiMonth Calendar</value>
+    <value>C1MultiMonthCalendar コントロールは、複数月のカレンダーを表示し、ユーザーが日付を選択できるようにします。</value>
+    <comment>The C1MultiMonthCalendar control displays multiple months calendar and allows users to select a date.</comment>
   </data>
   <data name="MultiMonthsTitle" xml:space="preserve">
-    <value>MultiMonth Calendar</value>
+    <value>複数月</value>
   </data>
 </root>

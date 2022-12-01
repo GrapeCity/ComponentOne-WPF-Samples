@@ -31,10 +31,10 @@ namespace FlexGridExplorer
             await base.RemoveRangeAsync(index, count, cancellationToken);
         }
 
-        public override async Task ReplaceAsync(int index, object item, CancellationToken cancellationToken = default)
+        public override async Task<int> ReplaceAsync(int index, object item, CancellationToken cancellationToken = default)
         {
             await Task.Delay(1000, cancellationToken); //simulates a network operation
-            await base.ReplaceAsync(index, item, cancellationToken);
+            return await base.ReplaceAsync(index, item, cancellationToken);
         }
     }
 }

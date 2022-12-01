@@ -3,11 +3,15 @@ using C1.WPF.DataFilter;
 using C1.WPF.Document;
 using C1.WPF.TabControl;
 using C1.WPF.Themes;
+using DocumentFormat.OpenXml.Bibliography;
 using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Media;
 using System.Xml.Serialization;
 using ThemeExplorer.Helpers;
@@ -23,6 +27,7 @@ namespace ThemeExplorer
 
         public Gallery()
         {
+            Tag = Properties.Resources.Tag;
             _lastSystemForeground = SystemColors.ControlTextColor;
 
             // Set foreground to Black if theme is not applied. It allows to keep black foreground fore default styles if end-user has HighContrast settings turned on.
@@ -32,20 +37,29 @@ namespace ThemeExplorer
 
             //Background = Resources["WindowBackground"] as LinearGradientBrush;
             themes.ItemsSource = typeof(C1AvailableThemes).GetEnumValues();
-            themes.SelectedIndex = 1;
+            themes.SelectedIndex = 2;
             SystemEvents.UserPreferenceChanged += SystemEvents_UserPreferenceChanged;
 
-            var persons = Person.Generate(80);
+            var persons = new ObservableCollection<Person>(Person.Generate(80));
 
             flexGrid.ItemsSource = persons;
+            flexGrid.Columns["Age"].AllowGrouping = true;
             listView.ItemsSource = persons;
-            dataGrid.ItemsSource = persons;
+       //     dataGrid.ItemsSource = persons;
 
             var pagedPersons = new C1PagedDataCollection<Person>(persons) { PageSize = 10 };
             pager.Source = pagedPersons;
             listView2.ItemsSource = pagedPersons;
 
-            ViewType.ItemsSource = Enum.GetValues(typeof(C1.WPF.Schedule.ViewType));
+            var viewTypes = new List<C1.WPF.Schedule.ViewType>
+            {
+                C1.WPF.Schedule.ViewType.Month,
+                C1.WPF.Schedule.ViewType.Day,
+                C1.WPF.Schedule.ViewType.Week,
+                C1.WPF.Schedule.ViewType.WorkingWeek,
+                C1.WPF.Schedule.ViewType.TimeLine
+            };
+            ViewType.ItemsSource = viewTypes;
 
         }
 
@@ -106,6 +120,7 @@ namespace ThemeExplorer
             //update themes in individual controls
             pivot.ThemeResources = theme;
             sched1.Theme = theme;
+            ganttPage.Theme = theme;
         }
         #endregion
 

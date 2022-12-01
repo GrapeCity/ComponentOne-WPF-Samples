@@ -20,6 +20,7 @@
             <c1:C1CheckBox Margin="5,0" x:Name="switchMarquee" IsChecked="{Binding ElementName=grid, Path=ShowMarquee, Mode=TwoWay}" VerticalAlignment="Center"/>
         </StackPanel>
         <TextBlock x:Name="lblSelection" Grid.Row="2"/>
-        <c1:FlexGrid x:Name="grid" Grid.Row="3" HeadersVisibility="All" ShowMarquee="True" AllowResizing="Both" SelectionChanging="grid_SelectionChanging" SelectionChanged="grid_SelectionChanged" Style="{x:Static c1:FlexGrid.ClassicStyle}"/>
+        <c1:FlexGrid x:Name="grid" Grid.Row="3" HeadersVisibility="All" ShowMarquee="True" AllowResizing="Both" SelectionMode="CellRange"
+                     SelectionChanging="grid_SelectionChanging" SelectionChanged="grid_SelectionChanged" />
     </Grid>
 </UserControl>

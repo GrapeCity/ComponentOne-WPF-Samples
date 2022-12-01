@@ -144,4 +144,7 @@
   <data name="DataObjectPropertiesTitle" xml:space="preserve">
     <value>Data-Object Properties</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 </root>

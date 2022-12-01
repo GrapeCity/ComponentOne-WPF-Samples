@@ -126,9 +126,18 @@ namespace DataFilterExplorer
                     Picture = row.Field<byte[]>("Picture"),
                     Price = row.Field<double>("Price"),
                     TransmissAutomatic = row.Field<string>("TransmissAutomatic"),
+                    TransmissSpeedCount = row.Field<Int16>("TransmissSpeedCount").ToString(),
+
                     ID = row.Field<int>("ID")
                 };
             }
         }
     }
+
+    internal class TransmissAutomatic
+    {
+        public string DisplayValue { get; set; }
+        public object Value { get; set; }
+    }
+
 }

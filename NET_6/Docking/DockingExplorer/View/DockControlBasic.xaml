@@ -9,10 +9,15 @@
         <Style x:Key="CustomStyle" TargetType="c1:C1DockTabItem">
             <Setter Property="TabShape" Value="Rectangle" />
         </Style>
-        <Style x:Key="CustomSelectedStyle" TargetType="c1:C1DockTabItem">
+        <Style x:Key="CustomSelectedStyle" TargetType="c1:C1TabItemPresenter">
             <Setter Property="Background" Value="BlueViolet" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="TabShape" Value="Sloped" />
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Padding" Value="{Binding Padding, RelativeSource={RelativeSource AncestorType=c1:C1TabItem}}"/>
+            <Setter Property="BorderBrush" Value="{Binding BorderBrush, RelativeSource={RelativeSource AncestorType=c1:C1TabItem}}"/>
+            <Setter Property="MouseOverBrush" Value="{Binding MouseOverBrush, RelativeSource={RelativeSource AncestorType=c1:C1TabItem}}"/>
+            <Setter Property="PressedBrush" Value="{Binding PressedBrush, RelativeSource={RelativeSource AncestorType=c1:C1TabItem}}"/>
         </Style>
     </UserControl.Resources>
     <Grid>
@@ -26,14 +31,14 @@
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>
-                <c1:C1DockTabControl SelectedIndex="0">
+                <c1:C1DockTabControl SelectedIndex="0" IndicatorVisibility="Collapsed">
                     <c1:C1DockTabItem Header="Tab 3" TabShape="Sloped">
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>
             </c1:C1DockGroup>
             <c1:C1DockGroup>
-                <c1:C1DockTabControl Dock="Top" DockWidth="500" DockHeight="500" TabItemShape="Sloped">
+                <c1:C1DockTabControl Dock="Top" DockWidth="500" DockHeight="500" TabItemShape="Sloped" IndicatorVisibility="Collapsed">
                     <c1:C1DockTabItem Header="Tab 4">
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
@@ -41,13 +46,13 @@
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>
-                <c1:C1DockTabControl TabItemShape="Sloped">
+                <c1:C1DockTabControl TabItemShape="Sloped" IndicatorVisibility="Collapsed">
                     <c1:C1DockTabItem Header="Tab 6">
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>
             </c1:C1DockGroup>
-            <c1:C1DockTabControl>
+            <c1:C1DockTabControl SelectedIndex="0" IndicatorVisibility="Collapsed">
                 <c1:C1DockTabItem Header="Tab 7" TabShape="Sloped">
                     <!--Your Content Here-->
                 </c1:C1DockTabItem>

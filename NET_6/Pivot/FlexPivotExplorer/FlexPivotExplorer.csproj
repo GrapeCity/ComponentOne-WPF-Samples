@@ -33,15 +33,11 @@
     <EmbeddedResource Include="Resources\FlexPivotViews.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataEngine">
-      <Version>5.0.20221.252</Version>
-    </PackageReference>
-    <PackageReference Include="C1.PivotEngine" Version="5.0.20221.252" />
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20222.263</Version>
+      <Version>6.0.20223.376</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>6.0.20222.263</Version>
+      <Version>6.0.20223.376</Version>
     </PackageReference>
     <PackageReference Include="C1.Zip" Version="2.0.20202.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />

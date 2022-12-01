@@ -32,7 +32,7 @@
                 <c1:C1ComboBoxItem Content="Hidden"  />
             </c1:C1ComboBox>
         </StackPanel>
-        <c1:C1TabControl Grid.Row="1" Name="c1Tab" FontSize="20" MouseOverBrush="Transparent" TabStripMenuVisibility="Visible">
+        <c1:C1TabControl Grid.Row="1" Name="c1Tab" FontSize="20" MouseOverBrush="Transparent" TabStripMenuVisibility="Visible" SelectedIndex="1">
             <c1:C1TabItem TabShape="Rectangle" BorderThickness="0" Header="Landing" BorderBrush="Transparent" />
             <c1:C1TabItem TabShape="Rectangle" BorderThickness="0" Header="Summary" BorderBrush="Transparent" />
             <c1:C1TabItem TabShape="Rectangle" BorderThickness="0" Header="Charts" BorderBrush="Transparent" />

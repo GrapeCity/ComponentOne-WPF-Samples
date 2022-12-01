@@ -545,4 +545,8 @@
     <value>ヘッダーの配置</value>
     <comment>Header Alignment</comment>
   </data>
+  <data name="VirtualModeDescription" xml:space="preserve">
+    <value>データ仮想化を使用して 10 億行のグリッドを表示する方法を示します</value>
+    <comment>Shows how to use data-virtualization to display a 1 billion rows grid</comment>
+  </data>
 </root>

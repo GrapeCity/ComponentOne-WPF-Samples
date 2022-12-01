@@ -1,10 +1,4 @@
-﻿using C1.WPF.Calendar;
-using C1.WPF.DateTimeEditors;
-using C1.WPF.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace ThemeExplorer
 {
@@ -32,7 +26,6 @@ namespace ThemeExplorer
             CheckList1.ItemsSource = persons;
             CheckList1.Items[0].IsSelected = true;
 
-            propGrid.SelectedObject = persons[0];
         }
 
     }

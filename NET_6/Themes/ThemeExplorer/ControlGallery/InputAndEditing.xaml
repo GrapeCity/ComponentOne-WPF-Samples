@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:ThemeExplorer.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree">
@@ -46,9 +47,10 @@
 
                     <c1:C1DatePicker VerticalAlignment="Center" Width="200" Margin="10 20 10 20" />
 
-                    <c1:C1ListView x:Name="CheckList" Grid.Column="1" Margin="10 20 10 20" Height="340" Width="200" VerticalAlignment="Center" DisplayMemberPath="Residence" ShowCheckBoxes="True"/>
+                    <c1:C1ListView x:Name="CheckList" Grid.Column="1" Margin="10 20 10 20" Height="340" Width="250" VerticalAlignment="Center" DisplayMemberPath="Residence" ShowCheckBoxes="True"/>
 
-                    <c1:C1MultiSelect x:Name="MultiSelect" Margin="10 20 10 20" Width="240" VerticalAlignment="Center" DisplayMemberPath="Name" MaxHeaderItems="2"/>
+                    <c1:C1MultiSelect x:Name="MultiSelect" Margin="10 20 10 20" Width="240" VerticalAlignment="Center" ShowSelectAll="True"
+                                      DisplayMemberPath="Name" MaxHeaderItems="2"/>
 
                     <c1:C1TagEditor x:Name="TagEditor" Margin="10 20 10 20" Width="240"  VerticalAlignment="Center" />
 
@@ -115,8 +117,8 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <c1:C1RichTextBoxRibbon RichTextBox="{Binding ElementName=richTB}">
-                    <c1:RibbonTabItem Header="Home">
-                        <c1:RibbonGroup Header="Edit">
+                    <c1:RibbonTabItem Header="{x:Static res:Resources.Home}">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Edit}">
                             <c1:C1PasteTool/>
                             <c1:C1CutTool/>
                             <c1:C1UndoTool/>
@@ -125,7 +127,7 @@
                             <c1:C1RedoTool/>
                             <c1:C1FormatPainterTool/>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Font">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Font}">
                             <c1:C1ToolStrip>
                                 <c1:C1FontFamilyTool/>
                                 <c1:C1FontSizeTool/>
@@ -146,7 +148,7 @@
                                 <c1:C1TextHighlightTool/>
                             </c1:C1ToolStrip>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Paragraph">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Paragraph}">
                             <c1:C1ToolStrip>
                                 <c1:C1LeftAlignTool/>
                                 <c1:C1CenterAlignTool/>
@@ -167,13 +169,13 @@
                                 <c1:C1LineSpacingTool/>
                             </c1:C1ToolStrip>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Insert">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Insert}">
                             <c1:C1InsertImageTool/>
                             <c1:C1InsertSymbolTool/>
                             <c1:C1InsertHyperlinkTool/>
                             <c1:C1RemoveHyperlinkTool/>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Tools">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Tools}">
                             <c1:RibbonGroup.GroupSizeDefinitions>
                                 <c1:RibbonGroupSizeDefinition>
                                     <c1:RibbonToolSizeDefinition Size="Large"/>
@@ -183,8 +185,8 @@
                             <c1:C1FindAndReplaceTool/>
                         </c1:RibbonGroup>
                     </c1:RibbonTabItem>
-                    <c1:RibbonTabItem Header="Tables">
-                        <c1:RibbonGroup Header="Table">
+                    <c1:RibbonTabItem Header="{x:Static res:Resources.Tables}">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Table}">
                             <c1:RibbonGroup.GroupSizeDefinitions>
                                 <c1:RibbonGroupSizeDefinition>
                                     <c1:RibbonToolSizeDefinition Size="Large"/>
@@ -195,7 +197,7 @@
                             <c1:C1ShowGridlinesTool/>
                             <c1:C1TableWidthTool/>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Rows And Columns">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.RowsAndColumns}">
                             <c1:RibbonGroup.GroupSizeDefinitions>
                                 <c1:RibbonGroupSizeDefinition>
                                     <c1:RibbonToolSizeDefinition Size="Large"/>
@@ -207,7 +209,7 @@
                             <c1:C1InsertRowsAboveTool/>
                             <c1:C1InsertRowsBelowTool/>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Merge">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Merge}">
                             <c1:RibbonGroup.GroupSizeDefinitions>
                                 <c1:RibbonGroupSizeDefinition>
                                     <c1:RibbonToolSizeDefinition Size="Large"/>
@@ -216,7 +218,7 @@
                             <c1:C1MergeCellsTool/>
                             <c1:C1UnmergeCellTool/>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Cell">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Cell}">
                             <c1:RibbonGroup.GroupSizeDefinitions>
                                 <c1:RibbonGroupSizeDefinition>
                                     <c1:RibbonToolSizeDefinition Size="Small"/>
@@ -230,8 +232,8 @@
                             <c1:C1BottomAlignTool/>
                         </c1:RibbonGroup>
                     </c1:RibbonTabItem>
-                    <c1:RibbonTabItem Header="View">
-                        <c1:RibbonGroup Header="Document">
+                    <c1:RibbonTabItem Header="{x:Static res:Resources.View}">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Document}">
                             <c1:RibbonGroup.GroupSizeDefinitions>
                                 <c1:RibbonGroupSizeDefinition>
                                     <c1:RibbonToolSizeDefinition Size="Large"/>
@@ -240,7 +242,7 @@
                             <c1:C1PrintViewTool/>
                             <c1:C1DraftViewTool/>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Zoom">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.Zoom}">
                             <c1:RibbonGroup.GroupSizeDefinitions>
                                 <c1:RibbonGroupSizeDefinition>
                                     <c1:RibbonToolSizeDefinition Size="Large"/>
@@ -258,7 +260,7 @@
                             <c1:C1TwoPagesTool/>
                             <c1:C1FitWidthTool/>
                         </c1:RibbonGroup>
-                        <c1:RibbonGroup Header="Line Number">
+                        <c1:RibbonGroup Header="{x:Static res:Resources.LineNumber}">
                             <c1:RibbonGroup.GroupSizeDefinitions>
                                 <c1:RibbonGroupSizeDefinition>
                                     <c1:RibbonToolSizeDefinition Size="Small"/>
@@ -279,7 +281,29 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
             </Grid>
         </c1:C1TabItem>
         <c1:C1TabItem Header="PropertyGrid" BorderThickness="0">
-            <c1:C1PropertyGrid x:Name="propGrid" Margin="10" HorizontalAlignment="Left" MinWidth="360"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="250" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="contentControl" Text="Selected Object" Margin="10" Width="150" Height="40" Background="#fff6aac9" VerticalAlignment="Top"/>
+                <c1:C1PropertyGrid x:Name="propertyGrid" Grid.Column="1" AutoGenerateProperties="False" ShowDescription="True" ShowResetButton="True" Margin="5"
+                                   SelectedObject="{Binding ., ElementName=contentControl}">
+                    <c1:C1PropertyGrid.PropertyAttributes>
+                        <c1:PropertyAttribute Browsable="True" MemberName="Width" DefaultValue="120" MinimumValue="0" Category="Size" Description="Gets or sets the width of the element."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="Height" DefaultValue="28" MinimumValue="0" Category="Size" Description="Gets or sets the suggested height of the element."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="Background" Category="Colors" Description="Gets or sets a brush that describes the background of a control."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="BorderBrush" DefaultValue="FFAEAEAE" Category="Colors" Description="Gets or sets a brush that describes the border background of a control."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="BorderThickness" DefaultValue="FFAEAEAE" Category="Others" Description="Gets or sets a border thickness."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="HorizontalAlignment" DefaultValue="Stretch" Category="Others" Description="Gets or sets the horizontal alignment characteristics applied to this element when it is composed within a parent element, such as a panel or items control."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="IsEnabled" DefaultValue="true" Category="Others" Description="Gets or sets a value indicating whether this element is enabled in the user interface (UI). This is a dependency property."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="Opacity" DefaultValue="0.8" MinimumValue="0" MaximumValue="1" Category="Others" Description="Gets or sets the opacity factor applied to the entire System.Windows.UIElement when it is rendered in the user interface (UI). This is a dependency property."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="Content" Category="Others" Description="Gets or sets the content of a System.Windows.Controls.ContentControl."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="MaxWidth" DefaultValue="100" MinimumValue="0" Category="Size" Description="Gets or sets the maximum width constraint of the element."/>
+                        <c1:PropertyAttribute Browsable="True" MemberName="MaxHeight" DefaultValue="100" MinimumValue="0" Category="Size" Description="Gets or sets the maximum height constraint of the element."/>
+                    </c1:C1PropertyGrid.PropertyAttributes>
+                </c1:C1PropertyGrid>
+            </Grid>
         </c1:C1TabItem>
 
     </c1:C1TabControl>

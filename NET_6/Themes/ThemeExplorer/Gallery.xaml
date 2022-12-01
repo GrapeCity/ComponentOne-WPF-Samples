@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ThemeExplorer"
+             xmlns:c1gantt="clr-namespace:C1.GanttView;assembly=C1.WPF.GanttView"
              xmlns:p="clr-namespace:ThemeExplorer.Properties">
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
@@ -10,16 +11,16 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="{x:Static p:Resources.Theme}" Foreground="{Binding ElementName=root, Path=Foreground}" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="{x:Static p:Resources.Theme}" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
             <c1:C1ComboBox x:Name="themes" IsEditable="False" SelectedItemChanged="themes_SelectedItemChanged" Width="150" Margin="5" Height="30" />
         </StackPanel>
 
-        <c1:C1TabControl CanUserReorder="True" Grid.Row="1" UnselectedContentMode="OutsideVisualTree" >
-            <c1:C1TabItem Header="{x:Static p:Resources.DataManagement}" >
+        <c1:C1TabControl CanUserReorder="True" Grid.Row="1" UnselectedContentMode="OutsideVisualTree" TabStripMenuVisibility="Visible">
+            <c1:C1TabItem Header="{x:Static p:Resources.DataManagement}" UnselectedContentMode="OutsideVisualTree" >
                 <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" 
-                             SelectionChanged="DataManagement_SelectionChanged" UnselectedContentMode="OutsideVisualTree">
+                             SelectionChanged="DataManagement_SelectionChanged" UnselectedContentMode="OutsideVisualTree" >
                     <c1:C1TabItem Header="FlexGrid" BorderThickness="0">
-                        <c1:FlexGrid x:Name="flexGrid" Margin="10" HeadersVisibility="All"  />
+                        <c1:FlexGrid x:Name="flexGrid" Margin="10" HeadersVisibility="All" SelectionMode="RowRange" AllowGrouping="True" />
                     </c1:C1TabItem>
                     <c1:C1TabItem Header="ListView" BorderThickness="0">
                         <c1:C1ListView x:Name="listView" Margin="10" DisplayMemberPath="Name" ShowCheckBoxes="True" ShowSelectAll="True" SelectionMode="Extended" />
@@ -63,7 +64,7 @@
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-                            <c1:C1ListView x:Name="listView2" Grid.Row="0" SelectionMode="Single" ItemHeight="30" DisplayMemberPath="Name" Margin="10 0 10 10"/>
+                            <c1:C1ListView x:Name="listView2" Grid.Row="0" SelectionMode="Single" DisplayMemberPath="Name" Margin="10 0 10 10"/>
                             <c1:C1DataPager x:Name="pager" Grid.Row="1" />
                         </Grid>
                     </c1:C1TabItem>
@@ -86,7 +87,7 @@
                 </c1:C1TabControl>
             </c1:C1TabItem>
             <c1:C1TabItem Header="{x:Static p:Resources.Scheduling}" >
-                <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree">
+                <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree" >
                     <c1:C1TabItem Header="Calendar" BorderThickness="0">
                         <c1:C1Calendar SelectionMode="Extended" MaxSelectionCount="21" MinHeight="280" MinWidth="280" Margin="5"
                                    HorizontalAlignment="Left" VerticalAlignment="Top" ShowAdjacentDay="True" />
@@ -98,7 +99,7 @@
                                 <RowDefinition />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="280" />
+                                <ColumnDefinition MaxWidth="342" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
@@ -109,8 +110,9 @@
                                 <TextBlock Margin="2" Text="Scheduler View:" VerticalAlignment="Center"/>
                                 <c1:C1ComboBox x:Name="ViewType" VerticalAlignment="Center" SelectedItem="{Binding ViewType, ElementName=sched1}" Margin="2" MinWidth="120"/>
                             </c1:C1ToolStrip>
-                            <c1:C1MultiMonthCalendar x:Name="cal1" Grid.Column="0" Grid.Row="1" SelectionMode="Extended" MonthCount="3" MaxSelectionCount="42" VerticalAlignment="Top" 
-                                       ShowAdjacentDay="True" SelectedDates="{Binding VisibleDates, ElementName=sched1, Mode=OneWay}"/>
+                            <c1:C1MultiMonthCalendar x:Name="cal1" Grid.Column="0" Grid.Row="1" SelectionMode="Extended" MonthCount="3" MaxSelectionCount="42"  
+                                       ShowAdjacentDay="True" SelectedDates="{Binding VisibleDates, ElementName=sched1, Mode=OneWay}"
+                                       MonthWidth="310"/>
                             <c1:C1Scheduler x:Name="sched1" Grid.Column="1" Grid.Row="1">
                                 <c1:C1Scheduler.Settings>
                                     <c1:C1SchedulerSettings SetReminder="False" AllowCategoriesMultiSelection="False" AllowCategoriesEditing="False"/>
@@ -118,6 +120,72 @@
                             </c1:C1Scheduler>
                         </Grid>
                     </c1:C1TabItem>
+                    <!--GanttView-->
+                    <c1:C1TabItem Header="GanttView" BorderThickness="0">
+                        <c1:C1GanttView x:Name="ganttPage" Margin="10" StartDate="11/29/2022">
+                            <c1:C1GanttView.Columns>
+                                <c1gantt:TaskPropertyColumn Property="Mode" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="Name" Width="280"/>
+                                <c1gantt:TaskPropertyColumn Property="Duration" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="DurationUnits" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="Start" />
+                                <c1gantt:TaskPropertyColumn Property="Finish" />
+                                <c1gantt:TaskPropertyColumn Property="PercentComplete" />
+                                <c1gantt:TaskPropertyColumn Property="ConstraintType" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="ConstraintDate" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="Predecessors" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="Deadline" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="Calendar" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="ResourceNames" Visible="False"/>
+                                <c1gantt:TaskPropertyColumn Property="Notes" Visible="False"/>
+                            </c1:C1GanttView.Columns>
+                            <c1:C1GanttView.Tasks>
+                                <c1gantt:Task Name="Add GanttView to Themes Sample" Start="11/29/2022" Duration="2" PercentComplete="100">
+                                    <c1gantt:Task.ResourceRefs>
+                                        <c1gantt:ResourceRef ResourceID="1002" />
+                                    </c1gantt:Task.ResourceRefs>
+                                </c1gantt:Task>
+                                <c1gantt:Task Name="Test all themes" Start="11/29/2022" Duration="2" PercentComplete="50">
+                                    <c1gantt:Task.ResourceRefs>
+                                        <c1gantt:ResourceRef ResourceID="1002" />
+                                    </c1gantt:Task.ResourceRefs>
+                                </c1gantt:Task>
+                                <c1gantt:Task Name="Toolbar theme support" Start="12/1/2022" Duration="3" PercentComplete="20">
+                                    <c1gantt:Task.ResourceRefs>
+                                        <c1gantt:ResourceRef ResourceID="1002" />
+                                    </c1gantt:Task.ResourceRefs>
+                                </c1gantt:Task>
+                                <c1gantt:Task Name="GridView and ChartView theme support" Start="12/6/2022" Duration="3" PercentComplete="20">
+                                    <c1gantt:Task.ResourceRefs>
+                                        <c1gantt:ResourceRef ResourceID="1002" />
+                                    </c1gantt:Task.ResourceRefs>
+                                </c1gantt:Task>
+                                <c1gantt:Task Name="Context Menu theme support" Start="12/9/2022" Duration="2" PercentComplete="60">
+                                    <c1gantt:Task.ResourceRefs>
+                                        <c1gantt:ResourceRef ResourceID="1002" />
+                                        <c1gantt:ResourceRef ResourceID="1001" />
+                                    </c1gantt:Task.ResourceRefs>
+                                </c1gantt:Task>
+                                <c1gantt:Task Name="Dialog theme support" Start="12/12/2022" Duration="7" PercentComplete="40">
+                                    <c1gantt:Task.ResourceRefs>
+                                        <c1gantt:ResourceRef ResourceID="1002" />
+                                        <c1gantt:ResourceRef ResourceID="1001" />
+                                    </c1gantt:Task.ResourceRefs>
+                                </c1gantt:Task>
+                                <c1gantt:Task Name="Code review" Start="11/29/2022" Finish="12/21/2022" PercentComplete="10">
+                                    <c1gantt:Task.ResourceRefs>
+                                        <c1gantt:ResourceRef ResourceID="1002" />
+                                        <c1gantt:ResourceRef ResourceID="1001" />
+                                    </c1gantt:Task.ResourceRefs>
+                                </c1gantt:Task>
+                            </c1:C1GanttView.Tasks>
+                            <c1:C1GanttView.TaskResources>
+                                <c1gantt:Resource ID="1001" Name="Chris" Cost="1"/>
+                                <c1gantt:Resource ID="1002" Name="Lee" Cost="1"/>
+                            </c1:C1GanttView.TaskResources>
+                        </c1:C1GanttView>
+                    </c1:C1TabItem>
+
                 </c1:C1TabControl>
             </c1:C1TabItem>
             <c1:C1TabItem Header="{x:Static p:Resources.NavigationLayout}" >
@@ -140,25 +208,50 @@
                                 <ComboBoxItem Content="Item 3"/>
                                 <ComboBoxItem Content="Item 4"/>
                             </ComboBox>
+                            <ListBox Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200">
+                                <ListBoxItem Content="Item 1"/>
+                                <ListBoxItem Content="Item 2"/>
+                                <ListBoxItem Content="Item 3"/>
+                                <ListBoxItem Content="Item 4"/>
+                            </ListBox>
                             <DatePicker Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200"/>
                             <Slider Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200"/>
                             <ProgressBar Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200" Value="50"/>
+                            <Label ToolTip="ToolTip Example" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200">Put mouse here to see ToolTip</Label>
+                            <Menu Margin="10">
+                                <MenuItem Header="Menu">
+                                    <MenuItem Header="Copy" InputGestureText="Ctrl+C"/>
+                                    <MenuItem Header="Cut" InputGestureText="Ctrl+X"/>
+                                    <MenuItem Header="Paste" InputGestureText="Ctrl+V"/>
+                                </MenuItem>
+                            </Menu>
                         </WrapPanel>
                     </TabItem>
-                    <TabItem Header="DataGrid" BorderThickness="0">
+               <!--     <TabItem Header="DataGrid" BorderThickness="0">
                         <DataGrid x:Name="dataGrid" Margin="10" />
-                    </TabItem>
+                    </TabItem>-->
                     <TabItem Header="Calendar" BorderThickness="0">
                         <Calendar Margin="10" HorizontalAlignment="Left"/>
                     </TabItem>
                     <TabItem Header="RichTextBox &amp; ToolBar" BorderThickness="0">
-                        <DockPanel Margin="10" >
+                        <DockPanel>
                             <ToolBar DockPanel.Dock="Top" >
-                                <Button Content="Toolbar button"/>
+                                <Button>
+                                    <TextBlock FontFamily="Segoe UI Symbol" FontSize="16" Text="&#xE105;" />
+                                </Button>
+                                <Button>
+                                    <TextBlock FontFamily="Segoe UI Symbol" FontSize="16" Text="&#xE106;" />
+                                </Button>
+                                <CheckBox Content="CheckBox"/>
+                                <RadioButton Content="RadioButton"/>
                                 <Separator/>
-                                <ToggleButton Content="Toolbar toggle button"/>
+                                <Button Content="Button"/>
+                                <ToggleButton Content="Toggle button"/>
+                                <Separator/>
+                                <Label Content="TextBox: "/>
+                                <TextBox Width="100"/>
                             </ToolBar>
-                            <RichTextBox >
+                            <RichTextBox>
                                 <RichTextBox.Document>
                                     <FlowDocument>
                                         <Paragraph>
@@ -170,9 +263,30 @@
                         </DockPanel>
                     </TabItem>
                     <TabItem Header="Navigation &amp; Layout" BorderThickness="0">
-                        <Expander Header="Expander">
-                            <TextBlock> This is the Expander's content</TextBlock>
-                        </Expander>
+                        <StackPanel>
+                            <Expander Header="Expander" Margin="5" IsExpanded="True">
+                                <TextBlock Margin="5"> This is the Expander content</TextBlock>
+                            </Expander>
+                            <GroupBox Header="Group Box" Margin="5" >
+                                <TextBlock Margin="5"> This is the GroupBox content</TextBlock>
+                            </GroupBox>
+                  <!--          <TextBlock Margin="5">TreeView</TextBlock>
+                            <TreeView Margin="5">
+                                <TreeViewItem Header="Item 1" IsExpanded="True"/>
+                                <TreeViewItem Header="WPF Edition" IsExpanded="True">
+                                    <TreeViewItem Header="Data Managenment" />
+                                    <TreeViewItem Header="Data Visualization" />
+                                    <TreeViewItem Header="Input &amp; Editing" />
+                                    <TreeViewItem Header="Reporting &amp; Documents" />
+                                </TreeViewItem>
+                                <TreeViewItem Header="XapOptimizer" IsExpanded="True">
+                                    <TreeViewItem Header="Pruning" />
+                                    <TreeViewItem Header="Obfuscation" />
+                                    <TreeViewItem Header="Strong Signing" />
+                                    <TreeViewItem Header="Deploy architecture" />
+                                </TreeViewItem>
+                            </TreeView>-->
+                        </StackPanel>
                     </TabItem>
                 </TabControl>
             </c1:C1TabItem>

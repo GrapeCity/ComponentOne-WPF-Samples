@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
 
 namespace InputExplorer
 {
@@ -9,6 +10,10 @@ namespace InputExplorer
     {        
         public MainWindow()
         {
+            //    Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo("ja-JP");
+            FrameworkElement.LanguageProperty.OverrideMetadata(typeof(FrameworkElement),
+               new FrameworkPropertyMetadata(System.Windows.Markup.XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
+
             InitializeComponent();
             this.Title = InputExplorer.Properties.Resources.Title;
         }

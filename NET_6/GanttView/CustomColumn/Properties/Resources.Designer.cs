@@ -59,5 +59,28 @@ namespace CustomColumn.Properties {
                 resourceCulture = value;
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Studio WPF Edition includes professional themes which expand your style possibilities..
+        /// </summary>
+        public static string Tag
+        {
+            get
+            {
+                return ResourceManager.GetString("Tag", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Theme Explorer.
+        /// </summary>
+        public static string Title
+        {
+            get
+            {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+
     }
 }

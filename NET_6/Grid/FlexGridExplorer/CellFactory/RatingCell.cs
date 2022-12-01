@@ -48,6 +48,7 @@ namespace FlexGridExplorer
 
         private void img_TouchDown(object? sender, TouchEventArgs e)
         {
+            e.Handled = true;
             // calculate rating based on the index of the star
             Image img = sender as Image;
             RatingCell cell = img.Parent as RatingCell;

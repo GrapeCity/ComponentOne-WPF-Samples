@@ -16,9 +16,10 @@ namespace TabControlExplorer
         {
             InitializeComponent();
             Tag = Properties.Resources.Overview;
+            c1Tab.TabItemClosing += C1Tab_TabItemClosing;
         }
 
-        private void tabs_TabClosing(object sender, C1.WPF.TabControl.CancelSourceEventArgs e)
+        private void C1Tab_TabItemClosing(object sender, C1.WPF.TabControl.CancelSourceEventArgs e)
         {
             if (!_closing)
             {

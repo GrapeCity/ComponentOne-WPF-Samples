@@ -25,18 +25,18 @@
     <EmbeddedResource Include="Resources\DefaultDocument.pdf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="1.0.20222.106" />
+    <PackageReference Include="C1.DataCollection" Version="1.0.20223.116" />
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20222.263</Version>
+      <Version>6.0.20223.376</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Document">
-      <Version>6.0.20222.263</Version>
+      <Version>6.0.20223.376</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20222.263</Version>
+      <Version>6.0.20223.376</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20222.263</Version>
+      <Version>6.0.20223.376</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

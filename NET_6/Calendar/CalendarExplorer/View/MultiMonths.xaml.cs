@@ -163,12 +163,18 @@ namespace CalendarExplorer
 
         private void DpMaxDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            calendar.MaxDate = (sender as C1DatePicker).SelectedDate.Value;
+            if (sender is C1DatePicker dp)
+            {
+                calendar.MaxDate = dp.SelectedDate == null ? null : dp.SelectedDate.Value;
+            }
         }
 
         private void DpMinDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            calendar.MinDate = (sender as C1DatePicker).SelectedDate.Value;
+            if (sender is C1DatePicker dp)
+            {
+                calendar.MinDate = dp.SelectedDate == null ? null : dp.SelectedDate.Value;
+            }
         }
     }
 }

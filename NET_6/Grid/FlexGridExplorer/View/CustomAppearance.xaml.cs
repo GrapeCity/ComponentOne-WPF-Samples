@@ -38,12 +38,9 @@ namespace FlexGridExplorer
             grid.Columns["City"].AllowGrouping = true;
         }
 
-        private void OnThemeChanged(object sender, SelectionChangedEventArgs e)
+        private void OnThemeChanged(object sender, C1.WPF.Core.PropertyChangedEventArgs<object> e)
         {
-            if (e.AddedItems.Count > 0)
-            {
-                grid.Style = Resources.MergedDictionaries[0][e.AddedItems[0] as string] as Style;
-            }
+            grid.Style = Resources.MergedDictionaries[0][e.NewValue as string] as Style;
         }
     }
 }

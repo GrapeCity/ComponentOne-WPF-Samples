@@ -35,7 +35,7 @@
 
             <c1:C1MultiMonthCalendar Name="calendar1" Grid.Column="0" MaxSelectionCount="42" MonthCount="3" 
                            MinDate="{Binding Start, ElementName=scheduler}" MaxDate="{Binding End, ElementName=scheduler}"
-                           BorderThickness="1" VerticalAlignment="Top" SelectionMode="Extended"
+                           BorderThickness="1" SelectionMode="Extended"
                            SelectedDates="{Binding ElementName=scheduler, Path=VisibleDates, Mode=OneWay}" />
 
             <c1:C1Scheduler x:Name="scheduler" Grid.Column="1"/>

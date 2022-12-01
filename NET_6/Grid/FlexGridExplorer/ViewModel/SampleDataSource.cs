@@ -110,6 +110,10 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.VirtualModeTitle,
                 AppResources.VirtualModeTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new VirtualMode())));
+
+            _allItems.Add(new SampleItem(AppResources.PinColumnTitle,
+                AppResources.PinColumnTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new PinColumn())));
         }
 
         public ObservableCollection<SampleItem> AllItems

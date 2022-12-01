@@ -220,7 +220,7 @@
     <value>Type here to filter</value>
   </data>
   <data name="SelectionMode" xml:space="preserve">
-    <value>Selection Mode</value>
+    <value>Selection Mode:</value>
   </data>
   <data name="ShowCheckBox" xml:space="preserve">
     <value>Show Check Box</value>

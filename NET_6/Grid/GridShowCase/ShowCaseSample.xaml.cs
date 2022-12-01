@@ -3,9 +3,11 @@ using C1.WPF.Grid;
 using C1.WPF.Menu;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace GridShowCase
@@ -88,17 +90,19 @@ namespace GridShowCase
         {
             C1MenuItem item = e.Source as C1MenuItem;
             Point condition = (Point)(item).CommandParameter;
+            var minDiscount = condition.X / 100;
+            var maxDiscount = condition.Y / 100;
             foreach (var row in flexGrid.Rows)
             {
                 if (row.DataItem is Product product)
                 {
                     var discount = product.Discount;
-                    if (discount > condition.X / 100 && discount < condition.Y / 100)
+                    bool satisfied = minDiscount > 0 && maxDiscount < 1
+                        ? discount >= minDiscount && discount <= maxDiscount
+                        : (minDiscount > 0 ? discount > minDiscount : discount < maxDiscount);
+                    if (satisfied)
                     {
-                        if (item.IsChecked)
-                            row.Background = new SolidColorBrush(Colors.LightSkyBlue);
-                        else
-                            row.Background = null;
+                        row.Background = item.IsChecked? new SolidColorBrush(Colors.LightSkyBlue) : null;
                     }
                 }
             }
@@ -120,6 +124,12 @@ namespace GridShowCase
                     MessageBox.Show(exc.ToString());
                 }
             }
+        }
+
+        private void OnRatingTapped(object sender, MouseButtonEventArgs e)
+        {
+            var hitTest = flexGrid.HitTest(e);
+            flexGrid.StartEditing(hitTest.CellRange.Row, hitTest.CellRange.Column, true);
         }
     }
     /// <summary>

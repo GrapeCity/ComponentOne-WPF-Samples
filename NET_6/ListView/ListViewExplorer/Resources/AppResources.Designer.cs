@@ -250,7 +250,7 @@ namespace ListViewExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selection Mode.
+        ///   Looks up a localized string similar to Selection Mode:.
         /// </summary>
         public static string SelectionMode {
             get {

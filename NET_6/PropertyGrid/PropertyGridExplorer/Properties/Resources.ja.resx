@@ -148,4 +148,8 @@
     <value>データオブジェクトのプロパティ</value>
     <comment>Data-Object Properties</comment>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+    <comment>Cancel</comment>
+  </data>	
 </root>

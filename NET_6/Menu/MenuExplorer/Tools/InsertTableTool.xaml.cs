@@ -44,6 +44,7 @@ namespace MenuExplorer.Tools
         public void Show()
         {
             window = new Window();
+            window.Title = "Insert Table";
             window.Content = this;
             window.Foreground = RichTextBox.Foreground;
             window.ShowInTaskbar = false;

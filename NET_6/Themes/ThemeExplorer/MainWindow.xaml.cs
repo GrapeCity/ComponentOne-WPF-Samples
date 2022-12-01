@@ -9,7 +9,7 @@ namespace ThemeExplorer
     {
         public MainWindow()
         {
-            Title = Properties.Resources.ThemeExplorer;
+            Title = Properties.Resources.Title;
             InitializeComponent();
         }
      }

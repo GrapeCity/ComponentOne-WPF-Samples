@@ -6,7 +6,7 @@
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
              xmlns:res="clr-namespace:InputExplorer.Properties"
              mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
-             d:DesignHeight="600" d:DesignWidth="800" >
+             d:DesignHeight="600" d:DesignWidth="800"  >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

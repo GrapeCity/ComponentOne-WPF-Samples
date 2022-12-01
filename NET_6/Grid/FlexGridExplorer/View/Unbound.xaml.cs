@@ -1,5 +1,6 @@
 ﻿using C1.WPF.Grid;
 using FlexGridExplorer.Resources;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -45,7 +46,7 @@ namespace FlexGridExplorer
             ch.Rows.Add(new GridRow());
             for (int c = 0; c < ch.Columns.Count; c++)
             {
-                ch[0, c] = 2017 + c / 4; // year
+                ch[0, c] = DateTime.Now.Year - ((ch.Columns.Count - c - 1) / 4) - 1; // year
                 ch[1, c] = $"Q {c % 4 + 1}"; // quarter
             }
 

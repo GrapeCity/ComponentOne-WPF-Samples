@@ -26,7 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.GridControl">
-      <Version>6.0.20222.263</Version>
+      <Version>6.0.20223.376</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -5,7 +5,6 @@
 
     <Style x:Key="Material" TargetType="c1:FlexGrid">
         <Setter Property="FontFamily" Value="pack://application:,,,/Resources/#Roboto"/>
-        <Setter Property="PopupStyle" Value="{x:Null}"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="BorderBrush" Value="#FFE0E0E0"/>
@@ -33,9 +32,11 @@
                         </Style>
                         <Style TargetType="c1:C1DatePicker">
                             <Setter Property="Background" Value="#121212" />
+                            <Setter Property="CaretBrush" Value="#FFFFFF"/>
                             <Setter Property="PopupStyle">
                                 <Setter.Value>
                                     <Style TargetType="c1:C1Border">
+                                        <Setter Property="Background" Value="#121212" />
                                         <Setter Property="Margin" Value="12"/>
                                         <Setter Property="CornerRadius" Value="0"/>
                                         <Setter Property="Padding" Value="0"/>
@@ -56,6 +57,13 @@
                         </Style>
                         <Style TargetType="c1:C1MenuItem">
                             <Setter Property="HighlightedBackground" Value="#BB86FC" />
+                            <Setter Property="MenuStyle">
+                                <Setter.Value>
+                                    <Style TargetType="c1:C1MenuList">
+                                        <Setter Property="Background" Value="#121212" />
+                                    </Style>
+                                </Setter.Value>
+                            </Setter>
                         </Style>
                     </Style.Resources>
                     <Setter Property="Background" Value="#121212"/>
@@ -102,10 +110,18 @@
                 <Setter Property="Background" Value="#121212" />
                 <Setter Property="Foreground" Value="White" />
             </Style>
+            <Style TargetType="c1:C1TextBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
+            <Style TargetType="c1:C1NumericBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
+            <Style TargetType="c1:C1AutoCompleteTextBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
         </Style.Resources>
     </Style>
     <Style x:Key="BureauBlack" TargetType="c1:FlexGrid" >
-        <Setter Property="PopupStyle" Value="{x:Null}"/>
         <Setter Property="HeadersVisibility" Value="All"/>
         <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
         <Setter Property="GridLinesVisibility" Value="Vertical" />
@@ -158,7 +174,6 @@
         <Setter Property="TopLeftHeaderGridLinesBrush" Value="#ffc4c4c4"/>
     </Style>
     <Style x:Key="C1Blue" TargetType="c1:FlexGrid">
-        <Setter Property="PopupStyle" Value="{x:Null}"/>
         <Setter Property="HeadersVisibility" Value="All"/>
         <Setter Property="GridLinesVisibility" Value="Vertical"/>
         <Setter Property="ColumnHeaderGridLinesVisibility" Value="All"/>
@@ -252,9 +267,11 @@
                         </Style>
                         <Style TargetType="c1:C1DatePicker">
                             <Setter Property="Background" Value="#FF090909" />
+                            <Setter Property="CaretBrush" Value="#FFFFFF"/>
                             <Setter Property="PopupStyle">
                                 <Setter.Value>
                                     <Style TargetType="c1:C1Border">
+                                        <Setter Property="Background" Value="#FF090909" />
                                         <Setter Property="Margin" Value="12"/>
                                         <Setter Property="CornerRadius" Value="0"/>
                                         <Setter Property="Padding" Value="0"/>
@@ -272,6 +289,13 @@
                         </Style>
                         <Style TargetType="c1:C1MenuItem">
                             <Setter Property="HighlightedBackground" Value="#FF3EB3F5" />
+                            <Setter Property="MenuStyle">
+                                <Setter.Value>
+                                    <Style TargetType="c1:C1MenuList">
+                                        <Setter Property="Background" Value="#FF090909" />
+                                    </Style>
+                                </Setter.Value>
+                            </Setter>
                         </Style>
                     </Style.Resources>
                     <Setter Property="CornerRadius" Value="0"/>
@@ -317,6 +341,15 @@
                 <Setter Property="Background" Value="#FF090909" />
                 <Setter Property="Foreground" Value="#FFE2E2E2" />
             </Style>
+            <Style TargetType="c1:C1TextBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
+            <Style TargetType="c1:C1AutoCompleteTextBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
+            <Style TargetType="c1:C1NumericBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
         </Style.Resources>
     </Style>
     <Style x:Key="ExpressionDark" TargetType="c1:FlexGrid" >
@@ -325,13 +358,16 @@
                 <Setter Property="Background" Value="#FF777777" />
                 <Setter Property="Foreground" Value="#FFE2E2E2" />
             </Style>
+            <Style TargetType="c1:C1AutoCompleteTextBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
         </Style.Resources>
         <Setter Property="PopupStyle">
             <Setter.Value>
                 <Style  TargetType="c1:C1Border">
                     <Style.Resources>
                         <Style TargetType="c1:C1MenuList">
-                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Background" Value="#fff0f0f0" />
                         </Style>
                         <Style TargetType="c1:C1CheckBox">
                             <Setter Property="Background" Value="Transparent" />
@@ -412,7 +448,6 @@
                 <Setter Property="Foreground" Value="Black" />
             </Style>
         </Style.Resources>
-        <Setter Property="PopupStyle" Value="{x:Null}"/>
         <Setter Property="HeadersVisibility" Value="All"/>
         <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
         <Setter Property="GridLinesVisibility" Value="Vertical" />
@@ -473,9 +508,11 @@
                         </Style>
                         <Style TargetType="c1:C1DatePicker">
                             <Setter Property="Background" Value="#FF363636" />
+                            <Setter Property="CaretBrush" Value="#FFFFFF"/>
                             <Setter Property="PopupStyle">
                                 <Setter.Value>
                                     <Style TargetType="c1:C1Border">
+                                        <Setter Property="Background" Value="#FF363636" />
                                         <Setter Property="Margin" Value="12"/>
                                         <Setter Property="CornerRadius" Value="0"/>
                                         <Setter Property="Padding" Value="0"/>
@@ -496,6 +533,13 @@
                         </Style>
                         <Style TargetType="c1:C1MenuItem">
                             <Setter Property="HighlightedBackground" Value="#FF8B8B8B" />
+                            <Setter Property="MenuStyle">
+                                <Setter.Value>
+                                    <Style TargetType="c1:C1MenuList">
+                                        <Setter Property="Background" Value="#FF363636" />
+                                    </Style>
+                                </Setter.Value>
+                            </Setter>
                         </Style>
                     </Style.Resources>
                     <Setter Property="Background" Value="#FF363636"/>
@@ -549,6 +593,15 @@
             <Style TargetType="c1:C1CheckBox">
                 <Setter Property="Background" Value="#FF363636" />
                 <Setter Property="Foreground" Value="#FFDADADA" />
+            </Style>
+            <Style TargetType="c1:C1TextBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
+            <Style TargetType="c1:C1AutoCompleteTextBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
+            </Style>
+            <Style TargetType="c1:C1NumericBox">
+                <Setter Property="CaretBrush" Value="#FFFFFF"/>
             </Style>
         </Style.Resources>
     </Style>
@@ -742,7 +795,6 @@
         </Style.Resources>
     </Style>
     <Style x:Key="WhistlerBlue" TargetType="c1:FlexGrid" >
-        <Setter Property="PopupStyle" Value="{x:Null}"/>
         <Setter Property="HeadersVisibility" Value="All"/>
         <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
         <Setter Property="GridLinesVisibility" Value="Vertical" />

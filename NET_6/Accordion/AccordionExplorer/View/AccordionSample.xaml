@@ -33,8 +33,12 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <!-- Control instance -->
-    <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="4">
+    <Grid MaxWidth="1200" MaxHeight="900" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="4" Grid.Row="0">
             <TextBlock Text="ExpandMode" VerticalAlignment="Center" Margin="0 0 4 0"/>
             <c1:C1ComboBox x:Name="ExpandModeComboBox" SelectionChanged="ExpandModeComboBox_SelectionChanged" SelectedIndex="0">
                 <c1:C1ComboBoxItem Content="One" />
@@ -42,8 +46,10 @@
                 <c1:C1ComboBoxItem Content="Any" />
             </c1:C1ComboBox>
             <c1:C1CheckBox Content="Fill" IsChecked="{Binding Fill,ElementName=accordion}" Margin="20 4" VerticalAlignment="Center"/>
+            <TextBlock Text="ExpandDirection" VerticalAlignment="Center" Margin="0 0 4 0"/>
+            <c1:C1ComboBox x:Name="ExpandDirectionComboBox"  SelectionChanged="OnExpandDirectionChanged" SelectedIndex="0"/>
         </StackPanel>
-        <c1:C1Accordion x:Name="accordion" Width="300" Margin="25">
+        <c1:C1Accordion x:Name="accordion" Margin="10" Grid.Row="1">
             <c1:C1Expander Header="Mail" IsExpanded="True">
                 <c1:C1ListView>
                     <c1:ListViewItem>

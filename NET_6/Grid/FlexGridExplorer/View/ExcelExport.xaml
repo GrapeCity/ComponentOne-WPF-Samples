@@ -163,7 +163,7 @@
                 <c1:GridColumn Binding="Active" MinWidth="110"/>
                 <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Date" MinWidth="150" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
                 <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Time" Header="Last Order Time" MinWidth="150" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
-                <c1:GridColumn Binding="OrderTotal" Format="C" MinWidth="110" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
+                <c1:GridNumericColumn Binding="OrderTotal" Format="C" MinWidth="110" Width="*" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right"/>
                 <c1:GridHyperlinkColumn Binding="SampleHyperlink" ContentBinding="SampleHyperlinkContent" MinWidth="150"/>
                 <c1:GridImageColumn Binding="SampledImage" MinWidth="100" />
             </c1:FlexGrid.Columns>

@@ -61,6 +61,15 @@ namespace PropertyGridExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to use custom editors to improve user interface in some specific cases.
         /// </summary>
         public static string CustomEditorsDesc {

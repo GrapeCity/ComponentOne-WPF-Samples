@@ -22,7 +22,7 @@
         </StackPanel>
 
         <c1:C1ListView Grid.Row="1" x:Name="listView" SelectionMode="Single" Margin="10 0 10 10"
-                       ItemHeight="30" SelectedBackground="#99c9ef" ItemTemplate="{StaticResource ItemTemplate}">
+                       SelectedBackground="#99c9ef" ItemTemplate="{StaticResource ItemTemplate}">
             <c1:C1ListView.GroupStyle>
                 <GroupStyle>
                     <GroupStyle.HeaderTemplate>

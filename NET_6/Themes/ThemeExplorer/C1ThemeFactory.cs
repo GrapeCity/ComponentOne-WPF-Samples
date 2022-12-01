@@ -6,6 +6,8 @@ namespace ThemeExplorer.Helpers
     {
         Default,
         System,
+        Material,
+        MaterialDark
     }
 
     public static class C1ThemeFactory
@@ -21,6 +23,12 @@ namespace ThemeExplorer.Helpers
                     break;
                 case C1AvailableThemes.System:
                     theme = new C1ThemeSystem();
+                    break;
+                case C1AvailableThemes.Material:
+                    theme = new C1ThemeMaterial();
+                    break;
+                case C1AvailableThemes.MaterialDark:
+                    theme = new C1ThemeMaterialDark();
                     break;
                 default:
                     break;
