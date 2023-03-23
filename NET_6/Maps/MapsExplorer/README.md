@@ -6,10 +6,11 @@ ____
 Shows the following samples
 
 * Demo
-* Cities
+* Earthquakes
 * Factories
 * GeoRSS
 * Marks
 * KML
 * ShapeFile
 * Grid
+* Airports

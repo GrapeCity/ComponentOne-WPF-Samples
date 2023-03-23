@@ -114,6 +114,10 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.PinColumnTitle,
                 AppResources.PinColumnTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new PinColumn())));
+
+            _allItems.Add(new SampleItem(AppResources.AdvancedCustomCellsTitle,
+                AppResources.AdvancedCustomCellsTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new AdvancedCustomCells())));
         }
 
         public ObservableCollection<SampleItem> AllItems

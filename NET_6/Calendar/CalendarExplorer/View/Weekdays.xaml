@@ -5,5 +5,5 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              mc:Ignorable="av" x:Class="CalendarExplorer.Weekdays" av:DesignWidth="928.973" av:DesignHeight="657.138">
 
-    <c1:C1Calendar x:Name="calendar" MaxHeight="430" MaxWidth="480" Margin="5" BorderBrush="#555555" BorderThickness="0.5" SelectionMode="Extended" MaxSelectionCount="25" />
+    <c1:C1Calendar x:Name="calendar" MaxHeight="430" MaxWidth="480" Margin="5" BorderThickness="1" SelectionMode="Extended" MaxSelectionCount="25" />
 </UserControl>

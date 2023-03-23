@@ -22,6 +22,7 @@ namespace MapsSamples
   public partial class Flicker : UserControl
   {
     DispatcherTimer _timer;
+    string flickrFeed = @"https://api.flickr.com/services/feeds/geo?tags={0}";
 
     public Flicker()
     {
@@ -45,6 +46,7 @@ namespace MapsSamples
           btnLoad.IsEnabled = tb.IsEnabled = true;
           }));
         };
+      vl.UriSource = new Uri(string.Format(flickrFeed, tb.Text));
 
       // shuffle images in z-order
       _timer = new DispatcherTimer() { Interval=TimeSpan.FromSeconds(0.5) };
@@ -74,7 +76,7 @@ namespace MapsSamples
     {
       if (!string.IsNullOrEmpty(tb.Text))
       {
-        string source = string.Format("http://api.flickr.com/services/feeds/geo/{0}", tb.Text);
+        string source = string.Format(flickrFeed, tb.Text);
         if (vl != null)
         {
           _timer.Stop();
@@ -94,13 +96,14 @@ namespace MapsSamples
       {
         ShowMaximizeButton = false,
         ShowMinimizeButton = false,
-        IsResizable = false
+        IsResizable = false,
+        MaxWidth = 420
       };
       Image contImg  = new Image()
       {
         MaxWidth = 400,
         MaxHeight = 400,
-        Stretch = Stretch.None
+        Stretch = Stretch.Uniform
       };
       wnd.Content = contImg;
       ShowImage(wnd, contImg, bdr, "");
@@ -222,13 +225,13 @@ namespace MapsSamples
           string s = content.Value;
           if (!string.IsNullOrEmpty(s))
           {
-            int i1 = s.IndexOf("http://farm");
+            int i1 = s.IndexOf("https://live.staticflickr.com");
             if (i1 >= 0)
             {
               int i2 = s.IndexOf(".jpg", i1);
               if (i2 >= 0)
               {
-                return s.Substring(i1, i2 - i1 + ".jpg".Length);
+                return s.Substring(i1, i2 - i1 + ".jpg".Length).Replace("_m", "_b");
               }
             }
           }

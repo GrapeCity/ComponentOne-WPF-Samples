@@ -4,10 +4,11 @@ Shows samples of the map control.
 
 Shows the following samples
 	- Demo
-	- Cities
+	- Earthquakes
 	- Factories
 	- GeoRSS
 	- Marks
 	- KML
 	- ShapeFile
 	- Grid
+	- Airports

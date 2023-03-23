@@ -111,8 +111,9 @@
                                 <c1:C1ComboBox x:Name="ViewType" VerticalAlignment="Center" SelectedItem="{Binding ViewType, ElementName=sched1}" Margin="2" MinWidth="120"/>
                             </c1:C1ToolStrip>
                             <c1:C1MultiMonthCalendar x:Name="cal1" Grid.Column="0" Grid.Row="1" SelectionMode="Extended" MonthCount="3" MaxSelectionCount="42"  
-                                       ShowAdjacentDay="True" SelectedDates="{Binding VisibleDates, ElementName=sched1, Mode=OneWay}"
-                                       MonthWidth="310"/>
+                                       ShowAdjacentDay="True" MonthWidth="310"
+                                       SelectedDates="{Binding VisibleDates, ElementName=sched1, Mode=OneWay}"
+                                       BoldedDates="{Binding BoldedDates, ElementName=sched1, Mode=OneWay}"/>
                             <c1:C1Scheduler x:Name="sched1" Grid.Column="1" Grid.Row="1">
                                 <c1:C1Scheduler.Settings>
                                     <c1:C1SchedulerSettings SetReminder="False" AllowCategoriesMultiSelection="False" AllowCategoriesEditing="False"/>

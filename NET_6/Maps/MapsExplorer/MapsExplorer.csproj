@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -16,14 +17,15 @@
     <Compile Remove="View\Cities.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove=".gclicx" />
     <None Remove="Resources\2.5_day_depth.kml" />
+    <None Remove="Resources\airports.geojson" />
     <None Remove="Resources\Cities100K.txt" />
     <None Remove="Resources\database.xml" />
     <None Remove="Resources\factory.png" />
     <None Remove="Resources\gdp-ppp.txt" />
     <None Remove="Resources\jp_toku_kuni_pgn.dbf" />
     <None Remove="Resources\jp_toku_kuni_pgn.shp" />
+    <None Remove="Resources\land.geojson" />
     <None Remove="Resources\office.png" />
     <None Remove="Resources\states.dbf" />
     <None Remove="Resources\states.shp" />
@@ -35,12 +37,13 @@
     <Page Remove="View\Cities.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\2.5_day_depth.kml" />
+    <EmbeddedResource Include="Resources\airports.geojson" />
     <EmbeddedResource Include="Resources\Cities100K.txt" />
     <EmbeddedResource Include="Resources\gdp-ppp.txt" />
     <EmbeddedResource Include="Resources\jp_toku_kuni_pgn.dbf" />
     <EmbeddedResource Include="Resources\jp_toku_kuni_pgn.shp" />
+    <EmbeddedResource Include="Resources\land.geojson" />
     <EmbeddedResource Include="Resources\states.dbf" />
     <EmbeddedResource Include="Resources\states.shp" />
     <EmbeddedResource Include="Resources\WorldMap.kmz" />
@@ -69,14 +72,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MapsExplorer.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

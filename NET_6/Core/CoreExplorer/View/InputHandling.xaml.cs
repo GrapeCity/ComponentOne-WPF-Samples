@@ -63,7 +63,7 @@ namespace CoreExplorer
 
         private void OnManipulationStarted(object sender, C1InputEventArgs e)
         {
-            FramePanel.Background = new SolidColorBrush(Colors.LightGray);
+            FramePanel.Background = new SolidColorBrush(Color.FromArgb(255, 250,250,250));
         }
 
         private void OnManipulationCompleted(object sender, C1InputEventArgs e)

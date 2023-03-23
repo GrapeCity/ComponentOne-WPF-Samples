@@ -28,7 +28,7 @@
       <RowDefinition />
     </Grid.RowDefinitions>
     <c1:C1Maps x:Name="maps" Opacity="0.5" Grid.Row="1" BorderBrush="#FF8FB4CC" BorderThickness="3">
-      <c1:C1VectorLayer x:Name="vl" LabelVisibility="Visible" ItemStyle="{StaticResource style}" UriSourceLoaded="vl_UriSourceLoaded" UriSource="http://api.flickr.com/services/feeds/geo/Uruguay/Montevideo" />
+      <c1:C1VectorLayer x:Name="vl" LabelVisibility="Visible" ItemStyle="{StaticResource style}" UriSourceLoaded="vl_UriSourceLoaded" />
     </c1:C1Maps>
     <TextBlock x:Name="txt" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Loading data..." Grid.Row="1" />
 
@@ -40,8 +40,8 @@
     		</LinearGradientBrush>
     	</Border.Background>
 		<StackPanel Orientation="Horizontal">
-	      <TextBlock VerticalAlignment="Center" Margin="3" Text="Enter the place or location:" Foreground="#FFF0F8FE" />
-	      <TextBox Margin="3" x:Name="tb" IsEnabled="False" Text="Uruguay/Montevideo" MinWidth="200" KeyDown="tb_KeyDown" />
+	      <TextBlock VerticalAlignment="Center" Margin="3" Text="Enter the tags:" Foreground="#FFF0F8FE" />
+	      <TextBox Margin="3" x:Name="tb" IsEnabled="False" Text="London" MinWidth="200" KeyDown="tb_KeyDown" />
 	      <Button x:Name="btnLoad" Margin="3" IsEnabled="False" Content="Load" Width="80" Click="Button_Click" />
 	    </StackPanel>
 	</Border>

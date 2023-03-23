@@ -17,6 +17,8 @@ namespace FlexGridExplorer
         private void OnAutoGeneratingColumn(object sender, C1.WPF.Grid.GridAutoGeneratingColumnEventArgs e)
         {
             e.Column.Width = new GridLength(1, GridUnitType.Star);
+            if (e.Property.Name == nameof(City.Country))
+                e.Column.AllowGrouping = true;
         }
     }
 }

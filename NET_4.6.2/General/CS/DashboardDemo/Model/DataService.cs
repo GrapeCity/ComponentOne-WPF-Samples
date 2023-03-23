@@ -24,6 +24,8 @@ using Point = System.Drawing.Point;
 using System.ComponentModel;
 using System.Data.Entity;
 using System.Windows.Data;
+using System.Data.Common;
+using System.Data.Entity.Core;
 #endif
 
 namespace DashboardModel
@@ -199,13 +201,37 @@ namespace DashboardModel
         {
 #if WPF || WinForms || ASP
             string initialPath = Path.Combine(Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory), "InitialData.xml");
+            var conn = dashboardContext.Database.Connection.ConnectionString;
+            var parser = new DbConnectionStringBuilder() { ConnectionString = conn };
+            var dbName = parser["initial catalog"] as string;
+            var userPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string dbPath = Path.Combine(userPath, dbName) + ".mdf";
+            string dbLogPath = Path.Combine(userPath, dbName) + "_log.ldf";
+            bool isDbFileExists = File.Exists(dbPath);
+            bool isDbLifFileExists = File.Exists(dbLogPath);
             bool isExists = dashboardContext.Database.Exists();
-            bool isCompatible = isExists && dashboardContext.Database.CompatibleWithModel(false) && dashboardContext.Products.Count() > 0;
+
+            bool isCompatible = false;
+            try
+            {
+                isCompatible = isExists && dashboardContext.Database.CompatibleWithModel(false) && dashboardContext.Products.Count() > 0;
+            }
+            catch (EntityException)
+            { 
+            }
             if (!isCompatible)
             {
-                if (isExists)
+                if (isExists || isDbFileExists || isDbLifFileExists)
                 {
-                    dashboardContext.Database.Delete();
+                    try
+                    {
+                        dashboardContext.Database.Delete();
+                    }
+                    catch (EntityException)
+                    {
+                    }
+                    File.Delete(dbPath);
+                    File.Delete(dbLogPath);
                     dashboardContext = new DashboardContext();
                 }
                 dashboardContext.Database.Create();

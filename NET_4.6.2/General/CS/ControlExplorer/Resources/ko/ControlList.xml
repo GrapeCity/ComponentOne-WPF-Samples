@@ -713,10 +713,12 @@
         </SubFeatures>
       </Feature>
     </Control>
-    <Control name="지도"
-         assembly="C1.WPF.Maps">
+    <Control name="지도" assembly="C1.WPF.Maps" isNew="true">
       <Feature assemblyName="MapsSamples.4.exe" type="MapsSamples.DemoMaps" source="C1.WPF.Maps\CS\MapsSamples\C1MapsPage.xaml">
         <Description>C1Maps를 사용하면 화면과 지리적 좌표 간에 확대/축소, 이동, 매핑을 원활하게 할 수 있습니다. Microsoft Live Maps 등 다양한 출처의 정보를 표시합니다. 사용자 정의 요소를 지도 위에 겹쳐 놓을 수도 있습니다.</Description>
+      </Feature>
+      <Feature assemblyName="MapsSamples.4.exe" type="MapsSamples.Airports" isNew="true" name="Airports" source="C1.WPF.Maps\CS\MapsSamples\Vectorlayer\Airports.xaml">
+        <Description>This view shows how to import GeoJSON data and display it on the map. The sample loads two GeoJSON files, one to show the land and second for the airport locations.</Description>
       </Feature>
       <Feature assemblyName="MapsSamples.4.exe" type="MapsSamples.DemoMaps" source="C1.WPF.Maps\CS\MapsSamples\C1MapsPage.xaml"
                name="ClearStyle">
@@ -1229,7 +1231,7 @@
         <Description>앱에서 쉽게 Microsoft Word 문서를 만들고 저장할 수 있습니다. Word 문서로 수행할 수 있는 기본 작업을 보여줍니다.</Description>
       </Feature>
     </Control>
-    <Control name="PrintDocument" assembly="C1.WPF.PrintDocument" >
+    <Control name="PrintDocument" assembly="C1.WPF.PrintDocument" isNew="true">
       <Feature name="Generate reports" assemblyName="SimpleReports.exe" type="SimpleReports.CustomReport" source="C1.WPF.PrintDocument\CS\SimpleReports\CustomReport.xaml" isNew="true">
         <Description>
           The sample contains methods that use the PrintDocument classes to create simple reports.

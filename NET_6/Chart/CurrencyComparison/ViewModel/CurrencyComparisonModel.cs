@@ -9,26 +9,9 @@ namespace CurrencyComparison
     class CurrencyComparisonModel
     {
         string _currency = "US Dollars - USD,Euro - EUR, Japanese Yen - JPY, Indian Rupee - INR, Chinese Yuan - CNY,Russian Rouble - RUB, Korean Won - KRW,British Pound - GBP";
-        Dictionary<string, MeasureMode> _dictMeasureMode;
         Dictionary<string, TimeFrame> _dictTimeFrame;
         List<Currency> _currencies;
         List<Color> _chartColors;
-
-        public Dictionary<string, MeasureMode> DictMeasureMode
-        {
-            get
-            {
-                if (_dictMeasureMode == null)
-                {
-                    _dictMeasureMode = new Dictionary<string, MeasureMode>();
-                    _dictMeasureMode.Add("Exchange Rate", MeasureMode.ExchangeRate);
-                    _dictMeasureMode.Add("Percentage Change", MeasureMode.PercentageChange);
-                    _dictMeasureMode.Add("Both", MeasureMode.Both);
-                }
-
-                return _dictMeasureMode;
-            }
-        }
 
         public List<Currency> Currencies
         {

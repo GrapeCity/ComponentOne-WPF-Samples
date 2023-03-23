@@ -7,7 +7,10 @@ namespace ThemeExplorer.Helpers
         Default,
         System,
         Material,
-        MaterialDark
+        MaterialDark,
+        MaterialOrange,
+        MaterialOrangeDark,
+        Custom
     }
 
     public static class C1ThemeFactory
@@ -29,6 +32,17 @@ namespace ThemeExplorer.Helpers
                     break;
                 case C1AvailableThemes.MaterialDark:
                     theme = new C1ThemeMaterialDark();
+                    break;
+                case C1AvailableThemes.Custom:
+                    theme = new CustomTheme();
+                    break;
+                case C1AvailableThemes.MaterialOrange:
+                    // create C1ThemeMaterial with custom overrides for theme colors
+                    theme = new C1ThemeMaterial(typeof(C1ThemeFactory).Assembly, "ThemeExplorer.CustomTheme.MaterialOrange.xaml");
+                    break;
+                case C1AvailableThemes.MaterialOrangeDark:
+                    // create C1ThemeMaterialDark with custom overrides for theme colors
+                    theme = new C1ThemeMaterialDark(typeof(C1ThemeFactory).Assembly, "ThemeExplorer.CustomTheme.MaterialOrangeDark.xaml");
                     break;
                 default:
                     break;

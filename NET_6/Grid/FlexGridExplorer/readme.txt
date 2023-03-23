@@ -36,3 +36,4 @@ Shows the following samples
 	- ExcelExport
 	- VirtualMode
 	- PinColumn
+	- AdvancedCustomCells

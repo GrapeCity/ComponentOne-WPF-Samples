@@ -150,49 +150,4 @@
   <data name="ThemeExplorer" xml:space="preserve">
     <value>Theme Explorer</value>
   </data>
-  <data name="Cell" xml:space="preserve">
-    <value>セル</value>
-  </data>
-  <data name="Document" xml:space="preserve">
-    <value>ドキュメント</value>
-  </data>
-  <data name="Edit" xml:space="preserve">
-    <value>編集</value>
-  </data>
-  <data name="Font" xml:space="preserve">
-    <value>フォント</value>
-  </data>
-  <data name="Home" xml:space="preserve">
-    <value>ホーム</value>
-  </data>
-  <data name="Insert" xml:space="preserve">
-    <value>挿入</value>
-  </data>
-  <data name="LineNumber" xml:space="preserve">
-    <value>行番号</value>
-  </data>
-  <data name="Merge" xml:space="preserve">
-    <value>結合</value>
-  </data>
-  <data name="Paragraph" xml:space="preserve">
-    <value>段落</value>
-  </data>
-  <data name="RowsAndColumns" xml:space="preserve">
-    <value>行および列</value>
-  </data>
-  <data name="Table" xml:space="preserve">
-    <value>テーブル</value>
-  </data>
-  <data name="Tables" xml:space="preserve">
-    <value>テーブル</value>
-  </data>
-  <data name="Tools" xml:space="preserve">
-    <value>ツール</value>
-  </data>
-  <data name="View" xml:space="preserve">
-    <value>表示</value>
-  </data>
-  <data name="Zoom" xml:space="preserve">
-    <value>ズーム</value>
-  </data>
 </root>

@@ -1,6 +1,6 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
+# Visual Studio Version 17
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialChartExplorer", "FinancialChartExplorer.csproj", "{14644A84-952B-4C02-9F33-3BBEA099968B}"
 EndProject
 Global

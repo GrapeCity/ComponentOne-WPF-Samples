@@ -12,30 +12,24 @@
     <Compile Remove="View\OnDemand.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove=".gclicx" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Remove="View\OnDemand.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="C1-ball.ico" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include=".gclicx" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="1.0.20223.116" />
+    <PackageReference Include="C1.DataCollection" Version="1.0.20231.129" />
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -84,5 +78,8 @@
     <Page Update="View\Filtering.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListViewExplorer.gclicx" />
   </ItemGroup>
 </Project>

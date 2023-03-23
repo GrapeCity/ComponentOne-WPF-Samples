@@ -327,14 +327,14 @@ namespace CurrencyComparison
             //cbCurrencies.Text = cbCurrencies.SelectedValue.ToString();
         }
 
-        void HandleMeasureModesSelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
+        void HandleMeasureModesSelectedItemChanged(object sender, EventArgs e)
         {
             isChangeFromLegend = false;
             if (_viewModel.Currencies != null)
             {
                 try
                 {
-                    _measureMode = (MeasureMode)cbMeasureModes.SelectedValue;
+                    _measureMode = (MeasureMode)cbMeasureModes.SelectedIndex;
                     foreach (var currency in _viewModel.Currencies)
                     {
                         switch (_measureMode)

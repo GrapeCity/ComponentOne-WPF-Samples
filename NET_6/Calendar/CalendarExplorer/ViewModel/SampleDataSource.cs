@@ -44,6 +44,12 @@ namespace CalendarExplorer
                     AppResources.WeekSelectionTitle,
                     AppResources.WeekSelectionDescription,
                     new WeekSelection()),
+
+                new SampleItem(
+                    AppResources.CustomSlotsTitle,
+                    AppResources.CustomSlotsTitle,
+                    AppResources.CustomSlotsDescription,
+                    new CustomSlots()),
             };
         }
 

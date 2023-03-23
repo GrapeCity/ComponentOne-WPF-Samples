@@ -13,7 +13,6 @@
     <RootNamespace>GridShowCase</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove=".gclicx" />
     <None Remove="Resources\countries.json" />
     <None Remove="Resources\flags\AE.png" />
     <None Remove="Resources\flags\AF.png" />
@@ -263,7 +262,6 @@
     <None Remove="Resources\Images\Text.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\countries.json" />
   </ItemGroup>
   <ItemGroup>
@@ -535,46 +533,46 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="1.0.20223.116" />
+    <PackageReference Include="C1.DataCollection" Version="1.0.20231.129" />
     <PackageReference Include="C1.WPF.Chart">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
-    <PackageReference Include="C1.WPF.DataCollection" Version="1.0.20223.116" />
+    <PackageReference Include="C1.WPF.DataCollection" Version="1.0.20231.129" />
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DX">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid.Excel">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.GridControl">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
@@ -610,5 +608,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GridShowCase.gclicx" />
   </ItemGroup>
 </Project>

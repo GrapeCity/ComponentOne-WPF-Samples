@@ -15,6 +15,10 @@
             <local:EnumConverter x:Key="enumConverter" />
             <local:MaxWidthConverter x:Key="maxWidthConverter" />
             <local:GroupCheckBoxVisibilityConverter x:Key="groupCheckBoxVisibilityConverter" />
+            <Style TargetType="Chart:C1ComboBox">
+                <Setter Property="IsEditable" Value="False" />
+                <Setter Property="AutoComplete" Value="False" />
+            </Style>
             <DataTemplate x:Key="cbPositionTemplate">
                 <TextBlock>
                     <TextBlock.Inlines>

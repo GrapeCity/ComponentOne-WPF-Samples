@@ -89,7 +89,7 @@
                 </Border>
             </StackPanel>
         </Grid>
-        <c1:C1MultiMonthCalendar x:Name="calendar" Grid.Row="1" Margin="5"
-                        SelectionMode="Multiple" MaxSelectionCount="10"/>
+        <c1:C1MultiMonthCalendar x:Name="calendar" Grid.Row="1" Margin="5" MonthCount="12"
+                        SelectionMode="Multiple" MaxSelectionCount="14"/>
     </Grid>
 </UserControl>

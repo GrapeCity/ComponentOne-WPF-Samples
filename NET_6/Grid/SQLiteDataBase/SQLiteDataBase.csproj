@@ -7,31 +7,25 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove=".gclicx" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include=".gclicx" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20223.116" />
+    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20231.129" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.6" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\AppResources.Designer.cs">
@@ -45,5 +39,8 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLiteDataBase.gclicx" />
   </ItemGroup>
 </Project>

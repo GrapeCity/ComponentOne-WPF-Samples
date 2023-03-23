@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Xml.Linq;
 
@@ -105,13 +106,13 @@ namespace StockChart
             }
 
             // not in cache, get now
-            if(dataStream == null)
+            if (dataStream == null)
             {
-                var fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full";
+                var fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full";
                 var url = string.Format(fmt, symbol);
                 try
                 {
-                    var wc = new System.Net.WebClient();
+                    var wc = new WebClient();
                     dataStream = wc.OpenRead(url);
                     dataCacheStream = fileInfo.CreateText();
                 }
@@ -137,7 +138,7 @@ namespace StockChart
                 }
                 if (onWebError != null)
                     onWebError(msg);
-                else if(dataStream == null)
+                else if (dataStream == null)
                     throw new Exception(msg);
                 if (dataStream == null) return quoteData;
             }
@@ -183,7 +184,7 @@ namespace StockChart
                     }
                 }
             }
-            catch (System.Net.WebException ex)
+            catch (WebException ex)
             {
                 if (onWebError != null)
                 {
@@ -200,7 +201,7 @@ namespace StockChart
                     dataCacheStream.Close();
             }
 
-            if(symbol!="SP")
+            if (symbol != "SP")
                 FillEvents(symbol, quoteData);
 
             quoteData.Reverse();
@@ -228,47 +229,48 @@ namespace StockChart
             var fmt = "https://www.nasdaq.com/feed/rssoutbound?symbol={0}";
             var url = string.Format(fmt, symbol);
 
-            System.Net.ServicePointManager.SecurityProtocol = (System.Net.SecurityProtocolType)3072;
-
             // get content
-            var wc = new System.Net.WebClient();
-            wc.Headers.Add("accept", "*/*");
-
-            using (var stream = wc.OpenRead(url))
+            using (var wc = new WebClient())
             {
-                var doc = new System.Xml.XmlDocument();
-                doc.Load(stream);
+                wc.Headers[HttpRequestHeader.Accept] = "application/xhtml+xml";
+                wc.Headers[HttpRequestHeader.UserAgent] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
 
-                var items = doc.GetElementsByTagName("item");
-                int i = 0;
-                // read each line
-                foreach (System.Xml.XmlNode item in items)
+                using (var stream = wc.OpenRead(url))
                 {
-                    var dt = DateTime.Parse(item["pubDate"].InnerText);
-                    var text = item["title"].InnerText;
+                    var doc = new System.Xml.XmlDocument();
+                    doc.Load(stream);
 
-                    // var quote = qs.FirstOrDefault(q => (q.date - dt).Days == 0);
-                    // note! the event day isn't correct
-                    // we attach each new event to the previous day to spread them more evenly
-                    var quote = qs[i++];
-
-                    if (quote != null)
+                    var items = doc.GetElementsByTagName("item");
+                    int i = 0;
+                    // read each line
+                    foreach (System.Xml.XmlNode item in items)
                     {
-                        if (quote.events != null)
+                        var dt = DateTime.Parse(item["pubDate"].InnerText);
+                        var text = item["title"].InnerText;
+
+                        // var quote = qs.FirstOrDefault(q => (q.date - dt).Days == 0);
+                        // note! the event day isn't correct
+                        // we attach each new event to the previous day to spread them more evenly
+                        var quote = qs[i++];
+
+                        if (quote != null)
                         {
-                            if (quote.events.Length > 0)
+                            if (quote.events != null)
                             {
-                                quote.events += Environment.NewLine;
+                                if (quote.events.Length > 0)
+                                {
+                                    quote.events += Environment.NewLine;
+                                }
+                                quote.events += text;
                             }
-                            quote.events += text;
-                        }
-                        else
-                        {
-                            quote.events = text;
+                            else
+                            {
+                                quote.events = text;
+                            }
                         }
                     }
+
                 }
-               
             }
         }
 

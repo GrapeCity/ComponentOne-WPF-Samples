@@ -87,6 +87,7 @@ namespace FlexChartExplorer
                 Math.Abs(p2.X - p1.X), Math.Abs(p2.Y - p1.Y));
 
             // Draw the reversible frame
+            rc = flexChart.TransformToVisual(reversibleFrameContainer).TransformBounds(rc);
             reversibleFrame.Rect = rc;
         }
 

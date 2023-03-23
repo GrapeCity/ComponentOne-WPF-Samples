@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -8,7 +9,6 @@
     <ApplicationIcon>c1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove=".gclicx" />
     <None Remove="Resources\16X16_Absolute.png" />
     <None Remove="Resources\16X16_DataCoordinates.png" />
     <None Remove="Resources\16X16_Relative.png" />
@@ -26,9 +26,6 @@
     <None Remove="Resources\Square.png" />
     <None Remove="Resources\Text.png" />
     <None Remove="Resources\Triangle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include=".gclicx" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\16X16_Absolute.png">
@@ -97,14 +94,29 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FlexChartShowcase.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="C1.WPF.Chart">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DX">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>6.0.20231.514</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Menu">
+      <Version>6.0.20231.514</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Rendering">
+      <Version>6.0.20231.514</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TabControl">
+      <Version>6.0.20231.514</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

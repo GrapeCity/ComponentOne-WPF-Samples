@@ -54,7 +54,14 @@ namespace GridShowCase
             }
             else
             {
-                colorRectangle.Fill = new SolidColorBrush((Color)System.Windows.Media.ColorConverter.ConvertFromString(colorString));
+                try
+                {
+                    colorRectangle.Fill = new SolidColorBrush((Color)System.Windows.Media.ColorConverter.ConvertFromString(colorString));
+                }
+                catch 
+                {
+                    colorRectangle.Fill = new SolidColorBrush(Colors.Transparent);
+                }
             }
             textBlock.Text = Grid.GetCellText(cellType, row, this);
         }

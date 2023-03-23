@@ -21,18 +21,48 @@ namespace FlexGridExplorer
 
     public class RowHeaderNumbersCellFactory : GridCellFactory
     {
+        bool _useDataIndex, _useZeroBasedIndex;
+
+        public bool UseDataIndex
+        {
+            get
+            {
+                return _useDataIndex;
+            }
+            set
+            {
+                _useDataIndex = value;
+                Grid?.Refresh();
+            }
+        }
+
+        public bool UseZeroBasedIndex
+        {
+            get
+            {
+                return _useZeroBasedIndex;
+            }
+            set
+            {
+                _useZeroBasedIndex = value;
+                Grid?.Refresh();
+            }
+        }
+
+
         public override object GetCellContentType(GridCellType cellType, GridCellRange range)
         {
             if (cellType == GridCellType.RowHeader)
             {
-                return typeof(RowHeaderNumbersCellFactory);
+                if (!UseDataIndex || Grid.Rows[range.Row] is GridBoundRow)
+                    return typeof(RowHeaderNumbersCellFactory);
             }
             return base.GetCellContentType(cellType, range);
         }
 
         public override FrameworkElement CreateCellContent(GridCellType cellType, GridCellRange range, object cellContentType)
         {
-            if (cellType == GridCellType.RowHeader && cellContentType is Type type && type == typeof(RowHeaderNumbersCellFactory))
+            if (cellType == GridCellType.RowHeader && cellContentType as Type == typeof(RowHeaderNumbersCellFactory))
             {
                 return new TextBlock() { Margin = new Thickness(4), VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center };
             }
@@ -43,7 +73,10 @@ namespace FlexGridExplorer
         {
             if (cellType == GridCellType.RowHeader && cellContent is TextBlock textBlock)
             {
-                textBlock.Text = (range.Row + 1).ToString("N0");
+                var index = range.Row;
+                if (UseDataIndex)
+                    index = (Grid.Rows[index]as GridBoundRow).DataIndex;
+                textBlock.Text = (index + (UseZeroBasedIndex ? 0 : 1)).ToString("N0");
             }
             else
             {

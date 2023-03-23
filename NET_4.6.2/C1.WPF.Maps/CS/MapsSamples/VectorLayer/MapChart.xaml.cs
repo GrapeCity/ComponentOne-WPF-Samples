@@ -127,8 +127,8 @@ namespace MapsSamples
           StrokeThickness = 0.5,
           RenderTransform = new TranslateTransform() { Y = 0.5 * sz }
         });
-        sp.Children.Add(new TextBlock() { Height = sz, Text = cv.Value.ToString(),
-          VerticalAlignment = VerticalAlignment.Center,
+        sp.Children.Add(new TextBlock() { Text = cv.Value.ToString(),
+          VerticalAlignment = VerticalAlignment.Center, Margin = new Thickness(2)
         });
         lbi.Content = sp;
         legend.Items.Add(lbi);

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29509.3
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RibbonThemes2013.4", "RibbonThemes2013.4.csproj", "{7746FDFE-27D1-4808-B416-3A32C4D74632}"
 EndProject
@@ -27,5 +27,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71A36CB-8E0F-4189-92DB-0BE015D484FF}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 	EndGlobalSection
 EndGlobal

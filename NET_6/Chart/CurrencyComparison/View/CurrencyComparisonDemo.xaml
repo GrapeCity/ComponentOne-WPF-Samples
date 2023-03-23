@@ -26,7 +26,7 @@
                     <Setter Property="Margin" Value="20 0" />
                     <Setter Property="VerticalContentAlignment" Value="Center" />
                     <Setter Property="IsEditable" Value="False" />
-                    <Setter Property="SelectedBackground" Value="Transparent" />
+                    <Setter Property="AutoComplete" Value="False" />
                 </Style>
                 <Style TargetType="TextBlock">
                     <Setter Property="VerticalAlignment" Value="Center"/>
@@ -35,7 +35,11 @@
             <TextBlock Text="Base Currency:"/>
             <c1:C1ComboBox x:Name="cbCurrencies" ItemsSource="{Binding Currencies}" DisplayMemberPath="DisplayName" SelectedValuePath="Symbol" SelectedItemChanged="HandleCurrenciesSelectedItemChanged" />
             <TextBlock Text="Measure:" />
-            <c1:C1ComboBox x:Name="cbMeasureModes" ItemsSource="{Binding DictMeasureMode}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedItemChanged="HandleMeasureModesSelectedItemChanged"/>
+            <c1:C1ComboBox x:Name="cbMeasureModes" SelectedIndexChanged="HandleMeasureModesSelectedItemChanged" >
+                <c1:C1ComboBoxItem Content="Exchange Rate"/>
+                <c1:C1ComboBoxItem Content="Currency Rate"/>
+                <c1:C1ComboBoxItem Content="Both"/>
+            </c1:C1ComboBox>
             <Image Source="/CurrencyComparison;component/Resources/ImgLegend.png" />
             <TextBlock x:Name="tbPeriod" Margin="20 0"/>
         </StackPanel>

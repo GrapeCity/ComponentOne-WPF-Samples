@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -6,9 +7,6 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove=".gclicx" />
-  </ItemGroup>
   <ItemGroup>
     <Content Include="C1-ball.ico" />
   </ItemGroup>
@@ -46,7 +44,6 @@
     <Resource Include="Resources\manager.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\departments.xml" />
     <EmbeddedResource Include="Resources\employeesDepartment.xml" />
   </ItemGroup>
@@ -105,11 +102,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CoreExplorer.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

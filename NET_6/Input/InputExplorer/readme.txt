@@ -15,3 +15,8 @@ Shows the following controls
 	- C1DatePicker
 	- C1DropDownButton
 	- C1SplitButton
+	- C1RangeSlider
+	- C1MaskedTextBox
+	- C1TagEditor
+	- C1CheckList
+	- C1MultiSelect

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using C1.WPF.Calendar;
@@ -16,6 +18,8 @@ namespace CalendarExplorer
     /// </summary>
     public partial class Overview : UserControl
     {
+        private ObservableCollection<DateTime> _boldDates;
+
         public Overview()
         {
             InitializeComponent();
@@ -64,16 +68,20 @@ namespace CalendarExplorer
             //calendar.DisplayDate = new DateTime(2023, 1, 1);
             calendar.SelectionChanging += Calendar_SelectionChanging;
             calendar.SelectionChanged += Calendar_SelectionChanged;
+
+            _boldDates = new ObservableCollection<DateTime> {DateTime.Today.AddDays(-3), DateTime.Today.AddDays(1) };
+            calendar.BoldedDates = _boldDates;
+
         }
 
         private void Calendar_SelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
         {
-            
+
         }
 
         private void Calendar_SelectionChanging(object sender, CalendarSelectionChangingEventArgs e)
         {
-            
+
         }
 
         private void cbSelectionMode_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
@@ -123,7 +131,7 @@ namespace CalendarExplorer
         private void CbOrientation_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
         {
 
-            var orientation = ((C1ComboBox) sender).SelectedItem;
+            var orientation = ((C1ComboBox)sender).SelectedItem;
 
             if (orientation != null)
             {
@@ -161,7 +169,7 @@ namespace CalendarExplorer
             else
             {
                 calendar.FirstDayOfWeek = null;
-            }    
+            }
         }
 
         private void DpMaxDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)

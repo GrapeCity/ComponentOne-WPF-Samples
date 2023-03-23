@@ -41,17 +41,16 @@
                         <ColumnDefinition Width="15" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <Path x:Name="CollapsedIcon" Data="M0,0 L6,6 L0,12 z" Fill="#FF0C5C81" HorizontalAlignment="Left" Height="10" Width="5" Margin="2,0,0,0" Stretch="Uniform" />
-                    <Path x:Name="ExpandedIcon" Data="M6,0 L6,6 L0,6 z" Opacity="0" Fill="#FF0C5C81" Stretch="Uniform" Height="7" Width="7" HorizontalAlignment="Left"  />
+                    <Path x:Name="CollapsedIcon" Data="M0,0 L6,6 L0,12 z" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Left" Height="10" Width="5" Margin="2,0,0,0" Stretch="Uniform" />
+                    <Path x:Name="ExpandedIcon" Data="M6,0 L6,6 L0,6 z" Opacity="0" Fill="{TemplateBinding Foreground}" Stretch="Uniform" Height="7" Width="7" HorizontalAlignment="Left"  />
                     <!-- CheckBox content -->
                     <ContentPresenter x:Name="Content" Grid.Column="1" 
-                    Content="{TemplateBinding Content}" 
-                    ContentTemplate="{TemplateBinding ContentTemplate}" 
-                    IsHitTestVisible="true"  />
+                        Content="{TemplateBinding Content}" 
+                        ContentTemplate="{TemplateBinding ContentTemplate}" 
+                        IsHitTestVisible="true"  />
                     <!-- Disabled -->
                     <Path x:Name="DisabledVisualElement" Data="M17.25,0.5L17.25,17.25L0.5,17.25z" 
-                    Fill="White" 
-                    Stretch="None" Opacity="0">
+                        Fill="White"  Stretch="None" Opacity="0">
                         <Path.Style>
                             <Style TargetType="Path">
                                 <Setter Property="Width" Value="6"/>
@@ -102,6 +101,7 @@
                                                 </ObjectAnimationUsingKeyFrames>
                                                 <ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="HeaderEditor" />
                                                 <ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="Header"/>
+                                                <ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="ExpandButton"/>
                                             </Storyboard>
                                         </VisualState>
                                         <VisualState x:Name="Unselected" />
@@ -151,34 +151,34 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         <ToggleButton x:Name="ExpandButton"
-                                        Background="Violet" 
-                                        BorderBrush="{TemplateBinding Foreground}" 
-                                        VerticalAlignment="Center" 
-                                        IsThreeState="False" 
-                                        Template="{StaticResource C1TreeViewToggle}" Margin="0"/>
+                                            Background="Violet" 
+                                            BorderBrush="{TemplateBinding Foreground}" 
+                                            VerticalAlignment="Center" 
+                                            IsThreeState="False" Foreground="#FF0C5C81"
+                                            Template="{StaticResource C1TreeViewToggle}" Margin="0"/>
                                         <ContentControl x:Name="Header" Grid.Column="1"
-                                        ContentTemplate="{TemplateBinding HeaderTemplate}"
-                                        FontFamily="{TemplateBinding FontFamily}"
-                                        FontSize="{TemplateBinding FontSize}"
-                                        FontStretch="{TemplateBinding FontStretch}"
-                                        FontStyle="{TemplateBinding FontStyle}"
-                                        FontWeight="{TemplateBinding FontWeight}"
-                                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                        Padding="{TemplateBinding Padding}"
-                                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                        Foreground="#FF0C5C81">
+                                            ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                            FontFamily="{TemplateBinding FontFamily}"
+                                            FontSize="{TemplateBinding FontSize}"
+                                            FontStretch="{TemplateBinding FontStretch}"
+                                            FontStyle="{TemplateBinding FontStyle}"
+                                            FontWeight="{TemplateBinding FontWeight}"
+                                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            Padding="{TemplateBinding Padding}"
+                                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Foreground="#FF0C5C81">
                                         </ContentControl>
                                         <ContentControl x:Name="HeaderEditor" Grid.Column="1" Visibility="Collapsed"
-                                        ContentTemplate="{TemplateBinding EditTemplate}"
-                                        FontFamily="{TemplateBinding FontFamily}"
-                                        FontSize="{TemplateBinding FontSize}"
-                                        FontStretch="{TemplateBinding FontStretch}"
-                                        FontStyle="{TemplateBinding FontStyle}"
-                                        FontWeight="{TemplateBinding FontWeight}"
-                                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                        Padding="{TemplateBinding Padding}"
-                                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                        Foreground="#FF0C5C81" Opacity="0">
+                                            ContentTemplate="{TemplateBinding EditTemplate}"
+                                            FontFamily="{TemplateBinding FontFamily}"
+                                            FontSize="{TemplateBinding FontSize}"
+                                            FontStretch="{TemplateBinding FontStretch}"
+                                            FontStyle="{TemplateBinding FontStyle}"
+                                            FontWeight="{TemplateBinding FontWeight}"
+                                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            Padding="{TemplateBinding Padding}"
+                                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Foreground="#FF0C5C81" Opacity="0">
                                         </ContentControl>
                                     </Grid>
                                     <Grid Grid.Column="1" HorizontalAlignment="Stretch" Background="Transparent"/>

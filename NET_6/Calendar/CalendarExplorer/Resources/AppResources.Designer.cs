@@ -79,6 +79,24 @@ namespace CalendarExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows how to set up C1Calendar using custom CalendarAdapter to have full control over slot rendering..
+        /// </summary>
+        internal static string CustomSlotsDescription {
+            get {
+                return ResourceManager.GetString("CustomSlotsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Slots.
+        /// </summary>
+        internal static string CustomSlotsTitle {
+            get {
+                return ResourceManager.GetString("CustomSlotsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You can change the calendar border, width, height, color, or more....
         /// </summary>
         internal static string CustomUIDescription {

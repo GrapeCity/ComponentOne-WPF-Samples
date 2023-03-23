@@ -172,12 +172,18 @@
     <value>Loading data...</value>
   </data>
   <data name="SearchLabel" xml:space="preserve">
-    <value>Enter the place or location:</value>
+    <value>Enter the tags:</value>
   </data>
   <data name="CannotLoadData" xml:space="preserve">
     <value>Can't load data.</value>
   </data>
   <data name="Load" xml:space="preserve">
     <value>Load</value>
+  </data>
+  <data name="Airports" xml:space="preserve">
+    <value>This view shows how to import GeoJSON data and display it on the map. The sample loads two GeoJSON files, one to show the land and second for the airport locations.</value>
+  </data>
+  <data name="AirportsTitle" xml:space="preserve">
+    <value>Airports</value>
   </data>
 </root>

@@ -81,21 +81,20 @@ namespace ThemeExplorer
             if (themes.SelectedItem != null)
             {
                 theme = C1ThemeFactory.GetTheme((C1AvailableThemes)themes.SelectedItem);
-                if (theme == null)
-                {
-                    // apply default resources
-                    var rd = C1Theme.GetDefaultResources();
-                    C1Theme.ApplyTheme(LayoutRoot, rd);
-                    Foreground = System.Windows.Media.Brushes.Black;
-                    Background = System.Windows.Media.Brushes.White;
-                    CurrentTheme = null;
-                    return;
-                }
+                ClearValue(BackgroundProperty);
+            }
+            if (theme == null)
+            {
+                // apply default resources
+                var rd = C1Theme.GetDefaultResources();
+                C1Theme.ApplyTheme(LayoutRoot, rd);
+                Foreground = System.Windows.Media.Brushes.Black;
+                Background = System.Windows.Media.Brushes.White;
+                CurrentTheme = null;
+                return;
             }
 
-            ClearValue(BackgroundProperty);
             C1Theme.ApplyTheme(LayoutRoot, theme);
-
             CurrentTheme = theme;
         }
         public Theme CurrentTheme

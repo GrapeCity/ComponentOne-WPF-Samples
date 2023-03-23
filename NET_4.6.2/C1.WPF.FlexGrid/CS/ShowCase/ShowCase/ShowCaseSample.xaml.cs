@@ -150,17 +150,19 @@ namespace ShowCase
         {
             MenuItem item = (MenuItem)sender;
             Point condition = (Point)item.CommandParameter;
+            var minDiscount = condition.X;
+            var maxDiscount = condition.Y;
             foreach (var row in flexGrid.Rows)
             {
                 if (row["Discount"] != null)
                 {
                     var discount = Double.Parse(row["Discount"].ToString());
-                    if (discount > condition.X && discount < condition.Y)
+                    bool satisfied = minDiscount > 0 && maxDiscount < 100
+                        ? discount >= minDiscount && discount <= maxDiscount
+                        : (minDiscount > 0 ? discount > minDiscount : discount < maxDiscount);
+                    if (satisfied)
                     {
-                        if (item.IsChecked)
-                            row.Background = new SolidColorBrush(Colors.LightSkyBlue);
-                        else
-                            row.Background = null;
+                        row.Background = item.IsChecked ? new SolidColorBrush(Colors.LightSkyBlue) : null;
                     }
                 }
             }

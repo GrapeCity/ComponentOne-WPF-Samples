@@ -12,7 +12,7 @@
     <Grid>
         <c1:FlexGrid x:Name="grid" HeadersVisibility="All">
             <c1:FlexGrid.CellFactory>
-                <local:RowHeaderNumbersCellFactory />
+                <local:RowHeaderNumbersCellFactory UseDataIndex="True" />
             </c1:FlexGrid.CellFactory>
             <i:Interaction.Behaviors>
                 <c1:SkeletonLoadingBehavior />

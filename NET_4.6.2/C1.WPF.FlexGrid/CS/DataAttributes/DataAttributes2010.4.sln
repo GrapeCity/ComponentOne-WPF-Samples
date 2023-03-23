@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAttributes.4", "DataAttributes\DataAttributes.4.csproj", "{46AC8842-1D30-41F3-9EB1-975507C1BFBF}"
 EndProject
 Global
@@ -53,5 +55,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B301AE60-BB86-4278-B8AE-992F58A82F75}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 	EndGlobalSection
 EndGlobal

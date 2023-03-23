@@ -4,10 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlexViewerExplorer", "FlexViewerExplorer.csproj", "{B2F19BFC-D098-48DD-9BB2-980ED098C13B}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\..\..\..\Shared\Controls\BarCode\XBarcode\XBarcode.projitems*{6ab58d78-ad14-4b14-9ead-51e38864fc59}*SharedItemsImports = 5
-		..\..\..\..\Shared\Controls\Document\Word.Net\Word.Net.projitems*{be54f7c3-e1da-4b03-8863-607143bdcedc}*SharedItemsImports = 5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		GCDebug|Any CPU = GCDebug|Any CPU
@@ -32,5 +28,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {173EED94-8408-4B0B-93C7-23E5D0CD8C09}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\Controls\BarCode\XBarcode\XBarcode.projitems*{6ab58d78-ad14-4b14-9ead-51e38864fc59}*SharedItemsImports = 5
+		..\..\..\..\Shared\Controls\Document\Word.Net\Word.Net.projitems*{be54f7c3-e1da-4b03-8863-607143bdcedc}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

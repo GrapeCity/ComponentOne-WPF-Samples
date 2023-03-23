@@ -41,7 +41,7 @@
         <Border CornerRadius="2" BorderThickness="0" Margin="0,0,0,10" Background="#304756">
             <StackPanel Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" Margin="3" Text="{x:Static res:Resources.SearchLabel}" Foreground="#FFF0F8FE" />
-                <c1:C1TextBox Margin="3" x:Name="tb" IsEnabled="False" Text="Uruguay/Montevideo" MinWidth="200" KeyDown="tb_KeyDown" Foreground="{Binding Foreground, ElementName=maps}"/>
+                <c1:C1TextBox Margin="3" x:Name="tb" IsEnabled="False" Text="London" MinWidth="200" KeyDown="tb_KeyDown" Foreground="{Binding Foreground, ElementName=maps}"/>
                 <c1:C1Button x:Name="btnLoad" Margin="3" IsEnabled="False" Content="Load" Width="80" Click="Button_Click" />
             </StackPanel>
         </Border>

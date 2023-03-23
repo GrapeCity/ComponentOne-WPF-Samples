@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
@@ -6,7 +7,6 @@
     <ApplicationIcon>c1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove=".gclicx" />
     <None Remove="Resources\chart.png" />
     <None Remove="Resources\dataengine.xml" />
     <None Remove="Resources\export.png" />
@@ -28,16 +28,15 @@
     <Content Include="Resources\dataengine.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Resources\nwind.zip" />
     <EmbeddedResource Include="Resources\FlexPivotViews.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.Zip" Version="2.0.20202.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
@@ -111,5 +110,8 @@
     <Page Update="View\GroupRanges.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FlexPivotExplorer.gclicx" />
   </ItemGroup>
 </Project>

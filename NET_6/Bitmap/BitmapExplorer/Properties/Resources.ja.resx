@@ -124,7 +124,7 @@
 Drag the mouse over the picture to crop it. You can also load your own image.</comment>
   </data>
   <data name="CropDemoTitle" xml:space="preserve">
-    <value>Crop</value>
+    <value>トリミング</value>
     <comment>Crop</comment>
   </data>
   <data name="FaceWrapDemoDesc" xml:space="preserve">
@@ -134,7 +134,7 @@ Drag the mouse over the picture to crop it. You can also load your own image.</c
 Drag the mouse over the picture to warp it. You can also load your own image.</comment>
   </data>
   <data name="FaceWrapDemoTitle" xml:space="preserve">
-    <value>FaceWrap</value>
+    <value>画像の歪み</value>
     <comment>FaceWrap</comment>
   </data>
   <data name="TransformDemoDesc" xml:space="preserve">
@@ -142,7 +142,7 @@ Drag the mouse over the picture to warp it. You can also load your own image.</c
     <comment>Allows various transformations of a bitmap image, such as cropping, scaling, rotation, and flipping.</comment>
   </data>
   <data name="TransformDemoTitle" xml:space="preserve">
-    <value>Transform</value>
+    <value>変換</value>
     <comment>Transform</comment>
   </data>
   <data name="Title" xml:space="preserve">

@@ -24,7 +24,7 @@ namespace CalendarExplorer
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            var date = (DateTime) (sender as Button).DataContext;
+            var date = (DateTime)(sender as Button).DataContext;
 
             LocalDataStorage.Note(date);
 

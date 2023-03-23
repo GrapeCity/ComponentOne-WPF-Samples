@@ -78,6 +78,11 @@ namespace FlexGridExplorer
 
     public class CustomCellFactory : GridCellFactory
     {
+        public CustomCellFactory()
+        {
+            AllowCustomCells = true;
+        }
+
         public override void PrepareCell(GridCellType cellType, GridCellRange range, GridCellView cell, Thickness internalBorders)
         {
             base.PrepareCell(cellType, range, cell, internalBorders);

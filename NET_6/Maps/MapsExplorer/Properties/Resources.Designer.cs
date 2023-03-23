@@ -61,6 +61,24 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This view shows how to import GeoJSON data and display it on the map. The sample loads two GeoJSON files, one to show the land and second for the airport locations..
+        /// </summary>
+        public static string Airports {
+            get {
+                return ResourceManager.GetString("Airports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Airports.
+        /// </summary>
+        public static string AirportsTitle {
+            get {
+                return ResourceManager.GetString("AirportsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can&apos;t load data..
         /// </summary>
         public static string CannotLoadData {
@@ -232,7 +250,7 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter the place or location:.
+        ///   Looks up a localized string similar to Enter the tags:.
         /// </summary>
         public static string SearchLabel {
             get {

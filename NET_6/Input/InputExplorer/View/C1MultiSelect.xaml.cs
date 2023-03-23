@@ -30,16 +30,16 @@ namespace InputExplorer
             SelectedItemsViewer.ItemsSource = MultiSelect.SelectedItems.ToList();
             
             var addItems = new List<object>();
-            foreach (int index in e.AddedItems)
+            foreach (var item in e.AddedItems)
             {
-                addItems.Add(MultiSelect.Items[index].Content);
+                addItems.Add(item);
             }
             AddItemsViewer.ItemsSource = addItems;
             
             var removeItems = new List<object>();
-            foreach (int index in e.RemovedItems)
+            foreach (var item in e.RemovedItems)
             {
-                removeItems.Add(MultiSelect.Items[index].Content);
+                removeItems.Add(item);
             }
             RemoveItemsViewer.ItemsSource = removeItems;
         }

@@ -14,10 +14,6 @@ namespace MapsExplorer
                 new Lazy<System.Windows.Controls.Control>(() => new DemoMaps())));
             _ = _allItems[0].Sample.Value; //Force first page is loaded immediately
             
-            //_allItems.Add(new SampleItem("Cities",
-            //    "Cities",
-            //    new Lazy<System.Windows.Controls.Control>(() => new Cities())));
-            
             _allItems.Add(new SampleItem(Properties.Resources.EarthquakesTitle,
                 Properties.Resources.EarthquakesTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new EarthQuakes())));
@@ -45,6 +41,11 @@ namespace MapsExplorer
             _allItems.Add(new SampleItem(Properties.Resources.GridTitle,
                 Properties.Resources.GridTitle,
                 new Lazy<System.Windows.Controls.Control>(() => new Grid())));
+
+            _allItems.Add(new SampleItem(Properties.Resources.AirportsTitle,
+                Properties.Resources.AirportsTitle,
+                new Lazy<System.Windows.Controls.Control>(() => new Airports())));
+
         }
 
         public ObservableCollection<SampleItem> AllItems

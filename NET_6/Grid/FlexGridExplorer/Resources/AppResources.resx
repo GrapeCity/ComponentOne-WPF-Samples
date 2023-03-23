@@ -457,4 +457,10 @@
   <data name="UnpinColumn" xml:space="preserve">
     <value>Unpin Column</value>
   </data>
+  <data name="AdvancedCustomCellsDescription" xml:space="preserve">
+    <value>This sample shows how to use 2D rendering inside each cell to provide drawn content.</value>
+  </data>
+  <data name="AdvancedCustomCellsTitle" xml:space="preserve">
+    <value>Advanced custom cells</value>
+  </data>
 </root>

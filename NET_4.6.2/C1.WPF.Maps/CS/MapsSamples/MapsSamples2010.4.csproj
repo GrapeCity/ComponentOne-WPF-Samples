@@ -136,6 +136,9 @@
     <Compile Include="VectorLayer\Flicker.xaml.cs">
       <DependentUpon>Flicker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VectorLayer\Airports.xaml.cs">
+      <DependentUpon>Airports.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VectorLayer\Grid.xaml.cs">
       <DependentUpon>Grid.xaml</DependentUpon>
     </Compile>
@@ -168,6 +171,8 @@
     <EmbeddedResource Include="Resources\jp_toku_kuni_pgn.dbf" />
     <EmbeddedResource Include="Resources\jp_toku_kuni_pgn.shp" />
     <EmbeddedResource Include="Resources\2.5_day_depth.kml" />
+    <EmbeddedResource Include="Resources\airports.geojson" />
+    <EmbeddedResource Include="Resources\land.geojson" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -216,6 +221,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="VectorLayer\Flicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VectorLayer\Airports.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

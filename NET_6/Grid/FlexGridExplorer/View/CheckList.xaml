@@ -9,7 +9,7 @@
       d:DesignHeight="450" d:DesignWidth="800">
     <c1:FlexGrid x:Name="grid" AutoGeneratingColumn="OnAutoGeneratingColumn">
         <e:Interaction.Behaviors>
-            <c1:CheckListBehavior SelectionBinding="Selected"/>
+            <c1:CheckListBehavior/>
         </e:Interaction.Behaviors>
     </c1:FlexGrid>
 </UserControl>

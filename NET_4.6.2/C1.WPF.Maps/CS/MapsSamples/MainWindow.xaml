@@ -29,6 +29,9 @@
             <c1:C1TabItem Header="Grid">
                 <local:Grid />
             </c1:C1TabItem>
+            <c1:C1TabItem Header="Airports">
+                <local:Airports />
+            </c1:C1TabItem>
         </c1:C1TabControl>
     </Grid>
 </Window>

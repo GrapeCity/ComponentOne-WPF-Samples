@@ -90,7 +90,7 @@
         </Border>
 
         <c1:C1ListView x:Name="C1ListView" Grid.Row="2" SelectionMode="Extended" ItemTemplate="{StaticResource StudentTemplate}"
-                       ZoomMode="Enabled" Orientation="Vertical" ShowCheckBoxes="True"/>
+                       ZoomMode="Enabled" Orientation="Vertical" ShowCheckBoxes="True" />
 
     </Grid>
 </UserControl>

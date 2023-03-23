@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
@@ -12,11 +13,7 @@
     <RootNamespace>Printing</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove=".gclicx" />
     <None Remove="star.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include=".gclicx" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="star.png" />
@@ -44,23 +41,26 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Printing.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>6.0.20223.376</Version>
+      <Version>6.0.20231.514</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

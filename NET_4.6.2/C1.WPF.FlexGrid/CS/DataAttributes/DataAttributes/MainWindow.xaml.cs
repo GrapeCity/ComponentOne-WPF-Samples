@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -24,7 +24,7 @@ namespace DataAttributes
             InitializeComponent();
             // create a list of customers
             // NOTE: the properties on the Customer object have data attributes.
-            List<Customer> list = new List<Customer>();
+            var list = new ObservableCollection<Customer>();
             for (int i = 0; i < 20; i++)
             {
                 var c = new Customer();

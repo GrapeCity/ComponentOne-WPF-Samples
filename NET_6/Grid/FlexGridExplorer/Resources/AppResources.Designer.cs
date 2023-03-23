@@ -70,6 +70,24 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This sample shows how to use 2D rendering inside each cell to provide drawn content..
+        /// </summary>
+        public static string AdvancedCustomCellsDescription {
+            get {
+                return ResourceManager.GetString("AdvancedCustomCellsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced custom cells.
+        /// </summary>
+        public static string AdvancedCustomCellsTitle {
+            get {
+                return ResourceManager.GetString("AdvancedCustomCellsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to use filter controls in advanced scenarios..
         /// </summary>
         public static string AdvancedFilteringDesc {

@@ -133,11 +133,11 @@ namespace Spreadsheet
             {
                 cell.BorderThickness = new Thickness(0);
             }
-            if (range.Row == 0 && (Grid.Selection?.ContainsColumn(range.Column) ?? false))
+            if (range.Row == 0 && Grid.GetSelectedTimes(new GridControlRange(-1, range.Column)) > 0)
             {
                 cell.Style = ColumnHeaderSelectedStyle;
             }
-            else if (range.Column == 0 && (Grid.Selection?.ContainsRow(range.Row) ?? false))
+            else if (range.Column == 0 && Grid.GetSelectedTimes(new GridControlRange(range.Row, -1)) > 0)
             {
                 cell.Style = RowHeaderSelectedStyle;
             }

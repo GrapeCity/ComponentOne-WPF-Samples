@@ -1,6 +1,7 @@
 ﻿using C1.WPF.Grid;
 using FlexGridExplorer.Resources;
 using System;
+using System.Linq;
 using System.Windows.Controls;
 
 namespace FlexGridExplorer
@@ -14,11 +15,11 @@ namespace FlexGridExplorer
         {
             InitializeComponent();
             Tag = AppResources.SelectionModesDescription;
-            foreach (var value in Enum.GetValues(typeof(GridSelectionMode)))
+            foreach (var value in Enum.GetValues<GridSelectionMode>())
             {
                 selectionMode.Items.Add(value.ToString());
             }
-            selectionMode.SelectedItem = GridSelectionMode.CellRange.ToString();
+            selectionMode.SelectedItem = GridSelectionMode.MultiRange.ToString();
             lblShowMarquee.Text = AppResources.ShowMarquee;
 
             var data = Customer.GetCustomerList(100);
@@ -26,19 +27,17 @@ namespace FlexGridExplorer
             grid.MinColumnWidth = 85;
         }
 
-        private void grid_SelectionChanging(object sender, GridCellRangeEventArgs e)
+        private void grid_SelectionChanging(object sender, GridSelectionEventArgs e)
         {
             // e.Cancel = true;
         }
 
-        private void grid_SelectionChanged(object sender, GridCellRangeEventArgs e)
+        private void grid_SelectionChanged(object sender, GridSelectionEventArgs e)
         {
             if (e.CellRange != null && e.CellRange.Row != -1)
             {
-                int rowsSelected = Math.Abs(e.CellRange.Row2 - e.CellRange.Row) + 1;
-                int colsSelected = Math.Abs(e.CellRange.Column2 - e.CellRange.Column) + 1;
-
-                lblSelection.Text = (rowsSelected * colsSelected).ToString() + " " + AppResources.CellsSelectedText;
+                var cells = string.Join(", ", e.Cells);
+                lblSelection.Text = e.Cells.Count.ToString() + " " + AppResources.CellsSelectedText;
             }
             else
             {

@@ -86,6 +86,7 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx"/>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>

@@ -77,6 +77,7 @@ namespace PropertyGridExplorer
             }
         }
 
+        [Display(Description ="Enter first name")]
         public string FirstName
         {
             get { return _first; }
@@ -91,6 +92,7 @@ namespace PropertyGridExplorer
             }
         }
 
+        [Display(Description = "Enter last name")]
         public string LastName
         {
             get { return _last; }

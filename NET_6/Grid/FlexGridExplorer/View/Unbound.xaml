@@ -7,5 +7,5 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
 
-    <c1:FlexGrid x:Name="grid" HeadersVisibility="All" SelectionMode="CellRange" GridLinesVisibility="None" RowHeaderGridLinesVisibility="Vertical" ColumnHeaderSelectedBackground="#FFF8F8F8" RowHeaderSelectedBackground="#FFF8F8F8"/>
+    <c1:FlexGrid x:Name="grid" HeadersVisibility="All" SelectionMode="MultiRange" GridLinesVisibility="None" RowHeaderGridLinesVisibility="Vertical" ColumnHeaderSelectedBackground="#08000000" RowHeaderSelectedBackground="#08000000"/>
 </UserControl>
