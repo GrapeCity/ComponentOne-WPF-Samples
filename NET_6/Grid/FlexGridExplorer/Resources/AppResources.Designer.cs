@@ -106,6 +106,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All customers.
+        /// </summary>
+        public static string AllCustomersLabel {
+            get {
+                return ResourceManager.GetString("AllCustomersLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply.
         /// </summary>
         public static string Apply {
@@ -147,6 +156,17 @@ namespace FlexGridExplorer.Resources {
         public static string CellsSelectedText {
             get {
                 return ResourceManager.GetString("CellsSelectedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} rows added
+        ///{1} rows modified
+        ///{2} rows deleted.
+        /// </summary>
+        public static string ChangesInDataTableMessage {
+            get {
+                return ResourceManager.GetString("ChangesInDataTableMessage", resourceCulture);
             }
         }
         
@@ -358,6 +378,24 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to When FlexGrid is bound to Microsoft DataTable it supports all the features just by setting it in the ItemsSource. You can see editing, adding, removing, filtering, sorting and validation in action..
+        /// </summary>
+        public static string DataTableSampleDescription {
+            get {
+                return ResourceManager.GetString("DataTableSampleDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataTable.
+        /// </summary>
+        public static string DataTableSampleTitle {
+            get {
+                return ResourceManager.GetString("DataTableSampleTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DetailsVisibiltyMode.
         /// </summary>
         public static string DetailsVisibiltyMode {
@@ -453,6 +491,24 @@ namespace FlexGridExplorer.Resources {
         public static string EmptyListText {
             get {
                 return ResourceManager.GetString("EmptyListText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ErrorIconTemplate.
+        /// </summary>
+        public static string ErrorIconTemplate {
+            get {
+                return ResourceManager.GetString("ErrorIconTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ErrorStyle.
+        /// </summary>
+        public static string ErrorStyle {
+            get {
+                return ResourceManager.GetString("ErrorStyle", resourceCulture);
             }
         }
         
@@ -754,6 +810,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There are no changes in the table yet, Please edit the cells by pressing F2 or double click, or remove rows by pressing delete or use new row to add items..
+        /// </summary>
+        public static string NoChangesEditDataTableFirstMessage {
+            get {
+                return ResourceManager.GetString("NoChangesEditDataTableFirstMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string OK {
@@ -880,6 +945,42 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please select customers on the grid at the left..
+        /// </summary>
+        public static string SelectCustomersMessage {
+            get {
+                return ResourceManager.GetString("SelectCustomersMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selected customers.
+        /// </summary>
+        public static string SelectedCustomersLabel {
+            get {
+                return ResourceManager.GetString("SelectedCustomersLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to bind the SelectedItems of one grid to another control.
+        /// </summary>
+        public static string SelectedItemsDescription {
+            get {
+                return ResourceManager.GetString("SelectedItemsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SelectedItems.
+        /// </summary>
+        public static string SelectedItemsTitle {
+            get {
+                return ResourceManager.GetString("SelectedItemsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows the various cell selection modes..
         /// </summary>
         public static string SelectionModesDescription {
@@ -903,6 +1004,24 @@ namespace FlexGridExplorer.Resources {
         public static string SelectRowMessage {
             get {
                 return ResourceManager.GetString("SelectRowMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show changes in the table.
+        /// </summary>
+        public static string ShowChangesInTableLabel {
+            get {
+                return ResourceManager.GetString("ShowChangesInTableLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ShowErrors.
+        /// </summary>
+        public static string ShowErrors {
+            get {
+                return ResourceManager.GetString("ShowErrors", resourceCulture);
             }
         }
         
@@ -1038,6 +1157,24 @@ namespace FlexGridExplorer.Resources {
         public static string UnpinColumn {
             get {
                 return ResourceManager.GetString("UnpinColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show how to display and style validation.
+        /// </summary>
+        public static string ValidationDescription {
+            get {
+                return ResourceManager.GetString("ValidationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation.
+        /// </summary>
+        public static string ValidationTitle {
+            get {
+                return ResourceManager.GetString("ValidationTitle", resourceCulture);
             }
         }
         

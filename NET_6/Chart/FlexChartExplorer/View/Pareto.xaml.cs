@@ -57,7 +57,7 @@ namespace FlexChartExplorer
             var sum = histogramYs.Sum();
             double accumulatedValue = 0;
             var lineData = new List<Point>();
-            for (int i = 0; i < histogramYs.Count(); i++)
+            for (int i = 0; i < histogramYs.Length; i++)
             {
                 accumulatedValue += histogramYs[i];
                 lineData.Add(new Point

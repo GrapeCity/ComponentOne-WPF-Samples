@@ -61,6 +61,24 @@ namespace ColorPickerExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A series of controls with different levels of features and complexitiy to modify Brushes.
+        /// </summary>
+        internal static string BrushesDescription {
+            get {
+                return ResourceManager.GetString("BrushesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brushes.
+        /// </summary>
+        internal static string BrushesTitle {
+            get {
+                return ResourceManager.GetString("BrushesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Overview.
         /// </summary>
         internal static string OverviewDescription {

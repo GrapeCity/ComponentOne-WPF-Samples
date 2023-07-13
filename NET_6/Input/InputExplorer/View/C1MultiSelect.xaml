@@ -14,12 +14,12 @@
         </Grid.ColumnDefinitions>
         
         <c1:C1MultiSelect x:Name="MultiSelect" VerticalAlignment="Top" Margin="5" DisplayMemberPath="Country" SelectedValuePath="Age"
-                              MaxDropDownHeight="150" ItemsSource="{Binding Customers}"
+                              MaxDropDownHeight="300" ItemsSource="{Binding Customers}"
                               SelectionChanged="OnSelectionChanged" Placeholder="Country" Height="100" />
 
         <c1:C1TabControl UnselectedContentMode="Collapsed" Grid.Column="2">
             <c1:C1TabItem Header="{x:Static res:Resources.PropertiesTabHeader}">
-                <c1:C1PropertyGrid SelectedObject="{Binding ElementName=MultiSelect}" AddingPropertyBox="C1PropertyGrid_AddingPropertyBox" DefaultCategoryName="Miscellaneous" />
+                <c1:C1PropertyGrid SelectedObject="{Binding ElementName=MultiSelect}" AutoGeneratingPropertyAttribute="C1PropertyGrid_AddingPropertyBox" ShowResetButton="True" />
             </c1:C1TabItem>
             <c1:C1TabItem Header="{x:Static res:Resources.MethodsTabHeader}">
                 <Grid VerticalAlignment="Top">

@@ -75,6 +75,7 @@ namespace FlexGridExplorer
             styles = styles.OrderBy(x => x).ToList();
             Themes.ItemsSource = styles;
             Themes.SelectedIndex = styles.IndexOf("Classic");
+            Themes.IsEditable = false;
 
             #endregion
 

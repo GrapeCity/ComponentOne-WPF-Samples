@@ -108,9 +108,9 @@ namespace GaugesDemo
             }
         }
 
-        public int DirectionSelectedIndex { get { return _directionSelectedIndex; } set { _directionSelectedIndex = value; RaisePropertyChanged("DirectionSelectedIndex"); RaisePropertyChanged("Direction"); RaisePropertyChanged("DirectionOrientation"); RaisePropertyChanged("DirectionVerticalOptions"); RaisePropertyChanged("DirectionHorizontalOptions"); } }
+        public int DirectionSelectedIndex { get { return _directionSelectedIndex < 0 ? 0 : _directionSelectedIndex; } set { _directionSelectedIndex = value; RaisePropertyChanged("DirectionSelectedIndex"); RaisePropertyChanged("Direction"); RaisePropertyChanged("DirectionOrientation"); RaisePropertyChanged("DirectionVerticalOptions"); RaisePropertyChanged("DirectionHorizontalOptions"); } }
 
-        public int ShowTextSelectedIndex { get { return _showTextSelectedIndex; } set { _showTextSelectedIndex = value; RaisePropertyChanged("ShowTextSelectedIndex"); RaisePropertyChanged("ShowTextViaSelectedIndex"); } }
+        public int ShowTextSelectedIndex { get { return _showTextSelectedIndex < 0 ? 0 : _showTextSelectedIndex; } set { _showTextSelectedIndex = value; RaisePropertyChanged("ShowTextSelectedIndex"); RaisePropertyChanged("ShowTextViaSelectedIndex"); } }
 
         public int ValueSelectedIndex
         {

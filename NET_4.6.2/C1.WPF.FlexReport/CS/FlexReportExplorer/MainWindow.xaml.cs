@@ -123,29 +123,27 @@ namespace C1FlexReportExplorer
         #endregion
 
         #region EventHandler
-        private void MyTreeView_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void myTreeView_ItemClick(object sender, SourcedEventArgs e)
         {
+            var item = e.Source as C1TreeViewItem;
+            if (item == null)
+                return;
             try
             {
 
-                if (myTreeView.ItemContainerGenerator.Status == System.Windows.Controls.Primitives.GeneratorStatus.ContainersGenerated && myTreeView.SelectedItem.DataContext is Categories)
+                if (myTreeView.ItemContainerGenerator.Status == System.Windows.Controls.Primitives.GeneratorStatus.ContainersGenerated && item.DataContext is Categories)
                 {
-
-                    ExpandCollapseTreeView((myTreeView.SelectedItem.DataContext as Categories));
-                    myTreeView.SelectedItem.IsExpanded = !myTreeView.SelectedItem.IsExpanded;
-                    (myTreeView.SelectedItem.DataContext as Categories).ExpenderImg = ((myTreeView.SelectedItem.DataContext as Categories).ExpenderImg == @"Resources/expand.png") ? @"Resources/collapse.png" : @"Resources/expand.png";
-
-
+                    ExpandCollapseTreeView((item.DataContext as Categories));
+                    (item.DataContext as Categories).ExpenderImg = ((item.DataContext as Categories).ExpenderImg == @"Resources/expand.png") ? @"Resources/collapse.png" : @"Resources/expand.png";
                 }
                 else
                 {
-                    Reports rpt = (myTreeView.SelectedItem.DataContext as Reports);
+                    Reports rpt = (item.DataContext as Reports);
                     OpenFile(rpt.FileName, rpt.RptName);
                 }
             }
             catch (Exception)
             {
-
             }
         }
         private void MyTreeView_Loaded(object sender, RoutedEventArgs e)
@@ -180,5 +178,6 @@ namespace C1FlexReportExplorer
             dockControl.Width = 25;
         }
         #endregion
+
     }
 }

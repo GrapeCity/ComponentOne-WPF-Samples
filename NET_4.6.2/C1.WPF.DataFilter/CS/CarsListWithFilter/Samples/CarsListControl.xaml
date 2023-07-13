@@ -40,7 +40,7 @@
 
             <c1:C1SimplifiedTabItem Header="Themes">
                 <c1:C1SimplifiedRibbonGroup Header="Themes">
-                    <c1:C1ComboBox x:Name="cmbTheme" Height="30" IsEditable="False" SelectedItemChanged="cmbTheme_SelectedItemChanged" Width="150" Margin="5" />
+                    <c1:C1ComboBox x:Name="cmbTheme" Height="30" IsEditable="False" AutoComplete="False" SelectedItemChanged="cmbTheme_SelectedItemChanged" Width="150" Margin="5" />
                 </c1:C1SimplifiedRibbonGroup>
             </c1:C1SimplifiedTabItem>
         </c1:C1SimplifiedRibbon>

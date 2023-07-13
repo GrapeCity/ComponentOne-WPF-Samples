@@ -13,13 +13,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Gauge">
-      <Version>6.0.20231.514-beta</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Rendering">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

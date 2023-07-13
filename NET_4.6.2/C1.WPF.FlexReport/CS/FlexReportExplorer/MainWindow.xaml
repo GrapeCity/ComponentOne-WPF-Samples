@@ -51,9 +51,7 @@
                                 </Button>
 
                                 <c1:C1TreeView Grid.Row="1" x:Name="myTreeView" 
-                                               Grid.ColumnSpan="2"
-                       MouseLeftButtonUp="MyTreeView_MouseLeftButtonUp"
-                       Loaded="MyTreeView_Loaded" Margin="0,0,26,0">
+                                               Grid.ColumnSpan="2" ItemClick="myTreeView_ItemClick" Loaded="MyTreeView_Loaded" Margin="0,0,26,0">
                                     <c1:C1TreeView.ItemContainerStyle>
                                         <Style TargetType="{x:Type c1:C1TreeViewItem}">
                                             <Setter Property="BorderThickness" Value="1.5"/>

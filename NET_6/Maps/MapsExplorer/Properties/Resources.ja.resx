@@ -197,4 +197,12 @@
   <data name="Load" xml:space="preserve">
     <value>読み込み</value>
   </data>
+  <data name="Airports" xml:space="preserve">
+    <value>このビューは、GeoJSON データをインポートしてマップに表示する方法を示しています。サンプルは２つの GeoJSON ファイルを読み込みます。１つは土地を表示し、もう１つは空港の場所を表示します。</value>
+    <comment>This view shows how to import GeoJSON data and display it on the map. The sample loads two GeoJSON files, one to show the land and second for the airport locations.</comment>
+  </data>
+  <data name="AirportsTitle" xml:space="preserve">
+    <value>空港</value>
+    <comment>Airports</comment>
+  </data>
 </root>

@@ -1,8 +1,8 @@
-﻿<UserControl mc:Ignorable="d" x:Class="PropertyGridExplorer.Demo" d:DesignHeight="304" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<UserControl mc:Ignorable="d" x:Class="PropertyGridExplorer.Demo" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="621.701" d:DesignHeight="429.907">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -29,21 +29,28 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <StackPanel x:Name="stackControl1">
-                <c1:C1CheckBox HorizontalAlignment="Left" Click="CheckBox_Click">
-                    <ContentControl x:Name="contentControl" Content="Content" Margin="0,10" Width="150" Height="40" d:LayoutOverrides="Width, Height" Background="#fff6aac9" Style="{DynamicResource ContentControlStyle1}" />
+                <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
+                    <ContentControl x:Name="contentControl" Content="Content" Width="150" Height="40" Background="#fff6aac9" Style="{DynamicResource ContentControlStyle1}" />
                 </c1:C1CheckBox>
-                <c1:C1CheckBox Click="CheckBox_Click">
-                    <TextBox x:Name="txtbox" TextWrapping="Wrap" Margin="0" Width="55" Height="56" />
+                <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
+                    <TextBox x:Name="txtbox" TextWrapping="Wrap" Width="55" Height="56" />
                 </c1:C1CheckBox>
-                <c1:C1CheckBox HorizontalAlignment="Left" Click="CheckBox_Click">
-                    <Button x:Name="targetButton" Content="click to change content" Margin="0,10" Width="150" Height="40" d:LayoutOverrides="Width, Height" />
+                <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
+                    <Button x:Name="targetButton" Content="click to change content" Width="150" Height="40" />
                 </c1:C1CheckBox>
             </StackPanel>
-            <c1:C1PropertyGrid x:Name="propertyGrid" Grid.Column="1" AutoGenerateProperties="False" ShowDescription="True" ShowResetButton="True"  >
+            <c1:C1PropertyGrid x:Name="propertyGrid" PropertySort="CategorizedAlphabetical" Grid.Column="1" AutoGenerateProperties="False" ShowDescription="True" ShowResetButton="True" BorderThickness="1 1 0 0">
+                <c1:C1PropertyGrid.PopupStyle>
+                    <Style TargetType="c1:C1Border">
+                        <Setter Property="Background" Value="LightGray"/>
+                        <Setter Property="Foreground" Value="Navy"/>
+                    </Style>
+                </c1:C1PropertyGrid.PopupStyle>
                 <c1:C1PropertyGrid.PropertyAttributes>
                     <c1:PropertyAttribute Browsable="True" MemberName="Width" DefaultValue="120" MinimumValue="0" Category="Size" Description="Gets or sets the width of the element."/>
                     <c1:PropertyAttribute Browsable="True" MemberName="Height" DefaultValue="28" MinimumValue="0" Category="Size" Description="Gets or sets the suggested height of the element."/>
                     <c1:PropertyAttribute Browsable="True" MemberName="Background" Category="Colors" Description="Gets or sets a brush that describes the background of a control."/>
+                    <c1:PropertyAttribute Browsable="True" MemberName="Foreground" Category="Colors" Description="Gets or sets a brush that describes the foreground of a control."/>
                     <c1:PropertyAttribute Browsable="True" MemberName="BorderBrush" DefaultValue="FFAEAEAE" Category="Colors" Description="Gets or sets a brush that describes the border background of a control."/>
                     <c1:PropertyAttribute Browsable="True" MemberName="HorizontalAlignment" DefaultValue="Stretch" Category="Others" Description="Gets or sets the horizontal alignment characteristics applied to this element when it is composed within a parent element, such as a panel or items control."/>
                     <c1:PropertyAttribute Browsable="True" MemberName="IsEnabled" DefaultValue="true" Category="Others" Description="Gets or sets a value indicating whether this element is enabled in the user interface (UI). This is a dependency property."/>

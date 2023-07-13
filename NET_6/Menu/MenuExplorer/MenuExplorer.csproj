@@ -93,6 +93,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.ja.resx">
@@ -111,23 +116,29 @@
     <EmbeddedResource Include="MenuExplorer.gclicx" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.SpellChecker">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

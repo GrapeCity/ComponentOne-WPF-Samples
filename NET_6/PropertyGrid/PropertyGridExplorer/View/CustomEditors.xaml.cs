@@ -1,7 +1,7 @@
 ﻿using C1.WPF.ColorPicker;
-using C1.WPF.Input;
 using C1.WPF.PropertyGrid;
-using System.ComponentModel;
+using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,149 +19,134 @@ namespace PropertyGridExplorer
             InitializeComponent();
             Tag = Properties.Resources.CustomEditorsDesc;
 
-            propertyGrid.AvailableEditors.Add(new CustomColorEditor());
+            //propertyGrid.AvailableEditors.Add(new CustomColorEditor());
 
-            propertyGrid.AutoGenerateProperties = false;
-            propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
-            {
-                MemberName = nameof(TextBox.Background),
-                Editor = new CustomColorEditor()
-            });
-            propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
-            {
-                MemberName = nameof(TextBox.Foreground),
-                Editor = new CustomColorEditor()
-            });
-            propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
-            {
-                MemberName = nameof(TextBox.BorderBrush),
-                Editor = new CustomColorEditor()
-            });
-            propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
-            {
-                MemberName = nameof(TextBox.BorderThickness),
-                Editor = new ThicknessEditor()
-            });
-            propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
-            {
-                MemberName = nameof(TextBox.Opacity),
-                Editor = new RangeSliderEditor() { Minimum = 0, Maximum = 1 }
-            });
-            propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
-            {
-                MemberName = nameof(TextBox.Width),
-                Editor = new RangeSliderEditor() { Minimum = 0, Maximum = 500 }
-            });
-            propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
-            {
-                MemberName = nameof(TextBox.Height),
-                Editor = new RangeSliderEditor() { Minimum = 0, Maximum = 100 }
-            });
+            //propertyGrid.AutoGenerateProperties = false;
+            //propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
+            //{
+            //    MemberName = nameof(TextBox.Background),
+            //    Editor = new CustomColorEditor()
+            //});
+            //propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
+            //{
+            //    MemberName = nameof(TextBox.Foreground),
+            //    Editor = new CustomColorEditor()
+            //});
+            //propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
+            //{
+            //    MemberName = nameof(TextBox.BorderBrush),
+            //    Editor = new CustomColorEditor()
+            //});
+            //propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
+            //{
+            //    MemberName = nameof(TextBox.BorderThickness),
+            //    Editor = new ThicknessEditor()
+            //});
+            //propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
+            //{
+            //    MemberName = nameof(TextBox.Opacity),
+            //    Editor = new RangeSliderEditor() { Minimum = 0, Maximum = 1 }
+            //});
+            //propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
+            //{
+            //    MemberName = nameof(TextBox.Width),
+            //    Editor = new RangeSliderEditor() { Minimum = 0, Maximum = 500 }
+            //});
+            //propertyGrid.PropertyAttributes.Add(new PropertyAttribute()
+            //{
+            //    MemberName = nameof(TextBox.Height),
+            //    Editor = new RangeSliderEditor() { Minimum = 0, Maximum = 100 }
+            //});
         }
     }
 
-    public class CustomColorEditor : C1HexColorBox, ITypeEditorControl
+
+    public class CustomColorEditor : BaseEditor<Brush, C1HexColorBox>
     {
-        PropertyAttribute _property;
+        public bool ShowSharpPrefix { get; set; }
 
-        bool ITypeEditorControl.Supports(PropertyAttribute Property)
+        public override C1HexColorBox Create(C1PropertyGrid parent)
         {
-
-            return Property.PropertyInfo.PropertyType == typeof(Color);
+            var editor = new C1HexColorBox() { ShowSharpPrefix = ShowSharpPrefix };
+            ApplyEditorStyleProperties(parent, editor);
+            return editor;
         }
 
-        ITypeEditorControl ITypeEditorControl.Create()
+        public override void Attach(C1HexColorBox hexColorBox, PropertyGroup group, Action<C1HexColorBox, object> valueChanged)
         {
-
-            return new CustomColorEditor();
-
-        }
-
-        void ITypeEditorControl.Attach(PropertyAttribute property)
-        {
-            _property = property;
-            this.GotFocus += new RoutedEventHandler(CustomColorEditor_GotFocus); //opens up window to show up editor when the hexbox gets focus
-            var binding = new Binding(property.PropertyInfo.Name)
+            hexColorBox.Color = group.GetValue<SolidColorBrush>()?.Color ?? Colors.Transparent;
+            RoutedEventHandler handler = (sender, e) =>
             {
-                Mode = BindingMode.TwoWay,
-                Source = _property.SelectedObject,
-                Converter = new C1.WPF.Core.ColorConverter(),
-                ValidatesOnExceptions = true
-            };
 
-            this.SetBinding(C1HexColorBox.ColorProperty, binding);
+                var window = new C1.WPF.Docking.C1Window();
+
+                var customColorForm = new CustomColorForm();
+                var binding = new Binding(nameof(C1HexColorBox.Color))
+                {
+                    Mode = BindingMode.TwoWay,
+                    Source = hexColorBox,
+                    ValidatesOnExceptions = true,
+                    UpdateSourceTrigger = UpdateSourceTrigger.Explicit   //update item only when ok button is clicked
+                };
+                customColorForm.SetBinding(CustomColorForm.ColorProperty, binding);
+                customColorForm.OKClicked += (s, e) =>
+                {
+                    customColorForm.GetBindingExpression(CustomColorForm.ColorProperty).UpdateSource(); //update source explicitly
+                    window.Close();
+                    valueChanged?.Invoke(hexColorBox, new SolidColorBrush(hexColorBox.Color));
+
+                };
+                customColorForm.CancelClicked += (s, e) =>
+                {
+                    window.Close();  //close the window
+                };
+
+                window.Header = group.Properties.First().DisplayName;
+                window.Content = customColorForm;
+                window.Width = 300;
+                window.Height = 300;
+                window.ShowMaximizeButton = false;
+                window.ShowMinimizeButton = false;
+                window.CenterOnScreen();
+                window.ShowModal();
+            };
+            hexColorBox.GotFocus += handler;
+            hexColorBox.Tag = handler;
         }
 
-        void CustomColorEditor_GotFocus(object sender, RoutedEventArgs e)
+        public override void Detach(C1HexColorBox hexColorBox)
         {
-
-            var window = new C1.WPF.Docking.C1Window();
-
-            var customColorForm = new CustomColorForm();
-            var binding = new Binding(nameof(C1HexColorBox.Color))
-            {
-                Mode = BindingMode.TwoWay,
-                Source = this,
-                ValidatesOnExceptions = true,
-                UpdateSourceTrigger = UpdateSourceTrigger.Explicit   //update item only when ok button is clicked
-            };
-            customColorForm.SetBinding(CustomColorForm.ColorProperty, binding);
-            customColorForm.OKClicked += (s, e) =>
-            {
-                customColorForm.GetBindingExpression(CustomColorForm.ColorProperty).UpdateSource(); //update source explicitly
-                window.Close();
-
-            };
-            customColorForm.CancelClicked += (s, e) =>
-            {
-                window.Close();  //close the window
-            };
-
-            window.Header = _property.DisplayName;
-            window.Content = customColorForm;
-            window.Width = 300;
-            window.Height = 300;
-            window.CenterOnScreen();
-            window.ShowModal();
+            var handler = hexColorBox.Tag as RoutedEventHandler;
+            hexColorBox.GotFocus -= handler;
         }
-
-
-        void ITypeEditorControl.Detach(PropertyAttribute property)
-        {
-        }
-
-        public event PropertyChangedEventHandler ValueChanged;
     }
 
-
-    public class RangeSliderEditor : Slider, ITypeEditorControl
+    public class RangeSliderEditorFactory : BaseEditor<double, Slider>
     {
-        PropertyAttribute _property;
-        public event PropertyChangedEventHandler ValueChanged;
+        public double Minimum { get; set; } = 0;
+        public double Maximum { get; set; } = 100;
 
-        public void Attach(PropertyAttribute property)
+        public override Slider Create(C1PropertyGrid parent)
         {
-            _property = property;
-            SetBinding(Slider.ValueProperty, new Binding(property.PropertyInfo.Name)
+            return new Slider() { Minimum = Minimum, Maximum = Maximum, VerticalAlignment = VerticalAlignment.Center };
+        }
+
+        public override void Attach(Slider slider, PropertyGroup group, Action<Slider, object> valueChanged)
+        {
+            var value = group.GetValue<double>();
+            slider.Value = double.IsFinite(value) ? value : Minimum;
+            RoutedPropertyChangedEventHandler<double> handler = (s, e) =>
             {
-                Mode = BindingMode.TwoWay,
-                Source = _property.SelectedObject,
-            });
+                valueChanged?.Invoke(slider, slider.Value);
+            };
+            slider.ValueChanged += handler;
+            slider.Tag = handler;
         }
 
-        public ITypeEditorControl Create()
+        public override void Detach(Slider slider)
         {
-            return new RangeSliderEditor() { Minimum = Minimum, Maximum = Maximum};
-        }
-
-        public void Detach(PropertyAttribute property)
-        {
-            ClearValue(Slider.ValueProperty);
-        }
-
-        public bool Supports(PropertyAttribute property)
-        {
-            return property.PropertyInfo.PropertyType == typeof(double);
+            var handler = slider.Tag as RoutedPropertyChangedEventHandler<double>;
+            slider.ValueChanged -= handler;
         }
     }
 }

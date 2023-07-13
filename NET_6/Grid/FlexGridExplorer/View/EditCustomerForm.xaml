@@ -42,7 +42,7 @@
 
         <!-- Apply/cancel buttons-->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="6" Grid.ColumnSpan="2" Margin="5">
-            <c1:C1Button Content="{x:Static res:AppResources.Apply}" MinWidth="100" Margin="4" Click="BtnApply_Click" />
+            <c1:C1Button Content="{x:Static res:AppResources.Apply}" MinWidth="100" Margin="4" Click="BtnApply_Click" Style="{x:Static c1:C1Button.AccentStyle}"/>
             <c1:C1Button Content="{x:Static res:AppResources.Cancel}" MinWidth="100" Margin="4" Click="BtnCancel_Click"/>
         </StackPanel>
     </Grid>

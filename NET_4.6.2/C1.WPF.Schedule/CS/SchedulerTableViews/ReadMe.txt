@@ -1,5 +1,5 @@
 SchedulerTableViews 
-==============
+---------------------------------------------
 Demonstrates Agenda and Table views representing scheduling data.
 
 The sample application includes C1.WPF.Schedule.Extended.4 assembly which contains table and agenda views. 

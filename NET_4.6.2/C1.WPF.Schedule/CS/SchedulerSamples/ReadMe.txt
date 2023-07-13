@@ -1,5 +1,5 @@
 ﻿SchedulerSamples
-======================================================
+----------------------------------------------------------
 Shows basic functionality of the C1Scheduler and C1Calendar controls.
 
 Included samples:

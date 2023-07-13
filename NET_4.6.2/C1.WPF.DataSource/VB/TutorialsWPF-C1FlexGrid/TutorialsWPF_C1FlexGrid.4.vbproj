@@ -269,10 +269,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="C1.Data.Entity.4.5.2" />
+    <Reference Include="C1.Data.Entity.4.6.2" />
     <Reference Include="C1.WPF.Data.Entity.4.6.2" />
     <Reference Include="C1.WPF.FlexGrid.4.6.2" />
-    <Reference Include="C1.LiveLinq.4.5.2" />
+    <Reference Include="C1.LiveLinq.4.6.2" />
     <Reference Include="C1.WPF.4.6.2" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -6,7 +6,13 @@
     <Grid>
         <ScrollViewer>
             <c1:C1WrapPanel MaxWidth="1280">
+
+                <c1:C1MaskedTextBox Margin="10 20 10 20" Width="100" Height="40"/>
+                
                 <c1:C1Button Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Click me" />
+                <c1:C1Button Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Default Button" 
+                             Style="{x:Static c1:C1Button.AccentStyle}" IsDefault="True"  />
+
                 <c1:C1ToggleButton Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Toggle me" />
 
                 <c1:C1CheckBox Width="120" Margin="10 20 10 20" VerticalAlignment="Center" Content="Check me" IsThreeState="True" />

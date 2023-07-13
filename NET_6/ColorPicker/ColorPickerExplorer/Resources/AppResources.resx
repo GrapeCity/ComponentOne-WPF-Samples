@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BrushesDescription" xml:space="preserve">
+    <value>A series of controls with different levels of features and complexitiy to modify Brushes</value>
+  </data>
+  <data name="BrushesTitle" xml:space="preserve">
+    <value>Brushes</value>
+  </data>
   <data name="OverviewDescription" xml:space="preserve">
     <value>Overview</value>
   </data>

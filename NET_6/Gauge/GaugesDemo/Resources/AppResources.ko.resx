@@ -172,4 +172,31 @@
     <value>Reversed</value>
     <comment>Reversed</comment>
   </data>
+  <data name="Bad" xml:space="preserve">
+    <value>Bad</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="Good" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="ShowRanges" xml:space="preserve">
+    <value>Show Ranges</value>
+  </data>
+  <data name="ShowText" xml:space="preserve">
+    <value>Show Text</value>
+  </data>
+  <data name="StartAngle" xml:space="preserve">
+    <value>Start Angle</value>
+  </data>
+  <data name="SweepAngle" xml:space="preserve">
+    <value>Sweep Angle</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
 </root>

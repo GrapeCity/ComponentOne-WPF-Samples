@@ -295,6 +295,24 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows a stops slider control allowing to drag the thumbs as well as adding new ones by clicking in the track and remove them with Del key..
+        /// </summary>
+        public static string StopsSliderDescription {
+            get {
+                return ResourceManager.GetString("StopsSliderDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stops Slider.
+        /// </summary>
+        public static string StopsSliderTitle {
+            get {
+                return ResourceManager.GetString("StopsSliderTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to use C1TagEditor..
         /// </summary>
         public static string TagEditorDemoDes {

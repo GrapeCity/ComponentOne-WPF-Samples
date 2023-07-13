@@ -22,8 +22,11 @@
     <None Remove="Images\Song.png" />
     <None Remove="Images\star.png" />
     <None Remove="Properties\Licenses.licx" />
+    <None Remove="Resources\bug-fill.svg" />
     <None Remove="Resources\cars.xml" />
     <None Remove="Resources\data.zip" />
+    <None Remove="Resources\exclamation-octagon.svg" />
+    <None Remove="Resources\exclamation-triangle.svg" />
     <None Remove="Resources\filter.svg" />
     <None Remove="Resources\Roboto-Regular.ttf" />
     <None Remove="Resources\sort-ascending.svg" />
@@ -64,47 +67,54 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\cars.xml" />
     <EmbeddedResource Include="Resources\data.zip" />
-    <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20231.129" />
-    <EmbeddedResource Include="Resources\Stores.txt" />
+    <PackageReference Include="C1.DataCollection.BindingList" Version="1.0.20232.161" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid.Excel">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.PropertyGrid">
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <EmbeddedResource Include="Resources\Stores.txt" />
+    <Resource Include="Resources\bug-fill.svg" />
+    <Resource Include="Resources\exclamation-octagon.svg" />
+    <Resource Include="Resources\exclamation-triangle.svg" />
     <Resource Include="Resources\filter.svg" />
     <Resource Include="Resources\Roboto-Regular.ttf" />
     <Resource Include="Resources\sort-ascending.svg" />

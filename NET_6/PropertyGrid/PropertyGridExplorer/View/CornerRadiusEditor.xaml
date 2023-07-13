@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="PropertyGridExplorer.CornerRadiusEditorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="58.363" d:DesignWidth="263.029">
+    <Grid VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1:C1NumericBox x:Name="TopLeftBox" Margin="0 0 1 1" VerticalAlignment="Center" ValueChanged="OnValueChanged" />
+        <c1:C1NumericBox x:Name="TopRightBox" Margin="0 0 0 1" Grid.Column="1" VerticalAlignment="Center" ValueChanged="OnValueChanged"/>
+        <c1:C1NumericBox x:Name="BottomRightBox" Grid.Row="1" Grid.Column="1" ValueChanged="OnValueChanged"/>
+        <c1:C1NumericBox x:Name="BottomLeftBox" Margin="0 0 1 0" Grid.Row="1" ValueChanged="OnValueChanged"/>
+    </Grid>
+</UserControl>

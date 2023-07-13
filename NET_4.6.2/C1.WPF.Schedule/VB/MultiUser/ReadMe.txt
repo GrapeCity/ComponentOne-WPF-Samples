@@ -1,5 +1,5 @@
 ﻿MultiUser
-===================================================================
+------------------------------------------------------
 Demonstrates showing multi-user calendar.
 
 AppoinmentStorage, OwnerStorage and ContactStorage are bound to data from NWind database 

@@ -213,4 +213,10 @@
   <data name="ValidationFormTitle" xml:space="preserve">
     <value>Validation Form</value>
   </data>
+  <data name="StopsSliderDescription" xml:space="preserve">
+    <value>Shows a stops slider control allowing to drag the thumbs as well as adding new ones by clicking in the track and remove them with Del key.</value>
+  </data>
+  <data name="StopsSliderTitle" xml:space="preserve">
+    <value>Stops Slider</value>
+  </data>
 </root>

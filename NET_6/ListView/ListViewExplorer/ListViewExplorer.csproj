@@ -18,18 +18,18 @@
     <Content Include="C1-ball.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="1.0.20231.129" />
+    <PackageReference Include="C1.DataCollection" Version="1.0.20232.161" />
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

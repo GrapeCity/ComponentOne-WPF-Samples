@@ -142,7 +142,7 @@
     <Reference Include="C1.WPF.Automation.4.6.2" />
     <Reference Include="C1.WPF.BarCode.4.6.2" />
     <Reference Include="C1.WPF.Bitmap.4.6.2" />
-    <Reference Include="C1.Data.Entity.4.5.2" />
+    <Reference Include="C1.Data.Entity.4.6.2" />
     <Reference Include="C1.WPF.Data.Entity.4.6.2" />
     <Reference Include="C1.WPF.DateTimeEditors.4.6.2" />
     <Reference Include="C1.WPF.Document.4.6.2" />
@@ -151,7 +151,7 @@
     <Reference Include="C1.WPF.FlexChart.4.6.2" />
     <Reference Include="C1.WPF.FlexReport.4.6.2" />
     <Reference Include="C1.WPF.FlexViewer.4.6.2" />
-    <Reference Include="C1.LiveLinq.4.5.2" />
+    <Reference Include="C1.LiveLinq.4.6.2" />
     <Reference Include="C1.WPF.Pdf.4.6.2" />
     <Reference Include="C1.WPF.ImportServices.4.6.2" />
     <Reference Include="C1.WPF.Word.4.6.2" />

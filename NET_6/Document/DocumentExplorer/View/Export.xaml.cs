@@ -71,7 +71,7 @@ namespace DocumentExplorer
             }
 
             // execute action
-            ExportProvider ep = (ExportProvider)cbExportFilter.SelectedItem;
+            ExportProvider ep = (ExportProvider)cbExportFilter.SelectedValue;
             saveFileDialog.DefaultExt = "." + ep.DefaultExtension;
             saveFileDialog.FileName = (fpFile.SelectedFile == null ? "DefaultDocument" : System.IO.Path.GetFileNameWithoutExtension(fpFile.SelectedFile.FullName)) + "." + ep.DefaultExtension;
             saveFileDialog.Filter = String.Format("{0} (*.{1})|*.{1}|All files (*.*)|*.*", ep.FormatName, ep.DefaultExtension);

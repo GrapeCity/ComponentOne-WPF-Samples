@@ -21,43 +21,37 @@ namespace DataFilterExplorer
         {
             InitializeComponent();
             Tag = AppResources.FilterSummaryDescription;
-            _data = new C1DataCollection<Car>(DataProvider.GetCars());
+            _data = new C1DataCollection<Car>(DataProvider.GetCars().ToList());
             flexGrid.ItemsSource = _data;
             c1DataFilter1.ItemsSource = _data;
         }
 
         private void C1DataFilter1_FilterAutoGenerating(object sender, FilterAutoGeneratingEventArgs e)
         {
-            foreach (Filter f in c1DataFilter1.Filters)
+            switch (e.Property.Name)
             {
-                if (f.PropertyName == "Brand")
-                {
-                    var brandFilter = f as ChecklistFilter;
+                case "Brand":
+                    var brandFilter = (ChecklistFilter)e.Filter;
                     brandFilter.FilterSummary.Label = "Models:";
                     brandFilter.FilterSummary.PropertyName = "Brand";
                     brandFilter.FilterSummary.AggregateType = AggregateType.Count;
-                }
-
-                if (f.PropertyName == "Model")
-                {
-                    var modelFilter = f as ChecklistFilter;
+                    break;
+                case "Model":
+                    var modelFilter = (ChecklistFilter)e.Filter;
                     modelFilter.FilterSummary.AggregateType = AggregateType.Max;
                     modelFilter.FilterSummary.CustomFormat = "C0";
                     modelFilter.FilterSummary.Label = "Max price: ";
                     modelFilter.FilterSummary.PropertyName = "Price";
-                }
-
-                if (f.PropertyName == "Price")
-                {
-                    var modelFilter = f as RangeFilter;
-                    modelFilter.Maximum = _data.Max(x => (x as Car).Price);
-                    modelFilter.Minimum = _data.Min(x => (x as Car).Price);
-                    modelFilter.Format = "F0";
-                }
-
-                if ( f.PropertyName == "TransmissAutomatic")
-                {
-                    var taFilter = f as ChecklistFilter;
+                    break;
+                case "Price":
+                    var pf = (RangeFilter)e.Filter;
+                    pf.Maximum = _data.Max(x => (x as Car).Price);
+                    pf.Minimum = _data.Min(x => (x as Car).Price);
+                    pf.Increment = 1000;
+                    pf.Format = "F0";
+                    break;
+                case "TransmissAutomatic":
+                    var taFilter = (ChecklistFilter)e.Filter;
                     taFilter.HeaderText = "Transmiss Automatic";
                     taFilter.ItemsSource = new List<TransmissAutomatic>()
                     {
@@ -68,8 +62,18 @@ namespace DataFilterExplorer
                     taFilter.DisplayMemberPath = "DisplayValue";
                     taFilter.ValueMemberPath = "Value";
                     taFilter.ShowSelectAll = false;
+                    break;
+                case "DateProductionLine":
+                    var drf = (DateRangeFilter)e.Filter;
+                    drf.UpperValue = _data.Max(x => (x as Car).DateProductionLine);
+                    drf.LowerValue = _data.Min(x => (x as Car).DateProductionLine);
 
-                }
+                    drf.Maximum = drf.UpperValue.Value;
+                    drf.Minimum = drf.LowerValue.Value;
+                    break;
+                default:
+                    e.Cancel = true;
+                    break;
             }
         }
 

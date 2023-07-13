@@ -70,7 +70,7 @@ namespace FlexChartExplorer
             // Use color #B1DCB6 (177, 250, 182) and color #F9F9F9 (249, 249, 249) which are defined in the suggested palette as the start color and end color.
             var colorStart = Color.FromArgb(0xff, 177, 250, 182);
             var colorEnd = Color.FromArgb(0xff, 249, 249, 249);
-            var stepsCount = (data.Count() - 1);
+            var stepsCount = data.Length - 1;
             int paletteStepR = (int)Math.Round((double)((colorEnd.A - colorStart.R) / stepsCount));
             int paletteStepG = (int)Math.Round((double)((colorEnd.G - colorStart.G) / stepsCount));
             int paletteStepB = (int)Math.Round((double)((colorEnd.B - colorStart.B) / stepsCount));

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -548,5 +548,33 @@
   <data name="VirtualModeDescription" xml:space="preserve">
     <value>データ仮想化を使用して 10 億行のグリッドを表示する方法を示します</value>
     <comment>Shows how to use data-virtualization to display a 1 billion rows grid</comment>
+  </data>
+  <data name="VirtualModeTitle" xml:space="preserve">
+    <value>仮想モード</value>
+    <comment>Virtual Mode</comment>
+  </data>
+  <data name="PinColumn" xml:space="preserve">
+    <value>列をピン留めする</value>
+    <comment>Pin Column</comment>
+  </data>
+  <data name="PinColumnDescription" xml:space="preserve">
+    <value>列をピン留め/ピン留め解除して、水平スクロール中にグリッドの左端で固定化する方法を示します。</value>
+    <comment>Shows how to implement pin/unpin columns so they become frozen at the left edge of the grid while scrolling horizontally.</comment>
+  </data>
+  <data name="PinColumnTitle" xml:space="preserve">
+    <value>列をピン留めする</value>
+    <comment>Pin Column</comment>
+  </data>
+  <data name="UnpinColumn" xml:space="preserve">
+    <value>列のピン留めを解除する</value>
+    <comment>Unpin Column</comment>
+  </data>
+  <data name="AdvancedCustomCellsDescription" xml:space="preserve">
+    <value>このサンプルでは、各セル内で 2D レンダリングを使用して、描画されたコンテンツを提供する方法を示します。</value>
+    <comment>This sample shows how to use 2D rendering inside each cell to provide drawn content.</comment>
+  </data>
+  <data name="AdvancedCustomCellsTitle" xml:space="preserve">
+    <value>高度なカスタムセル</value>
+    <comment>Advanced custom cells</comment>
   </data>
 </root>

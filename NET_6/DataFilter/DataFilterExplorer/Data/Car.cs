@@ -25,7 +25,6 @@ namespace DataFilterExplorer
         public int ID { get; set; }
         [Browsable(false)]
         public Int16 HP { get; set; }
-        [Browsable(false)]
         public double Liter { get; set; }
         [Browsable(false)]
         public Int16 Cyl { get; set; }

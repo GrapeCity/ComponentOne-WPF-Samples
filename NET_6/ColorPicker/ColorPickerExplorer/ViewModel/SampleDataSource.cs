@@ -7,12 +7,11 @@ namespace ColorPickerExplorer
     {
         public SampleDataSource()
         {
-            AllItems = new ObservableCollection<SampleItem>();
-
-            AllItems.Add(new SampleItem(
-                AppResources.OverviewTitle,
-                AppResources.OverviewDescription,
-                new DemoColorPicker()));
+            AllItems = new ObservableCollection<SampleItem>
+            {
+                new SampleItem(AppResources.OverviewTitle, AppResources.OverviewDescription, new DemoColorPicker()),
+                new SampleItem(AppResources.BrushesTitle, AppResources.BrushesTitle, new Brushes())
+            };
         }
 
         public ObservableCollection<SampleItem> AllItems

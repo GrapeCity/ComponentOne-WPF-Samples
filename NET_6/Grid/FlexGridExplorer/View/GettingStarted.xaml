@@ -7,6 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <c1:C1Expander Header="Settings" ExpandDirection="Left" ExpandIconAlignment="Left" HorizontalContentAlignment="Right" BorderThickness="0" Grid.Column="1">
+            <c1:C1PropertyGrid SelectedObject="{Binding ElementName=grid}" ShowFilter="True" MinWidth="400"/>
+        </c1:C1Expander>
         <c1:FlexGrid x:Name="grid"/>
     </Grid>
 </UserControl>

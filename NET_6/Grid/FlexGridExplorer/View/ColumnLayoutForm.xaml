@@ -35,7 +35,7 @@
             </i:Interaction.Behaviors>
         </c1:FlexGrid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <c1:C1Button x:Name="btnOK" Content="OK" Click="btnOK_Click" Margin="4" MinWidth="100"/>
+            <c1:C1Button x:Name="btnOK" Content="OK" Click="btnOK_Click" Margin="4" MinWidth="100" Style="{x:Static c1:C1Button.AccentStyle}"/>
             <c1:C1Button x:Name="btnCancel" Content="Cancel" Click="btnCancel_Click" Margin="4" MinWidth="100"/>
         </StackPanel>
     </Grid>

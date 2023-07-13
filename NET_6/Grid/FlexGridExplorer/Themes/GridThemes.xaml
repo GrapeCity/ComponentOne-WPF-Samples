@@ -556,7 +556,7 @@
                     </Setter>
                 </Style>
             </Setter.Value>
-        </Setter>        
+        </Setter>
         <Setter Property="HeadersVisibility" Value="All"/>
         <Setter Property="ColumnHeaderFontWeight" Value="Bold" />
         <Setter Property="GridLinesVisibility" Value="None" />
@@ -717,6 +717,20 @@
             </Setter.Value>
         </Setter>
         <Setter Property="RowHeaderForeground" Value="#ffffffff" />
+        <Setter Property="RowHeaderErrorStyle">
+            <Setter.Value>
+                <Style TargetType="c1:GridCellView">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0" >
+                                <GradientStop Color="#FFFAA5A5" Offset="0"/>
+                                <GradientStop Color="#FF750909" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
         <Setter Property="TopLeftHeaderBackground" >
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >

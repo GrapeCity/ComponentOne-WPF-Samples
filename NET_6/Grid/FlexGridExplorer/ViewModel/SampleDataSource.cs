@@ -118,6 +118,18 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.AdvancedCustomCellsTitle,
                 AppResources.AdvancedCustomCellsTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new AdvancedCustomCells())));
+
+            _allItems.Add(new SampleItem(AppResources.ValidationTitle,
+                AppResources.ValidationTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new Validation())));
+
+            _allItems.Add(new SampleItem(AppResources.DataTableSampleTitle,
+                AppResources.DataTableSampleTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new DataTableSample())));
+
+            _allItems.Add(new SampleItem(AppResources.SelectedItemsTitle,
+                AppResources.SelectedItemsTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new SelectedItems())));
         }
 
         public ObservableCollection<SampleItem> AllItems

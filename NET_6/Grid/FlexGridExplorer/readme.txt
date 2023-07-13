@@ -37,3 +37,6 @@ Shows the following samples
 	- VirtualMode
 	- PinColumn
 	- AdvancedCustomCells
+	- Validation
+	- DataTable
+	- SelectedItems

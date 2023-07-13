@@ -169,4 +169,12 @@
     <value>複数月カレンダー</value>
     <comment>MultiMonth Calendar</comment>
   </data>
+  <data name="CustomSlotsDescription" xml:space="preserve">
+    <value>カスタム CalendarAdapter を使用して C1Calendar を設定し、スロットレンダリングを完全に制御する方法を示します。</value>
+    <comment>Shows how to set up C1Calendar using custom CalendarAdapter to have full control over slot rendering.</comment>
+  </data>
+  <data name="CustomSlotsTitle" xml:space="preserve">
+    <value>カスタムスロット</value>
+    <comment>Custom Slots</comment>
+  </data>
 </root>

@@ -74,7 +74,7 @@
                 <local:DataVisualization />
             </c1:C1TabItem>
             <c1:C1TabItem Header="{x:Static p:Resources.InputEditing}" >
-                <local:InputAndEditing />
+                <local:InputAndEditing x:Name="inputAndEditing" />
             </c1:C1TabItem>
             <c1:C1TabItem Header="{x:Static p:Resources.ReportingDocuments}" >
                 <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right">

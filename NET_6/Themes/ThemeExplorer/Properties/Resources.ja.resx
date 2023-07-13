@@ -142,12 +142,73 @@
     <value>テーマ: </value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>テーマエクスプローラ</value>
+    <value>テーマ エクスプローラ</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>WPF エディションには、スタイルの可能性を広げるプロフェッショナルなテーマが含まれています。</value>
   </data>
   <data name="ThemeExplorer" xml:space="preserve">
-    <value>Theme Explorer</value>
+    <value>テーマ エクスプローラ</value>
+    <comment>Theme Explorer</comment>
+  </data>
+  <data name="Cell" xml:space="preserve">
+    <value>セル</value>
+    <comment>Cell</comment>
+  </data>
+  <data name="Document" xml:space="preserve">
+    <value>ドキュメント</value>
+    <comment>Document</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編集</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>フォント</value>
+    <comment>Font</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Home</comment>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>挿入</value>
+    <comment>Insert</comment>
+  </data>
+  <data name="LineNumber" xml:space="preserve">
+    <value>行番号</value>
+    <comment>Line Number</comment>
+  </data>
+  <data name="Merge" xml:space="preserve">
+    <value>マージ</value>
+    <comment>Merge</comment>
+  </data>
+  <data name="Paragraph" xml:space="preserve">
+    <value>段落</value>
+    <comment>Paragraph</comment>
+  </data>
+  <data name="RowsAndColumns" xml:space="preserve">
+    <value>行および列</value>
+    <comment>Rows And Columns</comment>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>表</value>
+    <comment>Table</comment>
+  </data>
+  <data name="Tables" xml:space="preserve">
+    <value>表</value>
+    <comment>Tables</comment>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>ツール</value>
+    <comment>Tools</comment>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>表示</value>
+    <comment>View</comment>
+  </data>
+  <data name="Zoom" xml:space="preserve">
+    <value>ズーム</value>
+    <comment>Zoom</comment>
   </data>
 </root>

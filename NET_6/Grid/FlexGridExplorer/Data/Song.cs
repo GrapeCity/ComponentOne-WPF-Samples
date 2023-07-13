@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace FlexGridExplorer
@@ -30,7 +31,7 @@ namespace FlexGridExplorer
                     using (var stream = zip.Entries.First(e => e.Name == "songs.xml").Open())
                     {
                         var xmls = new XmlSerializer(typeof(List<Song>));
-                        return (List<Song>)xmls.Deserialize(stream);
+                        return (List<Song>)xmls.Deserialize(XmlReader.Create(stream));
                     }
                 }
             }

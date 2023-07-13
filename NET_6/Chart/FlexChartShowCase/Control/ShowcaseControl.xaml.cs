@@ -633,7 +633,7 @@ namespace FlexChartShowcase
         /// <returns></returns>
         public IList<IRange> GetRanges(IRange range, int level)
         {
-            if (level - 1 < 0 || level - 1 > _groupTypes.Count())
+            if (level - 1 < 0 || level - 1 > _groupTypes.Count)
                 return null;        // invalid group request
 
             var timeRange = range as TimeRange;

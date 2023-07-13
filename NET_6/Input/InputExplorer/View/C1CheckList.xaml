@@ -16,7 +16,7 @@
                        ItemsSource="{Binding Customers}" ShowCheckBoxes="True"/>
         <c1:C1TabControl UnselectedContentMode="Collapsed" Grid.Column="1">
             <c1:C1TabItem Header="{x:Static res:Resources.PropertiesTabHeader}">
-                <c1:C1PropertyGrid SelectedObject="{Binding ElementName=CheckList}" AddingPropertyBox="C1PropertyGrid_AddingPropertyBox" DefaultCategoryName="Miscellaneous" />
+                <c1:C1PropertyGrid SelectedObject="{Binding ElementName=CheckList}" AutoGeneratingPropertyAttribute="C1PropertyGrid_AddingPropertyBox" DefaultCategoryName="Miscellaneous" />
             </c1:C1TabItem>
             <c1:C1TabItem Header="{x:Static res:Resources.MethodsTabHeader}">
                 <StackPanel Orientation="Vertical">

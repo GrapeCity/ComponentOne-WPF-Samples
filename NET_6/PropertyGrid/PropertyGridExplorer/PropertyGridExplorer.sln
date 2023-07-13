@@ -1,6 +1,6 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
+# Visual Studio Version 17
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropertyGridExplorer", "PropertyGridExplorer.csproj", "{75D3E448-2111-47FF-ABF6-7CBA3E4E0CF3}"
 EndProject
 Global
@@ -11,6 +11,7 @@ Global
 		GCRelease|Any CPU = GCRelease|Any CPU
 		GRAPECITY|Any CPU = GRAPECITY|Any CPU
 		Release|Any CPU = Release|Any CPU
+		UTRelease|Any CPU = UTRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{75D3E448-2111-47FF-ABF6-7CBA3E4E0CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -25,6 +26,8 @@ Global
 		{75D3E448-2111-47FF-ABF6-7CBA3E4E0CF3}.GRAPECITY|Any CPU.Build.0 = Debug|Any CPU
 		{75D3E448-2111-47FF-ABF6-7CBA3E4E0CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75D3E448-2111-47FF-ABF6-7CBA3E4E0CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D3E448-2111-47FF-ABF6-7CBA3E4E0CF3}.UTRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{75D3E448-2111-47FF-ABF6-7CBA3E4E0CF3}.UTRelease|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

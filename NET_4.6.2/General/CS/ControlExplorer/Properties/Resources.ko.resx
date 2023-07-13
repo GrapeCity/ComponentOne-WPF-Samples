@@ -160,7 +160,7 @@
     <value>Top Controls</value>
   </data>
   <data name="About_Uri" xml:space="preserve">
-    <value>https://www.grapecity.com/componentone/wpf</value>
+    <value>https://www.grapecity.com/componentone/wpf-ui-controls</value>
   </data>
   <data name="Support_Uri" xml:space="preserve">
     <value>https://www.grapecity.com/en/support/contact</value>
@@ -169,7 +169,7 @@
     <value>https://www.grapecity.com/en/pricing</value>
   </data>
   <data name="Trial_Uri" xml:space="preserve">
-    <value>https://www.grapecity.com/en/download/ultimate</value>
+    <value>https://www.grapecity.com/componentone/download</value>
   </data>
   <data name="FramePage_TitleText" xml:space="preserve">
     <value>ComponentOne WPF Edition Control Explorer</value>

@@ -1,69 +1,71 @@
 ﻿using C1.WPF.Core;
+using C1.WPF.Input;
 using C1.WPF.PropertyGrid;
 using System;
-using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 
 namespace PropertyGridExplorer
 {
-    /// <summary>
-    /// Interaction logic for ThicknessEditor.xaml
-    /// </summary>
-    public partial class ThicknessEditor : UserControl, ITypeEditorControl
+    public class ThicknessEditor : BaseEditor<Thickness, ThicknessEditorControl>
     {
-        private PropertyAttribute _property;
+        public override ThicknessEditorControl Create(C1PropertyGrid parent)
+        {
+            var editor = new ThicknessEditorControl();
+            ApplyEditorStyleProperties(parent, editor.LeftBox);
+            ApplyEditorStyleProperties(parent, editor.TopBox);
+            ApplyEditorStyleProperties(parent, editor.RightBox);
+            ApplyEditorStyleProperties(parent, editor.BottomBox);
+            return editor;
+        }
+
+        public override void Attach(ThicknessEditorControl thicknessEditor, PropertyGroup group, Action<ThicknessEditorControl, object> valueChanged)
+        {
+            thicknessEditor.Value = group.GetValue<Thickness>();
+            EventHandler handler = (s, e) =>
+            {
+                valueChanged?.Invoke(thicknessEditor, thicknessEditor.Value);
+            };
+            thicknessEditor.ValueChanged += handler;
+            thicknessEditor.Tag = handler;
+        }
+
+        public override void Detach(ThicknessEditorControl thicknessEditor)
+        {
+            var handler = thicknessEditor.Tag as EventHandler;
+            thicknessEditor.ValueChanged -= handler;
+        }
+    }
+
+    public partial class ThicknessEditorControl : UserControl
+    {
         private bool _updating;
 
-        public ThicknessEditor()
+        public ThicknessEditorControl()
         {
             InitializeComponent();
         }
 
-        public Thickness Thickness
+        public Thickness Value
         {
-            get { return (Thickness)GetValue(ThicknessProperty); }
-            set { SetValue(ThicknessProperty, value); }
+            get { return (Thickness)GetValue(ValueProperty); }
+            set { SetValue(ValueProperty, value); }
         }
 
-        public static readonly DependencyProperty ThicknessProperty = DependencyProperty.Register("Thickness", typeof(Thickness), typeof(ThicknessEditor), new PropertyMetadata((a, e) => { (a as ThicknessEditor).OnThicknessChanged(); }));
+        public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Thickness", typeof(Thickness), typeof(ThicknessEditorControl), new PropertyMetadata((a, e) => { (a as ThicknessEditorControl).OnThicknessChanged(); }));
 
-        public event PropertyChangedEventHandler ValueChanged;
-
-        public void Attach(PropertyAttribute property)
-        {
-            _property = property;
-            SetBinding(ThicknessEditor.ThicknessProperty, new Binding(property.PropertyInfo.Name)
-            {
-                Mode = BindingMode.TwoWay,
-                Source = _property.SelectedObject,
-            });
-        }
-
-        public ITypeEditorControl Create()
-        {
-            return new ThicknessEditor();
-        }
-
-        public void Detach(PropertyAttribute property)
-        {
-        }
-
-        public bool Supports(PropertyAttribute property)
-        {
-            return property.PropertyInfo.PropertyType == typeof(Thickness);
-        }
+        public event EventHandler ValueChanged;
 
         private void OnThicknessChanged()
         {
             try
             {
                 _updating = true;
-                LeftBox.Value = Thickness.Left;
-                TopBox.Value = Thickness.Top;
-                RightBox.Value = Thickness.Right;
-                BottomBox.Value = Thickness.Bottom;
+                LeftBox.Value = Value.Left;
+                TopBox.Value = Value.Top;
+                RightBox.Value = Value.Right;
+                BottomBox.Value = Value.Bottom;
+                ValueChanged?.Invoke(this, new EventArgs());
             }
             finally
             {
@@ -74,7 +76,7 @@ namespace PropertyGridExplorer
         private void OnValueChanged(object sender, PropertyChangedEventArgs<double> e)
         {
             if (!_updating)
-                Thickness = new Thickness(LeftBox.Value, TopBox.Value, RightBox.Value, BottomBox.Value);
+                Value = new Thickness(LeftBox.Value, TopBox.Value, RightBox.Value, BottomBox.Value);
         }
     }
 }

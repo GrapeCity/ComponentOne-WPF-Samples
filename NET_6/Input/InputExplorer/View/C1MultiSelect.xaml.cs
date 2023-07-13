@@ -54,7 +54,7 @@ namespace InputExplorer
             MultiSelect.UnselectAll();
         }
 
-        private void C1PropertyGrid_AddingPropertyBox(object sender, C1.WPF.PropertyGrid.ChangingPropertyBoxEventArgs e)
+        private void C1PropertyGrid_AddingPropertyBox(object sender, C1.WPF.PropertyGrid.PropertyGridAttributeAutoGeneratingEventArgs e)
         {
             if (!PropertyNames.Contains(e.Property.Name))
                 e.Cancel = true;

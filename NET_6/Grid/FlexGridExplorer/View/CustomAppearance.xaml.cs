@@ -22,7 +22,7 @@ namespace FlexGridExplorer
             var styles = Resources.MergedDictionaries[0].Keys.Cast<string>().OrderBy(s => s).ToList();
             Themes.ItemsSource = styles;
             Themes.SelectedIndex = styles.IndexOf("Material");
-
+            Themes.IsEditable = false;
             PopulateEditGrid();
         }
 
@@ -40,7 +40,10 @@ namespace FlexGridExplorer
 
         private void OnThemeChanged(object sender, C1.WPF.Core.PropertyChangedEventArgs<object> e)
         {
-            grid.Style = Resources.MergedDictionaries[0][e.NewValue as string] as Style;
+            if (e.NewValue != null)
+            {
+                grid.Style = Resources.MergedDictionaries[0][e.NewValue as string] as Style;
+            }
         }
     }
 }

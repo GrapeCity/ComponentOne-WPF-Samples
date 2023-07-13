@@ -32,6 +32,10 @@ namespace InputExplorer
                 new SampleItem(Properties.Resources.ValidationFormTitle,
                                 Properties.Resources.ValidationFormTitle,
                                 new ValidationForm()),
+
+                new SampleItem(Properties.Resources.StopsSliderTitle,
+                                Properties.Resources.StopsSliderTitle,
+                                new StopsSlider()),
             };
         }
 

@@ -123,7 +123,7 @@
             Grid.Row="1">
                         <c1:C1FlexGrid.Columns>
                             <c1:Column Binding="{Binding ID}" Width="60" FontWeight="Bold" />
-                            <c1:Column Binding="{Binding Description}" Width="500" />
+                            <c1:Column Binding="{Binding Description}" Width="500" IsReadOnly="True" />
                             <c1:Column Binding="{Binding Value, Mode=TwoWay, StringFormat=n2, NotifyOnValidationError=true, ValidatesOnExceptions=true }" Width="300" />
                         </c1:C1FlexGrid.Columns>
                     </c1:C1FlexGrid>

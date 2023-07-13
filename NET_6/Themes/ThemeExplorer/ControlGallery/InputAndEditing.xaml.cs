@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace ThemeExplorer
 {
@@ -28,5 +29,25 @@ namespace ThemeExplorer
 
         }
 
+        public ResourceDictionary Theme
+        {
+            get { return (ResourceDictionary)GetValue(CurrentThemeProperty); }
+            set { SetValue(CurrentThemeProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Theme.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CurrentThemeProperty =
+            DependencyProperty.Register("Theme", typeof(ResourceDictionary), typeof(InputAndEditing), new PropertyMetadata(OnThemeChanged));
+
+        private static void OnThemeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((InputAndEditing)d).OnThemeChanged();
+        }
+
+        private void OnThemeChanged()
+        {
+            propertyGrid.Resources.MergedDictionaries.Clear();
+            propertyGrid.Resources.MergedDictionaries.Add(this.Theme);
+        }
     }
 }

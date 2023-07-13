@@ -4,7 +4,7 @@
         <Thickness x:Key="C1Calendar_TodayBorder_Thickness">2,1,2,1</Thickness>
     </UserControl.Resources>
 	<Grid x:Name="gr">
-		<Viewbox Stretch="UniformToFill" StretchDirection="Both">
+		<Viewbox Stretch="UniformToFill" StretchDirection="DownOnly">
 			<c1:C1Calendar x:Name="cal1" MonthHeaderForeground="#FFAD0A0A" MonthHeaderFontSize="14" MonthHeaderBackground="Transparent" Foreground="#FFC71212" WeekendBrush="Red" DaysOfWeekBorderBrush="#FF6F3A9E" TodayBrush="Yellow" MonthCount="5" MaxSelectionCount="42" Width="1000" Height="700">
 				<c1:C1Calendar.Background>
 					<ImageBrush ImageSource="green.jpg" />

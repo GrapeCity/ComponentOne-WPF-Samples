@@ -35,6 +35,8 @@ namespace DynamicBinding
             customers.Add(employee4);
 
             grid.ItemsSource = customers;
+
+            Language = System.Windows.Markup.XmlLanguage.GetLanguage(Dispatcher.Thread.CurrentUICulture.Name);
         }
 
         private void OnFilterLoading(object sender, C1.WPF.Grid.GridColumnFilterLoadingEventArgs e)

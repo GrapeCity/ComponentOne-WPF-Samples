@@ -57,11 +57,15 @@
     <EmbeddedResource Include="PropertyGridExplorer.gclicx" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="C1.WPF.Docking">
+      <Version>6.0.20232.591</Version>
+    </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
   </ItemGroup>
 </Project>

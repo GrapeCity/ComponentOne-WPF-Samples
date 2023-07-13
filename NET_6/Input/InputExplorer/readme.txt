@@ -20,3 +20,6 @@ Shows the following controls
 	- C1TagEditor
 	- C1CheckList
 	- C1MultiSelect
+        - C1CheckBox
+	- C1RadioButton
+	- C1StopsSlider

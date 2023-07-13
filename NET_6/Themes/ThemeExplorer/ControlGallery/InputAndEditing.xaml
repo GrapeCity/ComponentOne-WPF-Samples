@@ -12,8 +12,10 @@
             <ScrollViewer Margin="10">
                 <c1:C1WrapPanel MaxWidth="1000" >
                     <c1:C1Button Width="150" VerticalAlignment="Center" Margin="10 20 10 20">Click me!</c1:C1Button>
+                    <c1:C1Button Width="150" Margin="10 20 10 20" VerticalAlignment="Center" Content="Default Button" 
+                                 Style="{DynamicResource {x:Static c1:C1Button.AccentStyleKey}}" IsDefault="True" />
                     <c1:C1ToggleButton Width="150" VerticalAlignment="Center" Margin="10 20 10 20">Toggle me!</c1:C1ToggleButton>
-                    <c1:C1TextBoxBase TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Text="Test" />
+                    <c1:C1TextBox TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Text="Test" />
                     <c1:C1CheckBox VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!" IsThreeState="True" />
                     <c1:C1RadioButton GroupName="test" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!" IsChecked="True" />
                     <c1:C1RadioButton GroupName="test" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!"  />
@@ -63,6 +65,8 @@
             <ScrollViewer Margin="10">
                 <c1:C1WrapPanel MaxWidth="1000" >
                     <c1:C1Button Width="150" VerticalAlignment="Center" Margin="10 20 10 20" IsEnabled="False">Click me!</c1:C1Button>
+                    <c1:C1Button Width="150" Margin="10 20 10 20" VerticalAlignment="Center" Content="Default Button" IsEnabled="False"
+                                 Style="{DynamicResource {x:Static c1:C1Button.AccentStyleKey}}" IsDefault="True" />
                     <c1:C1ToggleButton Width="150" VerticalAlignment="Center" Margin="10 20 10 20" IsEnabled="False">Toggle me!</c1:C1ToggleButton>
                     <c1:C1TextBoxBase IsEnabled="False" VerticalAlignment="Center" TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Text="Test" />
                     <c1:C1CheckBox IsEnabled="False" IsChecked="True" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!" />
@@ -287,22 +291,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <TextBox x:Name="contentControl" Text="Selected Object" Margin="10" Width="150" Height="40" Background="#fff6aac9" VerticalAlignment="Top"/>
-                <c1:C1PropertyGrid x:Name="propertyGrid" Grid.Column="1" AutoGenerateProperties="False" ShowDescription="True" ShowResetButton="True" Margin="5"
-                                   SelectedObject="{Binding ., ElementName=contentControl}">
-                    <c1:C1PropertyGrid.PropertyAttributes>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Width" DefaultValue="120" MinimumValue="0" Category="Size" Description="Gets or sets the width of the element."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Height" DefaultValue="28" MinimumValue="0" Category="Size" Description="Gets or sets the suggested height of the element."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Background" Category="Colors" Description="Gets or sets a brush that describes the background of a control."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="BorderBrush" DefaultValue="FFAEAEAE" Category="Colors" Description="Gets or sets a brush that describes the border background of a control."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="BorderThickness" DefaultValue="FFAEAEAE" Category="Others" Description="Gets or sets a border thickness."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="HorizontalAlignment" DefaultValue="Stretch" Category="Others" Description="Gets or sets the horizontal alignment characteristics applied to this element when it is composed within a parent element, such as a panel or items control."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="IsEnabled" DefaultValue="true" Category="Others" Description="Gets or sets a value indicating whether this element is enabled in the user interface (UI). This is a dependency property."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Opacity" DefaultValue="0.8" MinimumValue="0" MaximumValue="1" Category="Others" Description="Gets or sets the opacity factor applied to the entire System.Windows.UIElement when it is rendered in the user interface (UI). This is a dependency property."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="Content" Category="Others" Description="Gets or sets the content of a System.Windows.Controls.ContentControl."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="MaxWidth" DefaultValue="100" MinimumValue="0" Category="Size" Description="Gets or sets the maximum width constraint of the element."/>
-                        <c1:PropertyAttribute Browsable="True" MemberName="MaxHeight" DefaultValue="100" MinimumValue="0" Category="Size" Description="Gets or sets the maximum height constraint of the element."/>
-                    </c1:C1PropertyGrid.PropertyAttributes>
-                </c1:C1PropertyGrid>
+                <c1:C1PropertyGrid x:Name="propertyGrid" Grid.Column="1" ShowDescription="True" ShowResetButton="True" Margin="5"
+                                   SelectedObject="{Binding ., ElementName=contentControl}"/>
             </Grid>
         </c1:C1TabItem>
 

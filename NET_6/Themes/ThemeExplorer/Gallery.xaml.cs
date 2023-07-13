@@ -120,6 +120,7 @@ namespace ThemeExplorer
             pivot.ThemeResources = theme;
             sched1.Theme = theme;
             ganttPage.Theme = theme;
+            inputAndEditing.Theme = theme;
         }
         #endregion
 

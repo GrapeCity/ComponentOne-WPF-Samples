@@ -463,4 +463,51 @@
   <data name="AdvancedCustomCellsTitle" xml:space="preserve">
     <value>Advanced custom cells</value>
   </data>
+  <data name="ErrorIconTemplate" xml:space="preserve">
+    <value>ErrorIconTemplate</value>
+  </data>
+  <data name="ErrorStyle" xml:space="preserve">
+    <value>ErrorStyle</value>
+  </data>
+  <data name="ShowErrors" xml:space="preserve">
+    <value>ShowErrors</value>
+  </data>
+  <data name="ValidationDescription" xml:space="preserve">
+    <value>Show how to display and style validation</value>
+  </data>
+  <data name="ValidationTitle" xml:space="preserve">
+    <value>Validation</value>
+  </data>
+  <data name="DataTableSampleDescription" xml:space="preserve">
+    <value>When FlexGrid is bound to Microsoft DataTable it supports all the features just by setting it in the ItemsSource. You can see editing, adding, removing, filtering, sorting and validation in action.</value>
+  </data>
+  <data name="DataTableSampleTitle" xml:space="preserve">
+    <value>DataTable</value>
+  </data>
+  <data name="ChangesInDataTableMessage" xml:space="preserve">
+    <value>{0} rows added
+{1} rows modified
+{2} rows deleted</value>
+  </data>
+  <data name="NoChangesEditDataTableFirstMessage" xml:space="preserve">
+    <value>There are no changes in the table yet, Please edit the cells by pressing F2 or double click, or remove rows by pressing delete or use new row to add items.</value>
+  </data>
+  <data name="ShowChangesInTableLabel" xml:space="preserve">
+    <value>Show changes in the table</value>
+  </data>
+  <data name="AllCustomersLabel" xml:space="preserve">
+    <value>All customers</value>
+  </data>
+  <data name="SelectedCustomersLabel" xml:space="preserve">
+    <value>Selected customers</value>
+  </data>
+  <data name="SelectedItemsDescription" xml:space="preserve">
+    <value>Shows how to bind the SelectedItems of one grid to another control</value>
+  </data>
+  <data name="SelectedItemsTitle" xml:space="preserve">
+    <value>SelectedItems</value>
+  </data>
+  <data name="SelectCustomersMessage" xml:space="preserve">
+    <value>Please select customers on the grid at the left.</value>
+  </data>
 </root>

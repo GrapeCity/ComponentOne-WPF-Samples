@@ -6,6 +6,12 @@
     <OutputType>WinExe</OutputType>
     <ApplicationIcon>c1-ball.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="Resources\chart.png" />
     <None Remove="Resources\dataengine.xml" />
@@ -33,10 +39,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>6.0.20231.514</Version>
+      <Version>6.0.20232.591</Version>
     </PackageReference>
     <PackageReference Include="C1.Zip" Version="2.0.20202.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />

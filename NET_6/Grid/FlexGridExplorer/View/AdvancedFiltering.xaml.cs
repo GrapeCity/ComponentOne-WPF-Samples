@@ -1,6 +1,7 @@
 ﻿using C1.DataCollection;
 using C1.WPF.TabControl;
 using FlexGridExplorer.Resources;
+using System.Linq;
 using System.Windows.Controls;
 
 namespace FlexGridExplorer
@@ -16,7 +17,7 @@ namespace FlexGridExplorer
         {
             InitializeComponent();
             Tag = AppResources.AdvancedFilteringDesc;
-            _collection = new C1DataCollection<TaskItem>(TaskItem.GetRandomList(100));
+            _collection = new C1DataCollection<TaskItem>(TaskItem.GetRandomList(100).ToList());
             grid.ItemsSource = _collection;
             dataFilter.ItemsSource = _collection;
         }

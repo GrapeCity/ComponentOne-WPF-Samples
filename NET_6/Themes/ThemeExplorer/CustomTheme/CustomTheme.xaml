@@ -624,6 +624,15 @@
         <Setter Property="FontWeight" Value="Medium"/>
     </Style>
 
+    <Style x:Key="{ComponentResourceKey {x:Type core:C1Button}, AccentStyle}" TargetType="core:C1Button" BasedOn="{StaticResource C1ButtonStyle}">
+        <Setter Property="core:TypographyExtensions.CharacterCasing" Value="Upper"/>
+        <Setter Property="Typography.CapitalSpacing" Value="True"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Background" Value="{StaticResource FocusBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource BaseColorBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource FocusBrush}"/>
+    </Style>
+
     <Style TargetType="{x:Type core:C1ToggleButton}" BasedOn="{StaticResource C1ToggleButtonStyle}">
         <Setter Property="core:TypographyExtensions.CharacterCasing" Value="Upper"/>
         <Setter Property="Typography.CapitalSpacing" Value="True"/>

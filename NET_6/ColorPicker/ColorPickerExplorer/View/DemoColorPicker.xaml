@@ -9,6 +9,6 @@
     </UserControl.Resources>
     <!-- Control instance -->
     <Border>
-        <c1:C1ColorPicker x:Name="colorPicker" Height="26" Width="60" />
+        <c1:C1ColorPicker x:Name="colorPicker" Height="26" Width="60" ShowTransparentColor="True" />
     </Border>
 </UserControl>
