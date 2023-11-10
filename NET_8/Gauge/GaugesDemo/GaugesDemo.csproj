@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="C1Gauge101.Xamarin.csproj.vspscc" />
+    <None Remove="GCDTLicenses.xml" />
+    <None Remove="Images\gauge_basic.png" />
+    <None Remove="Images\gauge_bullet.png" />
+    <None Remove="Images\gauge_linear.png" />
+    <None Remove="Images\gauge_radial.png" />
+    <None Remove="Images\gauge_ranges.png" />
+    <None Remove="Images\gauge_scaling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gauge_basic.png" />
+    <Resource Include="Images\gauge_bullet.png" />
+    <Resource Include="Images\gauge_linear.png" />
+    <Resource Include="Images\gauge_radial.png" />
+    <Resource Include="Images\gauge_ranges.png" />
+    <Resource Include="Images\gauge_scaling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GaugesDemo.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>8.0.20233.668</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Gauge">
+      <Version>8.0.20233.668</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>8.0.20233.668</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Rendering">
+      <Version>8.0.20233.668</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

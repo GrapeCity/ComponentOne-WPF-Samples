@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="FlexGridExplorer.StarSizing"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"       
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <c1:FlexGrid x:Name="grid" 
+                 AutoGenerateColumns="False" 
+                 AllowResizing="None" 
+                 HeadersVisibility="Column" 
+                 Background="White"
+                 RowBackground="#FFE5E6FA"
+                 Foreground="Black"
+                 AlternatingRowBackground="White" 
+                 GridLinesVisibility="None"
+                 ColumnHeaderBackground="#FF778898" 
+                 ColumnHeaderForeground="White" 
+                 ColumnHeaderFontWeight="Bold"
+                 SelectionBackground="#FFFAD127" 
+                 SelectionForeground="Black">
+            <c1:FlexGrid.Columns>
+                <c1:GridColumn Binding="FirstName" Width="*"/>
+                <c1:GridColumn Binding="LastName" Width="*"/>
+                <c1:GridColumn Binding="LastOrderDate" Width="*" Format="d"/>
+                <c1:GridColumn Binding="OrderTotal" Width="*" Format="N" HorizontalAlignment="Right"/>
+            </c1:FlexGrid.Columns>
+        </c1:FlexGrid>
+    </Grid>
+</UserControl>

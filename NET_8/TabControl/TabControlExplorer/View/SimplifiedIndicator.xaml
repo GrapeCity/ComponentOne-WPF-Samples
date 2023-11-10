@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="TabControlExplorer.SimplifiedIndicator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="4">
+            <TextBlock Margin="0 0 5 0" VerticalAlignment="Center" Text="Tab Strip Placement:" />
+            <c1:C1ComboBox Height="30" Name="tabStripPlacement" Placeholder="Position" SelectedValueChanged="tabStripPlacement_SelectedValueChanged">
+                <c1:C1ComboBoxItem Content="Top" IsSelected="True" />
+                <c1:C1ComboBoxItem Content="Bottom" />
+                <c1:C1ComboBoxItem Content="Left" />
+                <c1:C1ComboBoxItem Content="Right" />
+            </c1:C1ComboBox>
+            <TextBlock Margin="5 0" VerticalAlignment="Center" Text="Indicator Placement:" />
+            <c1:C1ComboBox Height="30" Name="indicatorPlacement" Placeholder="Indicator Placement" SelectedValueChanged="indicatorPlacement_SelectedValueChanged">
+                <c1:C1ComboBoxItem Content="Top"/>
+                <c1:C1ComboBoxItem Content="Bottom" IsSelected="True" />
+                <c1:C1ComboBoxItem Content="Left" IsEnabled="False"/>
+                <c1:C1ComboBoxItem Content="Right" IsEnabled="False" />
+            </c1:C1ComboBox>
+            <TextBlock Margin="5 0" VerticalAlignment="Center" Text="Indicator Brush:" />
+            <c1:C1ColorPicker Width="50" Height="30" Name="indicatorBrush" SelectedBrush="{Binding IndicatorBrush, ElementName=c1Tab, Mode=TwoWay}" />
+            <TextBlock Margin="5 0" VerticalAlignment="Center" Text="Indicator Visible:" />
+            <c1:C1ComboBox Height="30" Name="indicatorVisible" Placeholder="Indicator Visible" SelectedItemChanged="indicatorVisible_SelectedItemChanged" >
+                <c1:C1ComboBoxItem Content="Visible" IsSelected="True"/>
+                <c1:C1ComboBoxItem Content="Collapsed"  />
+                <c1:C1ComboBoxItem Content="Hidden"  />
+            </c1:C1ComboBox>
+        </StackPanel>
+        <c1:C1TabControl Grid.Row="1" Name="c1Tab" FontSize="20" MouseOverBrush="Transparent" TabStripMenuVisibility="Visible" SelectedIndex="1">
+            <c1:C1TabItem TabShape="Rectangle" BorderThickness="0" Header="Landing" BorderBrush="Transparent" />
+            <c1:C1TabItem TabShape="Rectangle" BorderThickness="0" Header="Summary" BorderBrush="Transparent" />
+            <c1:C1TabItem TabShape="Rectangle" BorderThickness="0" Header="Charts" BorderBrush="Transparent" />
+            <c1:C1TabItem TabShape="Rectangle" BorderThickness="0" Header="Employees" BorderBrush="Transparent" />
+            <c1:C1TabItem TabShape="Rectangle" BorderThickness="0" Header="Reports" BorderBrush="Transparent" />
+        </c1:C1TabControl>
+    </Grid>
+</UserControl>

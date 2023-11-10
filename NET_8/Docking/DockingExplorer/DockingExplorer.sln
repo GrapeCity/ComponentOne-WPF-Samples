@@ -1,0 +1,43 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockingExplorer", "DockingExplorer.csproj", "{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCDebug|x86 = GCDebug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|x86 = GCRelease|x86
+		GRAPECITY|Any CPU = GRAPECITY|Any CPU
+		GRAPECITY|x86 = GRAPECITY|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GCDebug|x86.ActiveCfg = Debug|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GCRelease|x86.ActiveCfg = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GRAPECITY|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GRAPECITY|Any CPU.Build.0 = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GRAPECITY|x86.ActiveCfg = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.GRAPECITY|x86.Build.0 = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3BA62C-0B1E-4697-9155-25728A8C0CE0}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90EAC2B9-03C0-42BF-88CE-7DC2A8143E52}
+	EndGlobalSection
+EndGlobal

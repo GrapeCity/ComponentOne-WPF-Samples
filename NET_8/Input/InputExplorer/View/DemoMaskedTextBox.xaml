@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="InputExplorer.DemoMaskedTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:InputExplorer"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style TargetType="TextBox" >
+            <Setter Property="Height" Value="30" />
+        </Style>
+    </UserControl.Resources>
+    <StackPanel Margin="5">
+        <TextBlock Text="Masked TextBox" FontWeight="Bold" Margin="5" />
+        <c1:C1MaskedTextBox x:Name="maskedTextBox" Mask="{Binding Mask}" TextMaskFormat="{Binding MaskFormat}" Width="300" HorizontalAlignment="Left" />
+
+        <TextBlock Text="Raw Value" FontWeight="Bold" Margin="5" />
+        <c1:C1TextBoxBase Text="{Binding ElementName=maskedTextBox, Path=Value}" HorizontalAlignment="Left" Width="300" IsReadOnly="True" />
+
+        <TextBlock Text="Mask templates" FontWeight="Bold" Margin="5" />
+        <c1:C1ListView x:Name="lstMaskTemplates" ItemsSource="{x:Static local:C1MaskedTextBoxSettings.MaskTemplates}" Height="80"
+                    BorderThickness="0" SelectionChanged="lstMaskTemplates_SelectionChanged_1" Orientation="Horizontal" >
+            <c1:C1ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="4" Background="LightBlue" Height="60">
+                        <TextBlock Text="{Binding Path=Name, StringFormat='Name: {0}'}" />
+                        <TextBlock Text="{Binding Path=Mask, StringFormat='Mask: {0}'}" />
+                        <TextBlock Text="{Binding Path=SampleResult, StringFormat='Example: {0}'}" />
+                    </StackPanel>
+                </DataTemplate>
+            </c1:C1ListView.ItemTemplate>
+        </c1:C1ListView>
+
+        <TextBlock Text="Custom Mask" FontWeight="Bold" Margin="5" />
+        <c1:C1TextBoxBase x:Name="txtCustomMask" Text="{Binding Mask}" Width="300" HorizontalAlignment="Left" />
+
+        <TextBlock Text="Mask Format" FontWeight="Bold" Margin="5" />
+        <c1:C1ComboBox x:Name="cboMaskFormat" SelectedItem="{Binding MaskFormat, Mode=TwoWay}" ItemsSource="{x:Static local:C1MaskedTextBoxSettings.MaskFormats}" Width="300" HorizontalAlignment="Left" />
+    </StackPanel>
+</UserControl>

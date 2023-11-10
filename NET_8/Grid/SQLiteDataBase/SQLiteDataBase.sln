@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLiteDataBase", "SQLiteDataBase.csproj", "{DD30CF59-685E-4AEC-B9BC-257528395D11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GRAPECITY|Any CPU = GRAPECITY|Any CPU
+		Release|Any CPU = Release|Any CPU
+		UTRelease|Any CPU = UTRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD30CF59-685E-4AEC-B9BC-257528395D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD30CF59-685E-4AEC-B9BC-257528395D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD30CF59-685E-4AEC-B9BC-257528395D11}.GRAPECITY|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD30CF59-685E-4AEC-B9BC-257528395D11}.GRAPECITY|Any CPU.Build.0 = Debug|Any CPU
+		{DD30CF59-685E-4AEC-B9BC-257528395D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD30CF59-685E-4AEC-B9BC-257528395D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD30CF59-685E-4AEC-B9BC-257528395D11}.UTRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{DD30CF59-685E-4AEC-B9BC-257528395D11}.UTRelease|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AC26364-91F1-4AED-8996-034FDC2623E9}
+	EndGlobalSection
+EndGlobal

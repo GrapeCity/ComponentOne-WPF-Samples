@@ -1,0 +1,119 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="C1-ball.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\girl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\guy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\guy2.png" />
+    <Resource Include="Resources\guy3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\girl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Computer.png" />
+    <Resource Include="Resources\ControlPanel.png" />
+    <Resource Include="Resources\Desktop.png" />
+    <Resource Include="Resources\DVDDrive.png" />
+    <Resource Include="Resources\Folder.png" />
+    <Resource Include="Resources\LocalDisk.png" />
+    <Resource Include="Resources\Network.png" />
+    <Resource Include="Resources\PublicDownloads.png" />
+    <Resource Include="Resources\PublicMusic.png" />
+    <Resource Include="Resources\PublicPictures.png" />
+    <Resource Include="Resources\PublicVideos.png" />
+    <Resource Include="Resources\RecycleBin.png" />
+    <Resource Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\assistant.png" />
+    <Resource Include="Resources\group.png" />
+    <Resource Include="Resources\manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\departments.xml" />
+    <EmbeddedResource Include="Resources\employeesDepartment.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\1f4c4-Document.48.png" />
+    <Resource Include="Resources\Menu\closeSolution.png" />
+    <Resource Include="Resources\Menu\copy.png" />
+    <Resource Include="Resources\Menu\cut.png" />
+    <Resource Include="Resources\Menu\delete.png" />
+    <Resource Include="Resources\Menu\e104-Edit.48.png" />
+    <Resource Include="Resources\Menu\e107-Delete.48.png" />
+    <Resource Include="Resources\Menu\e109-Add.48.png" />
+    <Resource Include="Resources\Menu\e10a-Cancel.48.png" />
+    <Resource Include="Resources\Menu\e10d-Redo.48.png" />
+    <Resource Include="Resources\Menu\e10e-Undo.48.png" />
+    <Resource Include="Resources\Menu\e112-Back.48.png" />
+    <Resource Include="Resources\Menu\e115-Settings.48.png" />
+    <Resource Include="Resources\Menu\e132-File.48.png" />
+    <Resource Include="Resources\Menu\e16b-Scissors.48.png" />
+    <Resource Include="Resources\Menu\e16d-Documents.48.png" />
+    <Resource Include="Resources\Menu\e16f-Documents.48.png" />
+    <Resource Include="Resources\Menu\e188-Folder.48.png" />
+    <Resource Include="Resources\Menu\e1da-Folder.48.png" />
+    <Resource Include="Resources\Menu\newFile.png" />
+    <Resource Include="Resources\Menu\newProject.png" />
+    <Resource Include="Resources\Menu\newTeamProject.png" />
+    <Resource Include="Resources\Menu\newWebSite.png" />
+    <Resource Include="Resources\Menu\openFile.png" />
+    <Resource Include="Resources\Menu\openProject.png" />
+    <Resource Include="Resources\Menu\openTeamProject.png" />
+    <Resource Include="Resources\Menu\openWebSite.png" />
+    <Resource Include="Resources\Menu\pageSetup.png" />
+    <Resource Include="Resources\Menu\paste.png" />
+    <Resource Include="Resources\Menu\print.png" />
+    <Resource Include="Resources\Menu\redo.png" />
+    <Resource Include="Resources\Menu\save.png" />
+    <Resource Include="Resources\Menu\saveAll.png" />
+    <Resource Include="Resources\Menu\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.ja.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TabControlExplorer.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.ColorPicker">
+      <Version>8.0.20233.668</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>8.0.20233.668</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>8.0.20233.668</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TabControl">
+      <Version>8.0.20233.668</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

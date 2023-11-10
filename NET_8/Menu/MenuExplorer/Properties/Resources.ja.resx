@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CustomMenuAppearanceDesc" xml:space="preserve">
+    <value>このデモは、カスタムスタイルを C1Menu コントロールに適用する方法を示します。</value>
+    <comment>This demo shows how to apply a custom style to the C1Menu control.</comment>
+  </data>
+  <data name="CustomMenuAppearanceTitle" xml:space="preserve">
+    <value>カスタム外観</value>
+    <comment>Custom Appearance</comment>
+  </data>
+  <data name="DropDownMenuDesc" xml:space="preserve">
+    <value>C1Menu を使用してカスタムドロップダウンを作成します。このデモは、C1DropDownButton コントロール内で C1Menu を使用してドロップダウンメニューを作成する方法を示します。</value>
+    <comment>Create custom drop-downs using C1Menu. This demo shows how to create a dropdown menu using C1Menu inside a C1DropDownButton control.</comment>
+  </data>
+  <data name="DropDownMenuTitle" xml:space="preserve">
+    <value>ドロップダウンメニュー</value>
+    <comment>Drop Down Menu</comment>
+  </data>
+  <data name="DemoMenuDesc" xml:space="preserve">
+    <value>C1Menu コントロールを使用してメニューを作成し、C1ContextMenu コントロールを使用してポップアップメニューをインターフェイスにアタッチします。メニューを任意の深さにネストし、メニューラベルとともに各メニュー項目のアイコンを使用し、メニュー項目をチェック可能にすることもできます。</value>
+    <comment>Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable.</comment>
+  </data>
+  <data name="DemoMenuTitle" xml:space="preserve">
+    <value>C1Menu デモ</value>
+    <comment>Demo C1Menu</comment>
+  </data>
+  <data name="DemoRadialMenuDesc" xml:space="preserve">
+    <value>C1RadialMenu の使用方法を示します</value>
+    <comment>Shows how to use C1RadialMenu</comment>
+  </data>
+  <data name="DemoRadialMenuTitle" xml:space="preserve">
+    <value>C1RadialMenu デモ</value>
+    <comment>Demo C1RadialMenu</comment>
+  </data>
+  <data name="CustomRadialContextMenuDesc" xml:space="preserve">
+    <value>C1RadialMenu を C1RichTextBox で使用する方法を示します。</value>
+    <comment>Shows how to use C1RadialMenu with C1RichTextBox</comment>
+  </data>
+  <data name="CustomRadialContextMenuTitle" xml:space="preserve">
+    <value>カスタムコンテキストメニュー</value>
+    <comment>Custom Context Menu</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Menuエクスプローラー</value>
+  </data>
+</root>

@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CellFactory" xml:space="preserve">
+    <value>FlexGridのCustomCellFactory 機能を使用して FlexPivotGrid コントロールに条件付き書式を適用する方法を示します。
+FlexPivotGrid は FlexGrid コントロールから派生しているため、標準の CustomCellFactory メカニズムを使用して、コンテンツに基づいてセルにスタイルを適用できます（または、必要に応じてセル全体を描画できます）。
+このサンプルは、500 を超える値が薄緑色の背景で表示されるグリッドを示しています。</value>
+    <comment>Shows how to apply conditional formatting to an FlexPivotGrid control using the FlexGrid's CustomCellFactory feature
+The FlexPivotGrid derives from the FlexGrid control, so you can use the standard CustomCellFactory mechanism to apply styles to cells based on their contents(or to draw the entire cell if you prefer).
+This sample shows a grid where values greater than 500 appear with a light green background</comment>
+  </data>
+  <data name="CellFactoryTitle" xml:space="preserve">
+    <value>カスタムセルファクトリ</value>
+    <comment>Custom Cell Factory</comment>
+  </data>
+  <data name="Column" xml:space="preserve">
+    <value>FlexPivotGrid にカスタム計算列を表示します。
+このプロジェクトでは、国別およびカテゴリ別の売上高が表示されます。また、カスタム合計計算による製品売上高の違いを示すいくつかの計算列も表示されます。</value>
+    <comment>Shows a custom calculated column in FlexPivotGrid
+This project shows sales by country and category.It also shows a couple calculated columns that show the difference in product sales a custom total calculation.</comment>
+  </data>
+  <data name="ColumnTitle" xml:space="preserve">
+    <value>カスタム列</value>
+    <comment>Custom Columns</comment>
+  </data>
+  <data name="DataEngine" xml:space="preserve">
+    <value>このサンプルは、分析を実行するために C1DataEngine にデータを取得する方法を示しています。 C1DataEngine は、数百万行の大量のデータを数秒以内に処理できます。 データはデータベースから取得されます。</value>
+    <comment>This sample shows how to get data to C1 DataEngine to perform analytics. C1DataEngine is capable of handling large amount of data, millions of rows in seconds or less. Data is retrieved from a database.</comment>
+  </data>
+  <data name="DataEngineTitle" xml:space="preserve">
+    <value>データエンジン</value>
+  </data>
+  <data name="MultiValue" xml:space="preserve">
+    <value>FlexPivot を使用して１つのビューで複数のフィールドを分析する方法を示します。
+C1FlexPivotFieldList クラスに新しい MaxItems プロパティがあります。このプロパティを使用すると、各フィールドリスト（行、列、フィルター、および値）で許可されるフィールドの数を決定できます。
+[値]リストの MaxItems を１より大きい数値に設定すると、ユーザーは値リストに複数のフィールドを追加できるようになり、それらすべてに対して一度に分析が実行されます。
+ユーザーがこれらのリストに追加できるフィールドの数を制限する場合は、行、列、およびフィルターのリストで MaxItems プロパティを使用することもできます。 たとえば、３つまたは４つを超える行または列フィールドがあることはほとんど意味がありません。</value>
+    <comment>Shows how you can use FlexPivot to analyze multiple fields in one view.
+The C1FlexPivotFieldList class has a new MaxItems property.This property allows you to determine how many fields are allowed in each field list (Rows, Columns, Filters, and Values).
+If you set the MaxItems of the Values list to a number higher than one, users will be able to add multiple fields to the values list, and the analysis will be performed on all of them at once.
+You can also use the MaxItems property on the Rows, Columns, and Filters lists if you want to limit the number of fields users can add to those lists. It rarely makes sense to have more than three or four Row or Column fields for example.</comment>
+  </data>
+  <data name="MultiValueTitle" xml:space="preserve">
+    <value>複数の値</value>
+    <comment>Multi Values</comment>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>FlexPivotPage コントロールをカスタマイズする方法を示します。
+このサンプルは、分離されたストレージ内のセッション間で保持されるデフォルトのビューを作成します。また、事前定義されたビューのリストを含む新しいメニューを FlexPivotPage に追加します。
+IsolationStorageSettings.ApplicationSettings クラスを使用すると、アプリケーション設定を非常に簡単に保存およびロードできます。
+このアプリケーションで定義された定義済みのビューは、FlexPivotField.Format プロパティを使用して日付値をグループ化し、年、月、および曜日ごとに売上を分析する方法を示しています。</value>
+    <comment>Shows how you can customize the FlexPivotPage control.
+The sample creates a default view that is persisted across sessions in isolated storage.It also adds a new menu to the FlexPivotPage that contains a list of predefined views.
+The IsolatedStorageSettings.ApplicationSettings class allows you to save and load application settings very easily.
+The predefined views defined in this application show how you can use the FlexPivotField.Format property to group date values and analyze sales by year, month, and weekday.</comment>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>カスタムページ</value>
+    <comment>Custom Page</comment>
+  </data>
+  <data name="Pivot" xml:space="preserve">
+    <value>FlexPivot を使用すると、表形式およびキューブデータをスライスおよびダイシングして、リアルタイムの情報、洞察、および結果を数秒で提供するピボットグリッドおよびグラフを作成できます。 使いやすいコントロールは、Microsoft Excel®ピボットテーブルをモデルにしているため、すべてのユーザーにとって強力で使い慣れています。</value>
+    <comment>With FlexPivot you can create pivot grids and charts that slice and dice your tabular and cube data to give you real-time information, insights, and results in seconds. The easy-to-use controls are modeled after Microsoft Excel® Pivot Tables, so they're powerful and familiar for all users.</comment>
+  </data>
+  <data name="PivotTitle" xml:space="preserve">
+    <value>概要</value>
+    <comment>Overview</comment>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>デフォルトのテンプレートに基づいてカスタムテンプレートを作成することにより、FlexPivotPage コンポーネントをカスタマイズする方法を示します。
+サンプルは、FlexPivotPage のカスタムテンプレート（App.xaml にあります）を作成します。このテンプレートは、デフォルトのテンプレートのカスタマイズされたバージョンであり、テンプレートに加えられた変更は次のとおりです。
+FlexPivotPanel は、FlexPivotPage の右側にあります。
+FlexPivotChart は、ページ上部の TabPanel から削除され、FlexPivotGrid の下に表示されます。</value>
+    <comment>Shows how to customize the FlexPivotPage component by creating a custom template based on the default one.
+The sample creates a custom template(located in App.xaml) for the FlexPivotPage, this template is a customized version of the default one, the changes made to the template are:
+The FlexPivotPanel is located on the right side of the FlexPivotPage.
+The FlexPivotChart has been removed from the TabPanel at the top of the page and is shown below the FlexPivotGrid</comment>
+  </data>
+  <data name="TemplateTitle" xml:space="preserve">
+    <value>カスタムテンプレート</value>
+    <comment>Custom Template</comment>
+  </data>
+  <data name="CubeAnalysisDesc" xml:space="preserve">
+    <value>キューブデータソースの操作方法を示します。</value>
+    <comment>Shows how to work with cube data source</comment>
+  </data>
+  <data name="CubeAnalysisTitle" xml:space="preserve">
+    <value>キューブ分析</value>
+    <comment>Cube Analysis</comment>
+  </data>
+  <data name="TopNDemoDesc" xml:space="preserve">
+    <value>TopN フィルターの操作方法を示します</value>
+    <comment>Shows how to work with TopN filter</comment>
+  </data>
+  <data name="TopNDemoTitle" xml:space="preserve">
+    <value>TopN フィルター</value>
+    <comment>Top N Filter</comment>
+  </data>
+  <data name="GroupRangesDesc" xml:space="preserve">
+    <value>グループ範囲の操作方法を示します。</value>
+    <comment>Shows how to work with group ranges.</comment>
+  </data>
+  <data name="GroupRangesTitle" xml:space="preserve">
+    <value>グループの範囲</value>
+    <comment>Group Ranges</comment>
+  </data>
+  <data name="ConditionalFormattingDesc" xml:space="preserve">
+    <value>FlexPivot コントロールに条件付き書式を適用する方法を示します。</value>
+    <comment>Shows how to use apply conditional formatting to an FlexPivot control.</comment>
+  </data>
+  <data name="ConditionalFormattingTitle" xml:space="preserve">
+    <value>条件付き書式</value>
+    <comment>Conditional Formatting</comment>
+  </data>
+  <data name="PredefinedPivotViewTooltip" xml:space="preserve">
+    <value>事前定義された FlexPivot ビューを選択します。</value>
+  </data>
+  <data name="CollapseSubTotalRowsColumnsTooltip" xml:space="preserve">
+    <value>すべての小計の行と列を折りたたみます。</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexPivotエクスプローラー</value>
+    <comment>FlexPivotExplorer</comment>
+  </data>
+  <data name="CollapseAll" xml:space="preserve">
+    <value>すべて折りたたむ</value>
+  </data>
+  <data name="ConditionFormat" xml:space="preserve">
+    <value>条件付き書式</value>
+  </data>
+  <data name="GroupPrice" xml:space="preserve">
+    <value>団体料金</value>
+  </data>
+  <data name="SaleByCountry" xml:space="preserve">
+    <value>国別および個人別売上高</value>
+  </data>
+</root>
