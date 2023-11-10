@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C1ComboBoxMutliSelectionSample2010", "C1ComboBoxMutliSelectionSample2010\C1ComboBoxMutliSelectionSample2010.csproj", "{DCB62B50-587C-4007-9FA5-078C3D5543A7}"
 EndProject
@@ -24,5 +24,7 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 	EndGlobalSection
 EndGlobal

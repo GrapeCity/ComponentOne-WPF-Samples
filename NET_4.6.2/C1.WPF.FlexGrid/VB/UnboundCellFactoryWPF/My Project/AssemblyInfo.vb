@@ -14,8 +14,8 @@ Imports System.Windows
 <Assembly: AssemblyTitle("UnboundCellFactoryWPF")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("UnboundCellFactoryWPF")> 
-<Assembly: AssemblyCopyright("Copyright @  2012")> 
+<Assembly: AssemblyProduct("UnboundCellFactoryWPF")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 

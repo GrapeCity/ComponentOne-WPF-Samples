@@ -63,36 +63,36 @@ namespace ColorPickerExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to A series of controls with different levels of features and complexitiy to modify Brushes.
         /// </summary>
-        internal static string BrushesDescription {
+        internal static string BrushPickerDescription {
             get {
-                return ResourceManager.GetString("BrushesDescription", resourceCulture);
+                return ResourceManager.GetString("BrushPickerDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Brushes.
+        ///   Looks up a localized string similar to Brush Picker.
         /// </summary>
-        internal static string BrushesTitle {
+        internal static string BrushPickerTitle {
             get {
-                return ResourceManager.GetString("BrushesTitle", resourceCulture);
+                return ResourceManager.GetString("BrushPickerTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Overview.
+        ///   Looks up a localized string similar to Shows the C1ColorPicker control.
         /// </summary>
-        internal static string OverviewDescription {
+        internal static string ColorPickerDescription {
             get {
-                return ResourceManager.GetString("OverviewDescription", resourceCulture);
+                return ResourceManager.GetString("ColorPickerDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Overview.
+        ///   Looks up a localized string similar to Color Picker.
         /// </summary>
-        internal static string OverviewTitle {
+        internal static string ColorPickerTitle {
             get {
-                return ResourceManager.GetString("OverviewTitle", resourceCulture);
+                return ResourceManager.GetString("ColorPickerTitle", resourceCulture);
             }
         }
         

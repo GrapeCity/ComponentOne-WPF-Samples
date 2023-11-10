@@ -14,8 +14,8 @@ Imports System.Windows
 <Assembly: AssemblyTitle("WpfApplication1")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("WpfApplication1")> 
-<Assembly: AssemblyCopyright("Copyright @  2012")> 
+<Assembly: AssemblyProduct("WpfApplication1")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 

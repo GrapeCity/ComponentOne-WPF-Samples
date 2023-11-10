@@ -90,24 +90,8 @@
                 </Frame.RenderTransform>
             </Frame>
             <local:Loader x:Name="Loader" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <Grid Grid.Row="2" Margin="10 0" Width="250" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <!--<RowDefinition Height="Auto" />-->
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Image Source="/Resources/grapecity_150.png" Stretch="None" HorizontalAlignment="Left"/>
-                <!--<TextBlock FontSize="8" FontWeight="Bold" TextWrapping="Wrap" HorizontalAlignment="Left" Grid.Row="1">
-                    <TextBlock.Inlines>
-                        <Run Text="© 2016 GrapeCity, Inc. All Rights Reserved." />
-                        <Run Text="&#x000A;" />
-                        <Run Text="All product and company names here in may be trademarks of their respective owners." />
-                    </TextBlock.Inlines>
-                </TextBlock>-->
-                <Grid Grid.Row="1">
-                    <!-- social buttons here -->
-                    <local:C1FacebookShareButton VerticalAlignment="Center" x:Name="BTN_facebook" />
-                </Grid>
+            <Grid Grid.Row="2" Margin="10" Width="250" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Image Source="/Resources/MESCIUS_Logo_Style-C_RGB.png" Width="150" Stretch="Fill" HorizontalAlignment="Left"/>
             </Grid>
         </Grid>
     </Window.Content>

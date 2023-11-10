@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using PropertyGridExplorer.Resources;
+using System.Windows.Controls;
 
 namespace PropertyGridExplorer
 {
@@ -7,7 +8,7 @@ namespace PropertyGridExplorer
         public DataObjectProperties()
         {
             InitializeComponent();
-            Tag = Properties.Resources.DataObjectPropertiesDesc;
+            Tag = AppResources.DataObjectPropertiesDesc;
 
             listView.ItemsSource = Customer.GetCustomerList(100);
         }

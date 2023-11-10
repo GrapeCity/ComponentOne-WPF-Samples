@@ -14,8 +14,8 @@ Imports System.Windows
 <Assembly: AssemblyTitle("TransactionsWPF")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("ComponentOne")> 
-<Assembly: AssemblyProduct("TransactionsWPF")> 
-<Assembly: AssemblyCopyright("Copyright @ Microsoft 2011")> 
+<Assembly: AssemblyProduct("TransactionsWPF")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 

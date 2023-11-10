@@ -80,7 +80,6 @@ namespace FlexChartShowcase
             {
                 FontSize = 25
             };
-            //flexChart.Footer = "Copyright (c) GrapeCity";
             flexChart.SelectionMode = ChartSelectionMode.Series;
             flexChart.LegendToggle = true;
 

@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="Hierarchical Rows" Height="500" Width="1000">
     <Grid>
-        <c1:FlexGrid x:Name="grid" HeadersVisibility="All" AutoGeneratingColumn="OnAutoGeneratingColumn" AllowFiltering="False" AllowSorting="False"/>
+        <c1:FlexGrid x:Name="grid" HeadersVisibility="All" AutoGeneratingColumn="OnAutoGeneratingColumn" AllowFiltering="False" AllowSorting="False" IsReadOnly="True"/>
     </Grid>
 </Window>

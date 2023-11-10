@@ -1,18 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Globalization;
-using System.Windows;
-using FlexViewerExplorer.Resources;
-using C1.WPF.Viewer;
-using System.IO;
-using System.Reflection;
-using C1.WPF.Report;
-using System.Xml.Linq;
-using System.Windows.Input;
+﻿using C1.WPF.Report;
 using C1.WPF.TreeView;
+using FlexViewerExplorer.Resources;
+using System;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Xml.Linq;
 
 namespace FlexViewerExplorer
 {
@@ -24,7 +19,7 @@ namespace FlexViewerExplorer
         #region Variables
 
         // List of all report categories
-        System.Collections.ObjectModel.ObservableCollection<Categories> _list = null;
+        ObservableCollection<Category> _list = null;
         FlexReport _flexReport;
         #endregion
 
@@ -33,35 +28,21 @@ namespace FlexViewerExplorer
             this.InitializeComponent();
 
             Tag = AppResources.FlexReportViewerDesc;
-            _list = Categories.GetAll();
+            _list = Category.GetAll();
             _flexReport = new FlexReport();
-        }
 
-        private void FillTree()
-        {
-
-            foreach (Categories category in _list)
+            foreach (Category category in _list)
             {
-                myTreeView.Items.Add(category);
-                foreach (Reports report in category.ReportsList)
+                var rp = category.ReportsList.FirstOrDefault(r => r.IsSelected == true);
+                if (rp != null)
                 {
-                    myTreeView.Items.Add(report);
-                    C1TreeViewItem item = (C1TreeViewItem)myTreeView.ItemContainerGenerator.ContainerFromItem(report);
-                    if (item == null)
-                        return;
-                    item.Visibility = Visibility.Collapsed;
+                    category.IsExpanded = true;
+                    rp.IsSelected = true;
+                    break;
                 }
             }
-        }
-        private void ExpandCollapseTreeView(Categories categories)
-        {
-            foreach (Reports report in categories.ReportsList)
-            {
-                C1TreeViewItem item = (C1TreeViewItem)myTreeView.ItemContainerGenerator.ContainerFromItem(report);
-                if (item == null)
-                    return;
-                item.Visibility = (item.Visibility == Visibility.Collapsed) ? Visibility.Visible : Visibility.Collapsed;
-            }
+
+            myTreeView.ItemsSource = _list.SelectMany(x => x.ReportsList).GroupBy(x => x.Category).Select(x => new Group { Category = x.Key, Reports = x.ToList() });
         }
 
         private void OpenFile(string rptFile, string rptName)
@@ -75,13 +56,13 @@ namespace FlexViewerExplorer
                 {
 
                     file = new FileStream(rptFile, FileMode.Open, FileAccess.Read);
-                    ChangeConStrin(ref file);
+                    ChangeConnectionString(ref file);
                     _flexReport.Load(file, rptName);
                 }
                 else if (File.Exists(filePath))
                 {
                     file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-                    ChangeConStrin(ref file);
+                    ChangeConnectionString(ref file);
                     _flexReport.Load(file, rptName);
                 }
                 else
@@ -98,7 +79,7 @@ namespace FlexViewerExplorer
         }
 
         //change connection string
-        private void ChangeConStrin(ref Stream file)
+        private void ChangeConnectionString(ref Stream file)
         {
             XDocument xdoc = XDocument.Load(file);
             foreach (XElement item in xdoc.Descendants("ConnectionString"))
@@ -126,7 +107,7 @@ namespace FlexViewerExplorer
         }
 
         #region EventHandler
-        private void MyTreeView_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void myTreeView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
@@ -135,18 +116,12 @@ namespace FlexViewerExplorer
                     return;
                 }
 
-                if (myTreeView.ItemContainerGenerator.Status == System.Windows.Controls.Primitives.GeneratorStatus.ContainersGenerated && myTreeView.SelectedItem.DataContext is Categories)
+                if (myTreeView.SelectedItem.DataContext is Group group)
                 {
-
-                    ExpandCollapseTreeView((myTreeView.SelectedItem.DataContext as Categories));
-                    myTreeView.SelectedItem.IsExpanded = !myTreeView.SelectedItem.IsExpanded;
-                    (myTreeView.SelectedItem.DataContext as Categories).ExpenderImg = ((myTreeView.SelectedItem.DataContext as Categories).ExpenderImg == @"..\Resources\expand.png") ? @"..\Resources\collapse.png" : @"..\Resources\expand.png";
-
-
+                    group.Category.IsExpanded = !group.Category.IsExpanded;
                 }
-                else
+                else if (myTreeView.SelectedItem.DataContext is Report rpt)
                 {
-                    Reports rpt = (myTreeView.SelectedItem.DataContext as Reports);
                     OpenFile(rpt.FileName, rpt.RptName);
                 }
             }
@@ -155,27 +130,7 @@ namespace FlexViewerExplorer
 
             }
         }
-        private void MyTreeView_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (!myTreeView.HasItems)
-            {
-                FillTree();
-                //Select and open first report
-                foreach (Categories category in _list)
-                {
-                    Reports rptSelected = category.ReportsList.Where(r => r.IsSelected == true).FirstOrDefault();
-                    if (rptSelected != null)
-                    {
-                        C1TreeViewItem itemReport = (C1TreeViewItem)myTreeView.ItemContainerGenerator.ContainerFromItem(rptSelected);
-                        ExpandCollapseTreeView(category);
-                        category.ExpenderImg = @"..\Resources\collapse.png";
-                        itemReport.IsSelected = true;
-                        OpenFile(rptSelected.FileName, rptSelected.RptName);
-                        break;
-                    }
-                }
-            }
-        }
+
         private void DockControl_SlidingOpened(object sender, C1.WPF.Docking.SlidingEventArgs e)
         {
             dockControl.Width = 320;

@@ -90,7 +90,7 @@
     <SolidColorBrush x:Key="HyperLinkForeground" Color="#006e2c" />
     <SolidColorBrush x:Key="IndicatorBrush" Color="#006e2c" />
 
-    <Style x:Key="PopupStyle" TargetType="core:C1Border">
+    <Style x:Key="PopupStyle" TargetType="input:C1PopupBorder">
         <Setter Property="Background" Value="{StaticResource BaseColorBrush}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Foreground" Value="{StaticResource ForegroundBrushColor}"/>
@@ -736,9 +736,9 @@
                             </Grid>
                         </core:C1Border>
                         <input:C1Popup x:Name="SubItemsPopup" HorizontalAlignment="Right" AllowsTransparency="True">
-                            <core:C1Border Style="{TemplateBinding PopupStyle}" MaxHeight="{Binding Path=SubMenuMaxHeight, RelativeSource={RelativeSource TemplatedParent}}">
+                            <input:C1PopupBorder Style="{TemplateBinding PopupStyle}" MaxHeight="{Binding Path=SubMenuMaxHeight, RelativeSource={RelativeSource TemplatedParent}}">
                                 <menu:C1MenuList x:Name="MenuList" Background="{DynamicResource MenuBrush}" BorderThickness="0" Foreground="{TemplateBinding Foreground}" />
-                            </core:C1Border>
+                            </input:C1PopupBorder>
                         </input:C1Popup>
                     </Grid>
                 </ControlTemplate>
@@ -1101,10 +1101,10 @@
                             </Grid>
                         </core:C1Border>
                         <input:C1Popup x:Name="SubItemsPopup" HorizontalAlignment="Right" AllowsTransparency="True">
-                            <core:C1Border Style="{TemplateBinding PopupStyle}" Background="{DynamicResource MenuBrush}" MaxHeight="{Binding Path=SubMenuMaxHeight, RelativeSource={RelativeSource TemplatedParent}}">
+                            <input:C1PopupBorder Style="{TemplateBinding PopupStyle}" Background="{DynamicResource MenuBrush}" MaxHeight="{Binding Path=SubMenuMaxHeight, RelativeSource={RelativeSource TemplatedParent}}">
                                 <ribbon:ToolMenuList x:Name="MenuList" PopupStyle="{TemplateBinding PopupStyle}"
                                                      BorderThickness="0" Background="Transparent" Foreground="{TemplateBinding Foreground}"/>
-                            </core:C1Border>
+                            </input:C1PopupBorder>
                         </input:C1Popup>
                     </Grid>
                 </ControlTemplate>

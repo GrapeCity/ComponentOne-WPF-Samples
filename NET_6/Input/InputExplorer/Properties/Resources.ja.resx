@@ -234,4 +234,88 @@
     <value>検証フォーム</value>
     <comment>Validation Form</comment>
   </data>
+  <data name="AgeRequirement" xml:space="preserve">
+    <value>{0} は {1} 歳以上である必要があります。</value>
+    <comment>{0} must be someone at least {1} years of age</comment>
+  </data>
+  <data name="CanNotWorkMoreThan" xml:space="preserve">
+    <value>勤務時間を８時間以上にすることはできません。</value>
+    <comment>Can not work more than 8 hours</comment>
+  </data>
+  <data name="CharactersNotAllowed" xml:space="preserve">
+    <value>文字は使用できません。</value>
+    <comment>Characters are not allowed.</comment>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>生年月日</value>
+    <comment>Date Of Birth</comment>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>e-mail</value>
+    <comment>e-mail</comment>
+  </data>
+  <data name="FavoriteColor" xml:space="preserve">
+    <value>お気に入りの色</value>
+    <comment>Favorite Color</comment>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>女性</value>
+    <comment>Female</comment>
+  </data>
+  <data name="FieldMustBeBetween" xml:space="preserve">
+    <value>{0} フィールドは {1} から {2} の間でなければなりません。</value>
+    <comment>The field {0} must be between {1} and {2}</comment>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>{0} フィールドは必須項目です。</value>
+    <comment>The {0} field is required.</comment>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>名</value>
+    <comment>First Name</comment>
+  </data>
+  <data name="FormWasValidated" xml:space="preserve">
+    <value>フォームは検証されました！</value>
+    <comment>The form was validated!</comment>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>性別</value>
+    <comment>Gender</comment>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>姓</value>
+    <comment>Last Name</comment>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>男性</value>
+    <comment>Male</comment>
+  </data>
+  <data name="OtherGender" xml:space="preserve">
+    <value>その他</value>
+    <comment>Other</comment>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>画像</value>
+    <comment>Picture</comment>
+  </data>
+  <data name="Stars" xml:space="preserve">
+    <value>星</value>
+    <comment>Stars</comment>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>件名</value>
+    <comment>Submit</comment>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>勤務時間</value>
+    <comment>Working hours</comment>
+  </data>
+  <data name="StopsSliderDescription" xml:space="preserve">
+    <value>つまみをドラッグしたり、トラック内をクリックして新しいつまみを追加したり、Del キーでつまみを削除したりできる、ストップスライダーコントロールを示します。</value>
+    <comment>Shows a stops slider control allowing to drag the thumbs as well as adding new ones by clicking in the track and remove them with Del key.</comment>
+  </data>
+  <data name="StopsSliderTitle" xml:space="preserve">
+    <value>ストップスライダー</value>
+    <comment>Stops Slider</comment>
+  </data>
 </root>

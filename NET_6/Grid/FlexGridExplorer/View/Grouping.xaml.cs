@@ -1,4 +1,5 @@
-﻿using FlexGridExplorer.Resources;
+﻿using C1.WPF.Grid;
+using FlexGridExplorer.Resources;
 using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -15,6 +16,10 @@ namespace FlexGridExplorer
         {
             InitializeComponent();
             Tag = AppResources.GroupingDescription;
+
+            groupRowPosition.ItemsSource = new GridGroupRowPosition[] { GridGroupRowPosition.AboveData, GridGroupRowPosition.BelowData, GridGroupRowPosition.None };
+            groupSummariesPosition.ItemsSource = new GridGroupSummariesPosition[] { GridGroupSummariesPosition.Group, GridGroupSummariesPosition.Bottom, GridGroupSummariesPosition.None };
+
             UpdateVideos();
         }
 

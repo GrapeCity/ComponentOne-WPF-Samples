@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("Localization")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyConfiguration("")>
-<Assembly: AssemblyCompany("GrapeCity, Inc.")>
-<Assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyProduct("Localization")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>

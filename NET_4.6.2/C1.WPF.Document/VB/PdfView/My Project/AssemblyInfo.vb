@@ -15,7 +15,7 @@ Imports System.Windows
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("PdfView")>
-<Assembly: AssemblyCopyright("Copyright ©  2017")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: ComVisible(false)>
 

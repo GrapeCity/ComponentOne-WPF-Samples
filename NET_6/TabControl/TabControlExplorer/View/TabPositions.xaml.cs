@@ -10,8 +10,6 @@ namespace TabControlExplorer
     /// </summary>
     public partial class TabPositions : UserControl
     {
-        private bool _closing = false;
-
         public TabPositions()
         {
             InitializeComponent();
@@ -39,7 +37,7 @@ namespace TabControlExplorer
             {
                 try
                 {
-                    c1Tab.TabItemRotation = Convert.ToInt32((e.NewValue as C1ComboBoxItem).Content);
+                    c1Tab.TabItemRotation = Convert.ToInt32(e.NewValue);
                 }
                 catch { }
             }
@@ -51,7 +49,7 @@ namespace TabControlExplorer
             {
                 try
                 {
-                    c1Tab.TabStripPlacement = (Dock)Enum.Parse(typeof(Dock), (e.NewValue as C1ComboBoxItem).Content as string);
+                    c1Tab.TabStripPlacement = (Dock)Enum.Parse(typeof(Dock), e.NewValue as string);
                 } 
                 catch { }
             }

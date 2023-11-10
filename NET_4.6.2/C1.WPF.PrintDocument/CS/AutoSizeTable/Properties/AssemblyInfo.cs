@@ -10,8 +10,8 @@ using System.Windows;
 [assembly: AssemblyTitle("AutoSizeTable")]
 [assembly: AssemblyProduct("AutoSizeTable")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("GrapeCity, Inc.")]
-[assembly: AssemblyCopyright("(c) GrapeCity, Inc.  All rights reserved.")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyCopyright("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

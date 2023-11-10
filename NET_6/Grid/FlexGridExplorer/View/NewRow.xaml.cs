@@ -25,9 +25,12 @@ namespace FlexGridExplorer
 
         private void OnRowEditEnding(object sender, GridCellEditEventArgs e)
         {
-            var row = grid.Rows[e.CellRange.Row];
-            if(!(row.DataItem as Customer).Validate())
-                e.Cancel = true;
+            if (!e.CancelEdits)
+            {
+                var row = grid.Rows[e.CellRange.Row];
+                if (!(row.DataItem as Customer).Validate())
+                    e.Cancel = true;
+            }
         }
     }
 }

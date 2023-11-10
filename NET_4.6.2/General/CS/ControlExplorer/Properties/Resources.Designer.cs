@@ -70,7 +70,7 @@ namespace ControlExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.grapecity.com/componentone/wpf.
+        ///   Looks up a localized string similar to https://developer.mescius.com/componentone/wpf.
         /// </summary>
         public static string About_Uri {
             get {
@@ -97,7 +97,7 @@ namespace ControlExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to © 2016 GrapeCity, Inc. All Rights Reserved..
+        ///   Looks up a localized string similar to © MESCIUS inc. All rights reserved..
         /// </summary>
         public static string Copyright_Text {
             get {
@@ -214,7 +214,7 @@ namespace ControlExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sorry, this sample was not found at the moment. You can browse and download all samples at https://www.grapecity.com/en/samples?display_limit=25..
+        ///   Looks up a localized string similar to Sorry, this sample was not found at the moment. You can browse and download all samples at https://developer.mescius.com/samples?display_limit=25..
         /// </summary>
         public static string NoSampleFound_Text {
             get {
@@ -241,7 +241,7 @@ namespace ControlExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.grapecity.com/en/pricing.
+        ///   Looks up a localized string similar to https://developer.mescius.com/pricing.
         /// </summary>
         public static string Pricing_Uri {
             get {
@@ -286,7 +286,7 @@ namespace ControlExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.grapecity.com/en/support/contact.
+        ///   Looks up a localized string similar to https://developer.mescius.com/support/contact.
         /// </summary>
         public static string Support_Uri {
             get {
@@ -304,7 +304,7 @@ namespace ControlExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.grapecity.com/en/download/ultimate.
+        ///   Looks up a localized string similar to https://developer.mescius.com/download/ultimate.
         /// </summary>
         public static string Trial_Uri {
             get {

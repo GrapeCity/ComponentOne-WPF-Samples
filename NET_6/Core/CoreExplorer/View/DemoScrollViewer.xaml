@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="CoreExplorer.DemoScrollViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CoreExplorer"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <c1:C1ScrollViewer>
+            <c1:C1ScrollViewer.TopLeftHeader>
+                <Rectangle Fill="Red" Width="40" Height="40"/>
+            </c1:C1ScrollViewer.TopLeftHeader>
+            <c1:C1ScrollViewer.TopHeader>
+                <Rectangle Width="2000" Height="40">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                            <GradientStop Color="#FFF9EEDD" Offset="1"/>
+                            <GradientStop Color="#FFFF9E0E" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </c1:C1ScrollViewer.TopHeader>
+            <c1:C1ScrollViewer.LeftHeader>
+                <Rectangle Width="40" Height="2000">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFC7F7C5" Offset="1"/>
+                            <GradientStop Color="#FF05A700" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </c1:C1ScrollViewer.LeftHeader>
+            <c1:C1ScrollViewer.Content>
+                <Rectangle Width="2000" Height="2000">
+                    <Rectangle.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF7AFD56" Offset="1"/>
+                            <GradientStop Color="White" Offset="0"/>
+                        </RadialGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </c1:C1ScrollViewer.Content>
+            <c1:C1ScrollViewer.BottomLeftHeader>
+                <Rectangle Fill="Blue" Width="40" Height="40"/>
+            </c1:C1ScrollViewer.BottomLeftHeader>
+            <c1:C1ScrollViewer.BottomHeader>
+                <Rectangle Width="2000" Height="40">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                            <GradientStop Color="#FFDFD2E8" Offset="1"/>
+                            <GradientStop Color="#FF8D2BD4" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </c1:C1ScrollViewer.BottomHeader>
+        </c1:C1ScrollViewer>
+    </Grid>
+</UserControl>

@@ -16,6 +16,7 @@ namespace ListViewExplorer
             cbShowCheckBox.IsChecked = true;
 
             C1ListView.Orientation = Orientation.Vertical;
+            C1ListView.ItemHeight = 72;
             cbOrientation.SelectedIndex = 1;
 
         }

@@ -11,8 +11,8 @@ using System.Windows;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyProduct("CustomDialogs")]
-[assembly: AssemblyCompany("GrapeCity, Inc.")]
-[assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

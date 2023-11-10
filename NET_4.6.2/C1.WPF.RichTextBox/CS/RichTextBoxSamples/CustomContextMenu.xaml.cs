@@ -69,7 +69,7 @@ namespace RichTextBoxSamples
 
         private void rtb_RequestNavigate(object sender, C1.WPF.RichTextBox.RequestNavigateEventArgs e)
         {
-            if (MessageBox.Show("The document is requesting to navigate to " + e.Hyperlink.NavigateUri, "Navigate", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+            if (MessageBox.Show(string.Format(Properties.Resources.NavigationMessage, e.Hyperlink.NavigateUri), Properties.Resources.Navigate,MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
             {
                 Window window = new Window();
                 WebBrowser wb = new WebBrowser();

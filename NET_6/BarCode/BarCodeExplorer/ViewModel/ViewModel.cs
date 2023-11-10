@@ -649,7 +649,7 @@ namespace BarCodeExplorer
                 return _officePhone;
             }
             set
-            {
+            {              
                 _officePhone = value;
                 EncodingText = ToString();
                 OnPropertyChanged("OfficePhone");
@@ -748,42 +748,52 @@ namespace BarCodeExplorer
         {
             get
             {
-                return "Website(www.grapecity.com/en/componentone)";
+                return "Website(developer.mescius.com/componentone)";
             }
         }
 
         public override string ToString()
         {
-            string str = string.Empty;
-            str = string.IsNullOrEmpty(Prefix) ? str : str + "Prefix:" + Prefix + " ";
-            str = string.IsNullOrEmpty(FirstName) ? str : str + "FirstName:" + FirstName + " ";
-            str = string.IsNullOrEmpty(LastName) ? str : str + "LastName:" + LastName + " ";
-            str = string.IsNullOrEmpty(Suffix) ? str : str + "Suffix:" + Suffix + " ";
-            str = string.IsNullOrEmpty(FullName) ? str : str + "FullName:" + FullName + " ";
-            str = string.IsNullOrEmpty(Nickname) ? str : str + "Nickname:" + Nickname + " ";
-            str = string.IsNullOrEmpty(Photo) ? str : str + "Photo:" + Photo + " ";
-            str = string.IsNullOrEmpty(Title) ? str : str + "Title:" + Title + " ";
-            str = string.IsNullOrEmpty(Role) ? str : str + "Role:" + Role + " ";
-            str = string.IsNullOrEmpty(Organization) ? str : str + "Organization:" + Organization + " ";
-            str = string.IsNullOrEmpty(Logo) ? str : str + "Logo:" + Logo + " ";
-            str = string.IsNullOrEmpty(HomeAddress) ? str : str + "Home Address:" + HomeAddress + " ";
-            str = string.IsNullOrEmpty(HomeCity) ? str : str + "Home City:" + HomeCity + " ";
-            str = string.IsNullOrEmpty(HomeState) ? str : str + "Home State:" + HomeState + " ";
-            str = string.IsNullOrEmpty(HomeZip) ? str : str + "Home Zip:" + HomeZip + " ";
-            str = string.IsNullOrEmpty(HomeCountry) ? str : str + "Home Country:" + HomeCountry + " ";
-            str = string.IsNullOrEmpty(OfficeAddress) ? str : str + "Office Address:" + OfficeAddress + " ";
-            str = string.IsNullOrEmpty(OfficeCity) ? str : str + "Office City:" + OfficeCity + " ";
-            str = string.IsNullOrEmpty(OfficeState) ? str : str + "Office State:" + OfficeState + " ";
-            str = string.IsNullOrEmpty(OfficeZip) ? str : str + "Office Zip:" + OfficeZip + " ";
-            str = string.IsNullOrEmpty(OfficeCountry) ? str : str + "Office Country:" + OfficeCountry + " ";
-            str = string.IsNullOrEmpty(HomePhone) ? str : str + "Home Phone:" + HomePhone + " ";
-            str = string.IsNullOrEmpty(OfficePhone) ? str : str + "Office Phone:" + OfficePhone + " ";
-            str = string.IsNullOrEmpty(Fax) ? str : str + "Fax:" + Fax + " ";
-            str = string.IsNullOrEmpty(Cell) ? str : str + "Cell:" + Cell + " ";
-            str = string.IsNullOrEmpty(Email) ? str : str + "Email:" + Email + " ";
-            str = string.IsNullOrEmpty(Website) ? str : str + "Website:" + Website + " ";
+            StringBuilder strBuilder = new StringBuilder();
 
+            StringCreator("Prefix", Prefix);
+            StringCreator("FirstName", FirstName);
+            StringCreator("LastName", LastName);
+            StringCreator("Suffix", Suffix);
+            StringCreator("FullName", FullName);
+            StringCreator("Nickname", Nickname);
+            StringCreator("Photo", Photo);
+            StringCreator("Title", Title);
+            StringCreator("Role", Role);
+            StringCreator("Organization", Organization);
+            StringCreator("Logo", Logo);
+            StringCreator("Home Address", HomeAddress);
+            StringCreator("Home City", HomeCity);
+            StringCreator("Home State", HomeState);
+            StringCreator("Home Zip", HomeZip);
+            StringCreator("Home Country", HomeCountry);
+            StringCreator("Office Address", OfficeAddress);
+            StringCreator("Office City", OfficeCity);
+            StringCreator("Office State", OfficeState);
+            StringCreator("Office Zip", OfficeZip);
+            StringCreator("Office Country", OfficeCountry);
+            StringCreator("Home Phone", HomePhone);
+            StringCreator("Office Phone", OfficePhone);
+            StringCreator("Fax", Fax);
+            StringCreator("Cell", Cell);
+            StringCreator("Email", Email);
+            StringCreator("Website", Website);
+            void StringCreator(string propertyName, string value)
+            {
+                if (!string.IsNullOrEmpty(value))//check if property value is not empty or null. When true don't append anything.
+                {   
+                    strBuilder.Append(propertyName + ":" + value + " ");//when not true append property name, property value and a white space to separate
+                    // different properties from each other.
+                }
+            }
+            string str = strBuilder.ToString().Trim();//remove any trailing space.
             return str;
+
         }
     }
     #endregion

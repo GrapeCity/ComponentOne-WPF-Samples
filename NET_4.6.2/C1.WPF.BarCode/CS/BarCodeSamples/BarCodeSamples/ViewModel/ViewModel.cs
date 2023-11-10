@@ -748,7 +748,7 @@ namespace BarCodesSample
         {
             get
             {
-                return "Website(www.grapecity.com/en/componentone)";
+                return "Website(developer.mescius.com/componentone)";
             }
         }
 

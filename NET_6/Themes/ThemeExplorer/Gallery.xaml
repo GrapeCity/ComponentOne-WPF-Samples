@@ -18,9 +18,13 @@
         <c1:C1TabControl CanUserReorder="True" Grid.Row="1" UnselectedContentMode="OutsideVisualTree" TabStripMenuVisibility="Visible">
             <c1:C1TabItem Header="{x:Static p:Resources.DataManagement}" UnselectedContentMode="OutsideVisualTree" >
                 <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" 
-                             SelectionChanged="DataManagement_SelectionChanged" UnselectedContentMode="OutsideVisualTree" >
+                             SelectionChanged="DataManagement_SelectionChanged" UnselectedContentMode="OutsideVisualTree">
                     <c1:C1TabItem Header="FlexGrid" BorderThickness="0">
-                        <c1:FlexGrid x:Name="flexGrid" Margin="10" HeadersVisibility="All" SelectionMode="RowRange" AllowGrouping="True" />
+                        <c1:FlexGrid x:Name="flexGrid" Margin="10" HeadersVisibility="All" SelectionMode="RowRange" AllowGrouping="True" >
+                            <c1:FlexGrid.ColumnFooterRows>
+                                <c1:GridSummaryRow OptionsMenuVisibility="MouseOver" Height="Auto"/>
+                            </c1:FlexGrid.ColumnFooterRows>
+                        </c1:FlexGrid>
                     </c1:C1TabItem>
                     <c1:C1TabItem Header="ListView" BorderThickness="0">
                         <c1:C1ListView x:Name="listView" Margin="10" DisplayMemberPath="Name" ShowCheckBoxes="True" ShowSelectAll="True" SelectionMode="Extended" />

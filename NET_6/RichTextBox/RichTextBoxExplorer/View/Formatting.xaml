@@ -391,7 +391,7 @@
                                     <c1:C1Paragraph>
                                         <c1:C1Run Text="Inline" />
                                         <c1:C1InlineUIContainer IsEditable="False">
-                                            <Image Source="/RichTextBoxSamples.4;component/Resources/images/c1logo.png" />
+                                            <Image Source="/RichTextBoxExplorer;component/Resources/images/c1logo.png" />
                                         </c1:C1InlineUIContainer>
                                         <c1:C1Run Text="images" />
                                     </c1:C1Paragraph>

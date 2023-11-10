@@ -172,7 +172,7 @@ namespace HierarchicalRows
                     expandButton.CornerRadius = new CornerRadius();
                     expandButton.Background = new SolidColorBrush(Colors.Transparent);
                     expandButton.PressedBrush = new SolidColorBrush(Colors.Transparent);
-                    expandButton.CheckedBrush = new SolidColorBrush(Colors.Transparent);
+                    expandButton.CheckedBackground = new SolidColorBrush(Colors.Transparent);
                     expandButton.MouseOverBrush = new SolidColorBrush(Colors.Transparent);
                     expandButton.CheckedContent = new ContentControl { Width = 15, Height = 15, ContentTemplate = C1IconTemplate.ChevronUp };
                     expandButton.UncheckedContent = new ContentControl { Width = 15, Height = 15, ContentTemplate = C1IconTemplate.ChevronDown };

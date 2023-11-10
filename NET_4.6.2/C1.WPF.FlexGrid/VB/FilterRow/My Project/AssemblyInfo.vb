@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("Microsoft")>
 <Assembly: AssemblyProduct("FilterRow")>
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2010")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

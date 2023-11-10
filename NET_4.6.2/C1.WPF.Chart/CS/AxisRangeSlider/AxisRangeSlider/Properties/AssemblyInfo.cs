@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("AxisRangeSlider")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("GrapeCity, Inc.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AxisRangeSlider")]
-[assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

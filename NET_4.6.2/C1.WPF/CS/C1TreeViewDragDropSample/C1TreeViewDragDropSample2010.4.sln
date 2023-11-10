@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2018
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C1TreeViewDragDropSample2010.4", "C1TreeViewDragDropSample2010\C1TreeViewDragDropSample2010.4.csproj", "{6E8CE8CE-7B37-46EE-AA05-17C8DEE5626F}"
 EndProject
@@ -47,5 +47,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9305C92-A600-4F28-9219-BCFD7DCF6B72}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 	EndGlobalSection
 EndGlobal

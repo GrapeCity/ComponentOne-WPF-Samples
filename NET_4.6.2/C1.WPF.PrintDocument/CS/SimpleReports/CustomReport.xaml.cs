@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using C1.C1Preview;
 using C1.C1Preview.DataBinding;
 using C1.C1Preview.Export;
+using C1.C1Preview.Export.Xps;
 using C1.WPF;
 using Microsoft.Win32;
 
@@ -41,6 +42,7 @@ namespace SimpleReports
            };
         C1PrintDocument _printDocument;
         Cursor _defaultCursor;
+        XpsC1Doc _xpsDoc;
         public CustomReport()
         {
             InitializeComponent();
@@ -71,8 +73,17 @@ namespace SimpleReports
                 return;
             }
 
+            this.Cursor = Cursors.Wait;
             indicator.IsActive = true;
-            await Task.Delay(100);
+
+            c1DocumentViewer1.Document = null;
+            if (_xpsDoc != null)
+            {
+                _xpsDoc.Dispose();
+            }
+            _printDocument.Clear();
+            await Task.Delay(200);
+
             switch (comboReports.SelectedIndex)
             {
                 case 0:
@@ -121,17 +132,15 @@ namespace SimpleReports
                     break;
             }
 
-            c1DocumentViewer1.Document = _printDocument.FixedDocumentSequence;
+            _xpsDoc = _printDocument.GetXpsC1Doc();
+            c1DocumentViewer1.Document = _xpsDoc.XpsDocument.GetFixedDocumentSequence();
             indicator.IsActive = false;
+            // reset cursor
+            this.Cursor = _defaultCursor;
         }
 
         private async Task AlphabeticalListOfProducts()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // set default style
             _printDocument.Style.FontName = "Verdana";
             _printDocument.Style.FontSize = 10;
@@ -248,18 +257,10 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         private async Task CustomerLabels()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // set landscape page orientation
             _printDocument.PageLayout.PageSettings.Landscape = true;
 
@@ -327,18 +328,10 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         private async Task Employees()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // set default style
             _printDocument.Style.FontName = "Verdana";
             _printDocument.Style.FontSize = 10;
@@ -518,18 +511,10 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         private async Task ProductCatalog()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // set default style
             _printDocument.Style.FontName = "Tahoma";
             _printDocument.Style.FontSize = 10;
@@ -742,18 +727,10 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         private async Task SalesChart()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // set default style
             _printDocument.Style.FontName = "Verdana";
             _printDocument.Style.FontSize = 8;
@@ -924,18 +901,10 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         private async Task ProductsByCategory()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // add tag for products count
             var tag = new Tag("ProductCounter", 0, typeof(int));
             _printDocument.Tags.Add(tag);
@@ -1031,17 +1000,9 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
         private async Task EmployeeSalesByCountry()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // set default style
             _printDocument.Style.FontName = "Tahoma";
             _printDocument.Style.FontSize = 8;
@@ -1144,9 +1105,6 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         /// <summary>
@@ -1154,11 +1112,6 @@ namespace SimpleReports
         /// </summary>
         private async Task DataBoundTable()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // Set styles
             _printDocument.Style.FontName = "Verdana";
             _printDocument.Style.FontSize = 10;
@@ -1386,18 +1339,10 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // we're done; reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         private async Task CrossTabReports()
         {
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
-
             // set default style
             _printDocument.Style.FontName = "Tahoma";
             _printDocument.Style.FontSize = 8;
@@ -1568,9 +1513,6 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         private async Task BalanceSheet()
@@ -1624,11 +1566,6 @@ namespace SimpleReports
             shareholdersEquity.Add(new AssetItem() { Name = "Common Stock", Cost = 16300 });
             shareholdersEquity.Add(new AssetItem() { Name = "Additional Paid-in Capital", Cost = 8500 });
             shareholdersEquity.Add(new AssetItem() { Name = "Retained Earnings", Cost = 3819708 });
-
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
 
             // set default style
             _printDocument.Style.FontName = "Tahoma";
@@ -1691,9 +1628,6 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         private async Task PriceComparison()
@@ -1722,11 +1656,6 @@ namespace SimpleReports
             mostPopularConsole.Add(new ProductItem() { Name = "XBox One with KitNet", Price2013 = 299, Price2014 = 120 });
             mostPopularConsole.Add(new ProductItem() { Name = "Play Station 435", Price2013 = 102, Price2014 = 300 });
             mostPopularConsole.Add(new ProductItem() { Name = "Play Station with games", Price2013 = 299, Price2014 = 250 });
-
-            this.Cursor = Cursors.Wait;
-
-            _printDocument.Clear();
-            await Task.Delay(1);
 
             // set default style
             _printDocument.Style.FontName = "Tahoma";
@@ -1761,9 +1690,6 @@ namespace SimpleReports
 
             // generate document
             _printDocument.Generate();
-
-            // reset cursor
-            this.Cursor = _defaultCursor;
         }
 
         #region ** helper methods

@@ -10,10 +10,13 @@ namespace FlexGridExplorer
     /// </summary>
     public partial class CellFreezing : UserControl
     {
+        /// <summary>
+        /// Default constructor of CellFreezing class
+        /// </summary>
         public CellFreezing()
         {
             InitializeComponent();
-            Tag = AppResources.CellFreezingDescription;
+            Tag = AppResources.CellFreezingDescription;     
             var data = Customer.GetCustomerList(1000);
             grid.ItemsSource = data;
             Dictionary<int, string> dct = new Dictionary<int, string>();

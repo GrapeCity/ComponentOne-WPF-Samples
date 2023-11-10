@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("MultiGridPdf")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("GrapeCity, Inc.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MultiGridPdf")]
-[assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

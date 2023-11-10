@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SpellCheckerExplorer"
+             xmlns:properties="clr-namespace:SpellCheckerExplorer.Properties"
              mc:Ignorable="d">
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
@@ -25,7 +25,7 @@
                     <Setter Property="BorderThickness" Value="1"/>
                 </Style>
             </c1:C1ToolStrip.ToolStyle>
-            <c1:C1ButtonTool x:Name="_btnBatch" Label="Batch Check" Click="_btnBatch_Click" >
+            <c1:C1ButtonTool x:Name="_btnBatch" Label="{x:Static properties:Resources.BatchCheck}" Click="_btnBatch_Click" >
                 <c1:C1ButtonTool.IconTemplate>
                     <c1:C1IconTemplate>
                         <c1:C1BitmapIcon Source="../Resources/batchcheck.png"/>

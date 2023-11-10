@@ -12,9 +12,9 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyCompany("GrapeCity, Inc.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ComponentOne BarCode")]
-[assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")]
+[assembly: AssemblyCopyright("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

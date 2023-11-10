@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("DynamicImages")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("GrapeCity, Inc.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("DynamicImages")]
-[assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

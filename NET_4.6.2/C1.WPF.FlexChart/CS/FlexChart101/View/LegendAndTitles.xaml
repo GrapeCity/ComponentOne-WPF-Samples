@@ -63,7 +63,7 @@
         <Chart:C1FlexChart  x:Name="flexChart" BindingX="Country" ItemsSource="{Binding DataContext.Data}" Grid.Row="1"
                             LegendPosition="Right" LegendGroupHeaderStyle="{StaticResource groupHeaderStyle}"
                             Header="Sample Chart" HeaderStyle="{StaticResource footerAndHeaderStyle}"
-                            Footer="copyright © GrapeCity, inc." FooterStyle="{StaticResource footerAndHeaderStyle}">
+                            Footer="" FooterStyle="{StaticResource footerAndHeaderStyle}">
             <Chart:Series SeriesName="DomesticSales" Binding="DomesticSales" LegendGroup="Sales" />
             <Chart:Series SeriesName="DomesticExpenses" Binding="DomesticExpenses" LegendGroup="Expenses"/>
             <Chart:Series SeriesName="ExportSales" Binding="ExportSales" LegendGroup="Sales" />

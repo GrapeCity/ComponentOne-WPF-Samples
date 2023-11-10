@@ -7,13 +7,11 @@
             <Style TargetType="StackPanel">
                 <Setter Property="Orientation" Value="Vertical" />
                 <Setter Property="Margin" Value="2" />
-                <Setter Property="HorizontalAlignment" Value="Left"></Setter>
             </Style>
             <Style TargetType="c1:C1TextBox">
                 <Setter Property="Foreground" Value="{Binding Foreground, ElementName=root}"/>
                 <Setter Property="MinWidth" Value="250"/>
                 <Setter Property="BorderThickness" Value="3"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
             </Style>
             <Style TargetType="TextBlock">
                 <Setter Property="Foreground" Value="Black"></Setter>

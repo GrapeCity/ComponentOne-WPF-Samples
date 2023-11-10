@@ -14,8 +14,8 @@ Imports System.Windows
 <Assembly: AssemblyTitle("OlapQuickStart")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("OlapQuickStart")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
+<Assembly: AssemblyProduct("OlapQuickStart")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 

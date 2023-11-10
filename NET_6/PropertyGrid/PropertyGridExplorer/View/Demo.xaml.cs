@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyGridExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -14,7 +15,7 @@ namespace PropertyGridExplorer
         public Demo()
         {
             InitializeComponent();
-            Tag = Properties.Resources.PropertyGridDemoDesc;
+            Tag = AppResources.PropertyGridDemoDesc;
 
             //propertyGrid.PropertyBoxesLoaded += _propertyGrid_PropertyBoxesLoaded;
             targetButton.Click += new RoutedEventHandler(targetButton_Click);

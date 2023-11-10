@@ -10,7 +10,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Text="GrapeCity,Inc" FontSize="32" Foreground="White" Background="Purple"/>
+            <TextBlock Text="MESCIUS inc." FontSize="32" Foreground="White" Background="Purple"/>
             <TextBlock Text="Component One" Grid.Row="1" FontSize="20" Margin="0,5"/>
             <ContentPresenter Grid.Row="2" Content="{TemplateBinding Content}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         </Grid>

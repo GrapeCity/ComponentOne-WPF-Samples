@@ -1,8 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -13,13 +12,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Gauge">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Rendering">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

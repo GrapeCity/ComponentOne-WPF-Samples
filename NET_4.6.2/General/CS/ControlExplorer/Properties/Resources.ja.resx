@@ -124,7 +124,7 @@
     <value>すべて折りたたみ</value>
   </data>
   <data name="Copyright_Text" xml:space="preserve">
-    <value>Copyright © GrapeCity inc.</value>
+    <value>Copyright © MESCIUS inc.</value>
   </data>
   <data name="ExpandAll_Text" xml:space="preserve">
     <value>すべて展開</value>
@@ -160,16 +160,16 @@
     <value>最も使用されるコントロール</value>
   </data>
   <data name="About_Uri" xml:space="preserve">
-    <value>https://www.grapecity.co.jp/developer/componentone/wpf</value>
+    <value>https://developer.mescius.jp/componentone/wpf</value>
   </data>
   <data name="Support_Uri" xml:space="preserve">
-    <value>https://www.grapecity.co.jp/developer/support</value>
+    <value>https://developer.mescius.jp/support</value>
   </data>
   <data name="Pricing_Uri" xml:space="preserve">
-    <value>https://www.grapecity.co.jp/developer/purchase</value>
+    <value>https://developer.mescius.jp/purchase</value>
   </data>
   <data name="Trial_Uri" xml:space="preserve">
-    <value>https://www.grapecity.co.jp/developer/download</value>
+    <value>https://developer.mescius.jp/download</value>
   </data>
   <data name="FramePage_TitleText" xml:space="preserve">
     <value>WPF コンポーネントデモ ｜ ComponentOne for WPF</value>
@@ -201,6 +201,6 @@
   </data>
   <data name="NoSampleFound_Text" xml:space="preserve">
     <value>このサンプルは現在提供されていないか見つかりません。</value>
-    <comment>Sorry, this sample was not found at the moment. You can browse and download all samples at https://www.grapecity.com/en/samples?display_limit=25.</comment>
+    <comment>Sorry, this sample was not found at the moment. You can browse and download all samples at https://developer.mescius.com/samples?display_limit=25.</comment>
   </data>
 </root>

@@ -79,7 +79,7 @@ namespace FlexChartShowcase
             {
                 FontSize = 25
             };
-            //flexChart.Footer = "Copyright (c) GrapeCity";
+            //flexChart.Footer = "";
             flexChart.SelectionMode = ChartSelectionMode.Series;
             flexChart.LegendToggle = true;
 
@@ -742,6 +742,7 @@ namespace FlexChartShowcase
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null) return null;
             return Enum.Parse(targetType, value.ToString());
         }
     }

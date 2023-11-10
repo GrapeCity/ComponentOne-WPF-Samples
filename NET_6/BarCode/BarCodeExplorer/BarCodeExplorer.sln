@@ -35,4 +35,7 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CED269B-7873-4A7B-BBF3-5BC19BFDF8F9}
 	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\Controls\BarCode\XBarcode\XBarcode.projitems*{2c722df6-e6c6-4eff-9ddc-77f11a103187}*SharedItemsImports = 5
+	EndGlobalSection
 EndGlobal

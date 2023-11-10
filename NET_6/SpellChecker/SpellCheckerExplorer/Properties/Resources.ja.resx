@@ -162,4 +162,13 @@
   <data name="Word" xml:space="preserve">
     <value>ワード</value>
   </data>
+  <data name="BatchCheck" xml:space="preserve">
+    <value>一括チェック</value>
+  </data>
+  <data name="SpellCheckCompletedWithErrors" xml:space="preserve">
+    <value>スペルチェックが完了しました。{0} 個のエラーが見つかりました。</value>
+  </data>
+  <data name="Spelling" xml:space="preserve">
+    <value>スペル</value>
+  </data>	
 </root>

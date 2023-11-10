@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using PropertyGridExplorer.Resources;
+using System.Windows;
 
 namespace PropertyGridExplorer
 {
@@ -10,7 +11,7 @@ namespace PropertyGridExplorer
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = Properties.Resources.Title;
+            this.Title = AppResources.Title;
         }
     }
 }

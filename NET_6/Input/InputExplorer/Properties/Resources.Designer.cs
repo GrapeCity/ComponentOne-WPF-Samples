@@ -97,6 +97,33 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} must be someone at least {1} years of age.
+        /// </summary>
+        public static string AgeRequirement {
+            get {
+                return ResourceManager.GetString("AgeRequirement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can not work more than 8 hours.
+        /// </summary>
+        public static string CanNotWorkMoreThan {
+            get {
+                return ResourceManager.GetString("CanNotWorkMoreThan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Characters are not allowed..
+        /// </summary>
+        public static string CharactersNotAllowed {
+            get {
+                return ResourceManager.GetString("CharactersNotAllowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to use C1CheckList.
         /// </summary>
         public static string CheckListDes {
@@ -111,6 +138,24 @@ namespace InputExplorer.Properties {
         public static string CheckListTitle {
             get {
                 return ResourceManager.GetString("CheckListTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date Of Birth.
+        /// </summary>
+        public static string DateOfBirth {
+            get {
+                return ResourceManager.GetString("DateOfBirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e-mail.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
             }
         }
         
@@ -151,6 +196,69 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Favorite Color.
+        /// </summary>
+        public static string FavoriteColor {
+            get {
+                return ResourceManager.GetString("FavoriteColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female.
+        /// </summary>
+        public static string Female {
+            get {
+                return ResourceManager.GetString("Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field {0} must be between {1} and {2}.
+        /// </summary>
+        public static string FieldMustBeBetween {
+            get {
+                return ResourceManager.GetString("FieldMustBeBetween", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} field is required..
+        /// </summary>
+        public static string FieldRequired {
+            get {
+                return ResourceManager.GetString("FieldRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Name.
+        /// </summary>
+        public static string FirstName {
+            get {
+                return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The form was validated!.
+        /// </summary>
+        public static string FormWasValidated {
+            get {
+                return ResourceManager.GetString("FormWasValidated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gender.
+        /// </summary>
+        public static string Gender {
+            get {
+                return ResourceManager.GetString("Gender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This library includes several WPF input controls for any data entry scenario. Format and parse numbers, dates, colors, and masked text. Select multiple items from a checklist or enter items like a tag editor. Edit a numeric range visually using a slider. Design a custom drop-down UI with ease. Select files from the user&apos;s machine..
         /// </summary>
         public static string Input {
@@ -183,6 +291,24 @@ namespace InputExplorer.Properties {
         public static string InputTitle {
             get {
                 return ResourceManager.GetString("InputTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        public static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male.
+        /// </summary>
+        public static string Male {
+            get {
+                return ResourceManager.GetString("Male", resourceCulture);
             }
         }
         
@@ -228,6 +354,24 @@ namespace InputExplorer.Properties {
         public static string MultiSelectDes {
             get {
                 return ResourceManager.GetString("MultiSelectDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        public static string OtherGender {
+            get {
+                return ResourceManager.GetString("OtherGender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Picture.
+        /// </summary>
+        public static string Picture {
+            get {
+                return ResourceManager.GetString("Picture", resourceCulture);
             }
         }
         
@@ -295,6 +439,15 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Stars.
+        /// </summary>
+        public static string Stars {
+            get {
+                return ResourceManager.GetString("Stars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows a stops slider control allowing to drag the thumbs as well as adding new ones by clicking in the track and remove them with Del key..
         /// </summary>
         public static string StopsSliderDescription {
@@ -309,6 +462,15 @@ namespace InputExplorer.Properties {
         public static string StopsSliderTitle {
             get {
                 return ResourceManager.GetString("StopsSliderTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        public static string Submit {
+            get {
+                return ResourceManager.GetString("Submit", resourceCulture);
             }
         }
         
@@ -363,6 +525,15 @@ namespace InputExplorer.Properties {
         public static string ValidationFormTitle {
             get {
                 return ResourceManager.GetString("ValidationFormTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Working hours.
+        /// </summary>
+        public static string WorkingHours {
+            get {
+                return ResourceManager.GetString("WorkingHours", resourceCulture);
             }
         }
     }

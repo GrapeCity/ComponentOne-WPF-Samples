@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("ComponentOne")>
 <Assembly: AssemblyProduct("Financial")>
-<Assembly: AssemblyCopyright("Copyright © ComponentOne 2013")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

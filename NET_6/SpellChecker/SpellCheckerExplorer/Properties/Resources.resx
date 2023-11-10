@@ -155,5 +155,14 @@
   </data>
   <data name="Word" xml:space="preserve">
     <value>words</value>
+  </data> 
+  <data name="BatchCheck" xml:space="preserve">
+    <value>Batch Check</value>
+  </data>
+  <data name="SpellCheckCompletedWithErrors" xml:space="preserve">
+    <value>Spell-check complete, {0} errors found.</value>
+  </data>
+  <data name="Spelling" xml:space="preserve">
+    <value>Spelling</value>
   </data>
 </root>

@@ -14,8 +14,8 @@ Imports System.Windows
 <Assembly: AssemblyTitle("CustomColumns")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("CustomColumns")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
+<Assembly: AssemblyProduct("CustomColumns")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 

@@ -14,8 +14,8 @@ Imports System.Windows
 <Assembly: AssemblyTitle("ConditionalFormatting")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ConditionalFormatting")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
+<Assembly: AssemblyProduct("ConditionalFormatting")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 

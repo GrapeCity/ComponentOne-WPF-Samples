@@ -97,7 +97,7 @@ namespace PdfAcroform
             button1.Actions.Released.Add(new PdfPushButton.Action(ButtonAction.CallMenu, "FullScreen"));
             button1.Actions.GotFocus.Add(new PdfPushButton.Action(ButtonAction.OpenFile, @"..\..\Program.cs"));
             button1.Actions.LostFocus.Add(new PdfPushButton.Action(ButtonAction.GotoPage, "2"));
-            button1.Actions.Released.Add(new PdfPushButton.Action(ButtonAction.OpenUrl, "https://www.grapecity.com/en/componentone"));
+            button1.Actions.Released.Add(new PdfPushButton.Action(ButtonAction.OpenUrl, "https://developer.mescius.com/componentone"));
 
             //// load second icon
             //using (Stream stream = GetManifestResource("download.png"))

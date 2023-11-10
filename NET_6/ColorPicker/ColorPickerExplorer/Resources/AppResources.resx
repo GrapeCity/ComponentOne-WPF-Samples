@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BrushesDescription" xml:space="preserve">
+  <data name="BrushPickerDescription" xml:space="preserve">
     <value>A series of controls with different levels of features and complexitiy to modify Brushes</value>
   </data>
-  <data name="BrushesTitle" xml:space="preserve">
-    <value>Brushes</value>
+  <data name="BrushPickerTitle" xml:space="preserve">
+    <value>Brush Picker</value>
   </data>
-  <data name="OverviewDescription" xml:space="preserve">
-    <value>Overview</value>
+  <data name="ColorPickerDescription" xml:space="preserve">
+    <value>Shows the C1ColorPicker control</value>
   </data>
-  <data name="OverviewTitle" xml:space="preserve">
-    <value>Overview</value>
+  <data name="ColorPickerTitle" xml:space="preserve">
+    <value>Color Picker</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Choose to include a basic color palette with preselected and standard colors, an advanced palette that users can use to completely customize their color selection, or both! ColorPicker for WPF even includes transparency, hexadecimal color, and RGB and HSL color model support to provide a rich visual color input interface.</value>

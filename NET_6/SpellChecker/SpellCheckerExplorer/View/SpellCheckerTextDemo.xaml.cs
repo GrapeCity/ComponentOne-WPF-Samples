@@ -160,7 +160,7 @@ namespace SpellCheckerExplorer
         {
             if (!e.Cancelled)
             {
-                var msg = string.Format("Spell-check complete, {0} errors found.", e.ErrorCount);
+                var msg = string.Format(Res.SpellCheckCompletedWithErrors, e.ErrorCount);
                 MessageBox.Show(msg, "Spelling");
             }
             WriteLine("CheckControlCompleted: {0} errors found", e.ErrorCount);

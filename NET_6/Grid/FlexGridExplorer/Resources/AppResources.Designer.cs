@@ -702,6 +702,24 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GroupRowPosition.
+        /// </summary>
+        public static string GroupRowPosition {
+            get {
+                return ResourceManager.GetString("GroupRowPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GroupSummariesPosition.
+        /// </summary>
+        public static string GroupSummariesPosition {
+            get {
+                return ResourceManager.GetString("GroupSummariesPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Header Alignment.
         /// </summary>
         public static string HeaderAlignment {
@@ -1098,6 +1116,24 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows a row that summarizes the values in the columns.
+        /// </summary>
+        public static string SummaryRowDescription {
+            get {
+                return ResourceManager.GetString("SummaryRowDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary Row.
+        /// </summary>
+        public static string SummaryRowTitle {
+            get {
+                return ResourceManager.GetString("SummaryRowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sunday.
         /// </summary>
         public static string Sunday {
@@ -1121,6 +1157,24 @@ namespace FlexGridExplorer.Resources {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show how to transpose columns and rows so the data items are shown as columns..
+        /// </summary>
+        public static string TransposedGridDescription {
+            get {
+                return ResourceManager.GetString("TransposedGridDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transposed Grid.
+        /// </summary>
+        public static string TransposedGridTitle {
+            get {
+                return ResourceManager.GetString("TransposedGridTitle", resourceCulture);
             }
         }
         

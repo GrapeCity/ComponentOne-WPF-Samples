@@ -124,7 +124,7 @@
     <value>Collapse All</value>
   </data>
   <data name="Copyright_Text" xml:space="preserve">
-    <value>© 2016 GrapeCity, Inc. All Rights Reserved.</value>
+    <value>© MESCIUS inc. All rights reserved.</value>
   </data>
   <data name="ExpandAll_Text" xml:space="preserve">
     <value>Expand All</value>
@@ -160,16 +160,16 @@
     <value>Top Controls</value>
   </data>
   <data name="About_Uri" xml:space="preserve">
-    <value>https://www.grapecity.com/componentone/wpf-ui-controls</value>
+    <value>https://developer.mescius.com/componentone/wpf-ui-controls</value>
   </data>
   <data name="Support_Uri" xml:space="preserve">
-    <value>https://www.grapecity.com/en/support/contact</value>
+    <value>https://developer.mescius.com/support/contact</value>
   </data>
   <data name="Pricing_Uri" xml:space="preserve">
-    <value>https://www.grapecity.com/en/pricing</value>
+    <value>https://developer.mescius.com/pricing</value>
   </data>
   <data name="Trial_Uri" xml:space="preserve">
-    <value>https://www.grapecity.com/componentone/download</value>
+    <value>https://developer.mescius.com/componentone/download</value>
   </data>
   <data name="FramePage_TitleText" xml:space="preserve">
     <value>ComponentOne WPF Edition Control Explorer</value>
@@ -199,6 +199,6 @@
     <value>No text found</value>
   </data>
   <data name="NoSampleFound_Text" xml:space="preserve">
-    <value>Sorry, this sample was not found at the moment. You can browse and download all samples at https://www.grapecity.com/en/samples?display_limit=25.</value>
+    <value>Sorry, this sample was not found at the moment. You can browse and download all samples at https://developer.mescius.com/samples?display_limit=25.</value>
   </data>
 </root>

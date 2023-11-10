@@ -26,7 +26,7 @@ namespace FlexGridExplorer
 
         private void OnEditColumnLayout(object sender, EventArgs e)
         {
-            new ColumnLayoutForm(this.grid).Show();
+            new ColumnLayoutForm(this.grid).ShowDialog();
         }
 
         private void OnSerializeColumnLayout(object sender, EventArgs e)

@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("ComponentOne")>
 <Assembly: AssemblyProduct("DataGrid_SaveState")>
-<Assembly: AssemblyCopyright("Copyright © ComponentOne 2012")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

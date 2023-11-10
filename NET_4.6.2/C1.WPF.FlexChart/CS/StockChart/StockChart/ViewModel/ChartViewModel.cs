@@ -89,7 +89,7 @@ namespace StockChart.ViewModel
         {
             get
             {
-                if (ViewModel.ChartViewModel.Instance.DataSource != null)
+                if (ViewModel.ChartViewModel.Instance.DataSource?.Count > 0)
                 {
                     return ViewModel.ChartViewModel.Instance.DataSource.Last().close;
                 }
@@ -101,7 +101,7 @@ namespace StockChart.ViewModel
         {
             get
             {
-                if (ViewModel.ChartViewModel.Instance.DataSource != null)
+                if (ViewModel.ChartViewModel.Instance.DataSource?.Count > 0)
                 {
                     var quoteData = ViewModel.ChartViewModel.Instance.DataSource;
                     var value = quoteData[Math.Max(quoteData.Count - 1, 0)].close - quoteData[Math.Max(quoteData.Count - 2, 0)].close;

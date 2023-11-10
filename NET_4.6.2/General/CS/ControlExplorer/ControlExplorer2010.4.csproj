@@ -496,7 +496,6 @@
     <Resource Include="Resources\ico-Home.png" />
     <Resource Include="Resources\SamplesCodes.zip" />
     <Resource Include="Resources\WPF-SplashScreen.png" />
-    <Resource Include="Resources\grapecity_150.png" />
     <Resource Include="Resources\C1-ball.ico" />
     <EmbeddedResource Include="Resources\ko\ControlList.xml" />
     <EmbeddedResource Include="Resources\ja\ControlList.xml" />
@@ -506,15 +505,16 @@
     <Resource Include="Resources\ko\C1-ball.ico" />
     <Resource Include="Resources\ko\headerLogo.png" />
     <Resource Include="Resources\ko\WPF-SplashScreen.png" />
+    <Resource Include="Resources\MESCIUS_Logo_Style-C_RGB.png" />
     <Content Include="Resources\Untitled.mp4" />
     <Content Include="Resources\c1studio_wpf.ico" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>1.0.20213.60</Version>
+      <Version>1.0.20232.164</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>1.0.20213.60</Version>
+      <Version>1.0.20232.164</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

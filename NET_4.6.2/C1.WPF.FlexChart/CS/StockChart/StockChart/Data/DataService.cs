@@ -108,7 +108,7 @@ namespace StockChart
             // not in cache, get now
             if (dataStream == null)
             {
-                var fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full";
+                var fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full";
                 var url = string.Format(fmt, symbol);
                 try
                 {
@@ -167,6 +167,7 @@ namespace StockChart
                         // append date (field 0) and adjusted close price (field 6)
                         var items = line.Split(',');
 
+                        if(items.Length >= 6)
                         {
                             Quote q = new Quote(quoteData.ReferenceValue)
                             {
@@ -198,10 +199,14 @@ namespace StockChart
             finally
             {
                 if (dataCacheStream != null)
+                {
                     dataCacheStream.Close();
+                    if(quoteData.Count == 0)
+                        fileInfo.Delete();
+                }
             }
 
-            if (symbol != "SP")
+            if (symbol != "SP" && quoteData?.Count>0)
                 FillEvents(symbol, quoteData);
 
             quoteData.Reverse();

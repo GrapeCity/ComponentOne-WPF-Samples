@@ -40,11 +40,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="4" Grid.Row="0">
             <TextBlock Text="ExpandMode" VerticalAlignment="Center" Margin="0 0 4 0"/>
-            <c1:C1ComboBox x:Name="ExpandModeComboBox" SelectionChanged="ExpandModeComboBox_SelectionChanged" SelectedIndex="0">
-                <c1:C1ComboBoxItem Content="One" />
-                <c1:C1ComboBoxItem Content="Collapsible" />
-                <c1:C1ComboBoxItem Content="Any" />
-            </c1:C1ComboBox>
+            <c1:C1ComboBox x:Name="ExpandModeComboBox" SelectionChanged="ExpandModeComboBox_SelectionChanged" SelectedIndex="0"/>
             <c1:C1CheckBox Content="Fill" IsChecked="{Binding Fill,ElementName=accordion}" Margin="20 4" VerticalAlignment="Center"/>
             <TextBlock Text="ExpandDirection" VerticalAlignment="Center" Margin="0 0 4 0"/>
             <c1:C1ComboBox x:Name="ExpandDirectionComboBox"  SelectionChanged="OnExpandDirectionChanged" SelectedIndex="0"/>

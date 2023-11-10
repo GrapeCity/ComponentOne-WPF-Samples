@@ -378,10 +378,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>1.0.20213.60</Version>
+      <Version>1.0.20232.164</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>1.0.20213.60</Version>
+      <Version>1.0.20232.164</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AnalysisServices.AdomdClient.retail.amd64">
       <Version>19.12.3</Version>

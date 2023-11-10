@@ -13,7 +13,7 @@
         </c1:C1IconTemplate>
     </UserControl.Resources>
     <Grid>
-        <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="All" FrozenRows="1" Grid.Row="1" FrozenLinesBrush="Transparent" FilterIconTemplate="{StaticResource funnelIcon}" AllowFiltering="False">
+        <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="All" FrozenRows="1" Grid.Row="1" FrozenLinesBrush="Transparent" FilterIconTemplate="{StaticResource funnelIcon}" AllowFiltering="False" ShowFilter="False">
             <c1:FlexGrid.Rows>
                 <c1:GridFilterRow Placeholder="{x:Static res:AppResources.FilterPlaceholderText}" AutoComplete="True"/>
             </c1:FlexGrid.Rows>

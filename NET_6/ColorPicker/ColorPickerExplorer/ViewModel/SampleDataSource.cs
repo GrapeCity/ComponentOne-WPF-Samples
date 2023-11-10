@@ -9,8 +9,8 @@ namespace ColorPickerExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem(AppResources.OverviewTitle, AppResources.OverviewDescription, new DemoColorPicker()),
-                new SampleItem(AppResources.BrushesTitle, AppResources.BrushesTitle, new Brushes())
+                new SampleItem(AppResources.ColorPickerTitle, AppResources.ColorPickerTitle, new DemoColorPicker()),
+                new SampleItem(AppResources.BrushPickerTitle, AppResources.BrushPickerTitle, new Brushes())
             };
         }
 

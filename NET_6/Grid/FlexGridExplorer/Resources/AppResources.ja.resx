@@ -535,7 +535,7 @@
     <value>高度なシナリオでフィルターコントロールを使用する方法を示します。</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>FlexGridエクスプローラー</value>
+    <value>FlexGrid Explorer</value>
   </data>
   <data name="ShowSort" xml:space="preserve">
     <value>並べ替えアイコンの表示</value>
@@ -576,5 +576,68 @@
   <data name="AdvancedCustomCellsTitle" xml:space="preserve">
     <value>高度なカスタムセル</value>
     <comment>Advanced custom cells</comment>
+  </data>
+  <data name="ErrorIconTemplate" xml:space="preserve">
+    <value>エラーアイコンテンプレート</value>
+    <comment>ErrorIconTemplate</comment>
+  </data>
+  <data name="ErrorStyle" xml:space="preserve">
+    <value>エラースタイル</value>
+    <comment>ErrorStyle</comment>
+  </data>
+  <data name="ShowErrors" xml:space="preserve">
+    <value>エラーの表示</value>
+    <comment>ShowErrors</comment>
+  </data>
+  <data name="ValidationDescription" xml:space="preserve">
+    <value>検証の表示およびスタイルの設定方法を示します</value>
+    <comment>Show how to display and style validation</comment>
+  </data>
+  <data name="ValidationTitle" xml:space="preserve">
+    <value>検証</value>
+    <comment>Validation</comment>
+  </data>
+  <data name="DataTableSampleDescription" xml:space="preserve">
+    <value>FlexGrid が Microsoft DataTable にバインドされている場合、ItemsSource に設定するだけですべての機能がサポートされます。 編集、追加、削除、フィルタリング、並べ替え、検証の実際の動作を確認できます。</value>
+    <comment>When FlexGrid is bound to Microsoft DataTable it supports all the features just by setting it in the ItemsSource. You can see editing, adding, removing, filtering, sorting and validation in action.</comment>
+  </data>
+  <data name="DataTableSampleTitle" xml:space="preserve">
+    <value>DataTable</value>
+  </data>
+  <data name="ChangesInDataTableMessage" xml:space="preserve">
+    <value>{0} 行が選択されました
+{1} 行が変更されました
+{2} 行が削除されました</value>
+    <comment>{0} rows added
+{1} rows modified
+{2} rows deleted</comment>
+  </data>
+  <data name="NoChangesEditDataTableFirstMessage" xml:space="preserve">
+    <value>テーブルにはまだ変更がありません。F2 キーを押すかダブルクリックしてセルを編集するか、削除キーを押して行を削除するか、新しい行を使用して項目を追加してください。</value>
+    <comment>There are no changes in the table yet, Please edit the cells by pressing F2 or double click, or remove rows by pressing delete or use new row to add items.</comment>
+  </data>
+  <data name="ShowChangesInTableLabel" xml:space="preserve">
+    <value>表内の変更を表示する</value>
+    <comment>Show changes in the table</comment>
+  </data>
+  <data name="AllCustomersLabel" xml:space="preserve">
+    <value>すべての顧客</value>
+    <comment>All customers</comment>
+  </data>
+  <data name="SelectedCustomersLabel" xml:space="preserve">
+    <value>選択された顧客</value>
+    <comment>Selected customers</comment>
+  </data>
+  <data name="SelectedItemsDescription" xml:space="preserve">
+    <value>あるグリッドの SelectedItem を別のコントロールにバインドする方法を示します。</value>
+    <comment>Shows how to bind the SelectedItems of one grid to another control</comment>
+  </data>
+  <data name="SelectedItemsTitle" xml:space="preserve">
+    <value>項目の選択</value>
+    <comment>SelectedItems</comment>
+  </data>
+  <data name="SelectCustomersMessage" xml:space="preserve">
+    <value>左側のグリッドで顧客を選択してください。</value>
+    <comment>Please select customers on the grid at the left.</comment>
   </data>
 </root>

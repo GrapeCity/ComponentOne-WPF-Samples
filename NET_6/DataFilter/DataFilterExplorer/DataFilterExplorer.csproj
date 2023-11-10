@@ -1,7 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <OutputType>WinExe</OutputType>
     <ApplicationIcon>c1-ball.ico</ApplicationIcon>
@@ -24,29 +23,29 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>1.0.20232.161</Version>
+      <Version>7.0.20233.174</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>1.0.20232.161</Version>
+      <Version>7.0.20233.174</Version>
     </PackageReference>
-    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="1.0.20232.161" />
+    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="7.0.20233.174" />
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.7" />

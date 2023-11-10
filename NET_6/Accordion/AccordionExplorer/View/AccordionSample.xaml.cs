@@ -22,13 +22,21 @@ namespace AccordionExplorer
                 ExpandDirection.Left,
                 ExpandDirection.Right,
             };
+
+            ExpandModeComboBox.ItemsSource = new ExpandMode[]
+            {
+                ExpandMode.One,
+                ExpandMode.Collapsible,
+                ExpandMode.Any,
+            };
+
         }
 
         void ExpandModeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (accordion != null && e.AddedItems.Count > 0)
             {
-                accordion.ExpandMode = (ExpandMode) Enum.Parse(typeof(ExpandMode), (string)e.AddedItems[0]);
+                accordion.ExpandMode = e.AddedItems.Cast<ExpandMode>().First();
             }
         }
 

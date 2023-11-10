@@ -38,18 +38,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="C1.WPF.4.5.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="C1.WPF.PrintDocument.4.5.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="C1.WPF.DateTimeEditors.4.5.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="C1.WPF.Schedule.4.5.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -155,6 +143,12 @@
     <Resource Include="Images\memo.png" />
     <Resource Include="Images\month.png" />
     <Resource Include="Images\week.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="C1.WPF.DateTimeEditors.4.6.2" />
+    <Reference Include="C1.WPF.Schedule.4.6.2" />
+    <Reference Include="C1.WPF.4.6.2" />
+    <Reference Include="C1.WPF.PrintDocument.4.6.2" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

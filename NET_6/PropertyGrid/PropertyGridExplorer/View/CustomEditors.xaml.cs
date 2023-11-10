@@ -1,5 +1,7 @@
 ﻿using C1.WPF.ColorPicker;
+using C1.WPF.Core;
 using C1.WPF.PropertyGrid;
+using PropertyGridExplorer.Resources;
 using System;
 using System.Linq;
 using System.Windows;
@@ -17,7 +19,7 @@ namespace PropertyGridExplorer
         public CustomEditors()
         {
             InitializeComponent();
-            Tag = Properties.Resources.CustomEditorsDesc;
+            Tag = AppResources.CustomEditorsDesc;
 
             //propertyGrid.AvailableEditors.Add(new CustomColorEditor());
 
@@ -61,63 +63,28 @@ namespace PropertyGridExplorer
     }
 
 
-    public class CustomColorEditor : BaseEditor<Brush, C1HexColorBox>
+    public class CustomColorEditor : BaseAdvancedEditor<Brush, C1SpectrumColorPicker>
     {
-        public bool ShowSharpPrefix { get; set; }
-
-        public override C1HexColorBox Create(C1PropertyGrid parent)
+        public override C1SpectrumColorPicker CreatePopupEditor(C1PropertyGrid parent)
         {
-            var editor = new C1HexColorBox() { ShowSharpPrefix = ShowSharpPrefix };
-            ApplyEditorStyleProperties(parent, editor);
-            return editor;
+            return new C1SpectrumColorPicker() { MinHeight = 200, MinWidth = 250 };
         }
-
-        public override void Attach(C1HexColorBox hexColorBox, PropertyGroup group, Action<C1HexColorBox, object> valueChanged)
+        
+        public override void AttachPopupEditor(C1SpectrumColorPicker editor, PropertyGroup group, Action<C1SpectrumColorPicker, object> valueChanged)
         {
-            hexColorBox.Color = group.GetValue<SolidColorBrush>()?.Color ?? Colors.Transparent;
-            RoutedEventHandler handler = (sender, e) =>
+            editor.Color = (group.GetValue<Brush>() as SolidColorBrush).Color;
+            EventHandler<PropertyChangedEventArgs<Color>> handler = (s, e) =>
             {
-
-                var window = new C1.WPF.Docking.C1Window();
-
-                var customColorForm = new CustomColorForm();
-                var binding = new Binding(nameof(C1HexColorBox.Color))
-                {
-                    Mode = BindingMode.TwoWay,
-                    Source = hexColorBox,
-                    ValidatesOnExceptions = true,
-                    UpdateSourceTrigger = UpdateSourceTrigger.Explicit   //update item only when ok button is clicked
-                };
-                customColorForm.SetBinding(CustomColorForm.ColorProperty, binding);
-                customColorForm.OKClicked += (s, e) =>
-                {
-                    customColorForm.GetBindingExpression(CustomColorForm.ColorProperty).UpdateSource(); //update source explicitly
-                    window.Close();
-                    valueChanged?.Invoke(hexColorBox, new SolidColorBrush(hexColorBox.Color));
-
-                };
-                customColorForm.CancelClicked += (s, e) =>
-                {
-                    window.Close();  //close the window
-                };
-
-                window.Header = group.Properties.First().DisplayName;
-                window.Content = customColorForm;
-                window.Width = 300;
-                window.Height = 300;
-                window.ShowMaximizeButton = false;
-                window.ShowMinimizeButton = false;
-                window.CenterOnScreen();
-                window.ShowModal();
+                valueChanged?.Invoke(editor, new SolidColorBrush(editor.Color));
             };
-            hexColorBox.GotFocus += handler;
-            hexColorBox.Tag = handler;
+            editor.ColorChanged += handler;
+            editor.Tag = handler;
         }
 
-        public override void Detach(C1HexColorBox hexColorBox)
+        public override void DetachPopupEditor(C1SpectrumColorPicker editor)
         {
-            var handler = hexColorBox.Tag as RoutedEventHandler;
-            hexColorBox.GotFocus -= handler;
+            var handler = editor.Tag as EventHandler<PropertyChangedEventArgs<Color>>;
+            editor.ColorChanged -= handler;
         }
     }
 

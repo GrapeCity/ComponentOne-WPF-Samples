@@ -9,17 +9,17 @@ namespace PropertyGridExplorer
         {
             AllItems = new ObservableCollection<SampleItem>
             {
-                new SampleItem(Properties.Resources.PropertyGridDemoTitle,
-                                Properties.Resources.PropertyGridDemoTitle,
+                new SampleItem(Resources.AppResources.PropertyGridDemoTitle,
+                                Resources.AppResources.PropertyGridDemoTitle,
                                 new Demo()),
-                new SampleItem(Properties.Resources.PropertyGridAutoPropsTitle,
-                                Properties.Resources.PropertyGridAutoPropsTitle,
+                new SampleItem(Resources.AppResources.PropertyGridAutoPropsTitle,
+                                Resources.AppResources.PropertyGridAutoPropsTitle,
                                 new AutoProperties()),
-                new SampleItem(Properties.Resources.CustomEditorsTitle,
-                                Properties.Resources.CustomEditorsTitle,
+                new SampleItem(Resources.AppResources.CustomEditorsTitle,
+                                Resources.AppResources.CustomEditorsTitle,
                                 new CustomEditors()),
-                new SampleItem(Properties.Resources.DataObjectPropertiesTitle,
-                                Properties.Resources.DataObjectPropertiesTitle,
+                new SampleItem(Resources.AppResources.DataObjectPropertiesTitle,
+                                Resources.AppResources.DataObjectPropertiesTitle,
                                 new DataObjectProperties())
             };
         }

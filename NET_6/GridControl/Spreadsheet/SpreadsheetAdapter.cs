@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,7 +10,7 @@ namespace Spreadsheet
 {
     public class SpreadsheetAdapter : GridControlAdapter
     {
-        #region ** fields
+        #region fields
 
         private Dictionary<KeyValuePair<int, int>, string> _storedValues = new Dictionary<KeyValuePair<int, int>, string>();
         private int A = 'A';
@@ -24,7 +25,7 @@ namespace Spreadsheet
 
         #endregion
 
-        #region ** dimensions
+        #region dimensions
 
         public override int RowsCount => ROWS_COUNT + 1;
         public override int ColumnsCount => COLUMNS_COUNT + 1;
@@ -119,7 +120,7 @@ namespace Spreadsheet
         }
         #endregion
 
-        #region ** cell
+        #region cell
 
         public Style ColumnHeaderSelectedStyle { get; set; }
 
@@ -155,7 +156,7 @@ namespace Spreadsheet
 
         #endregion
 
-        #region ** cell content
+        #region cell content
 
         public override object GetCellKind(GridControlRange range)
         {
@@ -259,7 +260,43 @@ namespace Spreadsheet
 
         #endregion
 
-        #region ** edit
+        #region selection
+
+        public override bool IsSelectionEnabled => true;
+
+        public override bool IsCellSelection => true;
+        public override bool IsMultipleSelection => true;
+
+        public override bool IsMultiRangeSelection => true;
+
+        public override void RefreshSelectedRanges(IReadOnlyList<GridControlRange> ranges)
+        {
+            foreach (var range in ranges)
+            {
+                Grid.Refresh(range);
+                Grid.Refresh(new GridControlRange(range.Row, 0, range.RowsCount, 1));
+                Grid.Refresh(new GridControlRange(0, range.Column, 1, range.ColumnsCount));
+            }
+        }
+
+        public override int GetSelectedTimes(GridControlRange range)
+        {
+            if (range.Row <= 0)
+            {
+                return Grid.SelectedRanges?.Count(r => r.ContainsColumn(range.Column)) ?? 0;
+            }
+            else if (range.Column <= 0)
+            {
+                return Grid.SelectedRanges?.Count(r => r.ContainsRow(range.Row)) ?? 0;
+            }
+            return base.GetSelectedTimes(range);
+        }
+
+        public override bool IsMouseOverEnabled => true;
+
+        #endregion
+
+        #region edit
 
         public override bool AllowEditing(GridControlRange range)
         {

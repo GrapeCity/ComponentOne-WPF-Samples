@@ -12,8 +12,6 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.GettingStartedTitle,
                 AppResources.GettingStartedTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new GettingStarted())));
-            _ = _allItems[0].Sample.Value; //Force first page is loaded immediately
-
             _allItems.Add(new SampleItem(AppResources.ColumnDefinitionTitle,
                 AppResources.ColumnDefinitionTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new ColumnDefinitions())));
@@ -38,10 +36,6 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.RowDetailsTitle,
                 AppResources.RowDetailsTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new RowDetails())));
-            //_allItems.Add(new SampleItem(AppResources.FilterTitle,
-            //    AppResources.FilterTitle,
-            //    AppResources.FilterDescription,
-            //    new Filter()));
             _allItems.Add(new SampleItem(AppResources.FullTextFilterTitle,
                 AppResources.FullTextFilterTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new FullTextFilter())));
@@ -102,34 +96,35 @@ namespace FlexGridExplorer
             _allItems.Add(new SampleItem(AppResources.ColumnOptionsTitle,
                 AppResources.ColumnOptionsTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new ColumnOptions())));
-
             _allItems.Add(new SampleItem(AppResources.ExcelExportTitle,
                 AppResources.ExcelExportTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new ExcelExport())));
-
             _allItems.Add(new SampleItem(AppResources.VirtualModeTitle,
                 AppResources.VirtualModeTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new VirtualMode())));
-
             _allItems.Add(new SampleItem(AppResources.PinColumnTitle,
                 AppResources.PinColumnTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new PinColumn())));
-
             _allItems.Add(new SampleItem(AppResources.AdvancedCustomCellsTitle,
                 AppResources.AdvancedCustomCellsTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new AdvancedCustomCells())));
-
             _allItems.Add(new SampleItem(AppResources.ValidationTitle,
                 AppResources.ValidationTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new Validation())));
-
             _allItems.Add(new SampleItem(AppResources.DataTableSampleTitle,
                 AppResources.DataTableSampleTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new DataTableSample())));
-
             _allItems.Add(new SampleItem(AppResources.SelectedItemsTitle,
                 AppResources.SelectedItemsTitle,
                 new System.Lazy<System.Windows.Controls.UserControl>(() => new SelectedItems())));
+            _allItems.Add(new SampleItem(AppResources.SummaryRowTitle,
+                AppResources.SummaryRowTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new SummaryRow())));
+            _allItems.Add(new SampleItem(AppResources.TransposedGridTitle,
+                AppResources.TransposedGridTitle,
+                new System.Lazy<System.Windows.Controls.UserControl>(() => new TransposedGrid())));
+
+            _ = _allItems[0].Sample.Value; //Force first page is loaded immediately
         }
 
         public ObservableCollection<SampleItem> AllItems

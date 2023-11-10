@@ -56,7 +56,7 @@ namespace BarCodeExplorer
                         break;
                     case Format.Url:
                         control = new Url();
-                        editor.DataContext = new UrlEntity() { Url = "www.grapecity.com/en/componentone" };
+                        editor.DataContext = new UrlEntity() { Url = "developer.mescius.com/componentone" };
                         break;
                     case Format.VCard:
                         control = new VCard();

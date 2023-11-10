@@ -8,7 +8,7 @@ namespace ColorPickerExplorer
         public Brushes()
         {
             InitializeComponent();
-            Tag = AppResources.BrushesDescription;
+            Tag = AppResources.BrushPickerDescription;
         }
     }
 }

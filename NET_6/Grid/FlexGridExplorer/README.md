@@ -42,3 +42,5 @@ Shows the following samples
 * Validation
 * DataTable
 * SelectedItems
+* SummaryRow
+* TransposedGrid

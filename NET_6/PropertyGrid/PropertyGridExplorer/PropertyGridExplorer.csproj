@@ -1,8 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
@@ -12,10 +11,10 @@
     <Content Include="C1-ball.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
+    <Compile Update="Resources\AppResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -24,17 +23,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.ja.resx">
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <Generator>PublicResXFileCodeGenerator</Generator>
+    <EmbeddedResource Update="Resources\AppResources.ja.resx">
+      <Generator>
+      </Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\Resources.resx">
+    <EmbeddedResource Update="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\Settings.settings">
@@ -58,13 +54,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>6.0.20232.591</Version>
+      <Version>7.0.20233.662</Version>
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
   </ItemGroup>

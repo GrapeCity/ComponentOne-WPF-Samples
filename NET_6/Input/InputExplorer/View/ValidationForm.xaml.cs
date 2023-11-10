@@ -26,7 +26,7 @@ namespace InputExplorer
 
         private void OnFormValidated(object sender, EventArgs e)
         {
-            MessageBox.Show("The form was validated!");
+            MessageBox.Show(Properties.Resources.FormWasValidated);
         }
     }
 
@@ -55,43 +55,50 @@ namespace InputExplorer
             SubmitCommand = new DelegateCommand(OnSubmit);
         }
 
-        [Required]
-        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Characters are not allowed.")]
-        [Display(Name = "First Name")]
+        [Required(ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "FieldRequired")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "CharactersNotAllowed")]
+        [Display(Name = "FirstName", ResourceType = typeof(Properties.Resources))]
         public string FirstName { get { return _firstName; } set { _firstName = value; OnPropertyChanged(); } }
 
-        [Required]
-        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Characters are not allowed.")]
-        [Display(Name = "Last name")]
+        [Required(ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "FieldRequired")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "CharactersNotAllowed")]
+        [Display(Name = "LastName", ResourceType = typeof(Properties.Resources))]
         public string LastName { get { return _lastName; } set { _lastName = value; OnPropertyChanged(); } }
 
         [MinimumAge(18)]
-        [Display(Name = "Date Of Birth")]
+        [Display(Name = "DateOfBirth", ResourceType = typeof(Properties.Resources))]
         public DateTime DateOfBirth { get { return _dateOfBirth; } set { _dateOfBirth = value; OnPropertyChanged(); } }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "FieldRequired")]
+        [Display(Name = "Gender", ResourceType = typeof(Properties.Resources))]
         public GenderValues? Gender { get { return _gender; } set { _gender = value; OnPropertyChanged(); } }
 
-        public GenderValues[] Genders { get; } = new GenderValues[] { GenderValues.Female, GenderValues.Male, GenderValues.Other };
+        public Tuple<GenderValues, string>[] Genders { get; } = new Tuple<GenderValues, string>[] {
+            new Tuple<GenderValues, string>(GenderValues.Female, Properties.Resources.Female),
+            new Tuple<GenderValues, string>(GenderValues.Male, Properties.Resources.Male),
+            new Tuple<GenderValues, string>(GenderValues.Other, Properties.Resources.OtherGender)
+        };
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "FieldRequired")]
         [EmailAddress]
-        [Display(Name = "E-mail")]
+        [Display(Name = "Email", ResourceType = typeof(Properties.Resources))]
         public string Email { get { return _email; } set { _email = value; OnPropertyChanged(); } }
 
-        [Range(1, 5)]
+        [Range(1, 5, ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "FieldMustBeBetween")]
+        [Display(Name = "Stars", ResourceType = typeof(Properties.Resources))]
         public int Stars { get { return _stars; } set { _stars = value; OnPropertyChanged(); } }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "FieldRequired")]
+        [Display(Name = "Picture", ResourceType = typeof(Properties.Resources))]
         public string Picture { get { return _picture; } set { _picture = value; OnPropertyChanged(); } }
 
-        [Required]
-        [Display(Name = "Favorite Color")]
+        [Required(ErrorMessageResourceType = typeof(Properties.Resources),ErrorMessageResourceName = "FieldRequired") ]
+        [Display(Name = "FavoriteColor", ResourceType = typeof(Properties.Resources))]
         public Color? FavoriteColor { get { return _favoriteColor; } set { _favoriteColor = value; OnPropertyChanged(); } }
 
-        [Range(0, 24)]
+        [Range(0, 24, ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "FieldMustBeBetween")]
         public int WorkingFrom { get { return _workingFrom; } set { _workingFrom = value; OnPropertyChanged(); } }
-        [Range(0, 24)]
+        [Range(0, 24, ErrorMessageResourceType = typeof(Properties.Resources), ErrorMessageResourceName = "FieldMustBeBetween")]
         public int WorkingTo { get { return _workingTo; } set { _workingTo = value; OnPropertyChanged(); } }
 
         public ICommand SubmitCommand { get; }
@@ -140,7 +147,7 @@ namespace InputExplorer
             int result = WorkingTo - WorkingFrom;
             if (result > 8)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Can not work more than 8 hours", new[] { nameof(WorkingFrom), nameof(WorkingTo) });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult( Properties.Resources.CanNotWorkMoreThan, new[] { nameof(WorkingFrom), nameof(WorkingTo) });
             }
         }
     }
@@ -150,7 +157,7 @@ namespace InputExplorer
         public MinimumAgeAttribute(int minimumAge)
         {
             MinimumAge = minimumAge;
-            ErrorMessage = "{0} must be someone at least {1} years of age";
+            ErrorMessage = Properties.Resources.AgeRequirement;
         }
 
         public override bool IsValid(object value)

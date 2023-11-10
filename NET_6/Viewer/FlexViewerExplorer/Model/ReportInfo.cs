@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections.ObjectModel;
@@ -12,22 +11,39 @@ using System.ComponentModel;
 
 namespace FlexViewerExplorer
 {
+    public class Group
+    {
+        public Category Category { get; set; }
+        public List<Report> Reports { get; set; }
+    }
+
+    public abstract class ItemBase : INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(sender, e);
+            }
+        }
+    }
+
     #region Categories
-    public class Categories : INotifyPropertyChanged
+    public class Category : ItemBase
     {
         #region Variables
-        public event PropertyChangedEventHandler PropertyChanged;
         string _name = "";
         string _text = "";
         string _imgUrl = "";
-        string _expenderImg = "";
-        ObservableCollection<Reports> _reports = null;
+        bool _isExpanded = false;
+        ObservableCollection<Report> _reports = null;
         #endregion
 
         #region Ctors
-        public Categories()
+        public Category()
         { }
-        public Categories(string name, string text, string imgUrl, ObservableCollection<Reports> reports)
+        public Category(string name, string text, string imgUrl, ObservableCollection<Report> reports)
         {
             _name = name;
             _text = text;
@@ -37,6 +53,20 @@ namespace FlexViewerExplorer
         #endregion
 
         #region Properties
+
+        public bool IsExpanded
+        {
+            get
+            {
+                return _isExpanded;
+            }
+            set
+            {
+                _isExpanded = value;
+                OnPropertyChanged(this, new PropertyChangedEventArgs("IsExpanded"));
+            }
+        }
+
         public string Name
         {
             get
@@ -70,37 +100,15 @@ namespace FlexViewerExplorer
                 _imgUrl = value;
             }
         }
-        public string ExpenderImg
-        {
-            get
-            {
-                return _expenderImg;
-            }
-            set
-            {
-                if (_expenderImg != value)
-                {
-                    _expenderImg = value;
-                    OnPropertyChanged(this, new PropertyChangedEventArgs("ExpenderImg"));
-                }
-            }
-        }
         #endregion
 
         #region PublicMethods
-        public void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(sender, e);
-            }
-        }
-        public ObservableCollection<Reports> ReportsList
+        public ObservableCollection<Report> ReportsList
         {
             get
             {
 
-                if (_reports == null) _reports = new ObservableCollection<Reports>();
+                if (_reports == null) _reports = new ObservableCollection<Report>();
                 return _reports;
             }
             set { _reports = value; }
@@ -109,10 +117,10 @@ namespace FlexViewerExplorer
         #endregion
 
         #region static method
-        public static ObservableCollection<Categories> GetAll()
+        public static ObservableCollection<Category> GetAll()
         {
 
-            ObservableCollection<Categories> listToReturn = new ObservableCollection<Categories>();
+            ObservableCollection<Category> listToReturn = new ObservableCollection<Category>();
             Assembly thisExe = Assembly.GetExecutingAssembly();
             string[] resList = thisExe.GetManifestResourceNames();
             Stream file = thisExe.GetManifestResourceStream("FlexViewerExplorer.Resources.ReportInfos.xml");
@@ -121,26 +129,27 @@ namespace FlexViewerExplorer
 
             foreach (XElement xelemCategory in categoriesList)
             {
-                Categories treeItem = new Categories();
-                treeItem.Name = xelemCategory.Attribute("Name").Value;
-                treeItem.Text = xelemCategory.Attribute("Text").Value;
-                treeItem.ExpenderImg = "..\\Resources\\collapse.png";
+                Category category = new Category
+                {
+                    Name = xelemCategory.Attribute("Name").Value,
+                    Text = xelemCategory.Attribute("Text").Value,
+                };
                 try
                 {
-                    treeItem.ImageUrl = @"..\Resources\" + xelemCategory.Attribute("Image").Value + ".png";
+                    category.ImageUrl = @"..\Resources\" + xelemCategory.Attribute("Image").Value + ".png";
                 }
-                catch { treeItem.ImageUrl = null; }
+                catch { category.ImageUrl = null; }
                 foreach (XElement xelemReport in xelemCategory.Descendants("Report").ToList<XElement>())
                 {
                     string rptName = xelemReport.Descendants("ReportName").FirstOrDefault().Value;
-                    string fileName = @"..\Reports\" + treeItem.Name + @"\" + xelemReport.Descendants("FileName").FirstOrDefault().Value;
+                    string fileName = @"..\Reports\" + category.Name + @"\" + xelemReport.Descendants("FileName").FirstOrDefault().Value;
                     XElement eleSelected =  xelemReport.Descendants("IsSelected").FirstOrDefault();
                     bool isSelected =(eleSelected==null)?false: Convert.ToBoolean(eleSelected.Value);
-                    BitmapSource imgUrl = ToBitmapSource(@"..\Reports\" + treeItem.Name + @"\Images\" + xelemReport.Descendants("ImageName").FirstOrDefault().Value);
+                    BitmapSource imgUrl = ToBitmapSource(@"..\Reports\" + category.Name + @"\Images\" + xelemReport.Descendants("ImageName").FirstOrDefault().Value);
                     string rptTitle = xelemReport.Descendants("ReportTitle").FirstOrDefault().Value;
-                    treeItem.ReportsList.Add(new Reports(rptName, fileName, rptTitle, imgUrl, isSelected));
+                    category.ReportsList.Add(new Report(rptName, fileName, rptTitle, imgUrl, isSelected, category));
                 }
-                listToReturn.Add(treeItem);
+                listToReturn.Add(category);
             }
             return listToReturn;
         }
@@ -173,7 +182,7 @@ namespace FlexViewerExplorer
     #endregion
 
     #region Reports
-    public class Reports
+    public class Report : ItemBase
     {
         #region variables
         string _rptName = "";
@@ -184,20 +193,22 @@ namespace FlexViewerExplorer
         #endregion
 
         #region Ctors
-        public Reports()
+        public Report()
         {
         }
-        public Reports(string rptName, string fileName, string rptTitle, BitmapSource imgUrl, bool isSelected)
+        public Report(string rptName, string fileName, string rptTitle, BitmapSource imgUrl, bool isSelected, Category category)
         {
             _rptName = rptName;
             _fileName = fileName;
             _rptTitle = rptTitle;
             _imgUrl = imgUrl;
             _isSelected = isSelected;
+            Category = category;
         }
         #endregion
 
         #region Properties
+        public Category Category { get; set; }
         public string RptName
         {
             get
@@ -218,6 +229,7 @@ namespace FlexViewerExplorer
             set
             {
                 _isSelected = value;
+                OnPropertyChanged(this, new PropertyChangedEventArgs("IsSelected"));
             }
         }
         public string RptTitle

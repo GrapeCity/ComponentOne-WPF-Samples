@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("VB1")>
 <Assembly: AssemblyProduct("ChartSamples2008")>
-<Assembly: AssemblyCopyright("Copyright © VB1 2010")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

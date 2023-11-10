@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("Microsoft")>
 <Assembly: AssemblyProduct("Invalidate")>
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2010")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

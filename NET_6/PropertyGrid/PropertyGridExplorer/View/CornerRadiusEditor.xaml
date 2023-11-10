@@ -15,9 +15,9 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <c1:C1NumericBox x:Name="TopLeftBox" Margin="0 0 1 1" VerticalAlignment="Center" ValueChanged="OnValueChanged" />
-        <c1:C1NumericBox x:Name="TopRightBox" Margin="0 0 0 1" Grid.Column="1" VerticalAlignment="Center" ValueChanged="OnValueChanged"/>
-        <c1:C1NumericBox x:Name="BottomRightBox" Grid.Row="1" Grid.Column="1" ValueChanged="OnValueChanged"/>
-        <c1:C1NumericBox x:Name="BottomLeftBox" Margin="0 0 1 0" Grid.Row="1" ValueChanged="OnValueChanged"/>
+        <c1:C1NumericBox x:Name="TopLeftBox" Margin="0 0 1 1" TabIndex="0" VerticalAlignment="Center" ValueChanged="OnValueChanged" />
+        <c1:C1NumericBox x:Name="TopRightBox" Margin="0 0 0 1" TabIndex="1" Grid.Column="1" VerticalAlignment="Center" ValueChanged="OnValueChanged"/>
+        <c1:C1NumericBox x:Name="BottomRightBox" Grid.Row="1" TabIndex="3" Grid.Column="1" ValueChanged="OnValueChanged"/>
+        <c1:C1NumericBox x:Name="BottomLeftBox" Margin="0 0 1 0" TabIndex="2" Grid.Row="1" ValueChanged="OnValueChanged"/>
     </Grid>
 </UserControl>

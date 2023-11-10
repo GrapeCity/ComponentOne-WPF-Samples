@@ -166,7 +166,7 @@
     <comment>Getting Started</comment>
   </data>
   <data name="Good" xml:space="preserve">
-    <value>良　値：</value>
+    <value>良値：</value>
     <comment>Good</comment>
   </data>
   <data name="ImageSavedDescription" xml:space="preserve">
@@ -222,8 +222,7 @@
     <comment>Value</comment>
   </data>
   <data name="Reversed" xml:space="preserve">
-    <value>Reversed</value>
+    <value>反転</value>
     <comment>Reversed</comment>
   </data>
-
 </root>

@@ -83,7 +83,7 @@ namespace FlexGridExplorer
         {
             if (_financialData != null && e.AddedItems.Count > 0)
             {
-                var val = e.AddedItems[0] as string;
+                var val = _cmbUpdateInterval.SelectedValue as string;
                 val = val.Split(' ')[0].Trim();
                 _financialData.UpdateInterval = int.Parse(val);
             }
@@ -93,7 +93,7 @@ namespace FlexGridExplorer
         {
             if (_financialData != null && e.AddedItems.Count > 0)
             {
-                var val = e.AddedItems[0] as string;
+                var val = _cmbBatchSize.SelectedValue as string;
                 val = val.Split(' ')[0].Trim();
                 _financialData.BatchSize = int.Parse(val);
             }

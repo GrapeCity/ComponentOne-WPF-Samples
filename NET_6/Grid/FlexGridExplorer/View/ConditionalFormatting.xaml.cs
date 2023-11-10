@@ -22,6 +22,11 @@ namespace FlexGridExplorer
 
     public class MyCellFactory : GridCellFactory
     {
+        static SolidColorBrush RedBackground = new SolidColorBrush(Color.FromArgb(0xFF, 0xC4, 0x2B, 0x1C));
+        static SolidColorBrush RedForeground = new SolidColorBrush(Color.FromArgb(0xFF, 0xFD, 0xE7, 0xE9));
+        static SolidColorBrush GreenBackground = new SolidColorBrush(Color.FromArgb(0xFF, 0x0F, 0x7B, 0x0F));
+        static SolidColorBrush GreenForeground = new SolidColorBrush(Color.FromArgb(0xFF, 0xDF, 0xF6, 0xDD));
+
         public override void PrepareCell(GridCellType cellType, GridCellRange range, GridCellView cell, Thickness internalBorders)
         {
             base.PrepareCell(cellType, range, cell, internalBorders);
@@ -31,7 +36,7 @@ namespace FlexGridExplorer
                 var cellValue = Grid[range.Row, range.Column] as int?;
                 if (cellValue.HasValue)
                 {
-                    cell.Background = new SolidColorBrush(cellValue < 50.0 ? Color.FromRgb(0xFF, 0x70, 0x70) : Color.FromRgb(0x8E, 0xE9, 0x8E));
+                    cell.Background = cellValue < 50.0 ? RedForeground : GreenForeground;
                 }
             }
         }
@@ -46,7 +51,6 @@ namespace FlexGridExplorer
         {
             base.BindCellContent(cellType, range, cellContent);
             var orderTotalColumn = Grid.Columns["OrderTotal"];
-            var orderCountColumn = Grid.Columns["OrderCount"];
             if (cellType == GridCellType.Cell && range.Column == orderTotalColumn.Index)
             {
                 var label = cellContent as TextBlock;
@@ -55,19 +59,7 @@ namespace FlexGridExplorer
                     var cellValue = Grid[range.Row, range.Column] as double?;
                     if (cellValue.HasValue)
                     {
-                        label.Foreground = new SolidColorBrush(cellValue < 5000.0 ? Colors.Red : Colors.Green);
-                    }
-                }
-            }
-            if (cellType == GridCellType.Cell && range.Column == orderCountColumn.Index)
-            {
-                var label = cellContent as TextBlock;
-                if (label != null)
-                {
-                    var cellValue = Grid[range.Row, range.Column] as int?;
-                    if (cellValue.HasValue)
-                    {
-                        label.Foreground = new SolidColorBrush(Colors.Black);
+                        label.Foreground = cellValue < 5000.0 ? RedBackground : GreenBackground;
                     }
                 }
             }

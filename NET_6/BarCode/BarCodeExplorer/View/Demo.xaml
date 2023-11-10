@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="350"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <local:EncodingFormat x:Name="category" Foreground="{Binding Foreground, ElementName=root}"/>

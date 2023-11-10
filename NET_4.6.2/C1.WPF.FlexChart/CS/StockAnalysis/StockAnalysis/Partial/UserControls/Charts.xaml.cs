@@ -25,25 +25,16 @@ namespace StockAnalysis.Partial.UserControls
         {
             InitializeComponent();
 
-
-
             EventHandler<C1.WPF.Chart.RenderEventArgs> handlerInitRange = null;
             handlerInitRange = (o, e) =>
             {
-                if (
-                !ViewModel.ViewModel.Instance.IsLoaded &&
-                ViewModel.ViewModel.Instance.CurrectQuote != null &&
-                ViewModel.ViewModel.Instance.CurrectQuote.Data != null &&
-                (
-                (ViewModel.ViewModel.Instance.LowerValue == 0 && ViewModel.ViewModel.Instance.UpperValue == 0) ||
-                (ViewModel.ViewModel.Instance.LowerValue == null && ViewModel.ViewModel.Instance.UpperValue == null)
-                )
-                )
+                var model = ViewModel.ViewModel.Instance;
+                if ( !model.IsLoaded && model.CurrectQuote != null && model.CurrectQuote.Data != null)
                 {
-                    ViewModel.ViewModel.Instance.UpperValue = ViewModel.ViewModel.Instance.CurrectQuote.Data.Count() - 1;
-                    ViewModel.ViewModel.Instance.LowerValue = ViewModel.ViewModel.Instance.UpperValue - 60;
+                    model.UpperValue = model.CurrectQuote.Data.Count() - 1;
+                    model.LowerValue = model.UpperValue - 60;
 
-                    ViewModel.ViewModel.Instance.IsLoaded = true;
+                    model.IsLoaded = true;
                     this.rangeChart.Rendered -= handlerInitRange;
                 }
             };

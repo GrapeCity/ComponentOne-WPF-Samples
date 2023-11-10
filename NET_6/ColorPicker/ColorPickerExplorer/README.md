@@ -5,4 +5,5 @@ ____
 ____
 Shows basic samples of the following controls
 
-* C1ColorPicker
+* Color Picker
+* Brush Picker

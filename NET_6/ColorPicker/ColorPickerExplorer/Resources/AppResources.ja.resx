@@ -129,4 +129,12 @@
   <data name="Title" xml:space="preserve">
     <value>ColorPickerエクスプローラー</value>
   </data>
+  <data name="BrushesDescription" xml:space="preserve">
+    <value>ブラシを変更するためのさまざまなレベルの機能と複雑さを備えた一連のコントロールです</value>
+    <comment>A series of controls with different levels of features and complexitiy to modify Brushes</comment>
+  </data>
+  <data name="BrushesTitle" xml:space="preserve">
+    <value>ブラシ</value>
+    <comment>Brushes</comment>
+  </data>
 </root>

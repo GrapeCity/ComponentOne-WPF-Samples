@@ -7,13 +7,11 @@
             <Style TargetType="StackPanel">
                 <Setter Property="Orientation" Value="Vertical" />
                 <Setter Property="Margin" Value="3" />
-                <Setter Property="HorizontalAlignment" Value="Left"/>
             </Style>
             <Style TargetType="c1:C1TextBox">
                 <Setter Property="Foreground" Value="{Binding Foreground, ElementName=root}"/>
                 <Setter Property="MinWidth" Value="250"/>
                 <Setter Property="BorderThickness" Value="3"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
             </Style>
             <Style TargetType="TextBlock">
                 <Setter Property="Foreground" Value="Black"/>
@@ -25,111 +23,111 @@
             <StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding PrefixCaption}"/>
-                    <c1:C1TextBox Text="{Binding Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <c1:C1TextBox Text="{Binding Prefix, Mode=TwoWay}" />
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding FirstNameCaption}"/>
-                    <c1:C1TextBox Text="{Binding FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding FirstName, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding LastNameCaption}"/>
-                    <c1:C1TextBox Text="{Binding LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding LastName, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding SuffixCaption}"/>
-                    <c1:C1TextBox Text="{Binding Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Suffix, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding FullNameCaption}"/>
-                    <c1:C1TextBox Text="{Binding FullName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding FullName, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding NicknameCaption}"/>
-                    <c1:C1TextBox Text="{Binding Nickname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Nickname, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding PhotoCaption}"/>
-                    <c1:C1TextBox Text="{Binding Photo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Photo, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding TitleCaption}"/>
-                    <c1:C1TextBox Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Title, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding RoleCaption}"/>
-                    <c1:C1TextBox Text="{Binding Role, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Role, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding OrganizationCaption}"/>
-                    <c1:C1TextBox Text="{Binding Organization, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Organization, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding LogoCaption}"/>
-                    <c1:C1TextBox Text="{Binding Logo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Logo, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding HomeAddressCaption}"/>
-                    <c1:C1TextBox Text="{Binding HomeAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding HomeAddress, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding HomeCityCaption}"/>
-                    <c1:C1TextBox Text="{Binding HomeCity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding HomeCity, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel >
                     <TextBlock Text="{Binding HomeStateCaption}"/>
-                    <c1:C1TextBox Text="{Binding HomeState, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding HomeState, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding HomeZipCaption}"/>
-                    <c1:C1TextBox Text="{Binding HomeZip, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding HomeZip, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding HomeCountryCaption}"/>
-                    <c1:C1TextBox Text="{Binding HomeCountry, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding HomeCountry, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding OfficeAddressCaption}"/>
-                    <c1:C1TextBox Text="{Binding OfficeAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding OfficeAddress, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding OfficeCityCaption}"/>
-                    <c1:C1TextBox Text="{Binding OfficeCity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding OfficeCity, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding OfficeStateCaption}"/>
-                    <c1:C1TextBox Text="{Binding OfficeState, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding OfficeState, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding OfficeZipCaption}"/>
-                    <c1:C1TextBox Text="{Binding OfficeZip, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding OfficeZip, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding OfficeCountryCaption}"/>
-                    <c1:C1TextBox Text="{Binding OfficeCountry, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding OfficeCountry, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding HomePhoneCaption}"/>
-                    <c1:C1TextBox Text="{Binding HomePhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding HomePhone, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding OfficePhoneCaption}"/>
-                    <c1:C1TextBox Text="{Binding OfficePhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding OfficePhone, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding FaxCaption}"/>
-                    <c1:C1TextBox Text="{Binding Fax, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Fax, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding CellCaption}"/>
-                    <c1:C1TextBox Text="{Binding Cell, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Cell, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding EmailCaption}"/>
-                    <c1:C1TextBox Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Email, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Text="{Binding WebsiteCaption}"/>
-                    <c1:C1TextBox Text="{Binding Website, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <c1:C1TextBox Text="{Binding Website, Mode=TwoWay}"/>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

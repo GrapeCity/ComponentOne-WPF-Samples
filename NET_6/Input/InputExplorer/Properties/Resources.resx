@@ -213,6 +213,82 @@
   <data name="ValidationFormTitle" xml:space="preserve">
     <value>Validation Form</value>
   </data>
+  <data name="AgeRequirement" xml:space="preserve">
+    <value>{0} must be someone at least {1} years of age</value>
+    <comment>{0} must be someone at least {1} years of age</comment>
+  </data>
+  <data name="CanNotWorkMoreThan" xml:space="preserve">
+    <value>Can not work more than 8 hours</value>
+    <comment>Can not work more than 8 hours</comment>
+  </data>
+  <data name="CharactersNotAllowed" xml:space="preserve">
+    <value>Characters are not allowed.</value>
+    <comment>Characters are not allowed.</comment>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Date Of Birth</value>
+    <comment>Date Of Birth</comment>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>e-mail</value>
+    <comment>e-mail</comment>
+  </data>
+  <data name="FavoriteColor" xml:space="preserve">
+    <value>Favorite Color</value>
+    <comment>Favorite Color</comment>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+    <comment>Female</comment>
+  </data>
+  <data name="FieldMustBeBetween" xml:space="preserve">
+    <value>The field {0} must be between {1} and {2}</value>
+    <comment>The field {0} must be between {1} and {2}</comment>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>The {0} field is required.</value>
+    <comment>The {0} field is required.</comment>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+    <comment>First Name</comment>
+  </data>
+  <data name="FormWasValidated" xml:space="preserve">
+    <value>The form was validated!</value>
+    <comment>The form was validated!</comment>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+    <comment>Gender</comment>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+    <comment>Last Name</comment>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+    <comment>Male</comment>
+  </data>
+  <data name="OtherGender" xml:space="preserve">
+    <value>Other</value>
+    <comment>Other</comment>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Picture</value>
+    <comment>Picture</comment>
+  </data>
+  <data name="Stars" xml:space="preserve">
+    <value>Stars</value>
+    <comment>Stars</comment>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+    <comment>Submit</comment>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>Working hours</value>
+    <comment>Working hours</comment>
+  </data>
   <data name="StopsSliderDescription" xml:space="preserve">
     <value>Shows a stops slider control allowing to drag the thumbs as well as adding new ones by clicking in the track and remove them with Del key.</value>
   </data>

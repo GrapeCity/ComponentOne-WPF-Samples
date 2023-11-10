@@ -17,17 +17,17 @@
                 <c1:C1PropertyGrid.PropertyAttributes>
                     <c1:PropertyAttribute MemberName="Background">
                         <c1:PropertyAttribute.Editor>
-                            <local:CustomColorEditor ShowSharpPrefix="True" />
+                            <local:CustomColorEditor />
                         </c1:PropertyAttribute.Editor>
                     </c1:PropertyAttribute>
                     <c1:PropertyAttribute MemberName="Foreground">
                         <c1:PropertyAttribute.Editor>
-                            <local:CustomColorEditor ShowSharpPrefix="True" />
+                            <local:CustomColorEditor />
                         </c1:PropertyAttribute.Editor>
                     </c1:PropertyAttribute>
                     <c1:PropertyAttribute MemberName="BorderBrush">
                         <c1:PropertyAttribute.Editor>
-                            <local:CustomColorEditor ShowSharpPrefix="True" />
+                            <local:CustomColorEditor />
                         </c1:PropertyAttribute.Editor>
                     </c1:PropertyAttribute>
                     <c1:PropertyAttribute MemberName="BorderThickness">

@@ -510,4 +510,22 @@
   <data name="SelectCustomersMessage" xml:space="preserve">
     <value>Please select customers on the grid at the left.</value>
   </data>
+  <data name="SummaryRowDescription" xml:space="preserve">
+    <value>Shows a row that summarizes the values in the columns</value>
+  </data>
+  <data name="SummaryRowTitle" xml:space="preserve">
+    <value>Summary Row</value>
+  </data>
+  <data name="GroupRowPosition" xml:space="preserve">
+    <value>GroupRowPosition</value>
+  </data>
+  <data name="GroupSummariesPosition" xml:space="preserve">
+    <value>GroupSummariesPosition</value>
+  </data>
+  <data name="TransposedGridDescription" xml:space="preserve">
+    <value>Show how to transpose columns and rows so the data items are shown as columns.</value>
+  </data>
+  <data name="TransposedGridTitle" xml:space="preserve">
+    <value>Transposed Grid</value>
+  </data>
 </root>

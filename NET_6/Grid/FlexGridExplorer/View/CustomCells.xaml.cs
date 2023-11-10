@@ -1,5 +1,7 @@
 ﻿using FlexGridExplorer.Resources;
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Data;
 
@@ -17,9 +19,9 @@ namespace FlexGridExplorer
             BindITunesGrid();
         }
 
-        void BindITunesGrid()
+        async void BindITunesGrid()
         {
-            var songs = MediaLibrary.Load();
+            var songs = await Task.Run(() => MediaLibrary.Load());
             var view = new MyCollectionView(songs);
             using (view.DeferRefresh())
             {

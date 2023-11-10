@@ -79,7 +79,6 @@ namespace ControlExplorer
             }
             // run storyboards
             st_Completed(null, null);
-            UpdateSocialButtons();
         }
 
         private void HandleStartFromEmptyPage(Uri targetUri)
@@ -155,14 +154,6 @@ namespace ControlExplorer
                     st.Begin();
                 }
             }
-        }
-
-        // update Url in social buttons
-        private void UpdateSocialButtons()
-        {
-            string url = ControlExplorer.Properties.Resources.About_Uri;
-            BTN_facebook.Url = url;
-            BTN_facebook.Title = ((Page)NavigationFrame.Content).Title;
         }
 
         public void ContentUnloaded(Uri currentUri, Uri targetUri, Action completed)

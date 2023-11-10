@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:C1ComboBoxMutliSelectionSample2010"
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
         mc:Ignorable="d"
-        Height="350" Width="525" Loaded="Window_Loaded">
+        Height="350" Width="525" Loaded="Window_Loaded" Title="C1ComboBoxMultiSelectionSample">
     <Grid>
         <Grid.Resources>
             <Style x:Key="SampleTextBlockStyle" TargetType="TextBlock">

@@ -14,8 +14,8 @@ Imports System.Windows
 <Assembly: AssemblyTitle("TutorialsWPF_C1FlexGrid")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("ComponentOne")> 
-<Assembly: AssemblyProduct("TutorialsWPF_C1FlexGrid")> 
-<Assembly: AssemblyCopyright("Copyright @ ComponentOne 2011")> 
+<Assembly: AssemblyProduct("TutorialsWPF_C1FlexGrid")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 

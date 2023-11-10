@@ -60,7 +60,7 @@
         </StackPanel>
         <c1:C1Sunburst x:Name="sunburst" ItemsSource="{Binding HierarchicalData}" ChildItemsPath="Items" ToolTipContent="{}{name}&#x000A;{y}" Binding="Value" 
                      BindingName="Year,Quarter,Month"
-                     Header="Sales" Footer="copyright © GrapeCity, inc."
+                     Header="Sales" Footer=""
                      HeaderStyle="{StaticResource footerAndHeaderStyle}"
                      FooterStyle="{StaticResource footerAndHeaderStyle}"
                      Grid.Row="1">

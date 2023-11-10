@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ComponentOne")]
 [assembly: AssemblyProduct("Orders-EF-MVVM")]
-[assembly: AssemblyCopyright("Copyright © ComponentOne 2011")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

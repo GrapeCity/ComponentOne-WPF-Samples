@@ -49,7 +49,7 @@ actual string that starts with an equals sign, precede it with a single quote
 - Hyperlink support:
 
 The C1FlexGridBook supports the HYPERLINK function. If you enter a formula such as
-"=HYPERLINK('https://www.grapecity.com/en/componentone', 'ComponentOne')" in a cell, then the
+"=HYPERLINK('https://developer.mescius.com/componentone', 'ComponentOne')" in a cell, then the
 grid will create a HyperlinkButton element in the cell. The element can be clicked
 to navigate to the URL provided, and it can be edited and formatted like any other
 cell.

@@ -10,9 +10,7 @@
         <c1:C1GridControl x:Name="grid" 
                      FontSize="12" 
                      GridLinesVisibility="All" 
-                     SelectionMode="MultiRange"
                      ShowMarquee="True"
-                     MouseOverMode="None"
                      FocusVisualStyle="{x:Null}"
                      BorderBrush="#d4d4d4">
             <c1:C1GridControl.Adapter>

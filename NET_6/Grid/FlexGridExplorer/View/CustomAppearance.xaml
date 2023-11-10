@@ -24,6 +24,9 @@
             <c1:C1ComboBox x:Name="Themes" Margin="4 0 0 0" SelectedItemChanged="OnThemeChanged"/>
         </StackPanel>
         <c1:FlexGrid x:Name="grid" Margin="12" Grid.Row="1" Style="{StaticResource ExpressionDark}" SelectionMode="RowRange" >
+            <c1:FlexGrid.ColumnFooterRows>
+                <c1:GridSummaryRow OptionsMenuVisibility="MouseOver"/>
+            </c1:FlexGrid.ColumnFooterRows>
             <c1:FlexGrid.Rows>
                 <c1:GridFilterRow Placeholder="{x:Static res:AppResources.FilterPlaceholderText}" AutoComplete="True"/>
             </c1:FlexGrid.Rows>

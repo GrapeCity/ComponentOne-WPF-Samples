@@ -13,8 +13,8 @@ using System.Windows;
 [assembly: AssemblyProduct("FlexGrid_UIATest")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyCompany("GrapeCity, Inc.")]
-[assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyCopyright("")]
 
 
 // Setting ComVisible to false makes the types in this assembly not visible 

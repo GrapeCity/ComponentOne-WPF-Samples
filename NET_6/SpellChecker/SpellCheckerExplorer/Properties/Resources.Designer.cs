@@ -61,6 +61,15 @@ namespace SpellCheckerExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Batch Check.
+        /// </summary>
+        public static string BatchCheck {
+            get {
+                return ResourceManager.GetString("BatchCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check Spelling.
         /// </summary>
         public static string CheckSpelling {
@@ -124,6 +133,15 @@ namespace SpellCheckerExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spell-check complete, {0} errors found..
+        /// </summary>
+        public static string SpellCheckCompletedWithErrors {
+            get {
+                return ResourceManager.GetString("SpellCheckCompletedWithErrors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Demo using C1SpellChecker for RichTextBox.
         /// </summary>
         public static string SpellCheckerRtbDemoDescription {
@@ -156,6 +174,15 @@ namespace SpellCheckerExplorer.Properties {
         public static string SpellCheckerTextDemoTitle {
             get {
                 return ResourceManager.GetString("SpellCheckerTextDemoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spelling.
+        /// </summary>
+        public static string Spelling {
+            get {
+                return ResourceManager.GetString("Spelling", resourceCulture);
             }
         }
         

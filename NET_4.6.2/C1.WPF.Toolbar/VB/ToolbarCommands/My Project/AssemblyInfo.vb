@@ -14,8 +14,8 @@ Imports System.Windows
 <Assembly: AssemblyTitle("ToolbarCommandsVB")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ToolbarCommandsVB")> 
-<Assembly: AssemblyCopyright("Copyright @  2012")> 
+<Assembly: AssemblyProduct("ToolbarCommandsVB")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: ComVisible(false)>
 

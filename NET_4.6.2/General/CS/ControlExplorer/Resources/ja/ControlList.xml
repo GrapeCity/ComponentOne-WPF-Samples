@@ -594,7 +594,7 @@
         <Description>C1Maps を使用して、画面と地理座標をスムーズにズーム、パン、マッピングします。 Microsoft Live Maps を含むさまざまなソースからの情報を表示します。独自のカスタム要素をマップにスーパーインポーズすることもできます。</Description>
       </Feature>
       <Feature assemblyName="MapsSamples.4.exe" type="MapsSamples.Airports" isNew="true" name="Airports" source="C1.WPF.Maps\CS\MapsSamples\Vectorlayer\Airports.xaml">
-        <Description>This view shows how to import GeoJSON data and display it on the map. The sample loads two GeoJSON files, one to show the land and second for the airport locations.</Description>
+        <Description>このビューは、GeoJSON データをインポートして地図上に表示する方法を示します。このサンプルは２つの GeoJSON ファイルをロードします。１つは土地を表示するもの、もう１つは空港の場所を表示するものです。</Description>
       </Feature>
       <Feature assemblyName="MapsSamples.4.exe" type="MapsSamples.DemoMaps" source="C1.WPF.Maps\CS\MapsSamples\C1MapsPage.xaml" name="ClearStyle">
         <Description>いくつかのブラシプロパティを変更するだけで、C1Maps コントロールのカスタムスタイルを素早く作成できます。ComponentOne ClearStyle テクノロジのおかげで、単純に色を変更するだけで、XAML テンプレートとスタイルリソースを手間をかけなくて済むようになりました。</Description>

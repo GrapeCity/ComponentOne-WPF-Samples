@@ -1,11 +1,7 @@
 ﻿using C1.WPF.Sparkline;
 using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 
 namespace SparklineExplorer
 {
@@ -24,7 +20,8 @@ namespace SparklineExplorer
 
         private void sparklineType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            sparkline.SparklineType = (SparklineType)sparklineType.SelectedItem;
+            if (sparklineType.SelectedItem != null)
+                sparkline.SparklineType = (SparklineType)sparklineType.SelectedItem;
         }
 
         private void checkBox_Click(object sender, RoutedEventArgs e)

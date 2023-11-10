@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using C1.DataCollection;
+using PropertyGridExplorer.Resources;
+using System.Windows.Controls;
 
 namespace PropertyGridExplorer
 {
@@ -10,7 +12,7 @@ namespace PropertyGridExplorer
         public AutoProperties()
         {
             InitializeComponent();
-            Tag = Properties.Resources.PropertyGridAutoPropsDesc;
+            Tag = AppResources.PropertyGridAutoPropsDesc;
         }
 
         private void CheckBox_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -24,6 +26,11 @@ namespace PropertyGridExplorer
             {
                 propertyGrid.SelectedObject = null;
             }    
-        }        
+        }
+
+        private void OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            propertyGrid.PropertyGroups.FilterAsync(filter.Text);
+        }
     }
 }
