@@ -2,9 +2,9 @@
 
 Deliver beautiful desktop applications fast with advanced datagrids, charts, and more for WPF.
 
-This repository contains the samples for [ComponentOne WPF Edition](https://www.grapecity.com/componentone/wpf-ui-controls). These samples provide complete implementation details for the WPF control features. 
+This repository contains the samples for [ComponentOne WPF Edition](https://developer.mescius.com/componentone/wpf-ui-controls). These samples provide complete implementation details for the WPF control features. 
 
-The samples reference, but do not include, the control packages. The control packages can be downloaded from nuget.org or grapecity.com/componentone.
+The samples reference, but do not include, the control packages. The control packages can be downloaded from nuget.org or developer.mescius/componentone.
 
 ## Building a Sample 
 
@@ -21,10 +21,10 @@ This will install any needed dependencies, build the project, and run the projec
 
 ## Resources
 
-* Product Details: https://www.grapecity.com/componentone/wpf-ui-controls
-* Demos: https://www.grapecity.com/componentone/demos
-* Documentation: https://www.grapecity.com/componentone/docs/wpf
-* Support Forum: https://www.grapecity.com/forums/wpf-edition
+* Product Details: https://developer.mescius.com/componentone/wpf-ui-controls
+* Demos: https://developer.mescius.com/componentone/demos
+* Documentation: https://developer.mescius.com/componentone/docs/wpf
+* Support Forum: https://developer.mescius.com/forums/wpf-edition
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/dotnet/winforms/blob/master/LICENSE.TXT)
  
