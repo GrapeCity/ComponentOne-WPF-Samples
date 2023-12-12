@@ -6,21 +6,21 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="7.0.20233.174" />
+    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="7.0.20233.175" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.8" />

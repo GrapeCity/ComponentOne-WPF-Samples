@@ -24,36 +24,36 @@
     <EmbeddedResource Include="Resources\DefaultDocument.pdf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="7.0.20233.174" />
+    <PackageReference Include="C1.DataCollection" Version="7.0.20233.175" />
     <PackageReference Include="C1.WPF.BarCode">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Chart">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Document">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DX">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ImportServices">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Rendering">
-      <Version>8.0.20233.668</Version>
+      <Version>8.0.20233.681</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
