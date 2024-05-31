@@ -1,8 +1,0 @@
-﻿<Window x:Class="SimpleReports.Window1"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="Simple Reports" Height="758" Width="734" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:simplereports="clr-namespace:SimpleReports">
-    <Grid>
-        <simplereports:CustomReport />
-    </Grid>
-</Window>
