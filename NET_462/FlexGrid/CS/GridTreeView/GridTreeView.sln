@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridTreeView", "GridTreeView\GridTreeView.csproj", "{5C9F064B-78C0-427C-8333-CAE5C7566ACA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C9F064B-78C0-427C-8333-CAE5C7566ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C9F064B-78C0-427C-8333-CAE5C7566ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C9F064B-78C0-427C-8333-CAE5C7566ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C9F064B-78C0-427C-8333-CAE5C7566ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9F8467A-97B2-4ECE-A35B-32489DEC267C}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

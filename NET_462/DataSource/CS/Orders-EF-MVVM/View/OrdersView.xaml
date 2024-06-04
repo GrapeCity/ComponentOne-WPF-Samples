@@ -1,0 +1,43 @@
+﻿<UserControl 
+  x:Class="Orders.View.OrdersView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+  >
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- A combo box showing cities. -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin ="10">
+            <TextBlock Margin="0,0,7,0">Orders from customers in city:</TextBlock>
+            <ComboBox ItemsSource="{Binding Cities}" MinWidth="200"/>
+        </StackPanel>
+
+        <!-- A DataGrid showing orders, bound to a live view in the OrdersViewModel. -->
+        <DataGrid Grid.Row="1" Style="{StaticResource PrettierDataGridStyle}" AutoGenerateColumns="False" ItemsSource="{Binding Orders}" Name="dataGrid1"
+                  SelectionChanged="OnDataGrid1SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="OrderID" Binding="{Binding OrderID}" />
+                <DataGridTextColumn Header="OrderDate" Binding="{Binding OrderDate, StringFormat=d}" />
+                <DataGridTextColumn Header="CustomerName" Binding="{Binding CustomerName}" Width="*"/>
+                <DataGridTextColumn Header="TotalCost" Binding="{Binding TotalCost, StringFormat=c}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- A DataGrid showing order detials of the selected Order. Its data binding is specified in code. -->
+        <DataGrid Grid.Row="2" Style="{StaticResource PrettierDataGridStyle}" AutoGenerateColumns="False" Name="dataGrid2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ProductID" Binding="{Binding ProductID}" />
+                <DataGridTextColumn Header="ProductName" Binding="{Binding ProductName}" Width="*"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="UnitPrice" Binding="{Binding UnitPrice}" />
+                <DataGridTextColumn Header="Discount" Binding="{Binding Discount}" />
+                <DataGridTextColumn Header="TotalCost" Binding="{Binding TotalCost, StringFormat=c}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

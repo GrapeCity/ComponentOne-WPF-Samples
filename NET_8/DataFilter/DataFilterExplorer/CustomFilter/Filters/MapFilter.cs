@@ -113,7 +113,7 @@ namespace DataFilterExplorer
 
         public IEnumerable<Store> GetSelectedStores()
         {
-            return Stores.Where(s => _layer.Children.Any(x => x.Fill == SelectedBrush && x.Tag == s.City));
+            return Stores.Where(s => _layer.Children.Any(x => x.Fill == SelectedBrush && (string)x.Tag == s.City));
         }
 
         public event EventHandler SelectedChanged;
@@ -178,7 +178,7 @@ namespace DataFilterExplorer
         {
             foreach (var placemark in _layer.Children.OfType<VectorPlacemark>())
             {
-                var isSelected = selectedStores?.FirstOrDefault(s => s.City == placemark.Tag) != null;
+                var isSelected = selectedStores?.FirstOrDefault(s => s.City == (string)placemark.Tag) != null;
                 placemark.Fill = isSelected ? SelectedBrush : UnselectedBrush;
             }
         }

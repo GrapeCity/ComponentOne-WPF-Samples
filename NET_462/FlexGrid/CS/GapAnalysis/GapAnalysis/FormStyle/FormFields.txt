@@ -1,0 +1,89 @@
+﻿Personal Information
+*1	First Name	Joe
+*2	Last Name	User
+*3	Address	123, Main Street
+*4	City	Pittsburgh, PA
+*5	Social Security Number	999-99-9999
+
+Income
+7	Wages, salaries, tips, etc. Attach Form(s) W-2	65000
+8a	Taxable interest. Attach Schedule B if required	123
+8b	Tax-exempt interest. Do not include on line 8a
+9a	Ordinary dividends. Attach Schedule B if required
+9b	Qualified dividends
+10	Taxable refunds, credits, or offsets of state and local income taxes
+11	Alimony received
+12	Business income or (loss). Attach Schedule C or C-EZ
+13	Capital gain or (loss). Attach Schedule D if required
+14	Other gains or (losses). Attach Form 4797
+15a	IRA distributions
+15b	Taxable amount
+16a	Pensions and annuities
+16b	Taxable amount
+17	Rental real estate, royalties, etc. Attach Schedule E.
+18	Farm income or (loss). Attach Schedule F
+19	Unemployment compensation
+20a	Social security benefits
+20b	Taxable amount
+21	Other income	1200
+22	Combine the amounts for lines 7 through 21. This is your total income.	{{7:21}}
+
+Adjusted Gross Income
+23	Educator expenses
+24	Business expenses of reservists, performing artists, and fee-basis government officials. Attach Form 2106 or 2106-EZ
+25	Health savings account deduction. Attach Form 8889	450
+26	Moving expenses. Attach Form 3903
+27	Deductible part of self-employment tax. Attach Schedule SE
+28	Self-employed SEP, SIMPLE, and qualified plans
+29	Self-employed health insurance deduction
+30	Penalty on early withdrawal of savings
+31a	Alimony paid
+32	IRA deduction
+33	Student loan interest deduction
+34	Tuition and fees. Attach Form 8917
+35	Domestic production activities deduction. Attach Form 8903
+36	Add lines 23 through 35	{{23:35}}
+37	Subtract line 36 from line 22. This is your adjusted gross income	{{22-36}}
+
+Tax And Credits
+38	Amount from line 37 (adjusted gross income)	{{37}}
+40	Itemized deductions (from Schedule A) or your standard deduction
+43	Taxable income. Subtract line 40 from line 38	{{38-40}}
+45	Alternative minimum tax (see instructions). Attach Form 6251
+47	Foreign tax credit. Attach Form 1116 if required
+48	Credit for child and dependent care expenses. Attach Form 2441
+49	Education credits from Form 8863, line 19
+50	Retirement savings contributions credit. Attach Form 8880
+51	Child tax credit. Attach Schedule 8812, if required
+52	Residential energy credits. Attach Form 5695
+53	Other credits
+54	Add lines 47 through 53. These are your total credits	{{47:53}}
+55	Subtract line 54 from line 43. If line 54 is more than line 43, enter -0-	{{43-54}}
+
+Other Taxes
+56	Self-employment tax. Attach Schedule SE
+57	Unreported social security and Medicare tax from Form
+58	Additional tax on IRAs, other qualified retirement plans, etc.
+59a	Household employment taxes from Schedule H
+59b	First-time homebuyer credit repayment. Attach Form 5405 if required
+60	Other taxes. Enter code(s) from instructions
+61	Add lines 55 through 60. This is your total tax	{{55:60}}
+
+Payments
+62	Federal income tax withheld from Forms W-2 and 1099
+63	Estimated tax payments & amount applied from previous year
+64	Earned income credit (EIC)
+65	Additional child tax credit. Attach form 8812.
+66	American opportunity credit from Form 8863, line 8
+68	Amount paid with request for extension to file
+69	Excess social security and tier 1 RRTA tax withheld
+70	Credit for federal tax on fuels. Attach Form 4136
+72	Add lines 62 through 70. These are your total payments:	{{62:70}}
+
+Refund
+73	If line 72 is more than line 61, subtract line 61 from line 72	{{72-61}}
+74	Amount of line 73 you want refunded to you
+75	Amount of line 73 you want applied to next year's taxes
+
+Amount you owe
+76	Amount you owe. Subtract line 72 from line 61	{{61-72}}

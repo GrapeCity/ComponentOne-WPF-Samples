@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="FlexSheetSample.ColorSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local ="clr-namespace:FlexSheetSample"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="200">
+    <UserControl.Resources>
+        <local:ColorToSolidColorBrushConverter x:Key="FromColorToSolidColorBrushConverter"/>
+    </UserControl.Resources>
+    <StackPanel>
+        <Expander Header="Default Colors" Name="epDefaultcolor" IsExpanded="True">
+            <ListBox    x:Name="DefaultPicker"        
+              SnapsToDevicePixels="True">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Rectangle Width="15" Height="15" Stroke="Black" HorizontalAlignment="Center"
+                    Fill="{Binding Converter={StaticResource FromColorToSolidColorBrushConverter}}" Margin="0 1 0 1"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel  Width="260" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </Expander>
+    </StackPanel>
+</UserControl>

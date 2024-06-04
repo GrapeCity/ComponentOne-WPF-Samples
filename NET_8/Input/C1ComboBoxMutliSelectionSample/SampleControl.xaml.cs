@@ -29,21 +29,6 @@ namespace C1ComboBoxMutliSelectionSample
 
             NormalStyleComboBox.SelectedItems.Add(Employee.Default[2]);
             NormalStyleComboBox.SelectedItems.Add(Employee.Default[4]);
-
-            //NormalStyleComboBox.SelectedItem = Model.Employee.Default[17];
-
-            //CheckBoxStyleComboBox.Items.Add(new C1ComboBoxItem { Content = "AAA" });
-            //var item2 = new C1ComboBoxItem { Content = "BBB" };
-            //CheckBoxStyleComboBox.Items.Add(item2);
-            //CheckBoxStyleComboBox.Items.Add(new C1ComboBoxItem { Content = "CCC" });
-            //CheckBoxStyleComboBox.SelectedItem = item2;
-
-            //CheckBoxStyleComboBox.Items.Add("AAA");
-            //CheckBoxStyleComboBox.Items.Add("BBB");
-            //CheckBoxStyleComboBox.Items.Add("CCC");
-            //CheckBoxStyleComboBox.SelectedItem = "CCC";
-            //CheckBoxStyleComboBox.Items.Add(Model.Employee.Default[2]);
-            //CheckBoxStyleComboBox.Items.Add(Model.Employee.Default[4]);
         }
 
         private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)

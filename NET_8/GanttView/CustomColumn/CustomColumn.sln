@@ -6,20 +6,11 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		GCDebug|Any CPU = GCDebug|Any CPU
-		GCRelease|Any CPU = GCRelease|Any CPU
-		GRAPECITY|Any CPU = GRAPECITY|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
-		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.GCRelease|Any CPU.Build.0 = Release|Any CPU
-		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.GRAPECITY|Any CPU.ActiveCfg = Debug|Any CPU
-		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.GRAPECITY|Any CPU.Build.0 = Debug|Any CPU
 		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B538AB1B-E0A5-4630-AC08-3DB9EC9560AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

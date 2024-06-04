@@ -26,8 +26,16 @@
             </ListView.ItemTemplate>
         </ListView>
         <DockPanel Grid.Column="1">
-            <TextBlock x:Name="lblCaption" Background="#ebedec" FontSize="24" HorizontalAlignment="Stretch" Padding="10 10 10 10" TextWrapping="Wrap" DockPanel.Dock="Top" />
-            <ContentControl x:Name="samplePanel" Margin="5"></ContentControl>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" MinHeight="50" MaxHeight="100"></RowDefinition>
+                    <RowDefinition Height="15*"></RowDefinition>
+                    <RowDefinition Height="1*" MinHeight="50" MaxHeight="80"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="lblCaption" Background="#ebedec" FontSize="24" HorizontalAlignment="Stretch" Padding="10 10 10 10" TextWrapping="Wrap" DockPanel.Dock="Top" Grid.Row="0" />
+                <ContentControl x:Name="samplePanel" Margin="5"  DockPanel.Dock="Top" Grid.Row="1" ></ContentControl>
+                <TextBlock x:Name="lblDescr" Background="#ebedec" FontSize="16" HorizontalAlignment="Stretch" Padding="10 10 10 10" TextWrapping="Wrap" DockPanel.Dock="Bottom" MinHeight="100" Grid.Row="2" />
+            </Grid>
         </DockPanel>
     </Grid>
 </Window>

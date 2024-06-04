@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<books>
+  <book author="Sergii Baidachnyi" coverUri="http://ecx.images-amazon.com/images/I/511X0GLyvdL._SX331_BO1,204,203,200_.jpg" price="$29.53" title="Developing Windows 10 Applications with C#" />
+  <book author="Adam Nathan" coverUri="http://ecx.images-amazon.com/images/I/51ZHjNpMxJL._SX385_BO1,204,203,200_.jpg" price="$26.92" title="Universal Windows Apps with XAML and C# Unleashed" />
+  <book author="John Sharp" coverUri="http://ecx.images-amazon.com/images/I/41N-t2baooL._SX408_BO1,204,203,200_.jpg" price="$27.85" title="Microsoft Visual C# Step by Step (8th Edition) (Developer Reference)" />
+  <book author="Edward Moemeka and Elizabeth Moemeka" coverUri="http://ecx.images-amazon.com/images/I/41kPjWo2UvL._SY344_BO1,204,203,200_.jpg" price="$34.13" title="Real World Windows 10 Development" />
+  <book author="Mark J. Price" coverUri="http://ecx.images-amazon.com/images/I/51PoyFDMopL._SX403_BO1,204,203,200_.jpg" price="$43.98" title="C# 6 and .NET Core 1.0: Modern Cross-Platform Development" />
+  <book author="Christian Nagel" coverUri="http://ecx.images-amazon.com/images/I/51m6ae7rf3L._SX258_BO1,204,203,200_.jpg" price="$31.88" title="Professional C# 6 and .NET Core 1.0" />
+  <book author="RB Whitaker" coverUri="http://ecx.images-amazon.com/images/I/51%2Bf%2B1nqr%2BL._SX398_BO1,204,203,200_.jpg" price="$21.99" title="The C# Player's Guide (2nd Edition)" />
+  <book author="Andrew Troelsen" coverUri="http://ecx.images-amazon.com/images/I/51ND6RKrtyL._SX258_BO1,204,203,200_.jpg" price="$23.83" title="Pro C# 5.0 and the .NET 4.5 Framework (Expert's Voice in .NET)" />
+  <book author="Adam Nathan" coverUri="http://ecx.images-amazon.com/images/I/51Mnt5Hk7GL._SY344_BO1,204,203,200_.jpg" price="$26.49" title="XAML Unleashed" />
+  <book author="Susan Fletcher Guagliumi" coverUri="http://ecx.images-amazon.com/images/I/61PTxirE3fL._SX398_BO1,204,203,200_.jpg" price="$22.80" title="Hand Knits by Machine: The Ultimate Guide for Hand and Machine Knitters" />
+</books>

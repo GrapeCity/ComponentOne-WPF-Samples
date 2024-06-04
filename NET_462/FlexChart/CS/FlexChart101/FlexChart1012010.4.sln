@@ -1,0 +1,30 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexChart1012010.4", "FlexChart1012010.4.csproj", "{B45B3E0C-B60C-4403-AF29-16A39D411ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B45B3E0C-B60C-4403-AF29-16A39D411ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45B3E0C-B60C-4403-AF29-16A39D411ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45B3E0C-B60C-4403-AF29-16A39D411ACE}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45B3E0C-B60C-4403-AF29-16A39D411ACE}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{B45B3E0C-B60C-4403-AF29-16A39D411ACE}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{B45B3E0C-B60C-4403-AF29-16A39D411ACE}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{B45B3E0C-B60C-4403-AF29-16A39D411ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45B3E0C-B60C-4403-AF29-16A39D411ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{fc35047d-0e6d-48e7-9c52-a6cf98b61bf6}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

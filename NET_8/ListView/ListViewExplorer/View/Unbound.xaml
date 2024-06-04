@@ -46,7 +46,7 @@
 
         </Border>
 
-        <c1:C1ListView x:Name="listView" Grid.Row="2" SelectionMode="Single" ZoomMode="Enabled" Orientation="Horizontal">
+        <c1:C1ListView x:Name="listView" Grid.Row="2" SelectionMode="Single" ZoomMode="Enabled" Orientation="Horizontal" ItemHeight="72">
             <c1:C1ListView.ItemContainerStyle>
                 <Style TargetType="c1:ListViewItemView">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />

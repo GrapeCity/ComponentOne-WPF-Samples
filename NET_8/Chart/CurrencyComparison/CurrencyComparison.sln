@@ -6,17 +6,11 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		GCRelease|Any CPU = GCRelease|Any CPU
-		GRAPECITY|Any CPU = GRAPECITY|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.GCRelease|Any CPU.Build.0 = Release|Any CPU
-		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.GRAPECITY|Any CPU.ActiveCfg = Release|Any CPU
-		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.GRAPECITY|Any CPU.Build.0 = Release|Any CPU
 		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

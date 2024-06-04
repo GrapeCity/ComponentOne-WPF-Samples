@@ -13,6 +13,7 @@ Shows the following samples
 * EditingForm
 * ConditionalFormatting
 * CustomCells
+* Hierarchical Rows
 * Grouping
 * RowDetails
 * FullTextFilter

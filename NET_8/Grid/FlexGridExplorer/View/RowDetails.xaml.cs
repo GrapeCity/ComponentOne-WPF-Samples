@@ -51,8 +51,9 @@ namespace FlexGridExplorer
             try
             {
                 //Simulates an operation that bring the details data.
-                await System.Threading.Tasks.Task.Delay(1000);
+                await System.Threading.Tasks.Task.Delay(1000, deferral.CancellationToken);
             }
+            catch { }
             finally
             {
                 deferral.Complete();

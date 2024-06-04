@@ -1,0 +1,368 @@
+﻿<UserControl x:Class="DataGridSamples.DataGridHistogramFilter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="80" d:DesignWidth="200">
+    <UserControl.Resources>
+        <!-- Color & Brush used to build Base brushes -->
+        <Color x:Key="BaseColor">#FFD1DCE8</Color>
+        <SolidColorBrush x:Key="BaseColorBrush" Color="{StaticResource BaseColor}"/>
+
+        <!-- Color & Brush used to build brushes on MouseOver state -->
+        <Color x:Key="MouseOverColor">#FFBFE1EA</Color>
+        <SolidColorBrush x:Key="MouseOverBrush" Color="{StaticResource MouseOverColor}"/>
+
+        <!-- Color & Brush used to build brushes on Pressed and Checked states -->
+        <Color x:Key="SelectedColor">#FF8ED1E2</Color>
+        <SolidColorBrush x:Key="SelectedBackground" Color="{StaticResource SelectedColor}"/>
+
+        <!-- Brush used to build brushes on Focused states -->
+        <SolidColorBrush x:Key="FocusBrush" Color="{StaticResource SelectedColor}"/>
+
+        <!-- Color & Brush @ general borders -->
+        <Color x:Key="BorderColor">#FFA4AFBA</Color>
+        <!-- Brush @ general borders -->
+        <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}"/>
+
+        <!-- General Thickness -->
+        <Thickness x:Key="GeneralThickness">1</Thickness>
+
+        <!-- Brush @ Disabled state-->
+        <SolidColorBrush x:Key="DisabledBrush" Color="#A5FFFFFF"/>
+
+        <!-- Brush @ InnerBorderElement -->
+        <SolidColorBrush x:Key="InnerBorderBrush" Color="#FFFAFBFC"/>
+        <!-- Brush @ InnerBorderElement -->
+        <SolidColorBrush x:Key="InnerBorderMouseOverBrush" Color="#FFFAFBFC"/>
+        <!-- Brush @ InnerBorderElement -->
+        <SolidColorBrush x:Key="InnerBorderPressedBrush" Color="#FFFAFBFC"/>
+        <!-- CornerRadius @ InnerBorderElement -->
+        <CornerRadius x:Key="InnerBorderCornerRadius">1</CornerRadius>
+        <!-- Thickness @ InnerBorderElement -->
+        <Thickness x:Key="InnerBorderThickness">1</Thickness>
+
+        <!-- Brush @ RangeSlider Horizontal Bar Background -->
+        <SolidColorBrush x:Key="RangeSliderHorizontalBarBrush" Color="#FFEDEDED"/>
+        <!-- Style @ Horizontal RangeSlider Bar -->
+        <Style x:Key="RangeSliderHorizontalBarStyle" TargetType="Rectangle">
+            <Setter Property="StrokeThickness" Value="1"/>
+            <Setter Property="RadiusX" Value="1" />
+            <Setter Property="RadiusY" Value="1" />
+            <Setter Property="Height" Value="3"/>
+            <Setter Property="Margin" Value="5,0,5,0"/>
+        </Style>
+        <!-- Brush @ Horizontal RangeSlider Thumb Background -->
+        <LinearGradientBrush x:Key="RangeSliderHorizontalThumbBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="#FFFAFBFC" Offset="0"/>
+            <GradientStop Color="#FFD0DBE7" Offset="1"/>
+        </LinearGradientBrush>
+        <!-- Brush @ Horizontal RangeSlider Thumb on MouseOver Background -->
+        <LinearGradientBrush x:Key="RangeSliderHorizontalThumbOverBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="#FFF1FBFF" Offset="0"/>
+            <GradientStop Color="#FFC5E3ED" Offset="1"/>
+        </LinearGradientBrush>
+        <!-- Brush @ Horizontal RangeSlider Thumb Selected Background -->
+        <LinearGradientBrush x:Key="RangeSliderHorizontalThumbSelectedBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="#FFDEF3FA" Offset="0"/>
+            <GradientStop Color="#FFA8D4E3" Offset="1"/>
+        </LinearGradientBrush>
+        <!-- CornerRadius @ RangeSlider Thumb -->
+        <CornerRadius x:Key="RangeSliderThumbCornerRadius">2</CornerRadius>
+
+        <!-- C1RangeSlider Thumb Style for Horizontal Orientation-->
+        <Style x:Key="RangeSliderHorizontalThumbStyle" TargetType="Thumb">
+            <Setter Property="IsTabStop" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border Background="#FF7D7F81" Width="1"/>
+                            <Grid Cursor="SizeWE" Margin="-2 0" Background="Transparent"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style x:Key="NormalRangeSlider" TargetType="c1:C1RangeSlider">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="c1:C1RangeSlider">
+                        <Grid x:Name="Root">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="Disabled"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <!-- Horizontal Template -->
+                            <Grid x:Name="HorizontalTemplate">
+                                <Grid.Resources>
+                                    <c1:DataGridNumericConverter x:Key="valueConverter"/>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" MinWidth="1"/>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <c1:C1BrushBuilder x:Name="HBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource RangeSliderHorizontalBarBrush}" DesignColor="{StaticResource BaseColor}"/>
+                                <!-- Repeat Buttons + Thumb -->
+                                <RepeatButton x:Name="DecreaseRepeatButton" 
+                                              Background="Transparent"
+                                              Opacity="0" 
+                                              IsTabStop="False" />
+                                <Thumb x:Name="LowerThumb"
+                                       Grid.Column="1" 
+                                       Background="{TemplateBinding Background}"
+                                       c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}"
+                                       c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}"
+                                       c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}"
+                                       BorderBrush="{TemplateBinding BorderBrush}" 
+                                       BorderThickness="{TemplateBinding BorderThickness}"
+                                       Style="{StaticResource RangeSliderHorizontalThumbStyle}" Opacity="0"/>
+                                <!--<Popup VerticalAlignment="Top" HorizontalOffset="-20" VerticalOffset="-22" HorizontalAlignment="Center" Grid.Column="1" IsOpen="{Binding Path=IsDragging, ElementName=LowerThumb}">
+                                    <ToolTip MinWidth="40" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock Text="{Binding Path=LowerValue, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource valueConverter}, ConverterParameter='N0'}" HorizontalAlignment="Center"/>
+                                    </ToolTip>
+                                </Popup>-->
+                                <Thumb x:Name="MiddleThumb" 
+                                       Grid.Column="2" 
+                                       Background="Transparent"
+                                       Opacity="0"
+                                       IsTabStop="False" />
+                                <Thumb x:Name="UpperThumb" 
+                                       Grid.Column="3" 
+                                       Background="{TemplateBinding Background}" 
+                                       c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}"
+                                       c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}"
+                                       c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}"
+                                       BorderBrush="{TemplateBinding BorderBrush}" 
+                                       BorderThickness="{TemplateBinding BorderThickness}"
+                                       Style="{StaticResource RangeSliderHorizontalThumbStyle}" Opacity="0" />
+                                <!--<Popup VerticalAlignment="Top" HorizontalOffset="-20" VerticalOffset="-22" HorizontalAlignment="Center" Grid.Column="3" IsOpen="{Binding Path=IsDragging, ElementName=UpperThumb}">
+                                    <ToolTip MinWidth="40" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock Text="{Binding Path=UpperValue, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource valueConverter}, ConverterParameter='N0'}" HorizontalAlignment="Center"/>
+                                    </ToolTip>
+                                </Popup>-->
+                                <RepeatButton x:Name="IncreaseRepeatButton" 
+                                              Background="Transparent"
+                                              Grid.Column="4" 
+                                              Opacity="0"
+                                              IsTabStop="False">
+                                </RepeatButton>
+								<Border Grid.Column="2" BorderBrush="#FF879BAA" BorderThickness="1" Background="#191AE5FF" IsHitTestVisible="False" Margin="-1,0">
+                                	<Grid>
+                                		<Rectangle HorizontalAlignment="Left" Stretch="Fill" Width="7" Height="13" Margin="-4,0" RadiusX="2" RadiusY="2">
+                                			<Rectangle.Stroke>
+                                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                					<GradientStop Color="#FF9FABB6" Offset="0"/>
+                                					<GradientStop Color="#FF627684" Offset="1"/>
+                                				</LinearGradientBrush>
+                                			</Rectangle.Stroke>
+                                			<Rectangle.Fill>
+                                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                					<GradientStop Color="#FFF7F8F9" Offset="0"/>
+                                					<GradientStop Color="#FFD1DBE7" Offset="1"/>
+                                				</LinearGradientBrush>
+                                			</Rectangle.Fill>
+                                		</Rectangle>
+                                		<Rectangle HorizontalAlignment="Left" Stretch="Fill" Width="5" Height="11" Margin="-3,15" RadiusX="1" RadiusY="1" Stroke="White"/>
+                                		<Path Data="M0,2 L3,2 L3,3 L0,3 z M3.576279E-07,0 L3.0000002,0 L3.0000002,1 L3.576279E-07,1 z" Fill="#FF879BAA" HorizontalAlignment="Left" Margin="-2,20,0,20" Stretch="Fill" Width="3"/>
+                                		<Rectangle HorizontalAlignment="Right" Stretch="Fill" Width="7" Height="13" Margin="-4,15" RadiusX="2" RadiusY="2">
+                                			<Rectangle.Stroke>
+                                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                					<GradientStop Color="#FF9FABB6" Offset="0"/>
+                                					<GradientStop Color="#FF627684" Offset="1"/>
+                                				</LinearGradientBrush>
+                                			</Rectangle.Stroke>
+                                			<Rectangle.Fill>
+                                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                					<GradientStop Color="#FFF7F8F9" Offset="0"/>
+                                					<GradientStop Color="#FFD1DBE7" Offset="1"/>
+                                				</LinearGradientBrush>
+                                			</Rectangle.Fill>
+                                		</Rectangle>
+                                		<Rectangle HorizontalAlignment="Right" Stretch="Fill" Width="5" Height="11" Margin="-3,16" RadiusX="1" RadiusY="1" Stroke="White"/>
+                                		<Path Data="M0,2 L3,2 L3,3 L0,3 z M3.576279E-07,0 L3.0000002,0 L3.0000002,1 L3.576279E-07,1 z" Fill="#FF879BAA" HorizontalAlignment="Right" Margin="-2,20" Stretch="Fill" Width="3"/>
+                                	</Grid>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="InverseRangeSlider" TargetType="c1:C1RangeSlider">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="c1:C1RangeSlider">
+                        <Grid x:Name="Root">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="Disabled"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <!-- Horizontal Template -->
+                            <Grid x:Name="HorizontalTemplate">
+                                <Grid.Resources>
+                                    <c1:DataGridNumericConverter x:Key="valueConverter"/>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" MinWidth="1" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <c1:C1BrushBuilder x:Name="HBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource RangeSliderHorizontalBarBrush}" DesignColor="{StaticResource BaseColor}"/>
+                                <!-- Repeat Buttons + Thumb -->
+                                <RepeatButton x:Name="DecreaseRepeatButton" 
+                                              Background="Transparent"
+                                              Opacity="0" 
+                                              IsTabStop="False" />
+                                <Thumb x:Name="LowerThumb" 
+								Opacity="0" 
+                                       Grid.Column="1" 
+                                       Background="{TemplateBinding Background}"
+                                       c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}"
+                                       c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}"
+                                       c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}"
+                                       BorderBrush="{TemplateBinding BorderBrush}" 
+                                       BorderThickness="{TemplateBinding BorderThickness}"
+                                       Style="{StaticResource RangeSliderHorizontalThumbStyle}" />
+                                <!--<Popup VerticalAlignment="Top" HorizontalOffset="-20" VerticalOffset="-22" HorizontalAlignment="Center" Grid.Column="1" IsOpen="{Binding Path=IsDragging, ElementName=LowerThumb}">
+                                    <ToolTip MinWidth="40" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock Text="{Binding Path=LowerValue, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource valueConverter}, ConverterParameter='N0'}" HorizontalAlignment="Center"/>
+                                    </ToolTip>
+                                </Popup>-->
+                                <Thumb x:Name="MiddleThumb" 
+                                       Grid.Column="2" 
+                                       Background="Transparent"
+                                       Opacity="0"
+                                       IsTabStop="False" />
+                                <Thumb x:Name="UpperThumb" 
+										Opacity="0" 
+                                       Grid.Column="3" 
+                                       Background="{TemplateBinding Background}" 
+                                       c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}"
+                                       c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}"
+                                       c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}"
+                                       BorderBrush="{TemplateBinding BorderBrush}" 
+                                       BorderThickness="{TemplateBinding BorderThickness}"
+                                       Style="{StaticResource RangeSliderHorizontalThumbStyle}" />
+                                <!--<Popup VerticalAlignment="Top" HorizontalOffset="-20" VerticalOffset="-22" HorizontalAlignment="Center" Grid.Column="3" IsOpen="{Binding Path=IsDragging, ElementName=UpperThumb}">
+                                    <ToolTip MinWidth="40" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock Text="{Binding Path=UpperValue, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource valueConverter}, ConverterParameter='N0'}" HorizontalAlignment="Center"/>
+                                    </ToolTip>
+                                </Popup>-->
+                                <RepeatButton x:Name="IncreaseRepeatButton" 
+                                              Background="Transparent"
+                                              Grid.Column="4" 
+                                              Opacity="0"
+                                              IsTabStop="False">
+                                </RepeatButton>
+                                <Border MinWidth="1" BorderBrush="#FF879BAA" BorderThickness="1" Background="#191AE5FF" IsHitTestVisible="False" Margin="0,0,-2,0">
+                                	<Grid>
+                                		<Rectangle HorizontalAlignment="Right" Stretch="Fill" Width="7" Height="13" Margin="-4,0" RadiusX="2" RadiusY="2">
+                                			<Rectangle.Stroke>
+                                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                					<GradientStop Color="#FF9FABB6" Offset="0"/>
+                                					<GradientStop Color="#FF627684" Offset="1"/>
+                                				</LinearGradientBrush>
+                                			</Rectangle.Stroke>
+                                			<Rectangle.Fill>
+                                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                					<GradientStop Color="#FFF7F8F9" Offset="0"/>
+                                					<GradientStop Color="#FFD1DBE7" Offset="1"/>
+                                				</LinearGradientBrush>
+                                			</Rectangle.Fill>
+                                		</Rectangle>
+                                		<Rectangle HorizontalAlignment="Right" Stretch="Fill" Width="5" Height="11" Margin="-3,0" RadiusX="1" RadiusY="1" Stroke="White" VerticalAlignment="Center"/>
+                                		<Path Data="M0,2 L3,2 L3,3 L0,3 z M3.576279E-07,0 L3.0000002,0 L3.0000002,1 L3.576279E-07,1 z" Fill="#FF879BAA" HorizontalAlignment="Right" Margin="-2,0" Stretch="Fill" Width="3" VerticalAlignment="Center" Height="3"/>
+                                	</Grid>
+                                </Border>
+                                <Border MinWidth="1" BorderBrush="#FF879BAA" BorderThickness="1" Background="#191AE5FF" IsHitTestVisible="False" Grid.Column="4" Margin="-2,0,0,0">
+                                	<Grid>
+                                		<Rectangle HorizontalAlignment="Left" Stretch="Fill" Width="7" Height="13" Margin="-4,0" RadiusX="2" RadiusY="2">
+                                			<Rectangle.Stroke>
+                                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                					<GradientStop Color="#FF9FABB6" Offset="0"/>
+                                					<GradientStop Color="#FF627684" Offset="1"/>
+                                				</LinearGradientBrush>
+                                			</Rectangle.Stroke>
+                                			<Rectangle.Fill>
+                                				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                					<GradientStop Color="#FFF7F8F9" Offset="0"/>
+                                					<GradientStop Color="#FFD1DBE7" Offset="1"/>
+                                				</LinearGradientBrush>
+                                			</Rectangle.Fill>
+                                		</Rectangle>
+                                		<Rectangle HorizontalAlignment="Left" Stretch="Fill" Width="5" Height="11" Margin="-3,0" RadiusX="1" RadiusY="1" Stroke="White" VerticalAlignment="Center"/>
+                                		<Path Data="M0,2 L3,2 L3,3 L0,3 z M3.576279E-07,0 L3.0000002,0 L3.0000002,1 L3.576279E-07,1 z" Fill="#FF879BAA" HorizontalAlignment="Left" Margin="-2,0" Stretch="Fill" Width="3" VerticalAlignment="Center" Height="3"/>
+                                	</Grid>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Border >
+
+		<Grid Margin="6">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition Height="Auto" MinHeight="21" />
+			</Grid.RowDefinitions>
+
+            <Border Background="#99FFFFFF" BorderBrush="#33000000" BorderThickness="1" />
+            <!-- histogram -->
+			<Polygon 
+				x:Name="_histogram" 
+				Points="0,0 0,1 1,1 1,4 2,4 2,2 3,2 3,6 4,6 4,16 5,16 5,10 6,10 6,5 7,5 7,6 8,6 8,4 9,4 9,0" 
+				Stretch="Fill"
+				Fill="#FF0089C8"
+				RenderTransformOrigin="0,.5" >
+				<Polygon.RenderTransform>
+					<ScaleTransform ScaleY="-1" />
+				</Polygon.RenderTransform>
+			</Polygon>
+
+			<!-- range slider -->
+			<c1:C1RangeSlider x:Name="_slider" FocusBrush="{x:Null}" Maximum="100" LowerValue="40" UpperValue="60" Style="{StaticResource NormalRangeSlider}"/>
+			<CheckBox x:Name="_chkInverse" Grid.Row="1" Content="Inverse" Height="17" VerticalAlignment="Bottom" Margin="4,2,0,-1"/>
+		</Grid>
+	</Border>
+</UserControl>

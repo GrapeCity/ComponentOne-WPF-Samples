@@ -6,32 +6,11 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|Mixed Platforms = Debug|Mixed Platforms
-		Debug|x86 = Debug|x86
-		GRAPECITY|Any CPU = GRAPECITY|Any CPU
-		GRAPECITY|Mixed Platforms = GRAPECITY|Mixed Platforms
-		GRAPECITY|x86 = GRAPECITY|x86
 		Release|Any CPU = Release|Any CPU
-		Release|Mixed Platforms = Release|Mixed Platforms
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|x86.Build.0 = Debug|Any CPU
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GRAPECITY|Any CPU.ActiveCfg = Release|Any CPU
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GRAPECITY|Any CPU.Build.0 = Release|Any CPU
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GRAPECITY|Mixed Platforms.ActiveCfg = Release|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GRAPECITY|Mixed Platforms.Build.0 = Release|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GRAPECITY|x86.ActiveCfg = Release|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GRAPECITY|x86.Build.0 = Release|x86
 		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|Any CPU.ActiveCfg = Release|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|Mixed Platforms.Build.0 = Release|x86
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|x86.ActiveCfg = Release|Any CPU
-		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

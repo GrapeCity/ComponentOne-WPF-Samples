@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{384CA389-0E68-4F87-AF98-0300D99406C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToolbarCommandsCS</RootNamespace>
+    <AssemblyName>ToolbarCommandsCS.4</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;CLR40;SL_AUTOMATION</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CLR40;SL_AUTOMATION</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\about16.png" />
+    <Resource Include="Resources\about32.png" />
+    <Resource Include="Resources\bold.png" />
+    <Resource Include="Resources\closeSolution.png" />
+    <Resource Include="Resources\color.png" />
+    <Resource Include="Resources\controlPanel.png" />
+    <Resource Include="Resources\copy.png" />
+    <Resource Include="Resources\copy16.png" />
+    <Resource Include="Resources\copy32.png" />
+    <Resource Include="Resources\cut.png" />
+    <Resource Include="Resources\cut16.png" />
+    <Resource Include="Resources\cut32.png" />
+    <Resource Include="Resources\delete.png" />
+    <Resource Include="Resources\delete16.png" />
+    <Resource Include="Resources\delete32.png" />
+    <Resource Include="Resources\find16.png" />
+    <Resource Include="Resources\find32.png" />
+    <Resource Include="Resources\find_again16.png" />
+    <Resource Include="Resources\find_again32.png" />
+    <Resource Include="Resources\find_next16.png" />
+    <Resource Include="Resources\find_next32.png" />
+    <Resource Include="Resources\find_previous16.png" />
+    <Resource Include="Resources\find_previous32.png" />
+    <Resource Include="Resources\help16.png" />
+    <Resource Include="Resources\help32.png" />
+    <Resource Include="Resources\italic.png" />
+    <Resource Include="Resources\ladybird.jpg" />
+    <Resource Include="Resources\layout_center.png" />
+    <Resource Include="Resources\layout_east.png" />
+    <Resource Include="Resources\layout_north.png" />
+    <Resource Include="Resources\layout_northeast.png" />
+    <Resource Include="Resources\layout_northwest.png" />
+    <Resource Include="Resources\layout_south.png" />
+    <Resource Include="Resources\layout_southeast.png" />
+    <Resource Include="Resources\layout_southwest.png" />
+    <Resource Include="Resources\layout_west.png" />
+    <Resource Include="Resources\maple.jpg" />
+    <Resource Include="Resources\newFile.png" />
+    <Resource Include="Resources\newProject.png" />
+    <Resource Include="Resources\newTeamProject.png" />
+    <Resource Include="Resources\newWebSite.png" />
+    <Resource Include="Resources\openFile.png" />
+    <Resource Include="Resources\openProject.png" />
+    <Resource Include="Resources\openTeamProject.png" />
+    <Resource Include="Resources\openWebSite.png" />
+    <Resource Include="Resources\pageSetup.png" />
+    <Resource Include="Resources\paste.png" />
+    <Resource Include="Resources\paste16.png" />
+    <Resource Include="Resources\paste32.png" />
+    <Resource Include="Resources\print.png" />
+    <Resource Include="Resources\redo.png" />
+    <Resource Include="Resources\save.png" />
+    <Resource Include="Resources\saveAll.png" />
+    <Resource Include="Resources\shape_circle.png" />
+    <Resource Include="Resources\shape_ellipse.png" />
+    <Resource Include="Resources\shape_hexagon.png" />
+    <Resource Include="Resources\shape_octagon.png" />
+    <Resource Include="Resources\shape_pentagon.png" />
+    <Resource Include="Resources\shape_rectangle.png" />
+    <Resource Include="Resources\shape_rhomb.png" />
+    <Resource Include="Resources\shape_square.png" />
+    <Resource Include="Resources\shape_triangle.png" />
+    <Resource Include="Resources\subscript.png" />
+    <Resource Include="Resources\superscript.png" />
+    <Resource Include="Resources\text_bold.png" />
+    <Resource Include="Resources\text_italics.png" />
+    <Resource Include="Resources\text_subscript.png" />
+    <Resource Include="Resources\text_superscript.png" />
+    <Resource Include="Resources\text_underlined.png" />
+    <Resource Include="Resources\underline.png" />
+    <Resource Include="Resources\undo.png" />
+    <Resource Include="Resources\view_1_1.png" />
+    <Resource Include="Resources\zoom_in.png" />
+    <Resource Include="Resources\zoom_in16.png" />
+    <Resource Include="Resources\zoom_in32.png" />
+    <Resource Include="Resources\zoom_original16.png" />
+    <Resource Include="Resources\zoom_original32.png" />
+    <Resource Include="Resources\zoom_out.png" />
+    <Resource Include="Resources\zoom_out16.png" />
+    <Resource Include="Resources\zoom_out32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <C1_MSBuildToolsVersion>v4.0</C1_MSBuildToolsVersion>
+    <C1_MSBuildToolsVersion Condition="$(VisualStudioVersion) != '10.0' And $(VisualStudioVersion) != '11.0'">v12.0</C1_MSBuildToolsVersion>
+  </PropertyGroup>
+</Project>

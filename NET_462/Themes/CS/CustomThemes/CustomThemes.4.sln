@@ -1,0 +1,52 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomThemes.4", "CustomThemes\CustomThemes.4.csproj", "{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCustomTheme.4", "MyCustomTheme\MyCustomTheme.4.csproj", "{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCDebug|x86 = GCDebug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|x86 = GCRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.GCDebug|x86.ActiveCfg = Debug|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.GCRelease|x86.ActiveCfg = Release|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA902C16-E311-4179-B5E4-FDAB7DDEC7DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.GCDebug|x86.ActiveCfg = Debug|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.GCRelease|x86.ActiveCfg = Release|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A3D5D9-23C5-437D-9F39-5557D3E13ABF}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{f12f3158-cd99-4c0c-ae4c-95f17ab9bb36}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

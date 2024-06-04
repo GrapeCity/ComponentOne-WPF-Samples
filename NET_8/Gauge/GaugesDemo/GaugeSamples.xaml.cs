@@ -38,7 +38,8 @@ namespace GaugesDemo
                     return;
                 var sampleControl = GetSample(sample.SampleViewType);
                 samplePanel.Content = sampleControl;
-                lblCaption.Text = sampleControl?.Tag as string;
+                lblCaption.Text = sample.Name;
+                lblDescr.Text = sampleControl?.Tag as string;
             }
             finally
             {

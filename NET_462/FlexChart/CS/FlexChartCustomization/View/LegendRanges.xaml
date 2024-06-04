@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="FlexChartCustomization.LegendRanges"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FlexChartCustomization"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.DataContext>
+            <local:ViewModel />
+        </Grid.DataContext>
+        <c1:C1FlexChart x:Name="flexChart" ChartType="Scatter" ItemsSource="{Binding USStatesTemperatureRecords}" BindingX="Place" Binding="High" ToolTipContent="{}{x} {y}" Header="U.S. State Record High Temperature">
+            <c1:C1FlexChart.HeaderStyle>
+                <c1:ChartStyle FontSize="15" FontFamily="GenericSansSerif"/>
+            </c1:C1FlexChart.HeaderStyle>
+            <c1:C1FlexChart.AxisY >
+                <c1:Axis Position="Left" AxisLine="False" MajorGrid="True" MajorTickMarks="None" Binding="Value,Text" Min="95" Format="#°F"/>
+            </c1:C1FlexChart.AxisY>
+        </c1:C1FlexChart>
+    </Grid>
+</UserControl>

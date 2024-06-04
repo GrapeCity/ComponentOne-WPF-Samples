@@ -1,0 +1,302 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:C1.WPF.FlexGridBook">
+
+  <!-- brushes -->
+  <SolidColorBrush x:Key="_RowBackground" Color="#c0eaeff4" />
+  <SolidColorBrush x:Key="_AlternatingRowBackground" Color="#00ffffff" />
+  <SolidColorBrush x:Key="_HeaderGridLinesBrush" Color="#e0c8c8c8" />
+  <SolidColorBrush x:Key="_GridLinesBrush" Color="#fff0f0f0" />
+  <SolidColorBrush x:Key="_FrozenLinesBrush" Color="#e0000000" />
+  <SolidColorBrush x:Key="_GroupRowBackground" Color="#e0e4e8e4" />
+  <SolidColorBrush x:Key="_CursorBackground" Color="#ffbadde9" />
+  <SolidColorBrush x:Key="_SelectionBackground" Color="#a0badde9" />
+
+  <Color x:Key="_gradFrom">#f0fafafa</Color>
+  <Color x:Key="_gradTo">#f0d7dce1</Color>
+  <LinearGradientBrush x:Key="_RowHeaderBackground" EndPoint="1.5,0">
+    <GradientStop Color="{StaticResource _gradFrom}" Offset="0" />
+    <GradientStop Color="{StaticResource _gradTo}" Offset="1" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="_ColumnHeaderBackground" EndPoint="0,1">
+    <GradientStop Color="{StaticResource _gradFrom}" Offset="0" />
+    <GradientStop Color="{StaticResource _gradTo}" Offset="1" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="_TopLeftCellBackground" EndPoint="1,1">
+    <GradientStop Color="{StaticResource _gradFrom}" Offset="0" />
+    <GradientStop Color="{StaticResource _gradTo}" Offset="1" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="_BottomRightCellBackground" EndPoint="1,1">
+    <GradientStop Color="{StaticResource _gradTo}" Offset="0" />
+    <GradientStop Color="{StaticResource _gradFrom}" Offset="1" />
+  </LinearGradientBrush>
+
+  <!-- style for grid splitter -->
+  <Style TargetType="local:GridSplitter">
+    <Setter Property="Background" Value="WhiteSmoke"/>
+    <Setter Property="BorderBrush" Value="Black"/>
+    <Setter Property="Cursor" Value="SizeWE"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="local:GridSplitter">
+          <Border Background="{TemplateBinding Background}"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}">
+            <Rectangle HorizontalAlignment="Center" Width="2" Margin="2" Fill="DarkGray" />
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!-- style for main control -->
+  <Style TargetType="local:C1FlexGridBook" >
+
+    <!-- properties -->
+    <!--<Setter Property="FontSize" Value="13" />-->
+    <Setter Property="FontFamily" Value="Arial" />
+    <Setter Property="Background" Value="White" />
+    <Setter Property="RowBackground" Value="{StaticResource _RowBackground}"/>
+    <Setter Property="AlternatingRowBackground" Value="{StaticResource _AlternatingRowBackground}"/>
+    <Setter Property="HeaderGridLinesBrush" Value="{StaticResource _HeaderGridLinesBrush}"/>
+    <Setter Property="GridLinesBrush" Value="{StaticResource _GridLinesBrush}"/>
+    <Setter Property="FrozenLinesBrush" Value="{StaticResource _FrozenLinesBrush}"/>
+    <Setter Property="GroupRowBackground" Value="{StaticResource _GroupRowBackground}"/>
+    <Setter Property="CursorBackground" Value="{StaticResource _CursorBackground}"/>
+    <Setter Property="SelectionBackground" Value="{StaticResource _SelectionBackground}"/>
+    <Setter Property="RowHeaderBackground" Value="{StaticResource _RowHeaderBackground}"/>
+    <Setter Property="ColumnHeaderBackground" Value="{StaticResource _ColumnHeaderBackground}"/>
+    <Setter Property="TopLeftCellBackground" Value="{StaticResource _TopLeftCellBackground}"/>
+    <Setter Property="BottomRightCellBackground" Value="{StaticResource _BottomRightCellBackground}"/>
+
+    <!-- Excel behavior by default -->
+    <Setter Property="AllowDragging" Value="None"/>
+    <Setter Property="AllowSorting" Value="False"/>
+    <Setter Property="AllowResizing" Value="Both"/>
+    <Setter Property="ShowMarquee" Value="True"/>
+    <Setter Property="GridLinesVisibility" Value="All"/>
+    <Setter Property="ClipboardCopyMode" Value="ExcludeHeader"/>
+    <Setter Property="ClipboardPasteMode" Value="ExcludeHeader"/>
+    <Setter Property="KeyActionTab" Value="MoveAcross"/>
+    <Setter Property="AreRowGroupHeadersFrozen" Value="False"/>
+
+    <!-- template -->
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="local:C1FlexGridBook">
+          <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+            <Grid x:Name="_root" >
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+
+              <!-- vertical scrollbar -->
+              <ScrollBar x:Name="_sbV" Orientation="Vertical" Grid.Column="2" Grid.RowSpan="2" />
+
+              <!-- tabs, splitter, horizontal scrollbar -->
+              <Grid x:Name="_tabHolder" Grid.Row="3" Grid.ColumnSpan="2" Background="DarkGray" >
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition />
+                  <ColumnDefinition Width="auto"/>
+                  <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition />
+                  </Grid.ColumnDefinitions>
+                  <StackPanel Orientation="Horizontal" >
+                    <Button Name="_btnFirstSheet" Background="DarkGray" />
+                    <Button Name="_btnPreviousSheet" Background="DarkGray" />
+                    <Button Name="_btnNextSheet" Background="DarkGray" />
+                    <Button Name="_btnLastSheet" Background="DarkGray" />
+                  </StackPanel>
+                  <c1:C1TabControl 
+                    Grid.Column="1" 
+                    x:Name="_tabs" 
+                    FontSize="12" 
+                    Padding="0" 
+                    Margin="0 -1 0 0" 
+                    IsTabStop="False" 
+                    TabItemShape="Sloped" 
+                    TabStripPlacement="Bottom" 
+                    TabStripOverlap="8" 
+                    VerticalAlignment="Bottom" />
+                </Grid>
+                <local:GridSplitter x:Name="_splitter" Width="6" Grid.Column="1" />
+                <ScrollBar x:Name="_sbH" Orientation="Horizontal" Grid.Column="2" />
+              </Grid>
+            </Grid>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!-- excel-style filter editor -->
+  <Style TargetType="local:ExcelFilterEditor">
+    <Setter Property="MinWidth" Value="230" />
+    <Setter Property="MinHeight" Value="230" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="local:ExcelFilterEditor">
+          <Border
+              Background="{TemplateBinding Background}"
+              BorderBrush="{TemplateBinding BorderBrush}"
+              BorderThickness="{TemplateBinding BorderThickness}" >
+            <Grid >
+              <Grid.Resources>
+                <Style x:Key="_sTB" TargetType="c1:HyperlinkButton" >
+                  <Setter Property="Margin" Value="2" />
+                </Style>
+                <Style x:Key="_sImg" TargetType="Image" >
+                  <!--<Setter Property="Width" Value="20" />-->
+                  <Setter Property="Stretch" Value="None" />
+                  <Setter Property="VerticalAlignment" Value="Center" />
+                  <Setter Property="HorizontalAlignment" Value="Center"/>
+                  <Setter Property="Margin" Value="2 0" />
+                </Style>
+                <Style x:Key="_sBtn" TargetType="Button" >
+                  <Setter Property="Margin" Value="0 0 6 0" />
+                  <Setter Property="Padding" Value="2" />
+                  <Setter Property="MinWidth" Value="60" />
+                </Style>
+                <Style x:Key="_sSep" TargetType="Border" >
+                  <Setter Property="BorderBrush" Value="LightGray" />
+                  <Setter Property="BorderThickness" Value=".5" />
+                  <!--<Setter Property="Margin" Value="2" />-->
+                </Style>
+              </Grid.Resources>
+              <Grid.RowDefinitions>
+                <!-- sort -->
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <!-- separator -->
+                <RowDefinition Height="auto" />
+                <!-- filter -->
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <!-- separator -->
+                <RowDefinition Height="auto" />
+                <!-- buttons -->
+                <RowDefinition Height="auto" />
+                <!-- resizer -->
+                <RowDefinition Height="auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition/>
+              </Grid.ColumnDefinitions>
+
+              <!-- vertical separator -->
+              <Border
+                  Grid.RowSpan="9" Style="{StaticResource _sSep}"
+                  Background="WhiteSmoke" HorizontalAlignment="Stretch" />
+
+              <!-- sorting -->
+              <Image Source="/C1.WPF.FlexGridBook.4.6.2;component/Resources/SortAscending_small.png" Style="{StaticResource _sImg}" />
+              <c1:HyperlinkButton Name="_btnSortAsc" Content="Sort Ascending" Grid.Column="1" Style="{StaticResource _sTB}" />
+
+              <Image Source="/C1.WPF.FlexGridBook.4.6.2;component/Resources/SortDescending_small.png" Grid.Row="1" Style="{StaticResource _sImg}" />
+              <c1:HyperlinkButton Name="_btnSortDesc" Content="Sort Descending" Grid.Row="1" Grid.Column="1" Style="{StaticResource _sTB}" />
+
+              <Border Grid.Row="3" Grid.Column="1" Style="{StaticResource _sSep}"/>
+
+              <!-- filter -->
+              <Image Source="/C1.WPF.FlexGridBook.4.6.2;component/Resources/ClearFilter_small.png" Grid.Row="4" Style="{StaticResource _sImg}" />
+              <c1:HyperlinkButton Name="_btnClear" Content="Clear Filter" Grid.Row="4" Grid.Column="1" Style="{StaticResource _sTB}" />
+
+              <Image Grid.Row="5" Style="{StaticResource _sImg}" />
+              <c1:HyperlinkButton Name="_btnToggleFilter" Content="Conditions >>" Grid.Row="5" Grid.Column="1" Style="{StaticResource _sTB}" />
+
+              <!-- value filter -->
+              <Border Grid.Row="6" Grid.Column="1">
+                <Grid Name="_edtValue" Visibility="Collapsed">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                  </Grid.RowDefinitions>
+
+                  <!-- value filter -->
+                  <Grid Margin="0 0 4 0">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition />
+                      <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="_txtValueFilter" BorderBrush="#30000000" Padding="4 0" Margin="0 4 0 0" />
+                    <Image Name="_imgFilter" Source="/C1.WPF.FlexGridBook.4.6.2;component/Resources/Search1_small.png" Grid.Column="1" Style="{StaticResource _sImg}" />
+                    <Image Name="_imgClearFilter" Source="/C1.WPF.FlexGridBook.4.6.2;component/Resources/Exit_small.png" Grid.Column="1" Style="{StaticResource _sImg}" Visibility="Collapsed" />
+                  </Grid>
+
+                  <!-- value list -->
+                  <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="auto" />
+                      <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <CheckBox Name="_chkSelectAll" Content="(Select All)" Margin="4 0 0 0" />
+                    <ListBox Name="_lbValues" BorderThickness="0" Grid.Row="1" MinHeight="50" MaxHeight="250" />
+                  </Grid>
+                </Grid>
+              </Border>
+
+              <!-- condition filter -->
+              <Border Grid.Row="6" Grid.Column="1">
+                <Grid Name="_edtCondition">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*" MinWidth="100" />
+                    <ColumnDefinition Width="8*" MinWidth="80" />
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                  </Grid.RowDefinitions>
+
+                  <TextBlock Text="Show Items" Grid.ColumnSpan="2" Margin="6 6 0 0" VerticalAlignment="Center" />
+                  <ComboBox Name="_cmbCond1" Grid.Row="1" Padding="2 0" Margin="4 0" />
+                  <TextBox Name="_txtCond1" Grid.Row="1" Grid.Column="1" Padding="0" Margin="4 0" />
+                  <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2" Margin="6 2" >
+                    <RadioButton Name="_btnAnd" Content="And" Margin="0 0 12 0" VerticalAlignment="Center" />
+                    <RadioButton Content="Or" VerticalAlignment="Center" />
+                  </StackPanel>
+                  <ComboBox Name="_cmbCond2" Grid.Row="3" Padding="2 0" Margin="4 0" />
+                  <TextBox Name="_txtCond2" Grid.Row="3" Grid.Column="1" Padding="0" Margin="4 0" />
+                </Grid>
+              </Border>
+
+              <!-- OK, Cancel -->
+              <Border Grid.Row="7" Grid.Column="1" Style="{StaticResource _sSep}" />
+              <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="8" Grid.Column="1" Margin="0 6 0 4">
+                <Button Name="_btnApply" Content="OK" Style="{StaticResource _sBtn}"/>
+                <Button Name="_btnCancel" Content="Cancel" Style="{StaticResource _sBtn}"/>
+              </StackPanel>
+
+              <!-- resizer -->
+              <Border Grid.Row="9" Grid.ColumnSpan="2" Background="WhiteSmoke" >
+                <Image
+                    Name="_imgResizer"
+                    Source="/C1.WPF.FlexGridBook.4.6.2;component/Resources/Resizer.png" Stretch="None"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Cursor="SizeNWSE" />
+              </Border>
+            </Grid>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

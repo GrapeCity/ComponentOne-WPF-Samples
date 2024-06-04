@@ -26,16 +26,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

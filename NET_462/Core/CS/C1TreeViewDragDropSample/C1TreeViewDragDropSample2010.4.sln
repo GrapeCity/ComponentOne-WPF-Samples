@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C1TreeViewDragDropSample2010.4", "C1TreeViewDragDropSample2010\C1TreeViewDragDropSample2010.4.csproj", "{6E8CE8CE-7B37-46EE-AA05-17C8DEE5626F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E8CE8CE-7B37-46EE-AA05-17C8DEE5626F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E8CE8CE-7B37-46EE-AA05-17C8DEE5626F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E8CE8CE-7B37-46EE-AA05-17C8DEE5626F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E8CE8CE-7B37-46EE-AA05-17C8DEE5626F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9305C92-A600-4F28-9219-BCFD7DCF6B72}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

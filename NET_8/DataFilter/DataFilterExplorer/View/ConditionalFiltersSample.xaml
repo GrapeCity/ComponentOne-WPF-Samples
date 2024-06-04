@@ -40,12 +40,18 @@
             <c1:C1DataFilter x:Name="c1DataFilter" AutoGenerateFilters="False">
                 <c1:C1DataFilter.Filters>
                     <c1:TextFilter PropertyName="Model" />
-                    <c1:DateFilter PropertyName="DateProductionLine" HeaderText="Date Production Line" />
+                    <c1:DateTimeFilter PropertyName="DateProductionLine" HeaderText="Date Production Line" />
+                    <c1:DateTimeOffsetFilter PropertyName="PresentationDate"/>
+                    <c1:DateOnlyFilter PropertyName="ManufactureDate" ToolTip="DateOnly"/>
+                    <c1:TimeOnlyFilter PropertyName="FuelConsumption" Format="hh:mm" Increment="00:05:00" ToolTip="TimeOnly" x:Name="timeOnlyFilter"/>
+                    <c1:TimeSpanFilter PropertyName="Acceleration" Maximum="00:01" Minimum="00:00" Increment="00:00:00:01" ToolTip="TimeSpan"/>
+                    
                     <c1:NumericFilter PropertyName="Price" Increment="1000" Format="F2" />
                     <c1:FullTextFilter PropertyName="Brand" HeaderText="Brand" />
                 </c1:C1DataFilter.Filters>
             </c1:C1DataFilter>
-            <c1:FlexGrid Grid.Column="1" AutoGenerateColumns="True" x:Name="flexGrid" FilterIconTemplate="{StaticResource FilterIcon}" ColumnOptionsIconTemplate="{x:Static c1:C1IconTemplate.ThreeDotsVertical}" />
+
+            <c1:FlexGrid Grid.Column="1" AutoGenerateColumns="True" AutoGeneratingColumn="FlexGridOnAutoGeneratingColumn" x:Name="flexGrid" FilterIconTemplate="{StaticResource FilterIcon}" ColumnOptionsIconTemplate="{x:Static c1:C1IconTemplate.ThreeDotsVertical}" />
         </Grid>
     </Grid>
 </UserControl>

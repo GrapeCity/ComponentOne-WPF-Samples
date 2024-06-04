@@ -1,0 +1,55 @@
+﻿<Window x:Class="WYSIWYGPrinting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WYSIWYGPrinting"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <!-- hidden Scheduler in Popup is required in the visual tree to support WYSIWYG printing with pagination and honoring page settings -->
+        <Popup>
+            <!-- set some properties to prevent functionality we don't need in hidden control and to hide elements we don't need to print -->
+            <c1:C1Scheduler x:Name="printScheduler1" BorderThickness="1" ShowNavigationPanels="False" MaxHeight="10000" MaxWidth="10000">
+                <c1:C1Scheduler.Settings>
+                    <c1:C1SchedulerSettings FirstVisibleTime="07:00:00" ShowReminderDialog="False"/>
+                </c1:C1Scheduler.Settings>
+            </c1:C1Scheduler>
+        </Popup>
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <ToolBarTray Grid.Row="0">
+                <ToolBar>
+                    <Button x:Name="print" Content="Print" Click="print_Click" Width="60"/>
+                </ToolBar>
+                <ToolBar>
+                    <RadioButton x:Name="day" Content="Day" Checked="Day_Click" Width="60"/>
+                    <RadioButton x:Name="workWeek" Content="Work Week" Checked="WorkWeek_Click"  Width="72"/>
+                    <RadioButton x:Name="week" Content="Week" Checked="Week_Click" Width="60"/>
+                    <RadioButton x:Name="month" Content="Month" Checked="Month_Click" IsChecked="True" Width="60"/>
+                    <RadioButton x:Name="timeLine" Content="Time Line" Checked="TimeLine_Click" Width="72"/>
+                </ToolBar>
+            </ToolBarTray>
+            <Grid SnapsToDevicePixels="True" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="197" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <c1:C1Scheduler x:Name="scheduler1" Grid.Column="1" Margin="2 0 0 0" BorderThickness="1" 
+                            ViewType="Month" StyleChanged="scheduler1_StyleChanged">
+                    <c1:C1Scheduler.Settings>
+                        <c1:C1SchedulerSettings FirstVisibleTime="07:00:00" />
+                    </c1:C1Scheduler.Settings>
+                </c1:C1Scheduler>
+                <c1:C1Calendar x:Name="calendar1" Grid.Column="0" MaxSelectionCount="42" BorderThickness="1" 
+                           SelectedDates="{Binding ElementName=scheduler1, Path=VisibleDates, Mode=OneWay}" 
+                           BoldedDates="{Binding ElementName=scheduler1, Path=BoldedDates, Mode=OneWay}" 
+                           GenerateAdjacentMonthDays="true" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

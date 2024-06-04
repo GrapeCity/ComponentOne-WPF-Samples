@@ -1,0 +1,39 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveLinqIssueTrackerDataSet2010.4", "DataSet\LiveLinqIssueTrackerDataSet2010.4.csproj", "{20E40B48-11B6-4FB0-A3F2-17CCC69D6156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveLinqIssueTrackerObjects2010.4", "Objects\LiveLinqIssueTrackerObjects2010.4.csproj", "{C4E68790-01BE-4EE9-928E-D06876B6106F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveLinqIssueTrackerXML2010.4", "XML\LiveLinqIssueTrackerXML2010.4.csproj", "{358339D7-AB1C-45CB-A540-871ED5986DBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20E40B48-11B6-4FB0-A3F2-17CCC69D6156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E40B48-11B6-4FB0-A3F2-17CCC69D6156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E40B48-11B6-4FB0-A3F2-17CCC69D6156}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{20E40B48-11B6-4FB0-A3F2-17CCC69D6156}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{20E40B48-11B6-4FB0-A3F2-17CCC69D6156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E40B48-11B6-4FB0-A3F2-17CCC69D6156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E68790-01BE-4EE9-928E-D06876B6106F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E68790-01BE-4EE9-928E-D06876B6106F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E68790-01BE-4EE9-928E-D06876B6106F}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E68790-01BE-4EE9-928E-D06876B6106F}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{C4E68790-01BE-4EE9-928E-D06876B6106F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E68790-01BE-4EE9-928E-D06876B6106F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358339D7-AB1C-45CB-A540-871ED5986DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358339D7-AB1C-45CB-A540-871ED5986DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358339D7-AB1C-45CB-A540-871ED5986DBF}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{358339D7-AB1C-45CB-A540-871ED5986DBF}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{358339D7-AB1C-45CB-A540-871ED5986DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358339D7-AB1C-45CB-A540-871ED5986DBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="StockAnalysis.Partial.UserControls.Annotations"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+             xmlns:data="clr-namespace:StockAnalysis.Data;assembly=StockAnalysis.Data"
+             xmlns:cmd="clr-namespace:StockAnalysis.Command"
+             xmlns:cvt="clr-namespace:StockAnalysis.Converter"
+             xmlns:cc="clr-namespace:StockAnalysis.Partial.CustomControls"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:StockAnalysis.Partial.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="210" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid>
+        <cc:NavList x:Name="listbox" BorderThickness="0" SelectedIndex="0" SelectionChanged="listbox_SelectionChanged" >
+            <cc:NavList.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="{StaticResource PaperWhite800}"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="SnapsToDevicePixels" Value="True"/>
+                    <Setter Property="Padding" Value="15,3"/>
+                    <Setter Property="FocusVisualStyle">
+                        <Setter.Value>
+                            <Style>
+                                <Setter Property="Control.Template">
+                                    <Setter.Value>
+                                        <ControlTemplate>
+                                            <Rectangle Margin="2" SnapsToDevicePixels="True" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Border x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                                    <Grid Margin="{TemplateBinding Padding}">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <ContentPresenter x:Name="contentPresenter" Margin="0,0,10,0" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                        <cc:SimpleButton x:Name="setting" Grid.Column="1" Visibility="Hidden" Margin="10, 0" Background="Transparent" BorderBrush="Transparent"
+                                         Padding="4"
+                                                         Command="{StaticResource AnnotationSettingCommand}" CommandParameter="{Binding Tag}"
+                                         HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <Path Visibility="Visible" Data="M12,7.6c0,0.1,0,0.2,0,0.4c0,0.1-0.1,0.3-0.1,0.4c-0.1,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.2,0.2-0.3,0.3
+	c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2,0-0.3-0.1c-0.1,0-0.2,0-0.3-0.1c-0.1,0-0.3,0-0.4,0c-0.1,0-0.3,0-0.4,0.1
+	c-0.1,0-0.2,0.1-0.3,0.2C9.1,9.6,9,9.8,9,10.1c0,0.3,0,0.5,0.1,0.8c0.1,0.2,0.1,0.3,0,0.5c-0.1,0.1-0.1,0.1-0.2,0.2
+	c-0.1,0.1-0.2,0.1-0.4,0.2c-0.1,0.1-0.3,0.1-0.4,0.1C7.9,12,7.8,12,7.6,12c-0.1,0-0.2,0-0.2-0.1c-0.1-0.1-0.1-0.1-0.1-0.2h0
+	C7.2,11.5,7,11.2,6.8,11c-0.2-0.2-0.5-0.3-0.8-0.3c-0.3,0-0.6,0.1-0.8,0.3c-0.2,0.2-0.4,0.4-0.5,0.7c0,0.1-0.1,0.2-0.2,0.2
+	C4.4,12,4.3,12,4.2,12c-0.1,0-0.3,0-0.4-0.1c-0.2,0-0.3-0.1-0.5-0.2c-0.2-0.1-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.2-0.3-0.3
+	c0-0.1-0.1-0.1-0.1-0.2c0-0.1,0-0.2,0.1-0.3c0.1-0.2,0.1-0.4,0.1-0.7c0-0.3-0.1-0.5-0.3-0.7C2.4,9.2,2.2,9.1,2.1,9.1
+	c-0.2,0-0.3-0.1-0.5,0c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.2,0-0.4,0C0.6,9.1,0.5,9,0.4,8.9C0.3,8.8,0.3,8.6,0.2,8.5C0.1,8.3,0.1,8.2,0,8
+	c0-0.2,0-0.3,0-0.4c0-0.2,0.1-0.3,0.3-0.4C0.5,7.2,0.8,7,1,6.8C1.2,6.5,1.3,6.3,1.3,6c0-0.3-0.1-0.6-0.3-0.8C0.8,5,0.5,4.8,0.3,4.7
+	c-0.1,0-0.1-0.1-0.2-0.2C0,4.4,0,4.3,0,4.2C0,4.1,0,4,0.1,3.8c0-0.1,0.1-0.3,0.1-0.4c0.1-0.1,0.1-0.2,0.2-0.4C0.5,3,0.5,2.9,0.6,2.8
+	c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.1,0,0.2,0.1C1.3,2.9,1.6,3,1.8,2.9c0.3,0,0.5-0.2,0.7-0.4c0.1-0.1,0.2-0.2,0.2-0.4
+	c0-0.2,0.1-0.3,0.1-0.4c0-0.1,0-0.3,0-0.4c0-0.1,0-0.2,0-0.3c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2C2.9,0.6,3,0.5,3.1,0.4
+	c0.1-0.1,0.3-0.2,0.4-0.2C3.7,0.1,3.8,0.1,4,0c0.1,0,0.3,0,0.3,0c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.1,0.1,0.1,0.2
+	C4.8,0.6,5,0.8,5.2,0.9C5.4,1.1,5.7,1.2,6,1.2c0.3,0,0.6-0.1,0.8-0.3C7,0.8,7.2,0.6,7.2,0.3c0-0.1,0.1-0.1,0.2-0.2
+	C7.5,0,7.6,0,7.6,0C7.8,0,7.9,0,8,0.1c0.1,0,0.3,0.1,0.4,0.1c0.1,0.1,0.3,0.1,0.4,0.2C8.9,0.5,9,0.6,9.1,0.7c0,0.1,0.1,0.1,0,0.2
+	c0,0.1,0,0.1-0.1,0.2C9,1.4,8.9,1.6,9,1.9c0,0.3,0.2,0.5,0.4,0.7C9.6,2.8,9.8,3,10.1,3c0.3,0,0.6,0,0.8-0.1c0.1,0,0.2-0.1,0.3-0.1
+	c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.2,0.3,0.3,0.5C11.9,3.7,12,3.9,12,4.2c0,0.1,0,0.3-0.1,0.3c-0.1,0.1-0.1,0.1-0.2,0.2
+	C11.5,4.8,11.2,5,11,5.2c-0.2,0.2-0.3,0.5-0.3,0.8c0,0.3,0.1,0.5,0.2,0.8c0.2,0.2,0.4,0.4,0.6,0.5c0.1,0,0.1,0.1,0.2,0.1
+	C11.9,7.4,11.9,7.5,12,7.6L12,7.6z M6,8.8c0.4,0,0.8-0.1,1.1-0.2C7.4,8.4,7.7,8.2,8,8c0.3-0.3,0.5-0.6,0.6-0.9
+	C8.7,6.7,8.8,6.4,8.8,6S8.7,5.2,8.6,4.9C8.4,4.6,8.2,4.3,8,4C7.7,3.7,7.4,3.5,7.1,3.4C6.7,3.3,6.4,3.2,6,3.2c-0.4,0-0.7,0.1-1.1,0.2
+	C4.6,3.5,4.3,3.7,4,4C3.8,4.3,3.6,4.6,3.4,4.9C3.3,5.2,3.2,5.6,3.2,6c0,0.4,0.1,0.7,0.2,1.1C3.6,7.4,3.8,7.7,4,8
+	c0.3,0.3,0.5,0.5,0.9,0.6C5.2,8.7,5.6,8.8,6,8.8L6,8.8z M6,8.8" Fill="{Binding (TextElement.Foreground), ElementName=contentPresenter, Mode=OneTime}" />
+                                        </cc:SimpleButton>
+                                        <Border x:Name="radioButtonBorder" Grid.Column="2" Margin="10,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="100" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="True" >
+                                            <Ellipse x:Name="optionMark" Margin="3" Fill="#398dff" MinWidth="6" MinHeight="6" Opacity="0" SnapsToDevicePixels="True" />
+                                        </Border>
+                                    </Grid>
+                                    
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                                        <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#398dff"/>
+                                        <!--<Setter Property="Visibility" TargetName="setting" Value="{Binding Tag, Converter={StaticResource NewAnnotationType2SettingButtonVisibilityConverter}}" />-->
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </cc:NavList.ItemContainerStyle>
+            <cc:NavList.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Width="16" Height="16" Source="{Binding Source}" />
+                        <TextBlock Grid.Column="2" Text="{Binding Name}" />
+                    </Grid>
+                </DataTemplate>
+            </cc:NavList.ItemTemplate>
+            <data:ImageListDataItem Name="None" Source="/StockAnalysis;component/Resources/None.png"  Tag="{x:Static data:NewAnnotationType.None}" />
+            <data:ImageListDataItem Name="Circle" Source="/StockAnalysis;component/Resources/Circle.png" Tag="{x:Static data:NewAnnotationType.Circle}" />
+            <data:ImageListDataItem Name="Ellipse" Source="/StockAnalysis;component/Resources/Ellipse.png" Tag="{x:Static data:NewAnnotationType.Ellipse}" />
+            <data:ImageListDataItem Name="Line" Source="/StockAnalysis;component/Resources/Line.png" Tag="{x:Static data:NewAnnotationType.Line}" />
+            <data:ImageListDataItem Name="Polygon" Source="/StockAnalysis;component/Resources/Triangle.png" Tag="{x:Static data:NewAnnotationType.Polygon}" />
+            <data:ImageListDataItem Name="Rectangle" Source="/StockAnalysis;component/Resources/Rectangle.png" Tag="{x:Static data:NewAnnotationType.Rectangle}" />
+            <data:ImageListDataItem Name="Square" Source="/StockAnalysis;component/Resources/Square.png" Tag="{x:Static data:NewAnnotationType.Square}" />
+            <data:ImageListDataItem Name="Text" Source="/StockAnalysis;component/Resources/Text.png" Tag="{x:Static data:NewAnnotationType.Text}" />
+        </cc:NavList>
+    </Grid>
+</UserControl>

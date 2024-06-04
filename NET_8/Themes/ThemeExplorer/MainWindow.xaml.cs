@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
+using System.Windows.Markup;
 
 namespace ThemeExplorer
 {
@@ -9,6 +11,7 @@ namespace ThemeExplorer
     {
         public MainWindow()
         {
+            this.Language = XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag);
             Title = Properties.Resources.Title;
             InitializeComponent();
         }

@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MultiUser2010.4", "MultiUser2010.4.vbproj", "{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_GRAPECITY|Any CPU = Debug_GRAPECITY|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release_GRAPECITY|Any CPU = Release_GRAPECITY|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.Debug_GRAPECITY|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.Debug_GRAPECITY|Any CPU.Build.0 = Debug|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.Release_GRAPECITY|Any CPU.ActiveCfg = Release|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.Release_GRAPECITY|Any CPU.Build.0 = Release|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72B0D47-54AB-4AB8-8AB9-CF11F971CB73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

@@ -237,4 +237,7 @@
   <data name="Retry" xml:space="preserve">
     <value>Retry</value>
   </data>
+  <data name="RemoveGrouping" xml:space="preserve">
+    <value>Remove Grouping</value>
+  </data>
 </root>

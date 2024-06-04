@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSizeTable", "AutoSizeTable.csproj", "{AE82F881-44D4-46A2-9CAB-D6F7CD48367A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE82F881-44D4-46A2-9CAB-D6F7CD48367A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE82F881-44D4-46A2-9CAB-D6F7CD48367A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE82F881-44D4-46A2-9CAB-D6F7CD48367A}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{AE82F881-44D4-46A2-9CAB-D6F7CD48367A}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{AE82F881-44D4-46A2-9CAB-D6F7CD48367A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE82F881-44D4-46A2-9CAB-D6F7CD48367A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {183DAA7C-7FED-4AA2-A1B6-9C03EBEA0787}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{c7b44c9e-6a3d-46d2-8da9-bf3399edf810}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

@@ -22,7 +22,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <c1:C1ListView x:Name="listView" Grid.Row="0" SelectionMode="Single" DisplayMemberPath="Name"  Margin="10 0 10 10"/>
+        <c1:C1ListView x:Name="listView" Grid.Row="0" SelectionMode="Single" DisplayMemberPath="Name"  Margin="10 0 10 10" IsSwipeEnabled="True"/>
 
     </Grid>
 </UserControl>

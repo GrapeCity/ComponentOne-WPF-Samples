@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="C1TreeViewDragDropSample2010.DropMark"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             Width="Auto" Height="Auto">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Path Height="2" Fill="#FFFFFFFF" Stretch="Fill" Stroke="#FF000000" StrokeThickness="2" Data="M16,216 C320,216 320,216 320,216"/>
+        <Path Height="6" HorizontalAlignment="Left"  Width="1" Stretch="Fill" Stroke="#FF000000" Data="M1.6145308,237.46518 C1.6145308,244.11705 1.6145308,244.11705 1.6145308,244.11705" />
+        <Path Height="6" HorizontalAlignment="Right" Width="1" Stretch="Fill" Stroke="#FF000000" Data="M1.6145308,237.46518 C1.6145308,244.11705 1.6145308,244.11705 1.6145308,244.11705" />
+        <Path Height="4" HorizontalAlignment="Left"  Width="1" Stretch="Fill" Stroke="#FF000000" Data="M1.6145308,237.46518 C1.6145308,244.11705 1.6145308,244.11705 1.6145308,244.11705" />
+        <Path Height="4" HorizontalAlignment="Right" Width="1" Stretch="Fill" Stroke="#FF000000" Data="M1.6145308,237.46518 C1.6145308,244.11705 1.6145308,244.11705 1.6145308,244.11705" />
+    </Grid>
+</UserControl>

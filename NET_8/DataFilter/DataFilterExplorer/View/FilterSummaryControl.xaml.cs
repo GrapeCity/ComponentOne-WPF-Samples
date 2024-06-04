@@ -64,7 +64,7 @@ namespace DataFilterExplorer
                     taFilter.ShowSelectAll = false;
                     break;
                 case "DateProductionLine":
-                    var drf = (DateRangeFilter)e.Filter;
+                    var drf = (DateTimeRangeFilter)e.Filter;
                     drf.UpperValue = _data.Max(x => (x as Car).DateProductionLine);
                     drf.LowerValue = _data.Min(x => (x as Car).DateProductionLine);
 

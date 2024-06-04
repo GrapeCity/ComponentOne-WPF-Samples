@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="FinancialChartExplorer.MovingAverages"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FinancialChartExplorer"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid>
+        <Grid.Resources>
+            <local:EnumConverter x:Key="EmConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <c1:C1FinancialChart BindingX="Date" Binding="Close" ChartType="Line" ItemsSource="{Binding Data}">
+            <c1:FinancialSeries />
+            <c1:MovingAverage x:Name="ma" />
+        </c1:C1FinancialChart>
+        <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="1">
+            <TextBlock Text="Moving Average Type" Margin="10 0"/>
+            <ComboBox ItemsSource="{Binding MovingAverageType}" SelectedValue="{Binding ElementName=ma, Path=Type, Converter={StaticResource EmConverter}, Mode=TwoWay}" Width="100" />
+            <TextBlock Text="Period" Margin="30 0 10 0"/>
+            <c1:C1NumericBox Value="{Binding ElementName=ma, Path=Period, Mode=TwoWay}" Minimum="1" Maximum="100" Width="80"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

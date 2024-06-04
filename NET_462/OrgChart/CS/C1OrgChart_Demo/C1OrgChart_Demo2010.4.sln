@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C1OrgChart_Demo2010.4", "C1OrgChart_Demo\C1OrgChart_Demo2010.4.csproj", "{2830D4D0-F04E-45F1-A909-CB85B2FA2786}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2830D4D0-F04E-45F1-A909-CB85B2FA2786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2830D4D0-F04E-45F1-A909-CB85B2FA2786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2830D4D0-F04E-45F1-A909-CB85B2FA2786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2830D4D0-F04E-45F1-A909-CB85B2FA2786}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1174B694-5D88-442C-BBDB-48822635F1EB}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{7ce2ac93-e852-423a-b363-d6a037ff8f92}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

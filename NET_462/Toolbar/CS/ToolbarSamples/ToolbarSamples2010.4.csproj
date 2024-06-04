@@ -1,0 +1,207 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ToolbarSamples</RootNamespace>
+    <AssemblyName>ToolbarSamples.4</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>DEBUG;TRACE;CLR40;SL_AUTOMATION</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE;CLR40;SL_AUTOMATION</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bold.png" />
+    <Resource Include="Resources\closeSolution.png" />
+    <Resource Include="Resources\color.png" />
+    <Resource Include="Resources\controlPanel.png" />
+    <Resource Include="Resources\copy.png" />
+    <Resource Include="Resources\cut.png" />
+    <Resource Include="Resources\delete.png" />
+    <Resource Include="Resources\italic.png" />
+    <Resource Include="Resources\ladybird.jpg" />
+    <Resource Include="Resources\layout_center.png" />
+    <Resource Include="Resources\layout_east.png" />
+    <Resource Include="Resources\layout_north.png" />
+    <Resource Include="Resources\layout_northeast.png" />
+    <Resource Include="Resources\layout_northwest.png" />
+    <Resource Include="Resources\layout_south.png" />
+    <Resource Include="Resources\layout_southeast.png" />
+    <Resource Include="Resources\layout_southwest.png" />
+    <Resource Include="Resources\layout_west.png" />
+    <Resource Include="Resources\maple.jpg" />
+    <Resource Include="Resources\newFile.png" />
+    <Resource Include="Resources\newProject.png" />
+    <Resource Include="Resources\newTeamProject.png" />
+    <Resource Include="Resources\newWebSite.png" />
+    <Resource Include="Resources\openFile.png" />
+    <Resource Include="Resources\openProject.png" />
+    <Resource Include="Resources\openTeamProject.png" />
+    <Resource Include="Resources\openWebSite.png" />
+    <Resource Include="Resources\pageSetup.png" />
+    <Resource Include="Resources\paste.png" />
+    <Resource Include="Resources\print.png" />
+    <Resource Include="Resources\redo.png" />
+    <Resource Include="Resources\save.png" />
+    <Resource Include="Resources\saveAll.png" />
+    <Resource Include="Resources\shape_circle.png" />
+    <Resource Include="Resources\shape_ellipse.png" />
+    <Resource Include="Resources\shape_hexagon.png" />
+    <Resource Include="Resources\shape_octagon.png" />
+    <Resource Include="Resources\shape_pentagon.png" />
+    <Resource Include="Resources\shape_rectangle.png" />
+    <Resource Include="Resources\shape_rhomb.png" />
+    <Resource Include="Resources\shape_square.png" />
+    <Resource Include="Resources\shape_triangle.png" />
+    <Resource Include="Resources\subscript.png" />
+    <Resource Include="Resources\superscript.png" />
+    <Resource Include="Resources\text_bold.png" />
+    <Resource Include="Resources\text_italics.png" />
+    <Resource Include="Resources\text_subscript.png" />
+    <Resource Include="Resources\text_superscript.png" />
+    <Resource Include="Resources\text_underlined.png" />
+    <Resource Include="Resources\underline.png" />
+    <Resource Include="Resources\undo.png" />
+    <Resource Include="Resources\view_1_1.png" />
+    <Resource Include="Resources\zoom_in.png" />
+    <Resource Include="Resources\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\about16.png" />
+    <Resource Include="Resources\about32.png" />
+    <Resource Include="Resources\copy16.png" />
+    <Resource Include="Resources\copy32.png" />
+    <Resource Include="Resources\cut16.png" />
+    <Resource Include="Resources\cut32.png" />
+    <Resource Include="Resources\delete16.png" />
+    <Resource Include="Resources\delete32.png" />
+    <Resource Include="Resources\find16.png" />
+    <Resource Include="Resources\find32.png" />
+    <Resource Include="Resources\find_again16.png" />
+    <Resource Include="Resources\find_again32.png" />
+    <Resource Include="Resources\find_next16.png" />
+    <Resource Include="Resources\find_next32.png" />
+    <Resource Include="Resources\find_previous16.png" />
+    <Resource Include="Resources\find_previous32.png" />
+    <Resource Include="Resources\help16.png" />
+    <Resource Include="Resources\help32.png" />
+    <Resource Include="Resources\paste16.png" />
+    <Resource Include="Resources\paste32.png" />
+    <Resource Include="Resources\zoom_in16.png" />
+    <Resource Include="Resources\zoom_in32.png" />
+    <Resource Include="Resources\zoom_original16.png" />
+    <Resource Include="Resources\zoom_original32.png" />
+    <Resource Include="Resources\zoom_out16.png" />
+    <Resource Include="Resources\zoom_out32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\simplified\about16.png" />
+    <Resource Include="Resources\simplified\about32.png" />
+    <Resource Include="Resources\simplified\bold.png" />
+    <Resource Include="Resources\simplified\C1-ball.ico" />
+    <Resource Include="Resources\simplified\closeSolution.png" />
+    <Resource Include="Resources\simplified\color.png" />
+    <Resource Include="Resources\simplified\controlPanel.png" />
+    <Resource Include="Resources\simplified\copy.png" />
+    <Resource Include="Resources\simplified\copy16.png" />
+    <Resource Include="Resources\simplified\copy32.png" />
+    <Resource Include="Resources\simplified\cut.png" />
+    <Resource Include="Resources\simplified\cut16.png" />
+    <Resource Include="Resources\simplified\cut32.png" />
+    <Resource Include="Resources\simplified\delete.png" />
+    <Resource Include="Resources\simplified\delete16.png" />
+    <Resource Include="Resources\simplified\delete32.png" />
+    <Resource Include="Resources\simplified\find16.png" />
+    <Resource Include="Resources\simplified\find32.png" />
+    <Resource Include="Resources\simplified\find_again16.png" />
+    <Resource Include="Resources\simplified\find_again32.png" />
+    <Resource Include="Resources\simplified\find_next16.png" />
+    <Resource Include="Resources\simplified\find_next32.png" />
+    <Resource Include="Resources\simplified\find_previous16.png" />
+    <Resource Include="Resources\simplified\find_previous32.png" />
+    <Resource Include="Resources\simplified\help16.png" />
+    <Resource Include="Resources\simplified\help32.png" />
+    <Resource Include="Resources\simplified\italic.png" />
+    <Resource Include="Resources\simplified\ladybird.jpg" />
+    <Resource Include="Resources\simplified\layout_center.png" />
+    <Resource Include="Resources\simplified\layout_east.png" />
+    <Resource Include="Resources\simplified\layout_north.png" />
+    <Resource Include="Resources\simplified\layout_northeast.png" />
+    <Resource Include="Resources\simplified\layout_northwest.png" />
+    <Resource Include="Resources\simplified\layout_south.png" />
+    <Resource Include="Resources\simplified\layout_southeast.png" />
+    <Resource Include="Resources\simplified\layout_southwest.png" />
+    <Resource Include="Resources\simplified\layout_west.png" />
+    <Resource Include="Resources\simplified\maple.jpg" />
+    <Resource Include="Resources\simplified\newFile.png" />
+    <Resource Include="Resources\simplified\newProject.png" />
+    <Resource Include="Resources\simplified\newTeamProject.png" />
+    <Resource Include="Resources\simplified\newWebSite.png" />
+    <Resource Include="Resources\simplified\openFile.png" />
+    <Resource Include="Resources\simplified\openProject.png" />
+    <Resource Include="Resources\simplified\openTeamProject.png" />
+    <Resource Include="Resources\simplified\openWebSite.png" />
+    <Resource Include="Resources\simplified\pageSetup.png" />
+    <Resource Include="Resources\simplified\paste.png" />
+    <Resource Include="Resources\simplified\paste16.png" />
+    <Resource Include="Resources\simplified\paste32.png" />
+    <Resource Include="Resources\simplified\print.png" />
+    <Resource Include="Resources\simplified\redo.png" />
+    <Resource Include="Resources\simplified\redo16.png" />
+    <Resource Include="Resources\simplified\redo32.png" />
+    <Resource Include="Resources\simplified\save.png" />
+    <Resource Include="Resources\simplified\saveAll.png" />
+    <Resource Include="Resources\simplified\shape_circle.png" />
+    <Resource Include="Resources\simplified\shape_ellipse.png" />
+    <Resource Include="Resources\simplified\shape_hexagon.png" />
+    <Resource Include="Resources\simplified\shape_octagon.png" />
+    <Resource Include="Resources\simplified\shape_pentagon.png" />
+    <Resource Include="Resources\simplified\shape_rectangle.png" />
+    <Resource Include="Resources\simplified\shape_rhomb.png" />
+    <Resource Include="Resources\simplified\shape_square.png" />
+    <Resource Include="Resources\simplified\shape_triangle.png" />
+    <Resource Include="Resources\simplified\subscript.png" />
+    <Resource Include="Resources\simplified\superscript.png" />
+    <Resource Include="Resources\simplified\text_bold.png" />
+    <Resource Include="Resources\simplified\text_italics.png" />
+    <Resource Include="Resources\simplified\text_subscript.png" />
+    <Resource Include="Resources\simplified\text_superscript.png" />
+    <Resource Include="Resources\simplified\text_underlined.png" />
+    <Resource Include="Resources\simplified\underline.png" />
+    <Resource Include="Resources\simplified\undo.png" />
+    <Resource Include="Resources\simplified\undo16.png" />
+    <Resource Include="Resources\simplified\undo32.png" />
+    <Resource Include="Resources\simplified\view_1_1.png" />
+    <Resource Include="Resources\simplified\zoom_in.png" />
+    <Resource Include="Resources\simplified\zoom_in16.png" />
+    <Resource Include="Resources\simplified\zoom_in32.png" />
+    <Resource Include="Resources\simplified\zoom_original16.png" />
+    <Resource Include="Resources\simplified\zoom_original32.png" />
+    <Resource Include="Resources\simplified\zoom_out.png" />
+    <Resource Include="Resources\simplified\zoom_out16.png" />
+    <Resource Include="Resources\simplified\zoom_out32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Extended">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <PropertyGroup>
+    <C1_MSBuildToolsVersion>v4.0</C1_MSBuildToolsVersion>
+    <C1_MSBuildToolsVersion Condition="$(VisualStudioVersion) != '10.0' And $(VisualStudioVersion) != '11.0'">v12.0</C1_MSBuildToolsVersion>
+  </PropertyGroup>
+</Project>

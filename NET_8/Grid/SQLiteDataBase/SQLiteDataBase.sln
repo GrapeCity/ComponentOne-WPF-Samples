@@ -6,19 +6,13 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		GRAPECITY|Any CPU = GRAPECITY|Any CPU
 		Release|Any CPU = Release|Any CPU
-		UTRelease|Any CPU = UTRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DD30CF59-685E-4AEC-B9BC-257528395D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD30CF59-685E-4AEC-B9BC-257528395D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD30CF59-685E-4AEC-B9BC-257528395D11}.GRAPECITY|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD30CF59-685E-4AEC-B9BC-257528395D11}.GRAPECITY|Any CPU.Build.0 = Debug|Any CPU
 		{DD30CF59-685E-4AEC-B9BC-257528395D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD30CF59-685E-4AEC-B9BC-257528395D11}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD30CF59-685E-4AEC-B9BC-257528395D11}.UTRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{DD30CF59-685E-4AEC-B9BC-257528395D11}.UTRelease|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

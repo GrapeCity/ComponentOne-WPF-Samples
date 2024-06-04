@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BitmapSamples</RootNamespace>
+    <AssemblyName>BitmapSamples.4</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Printing" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Licenses.licx" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GrapeCity.jpg" />
+    <EmbeddedResource Include="Resources\HousePlan.jpg" />
+    <EmbeddedResource Include="Resources\Sheep.jpg" />
+    <EmbeddedResource Include="Resources\WarpEffect.cso" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Automation">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Bitmap">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Effects\WarpEffect.hlsl" />
+  </ItemGroup>
+  <Target Name="WarpEffectTarget" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)\Fxc\fxc.exe&quot; /Tvs_4_0_level_9_1 /Emain /Fo &quot;$(ProjectDir)Resources\WarpEffect.cso&quot; &quot;$(ProjectDir)Effects\WarpEffect.hlsl&quot;" />
+  </Target>
+</Project>

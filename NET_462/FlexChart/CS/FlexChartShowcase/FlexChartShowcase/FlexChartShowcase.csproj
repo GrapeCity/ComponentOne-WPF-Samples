@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Licenses.licx" />
+    <None Update="Resources\HistoricalQuotes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\16X16_Absolute.png" />
+    <Resource Include="Resources\16X16_DataCoordinates.png" />
+    <Resource Include="Resources\16X16_Relative.png" />
+    <Resource Include="Resources\AllowMove.png" />
+    <Resource Include="Resources\cancel.png" />
+    <Resource Include="Resources\cb_down26.png" />
+    <Resource Include="Resources\cb_up26.png" />
+    <Resource Include="Resources\Circle.png" />
+    <Resource Include="Resources\Delete.png" />
+    <Resource Include="Resources\Ellipse.png" />
+    <Resource Include="Resources\Line.png" />
+    <Resource Include="Resources\ok.png" />
+    <Resource Include="Resources\Rectangle.png" />
+    <Resource Include="Resources\Square.png" />
+    <Resource Include="Resources\Text.png" />
+    <Resource Include="Resources\Triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexChart">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,347 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Themes</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;CLR40;SL_AUTOMATION</DefineConstants>
+    <CodeAnalysisLogFile>bin\Debug\Themes2010.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineConstants>TRACE;CLR40;SL_AUTOMATION</DefineConstants>
+    <CodeAnalysisLogFile>bin\Release\Themes2010.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Themes2010.4.gclicx" />
+    <Resource Include="FlexViewer\C1NWind.xml.zip" />
+    <AppDesigner Include="Properties\" />
+    <Resource Include="FlexViewer\FlexCommonTasks_XML.flxr" />
+    <Resource Include="Resources\Sales.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bold.png" />
+    <Resource Include="Resources\closeSolution.png" />
+    <Resource Include="Resources\color.png" />
+    <Resource Include="Resources\controlPanel.png" />
+    <Resource Include="Resources\copy.png" />
+    <Resource Include="Resources\cut.png" />
+    <Resource Include="Resources\delete.png" />
+    <Resource Include="Resources\HansRosling_2006.jpg" />
+    <Resource Include="Resources\HansRosling_2006_00_25.jpg" />
+    <Resource Include="Resources\HansRosling_2006_06_18.jpg" />
+    <Resource Include="Resources\HansRosling_2006_09_16.jpg" />
+    <Resource Include="Resources\HansRosling_2006_15_04.jpg" />
+    <Resource Include="Resources\headerbg.png" />
+    <Resource Include="Resources\italic.png" />
+    <Resource Include="Resources\layout_center.png" />
+    <Resource Include="Resources\layout_east.png" />
+    <Resource Include="Resources\layout_north.png" />
+    <Resource Include="Resources\layout_northeast.png" />
+    <Resource Include="Resources\layout_northwest.png" />
+    <Resource Include="Resources\layout_south.png" />
+    <Resource Include="Resources\layout_southeast.png" />
+    <Resource Include="Resources\layout_southwest.png" />
+    <Resource Include="Resources\layout_west.png" />
+    <Resource Include="Resources\newFile.png" />
+    <Resource Include="Resources\newProject.png" />
+    <Resource Include="Resources\newTeamProject.png" />
+    <Resource Include="Resources\newWebSite.png" />
+    <Resource Include="Resources\openFile.png" />
+    <Resource Include="Resources\openProject.png" />
+    <Resource Include="Resources\openTeamProject.png" />
+    <Resource Include="Resources\openWebSite.png" />
+    <Resource Include="Resources\pageSetup.png" />
+    <Resource Include="Resources\paste.png" />
+    <Resource Include="Resources\print.png" />
+    <Resource Include="Resources\redo.png" />
+    <Resource Include="Resources\save.png" />
+    <Resource Include="Resources\saveAll.png" />
+    <Resource Include="Resources\shape_circle.png" />
+    <Resource Include="Resources\shape_ellipse.png" />
+    <Resource Include="Resources\shape_hexagon.png" />
+    <Resource Include="Resources\shape_octagon.png" />
+    <Resource Include="Resources\shape_pentagon.png" />
+    <Resource Include="Resources\shape_rectangle.png" />
+    <Resource Include="Resources\shape_rhomb.png" />
+    <Resource Include="Resources\shape_square.png" />
+    <Resource Include="Resources\shape_triangle.png" />
+    <Resource Include="Resources\subscript.png" />
+    <Resource Include="Resources\superscript.png" />
+    <Resource Include="Resources\underline.png" />
+    <Resource Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AlignLeft_16x.png" />
+    <Resource Include="Resources\AlignRight_16x.png" />
+    <Resource Include="Resources\AlignStretchHorizontal_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RichTextBox\dickens.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CalendarSchedule.png" />
+    <Resource Include="Resources\Contacts.png" />
+    <Resource Include="Resources\Contacts24.png" />
+    <Resource Include="Resources\FolderOpen.png" />
+    <Resource Include="Resources\Inbox.png" />
+    <Resource Include="Resources\Inbox24.png" />
+    <Resource Include="Resources\NewContact.png" />
+    <Resource Include="Resources\NewNote.png" />
+    <Resource Include="Resources\Notes.png" />
+    <Resource Include="Resources\Notes24.png" />
+    <Resource Include="Resources\Options.png" />
+    <Resource Include="Resources\Tasks.png" />
+    <Resource Include="Resources\Tasks24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tile_TileView\Amazon.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\covers\cover101.jpg" />
+    <Resource Include="Resources\covers\cover102.jpg" />
+    <Resource Include="Resources\covers\cover103.jpg" />
+    <Resource Include="Resources\covers\cover104.jpg" />
+    <Resource Include="Resources\covers\cover105.jpg" />
+    <Resource Include="Resources\covers\cover106.jpg" />
+    <Resource Include="Resources\covers\cover107.jpg" />
+    <Resource Include="Resources\covers\cover108.jpg" />
+    <Resource Include="Resources\covers\cover109.jpg" />
+    <Resource Include="Resources\covers\cover110.jpg" />
+    <Resource Include="Resources\covers\cover111.jpg" />
+    <Resource Include="Resources\covers\cover112.jpg" />
+    <Resource Include="Resources\covers\cover113.jpg" />
+    <Resource Include="Resources\covers\cover114.jpg" />
+    <Resource Include="Resources\covers\cover115.jpg" />
+    <Resource Include="Resources\covers\cover116.jpg" />
+    <Resource Include="Resources\covers\cover117.jpg" />
+    <Resource Include="Resources\covers\cover118.jpg" />
+    <Resource Include="Resources\covers\cover119.jpg" />
+    <Resource Include="Resources\covers\cover120.jpg" />
+    <Resource Include="Resources\covers\cover121.jpg" />
+    <Resource Include="Resources\covers\cover122.jpg" />
+    <Resource Include="Resources\covers\cover123.jpg" />
+    <Resource Include="Resources\covers\cover124.jpg" />
+    <Resource Include="Resources\covers\cover125.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.DataCollection">
+      <Version>8.0.20241.192</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DataCollection">
+      <Version>8.0.20241.192</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Binding">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Bitmap">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.C1Chart">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Carousel">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DataFilter">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DataGrid">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Docking">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Document">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Excel">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.ExpressionEditor">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Extended">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid.GroupPanel">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexReport">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexSheet">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexViewer">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.GanttView">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Gauge">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Input">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.InputPanel">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Maps">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.MediaPlayer">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Olap">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.OrgChart">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.OutlookBar">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Pdf">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.PdfViewer">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.ReportViewer">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.RichTextBox">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.RichTextBox.Toolbar">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Schedule">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Sparkline">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.SpellChecker">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.BureauBlack">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.C1Blue">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Cosmopolitan">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.CosmopolitanDark">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.ExpressionDark">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.ExpressionLight">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Material">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.MaterialDark">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Office2007">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Office2010">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Office2013">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Office2016">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Office2016Black">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.ShinyBlue">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.WhistlerBlue">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Tile">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.TileView">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Word">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Zip">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AnalysisServices.AdomdClient.retail.amd64">
+      <Version>19.74.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Linq.Parallel">
+      <Version>4.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <C1_MSBuildToolsVersion>v4.0</C1_MSBuildToolsVersion>
+    <C1_MSBuildToolsVersion Condition="$(VisualStudioVersion) != '10.0' And $(VisualStudioVersion) != '11.0'">v12.0</C1_MSBuildToolsVersion>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+</Project>

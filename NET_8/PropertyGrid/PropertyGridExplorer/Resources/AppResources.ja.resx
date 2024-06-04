@@ -151,5 +151,13 @@
   <data name="Cancel" xml:space="preserve">
     <value>キャンセル</value>
     <comment>Cancel</comment>
-  </data>	
+  </data>
+  <data name="EmptyGridMessage" xml:space="preserve">
+    <value>表示するプロパティはありません。</value>
+    <comment>There are no properties to show.</comment>
+  </data>
+  <data name="FilterPlaceholderText" xml:space="preserve">
+    <value>プロパティをフィルタリングするテキストを入力します</value>
+    <comment>Enter text to filter the properties</comment>
+  </data>
 </root>

@@ -35,7 +35,7 @@ namespace ListViewExplorer
         public Person(int index)
         {
             //Name = "Index " + index;
-            Name = $"{Names[Randomizer.Next(Names.Length)]} {Surnames[Randomizer.Next(Surnames.Length)]}";
+            Name = $"{Names[Randomizer.Next(Names.Length)]} {Surnames[Randomizer.Next(Surnames.Length)]} {index + 1:N0}";
             Address = $"{Streets[Randomizer.Next(Streets.Length)]} {1000 + Randomizer.Next(8999)}";
             Age = 10 + Randomizer.Next(40);
             Residence = Countries[Randomizer.Next(Countries.Length)];

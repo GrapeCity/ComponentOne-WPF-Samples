@@ -1,0 +1,34 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders_EF.4", "Orders_EF.4.csproj", "{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Debug|x86.ActiveCfg = Debug|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Debug|x86.Build.0 = Debug|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Release|Any CPU.ActiveCfg = Release|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Release|Mixed Platforms.Build.0 = Release|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Release|x86.ActiveCfg = Release|x86
+		{ED5E7152-7EBA-4ACD-9DDA-9F8D52CAF4F6}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{c5ec33af-7bed-4b19-a4d4-6ef1cbb0ab19}*SharedItemsImports = 5
+		..\..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{d99da8bc-b8e4-4565-b6f1-6bae312b554c}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

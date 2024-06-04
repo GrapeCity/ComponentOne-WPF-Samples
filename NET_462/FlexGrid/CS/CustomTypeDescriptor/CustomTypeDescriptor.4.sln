@@ -1,0 +1,36 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTypeDescriptor.4", "CustomTypeDescriptor.4.csproj", "{44861400-6730-41FC-8F33-D0B0E4C679FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseGC|Any CPU = ReleaseGC|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.ReleaseGC|Any CPU.ActiveCfg = Release|Any CPU
+		{44861400-6730-41FC-8F33-D0B0E4C679FF}.ReleaseGC|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {331CB2F8-8376-4720-978B-2F7616CCA5E9}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{fc35047d-0e6d-48e7-9c52-a6cf98b61bf6}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

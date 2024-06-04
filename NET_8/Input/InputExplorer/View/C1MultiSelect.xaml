@@ -13,7 +13,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <c1:C1MultiSelect x:Name="MultiSelect" VerticalAlignment="Top" Margin="5" DisplayMemberPath="Country" SelectedValuePath="Age"
+        <c1:C1MultiSelect x:Name="MultiSelect" VerticalAlignment="Top" Margin="5" DisplayMemberPath="Country" SelectedValuePath="Country"
                               MaxDropDownHeight="300" ItemsSource="{Binding Customers}"
                               SelectionChanged="OnSelectionChanged" Placeholder="Country" Height="100" />
 

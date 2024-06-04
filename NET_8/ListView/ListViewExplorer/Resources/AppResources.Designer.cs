@@ -241,6 +241,15 @@ namespace ListViewExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove Grouping.
+        /// </summary>
+        public static string RemoveGrouping {
+            get {
+                return ResourceManager.GetString("RemoveGrouping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Retry.
         /// </summary>
         public static string Retry {

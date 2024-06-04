@@ -117,24 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="OverviewDescription" xml:space="preserve">
+  <data name="ColorPickerDescription" xml:space="preserve">
     <value>概要</value>
   </data>
-  <data name="OverviewTitle" xml:space="preserve">
+  <data name="ColorPickerTitle" xml:space="preserve">
     <value>概要</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>事前に選択された標準色を含む基本的なカラーパレット、ユーザーが色の選択を完全にカスタマイズできる高度なパレット、またはその両方を含めることができます。ColorPicker for WPF には、透明度、16進数カラー、RGB と HSL カラーモデルのサポートも含まれており、豊富なビジュアルカラー入力インターフェースを提供します。</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>ColorPickerエクスプローラー</value>
+    <value>ColorPicker エクスプローラー</value>
   </data>
-  <data name="BrushesDescription" xml:space="preserve">
-    <value>ブラシを変更するためのさまざまなレベルの機能と複雑さを備えた一連のコントロールです</value>
+  <data name="BrushPickerDescription" xml:space="preserve">
+    <value>ブラシを変更するためのさまざまなレベルの機能と複雑さを備えた一連のコントロールです。</value>
     <comment>A series of controls with different levels of features and complexitiy to modify Brushes</comment>
   </data>
-  <data name="BrushesTitle" xml:space="preserve">
-    <value>ブラシ</value>
-    <comment>Brushes</comment>
+  <data name="BrushPickerTitle" xml:space="preserve">
+    <value>ブラシピッカー</value>
+    <comment>Brush Picker</comment>
+  </data>
+  <data name="ColorPickerDescription" xml:space="preserve">
+    <value>C1ColorPicker コントロールを表示します。</value>
+    <comment>Shows the C1ColorPicker control</comment>
+  </data>
+  <data name="ColorPickerTitle" xml:space="preserve">
+    <value>カラーピッカー</value>
+    <comment>Color Picker</comment>
   </data>
 </root>

@@ -12,16 +12,14 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Database\Appointment.mdf" />
-    <None Remove="Database\Appointment_log.ldf" />
+    <None Remove="Database\C1DataSet.xss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="C1-ball.ico" />
     <Content Include="Database\Appointment.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database\Appointment_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Database\C1DataSet.xss" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Database\C1DataSet.Designer.cs">
@@ -72,29 +70,29 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Calendar">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Schedule">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 </Project>

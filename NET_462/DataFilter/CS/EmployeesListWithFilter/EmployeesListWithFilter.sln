@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeesListWithFilter", "EmployeesListWithFilter.csproj", "{AB7C8083-8DA7-4EC6-82EC-029423983582}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB7C8083-8DA7-4EC6-82EC-029423983582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7C8083-8DA7-4EC6-82EC-029423983582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7C8083-8DA7-4EC6-82EC-029423983582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7C8083-8DA7-4EC6-82EC-029423983582}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A07B434F-858F-4AC6-9B3F-E76FF62EDFE6}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+		..\..\..\..\Shared\C1.DataFilter\C1.DataFilter.projitems*{870c80a6-774b-45c7-b9b9-899986209c4f}*SharedItemsImports = 13
+		..\..\..\..\Shared\C1.DataFilter\C1.DataFilter.projitems*{ead74c15-cafc-4f48-b905-cc54a8c6fb42}*SharedItemsImports = 5
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{f12f3158-cd99-4c0c-ae4c-95f17ab9bb36}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

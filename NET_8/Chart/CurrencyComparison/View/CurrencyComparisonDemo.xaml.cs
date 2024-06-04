@@ -327,7 +327,7 @@ namespace CurrencyComparison
             //cbCurrencies.Text = cbCurrencies.SelectedValue.ToString();
         }
 
-        void HandleMeasureModesSelectedItemChanged(object sender, EventArgs e)
+        private void HandleMeasureModesSelectedItemChanged(object sender, PropertyChangedEventArgs<int> e)
         {
             isChangeFromLegend = false;
             if (_viewModel.Currencies != null)

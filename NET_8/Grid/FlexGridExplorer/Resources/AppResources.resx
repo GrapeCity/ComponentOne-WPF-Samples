@@ -528,4 +528,22 @@
   <data name="TransposedGridTitle" xml:space="preserve">
     <value>Transposed Grid</value>
   </data>
+  <data name="HierarchicalRowsDescription" xml:space="preserve">
+    <value>Shows a tree-like data-source bound to FlexGrid using ChildItemsPath property.</value>
+  </data>
+  <data name="HierarchicalRowsTitle" xml:space="preserve">
+    <value>Hierarchical Rows</value>
+  </data>
+  <data name="TreeColumnIndex" xml:space="preserve">
+    <value>TreeColumnIndex</value>
+  </data>
+  <data name="TreeIndent" xml:space="preserve">
+    <value>TreeIndent</value>
+  </data>
+  <data name="TreeExpandMode" xml:space="preserve">
+    <value>TreeExpandMode</value>
+  </data>
+  <data name="RowsCount" xml:space="preserve">
+    <value>{0} rows</value>
+  </data>
 </root>

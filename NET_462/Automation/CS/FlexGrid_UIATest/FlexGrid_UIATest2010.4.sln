@@ -1,0 +1,97 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexGrid_UIATest2010.4", "FlexGrid_UIATest\FlexGrid_UIATest2010.4.csproj", "{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScripts.4", "Test Scripts\TestScripts.4.csproj", "{128D4701-2BEE-41D7-945B-327D4335EF3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C08DE76-07F0-45AE-8004-7D4A97711C1E}"
+	ProjectSection(SolutionItems) = preProject
+		FlexGrid_UIATest.vsmdi = FlexGrid_UIATest.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCDebug|Mixed Platforms = GCDebug|Mixed Platforms
+		GCDebug|x86 = GCDebug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|Mixed Platforms = GCRelease|Mixed Platforms
+		GCRelease|x86 = GCRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+		ReleaseGC|Any CPU = ReleaseGC|Any CPU
+		ReleaseGC|Mixed Platforms = ReleaseGC|Mixed Platforms
+		ReleaseGC|x86 = ReleaseGC|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Debug|x86.ActiveCfg = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Debug|x86.Build.0 = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCDebug|Any CPU.ActiveCfg = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCDebug|Mixed Platforms.ActiveCfg = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCDebug|Mixed Platforms.Build.0 = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCDebug|x86.ActiveCfg = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCDebug|x86.Build.0 = Debug|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCRelease|Any CPU.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCRelease|Mixed Platforms.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCRelease|Mixed Platforms.Build.0 = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCRelease|x86.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.GCRelease|x86.Build.0 = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Release|Any CPU.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Release|Mixed Platforms.Build.0 = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Release|x86.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.Release|x86.Build.0 = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.ReleaseGC|Any CPU.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.ReleaseGC|Mixed Platforms.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.ReleaseGC|Mixed Platforms.Build.0 = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.ReleaseGC|x86.ActiveCfg = Release|x86
+		{0F0A880F-5663-49C8-9CDC-8FF4F76F1F07}.ReleaseGC|x86.Build.0 = Release|x86
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCDebug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCDebug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCDebug|x86.ActiveCfg = Debug|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCRelease|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCRelease|Mixed Platforms.Build.0 = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.GCRelease|x86.ActiveCfg = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.Release|x86.ActiveCfg = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.ReleaseGC|Any CPU.ActiveCfg = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.ReleaseGC|Any CPU.Build.0 = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.ReleaseGC|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.ReleaseGC|Mixed Platforms.Build.0 = Release|Any CPU
+		{128D4701-2BEE-41D7-945B-327D4335EF3A}.ReleaseGC|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24F3F78E-9492-4FC0-8E6D-1AA69E59E7D8}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = FlexGrid_UIATest.vsmdi
+	EndGlobalSection
+EndGlobal

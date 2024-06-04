@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="SchedulerSamples.CalendarSettings" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+             xmlns:legacy="clr-namespace:C1.WPF.Schedule.Legacy;assembly=C1.WPF.Schedule.Themes.Legacy.4.6.2"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:local="clr-namespace:SchedulerSamples">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		
+		<Border Grid.Row="0">
+			<StackPanel>
+				<StackPanel Margin="5" Orientation="Horizontal">
+					<Grid Margin="10,5" VerticalAlignment="Top">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<Label VerticalAlignment="Center" Foreground="{DynamicResource text_Brush}" Grid.Column="0">Week Start:</Label>
+						<ComboBox x:Name="weekDays" SelectedIndex="0" Margin="10" VerticalAlignment="Top" Grid.Column="1" IsEditable="False" IsReadOnly="True" Width="160" HorizontalAlignment="Left" SelectionChanged="weekDays_SelectionChanged" ToolTip="Change Week Start">
+							<ComboBox.Items>
+								<sys:DayOfWeek>Sunday</sys:DayOfWeek>
+								<sys:DayOfWeek>Monday</sys:DayOfWeek>
+								<sys:DayOfWeek>Tuesday</sys:DayOfWeek>
+								<sys:DayOfWeek>Wednesday</sys:DayOfWeek>
+								<sys:DayOfWeek>Thursday</sys:DayOfWeek>
+								<sys:DayOfWeek>Friday</sys:DayOfWeek>
+								<sys:DayOfWeek>Saturday</sys:DayOfWeek>
+							</ComboBox.Items>
+						</ComboBox>
+					</Grid>
+					<GroupBox Foreground="{DynamicResource text_Brush}" Header="Work Days:" Margin="10,5">
+						<local:WorkDaysEditorControl WorkDays="{Binding ElementName=calendar1, Path=CalendarHelper.WorkDays, Mode=TwoWay}">
+						</local:WorkDaysEditorControl>
+					</GroupBox>
+					<GroupBox TextElement.Foreground="{DynamicResource text_Brush}" Header="Holidays:" Margin="10,5">
+						<local:DayListEditorControl Days="{Binding ElementName=calendar1, Path=CalendarHelper.Holidays, Mode=TwoWay}">
+						</local:DayListEditorControl>
+					</GroupBox>
+					<GroupBox TextElement.Foreground="{DynamicResource text_Brush}" Header="Working Weekends:" Margin="10,5">
+						<local:DayListEditorControl Days="{Binding ElementName=calendar1, Path=CalendarHelper.WeekendExceptions, Mode=TwoWay}">
+						</local:DayListEditorControl>
+					</GroupBox>
+				</StackPanel>
+			</StackPanel>
+		</Border>
+		
+		<Border Grid.Row="1">
+			<c1:C1Calendar x:Name="calendar1" Margin="2" WeekendBrush="Gold" BorderThickness="1" MaxSelectionCount="42" 
+                           GenerateAdjacentMonthDays="true" 
+                           Theme="{x:Static legacy:Themes.MediaPlayer}" /> 
+		</Border>
+
+	</Grid>
+</UserControl>

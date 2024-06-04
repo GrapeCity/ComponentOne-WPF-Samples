@@ -1,0 +1,86 @@
+﻿<Window x:Class="C1TreeViewTemplateSample2010.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:C1TreeViewTemplateSample2010" Title="C1TreeViewTemplateSample">
+    <Window.Resources>
+        <!-- The Template and Style selectors will look for the data templates and styles
+              in their local resource collection -->
+        <local:CustomTemplateSelector x:Key="WorldCupTemplateSelector">
+            <local:CustomTemplateSelector.Resources>
+                <ResourceDictionary>
+                    <c1:C1HierarchicalDataTemplate x:Key="GroupTemplate" ItemsSource="{Binding Teams}">
+                        <Border VerticalAlignment="Top" Height="35" Width="145" BorderBrush="#FF7E8F9E" BorderThickness="2" CornerRadius="4" Margin="0 2 0 2">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF268AC5" Offset="0"/>
+                                    <GradientStop Color="#FF1B638D" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Resources/Ball.png" Width="18" Height="17" Margin="10,0,0,0" Stretch="Fill"/>
+                                <TextBlock Text="{Binding GroupName}" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FFB3D0E1" FontSize="18"/>
+                            </StackPanel>
+                        </Border>
+                    </c1:C1HierarchicalDataTemplate>
+                    <c1:C1HierarchicalDataTemplate x:Key="TeamTemplate" ItemsSource="{Binding Nodes}">
+                        <Border VerticalAlignment="Top" Height="60" Width="240" BorderBrush="#FFCBCBCB" BorderThickness="2" CornerRadius="4" Margin="0 2 0 2">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFFBFBFB" Offset="0"/>
+                                    <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Image Source="{Binding FlagUri}" Width="16" Height="16" Margin="10,2,0,0" Stretch="Fill" VerticalAlignment="Top"/>
+                                <StackPanel Margin="0,0,10,0">
+                                    <TextBlock Text="{Binding CountryName}" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF19557A" FontSize="14"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="World Cups Won:" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5E5E5E" FontSize="11"/>
+                                        <TextBlock Text="{Binding WorldCupWon}" TextWrapping="Wrap" VerticalAlignment="Center" Margin="2,0,0,0" Foreground="#FF5E5E5E" FontSize="11"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="TopScorer:" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5E5E5E" FontSize="11"/>
+                                        <TextBlock Text="{Binding TopScorer}" TextWrapping="Wrap" VerticalAlignment="Center" Margin="2,0,0,0" Foreground="#FF5E5E5E" FontSize="11"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </c1:C1HierarchicalDataTemplate>
+                </ResourceDictionary>
+            </local:CustomTemplateSelector.Resources>
+        </local:CustomTemplateSelector>
+        <local:CustomStyleSelector x:Key="WorldCupStyleSelector">
+            <local:CustomStyleSelector.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="ExpandedStyle" TargetType="c1:C1TreeViewItem">
+                        <Setter Property="IsExpanded" Value="True" />
+                    </Style>
+                </ResourceDictionary>
+            </local:CustomStyleSelector.Resources>
+        </local:CustomStyleSelector>
+        <HierarchicalDataTemplate x:Key="MyHierarchicalTemplate" ItemsSource="{Binding Teams}">
+            <TextBlock Foreground="Red" Text="{Binding GroupName}" />
+            <HierarchicalDataTemplate.ItemTemplate>
+                <HierarchicalDataTemplate>
+                    <TextBlock Text="{Binding CountryName}"/>
+                </HierarchicalDataTemplate>
+            </HierarchicalDataTemplate.ItemTemplate>
+        </HierarchicalDataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <c1:C1TreeView x:Name="MyTreeView" Padding="15 10 0 5"
+                       ItemTemplateSelector="{StaticResource WorldCupTemplateSelector}"
+                       ItemContainerStyleSelector="{StaticResource WorldCupStyleSelector}">
+        </c1:C1TreeView>
+        <c1:C1TreeView x:Name="MyTreeView2" Padding="15 10 0 5" Grid.Column="1"
+                       ItemTemplate="{StaticResource MyHierarchicalTemplate}"
+                       ItemContainerStyleSelector="{StaticResource WorldCupStyleSelector}">
+        </c1:C1TreeView>
+    </Grid>
+</Window>

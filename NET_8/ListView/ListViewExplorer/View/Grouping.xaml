@@ -17,8 +17,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
-            <c1:C1Button Content="{x:Static resources:AppResources.GroupByBorn}" Click="Button_Click" Padding="10 3 10 3"/>
-            <c1:C1Button Content="{x:Static resources:AppResources.GroupByResident}" Click="Button_Click_1" Margin="30 0 0 0" Padding="10 3 10 3"/>
+            <c1:C1Button Content="{x:Static resources:AppResources.GroupByBorn}" Click="OnGroupByBorn" Padding="10 3 10 3"/>
+            <c1:C1Button Content="{x:Static resources:AppResources.GroupByResident}" Click="OnGroupByResidence" Margin="30 0 0 0" Padding="10 3 10 3"/>
+            <c1:C1Button Content="{x:Static resources:AppResources.RemoveGrouping}" Click="OnRemoveGrouping" Margin="30 0 0 0" Padding="10 3 10 3"/>
         </StackPanel>
 
         <c1:C1ListView Grid.Row="1" x:Name="listView" SelectionMode="Single" Margin="10 0 10 10"

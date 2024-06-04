@@ -1,0 +1,121 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlexSheetSample</RootNamespace>
+    <AssemblyName>FlexSheetSample</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="ReachFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Licenses.licx" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AlignTextBottom_small.png" />
+    <Resource Include="Resources\AlignTextCenter_small.png" />
+    <Resource Include="Resources\AlignTextLeft_small.png" />
+    <Resource Include="Resources\AlignTextMiddle_small.png" />
+    <Resource Include="Resources\AlignTextRight_small.png" />
+    <Resource Include="Resources\AlignTextTop_small.png" />
+    <Resource Include="Resources\Bold_small.png" />
+    <Resource Include="Resources\Copy_small.png" />
+    <Resource Include="Resources\Cut_small.png" />
+    <Resource Include="Resources\FreezePanes_large.png" />
+    <Resource Include="Resources\GroupData_large.png" />
+    <Resource Include="Resources\HideDetail_small.png" />
+    <Resource Include="Resources\Italic_small.png" />
+    <Resource Include="Resources\Open_large.png" />
+    <Resource Include="Resources\PageBorders_small.png" />
+    <Resource Include="Resources\PageWidth_small.png" />
+    <Resource Include="Resources\Paste_large.png" />
+    <Resource Include="Resources\Print_large.png" />
+    <Resource Include="Resources\Print_Preview_large.png" />
+    <Resource Include="Resources\Redo_small.png" />
+    <Resource Include="Resources\SaveAs_large.png" />
+    <Resource Include="Resources\Select_small.png" />
+    <Resource Include="Resources\ShowDetail_small.png" />
+    <Resource Include="Resources\SortAndFilter_large.png" />
+    <Resource Include="Resources\Sort_large.png" />
+    <Resource Include="Resources\Underline_small.png" />
+    <Resource Include="Resources\Undo_small.png" />
+    <Resource Include="Resources\UngroupData_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BarChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Sparkline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\RemoveDul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SelectionDown.png" />
+    <Resource Include="Resources\SelectionUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Indent_decrease.png" />
+    <Resource Include="Resources\indent_increase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Bottom.png" />
+    <Resource Include="Resources\Left.png" />
+    <Resource Include="Resources\None.png" />
+    <Resource Include="Resources\Outline.png" />
+    <Resource Include="Resources\Right.png" />
+    <Resource Include="Resources\Top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Delete_Comment.png" />
+    <Resource Include="Resources\GetComment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Binding">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.C1Chart">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Excel">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexSheet">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Pdf">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Zip">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+</Project>

@@ -6,20 +6,11 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		GCDebug|Any CPU = GCDebug|Any CPU
-		GCRelease|Any CPU = GCRelease|Any CPU
-		GRAPECITY|Any CPU = GRAPECITY|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{14644A84-952B-4C02-9F33-3BBEA099968B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{14644A84-952B-4C02-9F33-3BBEA099968B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14644A84-952B-4C02-9F33-3BBEA099968B}.GCDebug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14644A84-952B-4C02-9F33-3BBEA099968B}.GCDebug|Any CPU.Build.0 = Debug|Any CPU
-		{14644A84-952B-4C02-9F33-3BBEA099968B}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{14644A84-952B-4C02-9F33-3BBEA099968B}.GCRelease|Any CPU.Build.0 = Release|Any CPU
-		{14644A84-952B-4C02-9F33-3BBEA099968B}.GRAPECITY|Any CPU.ActiveCfg = Release|Any CPU
-		{14644A84-952B-4C02-9F33-3BBEA099968B}.GRAPECITY|Any CPU.Build.0 = Release|Any CPU
 		{14644A84-952B-4C02-9F33-3BBEA099968B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14644A84-952B-4C02-9F33-3BBEA099968B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

@@ -281,10 +281,6 @@
     <value>行の詳細</value>
     <comment>Row Details</comment>
   </data>
-  <data name="Save" xml:space="preserve">
-    <value>保存</value>
-    <comment>Save</comment>
-  </data>
   <data name="SearchPlaceholderText" xml:space="preserve">
     <value>YouTube で検索する動画のテキストを入力</value>
     <comment>Enter text to search videos on YouTube</comment>
@@ -423,26 +419,11 @@
     <value>ライブ更新</value>
     <comment>Live updates</comment>
   </data>
-  <data name="ColorUpdates" xml:space="preserve">
-    <value>色分けされた更新</value>
-  </data>
   <data name="ExportDescription" xml:space="preserve">
     <value>CSV、テキスト、および HTML 形式でエクスポートする方法を示します。</value>
   </data>
   <data name="ExportTitle" xml:space="preserve">
     <value>エクスポート</value>
-  </data>
-  <data name="RowDetailsAddress" xml:space="preserve">
-    <value>住所</value>
-  </data>
-  <data name="RowDetailsCity" xml:space="preserve">
-    <value>都市</value>
-  </data>
-  <data name="RowDetailsCountry" xml:space="preserve">
-    <value>国</value>
-  </data>
-  <data name="RowDetailsPostalCode" xml:space="preserve">
-    <value>郵便コード</value>
   </data>
   <data name="FilterRowDescription" xml:space="preserve">
     <value>テキストが入力されるとセルが対応する列をフィルタリングする行を示します。</value>
@@ -639,5 +620,27 @@
   <data name="SelectCustomersMessage" xml:space="preserve">
     <value>左側のグリッドで顧客を選択してください。</value>
     <comment>Please select customers on the grid at the left.</comment>
+  </data>
+  <data name="SummaryRowDescription" xml:space="preserve">
+    <value>列の値を要約した行を表示します。</value>
+    <comment>Shows a row that summarizes the values in the columns</comment>
+  </data>
+  <data name="SummaryRowTitle" xml:space="preserve">
+    <value>サマリー行</value>
+    <comment>Summary Row</comment>
+  </data>
+  <data name="GroupRowPosition" xml:space="preserve">
+    <value>GroupRowPosition</value>
+  </data>
+  <data name="GroupSummariesPosition" xml:space="preserve">
+    <value>GroupSummariesPosition</value>
+  </data>
+  <data name="TransposedGridDescription" xml:space="preserve">
+    <value>データ項目が列として表示されるように列と行を入れ替える方法を示します。</value>
+    <comment>Show how to transpose columns and rows so the data items are shown as columns.</comment>
+  </data>
+  <data name="TransposedGridTitle" xml:space="preserve">
+    <value>転置グリッド</value>
+    <comment>Transposed Grid</comment>
   </data>
 </root>

@@ -525,13 +525,19 @@ namespace FlexGridExplorer
         {
             if (e.AddedItems.Count > 0)
             {
-                if ("Classic".Equals(e.AddedItems[0]))
+                string newTheme = (string)e.AddedItems[0];
+                if ("Classic".Equals(newTheme))
                 {
                     grid.Style = FlexGrid.ClassicStyle;
                 }
+                else if (e.AddedItems[0] == null || !Resources.MergedDictionaries[0].Contains(newTheme))
+                {
+                    // clear style
+                    grid.ClearValue(StyleProperty);
+                }
                 else
                 {
-                    grid.Style = Resources.MergedDictionaries[0][e.AddedItems[0]] as Style;
+                    grid.Style = Resources.MergedDictionaries[0][newTheme] as Style;
                 }
             }
         }

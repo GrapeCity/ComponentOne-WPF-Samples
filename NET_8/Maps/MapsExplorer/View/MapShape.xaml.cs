@@ -105,7 +105,7 @@ namespace MapsExplorer
 
         private void countriesCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count == 0) return;
+            if (e.AddedItems.Count == 0 || e.AddedItems[0]==null) return;
             Location location = (Location)((KeyValuePair<Location, string>)e.AddedItems[0]).Key;
             InitialMapsByLocaltion(maps, location);
         }

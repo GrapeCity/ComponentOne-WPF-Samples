@@ -1,0 +1,121 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DataGridSamples</RootNamespace>
+    <AssemblyName>DataGridSamples.4</AssemblyName>
+    <ExpressionBlendVersion>4.0.20901.0</ExpressionBlendVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\dos.jpg" />
+    <Resource Include="Resources\tennis\andym.jpg" />
+    <Resource Include="Resources\tennis\andyr.jpg" />
+    <Resource Include="Resources\tennis\juandp.jpg" />
+    <Resource Include="Resources\tennis\nikolayd.jpg" />
+    <Resource Include="Resources\tennis\novakd.jpg" />
+    <Resource Include="Resources\tennis\rafaeln.jpg" />
+    <Resource Include="Resources\tennis\rogerf.jpg" />
+    <EmbeddedResource Include="Resources\tennis\tennis.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\1asp095.gif" />
+    <Resource Include="Resources\awc_jersey_male_small.jpg" />
+    <Resource Include="Resources\awc_tee_male_yellow_small.jpg" />
+    <Resource Include="Resources\bikepump_small.jpg" />
+    <Resource Include="Resources\bike_lock_small.jpg" />
+    <Resource Include="Resources\clipless_pedals_small.jpg" />
+    <Resource Include="Resources\docexcel.png" />
+    <Resource Include="Resources\double_headlight_small.jpg" />
+    <Resource Include="Resources\ExcelTemplate.xml" />
+    <Resource Include="Resources\fork_small.jpg" />
+    <Resource Include="Resources\frame_black_small.jpg" />
+    <Resource Include="Resources\frame_silver_small.jpg" />
+    <Resource Include="Resources\frame_small.jpg" />
+    <Resource Include="Resources\handlebar_small.jpg" />
+    <Resource Include="Resources\handpump_small.jpg" />
+    <Resource Include="Resources\hotrodbike_black_small.jpg" />
+    <Resource Include="Resources\hotrodbike_f_small.jpg" />
+    <Resource Include="Resources\hotrodbike_silver_small.jpg" />
+    <Resource Include="Resources\html.png" />
+    <Resource Include="Resources\ico-delete.png" />
+    <Resource Include="Resources\ImageBorder.png" />
+    <Resource Include="Resources\innertube_small.jpg" />
+    <Resource Include="Resources\julianax_r_02_blue_small.jpg" />
+    <Resource Include="Resources\julianax_r_02_yellow_small.jpg" />
+    <Resource Include="Resources\mb_tires_small.jpg" />
+    <Resource Include="Resources\new.png" />
+    <Resource Include="Resources\no_image_available_small.jpg" />
+    <Resource Include="Resources\pdf.png" />
+    <Resource Include="Resources\pedal_small.jpg" />
+    <Resource Include="Resources\print.png" />
+    <EmbeddedResource Include="Resources\products.xml" />
+    <Resource Include="Resources\racer02_yellow_f_small.jpg" />
+    <Resource Include="Resources\racer_black_small.jpg" />
+    <Resource Include="Resources\racer_red_small.jpg" />
+    <Resource Include="Resources\roadster_black_small.jpg" />
+    <Resource Include="Resources\roadster_red_small.jpg" />
+    <Resource Include="Resources\roadster_yellow_f_small.jpg" />
+    <Resource Include="Resources\saddle_small.jpg" />
+    <Resource Include="Resources\shorts_female_small.jpg" />
+    <Resource Include="Resources\shorts_male_small.jpg" />
+    <Resource Include="Resources\silver_chain_small.jpg" />
+    <Resource Include="Resources\single_headlight_small.jpg" />
+    <Resource Include="Resources\sprocket_small.jpg" />
+    <Resource Include="Resources\street_tires_small.jpg" />
+    <Resource Include="Resources\superlight_black_small.jpg" />
+    <Resource Include="Resources\superlight_red_small.jpg" />
+    <Resource Include="Resources\superlight_silver_small.jpg" />
+    <Resource Include="Resources\tail_lights_small.jpg" />
+    <Resource Include="Resources\tirepatch_kit_small.jpg" />
+    <Resource Include="Resources\water_bottle_cage_small.jpg" />
+    <Resource Include="Resources\water_bottle_small.jpg" />
+    <Resource Include="Resources\wheel_small.jpg" />
+    <Resource Include="Resources\XapOpIcoThAlert.png" />
+    <Resource Include="Resources\XapOpIcoThInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Hyperlink-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DataGrid">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DataGrid.Filters">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DataGrid.Summaries">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Extended">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Remove="DesignData\SamplePlayers.xaml" />
+    <Page Remove="DesignData\SampleProducts.xaml" />
+  </ItemGroup>
+</Project>

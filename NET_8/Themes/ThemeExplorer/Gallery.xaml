@@ -35,7 +35,7 @@
                     <c1:C1TabItem Header="Data Filter" BorderThickness="0">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="300" />
+                                <ColumnDefinition Width="450" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
@@ -46,7 +46,7 @@
                                     <c1:NumericFilter PropertyName="Age" />
                                     <c1:DateRangeFilter PropertyName="DOB" Minimum="01/01/1950" Maximum="01/01/2100"/>
                                     <c1:FullTextFilter PropertyName="Name"/>
-                                    <c1:ThreeStateFilter PropertyName="Male" HeaderText="Gender" TrueLabel="Male" FalseLabel="Female" NullLabel="Unkown"/>
+                                    <c1:ThreeStateFilter PropertyName="Male" HeaderText="Gender" TrueLabel="Male" FalseLabel="Female" NullLabel="Unknown"/>
                                 </c1:C1DataFilter.Filters>
                             </c1:C1DataFilter>
                             <c1:FlexGrid Grid.Column="1" AutoGenerateColumns="True" x:Name="dataFilterFlexGrid" />

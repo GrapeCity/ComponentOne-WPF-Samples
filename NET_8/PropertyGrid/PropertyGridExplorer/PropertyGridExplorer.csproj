@@ -54,14 +54,14 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>8.0.20233.681</Version>
+      <Version>8.0.20241.795</Version>
     </PackageReference>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
   </ItemGroup>
 </Project>

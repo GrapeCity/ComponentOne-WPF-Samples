@@ -9,7 +9,7 @@
             <!--<c1:C1ProgressBar IsIndeterminate="True"/>-->
         </StackPanel>
         <c1:C1Button x:Name="retry" HorizontalAlignment="Center" VerticalAlignment="Center" Content="x:Static resources:AppResources.Retry}" Visibility="Collapsed" Click="Retry_Click" />
-        <c1:C1ListView x:Name="listView"
+        <c1:C1ListView x:Name="listView" IsSwipeEnabled="True"
                       Background="Transparent" 
                       Foreground="White" 
                       SelectedBackground="#FF0C5C81" 

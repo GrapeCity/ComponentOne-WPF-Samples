@@ -2,6 +2,7 @@
 using C1.WPF.Accordion;
 using C1.WPF.DataFilter;
 using DataFilterExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
@@ -52,6 +53,22 @@ namespace DataFilterExplorer
             if (c1DataFilter != null)
             {
                 c1DataFilter.AutoApply = cbAutoApply.IsChecked == true;
+            }
+        }
+
+        private void FlexGridOnAutoGeneratingColumn(object sender, C1.WPF.Grid.GridAutoGeneratingColumnEventArgs e)
+        {
+            if (e.Column.Binding == nameof(Car.DateProductionLine))
+            {
+                e.Column.Format = "g";
+            }
+            else if (e.Column.Binding == nameof(Car.PresentationDate))
+            {
+                e.Column.Format = "MM/dd/yy H:mm:ss zzz";
+            }
+            else if (e.Column.Binding == nameof(Car.FuelConsumption))
+            {
+                e.Column.Format = "hh:mm";
             }
         }
     }

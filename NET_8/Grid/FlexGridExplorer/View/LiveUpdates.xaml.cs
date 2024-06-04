@@ -48,22 +48,19 @@ namespace FlexGridExplorer
 
         private void GenerateRandomChange()
         {
-            switch (_rand.Next(4))
+            switch (_rand.Next(_customers.Count == 0 ? 1 : _customers.Count == 1 ? 3 : 4))
             {
                 case 0:
                     _customers.Insert(_rand.Next(_customers.Count + 1), new Customer(_rand.Next()));
                     break;
                 case 1:
-                    if (_customers.Count > 0)
-                        _customers.RemoveAt(_rand.Next(_customers.Count));
+                    _customers[_rand.Next(_customers.Count)] = new Customer(_rand.Next());
                     break;
                 case 2:
-                    if (_customers.Count > 0)
-                        _customers.Move(_rand.Next(_customers.Count), _rand.Next(_customers.Count));
+                    _customers.RemoveAt(_rand.Next(_customers.Count));
                     break;
                 case 3:
-                    if (_customers.Count > 0)
-                        _customers[_rand.Next(_customers.Count)] = new Customer(_rand.Next());
+                    _customers.Move(_rand.Next(_customers.Count), _rand.Next(_customers.Count));
                     break;
             }
         }

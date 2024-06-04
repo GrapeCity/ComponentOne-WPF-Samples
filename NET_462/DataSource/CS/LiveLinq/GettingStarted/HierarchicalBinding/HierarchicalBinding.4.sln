@@ -1,0 +1,39 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveLinq2010.4", "LiveLinq\LiveLinq2010.4.csproj", "{B11194B2-ECDC-44DF-87A1-8F8857F29CF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Traditional2010.4", "Traditional\Traditional2010.4.csproj", "{0EF0EE74-BFEA-42F8-88CE-1277BD91C9D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraditionalToLiveLinq2010.4", "TraditionalToLiveLinq\TraditionalToLiveLinq2010.4.csproj", "{BCCBED7F-B57D-460C-8E95-57ED04B52AC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B11194B2-ECDC-44DF-87A1-8F8857F29CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B11194B2-ECDC-44DF-87A1-8F8857F29CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B11194B2-ECDC-44DF-87A1-8F8857F29CF8}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{B11194B2-ECDC-44DF-87A1-8F8857F29CF8}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{B11194B2-ECDC-44DF-87A1-8F8857F29CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B11194B2-ECDC-44DF-87A1-8F8857F29CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF0EE74-BFEA-42F8-88CE-1277BD91C9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF0EE74-BFEA-42F8-88CE-1277BD91C9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF0EE74-BFEA-42F8-88CE-1277BD91C9D0}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF0EE74-BFEA-42F8-88CE-1277BD91C9D0}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{0EF0EE74-BFEA-42F8-88CE-1277BD91C9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF0EE74-BFEA-42F8-88CE-1277BD91C9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCBED7F-B57D-460C-8E95-57ED04B52AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCBED7F-B57D-460C-8E95-57ED04B52AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCBED7F-B57D-460C-8E95-57ED04B52AC8}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCBED7F-B57D-460C-8E95-57ED04B52AC8}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{BCCBED7F-B57D-460C-8E95-57ED04B52AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCBED7F-B57D-460C-8E95-57ED04B52AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

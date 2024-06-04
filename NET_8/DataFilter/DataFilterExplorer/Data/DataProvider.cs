@@ -44,7 +44,9 @@ namespace DataFilterExplorer
             var asm = Assembly.GetExecutingAssembly();
             using (var s = asm.GetManifestResourceStream("DataFilterExplorer.Resources.cars.xml"))
             {
-                _= dt.ReadXml(s);
+#pragma warning disable CA2350 // Do not use DataTable.ReadXml() with untrusted data
+                _ = dt.ReadXml(s);
+#pragma warning restore CA2350 // Do not use DataTable.ReadXml() with untrusted data
             }
             return dt;
         }

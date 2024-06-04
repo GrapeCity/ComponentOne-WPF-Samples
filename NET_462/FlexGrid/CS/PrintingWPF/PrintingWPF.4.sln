@@ -1,0 +1,62 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingWPF.4", "PrintingWPF.4.csproj", "{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		GCDebug|Any CPU = GCDebug|Any CPU
+		GCDebug|Mixed Platforms = GCDebug|Mixed Platforms
+		GCDebug|x86 = GCDebug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|Mixed Platforms = GCRelease|Mixed Platforms
+		GCRelease|x86 = GCRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+		ReleaseGC|Any CPU = ReleaseGC|Any CPU
+		ReleaseGC|Mixed Platforms = ReleaseGC|Mixed Platforms
+		ReleaseGC|x86 = ReleaseGC|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|x86.ActiveCfg = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Debug|x86.Build.0 = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCDebug|Any CPU.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCDebug|Any CPU.Build.0 = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCDebug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCDebug|Mixed Platforms.Build.0 = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCDebug|x86.ActiveCfg = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCDebug|x86.Build.0 = Debug|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCRelease|Any CPU.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCRelease|Any CPU.Build.0 = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCRelease|Mixed Platforms.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCRelease|Mixed Platforms.Build.0 = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCRelease|x86.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.GCRelease|x86.Build.0 = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|Any CPU.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|x86.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.Release|x86.Build.0 = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.ReleaseGC|Any CPU.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.ReleaseGC|Mixed Platforms.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.ReleaseGC|Mixed Platforms.Build.0 = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.ReleaseGC|x86.ActiveCfg = Release|x86
+		{A0A3E78C-C8DF-42FA-9C0F-4010B7B7336D}.ReleaseGC|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DD6A2F5-F5C7-4547-9755-80941B40C0CC}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarouselSamples</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;CLR40;SL_AUTOMATION</DefineConstants>
+    <CodeAnalysisLogFile>bin\Debug\CarouselSamples.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineConstants>TRACE;CLR40;SL_AUTOMATION</DefineConstants>
+    <CodeAnalysisLogFile>bin\Release\CarouselSamples.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\covers\cover101.jpg" />
+    <Resource Include="Resources\covers\cover102.jpg" />
+    <Resource Include="Resources\covers\cover103.jpg" />
+    <Resource Include="Resources\covers\cover104.jpg" />
+    <Resource Include="Resources\covers\cover105.jpg" />
+    <Resource Include="Resources\covers\cover106.jpg" />
+    <Resource Include="Resources\covers\cover107.jpg" />
+    <Resource Include="Resources\covers\cover108.jpg" />
+    <Resource Include="Resources\covers\cover109.jpg" />
+    <Resource Include="Resources\covers\cover110.jpg" />
+    <Resource Include="Resources\covers\cover111.jpg" />
+    <Resource Include="Resources\covers\cover112.jpg" />
+    <Resource Include="Resources\covers\cover113.jpg" />
+    <Resource Include="Resources\covers\cover114.jpg" />
+    <Resource Include="Resources\covers\cover115.jpg" />
+    <Resource Include="Resources\covers\cover116.jpg" />
+    <Resource Include="Resources\covers\cover117.jpg" />
+    <Resource Include="Resources\covers\cover118.jpg" />
+    <Resource Include="Resources\covers\cover119.jpg" />
+    <Resource Include="Resources\covers\cover120.jpg" />
+    <Resource Include="Resources\covers\cover121.jpg" />
+    <Resource Include="Resources\covers\cover122.jpg" />
+    <Resource Include="Resources\covers\cover123.jpg" />
+    <Resource Include="Resources\covers\cover124.jpg" />
+    <Resource Include="Resources\covers\cover125.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF.Carousel">
+      <Version>4.6.20241.839</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Properties\Resources.Designer.cs" />
+    <Compile Remove="Properties\Settings.Designer.cs" />
+    <EmbeddedResource Remove="Properties\Resources.resx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <C1_MSBuildToolsVersion>v4.0</C1_MSBuildToolsVersion>
+    <C1_MSBuildToolsVersion Condition="$(VisualStudioVersion) != '10.0' And $(VisualStudioVersion) != '11.0'">v12.0</C1_MSBuildToolsVersion>
+  </PropertyGroup>
+</Project>

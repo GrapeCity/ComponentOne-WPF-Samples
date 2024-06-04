@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchicalDataTemplate2010.4", "HierarchicalDataTemplate\HierarchicalDataTemplate2010.4.csproj", "{34BAED2D-9BA3-4A3A-95E8-6D19F251D3BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34BAED2D-9BA3-4A3A-95E8-6D19F251D3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BAED2D-9BA3-4A3A-95E8-6D19F251D3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BAED2D-9BA3-4A3A-95E8-6D19F251D3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BAED2D-9BA3-4A3A-95E8-6D19F251D3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12D6FD5D-3EF8-4B71-87A4-1A9EF2CF49B4}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{7ce2ac93-e852-423a-b363-d6a037ff8f92}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

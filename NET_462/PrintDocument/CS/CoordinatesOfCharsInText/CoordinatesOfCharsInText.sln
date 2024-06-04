@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinatesOfCharsInText", "CoordinatesOfCharsInText.csproj", "{4BA74681-38E4-431D-B178-CCEF554D01E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GCRelease|Any CPU = GCRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BA74681-38E4-431D-B178-CCEF554D01E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA74681-38E4-431D-B178-CCEF554D01E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA74681-38E4-431D-B178-CCEF554D01E6}.GCRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA74681-38E4-431D-B178-CCEF554D01E6}.GCRelease|Any CPU.Build.0 = Release|Any CPU
+		{4BA74681-38E4-431D-B178-CCEF554D01E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA74681-38E4-431D-B178-CCEF554D01E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6602C88B-4038-4396-B469-9FCF6E886077}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{c7b44c9e-6a3d-46d2-8da9-bf3399edf810}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

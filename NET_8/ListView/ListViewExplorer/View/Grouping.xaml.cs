@@ -14,14 +14,19 @@ namespace ListViewExplorer
             listView.ItemsSource = Person.Generate(100);
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void OnGroupByBorn(object sender, RoutedEventArgs e)
         {
             await listView.DataCollection.GroupAsync("Born");
         }
 
-        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        private async void OnGroupByResidence(object sender, RoutedEventArgs e)
         {
             await listView.DataCollection.GroupAsync("Residence");
+        }
+
+        private async void OnRemoveGrouping(object sender, RoutedEventArgs e)
+        {
+            await listView.DataCollection.GroupAsync();
         }
     }
 }

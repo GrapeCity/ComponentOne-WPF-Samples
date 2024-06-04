@@ -79,7 +79,7 @@ namespace SchedulerExplorer
             {
                 return;
             }
-            switch (views.SelectedItems.FirstOrDefault())
+            switch (views.SelectedValue)
             {
                 case "Day":
                     SetStyle(sched1.OneDayStyle);
