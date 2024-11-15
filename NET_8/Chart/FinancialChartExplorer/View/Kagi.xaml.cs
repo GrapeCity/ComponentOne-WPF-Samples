@@ -66,7 +66,9 @@ namespace FinancialChartExplorer
 
         private void OnRangeModeChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count > 0) return;
+            if (e.AddedItems?.Count == 0) 
+                return;
+            
             financialChart.BeginUpdate();
             var rmode = e.AddedItems[0] as string;
             if (rmode == "Fixed")

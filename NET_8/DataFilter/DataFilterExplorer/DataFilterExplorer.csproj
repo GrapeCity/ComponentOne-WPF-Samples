@@ -27,29 +27,29 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>8.0.20241.192</Version>
+      <Version>8.0.20242.201</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>8.0.20241.192</Version>
+      <Version>8.0.20242.201</Version>
     </PackageReference>
-    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="8.0.20241.192" />
+    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="8.0.20242.201" />
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.3" />

@@ -13,7 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.Reflection;
-using C1.C1Zip;
+using C1.Zip;
 
 namespace OlapQuickStart
 {

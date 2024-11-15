@@ -20,10 +20,10 @@ namespace GridShowCase
             //Toolbar
             DataSize = new ObservableCollection<DataSize>()
             {
-               new DataSize(){ DisplayName = "100 rows", Size=100 },
-               new DataSize(){ DisplayName = "1000 rows", Size=1000 },
-               new DataSize(){ DisplayName = "10000 rows", Size=10000 },
-               new DataSize(){ DisplayName = "50000 rows", Size=50000 },
+               new DataSize(){ DisplayName = string.Format(Properties.Resources.XRowsLabel, 100), Size=100 },
+               new DataSize(){ DisplayName = string.Format(Properties.Resources.XRowsLabel, 1000), Size=1000 },
+               new DataSize(){ DisplayName = string.Format(Properties.Resources.XRowsLabel, 10000), Size=10000 },
+               new DataSize(){ DisplayName = string.Format(Properties.Resources.XRowsLabel, 50000), Size=50000 },
             };
             SelectedSize = DataSize[0];
         }

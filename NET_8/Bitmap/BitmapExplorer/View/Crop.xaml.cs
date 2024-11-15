@@ -166,8 +166,8 @@ namespace BitmapExplorer
                 Math.Round(Math.Min(_start.Y, pos.Y)),
                 Math.Round(Math.Abs(_start.X - pos.X)),
                 Math.Round(Math.Abs(_start.Y - pos.Y)));
-
             UpdateMask();
+           
         }
 
         void InitSelection()
@@ -182,6 +182,25 @@ namespace BitmapExplorer
             bottomMask.Height = _bitmap.PixelHeight - _selection.Bottom;
             leftMask.Width = _selection.Left;
             rightMask.Width = _bitmap.PixelWidth - _selection.Right;
+        }
+
+        void UpdateImage()
+        {
+            image.Source = _bitmap.ToWriteableBitmap();
+            imageGrid.Width = _bitmap.PixelWidth;
+            imageGrid.Height = _bitmap.PixelHeight;
+            InitSelection();
+        }
+
+        private void CropImage(object sender, RoutedEventArgs e)
+        {
+            var cropRect = ((RectD)_selection).Round();
+            // apply transformation to original image to don't lose quality at multiple transformations
+            var newBitmap = _bitmap.Transform((new Clipper(new ImageRect(cropRect))));
+            _bitmap.Dispose();
+            _bitmap = newBitmap;
+            UpdateImage();
+
         }
     }
 }

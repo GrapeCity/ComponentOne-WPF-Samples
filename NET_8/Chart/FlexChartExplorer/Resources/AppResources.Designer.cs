@@ -196,6 +196,33 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Axis Markers.
+        /// </summary>
+        public static string AxisMarkersDesc {
+            get {
+                return ResourceManager.GetString("AxisMarkersDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This view shows how to display line markers over the axes. Both axes have markers which follow the pointer and display its position in data coordinates..
+        /// </summary>
+        public static string AxisMarkersTag {
+            get {
+                return ResourceManager.GetString("AxisMarkersTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Axis Markers.
+        /// </summary>
+        public static string AxisMarkersTitle {
+            get {
+                return ResourceManager.GetString("AxisMarkersTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Binding.
         /// </summary>
         public static string BindingDesc {
@@ -338,6 +365,33 @@ namespace FlexChartExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Combination of range column and heatmap plots.
+        /// </summary>
+        public static string ColumnHeatmapDesc {
+            get {
+                return ResourceManager.GetString("ColumnHeatmapDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This view shows combination of ranged column chart and heatmap. The heatmap displayed simplified presentation of the same data on the time axis..
+        /// </summary>
+        public static string ColumnHeatmapTag {
+            get {
+                return ResourceManager.GetString("ColumnHeatmapTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Column &amp; Heatmap.
+        /// </summary>
+        public static string ColumnHeatmapTitle {
+            get {
+                return ResourceManager.GetString("ColumnHeatmapTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DateTime Axis Grouping.
         /// </summary>
         public static string DateTimeAxisGroupingDesc {
@@ -453,6 +507,33 @@ namespace FlexChartExplorer.Resources {
         public static string HeaderFooterTitle {
             get {
                 return ResourceManager.GetString("HeaderFooterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heatmap Plot.
+        /// </summary>
+        public static string HeatmapDesc {
+            get {
+                return ResourceManager.GetString("HeatmapDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows Heatmap plot with gradient color scale. The data from two-dimensional array is shown as a table. The color of table&apos;s cell depends on the corresponding data value..
+        /// </summary>
+        public static string HeatmapTag {
+            get {
+                return ResourceManager.GetString("HeatmapTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heatmap.
+        /// </summary>
+        public static string HeatmapTitle {
+            get {
+                return ResourceManager.GetString("HeatmapTitle", resourceCulture);
             }
         }
         

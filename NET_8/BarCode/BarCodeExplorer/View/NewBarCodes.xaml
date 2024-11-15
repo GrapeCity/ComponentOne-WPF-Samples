@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"              
+             xmlns:res="clr-namespace:BarCodeExplorer.Properties"
              xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" 
              x:Class="BarCodeExplorer.NewBarCodes" av:DesignWidth="400" av:DesignHeight="300" x:Name="root">
     <Grid Margin="10">
@@ -20,12 +21,12 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Orientation="Vertical" Margin="10">
-            <TextBlock Text="Select Barcode Type:" Margin="5" VerticalAlignment="Center"  />
+            <TextBlock Text="{x:Static res:Resources.SelectBarcodeTypeLabel}" Margin="5" VerticalAlignment="Center"  />
             <c1:C1ComboBox x:Name="BarcodeType" IsEditable="False" SelectedItemChanged="BarcodeType_SelectedItemChanged" Width="200"  Margin="10" />
-            <TextBlock Text="Data:" Margin="5" VerticalAlignment="Center" />
+            <TextBlock Text="{x:Static res:Resources.DataLabel}" Margin="5" VerticalAlignment="Center" />
             <c1:C1TextBox x:Name="BarcodeText" Text="9790123456785" MinHeight="50" Margin="10" Width="200" Foreground="{Binding Foreground, ElementName=rot}"
                      VerticalAlignment="Center" AcceptsReturn="True" TextWrapping="Wrap" />
-            <c1:C1Button x:Name="Generate" Content="Regenerate barcode image" Margin="10" Padding="4" Click="Generate_Click"   />
+            <c1:C1Button x:Name="Generate" Content="{x:Static res:Resources.RegenerateBarcodeImageCaption}" Margin="10" Padding="4" Click="Generate_Click"   />
         </StackPanel>
         <c1:C1BarCode x:Name="barCode" Grid.Column="1" Margin="50" CaptionPosition="Below" ContextMenu="{StaticResource saveMenu}" VerticalAlignment="Top" HorizontalAlignment="Left" />
     </Grid>

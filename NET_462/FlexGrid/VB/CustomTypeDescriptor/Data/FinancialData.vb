@@ -77,8 +77,8 @@ Namespace CustomTypeDescriptor
 			Dim asm = System.Reflection.Assembly.GetExecutingAssembly()
 			For Each resName As String In asm.GetManifestResourceNames()
 				If resName.EndsWith("data.zip") Then
-					Dim zip = New C1.C1Zip.C1ZipFile(asm.GetManifestResourceStream(resName))
-					Using sr = New StreamReader(zip.Entries("StockSymbols.txt").OpenReader())
+                    Dim zip = New C1.Zip.C1ZipFile(asm.GetManifestResourceStream(resName))
+                    Using sr = New StreamReader(zip.Entries("StockSymbols.txt").OpenReader())
 						Do While Not sr.EndOfStream
 							Dim sn = sr.ReadLine().Split(ControlChars.Tab)
 							If sn.Length > 1 AndAlso sn(0).Trim().Length > 0 Then

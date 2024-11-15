@@ -40,12 +40,13 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="4" Grid.Row="0">
             <TextBlock Text="ExpandMode" VerticalAlignment="Center" Margin="0 0 4 0"/>
-            <c1:C1ComboBox x:Name="ExpandModeComboBox" SelectionChanged="ExpandModeComboBox_SelectionChanged" SelectedIndex="0"/>
+            <c1:C1ComboBox x:Name="ExpandModeComboBox"  SelectedIndex="0"/>
             <c1:C1CheckBox Content="Fill" IsChecked="{Binding Fill,ElementName=accordion}" Margin="20 4" VerticalAlignment="Center"/>
             <TextBlock Text="ExpandDirection" VerticalAlignment="Center" Margin="0 0 4 0"/>
-            <c1:C1ComboBox x:Name="ExpandDirectionComboBox"  SelectionChanged="OnExpandDirectionChanged" SelectedIndex="0"/>
+            <c1:C1ComboBox x:Name="ExpandDirectionComboBox"  SelectedIndex="0"/>
         </StackPanel>
-        <c1:C1Accordion x:Name="accordion" Margin="10" Grid.Row="1">
+        <c1:C1Accordion x:Name="accordion" Margin="10" Grid.Row="1" ExpandMode="{Binding SelectedItem, ElementName=ExpandModeComboBox}" 
+                        ExpandDirection="{Binding SelectedItem,ElementName=ExpandDirectionComboBox}">
             <c1:C1Expander Header="Mail" IsExpanded="True">
                 <c1:C1ListView>
                     <c1:ListViewItem>
@@ -96,7 +97,7 @@
                 </c1:C1ListView>
                 
             </c1:C1Expander>
-            <c1:C1Expander Header="Contacts" IsExpanded="False">
+            <c1:C1Expander Header="Contacts" IsExpanded="False" >
                 <c1:C1ListView >
                     <c1:ListViewItem>
                         <c1:ListViewItem.Content>
@@ -187,7 +188,7 @@
                     </c1:ListViewItem>
                 </c1:C1ListView>
             </c1:C1Expander>
-            <c1:C1Expander Header="Tasks" IsExpanded="False">
+            <c1:C1Expander Header="Tasks" IsExpanded="False"  >
                 <c1:C1ListView>
                     <c1:ListViewItem>
                         <c1:ListViewItem.Content>

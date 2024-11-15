@@ -172,7 +172,7 @@ namespace MainTestApplication
             {
                 if (resName.EndsWith("data.zip"))
                 {
-                    var zip = new C1.C1Zip.C1ZipFile(asm.GetManifestResourceStream(resName));
+                    var zip = new C1.Zip.C1ZipFile(asm.GetManifestResourceStream(resName));
                     using (var sr = new StreamReader(zip.Entries["StockSymbols.txt"].OpenReader()))
                     {
                         while (!sr.EndOfStream)

@@ -46,7 +46,7 @@ namespace FlexGridExplorer
         {
             if (!(row["Double"] is double doubleValue) || doubleValue < 3)
             {
-                var error = "Column Double should be less than 3";
+                var error = AppResources.DataTableValidationMessage;
                 row.SetColumnError("Double", error);
                 row.RowError = error;
             }

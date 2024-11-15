@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DataLabel" xml:space="preserve">
+    <value>データ:</value>
+    <comment>Data:</comment>
+  </data>
   <data name="DemoDesc" xml:space="preserve">
     <value>一般的なバーコードタイプの使用方法を示します。</value>
     <comment>Shows how to use popular barcode types.</comment>
@@ -132,6 +136,14 @@
   <data name="NewBarcodesTitle" xml:space="preserve">
     <value>その他のバーコード</value>
     <comment>More barcodes</comment>
+  </data>
+  <data name="RegenerateBarcodeImageCaption" xml:space="preserve">
+    <value>バーコード画像の再生成</value>
+    <comment>Regenerate barcode image</comment>
+  </data>
+  <data name="SelectBarcodeTypeLabel" xml:space="preserve">
+    <value>バーコードの種類の選択:</value>
+    <comment>Select Barcode Type:</comment>
   </data>
   <data name="Title" xml:space="preserve">
     <value>BarCode エクスプローラー</value>

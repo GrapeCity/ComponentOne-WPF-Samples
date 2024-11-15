@@ -55,10 +55,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.Data.Entity.4.6.2">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.LiveLinq.4.6.2">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="EntityFramework" Version="6.4.0" />
     <Reference Include="System" />

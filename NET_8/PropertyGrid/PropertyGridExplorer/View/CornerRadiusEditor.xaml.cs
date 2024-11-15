@@ -29,7 +29,7 @@ namespace PropertyGridExplorer
             cornerRadiusEditor.Tag = handler;
         }
 
-        public override void Detach(CornerRadiusEditorControl cornerRadiusEditor)
+        public override void Detach(CornerRadiusEditorControl cornerRadiusEditor, PropertyGroup group)
         {
             var handler = cornerRadiusEditor.Tag as EventHandler;
             cornerRadiusEditor.ValueChanged -= handler;

@@ -3,9 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:ThemeExplorer"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <local:IsReadOnlyConverter x:Key="IsReadOnlyConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
     <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree">
         <c1:C1TabItem Header="Bar Code" BorderThickness="0" >
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
@@ -20,17 +27,29 @@
             </StackPanel>
         </c1:C1TabItem>
         <c1:C1TabItem Header="FlexChart" BorderThickness="0">
-            <c1:FlexChart x:Name="flexChart" BindingX="Date" ItemsSource="{Binding DataContext.Data}">
-                <c1:Series SeriesName="Downloads" Binding="Downloads"/>
-                <c1:Series SeriesName="Sales" Binding="Sales"/>
-                <c1:FlexChart.AxisX>
-                    <c1:Axis>
-                        <c1:Axis.Scrollbar>
-                            <c1:C1AxisScrollbar x:Name="axisXScrollbar" />
-                        </c1:Axis.Scrollbar>
-                    </c1:Axis>
-                </c1:FlexChart.AxisX>
-            </c1:FlexChart>
+            <Grid Margin="0 0 10 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <c1:FlexChart x:Name="flexChart" BindingX="Date" ItemsSource="{Binding DataContext.Data}">
+                    <c1:Series SeriesName="Downloads" Binding="Downloads"/>
+                    <c1:Series SeriesName="Sales" Binding="Sales"/>
+                    <c1:FlexChart.AxisX>
+                        <c1:Axis >
+                            <c1:Axis.Scrollbar>
+                                <c1:C1AxisScrollbar x:Name="axisXScrollbar" />
+                            </c1:Axis.Scrollbar>
+                        </c1:Axis>
+                    </c1:FlexChart.AxisX>
+                </c1:FlexChart>
+                <c1:FlexChart Grid.Row="1" BindingX="Date" ChartType="Line" ItemsSource="{Binding DataContext.Data}">
+                    <c1:Series SeriesName="Sales" Binding="Sales"/>
+                    <c1:FlexChart.Layers>
+                        <c1:C1RangeSelector x:Name="rangeSelector" />
+                    </c1:FlexChart.Layers>
+                </c1:FlexChart>
+            </Grid>
         </c1:C1TabItem>
         <c1:C1TabItem Header="FlexPie" BorderThickness="0">
             <c1:FlexPie x:Name="pieChart" Binding="Age" BindingName="Residence" >
@@ -38,6 +57,32 @@
                     <c1:PieDataLabel Content="{}{y}"/>
                 </c1:FlexPie.DataLabel>
             </c1:FlexPie>
+        </c1:C1TabItem>
+        <c1:C1TabItem Header="Gauge" BorderThickness="0">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0">
+                    <Label Content="Value" VerticalAlignment="Center"/>
+                    <c1:C1NumericBox Value="{Binding DataContext.GaugeValue, Mode=TwoWay}" Minimum="0" Maximum="100" Increment="25" Width="50" />
+                    <c1:C1CheckBox Content="Allow user interaction" IsChecked="{Binding Path=DataContext.IsGaugeReadOnly, Converter={StaticResource IsReadOnlyConverter}}"/>
+                </StackPanel>
+                <Label Content="LinearGauge" Margin="0 5 0 0" Grid.Row="1"/>
+                <c1:C1LinearGauge Value="{Binding DataContext.GaugeValue,Mode=TwoWay}" IsReadOnly="{Binding DataContext.IsGaugeReadOnly}" IsEnabled="True" TextVisibility="All" Grid.Row="2"/>
+                <Label Content="BulletGraph" Margin="0 5 0 0" Grid.Row="3"/>
+                <c1:C1BulletGraph Value="{Binding DataContext.GaugeValue,Mode=TwoWay}" IsReadOnly="{Binding DataContext.IsGaugeReadOnly}" IsEnabled="True" TextVisibility="All" Grid.Row="4" 
+                          Good="80" Bad="45" Target="90"/>
+                <Label Content="RadialGauge" Margin="0 5 0 0" Grid.Row="5"/>
+                <c1:C1RadialGauge Value="{Binding DataContext.GaugeValue,Mode=TwoWay}" IsReadOnly="{Binding DataContext.IsGaugeReadOnly}" IsEnabled="True" TextVisibility="All" Grid.Row="6"
+                          HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+            </Grid>
         </c1:C1TabItem>
         <!-- Maps -->
         <c1:C1TabItem Header="Maps" BorderThickness="0">

@@ -69,7 +69,7 @@ namespace FlexGridExplorer
             {
                 rowsCountLabel.Text = string.Format(AppResources.RowsCount, grid.Rows.Count);
             };
-            
+
             grid.ItemsSource = tasks;
         }
 
@@ -103,7 +103,7 @@ namespace FlexGridExplorer
                 e.Column.Format = "ddd d/M/yyyy";
         }
 
-        List<string> _treeExpandModes;
+        List<string> _treeExpandModes, _treeLinesModes, _treeIndentModes;
         public List<string> TreeExpandModes
         {
             get
@@ -111,6 +111,26 @@ namespace FlexGridExplorer
                 if (_treeExpandModes == null)
                     _treeExpandModes = Enum.GetNames(typeof(GridTreeExpandMode)).ToList();
                 return _treeExpandModes;
+            }
+        }
+
+        public List<string> TreeLinesModes
+        {
+            get
+            {
+                if (_treeLinesModes == null)
+                    _treeLinesModes = Enum.GetNames(typeof(GridTreeLinesMode)).ToList();
+                return _treeLinesModes;
+            }
+        }
+
+        public List<string> TreeIndentModes
+        {
+            get
+            {
+                if (_treeIndentModes == null)
+                    _treeIndentModes = Enum.GetNames(typeof(GridTreeIndentMode)).ToList();
+                return _treeIndentModes;
             }
         }
     }

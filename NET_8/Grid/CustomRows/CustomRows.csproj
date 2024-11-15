@@ -10,31 +10,34 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.GridControl">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TreeView">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

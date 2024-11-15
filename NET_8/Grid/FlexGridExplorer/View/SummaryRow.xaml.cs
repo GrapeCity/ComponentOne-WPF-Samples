@@ -19,7 +19,7 @@ namespace FlexGridExplorer
             {
                 var dictionary = new Dictionary<string, double>();
                 for (int j = 1; j <= 4; j++)
-                    dictionary[$"Col{j}"] = _rand.NextDouble();
+                    dictionary[$"Col{j}"] = j == 3 ? _rand.Next(100) : _rand.NextDouble();
                 list.Add(dictionary);
             }
             grid.ItemsSource = list;

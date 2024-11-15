@@ -65,13 +65,14 @@ namespace CalendarExplorer
             cbSelectionMode.ItemsSource = Enum.GetValues(typeof(SelectionMode)).Cast<SelectionMode>();
             cbSelectionMode.SelectedItemChanged += cbSelectionMode_SelectedItemChanged;
 
+            cbMouseOverMode.ItemsSource = Enum.GetValues<CalendarMouseOverMode>();
+            cbMouseOverMode.SelectedItemChanged += CbMouseOverMode_SelectedItemChanged;
             //calendar.DisplayDate = new DateTime(2023, 1, 1);
             calendar.SelectionChanging += Calendar_SelectionChanging;
             calendar.SelectionChanged += Calendar_SelectionChanged;
 
             _boldDates = new ObservableCollection<DateTime> {DateTime.Today.AddDays(-3), DateTime.Today.AddDays(1) };
             calendar.BoldedDates = _boldDates;
-
         }
 
         private void Calendar_SelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
@@ -94,6 +95,16 @@ namespace CalendarExplorer
                 calendar.SelectionMode = (SelectionMode)selectionMode;
             }
 
+        }
+
+        private void CbMouseOverMode_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)
+        {
+            var mouseOverMode = (sender as C1ComboBox).SelectedItem;
+
+            if (mouseOverMode != null)
+            {
+                calendar.MouseOverMode = (CalendarMouseOverMode)mouseOverMode;
+            }
         }
 
         private void CbCalendarType_SelectedItemChanged(object sender, PropertyChangedEventArgs<object> e)

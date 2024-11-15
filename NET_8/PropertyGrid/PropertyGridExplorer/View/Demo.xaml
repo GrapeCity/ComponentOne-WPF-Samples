@@ -28,17 +28,19 @@
                 <ColumnDefinition Width="Auto" MinWidth="250" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <StackPanel x:Name="stackControl1">
-                <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
-                    <ContentControl x:Name="contentControl" Content="Content" Width="150" Height="40" Background="#fff6aac9" Style="{DynamicResource ContentControlStyle1}" />
-                </c1:C1CheckBox>
-                <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
-                    <TextBox x:Name="txtbox" TextWrapping="Wrap" Width="55" Height="56" />
-                </c1:C1CheckBox>
-                <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
-                    <Button x:Name="targetButton" Content="click to change content" Width="150" Height="40" />
-                </c1:C1CheckBox>
-            </StackPanel>
+            <c1:C1ScrollViewer MaxWidth="500">
+                <StackPanel x:Name="stackControl1">
+                    <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
+                        <ContentControl x:Name="contentControl" Content="Content" Width="150" Height="40" Background="#fff6aac9" Style="{DynamicResource ContentControlStyle1}" />
+                    </c1:C1CheckBox>
+                    <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
+                        <TextBox x:Name="txtbox" TextWrapping="Wrap" Width="55" Height="56" />
+                    </c1:C1CheckBox>
+                    <c1:C1CheckBox HorizontalContentAlignment="Stretch" Margin="4" Click="CheckBox_Click">
+                        <Button x:Name="targetButton" Content="click to change content" Width="150" Height="40" />
+                    </c1:C1CheckBox>
+                </StackPanel>
+            </c1:C1ScrollViewer>
             <c1:C1PropertyGrid x:Name="propertyGrid" PropertySort="CategorizedAlphabetical" Grid.Column="1" AutoGenerateProperties="False" ShowDescription="True" ShowResetButton="True" BorderThickness="1 1 0 0">
                 <c1:C1PropertyGrid.PopupStyle>
                     <Style TargetType="c1:C1Border">

@@ -8,7 +8,7 @@
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <Configurations>Debug;Release</Configurations>
-    <Platforms>AnyCPU</Platforms>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE;CLR40;SL_AUTOMATION</DefineConstants>
@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF.Carousel">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>

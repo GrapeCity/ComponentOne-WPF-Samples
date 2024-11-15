@@ -11,8 +11,8 @@
 			<RowDefinition />
 		</Grid.RowDefinitions>
 
-		<Border Grid.Row="0" Margin=" 0 0 0 10">
-			<StackPanel Margin="3" Orientation="Horizontal">
+		<Border Grid.Row="0" Margin=" 0 0 0 5">
+            <WrapPanel Margin="3" Orientation="Horizontal">
 				<Label Foreground="{DynamicResource text_Brush}" Content="Theme:" VerticalAlignment="Center" />
 				<ComboBox x:Name="themes" SelectedIndex="1" SelectionChanged="themes_SelectionChanged" Margin="5" IsEditable="False" IsReadOnly="True" Width="110" ToolTip="Change Theme">
 					<ComboBox.Items>
@@ -47,6 +47,7 @@
                           ToolTip="Change Time Scale"/>
 
                 <CheckBox Foreground="{DynamicResource text_Brush}" VerticalAlignment="Center" Content="Show work time only" Margin="5" IsChecked="{Binding ShowWorkTimeOnly, ElementName=scheduler1}" />
+                <CheckBox Foreground="{DynamicResource text_Brush}" VerticalAlignment="Center" Content="Show week tabs" Margin="5" IsChecked="{Binding ShowWeekTabs, ElementName=scheduler1}" />
 
                 <Button Name="Import" Margin="5" IsEnabled="True" Click="Import_Click" Padding="5,0">Load...
 					<Button.ToolTip>
@@ -58,7 +59,7 @@
 						<TextBlock>Save data to file</TextBlock>
 					</Button.ToolTip>
 				</Button>
-			</StackPanel>
+			</WrapPanel>
 		</Border>	
         <Grid SnapsToDevicePixels="True" Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -66,7 +67,7 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <c1sched:C1Scheduler x:Name="scheduler1" Grid.Column="1" Margin="10 0 0 0" BorderThickness="1" ShowWorkTimeOnly="True" 
+            <c1sched:C1Scheduler x:Name="scheduler1" Grid.Column="1" Margin="10 0 0 0" BorderThickness="1" ShowWorkTimeOnly="True" AllowDrop="True"
                                  ViewType="Month" SmallVisualIntervalScale="{Binding SelectedItem, ElementName=scale}">
 				<c1sched:C1Scheduler.Settings>
 					<c1sched:C1SchedulerSettings FirstVisibleTime="07:00:00" />

@@ -3,7 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>c1.ico</ApplicationIcon>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
@@ -25,7 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.GridControl">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

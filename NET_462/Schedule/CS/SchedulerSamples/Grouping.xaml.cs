@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using C1.Schedule;
+using C1.WPF.Schedule;
 
 namespace SchedulerSamples
 {

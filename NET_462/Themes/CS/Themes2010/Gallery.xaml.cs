@@ -1,4 +1,4 @@
-﻿using C1.C1Zip;
+﻿using C1.Zip;
 using C1.DataCollection;
 using C1.DataFilter;
 using C1.WPF;

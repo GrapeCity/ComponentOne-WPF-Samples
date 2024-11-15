@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexGridSamples2010.4", "FlexGridSamples2010.4.csproj", "{C7F14BC7-3249-4B2D-91AA-5F87D2DAF088}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlexGridSamples2010.4", "FlexGridSamples2010.4.csproj", "{C7F14BC7-3249-4B2D-91AA-5F87D2DAF088}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +24,5 @@ Global
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{3e3b7869-d437-4206-a6b1-2fd4817935a9}*SharedItemsImports = 5
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{e53bee51-1809-4253-8f3b-a83136c99022}*SharedItemsImports = 5
-		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{fc35047d-0e6d-48e7-9c52-a6cf98b61bf6}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

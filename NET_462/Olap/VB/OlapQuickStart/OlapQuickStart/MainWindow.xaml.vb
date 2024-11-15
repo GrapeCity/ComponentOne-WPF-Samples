@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports System.Reflection
-Imports C1.C1Zip
+Imports C1.Zip
 
 Class MainWindow
 

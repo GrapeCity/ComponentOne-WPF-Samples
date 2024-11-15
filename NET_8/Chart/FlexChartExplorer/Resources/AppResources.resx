@@ -485,4 +485,31 @@
   <data name="Factors" xml:space="preserve">
     <value>Factors Influencing Purchase Decisions</value>
   </data>
+  <data name="HeatmapDesc" xml:space="preserve">
+    <value>Heatmap Plot</value>
+  </data>
+  <data name="HeatmapTag" xml:space="preserve">
+    <value>Shows Heatmap plot with gradient color scale. The data from two-dimensional array is shown as a table. The color of table's cell depends on the corresponding data value.</value>
+  </data>
+  <data name="HeatmapTitle" xml:space="preserve">
+    <value>Heatmap</value>
+  </data>
+  <data name="AxisMarkersTitle" xml:space="preserve">
+    <value>Axis Markers</value>
+  </data>
+  <data name="AxisMarkersDesc" xml:space="preserve">
+    <value>Axis Markers</value>
+  </data>
+  <data name="AxisMarkersTag" xml:space="preserve">
+    <value>This view shows how to display line markers over the axes. Both axes have markers which follow the pointer and display its position in data coordinates.</value>
+  </data>
+  <data name="ColumnHeatmapTitle" xml:space="preserve">
+    <value>Column &amp; Heatmap</value>
+  </data>
+  <data name="ColumnHeatmapDesc" xml:space="preserve">
+    <value>Combination of range column and heatmap plots</value>
+  </data>
+  <data name="ColumnHeatmapTag" xml:space="preserve">
+    <value>This view shows combination of ranged column chart and heatmap. The heatmap displayed simplified presentation of the same data on the time axis.</value>
+  </data>
 </root>

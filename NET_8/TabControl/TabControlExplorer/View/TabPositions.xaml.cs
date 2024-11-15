@@ -20,6 +20,7 @@ namespace TabControlExplorer
         {
             try
             {
+                if (e.NewValue == null) return;
                 C1TabItemShape val = (C1TabItemShape)Enum.Parse(typeof(C1TabItemShape), (e.NewValue as C1ComboBoxItem).Content as string);
                 if (c1Tab != null)
                 {

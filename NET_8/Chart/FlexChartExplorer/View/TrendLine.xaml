@@ -14,13 +14,17 @@
             <local:AnimationSettingsToBoolConverter x:Key="animCnv" />
             <local:OrderVisibilityConverter x:Key="orderVisibilityConverter"/>
             <local:BoolToVisibilityConverter x:Key="BTVConverter"/>
+            <Style TargetType="c1:C1CheckBox">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <c1:C1CheckBox Content="Show Equation" x:Name="cbShow" VerticalAlignment="Center" Margin="10 0 20 0"/>
+            <c1:C1CheckBox Content="Show Equation" x:Name="cbShow" Checked="UpdateRtbVisiblity" Unchecked="UpdateRtbVisiblity" Margin="10 0 20 0"/>
+            <c1:C1CheckBox Content="Show R2" x:Name="cbShowR2" Checked="UpdateRtbVisiblity" Unchecked="UpdateRtbVisiblity" Margin="10 0 20 0"/>
             <c1:C1ComboBox ItemsSource="{Binding FitTypes}"
                            SelectedValue="{Binding ElementName=trendLine, Path=FitType, Mode=TwoWay, Converter={StaticResource enumConverter}}"
                            Width="150">
@@ -36,13 +40,13 @@
                 </c1:C1ComboBox.ItemTemplate>
             </c1:C1ComboBox>
             <TextBlock Text="Order: " Margin="20 0 10 0" VerticalAlignment="Center" Visibility="{Binding ElementName=trendLine, Path=FitType, Converter={StaticResource orderVisibilityConverter}}" />
-            <c1:C1NumericBox Value="{Binding ElementName=trendLine, Path=Order, Mode=TwoWay}" Visibility="{Binding ElementName=trendLine, Path=FitType, Converter={StaticResource orderVisibilityConverter}}" Minimum="1" Maximum="9" Width="100" />
+            <c1:C1NumericBox Value="4" ValueChanged="C1NumericBox_ValueChanged" Visibility="{Binding ElementName=trendLine, Path=FitType, Converter={StaticResource orderVisibilityConverter}}" Minimum="1" Maximum="9" Width="100" />
             <c1:C1CheckBox Margin="8,2" VerticalAlignment="Center" Content="Animation" IsChecked="{Binding ElementName=flexChart,Path=AnimationSettings,Converter={StaticResource animCnv}}" />
         </StackPanel>
         <c1:C1RichTextBox x:Name="rich" IsReadOnly="True" BorderThickness="0" Margin="20" Grid.Row="1" Panel.ZIndex="1" 
                           VerticalAlignment="Top" HorizontalAlignment="Left" Background="{x:Null}"
-                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" IsHitTestVisible="False"
-                          Visibility="{Binding ElementName=cbShow, Path=IsChecked, Converter={StaticResource BTVConverter}}" />
+                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" IsHitTestVisible="False"  
+                          Visibility="Hidden" />
         <c1:FlexChart x:Name="flexChart" Background="White" ChartType="LineSymbols" ItemsSource="{Binding Data}" ToolTipContent="{}{y}" Grid.Row="1" Rendered="flexChart_Rendered">
             <c1:FlexChart.AxisY>
                 <c1:Axis Min="0" Max="100" AxisLine="False" MajorGrid="True" MajorTickMarks="None" />

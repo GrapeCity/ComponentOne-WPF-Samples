@@ -7,6 +7,13 @@
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
              mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FinancialChartExplorer;component/View/Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -14,8 +21,8 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
             <TextBlock Text="Symbol" VerticalAlignment="Center"/>
-            <c1:C1ComboBox x:Name="cbSymbol" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"
-                      Margin="10 0" Width="150" DisplayMemberPath="Name" SelectedIndex="0"/>
+            <c1:C1ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}" ItemsSource="{Binding Companies}" 
+                           SelectionChanged="OnSymbolSelectionChanged" SelectedIndex="0"/>
         </StackPanel>
         <c1:C1FinancialChart x:Name="financialChart" ToolTipContent="{}Date: {Date}&#x000A;Open: {Open}&#x000A;High: {High}&#x000A;Low: {Low}&#x000A;Close: {Close}&#x000A;Volume: {Volume}" ChartType="CandleVolume" BindingX="Date" Binding="High,Low,Open,Close,Volume" Grid.Row="1">
             <c1:FinancialSeries />

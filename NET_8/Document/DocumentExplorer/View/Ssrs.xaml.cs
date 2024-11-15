@@ -111,11 +111,11 @@ namespace DocumentExplorer
             _catalogItems = list;
             cbReports.ItemsSource = _catalogItems.AsDataCollection();
 
-            this.cbReports.SelectionCommitted += CbReports_SelectionCommitted;
+            this.cbReports.SelectionChanged += CbReports_SelectionChanged;
             cbReports.SelectedIndex = 0;
         }
 
-        private void CbReports_SelectionCommitted(object sender, C1.WPF.Core.PropertyChangedEventArgs<object> e)
+        private void CbReports_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //Set the selected report to document source, and generate the pages
             if (!_loaded || _ssrsDocSource.IsBusy)

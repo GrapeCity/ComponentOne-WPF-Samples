@@ -122,22 +122,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.SpellChecker">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -14,22 +14,22 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Sparkline">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TreeView">
-      <Version>8.0.20241.795</Version>
+      <Version>8.0.20242.966</Version>
     </PackageReference>
     <PackageReference Include="System.Linq" Version="4.3.0" />
   </ItemGroup>

@@ -61,6 +61,15 @@ namespace BarCodeExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data:.
+        /// </summary>
+        public static string DataLabel {
+            get {
+                return ResourceManager.GetString("DataLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows how to use popular barcode types..
         /// </summary>
         public static string DemoDesc {
@@ -93,6 +102,24 @@ namespace BarCodeExplorer.Properties {
         public static string NewBarcodesTitle {
             get {
                 return ResourceManager.GetString("NewBarcodesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Regenerate barcode image.
+        /// </summary>
+        public static string RegenerateBarcodeImageCaption {
+            get {
+                return ResourceManager.GetString("RegenerateBarcodeImageCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Barcode Type:.
+        /// </summary>
+        public static string SelectBarcodeTypeLabel {
+            get {
+                return ResourceManager.GetString("SelectBarcodeTypeLabel", resourceCulture);
             }
         }
         

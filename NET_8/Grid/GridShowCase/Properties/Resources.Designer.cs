@@ -19,7 +19,7 @@ namespace GridShowCase.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -61,6 +61,312 @@ namespace GridShowCase.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active.
+        /// </summary>
+        public static string ActiveLabel {
+            get {
+                return ResourceManager.GetString("ActiveLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change.
+        /// </summary>
+        public static string ChangeLabel {
+            get {
+                return ResourceManager.GetString("ChangeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color.
+        /// </summary>
+        public static string ColorLabel {
+            get {
+                return ResourceManager.GetString("ColorLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Columns.
+        /// </summary>
+        public static string ColumnsLabel {
+            get {
+                return ResourceManager.GetString("ColumnsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conditional Formatting.
+        /// </summary>
+        public static string ConditionalFormattingLabel {
+            get {
+                return ResourceManager.GetString("ConditionalFormattingLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string CountryLabel {
+            get {
+                return ResourceManager.GetString("CountryLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created Date.
+        /// </summary>
+        public static string CreatedDateLabel {
+            get {
+                return ResourceManager.GetString("CreatedDateLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export to Csv.
+        /// </summary>
+        public static string CSVDescription {
+            get {
+                return ResourceManager.GetString("CSVDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CSV.
+        /// </summary>
+        public static string CSVLabel {
+            get {
+                return ResourceManager.GetString("CSVLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data.
+        /// </summary>
+        public static string DataLabel {
+            get {
+                return ResourceManager.GetString("DataLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Size.
+        /// </summary>
+        public static string DataSizeLabel {
+            get {
+                return ResourceManager.GetString("DataSizeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description:.
+        /// </summary>
+        public static string DescriptionField {
+            get {
+                return ResourceManager.GetString("DescriptionField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discount from 10 to 20%.
+        /// </summary>
+        public static string DiscountFrom10To20PercLabel {
+            get {
+                return ResourceManager.GetString("DiscountFrom10To20PercLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discount &gt; 20%.
+        /// </summary>
+        public static string DiscountFrom20PercLabel {
+            get {
+                return ResourceManager.GetString("DiscountFrom20PercLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discount.
+        /// </summary>
+        public static string DiscountLabel {
+            get {
+                return ResourceManager.GetString("DiscountLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discount &lt; 10%.
+        /// </summary>
+        public static string DiscountLt10PercLabel {
+            get {
+                return ResourceManager.GetString("DiscountLt10PercLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export to Excel.
+        /// </summary>
+        public static string ExcelDescription {
+            get {
+                return ResourceManager.GetString("ExcelDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel.
+        /// </summary>
+        public static string ExcelLabel {
+            get {
+                return ResourceManager.GetString("ExcelLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export.
+        /// </summary>
+        public static string ExportLabel {
+            get {
+                return ResourceManager.GetString("ExportLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter.
+        /// </summary>
+        public static string FilterLabel {
+            get {
+                return ResourceManager.GetString("FilterLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter.
+        /// </summary>
+        public static string FilterPlaceholder {
+            get {
+                return ResourceManager.GetString("FilterPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group by Country.
+        /// </summary>
+        public static string GroupByCountryLabel {
+            get {
+                return ResourceManager.GetString("GroupByCountryLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group by Product.
+        /// </summary>
+        public static string GroupByProductLabel {
+            get {
+                return ResourceManager.GetString("GroupByProductLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group.
+        /// </summary>
+        public static string GroupLabel {
+            get {
+                return ResourceManager.GetString("GroupLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        public static string HistoryLabel {
+            get {
+                return ResourceManager.GetString("HistoryLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export to Html.
+        /// </summary>
+        public static string HtmlDescription {
+            get {
+                return ResourceManager.GetString("HtmlDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Html.
+        /// </summary>
+        public static string HtmlLabel {
+            get {
+                return ResourceManager.GetString("HtmlLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string IDLabel {
+            get {
+                return ResourceManager.GetString("IDLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string PriceLabel {
+            get {
+                return ResourceManager.GetString("PriceLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Name.
+        /// </summary>
+        public static string ProductNameLabel {
+            get {
+                return ResourceManager.GetString("ProductNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity:.
+        /// </summary>
+        public static string QuantityField {
+            get {
+                return ResourceManager.GetString("QuantityField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rating.
+        /// </summary>
+        public static string RatingLabel {
+            get {
+                return ResourceManager.GetString("RatingLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string SearchLabel {
+            get {
+                return ResourceManager.GetString("SearchLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size:.
+        /// </summary>
+        public static string SizeField {
+            get {
+                return ResourceManager.GetString("SizeField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The sample demonstrate the most important grid features..
         /// </summary>
         public static string Tag {
@@ -70,11 +376,47 @@ namespace GridShowCase.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export to Text.
+        /// </summary>
+        public static string TextDescription {
+            get {
+                return ResourceManager.GetString("TextDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string TextLabel {
+            get {
+                return ResourceManager.GetString("TextLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Grid Showcase.
         /// </summary>
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight:.
+        /// </summary>
+        public static string WeightField {
+            get {
+                return ResourceManager.GetString("WeightField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0:N0} rows.
+        /// </summary>
+        public static string XRowsLabel {
+            get {
+                return ResourceManager.GetString("XRowsLabel", resourceCulture);
             }
         }
     }

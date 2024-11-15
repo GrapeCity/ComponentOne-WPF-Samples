@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,7 +41,7 @@ namespace FlexChartExplorer
             return new List<string> { "FixedValue", "Percentage", "StandardDeviation", "StandardError", "Custom" };
         }
 
-        public  static List<string> CreateErrorBarDirections()
+        public static List<string> CreateErrorBarDirections()
         {
             return new List<string> { "Both", "Minus", "Plus" };
         }
@@ -76,7 +79,7 @@ namespace FlexChartExplorer
             return result;
         }
 
-     
+
         public static List<DataPoint> Create(MathActionDouble function, double from, double to, double step)
         {
             var result = new List<DataPoint>();
@@ -226,7 +229,7 @@ namespace FlexChartExplorer
             return (Math.Pow(-x, 2 / 3) + Math.Sqrt(Math.Pow(x, 4 / 3) - 4 * Math.Pow(x, 2) + 4)) / 2;
         }
 
-         static DataPoint Iterate(double x, double y, double[] c)
+        static DataPoint Iterate(double x, double y, double[] c)
         {
             double x1 = c[0] + c[1] * x + c[2] * x * x + c[3] * x * y + c[4] * y + c[5] * y * y;
             double y1 = c[6] + c[7] * x + c[8] * x * x + c[9] * x * y + c[10] * y + c[11] * y * y;
@@ -691,6 +694,44 @@ namespace FlexChartExplorer
             return rnd.Next(10, 100);
         }
 
+        private static List<TemperatureDiff> temperatureDiffs;
+
+        public static List<TemperatureDiff> GetTemperatureDifferenceData()
+        {
+            if (temperatureDiffs == null)
+            {
+                var list = new List<TemperatureDiff>();
+                var asm = Assembly.GetExecutingAssembly();
+
+                using (var stream = asm.GetManifestResourceStream(asm.GetName().Name + ".Resources.tempNY-SF.csv"))
+                {
+                    using (var sr = new StreamReader(stream))
+                    {
+                        for (var line = sr.ReadLine(); line != null; line = sr.ReadLine())
+                        {
+                            if (line.StartsWith("date"))
+                                continue;
+
+                            var fields = line.Split(',');
+                            if (fields.Length == 3)
+                            {
+                                list.Add(new TemperatureDiff()
+                                {
+                                    Date = DateTime.ParseExact(fields[0], "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                                    Temp1 = double.Parse(fields[1], CultureInfo.InvariantCulture),
+                                    Temp2 = double.Parse(fields[2], CultureInfo.InvariantCulture),
+                                });
+                            }
+                        }
+                    }
+                }
+
+                temperatureDiffs = list;
+            }
+
+            return temperatureDiffs;
+        }
+
     }
 
     public class Sale
@@ -743,5 +784,13 @@ namespace FlexChartExplorer
         public double Velocity { get; set; }
         public double Distance { get; set; }
         public int Time { get; set; }
+    }
+
+    public class TemperatureDiff
+    {
+        public DateTime Date { get; set; }
+        public double Temp1 { get; set; }
+        public double Temp2 { get; set; }
+        public double Diff => Temp2 - Temp1;
     }
 }

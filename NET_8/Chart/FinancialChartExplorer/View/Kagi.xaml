@@ -7,14 +7,18 @@
              xmlns:local="clr-namespace:FinancialChartExplorer"
              mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
              d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FinancialChartExplorer;component/View/Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.Resources>
             <local:EnumConverter x:Key="EmConverter" />
-            <Style TargetType="c1:C1ComboBox" x:Key="CompanyStyle">
-                <Setter Property="Margin" Value="10 0" />
-                <Setter Property="Width" Value="150" />
-                <Setter Property="DisplayMemberPath" Value="Name"/>
-            </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

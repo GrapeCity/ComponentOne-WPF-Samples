@@ -110,7 +110,7 @@ namespace PropertyGridExplorer
             slider.Tag = handler;
         }
 
-        public override void Detach(Slider slider)
+        public override void Detach(Slider slider, PropertyGroup group)
         {
             var handler = slider.Tag as RoutedPropertyChangedEventHandler<double>;
             slider.ValueChanged -= handler;

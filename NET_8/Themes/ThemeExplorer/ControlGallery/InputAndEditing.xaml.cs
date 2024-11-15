@@ -20,13 +20,8 @@ namespace ThemeExplorer
 
             MultiSelect.ItemsSource = persons;
             MultiSelect.SelectedItem = persons[0];
-            CheckList.ItemsSource = persons;
-            CheckList.Items[0].IsSelected = true;
             MultiSelect1.ItemsSource = persons;
             MultiSelect1.SelectedItem = persons[0];
-            CheckList1.ItemsSource = persons;
-            CheckList1.Items[0].IsSelected = true;
-
         }
 
         public ResourceDictionary Theme
@@ -46,6 +41,7 @@ namespace ThemeExplorer
 
         private void OnThemeChanged()
         {
+            richTextRibbon.Theme= Theme;
             propertyGrid.Resources.MergedDictionaries.Clear();
             propertyGrid.Resources.MergedDictionaries.Add(this.Theme);
         }

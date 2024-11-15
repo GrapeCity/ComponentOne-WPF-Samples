@@ -396,6 +396,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Column Double should be greater or equal than 3.
+        /// </summary>
+        public static string DataTableValidationMessage {
+            get {
+                return ResourceManager.GetString("DataTableValidationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DetailsVisibiltyMode.
         /// </summary>
         public static string DetailsVisibiltyMode {
@@ -936,11 +945,47 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address:.
+        /// </summary>
+        public static string RowDetailsAddress {
+            get {
+                return ResourceManager.GetString("RowDetailsAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City:.
+        /// </summary>
+        public static string RowDetailsCity {
+            get {
+                return ResourceManager.GetString("RowDetailsCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country:.
+        /// </summary>
+        public static string RowDetailsCountry {
+            get {
+                return ResourceManager.GetString("RowDetailsCountry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Expand and collapse row details..
         /// </summary>
         public static string RowDetailsDescription {
             get {
                 return ResourceManager.GetString("RowDetailsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Postal Code:.
+        /// </summary>
+        public static string RowDetailsPostalCode {
+            get {
+                return ResourceManager.GetString("RowDetailsPostalCode", resourceCulture);
             }
         }
         
@@ -1229,6 +1274,24 @@ namespace FlexGridExplorer.Resources {
         public static string TreeIndent {
             get {
                 return ResourceManager.GetString("TreeIndent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tree Indent Mode.
+        /// </summary>
+        public static string TreeIndentMode {
+            get {
+                return ResourceManager.GetString("TreeIndentMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tree Lines Mode.
+        /// </summary>
+        public static string TreeLinesMode {
+            get {
+                return ResourceManager.GetString("TreeLinesMode", resourceCulture);
             }
         }
         

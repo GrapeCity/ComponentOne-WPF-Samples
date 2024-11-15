@@ -7,9 +7,13 @@ namespace ThemeExplorer.Helpers
         Default,
         System,
         Material,
-        MaterialDark,
+        MaterialDark,        
         MaterialOrange,
         MaterialOrangeDark,
+        Office365Black,
+        Office365Colorful,
+        Office365DarkGray,
+        Office365White,
         Custom
     }
 
@@ -33,6 +37,12 @@ namespace ThemeExplorer.Helpers
                 case C1AvailableThemes.MaterialDark:
                     theme = new C1ThemeMaterialDark();
                     break;
+                case C1AvailableThemes.Office365Black:
+                    theme = new C1ThemeOffice365Black();
+                    break;
+                case C1AvailableThemes.Office365DarkGray:
+                    theme = new C1ThemeOffice365DarkGray();
+                    break;
                 case C1AvailableThemes.Custom:
                     theme = new CustomTheme();
                     break;
@@ -43,6 +53,14 @@ namespace ThemeExplorer.Helpers
                 case C1AvailableThemes.MaterialOrangeDark:
                     // create C1ThemeMaterialDark with custom overrides for theme colors
                     theme = new C1ThemeMaterialDark(typeof(C1ThemeFactory).Assembly, "ThemeExplorer.CustomTheme.MaterialOrangeDark.xaml");
+                    break;
+                case C1AvailableThemes.Office365White:
+                    // create C1ThemeOffice365White with custom overrides for theme colors
+                    theme = new C1ThemeOffice365White();
+                    break;
+                case C1AvailableThemes.Office365Colorful:
+                    // create C1ThemeOffice365Colorful with custom overrides for theme colors
+                    theme = new C1ThemeOffice365Colorful();
                     break;
                 default:
                     break;

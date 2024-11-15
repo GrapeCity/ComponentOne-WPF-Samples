@@ -13,9 +13,12 @@
                 <c1:C1WrapPanel MaxWidth="1000" >
                     <c1:C1Button Width="150" VerticalAlignment="Center" Margin="10 20 10 20">Click me!</c1:C1Button>
                     <c1:C1Button Width="150" Margin="10 20 10 20" VerticalAlignment="Center" Content="Default Button" 
-                                 Style="{DynamicResource {x:Static c1:C1Button.AccentStyleKey}}" IsDefault="True" />
+                                 IsDefault="True" />
                     <c1:C1ToggleButton Width="150" VerticalAlignment="Center" Margin="10 20 10 20">Toggle me!</c1:C1ToggleButton>
-                    <c1:C1TextBox TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Text="Test" />
+                    <c1:C1TextBoxBase VerticalAlignment="Center" TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Placeholder="Please type something"  Text="C1TextBoxBase" />
+                    <c1:C1TextBoxBase IsReadOnly="True" TextWrapping="Wrap" Width="150" Margin="10 20 10 20" Text="Readonly TextBoxBase" />
+                    <c1:C1TextBox TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Text="C1TextBox" Placeholder="Please type something" />
+                    <c1:C1TextBox IsReadOnly="True" TextWrapping="Wrap" Width="150" Margin="10 20 10 20" Text="Readonly TextBox" />
                     <c1:C1CheckBox VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!" IsThreeState="True" />
                     <c1:C1RadioButton GroupName="test" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!" IsChecked="True" />
                     <c1:C1RadioButton GroupName="test" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!"  />
@@ -59,8 +62,7 @@
                     <c1:C1DateTimePicker VerticalAlignment="Center" Width="300" Margin="10 20 10 20" />
 
                     <c1:C1DatePicker VerticalAlignment="Center" Width="200" Margin="10 20 10 20" />
-
-                    <c1:C1ListView x:Name="CheckList" Grid.Column="1" Margin="10 20 10 20" Height="340" Width="250" VerticalAlignment="Center" DisplayMemberPath="Residence" ShowCheckBoxes="True"/>
+                    <c1:C1TimeEditor VerticalAlignment="Center" Width="200" Margin="10 20 10 20"/>                  
 
                     <c1:C1MultiSelect x:Name="MultiSelect" Margin="10 20 10 20" Width="240" VerticalAlignment="Center" ShowSelectAll="True"
                                       DisplayMemberPath="Name" MaxHeaderItems="2"/>
@@ -77,9 +79,11 @@
                 <c1:C1WrapPanel MaxWidth="1000" >
                     <c1:C1Button Width="150" VerticalAlignment="Center" Margin="10 20 10 20" IsEnabled="False">Click me!</c1:C1Button>
                     <c1:C1Button Width="150" Margin="10 20 10 20" VerticalAlignment="Center" Content="Default Button" IsEnabled="False"
-                                 Style="{DynamicResource {x:Static c1:C1Button.AccentStyleKey}}" IsDefault="True" />
+                                 IsDefault="True" />
                     <c1:C1ToggleButton Width="150" VerticalAlignment="Center" Margin="10 20 10 20" IsEnabled="False">Toggle me!</c1:C1ToggleButton>
-                    <c1:C1TextBoxBase IsEnabled="False" VerticalAlignment="Center" TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Text="Test" />
+                    <c1:C1TextBoxBase IsEnabled="False" VerticalAlignment="Center" TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Text="C1TextBoxBase" />
+                    <c1:C1TextBox IsEnabled="False" TextWrapping="Wrap" Width="120" Margin="10 20 10 20" Text="C1TextBox" />                    
+                    
                     <c1:C1CheckBox IsEnabled="False" IsChecked="True" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!" />
                     <c1:C1RadioButton GroupName="test" IsEnabled="False" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!" IsChecked="True" />
                     <c1:C1RadioButton GroupName="test" IsEnabled="False" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="Check Me!"  />
@@ -113,8 +117,6 @@
 
                     <c1:C1DatePicker VerticalAlignment="Center" IsEnabled="False" Width="200" Margin="10 20 10 20" />
 
-                    <c1:C1ListView x:Name="CheckList1" IsEnabled="False" Grid.Column="1" Margin="10 20 10 20" Height="340" Width="200" VerticalAlignment="Center" DisplayMemberPath="Residence" ShowCheckBoxes="True"/>
-
                     <c1:C1MultiSelect x:Name="MultiSelect1" IsEnabled="False" Margin="10 20 10 20" Width="240" VerticalAlignment="Center" DisplayMemberPath="Name" MaxHeaderItems="2"/>
 
                     <c1:C1TagEditor x:Name="TagEditor1" IsEnabled="False" Margin="10 20 10 20" Width="240"  VerticalAlignment="Center" />
@@ -131,7 +133,7 @@
                     <RowDefinition />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <c1:C1RichTextBoxRibbon RichTextBox="{Binding ElementName=richTB}">
+                <c1:C1RichTextBoxRibbon x:Name="richTextRibbon" RichTextBox="{Binding ElementName=richTB}">
                     <c1:RibbonTabItem Header="{x:Static res:Resources.Home}">
                         <c1:RibbonGroup Header="{x:Static res:Resources.Edit}">
                             <c1:C1PasteTool/>
@@ -144,8 +146,9 @@
                         </c1:RibbonGroup>
                         <c1:RibbonGroup Header="{x:Static res:Resources.Font}">
                             <c1:C1ToolStrip>
-                                <c1:C1FontFamilyTool/>
-                                <c1:C1FontSizeTool/>
+                                <c1:C1FontFamilyTool AllowMerging="True"/>
+                                <c1:C1FontSizeTool AllowMerging="True"/>
+                                <c1:C1ToolSeparator/>
                                 <c1:C1IncreaseFontSizeTool/>
                                 <c1:C1DecreaseFontSizeTool/>
                             </c1:C1ToolStrip>
@@ -281,7 +284,7 @@
                                     <c1:RibbonToolSizeDefinition Size="Small"/>
                                 </c1:RibbonGroupSizeDefinition>
                             </c1:RibbonGroup.GroupSizeDefinitions>
-                            <c1:C1LineNumberTool/>
+                            <c1:C1LineNumberTool Width="100"/>
                         </c1:RibbonGroup>
                     </c1:RibbonTabItem>
                 </c1:C1RichTextBoxRibbon>

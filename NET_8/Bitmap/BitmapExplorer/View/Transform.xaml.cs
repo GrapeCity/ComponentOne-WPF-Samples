@@ -11,6 +11,7 @@ using C1.WPF;
 using C1.WPF.Bitmap;
 using C1.Util.DX;
 using C1.WPF.Core;
+using C1.Util.DX.Direct2D.Effects;
 
 namespace BitmapExplorer
 {
@@ -23,6 +24,8 @@ namespace BitmapExplorer
         Rect _selection;
         Window _window;
         bool _initialized;
+        //calculator of the cumulative Scale Factor
+        float _scaleFactor = 1.0f;
 
         public TransformDemo()
         {
@@ -136,6 +139,7 @@ namespace BitmapExplorer
                 _bitmap.Dispose();
                 _bitmap = _savedCopy.Transform();
                 UpdateImage();
+                _scaleFactor = 1.0f;  
             }
         }
 
@@ -151,16 +155,35 @@ namespace BitmapExplorer
         void ApplyTransform(BaseTransform t)
         {
             // apply transformation to original image to don't lose quality at multiple transformations
-            var newBitmap = _savedCopy.Transform(t);
+            var newBitmap = _bitmap.Transform(t);
             _bitmap.Dispose();
             _bitmap = newBitmap;
             UpdateImage();
         }
-
         void Crop_Clicked(object sender, RoutedEventArgs e)
         {
             var cropRect = ((RectD)_selection).Round();
-            ApplyTransform(new Clipper(new ImageRect(cropRect)));
+            //this means nothing is selected and we have to do nothing
+            // image stays emplaced 
+            if (cropRect.X == 0 && cropRect.Y == 0 && 
+                cropRect.Width == _bitmap.PixelWidth && cropRect.Height== _bitmap.PixelHeight) return;
+            if ((int)(cropRect.Width / _scaleFactor) <= 0 && (int)(cropRect.Height / _scaleFactor) <= 0) 
+            {
+                MessageBox.Show("The selected area is too small. Please select a larger area and try again.",
+                    "Selection Too Small", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            };
+            // it should be greater than 1.0 as
+            // when we have scale in and out the cumulative scale factor will still be 1
+            if (_scaleFactor>1.0f)
+            {
+                cropRect = AdjustSelectionToScale(cropRect);
+            }
+           //perform changes in the image
+            ApplyTransform(new Clipper(new ImageRect(cropRect)));         
+            //reverse the value as after zoom the image returns to its original size
+            // user can perform immediately again cutting the image 
+            _scaleFactor = 1.0f;
         }
 
         void RotateCCW_Clicked(object sender, RoutedEventArgs e)
@@ -186,13 +209,20 @@ namespace BitmapExplorer
         void ScaleIn_Clicked(object sender, RoutedEventArgs e)
         {
             int px = (int)(_bitmap.PixelWidth * 1.6f + 0.5f);
-            int py = (int)(_bitmap.PixelHeight * 1.6f + 0.5f);
+            int py = (int)(_bitmap.PixelHeight * 1.6f + 0.5f);            
             if (px*py > 100000000) 
             {
                 // don't try scaling if size exceeds max allowable bitmap size
                 return;
             }
             ApplyTransform(new Scaler(px, py, InterpolationMode.HighQualityCubic));
+            //calculate scale and start multiplying only when the image after cropped
+            //once to a smaller size will be scaled in again and tried to be cropped
+            if(_savedCopy.PixelHeight<=_bitmap.PixelHeight || _savedCopy.PixelWidth <= _bitmap.PixelWidth)
+            {
+             _scaleFactor *= 1.6f;
+            }
+           
         }
 
         void ScaleOut_Clicked(object sender, RoutedEventArgs e)
@@ -203,6 +233,9 @@ namespace BitmapExplorer
             {
                 ApplyTransform(new Scaler(px, py, InterpolationMode.HighQualityCubic));
             }
+            //calculate scale        
+            _scaleFactor *= 0.625f;
+
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -256,9 +289,49 @@ namespace BitmapExplorer
         void UpdateMask()
         {
             topMask.Height = _selection.Top;
-            bottomMask.Height = _bitmap.PixelHeight - _selection.Bottom;
+            bottomMask.Height = Math.Max(0,_bitmap.PixelHeight - _selection.Bottom);
             leftMask.Width = _selection.Left;
-            rightMask.Width = _bitmap.PixelWidth - _selection.Right;
+            rightMask.Width = Math.Max(0,_bitmap.PixelWidth - _selection.Right);
+        }
+
+        // this method is used to Adjust the Selection coordinates according to zoomed scale
+        RectL AdjustSelectionToScale(RectL userInput)
+        {
+           // Calculate the user  selection and adjust according to scale
+            int zoomedX = (int)(userInput.X / _scaleFactor);
+            int zoomedY = (int)(userInput.Y / _scaleFactor);
+            int zoomedCropWidth = (int)(userInput.Width / _scaleFactor);
+            int zoomedCropHeight = (int)(userInput.Height / _scaleFactor);
+
+        
+           // adjusted rectangle with the new coordinates 
+            RectL clipRect = new RectD(
+                zoomedX,
+                zoomedY,
+                zoomedCropWidth,
+                zoomedCropHeight
+            ).Round();
+
+
+            // Ensure the calculated rectangle is within the bounds of the original bitmap
+            if (clipRect.Right > _bitmap.PixelWidth)
+            {
+                clipRect.Width = _bitmap.PixelWidth - clipRect.X;
+            }
+            if (clipRect.Bottom > _bitmap.PixelHeight)
+            {
+                clipRect.Height = _bitmap.PixelHeight - clipRect.Y;
+            }
+            if (clipRect.X == 0)
+            {
+                clipRect.X =userInput.X;
+            }
+            if (clipRect.Y ==0)
+            {
+                clipRect.Y = userInput.Y;
+            }          
+            
+            return clipRect;
         }
 
     }

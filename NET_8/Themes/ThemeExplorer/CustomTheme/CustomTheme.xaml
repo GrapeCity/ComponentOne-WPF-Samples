@@ -26,6 +26,7 @@
     <Color x:Key="BackgroundColor">White</Color>
     <Color x:Key="OnSurfaceColor">Black</Color>
     <SolidColorBrush x:Key="BaseColorBrush" Color="{StaticResource BackgroundColor}" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{StaticResource BackgroundColor}" />
     <SolidColorBrush x:Key="CategoryBackground" Color="#FFF0F0F0" />
     <SolidColorBrush x:Key="DockControlSplitterBackgroundBrush" Color="#FFF0F0F0" />
     <SolidColorBrush x:Key="DockTabControlBackground" Color="#FFFFFFFF" />
@@ -235,7 +236,7 @@
                             <ControlTemplate TargetType="schedule:VisualIntervalPresenter">
                                 <Grid>
                                     <Border Background="{Binding Path=Scheduler.AlternatingBackground}" IsHitTestVisible="False" BorderThickness="0,1,0,0" BorderBrush="{TemplateBinding BorderBrush}">
-                                        <Rectangle Fill="{StaticResource C1Scheduler_SelectedBackground_Brush}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
+                                        <Rectangle Fill="{Binding Path=Scheduler.SelectedBackground}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
                                     </Border>
                                     <ContentPresenter Content="{TemplateBinding Content}" Margin="0,1,0,0" ContentTemplate="{TemplateBinding ContentTemplate}" />
                                 </Grid>
@@ -251,7 +252,7 @@
                             <ControlTemplate TargetType="schedule:VisualIntervalPresenter">
                                 <Grid>
                                     <Border Background="{Binding Path=Scheduler.AlternatingBackground}" IsHitTestVisible="False" >
-                                        <Rectangle Fill="{StaticResource C1Scheduler_SelectedBackground_Brush}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
+                                        <Rectangle Fill="{Binding Path=Scheduler.SelectedBackground}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
                                     </Border>
                                     <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
                                     <Line Stroke="{TemplateBinding BorderBrush}" HorizontalAlignment="Stretch" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
@@ -269,7 +270,7 @@
                             <ControlTemplate TargetType="schedule:VisualIntervalPresenter">
                                 <Grid>
                                     <Border Background="{StaticResource C1Scheduler_FreeHour_Brush}" IsHitTestVisible="False" >
-                                        <Rectangle Fill="{StaticResource C1Scheduler_SelectedBackground_Brush}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
+                                        <Rectangle Fill="{Binding Path=Scheduler.SelectedBackground}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
                                     </Border>
                                     <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
                                     <Line Stroke="{TemplateBinding BorderBrush}" HorizontalAlignment="Stretch" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
@@ -287,7 +288,7 @@
                             <ControlTemplate TargetType="schedule:VisualIntervalPresenter">
                                 <Grid>
                                     <Border Background="{StaticResource C1Scheduler_FreeHour_Brush}" BorderThickness="0,1,0,0" IsHitTestVisible="False" BorderBrush="{TemplateBinding BorderBrush}">
-                                        <Rectangle Fill="{StaticResource C1Scheduler_SelectedBackground_Brush}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
+                                        <Rectangle Fill="{Binding Path=Scheduler.SelectedBackground}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
                                     </Border>
                                     <ContentPresenter Content="{TemplateBinding Content}" Margin="0,1,0,0" ContentTemplate="{TemplateBinding ContentTemplate}" />
                                 </Grid>
@@ -346,7 +347,7 @@
                             <ControlTemplate TargetType="schedule:VisualIntervalPresenter">
                                 <Grid>
                                     <Border x:Name="IntervalBorder" IsHitTestVisible="False" Background="{Binding Path=Scheduler.AlternatingBackground}" BorderThickness="1,0,0,0" BorderBrush="{TemplateBinding BorderBrush}">
-                                        <Rectangle Fill="{StaticResource C1Scheduler_SelectedBackground_Brush}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
+                                        <Rectangle Fill="{Binding Path=Scheduler.SelectedBackground}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
                                     </Border>
                                     <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="1,0,0,0" />
                                 </Grid>
@@ -365,7 +366,7 @@
                             <ControlTemplate TargetType="schedule:VisualIntervalPresenter">
                                 <Grid>
                                     <Border x:Name="IntervalBorder" IsHitTestVisible="False" Background="{StaticResource C1Scheduler_FreeHour_Brush}" BorderThickness="1,0,0,0" BorderBrush="{TemplateBinding BorderBrush}">
-                                        <Rectangle Fill="{StaticResource C1Scheduler_SelectedBackground_Brush}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
+                                        <Rectangle Fill="{Binding Path=Scheduler.SelectedBackground}" Visibility="{Binding IsSelected, Converter={x:Static calendar:BooleanToVisibilityConverter.Default}}" />
                                     </Border>
                                     <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="1,0,0,0" />
                                 </Grid>
@@ -1312,9 +1313,7 @@
     </Style>
 
     <Style TargetType="docking:C1DockTabControl" BasedOn="{StaticResource DockTabControlStyle}">
-        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="IndicatorSize" Value="2"/>
-        <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="IndicatorPlacement" Value="Top"/>
     </Style>
 

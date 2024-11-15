@@ -107,9 +107,11 @@ namespace FlexGridExplorer
         }
 
         private void sortIconPosition_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.AddedItems.Count > 0)
-                grid.SortIconPosition = (GridSortIconPosition)Enum.Parse(typeof(GridSortIconPosition), (string)e.AddedItems[0]);
+        {           
+            if (e.AddedItems.Count > 0 && e.AddedItems[0] is string item && Enum.IsDefined(typeof(GridSortIconPosition), item))
+            {
+                grid.SortIconPosition = (GridSortIconPosition)Enum.Parse(typeof(GridSortIconPosition), item);
+            }            
         }
     }
 }

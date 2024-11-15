@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="PropertyGridExplorer.DynamicBinding" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1:C1Button Content="Add New Property" Click="OnAddNewProperty" />
+        <c1:C1PropertyGrid x:Name="propertyGrid" AutoGenerateProperties="False" BorderThickness="1" Margin="2" Grid.Row="1"/>
+    </Grid>
+</UserControl>

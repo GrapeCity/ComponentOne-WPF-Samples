@@ -516,7 +516,7 @@
     <value>高度なシナリオでフィルターコントロールを使用する方法を示します。</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>FlexGrid Explorer</value>
+    <value>FlexGridエクスプローラー</value>
   </data>
   <data name="ShowSort" xml:space="preserve">
     <value>並べ替えアイコンの表示</value>
@@ -642,5 +642,40 @@
   <data name="TransposedGridTitle" xml:space="preserve">
     <value>転置グリッド</value>
     <comment>Transposed Grid</comment>
+  </data>
+  <data name="HierarchicalRowsDescription" xml:space="preserve">
+    <value>ChildItemsPath プロパティを使用して FlexGrid にバインドされたツリー状のデータ ソースを表示します。</value>
+    <comment>Shows a tree-like data-source bound to FlexGrid using ChildItemsPath property.</comment>
+  </data>
+  <data name="HierarchicalRowsTitle" xml:space="preserve">
+    <value>階層的な行</value>
+    <comment>Hierarchical Rows</comment>
+  </data>
+  <data name="TreeColumnIndex" xml:space="preserve">
+    <value>ツリー列インデックス</value>
+    <comment>TreeColumnIndex</comment>
+  </data>
+  <data name="TreeIndent" xml:space="preserve">
+    <value>ツリーインデント</value>
+    <comment>TreeIndent</comment>
+  </data>
+  <data name="TreeExpandMode" xml:space="preserve">
+    <value>ツリー展開モード</value>
+    <comment>TreeExpandMode</comment>
+  </data>
+  <data name="RowsCount" xml:space="preserve">
+    <value>{0} 行</value>
+  </data>
+  <data name="RowDetailsAddress" xml:space="preserve">
+    <value>住所</value>
+  </data>
+  <data name="RowDetailsCity" xml:space="preserve">
+    <value>都市</value>
+  </data>
+  <data name="RowDetailsCountry" xml:space="preserve">
+    <value>国</value>
+  </data>
+  <data name="RowDetailsPostalCode" xml:space="preserve">
+    <value>郵便コード</value>
   </data>
 </root>

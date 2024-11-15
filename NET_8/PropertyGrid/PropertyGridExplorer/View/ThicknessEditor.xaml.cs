@@ -30,7 +30,7 @@ namespace PropertyGridExplorer
             thicknessEditor.Tag = handler;
         }
 
-        public override void Detach(ThicknessEditorControl thicknessEditor)
+        public override void Detach(ThicknessEditorControl thicknessEditor, PropertyGroup group)
         {
             var handler = thicknessEditor.Tag as EventHandler;
             thicknessEditor.ValueChanged -= handler;

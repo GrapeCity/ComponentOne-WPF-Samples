@@ -102,7 +102,7 @@ namespace FlexChartExplorer
                AppResources.TreeMapNodeColorDesc,
                new TreeMapNodeColor()));
             _allItems.Add(new SampleItem(AppResources.HistogramTitle,
-                AppResources.RangedHistogramDesc,
+                AppResources.HistogramDesc,
                new Histogram()));
             _allItems.Add(new SampleItem(AppResources.RangedHistogramTitle,
                AppResources.RangedHistogramDesc,
@@ -113,6 +113,15 @@ namespace FlexChartExplorer
             _allItems.Add(new SampleItem(AppResources.BreakEvenTitle,
                 AppResources.BreakEvenDesc,
                 new BreakEven()));
+            _allItems.Add(new SampleItem(AppResources.HeatmapTitle,
+                AppResources.HeatmapDesc,
+                new Heatmap()));
+            _allItems.Add(new SampleItem(AppResources.ColumnHeatmapTitle,
+                AppResources.ColumnHeatmapDesc,
+                new ColumnHeatmap()));
+            _allItems.Add(new SampleItem(AppResources.AxisMarkersTitle,
+                AppResources.AxisMarkersDesc,
+                new AxisMarkers()));
         }
 
         public ObservableCollection<SampleItem> AllItems

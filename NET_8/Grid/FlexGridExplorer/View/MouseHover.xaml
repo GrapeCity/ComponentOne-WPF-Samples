@@ -21,7 +21,7 @@
                            ItemsSource="{Binding DataContext.MouseOverModes}"/>
 
             <TextBlock VerticalAlignment="Center" Text="SelectionMode:" Margin="10 0" />
-            <c1:C1ComboBox x:Name="cbSelectionMode" Width="100"
+            <c1:C1ComboBox x:Name="cbSelectionMode" MinWidth="100"
                            SelectedItem="{Binding SelectionMode,ElementName=grid,Mode=TwoWay, Converter={StaticResource enumConverter}}"
                            ItemsSource="{Binding DataContext.SelectionModes}"/>
 

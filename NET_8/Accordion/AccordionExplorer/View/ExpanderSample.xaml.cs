@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using C1.WPF.Accordion;
 using ExpandDirection = C1.WPF.Accordion.ExpandDirection;
 
@@ -28,18 +27,6 @@ namespace AccordionExplorer
                 ExpanderIconAlignment.Left,
                 ExpanderIconAlignment.Right,
             };
-        }
-
-        private void OnExpandDirectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if(e.AddedItems.Count > 0)
-                ExpanderControl.ExpandDirection = e.AddedItems.Cast<ExpandDirection>().First();
-        }
-
-        private void OnExpandIconAlignmentChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.AddedItems.Count > 0)
-                ExpanderControl.ExpandIconAlignment = e.AddedItems.Cast<ExpanderIconAlignment>().First();
         }
     }
 }

@@ -14,21 +14,31 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal"  Margin="4">
             <TextBlock Text="{x:Static res:AppResources.TreeIndent}" VerticalAlignment="Center"/>
-            <c1:C1NumericBox Value="{Binding ElementName=grid,Path=TreeIndent}" Margin="4 0" MinWidth="80"/>
+            <c1:C1NumericBox Value="{Binding ElementName=grid,Path=TreeIndent}" Maximum="1000" Margin="4 0" MinWidth="80"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal"  Margin="4">
             <TextBlock Text="{x:Static res:AppResources.TreeColumnIndex}" VerticalAlignment="Center"/>
             <c1:C1NumericBox Value="{Binding ElementName=grid,Path=TreeColumnIndex}" Margin="4 0" MinWidth="80"/>
         </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal"  Margin="4">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="4">
             <TextBlock Text="{x:Static res:AppResources.TreeExpandMode}" VerticalAlignment="Center"/>
             <c1:C1ComboBox SelectedItem="{Binding ElementName=grid, Path=TreeExpandMode}" ItemsSource="{Binding DataContext.TreeExpandModes}" Margin="4 0" MinWidth="80"/>
             <TextBlock x:Name="rowsCountLabel" Text="10 rows" VerticalAlignment="Center"/>
         </StackPanel>
-        <c1:FlexGrid x:Name="grid" AutoGeneratingColumn="OnAutoGeneratingColumn" ChildItemsPath="SubTasks" TreeColumnIndex="1" Grid.Row="3"/>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="4">
+            <TextBlock Text="{x:Static res:AppResources.TreeLinesMode}" VerticalAlignment="Center"/>
+            <c1:C1ComboBox SelectedItem="{Binding ElementName=grid,Path=TreeLinesMode}" ItemsSource="{Binding DataContext.TreeLinesModes}" Margin="4 0" MinWidth="80"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="4">
+            <TextBlock Text="{x:Static res:AppResources.TreeIndentMode}" VerticalAlignment="Center"/>
+            <c1:C1ComboBox SelectedItem="{Binding ElementName=grid,Path=TreeIndentMode}" ItemsSource="{Binding DataContext.TreeIndentModes}" Margin="4 0" MinWidth="80"/>
+        </StackPanel>
+        <c1:FlexGrid x:Name="grid" AutoGeneratingColumn="OnAutoGeneratingColumn" ChildItemsPath="SubTasks" TreeColumnIndex="1" Grid.Row="5"/>
     </Grid>
 </UserControl>

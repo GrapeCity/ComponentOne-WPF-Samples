@@ -40,7 +40,8 @@
 
                 <StackPanel Margin="30 0 0 0" Orientation="Horizontal">
                     <TextBlock Text="Angle: " VerticalAlignment="Center" />
-                    <c1:C1NumericBox x:Name="angle" Increment="30" />
+                    <c1:C1NumericBox x:Name="angle" Increment="30" 
+                                     Minimum="{Binding MinVal}" Maximum="{Binding MaxVal}" RangeValidationMode="AlwaysTruncate"/>
                 </StackPanel>
 
             </WrapPanel>

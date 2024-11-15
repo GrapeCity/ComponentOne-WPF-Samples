@@ -120,7 +120,6 @@
                                                 </Grid>
                                             </Grid>
                                         </Border>
-                                        <c1:C1BrushBuilder x:Name="SelectedBackground" Input="{TemplateBinding SelectedBackground}" DesignColor="#FF4617B4" DesignBrush="#FF4617B4" />
                                         <Border x:Name="SelectedBorder" IsHitTestVisible="False" Opacity="0" BorderBrush="{Binding Output,ElementName=SelectedBackground}" BorderThickness="{TemplateBinding BorderThickness}">
                                             <Grid x:Name="SelectedCheckMark" Height="15" Width="15" HorizontalAlignment="Right" IsHitTestVisible="False" VerticalAlignment="Top">
                                                 <Path x:Name="SelectedEarmark" Data="M0,0 L40,0 L40,40 z" Fill="{Binding Output,ElementName=SelectedBackground}" Stretch="Fill" />

@@ -7,12 +7,14 @@
     <Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="4">
             <TextBlock Text="ExpandDirection" VerticalAlignment="Center" Margin="0 0 4 0"/>
-            <c1:C1ComboBox x:Name="ExpandDirectionComboBox"  SelectionChanged="OnExpandDirectionChanged" SelectedIndex="0"/>
+            <c1:C1ComboBox x:Name="ExpandDirectionComboBox" SelectedIndex="0"/>
             <TextBlock Text="ExpandIconAlignment" VerticalAlignment="Center" Margin="8 0 4 0"/>
-            <c1:C1ComboBox x:Name="ExpandIconAlignmentComboBox"  SelectionChanged="OnExpandIconAlignmentChanged" SelectedIndex="1"/>
+            <c1:C1ComboBox x:Name="ExpandIconAlignmentComboBox" SelectedIndex="1"/>
             <c1:C1CheckBox IsChecked="{Binding IsEnabled,ElementName=ExpanderControl}" Content="IsEnabled" VerticalAlignment="Center" Margin="4 0"/>
         </StackPanel>
-        <c1:C1Expander x:Name="ExpanderControl" Header="Expand me!" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <c1:C1Expander x:Name="ExpanderControl" Header="Expand me!" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                       ExpandDirection="{Binding SelectedItem, ElementName=ExpandDirectionComboBox}"
+                       ExpandIconAlignment="{Binding SelectedItem, ElementName=ExpandIconAlignmentComboBox}">
             <c1:C1CheckBox Margin="5" VerticalAlignment="Center" x:Name="Condition" Content="Inside C1Expander"/>
         </c1:C1Expander>
     </Grid>

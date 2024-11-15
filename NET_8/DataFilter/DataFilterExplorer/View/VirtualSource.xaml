@@ -29,7 +29,7 @@
 
             <c1:C1DataFilter x:Name="c1DataFilter"/>
 
-            <c1:FlexGrid Grid.Column="1" AutoGenerateColumns="True" x:Name="flexGrid" />
+            <c1:FlexGrid Grid.Column="1" AutoGenerateColumns="True" ColumnFilterLoading="FlexGridOnColumnFilterLoading" x:Name="flexGrid" />
         </Grid>
     </Grid>
 </UserControl>

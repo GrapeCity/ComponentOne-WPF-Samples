@@ -64,6 +64,11 @@
                     <TextBlock Text="Max Selection Count" />
                     <c1:C1NumericBox Placeholder="Set Selection Count" x:Name="txtMaxSelectionCount" Minimum="-1" Value="{Binding MaxSelectionCount, ElementName=calendar, Mode=TwoWay}"/>
                 </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Mouse-Over Mode" />
+                    <c1:C1ComboBox Placeholder="Select Mouse-Over Mode" x:Name="cbMouseOverMode" />
+                </StackPanel>
             </WrapPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
                 <StackPanel.Resources>

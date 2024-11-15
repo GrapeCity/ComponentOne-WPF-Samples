@@ -274,4 +274,7 @@
     <value>再試行</value>
     <comment>Retry</comment>
   </data>
+  <data name="RemoveGrouping" xml:space="preserve">
+    <value>Remove Grouping</value>
+  </data>
 </root>

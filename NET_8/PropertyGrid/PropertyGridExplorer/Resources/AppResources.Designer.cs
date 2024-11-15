@@ -106,6 +106,24 @@ namespace PropertyGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows how to bind a dynamic ExpandoObject to C1PropertyGrid.
+        /// </summary>
+        public static string DynamicBindingDesc {
+            get {
+                return ResourceManager.GetString("DynamicBindingDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dynamic Binding.
+        /// </summary>
+        public static string DynamicBindingTitle {
+            get {
+                return ResourceManager.GetString("DynamicBindingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There are no properties to show..
         /// </summary>
         public static string EmptyGridMessage {

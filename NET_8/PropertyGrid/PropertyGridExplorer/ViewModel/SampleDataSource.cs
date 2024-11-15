@@ -20,7 +20,10 @@ namespace PropertyGridExplorer
                                 new CustomEditors()),
                 new SampleItem(Resources.AppResources.DataObjectPropertiesTitle,
                                 Resources.AppResources.DataObjectPropertiesTitle,
-                                new DataObjectProperties())
+                                new DataObjectProperties()),
+                new SampleItem(Resources.AppResources.DynamicBindingTitle,
+                                Resources.AppResources.DynamicBindingTitle,
+                                new DynamicBinding())
             };
         }
 

@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelSamples2010.4", "ExcelSamples2010.4.csproj", "{3A7ABC7A-AABC-4573-91F1-F66775AA6901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelSamples2010.4", "ExcelSamples2010.4.csproj", "{3A7ABC7A-AABC-4573-91F1-F66775AA6901}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,5 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{8e5db594-dfc1-436d-b203-b3049044d905}*SharedItemsImports = 5
-		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{fc35047d-0e6d-48e7-9c52-a6cf98b61bf6}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

@@ -7,4 +7,4 @@ Shows basic samples of the following controls
 
 * C1DatePicker
 * C1DateTimePicker
-* C1TimePicker
+* C1TimeEditor

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataManipulation"
         mc:Ignorable="d"
-        Title="Annotation Explorer" Height="600" Width="800" WindowState="Maximized">
+        Title="Data Manipulation" Height="600" Width="800" WindowState="Maximized">
     <Grid>
         <local:AnnotationView />
     </Grid>

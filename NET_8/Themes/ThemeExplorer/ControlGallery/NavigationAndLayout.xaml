@@ -189,24 +189,31 @@
             </Grid>
         </c1:C1TabItem>
         <c1:C1TabItem Header="TreeView" BorderThickness="0">
-            <c1:C1TreeView Margin="20" ShowCheckboxes="True">
-                <c1:C1TreeViewItem Header="Item 1" IsExpanded="True"/>
-                <c1:C1TreeViewItem Header="WPF Edition" IsExpanded="True">
-                    <c1:C1TreeViewItem Header="Data Managenment" />
-                    <c1:C1TreeViewItem Header="Data Visualization" />
-                    <c1:C1TreeViewItem Header="Input &amp; Editing" />
-                    <c1:C1TreeViewItem Header="Reporting &amp; Documents" />
-                    <c1:C1TreeViewItem Header="Utilities" />
-                    <c1:C1TreeViewItem Header="Scheduling" />
-                    <c1:C1TreeViewItem Header="Navigation &amp; Layout" />
-                </c1:C1TreeViewItem>
-                <c1:C1TreeViewItem Header="XapOptimizer" IsExpanded="True">
-                    <c1:C1TreeViewItem Header="Pruning" />
-                    <c1:C1TreeViewItem Header="Obfuscation" />
-                    <c1:C1TreeViewItem Header="Strong Signing" />
-                    <c1:C1TreeViewItem Header="Deploy architecture" />
-                </c1:C1TreeViewItem>
-            </c1:C1TreeView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <c1:C1CheckBox x:Name="ShowHideCheckBoxes" Grid.Row="0" Margin="10,5,0,0" VerticalAlignment="Center" Content="Show/Hide CheckBoxes"/>
+                <c1:C1TreeView ShowCheckboxes="{Binding IsChecked, ElementName=ShowHideCheckBoxes}" Grid.Row="1" Margin="10">
+                    <c1:C1TreeViewItem Header="Item 1" IsExpanded="True"/>
+                    <c1:C1TreeViewItem Header="WPF Edition" IsExpanded="True">
+                        <c1:C1TreeViewItem Header="Data Managenment" />
+                        <c1:C1TreeViewItem Header="Data Visualization" />
+                        <c1:C1TreeViewItem Header="Input &amp; Editing" />
+                        <c1:C1TreeViewItem Header="Reporting &amp; Documents" />
+                        <c1:C1TreeViewItem Header="Utilities" />
+                        <c1:C1TreeViewItem Header="Scheduling" />
+                        <c1:C1TreeViewItem Header="Navigation &amp; Layout" />
+                    </c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem Header="XapOptimizer" IsExpanded="True">
+                        <c1:C1TreeViewItem Header="Pruning" />
+                        <c1:C1TreeViewItem Header="Obfuscation" />
+                        <c1:C1TreeViewItem Header="Strong Signing" />
+                        <c1:C1TreeViewItem Header="Deploy architecture" />
+                    </c1:C1TreeViewItem>
+                </c1:C1TreeView>
+            </Grid>
         </c1:C1TabItem>
         <c1:C1TabItem Header="Activity Indicators" BorderThickness="0">
             <StackPanel Orientation="Vertical" Margin="20,10,10,10" MaxWidth="500" HorizontalAlignment="Left">

@@ -29,6 +29,5 @@ Global
 		..\..\..\..\Shared\DocSol\GcPdf.projitems*{52fa56db-2d6d-4677-8fbf-f911271670c1}*SharedItemsImports = 5
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{8e5db594-dfc1-436d-b203-b3049044d905}*SharedItemsImports = 5
 		..\..\..\..\Shared\XBarcode\XBarcode.projitems*{ab6cc2a4-6410-468a-8295-2d26022cdff2}*SharedItemsImports = 5
-		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{fc35047d-0e6d-48e7-9c52-a6cf98b61bf6}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

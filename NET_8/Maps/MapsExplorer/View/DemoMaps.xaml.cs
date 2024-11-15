@@ -12,12 +12,18 @@ namespace MapsExplorer
     /// </summary>
     public partial class DemoMaps : UserControl
     {
+        public double MinVal { get; set; }
+        public double MaxVal { get; set; }
+
         public DemoMaps()
         {
             InitializeComponent();
             Tag = Properties.Resources.Demo;
             cboSource.SetBinding(ComboBox.SelectedItemProperty, new Binding() { ElementName = "maps", Path = new PropertyPath("Source"), Mode = BindingMode.TwoWay, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged });
             ckBoxShowTools.SetBinding(CheckBox.IsCheckedProperty, new Binding() { ElementName = "maps", Path = new PropertyPath("ShowTools"), Mode = BindingMode.TwoWay, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged });
+            DataContext = this;
+            MinVal = -360;
+            MaxVal = 360;
         }
 
         #region Object model

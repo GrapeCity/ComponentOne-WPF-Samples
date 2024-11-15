@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,129 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActiveLabel" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="ChangeLabel" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="ColorLabel" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="ColumnsLabel" xml:space="preserve">
+    <value>Columnas</value>
+  </data>
+  <data name="ConditionalFormattingLabel" xml:space="preserve">
+    <value>Formateo condicionado</value>
+  </data>
+  <data name="CountryLabel" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="CreatedDateLabel" xml:space="preserve">
+    <value>Fecha de creación</value>
+  </data>
+  <data name="CSVDescription" xml:space="preserve">
+    <value>Exportar a Csv</value>
+  </data>
+  <data name="CSVLabel" xml:space="preserve">
+    <value>CSV</value>
+  </data>
+  <data name="DataLabel" xml:space="preserve">
+    <value>Datos</value>
+  </data>
+  <data name="DataSizeLabel" xml:space="preserve">
+    <value>Tamaño de los datos</value>
+  </data>
+  <data name="DescriptionField" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="DiscountFrom10To20PercLabel" xml:space="preserve">
+    <value>Descuento desde 10 a 20%</value>
+  </data>
+  <data name="DiscountFrom20PercLabel" xml:space="preserve">
+    <value>Descuento &gt; 20%</value>
+  </data>
+  <data name="DiscountLabel" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="DiscountLt10PercLabel" xml:space="preserve">
+    <value>Descuento &lt; 10%</value>
+  </data>
+  <data name="ExcelDescription" xml:space="preserve">
+    <value>Exportar a Excel</value>
+  </data>
+  <data name="ExcelLabel" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="ExportLabel" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="FilterLabel" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="FilterPlaceholder" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="GroupByCountryLabel" xml:space="preserve">
+    <value>Agrupar por país</value>
+  </data>
+  <data name="GroupByProductLabel" xml:space="preserve">
+    <value>Agrupar por producto</value>
+  </data>
+  <data name="GroupLabel" xml:space="preserve">
+    <value>Agrupar</value>
+  </data>
+  <data name="HistoryLabel" xml:space="preserve">
+    <value>Historia</value>
+  </data>
+  <data name="HtmlDescription" xml:space="preserve">
+    <value>Exportar a Html</value>
+  </data>
+  <data name="HtmlLabel" xml:space="preserve">
+    <value>Html</value>
+  </data>
+  <data name="IDLabel" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>Nombre de Producto</value>
+  </data>
+  <data name="QuantityField" xml:space="preserve">
+    <value>Cantidad:</value>
+  </data>
+  <data name="RatingLabel" xml:space="preserve">
+    <value>Valuación</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="SizeField" xml:space="preserve">
+    <value>Tamaño:</value>
+  </data>
+  <data name="Tag" xml:space="preserve">
+    <value>Este ejemplo mustra las funcionalidades más importantes de la grilla.</value>
+  </data>
+  <data name="TextDescription" xml:space="preserve">
+    <value>Exportar a texto</value>
+  </data>
+  <data name="TextLabel" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Exhibición de la grilla</value>
+  </data>
+  <data name="WeightField" xml:space="preserve">
+    <value>Peso:</value>
+  </data>
+  <data name="XRowsLabel" xml:space="preserve">
+    <value>{0:N0} filas</value>
+  </data>
 </root>

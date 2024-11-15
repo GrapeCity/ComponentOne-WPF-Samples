@@ -31,13 +31,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.PdfViewer">
-      <Version>4.6.20241.839</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Zip">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>

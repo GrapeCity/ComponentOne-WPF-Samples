@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports System.Reflection
-Imports C1.C1Zip
+Imports C1.Zip
 Imports System.Xml
 Imports C1.WPF
 

@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 using C1.WPF.Olap;
 using System.Data;
 using System.Reflection;
-using C1.C1Zip;
+using C1.Zip;
 using Microsoft.Win32;
 using System.IO;
 using C1.WPF;

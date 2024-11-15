@@ -14,9 +14,10 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
             <c1:C1Button Content="Load Image" Click="LoadImage" Margin="0 0 10 0" Width="120" Height="30" HorizontalAlignment="Left" />
-            <c1:C1Button Content="Export Selection" Click="ExportImage" Width="120" Height="30" />
+            <c1:C1Button Content="Export Selection" Click="ExportImage" Margin="0 0 10 0" Width="120" Height="30" Grid.Column="1"/>
+            <c1:C1Button Content="Crop To Select" Click="CropImage" Width="120" Height="30"/>
         </StackPanel>
-        <Grid Name="imageGrid" Grid.Row="1" Margin="0 0 0 10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Name="imageGrid" Grid.Row="2" Margin="0 0 0 10" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />

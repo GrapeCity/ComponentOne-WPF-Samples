@@ -39,8 +39,6 @@ namespace FlexChartExplorer
             Tag = AppResources.TrendLineTag;
         }
 
-        
-
         public ObservableCollection<DataItem> Data
         {
             get
@@ -154,7 +152,7 @@ namespace FlexChartExplorer
 
         void flexChart_Rendered(object sender, RenderEventArgs e)
         {
-            rich.Html = GetEquationString(trendLine);
+            UpdateRtb();
         }
 
         #endregion
@@ -189,5 +187,29 @@ namespace FlexChartExplorer
         }
 
         #endregion
+
+        private void C1NumericBox_ValueChanged(object sender, PropertyChangedEventArgs<double> e)
+        {
+            if(trendLine!=null)
+                trendLine.Order = Math.Clamp((int)e.NewValue, 1, 9);
+        }
+
+        private void UpdateRtbVisiblity(object sender, RoutedEventArgs e)
+        {
+            rich.Visibility = cbShow.IsChecked == true || cbShowR2.IsChecked == true ?  Visibility.Visible : Visibility.Hidden;
+            UpdateRtb();
+        }
+
+        private void UpdateRtb()
+        {
+            var html = "";
+            if (cbShow.IsChecked == true)
+                html += GetEquationString(trendLine);
+
+            if (cbShowR2.IsChecked == true && (int)trendLine.FitType <= 5)
+                html += $"<br>R2={trendLine.GetRegressionStatistics().Rsq:n4}";
+
+            rich.Html = html;
+        }
     }
 }

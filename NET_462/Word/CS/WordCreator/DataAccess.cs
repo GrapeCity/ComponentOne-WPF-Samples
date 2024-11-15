@@ -35,7 +35,7 @@ namespace Word.Creator
             var ds = new DataSet();
             using (var s = GetStream("nwind.zip"))
             {
-                var zip = new C1.C1Zip.C1ZipFile(s);
+                var zip = new C1.Zip.C1ZipFile(s);
                 using (var zr = zip.Entries[0].OpenReader())
                 {
                     ds.ReadXml(zr);

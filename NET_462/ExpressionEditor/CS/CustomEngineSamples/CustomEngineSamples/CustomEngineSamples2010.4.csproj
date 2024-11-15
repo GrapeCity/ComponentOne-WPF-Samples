@@ -106,10 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.ExpressionEditor">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="ManagedEsent">
       <Version>1.9.4</Version>

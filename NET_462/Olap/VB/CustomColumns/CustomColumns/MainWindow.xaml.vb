@@ -1,7 +1,7 @@
 ﻿Imports C1.WPF.Olap
 Imports System.Data
 Imports System.Reflection
-Imports C1.C1Zip
+Imports C1.Zip
 
 Class MainWindow
     Dim _c1OlapPage As New C1OlapPage()

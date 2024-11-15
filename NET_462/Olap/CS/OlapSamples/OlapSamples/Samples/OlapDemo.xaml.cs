@@ -1,5 +1,4 @@
-﻿using C1.C1Zip;
-using C1.WPF;
+﻿using C1.WPF;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -37,7 +36,7 @@ namespace OlapSamples
             var asm = Assembly.GetExecutingAssembly();
             using (var s = asm.GetManifestResourceStream("OlapSamples.Resources.nwind.zip"))
             {
-                var zip = new C1ZipFile(s);
+                var zip = new C1.Zip.C1ZipFile(s);
                 using (var zr = zip.Entries[0].OpenReader())
                 {
                     // load data

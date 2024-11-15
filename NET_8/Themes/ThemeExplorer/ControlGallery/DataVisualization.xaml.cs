@@ -1,6 +1,7 @@
 ﻿using C1.BarCode;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -332,6 +333,59 @@ namespace ThemeExplorer
 
                 return _data;
             }
+        }
+
+        /// <summary>
+        /// Gets or sets Value property for gauges.
+        /// </summary>
+        public double GaugeValue
+        {
+            get => (double)GetValue(GaugeValueProperty);
+            set => SetValue(GaugeValueProperty, value);
+        }
+        /// <summary>
+        /// Identifies GaugeValue dependency property.
+        /// </summary>
+        public static readonly DependencyProperty GaugeValueProperty =
+            DependencyProperty.Register(
+                "GaugeValue",
+                typeof(double),
+                typeof(DataVisualization),
+                new FrameworkPropertyMetadata(25.0));
+
+        /// <summary>
+        /// Gets or sets a value indicating whether user interaction is allowed for gauges.
+        /// </summary>
+        public bool IsGaugeReadOnly
+        {
+            get => (bool)GetValue(IsGaugeReadOnlyProperty);
+            set => SetValue(IsGaugeReadOnlyProperty, value);
+        }
+        /// <summary>
+        /// Identifies IsGaugeReadOnly dependency property.
+        /// </summary>
+        public static readonly DependencyProperty IsGaugeReadOnlyProperty =
+            DependencyProperty.Register(
+                "IsGaugeReadOnly",
+                typeof(bool),
+                typeof(DataVisualization),
+                new FrameworkPropertyMetadata(false));
+    }
+
+    /// <summary>
+    /// Converter for IsGaugeReadOnly property.
+    /// </summary>
+    public class IsReadOnlyConverter : IValueConverter
+    {
+        /// <inheritdoc cref="IValueConverter.Convert(object, Type, object, CultureInfo)"/>
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return !(bool)value;
+        }
+        /// <inheritdoc cref="IValueConverter.ConvertBack(object, Type, object, CultureInfo)"/>
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return !(bool)value;
         }
     }
 

@@ -128,11 +128,11 @@ namespace FlexViewerExplorer
             }
             //rptCombo.ItemsSource = items;
 
-            rptCombo.SelectionCommitted += ReportCombo_SelectionCommitted;
+            rptCombo.SelectionChanged += ReportCombo_SelectionChanged;
             rptCombo.SelectedIndex = 0;
         }
 
-        void ReportCombo_SelectionCommitted(object sender, C1.WPF.Core.PropertyChangedEventArgs<object> e)
+        private void ReportCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!_loaded || _ssrsDocSource.IsBusy)
             {

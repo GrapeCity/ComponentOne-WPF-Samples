@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
-using C1.C1Zip;
+using C1.Zip;
 using System.Reflection;
 
 namespace ConditionalFormatting

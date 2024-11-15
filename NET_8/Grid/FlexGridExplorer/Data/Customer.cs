@@ -139,7 +139,7 @@ namespace FlexGridExplorer
         }
 
         [Display(Name = "e-mail")]
-        [EmailAddress]
+        [Required, EmailAddress]
         public string Email
         {
             get { return _email; }

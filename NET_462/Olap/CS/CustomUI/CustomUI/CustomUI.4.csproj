@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -137,34 +137,34 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.C1Chart">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Docking">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Olap">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2013">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Toolbar">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Zip">
-      <Version>4.6.20241.839</Version>
+    <PackageReference Include="C1.Zip">
+      <Version>8.0.20241.6</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AnalysisServices.AdomdClient.retail.amd64">
       <Version>19.74.2</Version>

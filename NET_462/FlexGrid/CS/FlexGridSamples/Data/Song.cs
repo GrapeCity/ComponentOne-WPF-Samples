@@ -25,7 +25,7 @@ namespace MainTestApplication
             {
                 if (resName.EndsWith("data.zip"))
                 {
-                    var zip = new C1.C1Zip.C1ZipFile(asm.GetManifestResourceStream(resName));
+                    var zip = new C1.Zip.C1ZipFile(asm.GetManifestResourceStream(resName));
                     using (var stream = zip.Entries["songs.xml"].OpenReader())
                     {
                         var xmls = new XmlSerializer(typeof(List<Song>));

@@ -17,7 +17,7 @@ using System.Reflection;
 
 using C1.WPF.Document.Export;
 using C1.WPF.FlexReport;
-using C1.C1Zip;
+using C1.Zip;
 
 namespace FlexReportSamples
 {

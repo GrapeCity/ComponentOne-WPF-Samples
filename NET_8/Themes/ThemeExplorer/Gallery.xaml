@@ -4,7 +4,8 @@
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ThemeExplorer"
              xmlns:c1gantt="clr-namespace:C1.GanttView;assembly=C1.WPF.GanttView"
-             xmlns:p="clr-namespace:ThemeExplorer.Properties">
+             xmlns:p="clr-namespace:ThemeExplorer.Properties"
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
@@ -12,7 +13,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" >
             <TextBlock Text="{x:Static p:Resources.Theme}" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
-            <c1:C1ComboBox x:Name="themes" IsEditable="False" SelectedItemChanged="themes_SelectedItemChanged" Width="150" Margin="5" Height="30" />
+            <c1:C1ComboBox x:Name="themes" IsEditable="False" SelectedItemChanged="themes_SelectedItemChanged" Width="200" Margin="5" Height="30" />
         </StackPanel>
 
         <c1:C1TabControl CanUserReorder="True" Grid.Row="1" UnselectedContentMode="OutsideVisualTree" TabStripMenuVisibility="Visible">
@@ -20,14 +21,34 @@
                 <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" 
                              SelectionChanged="DataManagement_SelectionChanged" UnselectedContentMode="OutsideVisualTree">
                     <c1:C1TabItem Header="FlexGrid" BorderThickness="0">
-                        <c1:FlexGrid x:Name="flexGrid" Margin="10" HeadersVisibility="All" SelectionMode="RowRange" AllowGrouping="True" >
-                            <c1:FlexGrid.ColumnFooterRows>
-                                <c1:GridSummaryRow OptionsMenuVisibility="MouseOver" Height="Auto"/>
-                            </c1:FlexGrid.ColumnFooterRows>
-                        </c1:FlexGrid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <c1:C1CheckBox Grid.Row="0" Content="Tree Grid Mode" Margin="4" MinWidth="80" Checked="C1CheckBox_Checked" Unchecked="C1CheckBox_Unchecked"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1"  Margin="4">
+                                <TextBlock Text="Tree Lines Mode" VerticalAlignment="Center"/>
+                                <c1:C1ComboBox SelectedItem="{Binding ElementName=flexGrid,Path=TreeLinesMode}" ItemsSource="{Binding DataContext.TreeLinesModes}" Margin="4 0" MinWidth="80"/>
+                            </StackPanel>
+                            <c1:FlexGrid x:Name="flexGrid" Grid.Row="2" Margin="10" FrozenColumns="1" ShowOutlineBar="True"
+                                     ShowMarquee="True" HeadersVisibility="All" SelectionMode="CellRange"  AllowGrouping="True" >
+                                <c1:FlexGrid.ColumnFooterRows>
+                                    <c1:GridSummaryRow OptionsMenuVisibility="MouseOver" Height="Auto"/>
+                                </c1:FlexGrid.ColumnFooterRows>
+                            </c1:FlexGrid>
+                        </Grid>
                     </c1:C1TabItem>
                     <c1:C1TabItem Header="ListView" BorderThickness="0">
-                        <c1:C1ListView x:Name="listView" Margin="10" DisplayMemberPath="Name" ShowCheckBoxes="True" ShowSelectAll="True" SelectionMode="Extended" />
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <c1:C1CheckBox x:Name="ShowHideCheckBoxes" Grid.Row="0" Margin="10,5,0,0" VerticalAlignment="Center" Content="Show/Hide CheckBoxes"/>
+                            <c1:C1ListView x:Name="listView" Margin="10" Grid.Row="1" DisplayMemberPath="Name" ShowSelectAll="True" SelectionMode="Extended" ShowCheckBoxes="{Binding IsChecked, ElementName=ShowHideCheckBoxes}"/>
+                        </Grid>
                     </c1:C1TabItem>
                     <c1:C1TabItem Header="FlexPivot" BorderThickness="0">
                         <c1:FlexPivotPage x:Name="pivot" Margin="10"/>
@@ -108,11 +129,10 @@
                             </Grid.ColumnDefinitions>
 
                             <c1:C1ToolStrip Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
-                                <c1:C1ToggleButtonTool x:Name="Grouping" 
-                                                   Label="Enable Grouping" LabelVisibility="Visible" IconSize="0" 
-                                                   Checked="Grouping_Checked" Unchecked="Grouping_Unchecked" />
                                 <TextBlock Margin="2" Text="Scheduler View:" VerticalAlignment="Center"/>
                                 <c1:C1ComboBox x:Name="ViewType" VerticalAlignment="Center" SelectedItem="{Binding ViewType, ElementName=sched1}" Margin="2" MinWidth="120"/>
+                                <c1:C1CheckBox x:Name="Grouping" Content="Enable Grouping" Checked="Grouping_Checked" Unchecked="Grouping_Unchecked" />
+                                <c1:C1CheckBox Content="Show week tabs" IsChecked="{Binding ShowWeekTabs, ElementName=sched1, Mode=TwoWay}" />
                             </c1:C1ToolStrip>
                             <c1:C1MultiMonthCalendar x:Name="cal1" Grid.Column="0" Grid.Row="1" SelectionMode="Extended" MonthCount="3" MaxSelectionCount="42"  
                                        ShowAdjacentDay="True" MonthWidth="310"
@@ -199,7 +219,7 @@
             <c1:C1TabItem Header="{x:Static p:Resources.CommonWPFControls}" CanUserPin="True" CanUserClose="True" >
                 <TabControl TabStripPlacement="Left" Margin="5" >
                     <TabItem Header="Input" BorderThickness="0">
-                        <WrapPanel Margin="10" MaxWidth="600" HorizontalAlignment="Left" >
+                        <WrapPanel Margin="10" MaxWidth="800" HorizontalAlignment="Left" >
                             <Label Content="Label" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                             <Button Content="Button" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                             <ToggleButton Content="ToggleButton" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
@@ -207,18 +227,46 @@
                             <CheckBox Content="CheckBox" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                             <CheckBox Content="Disabled CheckBox" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="True" IsEnabled="False"/>
                             <TextBox Text="TextBox" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200"/>
+                            <ComboBox Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" IsEditable="True" MinWidth="200">
+                                <ComboBoxItem Content="Editable Item 1"/>
+                                <ComboBoxItem Content="Item 2"/>
+                                <ComboBoxItem Content="Item 3"/>
+                                <ComboBoxItem Content="Item 4"/>
+                            </ComboBox>
                             <ComboBox Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200">
                                 <ComboBoxItem Content="Item 1"/>
                                 <ComboBoxItem Content="Item 2"/>
                                 <ComboBoxItem Content="Item 3"/>
                                 <ComboBoxItem Content="Item 4"/>
                             </ComboBox>
-                            <ListBox Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200">
-                                <ListBoxItem Content="Item 1"/>
-                                <ListBoxItem Content="Item 2"/>
-                                <ListBoxItem Content="Item 3"/>
-                                <ListBoxItem Content="Item 4"/>
+                            <ListBox Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200" Height="120">
+                                <ListBoxItem Content="ListBox Item 1"/>
+                                <ListBoxItem Content="ListBox Item 2"/>
+                                <ListBoxItem Content="ListBox Item 3"/>
+                                <ListBoxItem Content="ListBox Item 4"/>
+                                <ListBoxItem Content="ListBox Item 5"/>
+                                <ListBoxItem Content="ListBox Item 6"/>
+                                <ListBoxItem Content="ListBox Item 7"/>
                             </ListBox>
+                            <ListView Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200" Height="120">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridView.Columns>
+                                            <GridViewColumn Header="GridView Column Header" DisplayMemberBinding="{Binding .}" Width="200" />
+                                        </GridView.Columns>
+                                    </GridView>
+                                </ListView.View>
+                                <ListViewItem Content="ListView Item 1"/>
+                                <ListViewItem Content="ListView Item 2"/>
+                                <ListViewItem Content="ListView Item 3"/>
+                                <ListViewItem Content="ListView Item 4"/>
+                                <ListViewItem Content="ListView Item 5"/>
+                                <ListViewItem Content="ListView Item 6"/>
+                                <ListViewItem Content="ListView Item 7"/>
+                                <ListViewItem Content="ListView Item 8"/>
+                                <ListViewItem Content="ListView Item 9"/>
+                            </ListView>
+
                             <DatePicker Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200"/>
                             <Slider Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200"/>
                             <ProgressBar Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="200" Value="50"/>
@@ -232,7 +280,7 @@
                             </Menu>
                         </WrapPanel>
                     </TabItem>
-               <!--     <TabItem Header="DataGrid" BorderThickness="0">
+                    <!--     <TabItem Header="DataGrid" BorderThickness="0">
                         <DataGrid x:Name="dataGrid" Margin="10" />
                     </TabItem>-->
                     <TabItem Header="Calendar" BorderThickness="0">
@@ -275,7 +323,7 @@
                             <GroupBox Header="Group Box" Margin="5" >
                                 <TextBlock Margin="5"> This is the GroupBox content</TextBlock>
                             </GroupBox>
-                  <!--          <TextBlock Margin="5">TreeView</TextBlock>
+                            <!--          <TextBlock Margin="5">TreeView</TextBlock>
                             <TreeView Margin="5">
                                 <TreeViewItem Header="Item 1" IsExpanded="True"/>
                                 <TreeViewItem Header="WPF Edition" IsExpanded="True">

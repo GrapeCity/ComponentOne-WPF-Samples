@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:resx="clr-namespace:FlexGridExplorer.Resources"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" >
@@ -18,7 +19,7 @@
             <Label x:Name="lblMode" VerticalAlignment="Center"/>
             <c1:C1ComboBox x:Name="showItemsPicker" HorizontalAlignment="Stretch"/>
         </StackPanel>
-        <c1:FlexGrid x:Name="grid" Grid.Row="2" AutoGenerateColumns="False" HeadersVisibility="All" SelectionMode="Row">
+        <c1:FlexGrid x:Name="grid" Grid.Row="2" AutoGenerateColumns="False" HeadersVisibility="All" SelectionMode="Row" ScrollMode="Dimension">
             <c1:FlexGrid.Columns>
                 <c1:GridColumn Binding="Id" Width="Auto"/>
                 <c1:GridColumn Binding="FirstName" Width="*"/>
@@ -38,13 +39,13 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="Country:"/>
+                            <TextBlock Text="{x:Static resx:AppResources.RowDetailsCountry}"/>
                             <TextBlock Text="{Binding Country}" Grid.Column="1"/>
-                            <TextBlock Text="City:" Grid.Row="1"/>
+                            <TextBlock Text="{x:Static resx:AppResources.RowDetailsCity}" Grid.Row="1"/>
                             <TextBlock Text="{Binding City}" Grid.Row="1" Grid.Column="1"/>
-                            <TextBlock Text="Address:" Grid.Row="2"/>
+                            <TextBlock Text="{x:Static resx:AppResources.RowDetailsAddress}" Grid.Row="2"/>
                             <TextBlock Text="{Binding Address}" Grid.Row="2" Grid.Column="1"/>
-                            <TextBlock Text="PostalCode:" Grid.Row="3"/>
+                            <TextBlock Text="{x:Static resx:AppResources.RowDetailsPostalCode}" Grid.Row="3"/>
                             <TextBlock Text="{Binding PostalCode}" Grid.Row="3" Grid.Column="1"/>
                         </Grid>
                     </DataTemplate>

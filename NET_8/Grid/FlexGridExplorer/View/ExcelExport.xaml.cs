@@ -523,7 +523,7 @@ namespace FlexGridExplorer
 
         private void Themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count > 0)
+            if (e.AddedItems?.Count > 0)
             {
                 string newTheme = (string)e.AddedItems[0];
                 if ("Classic".Equals(newTheme))
@@ -539,6 +539,12 @@ namespace FlexGridExplorer
                 {
                     grid.Style = Resources.MergedDictionaries[0][newTheme] as Style;
                 }
+            }
+          
+            else
+            {
+                // reset to default theme.
+                grid.ClearValue(StyleProperty);
             }
         }
     }

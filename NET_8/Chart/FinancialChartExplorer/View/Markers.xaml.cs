@@ -66,7 +66,8 @@ namespace FinancialChartExplorer
                     + "High: " + item.High + "\u000A"
                     + "Low: " + item.Low + "\u000A"
                     + "Close: " + item.Close,
-                Background = new SolidColorBrush(Colors.LightGray)
+                Background = new SolidColorBrush(Colors.LightGray),
+                Padding = new Thickness(2)
             };
 
             return textblock;

@@ -9,8 +9,8 @@
 			<ColumnDefinition Width="197" />
 			<ColumnDefinition />
 		</Grid.ColumnDefinitions>
-		<Border Grid.Row="0" Grid.ColumnSpan="2" Margin="0 0 0 10">
-			<StackPanel Margin="5" Orientation="Horizontal">
+		<Border Grid.Row="0" Grid.ColumnSpan="2" Margin="0 0 0 5">
+			<WrapPanel Margin="3" Orientation="Horizontal">
 				<Label Foreground="{DynamicResource text_Brush}" Content="Group by:" VerticalAlignment="Center" />
 				<ComboBox x:Name="cmbGroup" Margin="5" SelectionChanged="ComboBox_SelectionChanged" />
 				<Label Foreground="{DynamicResource text_Brush}" Content="Group navigation:" VerticalAlignment="Center" />
@@ -44,7 +44,8 @@
                         <sys:String>Time Line</sys:String>
                     </ComboBox.Items>
                 </ComboBox>
-            </StackPanel>
+                <CheckBox Foreground="{DynamicResource text_Brush}" VerticalAlignment="Center" Content="Show week tabs" Margin="5" IsChecked="{Binding ShowWeekTabs, ElementName=sched1}" />
+            </WrapPanel>
 		</Border>
 
 		<c1sched:C1Calendar x:Name="cal1" Grid.Row="1" Grid.Column="0" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CalendarHelper="{Binding CalendarHelper, ElementName=sched1, Mode=OneWay}" SelectedDates="{Binding VisibleDates, ElementName=sched1, Mode=OneWay}" BoldedDates="{Binding BoldedDates, ElementName=sched1, Mode=OneWay}" MaxSelectionCount="42" />

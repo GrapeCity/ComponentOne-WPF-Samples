@@ -1,5 +1,6 @@
 ﻿using C1.DataCollection;
 using C1.DataCollection.EntityFrameworkCore;
+using C1.WPF.DataFilter;
 using DataFilterExplorer.Resources;
 using Microsoft.Data.Sqlite;
 using System;
@@ -78,5 +79,16 @@ namespace DataFilterExplorer
             return arr[_rnd.Next(arr.Length)];
         }
 
+        private void FlexGridOnColumnFilterLoading(object sender, C1.WPF.Grid.GridColumnFilterLoadingEventArgs e)
+        {
+            // Sample how to change the initial filter operation for column's conditional filters.
+            foreach (var filter in e.DataFilter.Filters)
+            {
+                if (filter is TextFilter textFilter)
+                {
+                    textFilter.DefaultFilterOperation = FilterOperation.StartsWith;
+                }
+            }
+        }
     }
 }

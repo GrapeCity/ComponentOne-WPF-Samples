@@ -7,14 +7,14 @@
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
              mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FinancialChartExplorer;component/View/Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
-        <Grid.Resources>
-            <Style TargetType="c1:C1ComboBox">
-                <Setter Property="Margin" Value="10 0" />
-                <Setter Property="Width" Value="150" />
-                <Setter Property="DisplayMemberPath" Value="Name"/>
-            </Style>
-        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
@@ -22,7 +22,8 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
             <TextBlock Text="Symbol" VerticalAlignment="Center"/>
-            <c1:C1ComboBox x:Name="cbSymbol" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"
+            <c1:C1ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}"
+                           ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"
                            SelectedIndex="0"/>
         </StackPanel>
         <c1:C1FinancialChart x:Name="financialChart" ChartType="LineBreak" BindingX="Date" Binding="High,Low,Open,Close,Volume" Grid.Row="1">

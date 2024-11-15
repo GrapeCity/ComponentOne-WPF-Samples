@@ -153,4 +153,10 @@
   <data name="FilterPlaceholderText" xml:space="preserve">
     <value>Enter text to filter the properties</value>
   </data>
+  <data name="DynamicBindingDesc" xml:space="preserve">
+    <value>Shows how to bind a dynamic ExpandoObject to C1PropertyGrid</value>
+  </data>
+  <data name="DynamicBindingTitle" xml:space="preserve">
+    <value>Dynamic Binding</value>
+  </data>
 </root>

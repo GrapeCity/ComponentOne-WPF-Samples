@@ -105,10 +105,12 @@ namespace SchedulerExplorer
 
         private void OnUnloaded(object sender, RoutedEventArgs e)
         {
-            // save all changes in appointments back to database
-            _appointmentsAdapter.Update(_dataSet.Tables["Appointments"]);
-            _dataSet.AcceptChanges();
-
+            // uncomment below code to save all changes in appointments back to database
+            //if (_appointmentsAdapter != null)
+            //{
+            //    _appointmentsAdapter.Update(_dataSet.Tables["Appointments"]);
+            //    _dataSet.AcceptChanges();
+            //}
         }
 
         private void Views_SelectionChanged(object sender, SelectionChangedEventArgs e)

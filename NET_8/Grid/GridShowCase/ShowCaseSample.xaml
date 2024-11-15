@@ -5,6 +5,7 @@
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GridShowCase"
+             xmlns:res="clr-namespace:GridShowCase.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1500">
     <UserControl.Resources>
@@ -16,6 +17,21 @@
         <Point x:Key="Condition1" X="0" Y="10" />
         <Point x:Key="Condition2" X="10" Y="20" />
         <Point x:Key="Condition3" X="20" Y="100" />
+        <c1:C1IconTemplate x:Key="ConditionalFormatingIcon">
+            <c1:C1BitmapIcon Source="./Resources/Images/ConditionalFormating.png" />
+        </c1:C1IconTemplate>
+        <c1:C1IconTemplate x:Key="ColumnsIcon">
+            <c1:C1BitmapIcon Source="./Resources/Images/Columns.png" />
+        </c1:C1IconTemplate>
+        <c1:C1IconTemplate x:Key="CSVIcon">
+            <c1:C1BitmapIcon Source="./Resources/Images/csv.png"/>
+        </c1:C1IconTemplate>
+        <c1:C1IconTemplate x:Key="TextIcon">
+            <c1:C1BitmapIcon Source="./Resources/Images/text.png"/>
+        </c1:C1IconTemplate>
+        <c1:C1IconTemplate x:Key="HtmlIcon">
+            <c1:C1BitmapIcon Source="./Resources/Images/html.png"/>
+        </c1:C1IconTemplate>
     </UserControl.Resources>
     <Grid DataContext="{StaticResource viewmodel}" x:Name="LayoutRoot">
         <Grid.RowDefinitions>
@@ -28,97 +44,63 @@
                     <Setter Property="Visibility" Value="Collapsed"/>
                 </Style>
             </c1:C1Ribbon.MinimizedButtonStyle>
-            <c1:RibbonTabItem Header="Data">
-                <c1:RibbonGroup Header="DataSize">
+            <c1:RibbonTabItem Header="{x:Static res:Resources.DataLabel}">
+                <c1:RibbonGroup Header="{x:Static res:Resources.DataSizeLabel}">
                     <c1:C1SelectTool VerticalContentAlignment="Center" ItemsSource="{Binding DataSize}" SelectedItem="{Binding SelectedSize, Mode=TwoWay}"/>
                 </c1:RibbonGroup>
-                <c1:RibbonGroup Header="Search">
-                    <c1:C1TextBox x:Name="filter" VerticalContentAlignment="Center"  Width="200" HorizontalAlignment="Left" Placeholder="Filter"/>
+                <c1:RibbonGroup Header="{x:Static res:Resources.SearchLabel}">
+                    <c1:C1TextBox x:Name="filter" VerticalContentAlignment="Center"  Width="200" HorizontalAlignment="Left" Placeholder="{x:Static res:Resources.FilterPlaceholder}"/>
                 </c1:RibbonGroup>
-                <c1:RibbonGroup Header="Filter">
+                <c1:RibbonGroup Header="{x:Static res:Resources.FilterLabel}">
                     <c1:RibbonGroup.GroupSizeDefinitions>
                         <c1:RibbonGroupSizeDefinition >
                             <c1:RibbonToolSizeDefinition Size="Large"/>
                             <c1:RibbonToolSizeDefinition Size="Large"/>
                         </c1:RibbonGroupSizeDefinition>
                     </c1:RibbonGroup.GroupSizeDefinitions>
-                    <c1:C1DropDownTool Label="Conditional Formatting">
-                        <c1:C1DropDownTool.IconTemplate>
-                            <c1:C1IconTemplate>
-                                <c1:C1BitmapIcon Source="./Resources/Images/ConditionalFormating.png" />
-                            </c1:C1IconTemplate>
-                        </c1:C1DropDownTool.IconTemplate>
+                    <c1:C1DropDownTool Label="{x:Static res:Resources.ConditionalFormattingLabel}" IconTemplate="{StaticResource ConditionalFormatingIcon}">
                         <c1:C1DropDownTool.Content>
                             <c1:C1MenuList BorderThickness="0" Orientation="Vertical" ItemClick="OnConditionalFormattingItemClick">
-                                <c1:C1MenuItem Name="Condition1" IsCheckable="True" Header="Discount &lt; 10%" CommandParameter="{StaticResource Condition1}"/>
-                                <c1:C1MenuItem Name="Condition2" IsCheckable="True" Header="Discount from 10 to 20%" CommandParameter="{StaticResource Condition2}"/>
-                                <c1:C1MenuItem Name="Condition3" IsCheckable="True" Header="Discount &gt; 20%" CommandParameter="{StaticResource Condition3}"/>
+                                <c1:C1MenuItem Name="Condition1" IsCheckable="True" Header="{x:Static res:Resources.DiscountLt10PercLabel}" CommandParameter="{StaticResource Condition1}"/>
+                                <c1:C1MenuItem Name="Condition2" IsCheckable="True" Header="{x:Static res:Resources.DiscountFrom10To20PercLabel}" CommandParameter="{StaticResource Condition2}"/>
+                                <c1:C1MenuItem Name="Condition3" IsCheckable="True" Header="{x:Static res:Resources.DiscountFrom20PercLabel}" CommandParameter="{StaticResource Condition3}"/>
                             </c1:C1MenuList>
                         </c1:C1DropDownTool.Content>
                     </c1:C1DropDownTool>
-                    <c1:C1DropDownTool Label="Columns">
-                        <c1:C1DropDownTool.IconTemplate>
-                            <c1:C1IconTemplate>
-                                <c1:C1BitmapIcon Source="./Resources/Images/Columns.png" />
-                            </c1:C1IconTemplate>
-                        </c1:C1DropDownTool.IconTemplate>
+                    <c1:C1DropDownTool Label="{x:Static res:Resources.ColumnsLabel}" IconTemplate="{StaticResource ColumnsIcon}">
                         <c1:C1DropDownTool.Content>
                             <c1:C1MenuList BorderThickness="0" Orientation="Vertical" ItemClick="OnColumnsItemClick">
-                                <c1:C1MenuItem Header="ID" IsCheckable="True" IsChecked="True" />
-                                <c1:C1MenuItem Header="Created Date" IsCheckable="True" IsChecked="True"/>
-                                <c1:C1MenuItem Header="Product Name" IsCheckable="True" IsChecked="True"/>
-                                <c1:C1MenuItem Header="Color" IsCheckable="True" IsChecked="True"/>
-                                <c1:C1MenuItem Header="Country" IsCheckable="True" IsChecked="True"/>
-                                <c1:C1MenuItem Header="History" IsCheckable="True" IsChecked="True" />
-                                <c1:C1MenuItem Header="Discount" IsCheckable="True" IsChecked="True"/>
-                                <c1:C1MenuItem Header="Rating" IsCheckable="True" IsChecked="True"/>
-                                <c1:C1MenuItem Header="Price" IsCheckable="True" IsChecked="True"/>
-                                <c1:C1MenuItem Header="Active" IsCheckable="True" IsChecked="True"/>
+                                <c1:C1MenuItem Header="{x:Static res:Resources.IDLabel}" IsCheckable="True" IsChecked="True" />
+                                <c1:C1MenuItem Header="{x:Static res:Resources.CreatedDateLabel}" IsCheckable="True" IsChecked="True"/>
+                                <c1:C1MenuItem Header="{x:Static res:Resources.ProductNameLabel}" IsCheckable="True" IsChecked="True"/>
+                                <c1:C1MenuItem Header="{x:Static res:Resources.ColorLabel}" IsCheckable="True" IsChecked="True"/>
+                                <c1:C1MenuItem Header="{x:Static res:Resources.CountryLabel}" IsCheckable="True" IsChecked="True"/>
+                                <c1:C1MenuItem Header="{x:Static res:Resources.HistoryLabel}" IsCheckable="True" IsChecked="True" />
+                                <c1:C1MenuItem Header="{x:Static res:Resources.DiscountLabel}" IsCheckable="True" IsChecked="True"/>
+                                <c1:C1MenuItem Header="{x:Static res:Resources.RatingLabel}" IsCheckable="True" IsChecked="True"/>
+                                <c1:C1MenuItem Header="{x:Static res:Resources.PriceLabel}" IsCheckable="True" IsChecked="True"/>
+                                <c1:C1MenuItem Header="{x:Static res:Resources.ActiveLabel}" IsCheckable="True" IsChecked="True"/>
                             </c1:C1MenuList>
                         </c1:C1DropDownTool.Content>
                     </c1:C1DropDownTool>
                 </c1:RibbonGroup>
-                <c1:RibbonGroup Header="Group">
+                <c1:RibbonGroup Header="{x:Static res:Resources.GroupLabel}">
                     <c1:RibbonGroup.GroupSizeDefinitions>
                         <c1:RibbonGroupSizeDefinition>
                             <c1:RibbonToolSizeDefinition Size="Large"/>
                             <c1:RibbonToolSizeDefinition Size="Large"/>
                         </c1:RibbonGroupSizeDefinition>
                     </c1:RibbonGroup.GroupSizeDefinitions>
-                    <c1:C1CheckBox Content="Group by Country" IsChecked="{Binding IsGroupedByCountry, Mode=OneWay}" Margin="0,0,10,0" Command="{Binding GroupByCountry }" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center"/>
-                    <c1:C1CheckBox Content="Group by Product" IsChecked="{Binding IsGroupedByProduct, Mode=OneWay}" Command="{Binding GroupByProduct }" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center"/>
+                    <c1:C1CheckBox Content="{x:Static res:Resources.GroupByCountryLabel}" IsChecked="{Binding IsGroupedByCountry, Mode=OneWay}" Margin="0,0,10,0" Command="{Binding GroupByCountry }" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center"/>
+                    <c1:C1CheckBox Content="{x:Static res:Resources.GroupByProductLabel}" IsChecked="{Binding IsGroupedByProduct, Mode=OneWay}" Command="{Binding GroupByProduct }" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center"/>
                 </c1:RibbonGroup>
             </c1:RibbonTabItem>
-            <c1:RibbonTabItem Header="Export">
+            <c1:RibbonTabItem Header="{x:Static res:Resources.ExportLabel}">
                 <c1:RibbonGroup>
-                    <c1:C1ButtonTool Click="ExcelExport_Click" Label="Excel" Description="Export to Excel">
-                        <c1:C1ButtonTool.IconTemplate>
-                            <c1:C1IconTemplate>
-                                <c1:C1BitmapIcon Source="./Resources/Images/csv.png"/>
-                            </c1:C1IconTemplate>
-                        </c1:C1ButtonTool.IconTemplate>
-                    </c1:C1ButtonTool>
-                    <c1:C1ButtonTool Click="CsvExport_Click" Label="CSV" Description="Export to Csv">
-                        <c1:C1ButtonTool.IconTemplate>
-                            <c1:C1IconTemplate>
-                                <c1:C1BitmapIcon Source="./Resources/Images/csv.png"/>
-                            </c1:C1IconTemplate>
-                        </c1:C1ButtonTool.IconTemplate>
-                    </c1:C1ButtonTool>
-                    <c1:C1ButtonTool Click="TextExport_Click" Label="Text" Description="Export to Text">
-                        <c1:C1ButtonTool.IconTemplate>
-                            <c1:C1IconTemplate>
-                                <c1:C1BitmapIcon Source="./Resources/Images/text.png"/>
-                            </c1:C1IconTemplate>
-                        </c1:C1ButtonTool.IconTemplate>
-                    </c1:C1ButtonTool>
-                    <c1:C1ButtonTool Click="HtmlExport_Click" Label="Html" Description="Export to Html">
-                        <c1:C1ButtonTool.IconTemplate>
-                            <c1:C1IconTemplate>
-                                <c1:C1BitmapIcon Source="./Resources/Images/html.png"/>
-                            </c1:C1IconTemplate>
-                        </c1:C1ButtonTool.IconTemplate>
-                    </c1:C1ButtonTool>
+                    <c1:C1ButtonTool Click="ExcelExport_Click" Label="{x:Static res:Resources.ExcelLabel}" Description="{x:Static res:Resources.ExcelDescription}" IconTemplate="{StaticResource CSVIcon}"/>
+                    <c1:C1ButtonTool Click="CsvExport_Click" Label="{x:Static res:Resources.CSVLabel}" Description="{x:Static res:Resources.CSVDescription}" IconTemplate="{StaticResource CSVIcon}"/>
+                    <c1:C1ButtonTool Click="TextExport_Click" Label="{x:Static res:Resources.TextLabel}" Description="{x:Static res:Resources.TextDescription}" IconTemplate="{StaticResource TextIcon}"/>
+                    <c1:C1ButtonTool Click="HtmlExport_Click" Label="{x:Static res:Resources.HtmlLabel}" Description="{x:Static res:Resources.HtmlDescription}" IconTemplate="{StaticResource HtmlIcon}"/>
                 </c1:RibbonGroup>
             </c1:RibbonTabItem>
         </c1:C1Ribbon>
@@ -132,8 +114,8 @@
                         SelectionBackground="#BBDEFB"
                         Grid.Row="1">
             <c1:FlexGrid.Columns>
-                <c1:GridColumn Binding="ID" HorizontalAlignment="Left" IsReadOnly="true" MinWidth="50" Width="0.5*"/>
-                <local:GridBitmapIconColumn Binding="CreatedDate" ColumnName="Created Date" Format="dd-MM-yyyy" Header="Date" MinWidth="180" Width="*"
+                <c1:GridColumn Binding="ID" Header="{x:Static res:Resources.IDLabel}" HorizontalAlignment="Left" IsReadOnly="true" MinWidth="50" Width="0.5*"/>
+                <local:GridBitmapIconColumn Binding="CreatedDate" ColumnName="Created Date" Format="dd-MM-yyyy" Header="{x:Static res:Resources.CreatedDateLabel}" MinWidth="180" Width="*"
                                             DefaultBitmapSource="/GridShowCase;component/Resources/Images/datetime.png" IconWidth="23">
                     <c1:GridColumn.CellEditingTemplate>
                         <DataTemplate>
@@ -141,8 +123,8 @@
                         </DataTemplate>
                     </c1:GridColumn.CellEditingTemplate>
                 </local:GridBitmapIconColumn>
-                <c1:GridColumn Binding="ProductName" ColumnName="Product Name" Header="Product" AllowGrouping="True" MinWidth="100" Width="*"/>
-                <c1:GridColumn Binding="Country" Header="Country" SortMemberPath="Country.Name" GroupMemberPath="Country.Name" FilterMemberPath="Country.Name" AllowGrouping="True" Width="200" ColumnName="Country" >
+                <c1:GridColumn Binding="ProductName" ColumnName="Product Name" Header="{x:Static res:Resources.ProductNameLabel}" AllowGrouping="True" MinWidth="100" Width="*"/>
+                <c1:GridColumn Binding="Country" Header="{x:Static res:Resources.CountryLabel}" SortMemberPath="Country.Name" GroupMemberPath="Country.Name" FilterMemberPath="Country.Name" AllowGrouping="True" Width="200" ColumnName="Country" >
                     <c1:GridColumn.CellTemplate>
                         <DataTemplate>
                             <Grid Margin="4 0">
@@ -175,15 +157,15 @@
                         </DataTemplate>
                     </c1:GridColumn.CellEditingTemplate>
                 </c1:GridColumn>
-                <local:GridColorColumn Binding="Color" ColumnName="Color" Header="Color" MinWidth="100" ColorRectangleSize="18">
+                <local:GridColorColumn Binding="Color" ColumnName="Color" Header="{x:Static res:Resources.ColorLabel}" MinWidth="100" ColorRectangleSize="18">
                     <c1:GridColumn.CellEditingTemplate>
                         <DataTemplate>
                             <c1:C1ColorPicker Mode="Basic" SelectedColor="{Binding Color , Mode=TwoWay , Converter={StaticResource ColorConverter}}" />
                         </DataTemplate>
                     </c1:GridColumn.CellEditingTemplate>
                 </local:GridColorColumn>
-                <c1:GridNumericColumn Binding="Price" Format="C" MinWidth="50" Width="*"/>
-                <c1:GridColumn Header="Change" ColumnName="History" IsReadOnly="True" MinWidth="80" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center" Binding="History">
+                <c1:GridNumericColumn Binding="Price" Header="{x:Static res:Resources.PriceLabel}" Format="C" MinWidth="50" Width="*"/>
+                <c1:GridColumn Header="{x:Static res:Resources.ChangeLabel}" ColumnName="History" IsReadOnly="True" MinWidth="80" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center" Binding="History">
                     <c1:GridColumn.CellTemplate>
                         <DataTemplate>
                             <local:StockTicker HorizontalAlignment="Center" Value="{Binding History}" BindingSource="History" Tag="{Binding}"  />
@@ -199,8 +181,8 @@
                         </DataTemplate>
                     </c1:GridColumn.CellTemplate>
                 </c1:GridColumn>-->
-                <c1:GridNumericColumn Binding="Discount" Format="P0" Header="Discount" ColumnName="Discount" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right" MinWidth="80" Width="0.5*"/>
-                <c1:GridColumn Binding="Rating" Header="Rating" ColumnName="Rating" MinWidth="100" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center">
+                <c1:GridNumericColumn Binding="Discount" Format="P0" Header="{x:Static res:Resources.DiscountLabel}" ColumnName="Discount" HorizontalAlignment="Right" HeaderHorizontalAlignment="Right" MinWidth="80" Width="0.5*"/>
+                <c1:GridColumn Binding="Rating" Header="{x:Static res:Resources.RatingLabel}" ColumnName="Rating" MinWidth="100" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center">
                     <c1:GridColumn.CellTemplate>
                         <DataTemplate>
                             <local:RatingCell Rating="{Binding Rating,Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" RatingTapped="OnRatingTapped" />
@@ -212,7 +194,7 @@
                         </DataTemplate>
                     </c1:GridColumn.CellEditingTemplate>
                 </c1:GridColumn>
-                <c1:GridColumn Binding="Active" Header="Active" MinWidth="50" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center"/>
+                <c1:GridColumn Binding="Active" Header="{x:Static res:Resources.ActiveLabel}" MinWidth="50" Width="*" HorizontalAlignment="Center" HeaderHorizontalAlignment="Center"/>
             </c1:FlexGrid.Columns>
             <i:Interaction.Behaviors>
                 <c1:FlexGridDetailProvider x:Name="details" DetailVisibilityMode="ExpandSingle">
@@ -228,13 +210,13 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Label Content="Size:"/>
+                            <Label Content="{x:Static res:Resources.SizeField}"/>
                             <Label Content="{Binding Size}" Grid.Column="1"/>
-                            <Label Content="Weight:" Grid.Row="1"/>
+                            <Label Content="{x:Static res:Resources.WeightField}" Grid.Row="1"/>
                             <Label Content="{Binding Weight}" Grid.Row="1" Grid.Column="1"/>
-                            <Label Content="Quantity:" Grid.Row="2"/>
+                            <Label Content="{x:Static res:Resources.QuantityField}" Grid.Row="2"/>
                             <Label Content="{Binding Quantity}" Grid.Row="2" Grid.Column="1"/>
-                            <Label Content="Description:" Grid.Row="3" Margin="0,0,10,0"/>
+                            <Label Content="{x:Static res:Resources.DescriptionField}" Grid.Row="3" Margin="0,0,10,0"/>
                             <Label Content="{Binding Description}" Grid.Row="3" Grid.Column="1"/>
                         </Grid>
                     </DataTemplate>

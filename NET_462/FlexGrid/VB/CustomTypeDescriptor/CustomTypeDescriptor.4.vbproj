@@ -59,6 +59,9 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="C1.Zip, Version=2.0.20241.6, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <HintPath>packages\C1.Zip.8.0.20241.6\lib\netstandard2.0\C1.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -163,6 +166,7 @@
     <AppDesigner Include="My Project\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="readme.txt" />
     <EmbeddedResource Include="Resources\data.zip" />
   </ItemGroup>
@@ -189,13 +193,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20241.839</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Zip">
-      <Version>4.6.20241.839</Version>
+      <Version>4.6.20242.858</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

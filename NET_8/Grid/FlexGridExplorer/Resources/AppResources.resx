@@ -546,4 +546,25 @@
   <data name="RowsCount" xml:space="preserve">
     <value>{0} rows</value>
   </data>
+  <data name="RowDetailsAddress" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="RowDetailsCity" xml:space="preserve">
+    <value>City:</value>
+  </data>
+  <data name="RowDetailsCountry" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="RowDetailsPostalCode" xml:space="preserve">
+    <value>Postal Code:</value>
+  </data>
+  <data name="DataTableValidationMessage" xml:space="preserve">
+    <value>Column Double should be greater or equal than 3</value>
+  </data>
+  <data name="TreeLinesMode" xml:space="preserve">
+    <value>Tree Lines Mode</value>
+  </data>
+  <data name="TreeIndentMode" xml:space="preserve">
+    <value>Tree Indent Mode</value>
+  </data>
 </root>

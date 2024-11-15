@@ -1,4 +1,4 @@
-﻿using C1.C1Zip;
+﻿using C1.Zip;
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
