@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CarListDescription" xml:space="preserve">
+    <value>このサンプルは、C1DataFilter コントロールを使用して C1FlexGrid コントロールをフィルタリングする方法を示します。また、自動生成されたフィルターを変更する方法、フィルター式を保存および復元する方法についても説明します。</value>
+    <comment>This sample demonstrates how to use C1DataFilter control to filter the C1FlexGrid control. Also demonstrates how to modify automatically generated filters, save and restore filter expressions.</comment>
+  </data>
+  <data name="CarListTitle" xml:space="preserve">
+    <value>車両リスト</value>
+    <comment>Cars List</comment>
+  </data>
+  <data name="ConditionalFiltersDescription" xml:space="preserve">
+    <value>複数の条件を受け入れる新しい条件付きフィルターと新しいフルテキストフィルターを使用してデモンストレーションします。</value>
+  </data>
+  <data name="ConditionalFiltersTitle" xml:space="preserve">
+    <value>条件付きフィルター</value>
+  </data>
+  <data name="CustomFiltersDescription" xml:space="preserve">
+    <value>C1DataFilter コントロールを使用してカスタムフィルターを表示する方法を示します。
+ ウィンドウには C1TreeView と C1DataFilter があります。
+C1TreeView は、CustomContentPresenter を使用してデータを表示します。
+C1DataFilter は、次のカスタムフィルターを使用します。
+CustomFilter に基づく ColorFilter: 車の色を選択することを可能にします。
+CustomFilter に基づく MapFilter: マップ上のストアを選択できます。
+CustomFilter に基づくModelFilter: 車のモデルを選択することを可能にします。
+ChecklistFilter に基づくPriceFilter: 車の価格帯を選択できます。</value>
+    <comment>Demonstrates using C1DataFilter control to show custom filters.
+There is C1TreeView and C1DataFilter on the window.
+The C1TreeView uses CustomContentPresenter to shows data.
+The C1DataFilter uses next custom filters:
+ColorFilter based on CustomFilter, allows to choose the color of the car;
+MapFilter based on CustomFilter, allows to choose the store on map;
+ModelFilter based on CustomFilter, allows to choose the model of the car;
+PriceFilter based on ChecklistFilter, allows to choose the price range of cars.</comment>
+  </data>
+  <data name="CustomFilterTitle" xml:space="preserve">
+    <value>カスタムフィルター</value>
+    <comment>Custom Filters</comment>
+  </data>
+  <data name="FilterEditorDescription" xml:space="preserve">
+    <value>このサンプルは、C1FilterEditor コントロールの基本的な機能を示します。
+FilterEditor コントロールは、ツリーの形式でフィルターを表します。ツリーノードは、論理条件「And」および「Or」、またはデータソースプロパティのフィルターにすることができます。
+C1FilterEditor.SetExpression メソッドは、事前定義されたフィルターをロードするために使用されます。
+GetExpressionメソッドを使用して、xmlシリアル化に使用できる現在のフィルター式を取得できます。
+このサンプルでは、FlexGrid.DataSource プロパティと FilterEditor.DataSource プロパティの両方が同じデータコレクションに設定されています。
+これにより、C1FilterEditor で選択された複数の条件に基づいて FlexGrid コンテンツをフィルタリングできます。</value>
+    <comment>This sample shows the basic features of C1FilterEditor.
+This sample demonstrates basic functionality of the C1FilterEditor control. 
+The FilterEditor control represents a filter in the form of a tree.Tree nodes can be logical conditions "And" and "Or" or a filter for a data source property. 
+The C1FilterEditor.SetExpression method is used to load predefined filter. 
+You can use the GetExpression method to get the current filter expression, which you can use for xml serialization.
+In this sample FlexGrid.DataSource property and FilterEditor.DataSource property are both set to the same data collection. 
+That allows to filter FlexGrid content based on multiple conditions selected in the C1FilterEditor.</comment>
+  </data>
+  <data name="FilterEditorTitle" xml:space="preserve">
+    <value>フィルターエディター</value>
+    <comment>Filter Editor</comment>
+  </data>
+  <data name="FilterSummaryDescription" xml:space="preserve">
+    <value>このサンプルは、チェックリストフィルターに FilterSummary を使用する方法を示します。また、さまざまな集計式とフィルターサマリーのカスタム形式を使用する方法も示します。</value>
+    <comment>This sample demonstrates how to use the FilterSummary for the Checklist filter. Also shows how to use different aggregate expressions and custom format of filter summaries.</comment>
+  </data>
+  <data name="FilterSummaryTitle" xml:space="preserve">
+    <value>フィルターの概要</value>
+    <comment>Filter Summary</comment>
+  </data>
+  <data name="LoadingMessage" xml:space="preserve">
+    <value>データのロード...</value>
+  </data>
+  <data name="VirtualSourceDescription" xml:space="preserve">
+    <value>このサンプルは、仮想化されたソースでC1DataFilterを使用する方法を示しています。</value>
+  </data>
+  <data name="VirtualSourceTitle" xml:space="preserve">
+    <value>仮想ソース</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>DataFilter エクスプローラー</value>
+  </data>
+  <data name="CreatingRecordsMessage" xml:space="preserve">
+    <value>{0:N0} レコードの作成中...</value>
+    <comment>Creating {0:N0} records...</comment>
+  </data>
+  <data name="ApplyFilter" xml:space="preserve">
+    <value>フィルターの適用</value>
+    <comment>Button's text.</comment>
+  </data>
+  <data name="LoadOrGenerate" xml:space="preserve">
+    <value>ソースのロードまたは生成</value>
+    <comment>Load or generate Source</comment>
+  </data>
+  <data name="ResetFilter" xml:space="preserve">
+    <value>フィルターのリセット</value>
+    <comment>Reset filter</comment>
+  </data>
+  <data name="SaveFilter" xml:space="preserve">
+    <value>フィルターの保存</value>
+    <comment>Save filter</comment>
+  </data>
+  <data name="AutoApplyFilter" xml:space="preserve">
+    <value>フィルターの自動適用</value>
+    <comment>Auto apply filter</comment>
+  </data>
+</root>

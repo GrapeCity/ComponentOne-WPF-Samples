@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="MenuExplorer.Tiles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <c1:C1MenuList BorderThickness="1" Margin="8" ItemClick="OnMenuItemClick">
+                <c1:C1MenuItem Header="Some item"/>
+                <c1:C1TilesMenuItem>
+                    <c1:C1TilesMenuItem.Items>
+                        <c1:C1MenuItem Header="Alert Circle" IconTemplate="{x:Static c1:C1IconTemplate.AlertCircle}" />
+                        <c1:C1MenuItem Header="Arrow Down" IconTemplate="{x:Static c1:C1IconTemplate.ArrowDown}" />
+                        <c1:C1MenuItem Header="Chevron Left" IconTemplate="{x:Static c1:C1IconTemplate.ChevronLeft}" />
+                        <c1:C1MenuItem Header="Close" IconTemplate="{x:Static c1:C1IconTemplate.Close}" />
+                        <c1:C1MenuItem Header="Triangle Left Down" IconTemplate="{x:Static c1:C1IconTemplate.TriangleLeftDown}" />
+                        <c1:C1MenuItem Header="Select All" IconTemplate="{x:Static c1:C1IconTemplate.SelectAll}" />
+                        <c1:C1MenuItem Header="Triangle North" IconTemplate="{x:Static c1:C1IconTemplate.TriangleNorth}" />
+                        <c1:C1MenuItem Header="Gear" IconTemplate="{x:Static c1:C1IconTemplate.Gear}" />
+                        <c1:C1MenuItem Header="Paste" IconTemplate="{x:Static c1:C1IconTemplate.Paste}" />
+                        <c1:C1MenuItem Header="Copy" IconTemplate="{x:Static c1:C1IconTemplate.Copy}" />
+                    </c1:C1TilesMenuItem.Items>
+                </c1:C1TilesMenuItem>
+                <c1:C1MenuSeparator />
+                <c1:C1MenuItem Header="Another item"/>
+            </c1:C1MenuList>
+            <TextBlock x:Name="Message" TextAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</UserControl>

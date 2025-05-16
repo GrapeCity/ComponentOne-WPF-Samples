@@ -17,13 +17,15 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68FEF22D-A72C-490C-95FA-49C8335ACE47}
+	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{40c26e50-6cf9-4c8e-af0f-f8a6f75a525a}*SharedItemsImports = 5
-		..\..\..\..\Shared\Pdf.Net\Pdf.Net.projitems*{483bf9dc-0011-471b-8714-1ccb1754b8ee}*SharedItemsImports = 5
 		..\..\..\..\Shared\DocSol\GcPdf.projitems*{52fa56db-2d6d-4677-8fbf-f911271670c1}*SharedItemsImports = 5
-		..\..\..\..\Shared\Pdf.Net\Pdf.Net.projitems*{79e5087a-ed05-482c-a8ad-b3906674daa6}*SharedItemsImports = 13
-		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{8e5db594-dfc1-436d-b203-b3049044d905}*SharedItemsImports = 5
+		..\..\..\..\Shared\Pdf.Net\Pdf.Net.projitems*{69cdbe2c-80af-22b7-cd38-d6b25e0844c0}*SharedItemsImports = 5
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{969e8e09-26b0-5d0a-3c7d-f3fd531773b6}*SharedItemsImports = 5
 		..\..\..\..\Shared\XBarcode\XBarcode.projitems*{ab6cc2a4-6410-468a-8295-2d26022cdff2}*SharedItemsImports = 5
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{f12f3158-cd99-4c0c-ae4c-95f17ab9bb36}*SharedItemsImports = 5
 	EndGlobalSection

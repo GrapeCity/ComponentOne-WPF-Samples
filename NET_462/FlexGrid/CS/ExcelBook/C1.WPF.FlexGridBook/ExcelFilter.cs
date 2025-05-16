@@ -219,9 +219,9 @@ namespace C1.WPF.FlexGridBook
                 {
                     r.Style = GetXLStyle(flex, sheet, (ExcelCellStyle)row.CellStyle);
                 }
-                if (row is ExcelRow)
+                if (row is ExcelRow exrow && exrow.Level > 0)
                 {
-                    r.OutlineLevel = ((ExcelRow)row).Level;
+                    r.OutlineLevel = exrow.Level;
                 }
                 r.Visible = row.Visible;
             }

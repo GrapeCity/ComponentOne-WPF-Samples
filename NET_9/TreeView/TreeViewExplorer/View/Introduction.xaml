@@ -1,0 +1,303 @@
+﻿<UserControl x:Class="TreeViewExplorer.DemoTreeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:res="clr-namespace:TreeViewExplorer.Properties">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TreeViewExplorer;component/CommonResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="TreeIcon" TargetType="Image">
+                <Setter Property="Width" Value="14" />
+                <Setter Property="Height" Value="14" />
+            </Style>
+            <Style x:Key="TreeText" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="Margin" Value="4 0 0 0" />
+            </Style>
+        </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+            <c1:C1CheckBox x:Name="cbShowCheckBox" Content="{x:Static res:Resources.ShowCheckBox}" Click="cbShowCheckBox_Click" Margin="5" FontFamily="Segoe UI" FontSize="14" IsChecked="True"
+                          VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBlock Text="{x:Static res:Resources.SelectionMode}" FontFamily="Segoe UI" FontSize="14" Margin="30 5 5 5"/>
+                <c1:C1ComboBox x:Name="cbSelectionMode" SelectedIndexChanged="cbSelectionMode_SelectedIndexChanged" Width="100"
+                               SelectedIndex="1">
+                <c1:C1ComboBoxItem Content="{x:Static res:Resources.Single}"/>
+                <c1:C1ComboBoxItem Content="{x:Static res:Resources.Extended}"/>
+                <c1:C1ComboBoxItem Content="{x:Static res:Resources.Multiple}"/>
+                </c1:C1ComboBox>
+            </StackPanel>
+
+          
+                <c1:C1TreeView x:Name="WindowExplorerTreeView" ShowCheckboxes="True"
+                           MinWidth="350"
+                           HorizontalAlignment="Center"
+                           IsVirtualizing="True"
+                           BorderThickness="0"
+                           ShowLines="True"
+                           Grid.Row="1">
+                    <c1:C1TreeView.ExpandedIconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1PathIcon x:Name="LineExpandedIcon" Data="M9.5,10.5 L5.5,10.5 M3.5,6.5 L11.5,6.5 L11.5,14.5 L3.5,14.5 z" StrokeBrush="Black" StrokeThickness="3" Foreground="White"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1TreeView.ExpandedIconTemplate>
+                    <c1:C1TreeView.CollapsedIconTemplate>
+                        <c1:C1IconTemplate>
+                            <c1:C1PathIcon x:Name="LineCollapsedIcon" Data="M9.5,10.5 L5.5,10.5 M7.5,8.5 L7.5,12.5 M3.5,6.5 L11.5,6.5 L11.5,14.5 L3.5,14.5 z" StrokeBrush="Black" StrokeThickness="3" Foreground="White"/>
+                        </c1:C1IconTemplate>
+                    </c1:C1TreeView.CollapsedIconTemplate>
+                    <c1:C1TreeView.ExpandedIconStyle>
+                        <Style TargetType="ContentControl">
+                            <Setter Property="Width" Value="9"/>
+                            <Setter Property="Height" Value="9"/>
+                        </Style>
+                    </c1:C1TreeView.ExpandedIconStyle>
+                    <c1:C1TreeViewItem Margin="10" IsExpanded="True">
+                        <c1:C1TreeViewItem.Header>                            
+                                <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                    <Image HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="/TreeViewExplorer;component/Resources/Desktop.png"
+                                           Style="{StaticResource TreeIcon}" />
+                                    <TextBlock HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource TreeText}"
+                                               Text="{x:Static res:Resources.Desktop}" />                               
+                                </StackPanel>
+                        </c1:C1TreeViewItem.Header>
+                        <c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem.Header>
+                                <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                        <Image HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="/TreeViewExplorer;component/Resources/User.png"
+                                           Style="{StaticResource TreeIcon}" />
+                                        <TextBlock HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource TreeText}"
+                                               Text="{x:Static res:Resources.User}" />
+                                    </StackPanel>                                
+                            </c1:C1TreeViewItem.Header>
+                        </c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem.Header>
+                                <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                        <Image HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="/TreeViewExplorer;component/Resources/Folder.png"
+                                           Style="{StaticResource TreeIcon}" />
+                                        <TextBlock HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource TreeText}"
+                                               Text="{x:Static res:Resources.Public}" />
+                                    </StackPanel>                             
+                            </c1:C1TreeViewItem.Header>
+                            <c1:C1TreeViewItem>
+                                <c1:C1TreeViewItem.Header>                                    
+                                        <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                            <Image HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Source="/TreeViewExplorer;component/Resources/Folder.png"
+                                               Style="{StaticResource TreeIcon}" />
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Style="{StaticResource TreeText}"
+                                                   Text="{x:Static res:Resources.Favorites}" />
+                                        </StackPanel>                                   
+                                </c1:C1TreeViewItem.Header>
+                            </c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem>
+                                <c1:C1TreeViewItem.Header>                                   
+                                        <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                            <Image HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Source="/TreeViewExplorer;component/Resources/PublicDownloads.png"
+                                               Style="{StaticResource TreeIcon}" />
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Style="{StaticResource TreeText}"
+                                                   Text="{x:Static res:Resources.PublicDownloads}" />
+                                        </StackPanel>                                   
+                                </c1:C1TreeViewItem.Header>
+                            </c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem>
+                                <c1:C1TreeViewItem.Header>                                   
+                                        <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                            <Image HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Source="/TreeViewExplorer;component/Resources/PublicMusic.png"
+                                               Style="{StaticResource TreeIcon}" />
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Style="{StaticResource TreeText}"
+                                                   Text="{x:Static res:Resources.PublicMusic}" />
+                                        </StackPanel>                                  
+                                </c1:C1TreeViewItem.Header>
+                            </c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem>
+                                <c1:C1TreeViewItem.Header>                                   
+                                        <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                            <Image HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Source="/TreeViewExplorer;component/Resources/PublicPictures.png"
+                                               Style="{StaticResource TreeIcon}" />
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Style="{StaticResource TreeText}"
+                                                   Text="{x:Static res:Resources.PublicPictures}" />
+                                        </StackPanel>                                   
+                                </c1:C1TreeViewItem.Header>
+                            </c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem>
+                                <c1:C1TreeViewItem.Header>                                   
+                                        <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                            <Image HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Source="/TreeViewExplorer;component/Resources/PublicVideos.png"
+                                               Style="{StaticResource TreeIcon}" />
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Style="{StaticResource TreeText}"
+                                                   Text="{x:Static res:Resources.PublicVideos}" />
+                                        </StackPanel>                                   
+                                </c1:C1TreeViewItem.Header>
+                            </c1:C1TreeViewItem>
+                        </c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem IsExpanded="True">
+                            <c1:C1TreeViewItem.Header>                               
+                                    <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                        <Image HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="/TreeViewExplorer;component/Resources/Computer.png"
+                                           Style="{StaticResource TreeIcon}" />
+                                        <TextBlock HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource TreeText}"
+                                               Text="{x:Static res:Resources.Computer}" />
+                                    </StackPanel>                              
+                            </c1:C1TreeViewItem.Header>
+                            <c1:C1TreeViewItem IsExpanded="True">
+                                <c1:C1TreeViewItem.Header>                                    
+                                        <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                            <Image HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Source="/TreeViewExplorer;component/Resources/LocalDisk.png"
+                                               Style="{StaticResource TreeIcon}" />
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Style="{StaticResource TreeText}"
+                                                   Text="{x:Static res:Resources.LocalDisk}" />
+                                        </StackPanel>                                    
+                                </c1:C1TreeViewItem.Header>
+                                <c1:C1TreeViewItem>
+                                    <c1:C1TreeViewItem.Header>                                        
+                                            <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                                <Image HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Source="/TreeViewExplorer;component/Resources/Folder.png"
+                                                   Style="{StaticResource TreeIcon}" />
+                                                <TextBlock HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center"
+                                                       Style="{StaticResource TreeText}"
+                                                       Text="{x:Static res:Resources.LocalDisk}" />
+                                            </StackPanel>                                        
+                                    </c1:C1TreeViewItem.Header>
+                                </c1:C1TreeViewItem>
+                                <c1:C1TreeViewItem>
+                                    <c1:C1TreeViewItem.Header>                                        
+                                            <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                                <Image HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Source="/TreeViewExplorer;component/Resources/Folder.png"
+                                                   Style="{StaticResource TreeIcon}" />
+                                                <TextBlock HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center"
+                                                       Style="{StaticResource TreeText}"
+                                                       Text="{x:Static res:Resources.Users}" />
+                                            </StackPanel>                                       
+                                    </c1:C1TreeViewItem.Header>
+                                </c1:C1TreeViewItem>
+                                <c1:C1TreeViewItem IsExpanded="True">
+                                    <c1:C1TreeViewItem.Header>                                        
+                                            <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                                <Image HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Source="/TreeViewExplorer;component/Resources/Folder.png"
+                                                   Style="{StaticResource TreeIcon}" />
+                                                <TextBlock HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center"
+                                                       Style="{StaticResource TreeText}"
+                                                       Text="{x:Static res:Resources.Windows}" />
+                                            </StackPanel>                                       
+                                    </c1:C1TreeViewItem.Header>
+                                </c1:C1TreeViewItem>
+                            </c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem>
+                                <c1:C1TreeViewItem.Header>                                    
+                                        <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                            <Image HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Source="/TreeViewExplorer;component/Resources/DVDDrive.png"
+                                               Style="{StaticResource TreeIcon}" />
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Style="{StaticResource TreeText}"
+                                                   Text="{x:Static res:Resources.DVD}" />
+                                        </StackPanel>                                   
+                                </c1:C1TreeViewItem.Header>
+                            </c1:C1TreeViewItem>
+                        </c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem.Header>
+                                    <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                        <Image HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="/TreeViewExplorer;component/Resources/Network.png"
+                                           Style="{StaticResource TreeIcon}" />
+                                        <TextBlock HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource TreeText}"
+                                               Text="{x:Static res:Resources.Network}" />
+                                    </StackPanel>
+                            </c1:C1TreeViewItem.Header>
+                        </c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem.Header>
+                                    <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                        <Image HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="/TreeViewExplorer;component/Resources/ControlPanel.png"
+                                           Style="{StaticResource TreeIcon}" />
+                                        <TextBlock HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource TreeText}"
+                                               Text="{x:Static res:Resources.ControlPanel}" />
+                                    </StackPanel>
+                            </c1:C1TreeViewItem.Header>
+                        </c1:C1TreeViewItem>
+                        <c1:C1TreeViewItem>
+                            <c1:C1TreeViewItem.Header>
+                                    <StackPanel Margin="2,1,0,0" Orientation="Horizontal">
+                                        <Image HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="/TreeViewExplorer;component/Resources/RecycleBin.png"
+                                           Style="{StaticResource TreeIcon}" />
+                                        <TextBlock HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource TreeText}"
+                                               Text="{x:Static res:Resources.RecycleBin}" />
+                                    </StackPanel>
+                            </c1:C1TreeViewItem.Header>
+                        </c1:C1TreeViewItem>
+                    </c1:C1TreeViewItem>
+                </c1:C1TreeView>         
+    </Grid>
+</UserControl>

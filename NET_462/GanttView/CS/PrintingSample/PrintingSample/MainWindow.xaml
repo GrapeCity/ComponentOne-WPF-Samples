@@ -14,11 +14,11 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="5">
-            <CheckBox x:Name="_chkDates" Content="Print Specific Dates:" VerticalAlignment="Center" Click="_chkDates_Click"></CheckBox>
+            <CheckBox x:Name="_chkDates" Content="Print Specific Dates:" VerticalAlignment="Center" Click="_chkDates_Click" IsChecked="True"/>
             <TextBlock Text="     Start:   " VerticalAlignment="Center"/>
-            <c1:C1DatePicker x:Name="StartDate" IsEnabled="False" SelectedDate="2013/6/5"></c1:C1DatePicker>
+            <c1:C1DatePicker x:Name="StartDate" SelectedDate="2013/6/5"></c1:C1DatePicker>
             <TextBlock Text="     End: " VerticalAlignment="Center"/>
-            <c1:C1DatePicker x:Name="EndDate" IsEnabled="False" SelectedDate="2013/6/13"></c1:C1DatePicker>
+            <c1:C1DatePicker x:Name="EndDate" SelectedDate="2013/6/13"></c1:C1DatePicker>
             <TextBlock Text="    Margins: " VerticalAlignment="Center"/>
             <ComboBox x:Name="_cmbMargins" SelectedIndex="2" Width="80">
                 <ComboBoxItem Content="0.25 inch" />

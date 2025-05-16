@@ -13,82 +13,82 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>8.0.20241.192</Version>
+      <Version>8.0.20242.201</Version>
     </PackageReference>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>8.0.20241.192</Version>
+      <Version>8.0.20242.201</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>8.0.20241.192</Version>
+      <Version>8.0.20242.201</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DataFilter">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.BureauBlack">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.C1Blue">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Cosmopolitan">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.CosmopolitanDark">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.ExpressionDark">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.ExpressionLight">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Material">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.MaterialDark">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2007">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2010">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2013">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2016">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2016Black">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Ribbon">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.ShinyBlue">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.WhistlerBlue">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Toolbar">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />

@@ -17,28 +17,28 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>8.0.20241.192</Version>
+      <Version>8.0.20242.201</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>8.0.20241.192</Version>
+      <Version>8.0.20242.201</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DataFilter">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Input">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Maps">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />

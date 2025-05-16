@@ -18,7 +18,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <ComboBox ItemsSource="{Binding GroupSeparator}" SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupSeparator, Mode=TwoWay, Converter={StaticResource enumConverter}}" Width="200" Margin="10 0 20 0">
+            <ComboBox ItemsSource="{Binding GroupSeparator}" SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupSeparator, Mode=TwoWay, Converter={StaticResource enumConverter}}" Width="220" Margin="10 0 20 0">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
@@ -31,9 +31,9 @@
                 </ComboBox.ItemTemplate>
             </ComboBox>
             <ComboBox ItemsSource="{Binding ExpansionOptions}" SelectedValue="{Binding ElementName=flexChart, Path=AxisX.GroupVisibilityLevel, Mode=TwoWay, Converter={StaticResource groupVisibilityConverter}}"
-                      SelectedIndex="3" Width="200" Margin="10 0 20 0" />
+                      SelectedIndex="3" Width="210" Margin="10 0 20 0" />
             <ComboBox ItemsSource="{Binding MajorUnitOptions}" 
-                      SelectedValue="Default" Width="132" Margin="10 0 20 0" SelectionChanged="cbMajorUnit_SelectionChanged">
+                      SelectedValue="Default" Width="140" Margin="10 0 20 0" SelectionChanged="cbMajorUnit_SelectionChanged">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>

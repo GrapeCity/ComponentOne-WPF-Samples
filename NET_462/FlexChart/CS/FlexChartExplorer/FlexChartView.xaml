@@ -41,7 +41,7 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="lbSamples" Width="200" ItemsSource="{Binding AllItems}" />
+        <ListBox x:Name="lbSamples" Width="220" ItemsSource="{Binding AllItems}" />
         <Grid DataContext="{Binding ElementName=lbSamples, Path=SelectedValue}" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />

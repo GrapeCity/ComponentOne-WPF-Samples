@@ -1,0 +1,143 @@
+﻿<UserControl x:Class="MenuExplorer.DropDownMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400"
+             xmlns:res="clr-namespace:MenuExplorer.Properties">
+    <Grid>
+        <c1:C1DropDownButton DropDownWidth="176" HorizontalAlignment="Center" VerticalAlignment="Center" Header="Click here to see menu">
+            <c1:C1MenuList AutoClose="True" DetectBoundaries="True" BorderThickness="0">
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_File}" >
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_New}" >
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Project}">
+                            <c1:C1MenuItem.Icon>
+                                <Image Source="../Resources/Menu/newProject.png" />
+                            </c1:C1MenuItem.Icon>
+                        </c1:C1MenuItem>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_WebSite}">
+                            <c1:C1MenuItem.Icon>
+                                <Image Source="../Resources/Menu/newWebSite.png" />
+                            </c1:C1MenuItem.Icon>
+                        </c1:C1MenuItem>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_TeamProject}">
+                            <c1:C1MenuItem.Icon>
+                                <Image Source="../Resources/Menu/newTeamProject.png" />
+                            </c1:C1MenuItem.Icon>
+                        </c1:C1MenuItem>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_File}">
+                            <c1:C1MenuItem.Icon>
+                                <Image Source="../Resources/Menu/newFile.png" />
+                            </c1:C1MenuItem.Icon>
+                        </c1:C1MenuItem>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Open}" >
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Project}">
+                            <c1:C1MenuItem.Icon>
+                                <Image Source="../Resources/Menu/openProject.png" />
+                            </c1:C1MenuItem.Icon>
+                        </c1:C1MenuItem>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_WebSite}">
+                            <c1:C1MenuItem.Icon>
+                                <Image Source="../Resources/Menu/openWebSite.png" />
+                            </c1:C1MenuItem.Icon>
+                        </c1:C1MenuItem>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_File}">
+                            <c1:C1MenuItem.Icon>
+                                <Image Source="../Resources/Menu/openFile.png" />
+                            </c1:C1MenuItem.Icon>
+                        </c1:C1MenuItem>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Close}" />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_CloseSolution}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/closeSolution.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Save}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/save.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_SaveAll}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/saveAll.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_PageSetup}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/pageSetup.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Print}" >
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/print.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Exit}"  />
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Edit}" >
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Undo}" >
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/undo.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Redo}" >
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/redo.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Cut}" >
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/cut.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Copy}" >
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/copy.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Paste}" >
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/paste.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Delete}" >
+                        <c1:C1MenuItem.Icon>
+                            <Image Source="../Resources/Menu/delete.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Window}" >
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Document1}" IsCheckable="True" IsChecked="True"  />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Document2}" IsCheckable="True" IsChecked="True"  />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Document3}" IsCheckable="True"  />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Document4}" IsCheckable="True"  />
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive1}" GroupName="Exclusives" IsCheckable="True" IsChecked="True"  />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive2}" GroupName="Exclusives" IsCheckable="True" IsChecked="True"  />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive3}" GroupName="Exclusives" IsCheckable="True"  />
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Deep}" >
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Deep1}" >
+                        <c1:C1MenuItem Header="{x:Static res:Resources.Deep2}" >
+                            <c1:C1MenuItem Header="{x:Static res:Resources.Deep3}" >
+                                <c1:C1MenuItem Header="{x:Static res:Resources.Deep4}" >
+                                    <c1:C1MenuItem Header="{x:Static res:Resources.Deep5}" >
+                                    </c1:C1MenuItem>
+                                </c1:C1MenuItem>
+                            </c1:C1MenuItem>
+                        </c1:C1MenuItem>
+                    </c1:C1MenuItem>
+                </c1:C1MenuItem>
+            </c1:C1MenuList>
+        </c1:C1DropDownButton>
+    </Grid>
+</UserControl>

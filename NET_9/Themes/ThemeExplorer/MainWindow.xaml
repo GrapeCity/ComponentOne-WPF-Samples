@@ -1,0 +1,7 @@
+﻿<Window x:Class="ThemeExplorer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ThemeExplorer"
+        Height="600" Width="960" WindowState="Maximized" x:Name="root">
+        <local:Gallery  />
+</Window>

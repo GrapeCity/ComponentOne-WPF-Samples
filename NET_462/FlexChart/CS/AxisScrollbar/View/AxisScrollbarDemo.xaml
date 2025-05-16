@@ -16,17 +16,19 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Border BorderBrush="LightGray" BorderThickness="1">
-            <StackPanel Orientation="Horizontal" Margin="10">
-                <Image Source="/AxisScrollbar.4;component/Resources/C1.png" Width="80" Height="80"/>
-                <Grid Margin="20 0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <TextBlock Text="Axis Scrollbar" FontWeight="Bold" FontSize="25" VerticalAlignment="Bottom" />
-                    <TextBlock Text="{Binding Description}" Grid.Row="1" />
-                </Grid>
-            </StackPanel>
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image Margin="20" Source="/AxisScrollbar.4;component/Resources/C1.png" Width="80" Height="80" Grid.RowSpan="2"/>
+                <TextBlock Text="Axis Scrollbar" FontWeight="Bold" FontSize="25" VerticalAlignment="Bottom" Grid.Column="1"/>
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" />
+            </Grid>
         </Border>
         <c1:C1FlexChart x:Name="flexChart" RenderMode="Direct2D" ChartType="Line" BindingX="Date" ItemsSource="{Binding Data}" LegendPosition="None" Grid.Row="1" Margin="20">
             <c1:Series SeriesName="Series1" Binding="Series1" />

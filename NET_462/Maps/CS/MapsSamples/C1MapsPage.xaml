@@ -27,6 +27,7 @@
                         <c1:VirtualEarthAerialSource />
                         <c1:VirtualEarthRoadSource />
                         <c1:VirtualEarthHybridSource />
+                        <local:OpenStreetTileSource />
                     </ComboBox>
                 </StackPanel>
 

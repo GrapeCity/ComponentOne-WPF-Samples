@@ -11,6 +11,8 @@ namespace C1DataCollection101
     {
         public string Name { get; set; }
 
+        public string Title { get; set; }
+
         public int SampleViewType { get; set; }
 
         public string Description { get; set; }

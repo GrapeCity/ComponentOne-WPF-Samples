@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\C1Spell_en-US.dct" />
+    <None Remove="Resources\dickens.htm" />
+    <None Remove="Resources\images\01.jpg" />
+    <None Remove="Resources\images\02.jpg" />
+    <None Remove="Resources\images\c1logo.png" />
+    <None Remove="Resources\letter.htm" />
+    <None Remove="Resources\letter.rtf" />
+    <None Remove="Resources\simple.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C1Spell_en-US.dct" />
+    <Resource Include="Resources\dickens.htm" />
+    <Resource Include="Resources\images\01.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\images\02.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\images\c1logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\letter.rtf" />
+    <Resource Include="Resources\simple.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.ja.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RichTextBoxExplorer.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Menu">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Ribbon">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.RichTextBox">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.RichTextBox.Ribbon">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TabControl">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

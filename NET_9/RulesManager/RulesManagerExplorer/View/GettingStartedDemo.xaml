@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="RulesManagerExplorer.GettingStartedDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:local="clr-namespace:RulesManagerExplorer"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto"/>            
+        </Grid.ColumnDefinitions>      
+        <c1:C1RulesManager x:Name="rulesManager" Grid.Column="0" Margin="0,0,5,0">
+            <c1:C1RulesManager.Engine>
+                <c1:C1RulesEngine>
+                    <c1:RulesEngineColorScaleRule Ranges="[January],[February],[March],[April],[May],[June],[July],[August],[September],[October],[November],[December]">
+                        <c1:RulesEngineColorScaleStop Value="-30" Color="#5E58FF"/>
+                        <c1:RulesEngineColorScaleStop Value="30" Color="#FF6363"/>
+                    </c1:RulesEngineColorScaleRule>
+                </c1:C1RulesEngine>
+            </c1:C1RulesManager.Engine>
+        </c1:C1RulesManager>
+        <GridSplitter Grid.Column ="0" Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>
+        <local:TemperatureTableControl RulesEngine="{Binding ElementName=rulesManager, Path=Engine}" Grid.Column="1"/>
+        <c1:C1Expander Header="Settings" ExpandDirection="Left" ExpandIconAlignment="Left" HorizontalContentAlignment="Right" BorderThickness="0" Grid.Column="2">
+            <c1:C1PropertyGrid ShowResetButton="True" SelectedObject="{Binding ElementName=rulesManager}" ShowFilter="True" MinWidth="400"/>
+        </c1:C1Expander>
+    </Grid>
+</UserControl>

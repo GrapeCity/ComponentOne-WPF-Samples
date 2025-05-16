@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>FlexReportExplorer</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\C1NWind.xml.zip" />
+    <None Remove="Resources\FlexCommonTasks_XML.flxr" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Remove="View\OnDemand.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="C1-ball.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\C1NWind.xml.zip" />
+    <EmbeddedResource Include="Resources\FlexCommonTasks_XML.flxr" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.DataCollection" Version="9.0.20242.209" />
+    <PackageReference Include="C1.WPF.Core">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Report">
+      <Version>9.0.20251.1069</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Export.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FlexReportExplorer.gclicx" />
+  </ItemGroup>
+</Project>

@@ -137,31 +137,31 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.C1Chart">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Docking">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Olap">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2013">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Toolbar">
-      <Version>4.6.20242.858</Version>
+      <Version>4.6.20251.877</Version>
     </PackageReference>
     <PackageReference Include="C1.Zip">
       <Version>8.0.20241.6</Version>

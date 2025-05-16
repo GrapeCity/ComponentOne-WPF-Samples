@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfViewerSamples2010.4", "PdfViewerSamples2010.4.csproj", "{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C69A9B-C98B-4812-AA8C-C17EB881A25D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ColorPickerExplorer.Brushes" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style x:Key="PreviewColor" TargetType="c1:C1CheckeredBorder">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+        <c1:ColorConverter x:Key="colorConverter"/>
+    </UserControl.Resources>
+    <!-- Control instance -->
+    <c1:C1ScrollViewer>
+        <Grid HorizontalAlignment="Left" Margin="8">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="C1ColorEditor" Style="{StaticResource LabelStyle}"/>
+            <c1:C1ColorEditor x:Name="colorEditor" MinWidth="250" Grid.Row="1"/>
+            <c1:C1CheckeredBorder Background="{Binding ElementName=colorEditor,Path=Color,Converter={StaticResource colorConverter}}" Grid.Row="1" Grid.Column="1" Style="{StaticResource PreviewColor}"/>
+
+            <TextBlock Text="C1SolidBrushEditor" Style="{StaticResource LabelStyle}" Grid.Row="2"/>
+            <c1:C1SolidBrushEditor x:Name="solidEditor" MinWidth="250" Grid.Row="3"/>
+            <c1:C1CheckeredBorder Background="{Binding ElementName=solidEditor,Path=Brush}" Grid.Row="3" Grid.Column="1" Style="{StaticResource PreviewColor}"/>
+
+            <TextBlock Text="C1GradientBrushEditor" Style="{StaticResource LabelStyle}" Grid.Row="4"/>
+            <c1:C1GradientBrushEditor x:Name="gradientEditor" MinWidth="250" Grid.Row="5"/>
+            <c1:C1CheckeredBorder Background="{Binding ElementName=gradientEditor,Path=Brush}" Grid.Row="5" Grid.Column="1" Style="{StaticResource PreviewColor}"/>
+
+            <TextBlock Text="C1BrushEditor" Style="{StaticResource LabelStyle}" Grid.Row="6"/>
+            <c1:C1BrushEditor x:Name="brushEditor" MinWidth="250" Grid.Row="7"/>
+            <c1:C1CheckeredBorder Background="{Binding ElementName=brushEditor,Path=Brush}" Grid.Row="7" Grid.Column="1" Style="{StaticResource PreviewColor}"/>
+
+            <TextBlock Text="C1BrushPicker" Style="{StaticResource LabelStyle}" Grid.Row="8"/>
+            <c1:C1BrushPicker x:Name="brushPicker" Height="26" Width="60" Grid.Row="9"/>
+            <c1:C1CheckeredBorder Background="{Binding ElementName=brushPicker,Path=SelectedBrush}" Grid.Row="9" Grid.Column="1" Style="{StaticResource PreviewColor}"/>
+        </Grid>
+    </c1:C1ScrollViewer>
+</UserControl>

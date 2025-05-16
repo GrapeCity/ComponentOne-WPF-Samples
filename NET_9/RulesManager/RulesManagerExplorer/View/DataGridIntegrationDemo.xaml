@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="RulesManagerExplorer.DataGridIntegrationDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:local="clr-namespace:RulesManagerExplorer"  
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:CountryConverter x:Key="CountryConverter"/>
+        <local:DataGridValueToBrushConverter x:Key="valueConverter" />
+        <c1:C1RulesEngine x:Key="rulesEngine" RulesChanged="C1RulesEngine_RulesChanged">
+            <c1:RulesEngineSegmentsRule Ranges="[OrderTotal]">
+                <c1:RulesEngineSegment Value="500.00">
+                    <c1:RulesEngineStyle Background="#FFFDE7E9" Foreground="Red"/>
+                </c1:RulesEngineSegment>
+                <c1:RulesEngineSegment Value="3000.00">
+                    <c1:RulesEngineStyle Background="#FFF2F1A9" Foreground="Black"/>
+                </c1:RulesEngineSegment>
+                <c1:RulesEngineSegment>
+                    <c1:RulesEngineStyle Background="#FFDFF6DD" Foreground="Green"/>
+                </c1:RulesEngineSegment>
+            </c1:RulesEngineSegmentsRule>
+        </c1:C1RulesEngine>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="grid" AutoGenerateColumns="False" Grid.Column="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding FirstName}" Header="First Name"/>
+                <DataGridTextColumn Binding="{Binding LastName}" Header="Last Name"/>
+                <DataGridTextColumn Binding="{Binding OrderTotal}" Header="Order Total"/>
+                <DataGridTextColumn Binding="{Binding OrderCount}" Header="Order Count"/>
+                <DataGridTextColumn Binding="{Binding CountryId, Converter={StaticResource CountryConverter}}" Header="Country"/>
+                <DataGridTextColumn Binding="{Binding LastOrderDate, StringFormat={}\{0:dd/MM/yyyy\}}" Header="Last Order Date"/>
+                <DataGridTextColumn Binding="{Binding LastOrderDate, StringFormat={}\{0:hh:mm\}}" Header="Last Order Time"/>
+            </DataGrid.Columns>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="Background">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=DataGrid}" />
+                                <Binding Source="{StaticResource rulesEngine}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Foreground">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="Foreground">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=DataGrid}" />
+                                <Binding Source="{StaticResource rulesEngine}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+        <c1:C1Expander Header="RulesManager" ExpandDirection="Left" ExpandIconAlignment="Left" HorizontalContentAlignment="Right" BorderThickness="0" Grid.Column="1">
+            <c1:C1RulesManager x:Name="rulesManager" Engine="{StaticResource rulesEngine}" Width="400"/>
+        </c1:C1Expander>
+    </Grid>
+</UserControl>

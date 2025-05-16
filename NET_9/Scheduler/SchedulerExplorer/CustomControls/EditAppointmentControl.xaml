@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="SchedulerExplorer.EditAppointmentControl" Loaded="EditAppointmentControl_Loaded" x:Name="root" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:c1sched="clr-namespace:C1.WPF.Schedule;assembly=C1.WPF.Schedule" 
+             xmlns:core="clr-namespace:C1.WPF.Core;assembly=C1.WPF.Core"
+             xmlns:input="clr-namespace:C1.WPF.Input;assembly=C1.WPF.Input"
+             xmlns:dateEdit="clr-namespace:C1.WPF.DateTimeEditors;assembly=C1.WPF.DateTimeEditors">
+    <Grid x:Name="LayoutRoot" MinHeight="320" MinWidth="400">
+        <Grid.Resources>
+            <DataTemplate x:Key="BaseObjectItemPictTextTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Border Name="imageBorder" BorderBrush="Black" BorderThickness="1" CornerRadius="2" Height="15" Width="15" Background="{Binding Brush.Brush}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" Margin="3"/>
+
+                    <TextBlock Grid.Column="1" Text="{Binding Text}" VerticalAlignment="Center" />
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ToolBarTray Grid.Row="0" Background="Transparent" >
+            <ToolBar Band="1" BandIndex="1" Grid.Row="0" IsTabStop="False" Background="Transparent">
+                <core:C1Button x:Name="PART_DialogSaveButton" Click="PART_DialogSaveButton_Click" 
+                        VerticalAlignment="Stretch" VerticalContentAlignment="Center" IsTabStop="False" BorderThickness="0">
+                    <TextBlock Margin="4,0">
+                        <Run FontFamily="Segoe UI Symbol" FontSize="16" Text="&#xE105;" BaselineAlignment="Center" />
+ 				    	<AccessText>
+				    		<AccessText.Text>
+								<c1sched:SchedulerLoc Key="EditAppointment:PART_DialogSaveButton_AccessText" DefaultValue="_Save and Close" />
+							</AccessText.Text>
+						</AccessText>
+                    </TextBlock>
+                    <core:C1Button.ToolTip>
+                        <TextBlock>
+							<TextBlock.Text>
+								<c1sched:SchedulerLoc Key="EditAppointment:PART_DialogSaveButton_Tooltip" DefaultValue="Save and Close" />
+							</TextBlock.Text>
+                        </TextBlock>
+                    </core:C1Button.ToolTip>
+                </core:C1Button>
+                <core:C1Button x:Name="saveAsButton" Click="saveAsButton_Click" 
+                        CommandTarget="{Binding ParentCollection.ParentStorage.ScheduleStorage.Scheduler}" 
+                        CommandParameter="{Binding}" Command="c1sched:C1Scheduler.ExportCommand"
+                        VerticalAlignment="Stretch" VerticalContentAlignment="Center" IsTabStop="False" BorderThickness="0">
+                    <TextBlock Margin="4,0">
+						<AccessText>
+							<AccessText.Text>
+								<c1sched:SchedulerLoc Key="EditAppointment:saveAsButton_AccessText" DefaultValue="Save _As..." />
+							</AccessText.Text>
+						</AccessText>
+                    </TextBlock>
+                    <core:C1Button.ToolTip>
+                        <TextBlock>
+							<TextBlock.Text>
+								<c1sched:SchedulerLoc Key="EditAppointment:saveAsButton_Tooltip" DefaultValue="Save As" />
+							</TextBlock.Text>
+                        </TextBlock>
+                    </core:C1Button.ToolTip>
+                </core:C1Button>
+                <Separator />
+                <core:C1Button x:Name="reccButton" CommandTarget="{Binding ParentCollection.ParentStorage.ScheduleStorage.Scheduler}"
+                        CommandParameter="{Binding ElementName=root}" Command="c1sched:C1Scheduler.EditRecurrenceDialogCommand"
+                        VerticalAlignment="Stretch" VerticalContentAlignment="Center" IsTabStop="False" BorderThickness="0">
+                    <TextBlock Margin="4,0">
+                        <Run FontFamily="Segoe UI Symbol" FontSize="12" Text="&#xE117;" BaselineAlignment="Center" />
+						<AccessText Text="{c1sched:SchedulerLoc Key=EditAppointment:reccButton_AccessText, DefaultValue=_Recurrence...}" />
+                    </TextBlock>
+                    <core:C1Button.ToolTip>
+                        <TextBlock Text="{c1sched:SchedulerLoc Key=EditAppointment:reccButton_ToolTip, DefaultValue=Recurrence}" />
+                    </core:C1Button.ToolTip>
+                </core:C1Button>
+                <Separator />
+                <core:C1ToggleButton Name="highImportance" IsTabStop="False" VerticalAlignment="Stretch" Width="32" HorizontalContentAlignment="Center" BorderThickness="0"
+                              IsChecked="{Binding Path=Importance, Mode=TwoWay, Converter={x:Static c1sched:ImportanceEnumMemberConverter.Default}, ConverterParameter=High}">
+                    <TextBlock FontFamily="Segoe UI Symbol" FontSize="16" VerticalAlignment="Center" Text="&#xE171;" Foreground="IndianRed"/>
+                    <core:C1ToggleButton.ToolTip>
+                        <TextBlock>
+								<TextBlock.Text>
+									<c1sched:SchedulerLoc Key="EditAppointment:highImportance_ToolTip" DefaultValue="High Importance" />
+								</TextBlock.Text>
+                        </TextBlock>
+                    </core:C1ToggleButton.ToolTip>
+                </core:C1ToggleButton>
+                <core:C1ToggleButton Name="lowImportance" IsTabStop="False" VerticalAlignment="Stretch" Width="32" HorizontalContentAlignment="Center" BorderThickness="0"
+                              IsChecked="{Binding Path=Importance, Mode=TwoWay, Converter={x:Static c1sched:ImportanceEnumMemberConverter.Default}, ConverterParameter=Low}">
+                    <TextBlock FontFamily="Segoe UI Symbol" FontSize="18" VerticalAlignment="Center" Text="&#x1F82B;" Foreground="Blue" />
+                    <core:C1ToggleButton.ToolTip>
+                        <TextBlock>
+								<TextBlock.Text>
+									<c1sched:SchedulerLoc Key="EditAppointment:lowImportance_ToolTip" DefaultValue="Low Importance" />
+								</TextBlock.Text>
+                        </TextBlock>
+                    </core:C1ToggleButton.ToolTip>
+                </core:C1ToggleButton>
+                <Separator />
+                <core:C1Button Name="deleteButton" CommandTarget="{Binding ParentCollection.ParentStorage.ScheduleStorage.Scheduler}"
+                        CommandParameter="{Binding Tag}" Command="c1sched:C1Scheduler.DeleteAppointmentCommand"
+                        VerticalAlignment="Stretch" VerticalContentAlignment="Center" IsTabStop="False" BorderThickness="0">
+                    <TextBlock FontFamily="Segoe UI Symbol" FontSize="16" Text="&#xE106;" Margin="4,0"/>
+                    <core:C1Button.ToolTip>
+                        <TextBlock Text="{c1sched:SchedulerLoc Key=EditAppointment:deleteButton_ToolTip, DefaultValue=Delete}" />
+                    </core:C1Button.ToolTip>
+                </core:C1Button>
+            </ToolBar>
+        </ToolBarTray>
+        <Border Grid.Row="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Margin="5,5,5,0" Padding="5" BorderThickness="0,0,0,0.5">
+            <Grid Margin="5, 0, 5, 5">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <!-- Subject -->
+                <Label Foreground="{Binding Foreground, ElementName=root}" Target="{Binding ElementName=subject}" VerticalAlignment="Center" Margin="10,2,0,2" HorizontalAlignment="Left" Content="{c1sched:SchedulerLoc Key=EditAppointment:subject, DefaultValue=Sub_ject:}" />
+                <input:C1TextBox Foreground="{Binding Foreground, ElementName=root}" Height="27" x:Name="subject" TabIndex="0" Padding="2" 
+                         Text="{Binding Subject, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextChanged="subject_TextChanged"
+                         Grid.Column="1" Grid.ColumnSpan="3" MaxLength="255" VerticalAlignment="Center" Margin="10,2,0,2" />
+                <!-- Location -->
+                <Label Foreground="{Binding Foreground, ElementName=root}" VerticalAlignment="Center" Margin="10,2,0,2" Grid.Row="1" Target="{Binding ElementName=location}" HorizontalAlignment="Left" Content="{c1sched:SchedulerLoc Key=EditAppointment:location, DefaultValue=_Location:}" />
+                <input:C1TextBox Foreground="{Binding Foreground, ElementName=root}" Height="27" TabIndex="1" x:Name="location" Padding="2" Text="{Binding Location, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="1" MaxLength="255"
+                         VerticalAlignment="Center" Margin="10,2,0,2" />
+                <!-- Label -->
+                <Label Foreground="{Binding Foreground, ElementName=root}" VerticalAlignment="Center" Margin="10,2,0,2" Grid.Row="1" Target="{Binding ElementName=label}" Grid.Column="2" HorizontalAlignment="Left" Content="{c1sched:SchedulerLoc Key=EditAppointment:label, DefaultValue=La_bel:}" />
+                <input:C1ComboBox Grid.Row="1" Grid.Column="3" TabIndex="2" x:Name="label" SelectionMode="Single" IsEditable="False"
+                          ItemTemplate="{StaticResource BaseObjectItemPictTextTemplate}"
+                          ItemsSource="{Binding ParentCollection.ParentStorage.ScheduleStorage.LabelStorage.Labels}" SelectedItem="{Binding Path=Label, Mode=TwoWay}"
+                          MinWidth="140" Padding="0" VerticalAlignment="Center" Margin="10,2,0,2" Height="27" />
+           </Grid>
+        </Border>
+        <!-- Start/End time -->
+        <Border Grid.Row="2" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Margin="5" Padding="5" BorderThickness="0,0,0,0.5">
+            <Grid Margin="0,0,0,5">
+                <Grid Name="startEndPanel">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <!-- Start -->
+                    <Label Foreground="{Binding Foreground, ElementName=root}"  VerticalAlignment="Center" Margin="10,2,0,2" Grid.Row="0" HorizontalAlignment="Left" Target="{Binding ElementName=startCalendar}">
+                        <c1sched:SchedulerLoc Key="EditAppointment:startTime" DefaultValue="Start time:" />
+                    </Label>
+                    <dateEdit:C1DateTimePicker Height="27" x:Name="startCalendar" VerticalAlignment="Center" Margin="10,2,0,2" Padding="1" Grid.Column="1" FirstDayOfWeek="{Binding Path=ParentCollection.ParentStorage.ScheduleStorage.Scheduler.CalendarHelper.WeekStart}" TimeFormat="ShortTime" DateFormat="Long" TimeIncrement="0:15" DateTime="{Binding Start, Mode=TwoWay}" />
+                    <!-- End -->
+                    <Label Foreground="{Binding Foreground, ElementName=root}" VerticalAlignment="Center" Margin="10,2,0,2" Grid.Row="1" HorizontalAlignment="Left" Target="{Binding ElementName=endCalendar}">
+                        <c1sched:SchedulerLoc Key="EditAppointment:endTime" DefaultValue="End time:" />
+                    </Label>
+                    <dateEdit:C1DateTimePicker Height="27" x:Name="endCalendar" VerticalAlignment="Center" Margin="10,2,0,2" Padding="1" DateTimeChanged="endCalendar_DateTimeChanged" FirstDayOfWeek="{Binding Path=ParentCollection.ParentStorage.ScheduleStorage.Scheduler.CalendarHelper.WeekStart}" TimeFormat="ShortTime" DateFormat="Long" TimeIncrement="0:15" Grid.Column="1" Grid.Row="1" />
+                    <!-- All Day -->
+                    <core:C1CheckBox Grid.Column="2" HorizontalAlignment="Left" x:Name="chkAllDay" Checked="chkAllDay_Checked" Unchecked="chkAllDay_Unchecked" VerticalAlignment="Center" Margin="10,2,0,2" IsChecked="{Binding AllDayEvent, Mode=TwoWay}">
+                        <c1sched:SchedulerLoc Key="EditAppointment:allDayEvent" DefaultValue="All da_y event" />
+                    </core:C1CheckBox>
+               </Grid>
+                <!-- recurrence info -->
+                <Grid Name="recurrenceInfoPanel">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Foreground="{Binding Foreground, ElementName=root}" Grid.Column="0" VerticalAlignment="Center">
+						<c1sched:SchedulerLoc Key="EditAppointment:recurrence" DefaultValue="Recurrence: " />
+                    </Label>
+                    <Label Foreground="{Binding Foreground, ElementName=root}" Name="recDescription" Grid.Column="1">
+                        <TextBlock Text="{Binding PatternDescription, ElementName=root}" TextWrapping="Wrap" />
+                    </Label>
+                </Grid>
+            </Grid>
+        </Border>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10,0">
+            <core:C1CheckBox x:Name="reminderSet" IsChecked="{Binding ReminderSet, Mode=TwoWay}" VerticalAlignment="Center" Margin="10,2,0,2" Content="{c1sched:SchedulerLoc Key=EditAppointment:reminderSet, DefaultValue=Re_minder:}" />
+            <dateEdit:C1TimeEditor Height="27" Format="TimeSpan" Padding="1" VerticalAlignment="Center" Margin="10,2,0,2" IsEnabled="{Binding Path=IsChecked, ElementName=reminderSet}" Increment="00:05" AllowNull="False" Minimum="0:00" Maximum="14.00:00" CycleChangesOnBoundaries="False" Value="{Binding Path=ReminderTimeBeforeStart, Mode=TwoWay}" />
+            <Label Foreground="{Binding Foreground, ElementName=root}" VerticalAlignment="Center" Margin="30, 2, 0, 2" Target="{Binding ElementName=status}">
+                <c1sched:SchedulerLoc Key="EditAppointment:showTimeAs" DefaultValue="Sho_w time as:" />
+            </Label>
+            <input:C1ComboBox x:Name="status" ItemTemplate="{StaticResource BaseObjectItemPictTextTemplate}" Height="27"
+                      SelectionMode="Single" IsEditable="False"
+                      ItemsSource="{Binding ParentCollection.ParentStorage.ScheduleStorage.StatusStorage.Statuses}" SelectedItem="{Binding Path=BusyStatus, Mode=TwoWay}"
+                      MinWidth="140" Padding="0" VerticalAlignment="Center" Margin="10,2,0,2" />
+        </StackPanel>
+        <Border Grid.Row="4">
+            <input:C1TextBox Foreground="{Binding Foreground, ElementName=root}" MinHeight="55" Margin="4" Padding="2" x:Name="body" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Text="{Binding Body, Mode=TwoWay}" AcceptsReturn="true" />
+        </Border>
+        <Border Grid.Row="5" Padding="4">
+            <UniformGrid x:Name="editGrid" Columns="2">
+                <!-- Resources -->
+                <c1sched:EditCollectionControl x:Name="resources" ButtonText="{c1sched:SchedulerLoc Key=EditAppointment:resourcesButton, DefaultValue=R_esources...}"
+                                               LabelText="{c1sched:SchedulerLoc Key=EditAppointment:resourceLabel, DefaultValue=Resource:}"/>
+                <!-- Categories -->
+                <c1sched:EditCollectionControl x:Name="categories" ButtonText="{c1sched:SchedulerLoc Key=EditAppointment:categoriesButton, DefaultValue=Cate_gories...}"
+                                               LabelText="{c1sched:SchedulerLoc Key=EditAppointment:categoryLabel, DefaultValue=Category:}" />
+                <!-- Contacts -->
+                <c1sched:EditCollectionControl x:Name="contacts" ButtonText="{c1sched:SchedulerLoc Key=EditAppointment:contactsButton, DefaultValue=_Contacts...}"
+                                               LabelText="{c1sched:SchedulerLoc Key=EditAppointment:contactLabel, DefaultValue=Contact:}" />
+                <core:C1CheckBox IsChecked="{Binding Path=Private, Mode=TwoWay}" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Right"
+                          Content="{c1sched:SchedulerLoc Key=EditAppointment:private_, DefaultValue=_Private}" />
+            </UniformGrid>
+        </Border>
+    </Grid>
+</UserControl>

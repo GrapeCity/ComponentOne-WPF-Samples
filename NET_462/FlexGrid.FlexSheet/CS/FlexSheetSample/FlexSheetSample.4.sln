@@ -23,9 +23,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{08b6110e-e044-4a49-b275-e28629fcec32}*SharedItemsImports = 5
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
-		..\..\..\..\Shared\Pdf.Net\Pdf.Net.projitems*{483bf9dc-0011-471b-8714-1ccb1754b8ee}*SharedItemsImports = 5
 		..\..\..\..\Shared\Pdf.Net\Pdf.Net.projitems*{79e5087a-ed05-482c-a8ad-b3906674daa6}*SharedItemsImports = 13
-		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{8e5db594-dfc1-436d-b203-b3049044d905}*SharedItemsImports = 5
 		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{e53bee51-1809-4253-8f3b-a83136c99022}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

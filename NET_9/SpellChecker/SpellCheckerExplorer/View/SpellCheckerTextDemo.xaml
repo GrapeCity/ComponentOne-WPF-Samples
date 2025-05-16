@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="SpellCheckerExplorer.SpellCheckerTextDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:properties="clr-namespace:SpellCheckerExplorer.Properties"
+             mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- title -->
+            <RowDefinition Height="Auto" />
+            <!-- buttons -->
+            <RowDefinition Height="*"/>
+            <!-- textBoxes -->
+            <RowDefinition Height="80"/>
+            <!-- textBoxOut -->
+        </Grid.RowDefinitions>
+
+        <!-- ToolStrip buttons -->
+        <c1:C1ToolStrip Grid.Row="1" ToolIconSize="16" Overflow="None" Background="Transparent" GroupCornerRadius="2">
+            <c1:C1ToolStrip.ToolStyle>
+                <Style TargetType="c1:C1Tool">
+                    <Setter Property="BorderThickness" Value="1"/>
+                </Style>
+            </c1:C1ToolStrip.ToolStyle>
+            <c1:C1ButtonTool x:Name="_btnBatch" Label="{x:Static properties:Resources.BatchCheck}" Click="_btnBatch_Click" >
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/batchcheck.png"/>
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1ButtonTool x:Name="_btnModal" Label="{x:Static properties:Resources.SpellCheck}" Click="_btnModal_Click">
+                <c1:C1ButtonTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1PathIcon Data="M4.4,5.8h-2L1.9,6.9H1l2-4.9h0.8l2,4.9H4.8L4.4,5.8z M2.6,5.1h1.5l-0.8-2L2.6,5.1z M6.4,6.9V2.1h1.8c0.6,0,1,0.1,1.4,0.3
+	c0.3,0.2,0.5,0.5,0.5,1C10,3.6,9.9,3.8,9.8,4C9.6,4.2,9.5,4.3,9.2,4.4c0.3,0.1,0.5,0.2,0.7,0.4C10,5,10.1,5.2,10.1,5.5
+	c0,0.5-0.2,0.8-0.5,1.1C9.3,6.8,8.9,6.9,8.3,6.9H6.4z M7.3,4.1h0.9c0.3,0,0.5-0.1,0.7-0.2C9,3.8,9.1,3.6,9.1,3.4
+	C9.1,3.2,9,3,8.8,2.9C8.7,2.8,8.5,2.7,8.2,2.7H7.3V4.1z M7.3,4.7v1.5h1c0.3,0,0.5-0.1,0.7-0.2c0.2-0.1,0.2-0.3,0.2-0.5
+	c0-0.5-0.3-0.8-0.8-0.8H7.3z M15,5.3c-0.1,0.5-0.3,0.9-0.6,1.2C14,6.9,13.5,7,12.9,7c-0.4,0-0.8-0.1-1.1-0.3s-0.6-0.4-0.7-0.8
+	c-0.2-0.3-0.3-0.7-0.3-1.2V4.3c0-0.5,0.1-0.9,0.3-1.2c0.2-0.4,0.4-0.6,0.8-0.8C12.2,2.1,12.6,2,13,2c0.6,0,1,0.1,1.4,0.4
+	c0.4,0.3,0.6,0.7,0.6,1.2h-0.9c0-0.3-0.2-0.6-0.3-0.8c-0.2-0.2-0.4-0.2-0.8-0.2c-0.4,0-0.7,0.1-0.9,0.4c-0.2,0.3-0.3,0.7-0.3,1.2
+	v0.4c0,0.5,0.1,0.9,0.3,1.2c0.2,0.3,0.5,0.4,0.9,0.4c0.4,0,0.6-0.1,0.8-0.2c0.2-0.1,0.3-0.4,0.3-0.7H15z M12.9,8.1l-0.7-0.7
+	l-6.1,6.1l-2.8-2.8l-0.7,0.7l3.6,3.6L12.9,8.1z"/>
+                    </c1:C1IconTemplate>
+                </c1:C1ButtonTool.IconTemplate>
+            </c1:C1ButtonTool>
+            <c1:C1DropDownTool Description="{x:Static properties:Resources.SpellDialog}">
+                <c1:C1DropDownTool.IconTemplate>
+                    <c1:C1IconTemplate>
+                        <c1:C1BitmapIcon Source="../Resources/spelldialog.png" />
+                    </c1:C1IconTemplate>
+                </c1:C1DropDownTool.IconTemplate>
+                <c1:C1DropDownTool.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="8">
+                            <TextBlock Text="{x:Static properties:Resources.SpellDialogOptions}" />
+                            <c1:C1RadioButton Content="{x:Static properties:Resources.BuiltIn}" IsChecked="True" Checked="RadioButton_Checked" />
+                            <c1:C1RadioButton Content="{x:Static properties:Resources.Customized}" Checked="RadioButton_Checked" />
+                            <c1:C1RadioButton Content="{x:Static properties:Resources.DefaultStyle}" Checked="RadioButton_Checked" />
+                            <c1:C1RadioButton Content="{x:Static properties:Resources.WordStyle}" Checked="RadioButton_Checked" />
+                        </StackPanel>
+                    </DataTemplate>
+                </c1:C1DropDownTool.ContentTemplate>
+            </c1:C1DropDownTool>
+        </c1:C1ToolStrip>
+
+        <!-- regular textbox -->
+        <TextBox x:Name="_plainTextBox"  AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" LostFocus="_plainTextBox_LostFocus" Grid.Row="2" />
+        
+        <!-- event log tracer -->
+        <TextBox x:Name="_outputTextBox" Margin="0 10 0 0" TextWrapping="Wrap" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Grid.Row="3" ToolTipService.ToolTip="{x:Static properties:Resources.Outputpane}" />
+    </Grid>
+</UserControl>

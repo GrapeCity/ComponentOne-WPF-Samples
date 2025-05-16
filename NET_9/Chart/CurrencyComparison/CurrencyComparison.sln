@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyComparison", "CurrencyComparison.csproj", "{5F6175A4-BB69-404F-AB15-733E6CC79E8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6175A4-BB69-404F-AB15-733E6CC79E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {405A2844-219F-40CD-8ECF-9CD7E8760FC1}
+	EndGlobalSection
+EndGlobal

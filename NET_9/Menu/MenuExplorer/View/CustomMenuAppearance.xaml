@@ -1,0 +1,245 @@
+﻿<UserControl x:Class="MenuExplorer.CustomMenuAppearance"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400"
+             xmlns:res="clr-namespace:MenuExplorer.Properties">
+    <UserControl.Resources>
+        <Style TargetType="Image" x:Key="MenuIcon">
+        </Style>
+        <Style x:Name="ClassicStyle" TargetType="c1:C1Menu">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="#FFF2F2F2" Offset="0"/>
+                            <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                            <GradientStop Color="#FFDCDCDC" Offset="0.5"/>
+                            <GradientStop Color="#FFD0D0D0" Offset="1"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#FF909090"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="1"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="PopupStyle">
+                <Setter.Value>
+                    <Style TargetType="c1:C1Border">
+                        <Setter Property="Background" Value="#FFF7F7F7"/>
+                        <Setter Property="BorderBrush" Value="#FF909090"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="CornerRadius" Value="1"/>
+                        <Setter Property="Padding" Value="0"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemStyle">
+                <Setter.Value>
+                    <Style TargetType="c1:C1MenuItem">
+                        <Setter Property="Padding" Value="5,2"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="SubMenuStyle">
+                <Setter.Value>
+                    <Style TargetType="c1:C1MenuList">
+                        <Setter Property="ItemStyle">
+                            <Setter.Value>
+                                <Style TargetType="c1:C1MenuItem">
+                                    <Setter Property="IsIndented" Value="True"/>
+                                    <Setter Property="IndentBackground" Value="#FFEFEEEE"/>
+                                    <Setter Property="Padding" Value="5,2"/>
+                                </Style>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="HighlightedBackground" >
+                            <Setter.Value>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStop Color="#FFE7F4FB" Offset="0"/>
+                                        <GradientStop Color="#FFC3E3F4" Offset="1"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="OpenedBackground">
+                            <Setter.Value>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStop Color="#FFE2F4FE" Offset="0"/>
+                                        <GradientStop Color="#FFC5E9FE" Offset="1"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="SeparatorStyle">
+                <Setter.Value>
+                    <Style TargetType="c1:C1MenuSeparator">
+                        <Setter Property="IsIndented" Value="True"/>
+                        <Setter Property="IndentBackground" Value="#FFEFEEEE"/>
+                        <Setter Property="Padding" Value="3 0 0 0"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="GroupStyle">
+                <Setter.Value>
+                    <Style TargetType="c1:C1MenuGroup">
+                        <Setter Property="IsIndented" Value="True"/>
+                        <Setter Property="IndentBackground" Value="#FFEFEEEE"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="OpenIconStyle">
+                <Setter.Value>
+                    <Style TargetType="ContentControl">
+                        <Setter Property="Width" Value="7"/>
+                        <Setter Property="Height" Value="7"/>
+                        <Setter Property="Margin" Value="2,2,4,2"/>
+                        <Setter Property="ContentTemplate" Value="{x:Static c1:C1IconTemplate.TriangleRight}"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <c1:C1DockPanel LastChildFill="False">
+        <!-- Visual Studio menu sample -->
+        <c1:C1Menu x:Name="VisualStudioMenu" Margin="8" c1:C1DockPanel.Dock="Top" AutoClose="True" DetectBoundaries="True">
+            <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_File}" Click="C1MenuItem_Click">
+                <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_New}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Project}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/newProject.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_WebSite}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/newWebSite.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_TeamProject}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/newTeamProject.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_File}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/newFile.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Open}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Project}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/openProject.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_WebSite}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/openWebSite.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_File}">
+                        <c1:C1MenuItem.Icon>
+                            <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/openFile.png" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                </c1:C1MenuItem>
+                <c1:C1MenuSeparator />
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Close}" />
+                <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_CloseSolution}">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/closeSolution.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuSeparator />
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Save}">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/save.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_SaveAll}">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/saveAll.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuSeparator />
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_PageSetup}">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/pageSetup.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Print}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/print.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuSeparator />
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Exit}" Click="C1MenuItem_Click" />
+            </c1:C1MenuItem>
+            <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Edit}" Click="C1MenuItem_Click">
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Undo}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/undo.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Redo}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/redo.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuSeparator />
+                <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Cut}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/cut.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Copy}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/copy.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Paste}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/paste.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Delete}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem.Icon>
+                        <Image Style="{StaticResource MenuIcon}" Source="../Resources/Menu/delete.png" />
+                    </c1:C1MenuItem.Icon>
+                </c1:C1MenuItem>
+            </c1:C1MenuItem>
+            <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Window}" Click="C1MenuItem_Click">
+                <c1:C1MenuItem Header="{x:Static res:Resources.Document1}" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
+                <c1:C1MenuItem Header="{x:Static res:Resources.Document2}" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
+                <c1:C1MenuItem Header="{x:Static res:Resources.Document3}" IsCheckable="True" Click="C1MenuItem_Click" />
+                <c1:C1MenuItem Header="{x:Static res:Resources.Document4}" IsCheckable="True" Click="C1MenuItem_Click" />
+                <c1:C1MenuSeparator />
+                <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive1}" GroupName="Exclusives" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
+                <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive2}" GroupName="Exclusives" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
+                <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive3}" GroupName="Exclusives" IsCheckable="True" Click="C1MenuItem_Click" />
+            </c1:C1MenuItem>
+            <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Deep}" Click="C1MenuItem_Click">
+                <c1:C1MenuItem Header="{x:Static res:Resources.Deep1}" Click="C1MenuItem_Click">
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Deep2}" Click="C1MenuItem_Click">
+                        <c1:C1MenuItem Header="{x:Static res:Resources.Deep3}" Click="C1MenuItem_Click">
+                            <c1:C1MenuItem Header="{x:Static res:Resources.Deep4}" Click="C1MenuItem_Click">
+                                <c1:C1MenuItem Header="{x:Static res:Resources.Deep5}" Click="C1MenuItem_Click">
+                                </c1:C1MenuItem>
+                            </c1:C1MenuItem>
+                        </c1:C1MenuItem>
+                    </c1:C1MenuItem>
+                </c1:C1MenuItem>
+            </c1:C1MenuItem>
+        </c1:C1Menu>
+    </c1:C1DockPanel>
+</UserControl>

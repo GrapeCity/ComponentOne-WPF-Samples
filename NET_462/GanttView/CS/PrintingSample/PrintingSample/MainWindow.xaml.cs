@@ -37,10 +37,10 @@ namespace PrintingSample
                 96.0;
 
             ro.Margin = new Thickness(margin);
+            ro.PrintEntireProject = !_chkDates.IsChecked.Value;
 
             if (_chkDates.IsChecked.Value)
             {
-                ro.PrintEntrieProject = false;
                 ro.StartDate = StartDate.SelectedDate.Value;
                 ro.EndDate = EndDate.SelectedDate.Value;
             }
@@ -66,10 +66,10 @@ namespace PrintingSample
                 96.0;
 
             ro.Margin = new Thickness(margin);
-            
+            ro.PrintEntireProject = !_chkDates.IsChecked.Value;
+
             if (_chkDates.IsChecked.Value)
             {
-                ro.PrintEntrieProject = false;
                 ro.StartDate = StartDate.SelectedDate.Value;
                 ro.EndDate = EndDate.SelectedDate.Value;
             }
@@ -87,10 +87,10 @@ namespace PrintingSample
                 96.0;
 
             ro.Margin = new Thickness(margin);
+            ro.PrintEntireProject = !_chkDates.IsChecked.Value;
 
             if (_chkDates.IsChecked.Value)
             {
-                ro.PrintEntrieProject = false;
                 ro.StartDate = StartDate.SelectedDate.Value;
                 ro.EndDate = EndDate.SelectedDate.Value;
             }

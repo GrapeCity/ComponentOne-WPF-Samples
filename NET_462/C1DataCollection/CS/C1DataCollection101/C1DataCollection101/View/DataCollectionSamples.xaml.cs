@@ -23,10 +23,10 @@ namespace C1DataCollection101
         {
             return new List<Sample>
             {
-                new Sample() { Name = AppResources.SortingTitle, Description= AppResources.SortingDescription, SampleViewType = 0, Thumbnail="sort.png" },
-                new Sample() { Name = AppResources.FilteringTitle, Description= AppResources.FilteringDescription, SampleViewType = 1, Thumbnail="filter.png" },
-                new Sample() { Name = AppResources.GroupingTitle, Description= AppResources.GroupingDescription, SampleViewType = 2, Thumbnail="flexgrid_grouping.png"},
-                new Sample() { Name = AppResources.VirtualModeTitle, Description= AppResources.VirtualModeDescription, SampleViewType = 4, Thumbnail="flexgrid_loading.png" },
+                new Sample() { Name = nameof(Sorting), Title = AppResources.SortingTitle, Description= AppResources.SortingDescription, SampleViewType = 0, Thumbnail="sort.png" },
+                new Sample() { Name = nameof(Filtering), Title = AppResources.FilteringTitle, Description= AppResources.FilteringDescription, SampleViewType = 1, Thumbnail="filter.png" },
+                new Sample() { Name = nameof(Grouping), Title = AppResources.GroupingTitle, Description= AppResources.GroupingDescription, SampleViewType = 2, Thumbnail="flexgrid_grouping.png"},
+                new Sample() { Name = nameof(VirtualMode), Title = AppResources.VirtualModeTitle, Description= AppResources.VirtualModeDescription, SampleViewType = 4, Thumbnail="flexgrid_loading.png" },
             };
         }
 
@@ -46,7 +46,7 @@ namespace C1DataCollection101
                     else
                         link = new Uri("/View/" + selectedItem.Name.Replace(" ", string.Empty) + ".xaml", UriKind.Relative);
                     frame.Navigate(link);
-                    frame.UpdateCaption(selectedItem.Name);
+                    frame.UpdateCaption(selectedItem.Title);
                 }
 
             }

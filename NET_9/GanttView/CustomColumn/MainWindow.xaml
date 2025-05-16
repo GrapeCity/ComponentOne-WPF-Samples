@@ -1,0 +1,9 @@
+﻿<Window x:Class="CustomColumn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CustomColumn" 
+        Title="CustomColumn" Height="680" Width="980">
+    <Grid>
+        <local:CustomColumnDemo/>
+    </Grid>
+</Window>

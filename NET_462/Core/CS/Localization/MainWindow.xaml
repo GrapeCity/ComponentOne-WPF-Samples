@@ -137,7 +137,7 @@
                 </c1:C1DockControl>
             </c1:C1TabItem>
             <c1:C1TabItem Header="C1ColorPicker">
-                <c1:C1ColorPicker VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" />
+                <c1:C1ColorPicker VerticalAlignment="Top" Margin="0,15,0,0" HorizontalAlignment="Center" Width="80" />
             </c1:C1TabItem>
 
             <c1:C1TabItem Header="C1MessageBox">

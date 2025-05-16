@@ -1,6 +1,5 @@
 ﻿using C1.WPF;
 using C1.WPF.FlexGrid;
-using C1.WPF.Pdf;
 using System;
 using System.Collections.Generic;
 using System.Globalization;

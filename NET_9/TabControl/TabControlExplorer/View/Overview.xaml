@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="TabControlExplorer.Overview" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:TabControlExplorer.Properties"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TabControlExplorer;component/CommonResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="CustomStyle" TargetType="c1:C1TabItem">
+                <Setter Property="TabShape" Value="Rectangle" />
+            </Style>
+            <Style x:Key="CustomSelectedStyle" TargetType="c1:C1TabItemPresenter">
+                <Setter Property="Background" Value="BlueViolet" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="TabShape" Value="Sloped" />
+                <Setter Property="CornerRadius" Value="4"/>
+                <Setter Property="Padding" Value="{Binding Padding, RelativeSource={RelativeSource AncestorType=c1:C1TabItem}}"/>
+                <Setter Property="BorderBrush" Value="{Binding BorderBrush, RelativeSource={RelativeSource AncestorType=c1:C1TabItem}}"/>
+                <Setter Property="MouseOverBrush" Value="{Binding MouseOverBrush, RelativeSource={RelativeSource AncestorType=c1:C1TabItem}}"/>
+                <Setter Property="PressedBrush" Value="{Binding PressedBrush, RelativeSource={RelativeSource AncestorType=c1:C1TabItem}}"/>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Border>
+        <c1:C1TabControl Grid.Row="1" x:Name="c1Tab" ItemContainerStyle="{StaticResource CustomStyle}" IndicatorVisibility="Collapsed" CanUserReorder="True"
+                         TabStripMenuVisibility="Visible" TabItemClose="InEachTab" SelectedTabHeaderStyle="{StaticResource CustomSelectedStyle}" SelectedIndex="0">
+            <c1:C1TabItem  Header="{x:Static res:Resources.SalesPerMonthTabHeader}" CanUserPin="True" >
+                <TextBlock Text="{x:Static res:Resources.TabContentText}"/>
+            </c1:C1TabItem>
+            <c1:C1TabItem  Header="{x:Static res:Resources.SalesPerSalesAgentTabHeader}" />
+            <c1:C1TabItem  Header="{x:Static res:Resources.SalesAgentsTabHeader}"  />
+            <c1:C1TabItem  Header="{x:Static res:Resources.ReportSummaryTabHeader}" CanUserPin="True" />
+        </c1:C1TabControl>
+    </Border>
+</UserControl>

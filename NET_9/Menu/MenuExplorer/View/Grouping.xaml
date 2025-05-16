@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="MenuExplorer.Grouping"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid>
+        <c1:C1MenuList BorderThickness="1" Margin="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <c1:C1MenuGroup Header="Group By"/>
+            <c1:C1MenuItem Header="Unread" HotKey="Ctrl+Shift+O"/>
+            <c1:C1MenuItem Header="Flag" />
+            <c1:C1MenuItem Header="To me" />
+            <c1:C1MenuItem Header="Has attachements" HotKey="Ctrl+Shift+A"/>
+            <c1:C1MenuSeparator />
+            <c1:C1MenuGroup Header="Filter By"/>
+            <c1:C1MenuItem Header="Date"/>
+            <c1:C1MenuItem Header="Size"/>
+            <c1:C1MenuItem Header="From"/>
+            <c1:C1MenuItem Header="Importance"/>
+        </c1:C1MenuList>
+    </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThemeExplorer", "ThemeExplorer.csproj", "{7C8F9375-A080-42F3-AF18-A0E4DD66E21E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C8F9375-A080-42F3-AF18-A0E4DD66E21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8F9375-A080-42F3-AF18-A0E4DD66E21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8F9375-A080-42F3-AF18-A0E4DD66E21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8F9375-A080-42F3-AF18-A0E4DD66E21E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C238D859-B464-4CFE-9D57-39C1BD409A2F}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\Controls\Document\Word.Net\Word.Net.projitems*{15c8f310-39d0-464a-9d68-e70bf690d0a2}*SharedItemsImports = 5
+		..\..\..\..\Shared\Controls\BarCode\XBarcode\XBarcode.projitems*{8152332b-13e1-40dc-9efc-c6f62e6bd11d}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

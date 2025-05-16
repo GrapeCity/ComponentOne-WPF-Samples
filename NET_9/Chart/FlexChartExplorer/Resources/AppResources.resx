@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutoLabelDesc" xml:space="preserve">
+    <value>AutoLabels</value>
+  </data>
+  <data name="AutoLabelsTag" xml:space="preserve">
+    <value>The demo shows automatic label positioning. When DataLabel.Position is Auto the chart performs automatic label layout trying to avoid their overlapping.</value>
+  </data>
+  <data name="AutoLabelsTitle" xml:space="preserve">
+    <value>AutoLabels</value>
+  </data>
+  <data name="AxesDesc" xml:space="preserve">
+    <value>Axes</value>
+  </data>
+  <data name="AxesTag" xml:space="preserve">
+    <value>This view shows the FlexChart with two y-axes.</value>
+  </data>
+  <data name="AxesTitle" xml:space="preserve">
+    <value>Axes</value>
+  </data>
+  <data name="AxisBindingDesc" xml:space="preserve">
+    <value>Axis Binding</value>
+  </data>
+  <data name="AxisBindingTag" xml:space="preserve">
+    <value>This view shows the FlexChart's axis binding feature.</value>
+  </data>
+  <data name="AxisBindingTitle" xml:space="preserve">
+    <value>Axis Binding</value>
+  </data>
+  <data name="AxisGroupingDesc" xml:space="preserve">
+    <value>Axis Grouping</value>
+  </data>
+  <data name="AxisGroupingTag" xml:space="preserve">
+    <value>This view shows grouping of axis labels.</value>
+  </data>
+  <data name="AxisGroupingTitle" xml:space="preserve">
+    <value>Axis Grouping</value>
+  </data>
+  <data name="AxisLabelsDesc" xml:space="preserve">
+    <value>Axis Labels</value>
+  </data>
+  <data name="AxisLabelsTag" xml:space="preserve">
+    <value>This view shows various Axis options to avoid label overlapping.</value>
+  </data>
+  <data name="AxisLabelsTitle" xml:space="preserve">
+    <value>Axis Labels</value>
+  </data>
+  <data name="BindingDesc" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="BindingTag" xml:space="preserve">
+    <value>This view shows how you can use the FlexChart to show two sets of values from a single array of data. This is the most common usage scenario for the FlexChart.
+    The sample does the following:
+    1.Set the chart's DataSource property to an array of data objects. Each data object has values for 'date', 'sales', and 'downloads'.
+    2.Set the chart's bindingX property to 'date'.
+    3.Add a Series object to the chart's series array and set its binding property to 'sales'.
+    4.Add a second Series object to the chart's series array and set its binding property to 'downloads'.
+    In addition to binding, this sample shows the effect of the interpolateNulls and legendToggle properties.When you set interpolateNulls to true, the chart fills in gaps created by null values in the data.When you set legendToggle to true, the chart toggles the visibility of the series when you click its name in the legend.</value>
+  </data>
+  <data name="BindingTitle" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="BoxWhiskerDesc" xml:space="preserve">
+    <value>Box &amp; Whisker</value>
+  </data>
+  <data name="BoxWhiskerTag" xml:space="preserve">
+    <value>The Box &amp; Whisker series is normally used to compare distributions between different sets of numerical data</value>
+  </data>
+  <data name="BoxWhiskerTitle" xml:space="preserve">
+    <value>Box &amp; Whisker</value>
+  </data>
+  <data name="BubbleDesc" xml:space="preserve">
+    <value>Bubble</value>
+  </data>
+  <data name="BubbleTag" xml:space="preserve">
+    <value>This view shows how to create bubble charts using the FlexChart control.
+    Bubble charts are similar to other chart types, except in addition to X and Y you must specify a binding for the bubble size.This is done by setting the binding property to a comma - delimited string that specifies the name of the properties to be used for the Y and size values for each bubble.
+    In this example, the chart is bound to a list containing objects with 'x', 'y', and 'size' properties.The chart contains a single series and its binding property is set to the string 'y,size'.</value>
+  </data>
+  <data name="BubbleTitle" xml:space="preserve">
+    <value>Bubble</value>
+  </data>
+  <data name="DateTimeAxisGroupingDesc" xml:space="preserve">
+    <value>DateTime Axis Grouping</value>
+  </data>
+  <data name="DateTimeAxisGroupingTag" xml:space="preserve">
+    <value>This view shows grouping of date-time axis labels.</value>
+  </data>
+  <data name="DateTimeAxisGroupingTitle" xml:space="preserve">
+    <value>DateTime Axis Grouping</value>
+  </data>
+  <data name="ErrorBarDesc" xml:space="preserve">
+    <value>Error Bar</value>
+  </data>
+  <data name="ErrorBarTag" xml:space="preserve">
+    <value>The Error bar helps you see margins of error and standard deviations at a glance.</value>
+  </data>
+  <data name="ErrorBarTitle" xml:space="preserve">
+    <value>Error Bar</value>
+  </data>
+  <data name="FinancialCharDesc" xml:space="preserve">
+    <value>Financial Chart</value>
+  </data>
+  <data name="FinancialChartTitle" xml:space="preserve">
+    <value>Financial Chart</value>
+  </data>
+  <data name="FinancialTag" xml:space="preserve">
+    <value>This view shows how to create financial charts with the FlexChart control.
+    The FlexChart supports two types of financial chart: Candlestick and HiLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source.</value>
+  </data>
+  <data name="HeaderFooterDesc" xml:space="preserve">
+    <value>Header And Footer</value>
+  </data>
+  <data name="HeaderFooterTag" xml:space="preserve">
+    <value>This view shows how you can add a header and a footer to the chart.
+    The header and footer properties determine the content, and the headerStyle and footerStyle properties determine the appearance of the header and footer.</value>
+  </data>
+  <data name="HeaderFooterTitle" xml:space="preserve">
+    <value>Header And Footer</value>
+  </data>
+  <data name="HistogramDesc" xml:space="preserve">
+    <value>Histogram</value>
+  </data>
+  <data name="HistogramTag" xml:space="preserve">
+    <value>A Histogram chart is used to study the distribution of non-categorical data by dividing it into bins of specified width. It plots the frequency of data items that fall in each of these bins. This sample shows: 
+    1. Histogram chart with columns 
+    2. Frequency Polygon: A variation of Histogram charts where the columns are replaced by a curve.These are helpful for comparing multiple sets of data. 
+    3. Normal Curve: A bell - shaped curve, also known as Gaussian curve, which shows the probability distribution of a continuous random variable. 
+    4. Cumulative Frequency Polygons: Popularly known as ogives, shows the running total of frequencies on the chart.</value>
+  </data>
+  <data name="HistogramTitle" xml:space="preserve">
+    <value>Histogram</value>
+  </data>
+  <data name="HitTestDesc" xml:space="preserve">
+    <value>Hit Test</value>
+  </data>
+  <data name="HitTestTag" xml:space="preserve">
+    <value>This view demonstrates the use of the FlexChart's hitTest method.
+    The hitTest method takes a point and returns the nearest chart element.It can be used to provide interactive features such as clickable regions, drill - downs, etc.
+    Move mouse over chart to see information about the chart element that is closest to the mouse.</value>
+  </data>
+  <data name="HitTestTitle" xml:space="preserve">
+    <value>Hit Test</value>
+  </data>
+  <data name="ImageExportDesc" xml:space="preserve">
+    <value>Image Export</value>
+  </data>
+  <data name="ImageExportTag" xml:space="preserve">
+    <value>Save FlexChart as image.</value>
+  </data>
+  <data name="ImageExportTitle" xml:space="preserve">
+    <value>Image Export</value>
+  </data>
+  <data name="IntroductionDesc" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="IntroductionTag" xml:space="preserve">
+    <value>This view shows the FlexChart's basic features. It binds the chart to a data source and allows you to select the chart type, series stacking, and rotation.
+    If you move the mouse over a chart element, a tooltip will appear showing details about the data point.
+    The simplest way to use the FlexChart is to:
+    1.Set the chart's DataSource property to an array of data objects.
+    2.Set the chart's bindingX property to the name of the property that contains the X values (in this example fruit names).
+    3.Add one or more Series objects to the chart's series array and set their binding property to the name of the property that contains the Y values (in this example the months of March, April, and May).</value>
+  </data>
+  <data name="IntroductionTitle" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="LabelsDesc" xml:space="preserve">
+    <value>Labels</value>
+  </data>
+  <data name="LabelsTag" xml:space="preserve">
+    <value>This view demonstrates how you can use the FlexChart's dataLabel property to add labels to each data point.</value>
+  </data>
+  <data name="LabelsTitle" xml:space="preserve">
+    <value>Labels</value>
+  </data>
+  <data name="LegendDesc" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="LegendTag" xml:space="preserve">
+    <value>This view shows how you can use the FlexChart legend properties. 
+    The sample does the following: 
+    1.Set legend position property to decide how you locate the legend.such as "Auto", "Left", "Top", "Right" and "Bottom". 
+    2.Set legend orientations. 
+    3.Set the mode of legend text wrapping.such as "None", "Wrap" and "Truncate". 
+    4.Set a value more than 0 to legend item maxWidth property, set 0 to disable legend textWrapping. 
+    5.Set the LegendGroup property of each series to group items within the legend.  Legend items within each group are arranged by the legend orientation property while the legend groups are arranged based on the legend position.</value>
+  </data>
+  <data name="LegendTitle" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="NumericAxisGroupingDesc" xml:space="preserve">
+    <value>Numeric Axis Grouping</value>
+  </data>
+  <data name="NumericAxisGroupingTag" xml:space="preserve">
+    <value>This view shows grouping of numeric axis labels.</value>
+  </data>
+  <data name="NumericAxisGroupingTitle" xml:space="preserve">
+    <value>Numeric Axis Grouping</value>
+  </data>
+  <data name="ParetoDesc" xml:space="preserve">
+    <value>Pareto</value>
+  </data>
+  <data name="ParetoTag" xml:space="preserve">
+    <value>A Pareto is a special histogram chart with columns sorted in descending order and a rising line that represents the cumulative total percentage. Pareto charts makes it easier to analyze most significant issues and prioritise corrective actions.</value>
+  </data>
+  <data name="ParetoTitle" xml:space="preserve">
+    <value>Pareto</value>
+  </data>
+  <data name="PieCharSelectionDesc" xml:space="preserve">
+    <value>PieChart Selection</value>
+  </data>
+  <data name="PieChartDesc" xml:space="preserve">
+    <value>PieChart</value>
+  </data>
+  <data name="PieChartSelectionTitle" xml:space="preserve">
+    <value>PieChart Selection</value>
+  </data>
+  <data name="PieChartSliceDesc" xml:space="preserve">
+    <value>PieChart Slice Color</value>
+  </data>
+  <data name="PieChartSliceTitle" xml:space="preserve">
+    <value>PieChart Slice Color</value>
+  </data>
+  <data name="PieChartTitle" xml:space="preserve">
+    <value>PieChart</value>
+  </data>
+  <data name="PieIntroductionTag" xml:space="preserve">
+    <value>This view shows the FlexPie's basic features. It binds the chart to a data source.
+    If you move the mouse over a chart element, a tooltip will appear showing details about the data point.</value>
+  </data>
+  <data name="PieSelectionTag" xml:space="preserve">
+    <value>This view shows the FlexPie's selection feature.</value>
+  </data>
+  <data name="PieSliceColorTag" xml:space="preserve">
+    <value>This view shows how to customize FlexPie silce colors. The color intensity depends on the corresponding data value. It also demonstrates animation when loading new or updating existing data.</value>
+  </data>
+  <data name="PlotAreasDesc" xml:space="preserve">
+    <value>Plot Areas</value>
+  </data>
+  <data name="PlotAreasTag" xml:space="preserve">
+    <value>This view shows the FlexChart with several plot areas.</value>
+  </data>
+  <data name="PlotAreasTitle" xml:space="preserve">
+    <value>Plot Areas</value>
+  </data>
+  <data name="RangedHistogramDesc" xml:space="preserve">
+    <value>Ranged Histogram</value>
+  </data>
+  <data name="RangedHistogramTag" xml:space="preserve">
+    <value>This view shows main functionality of Ranged Histogram. 
+    An unique Histogram chart that can be used to study categorical as well as non-categorical data. Provides multiple binning options as well as support for Overflow and Underflow bins.</value>
+  </data>
+  <data name="RangedHistogramTitle" xml:space="preserve">
+    <value>Ranged Histogram</value>
+  </data>
+  <data name="SelectionDesc" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="SelectionTag" xml:space="preserve">
+    <value>This view demonstrates the FlexChart's selection feature.
+    The selectionMode property determines whether the chart should select series or points when the user clicks on the chart.</value>
+  </data>
+  <data name="SelectionTitle" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="SeriesBindingDesc" xml:space="preserve">
+    <value>Series Binding</value>
+  </data>
+  <data name="SeriesBindingTag" xml:space="preserve">
+    <value>This view shows how you can use the FlexChart to show data from multiple data sources, one per series.
+    The sample does the following:
+    1.Set the chart's bindingX and binding properties to 'x' and 'y'.
+    2.Add a Series object to the chart's series array and set its DataSource property to an array of objects that have 'x' and 'y' properties.
+    3.Add a second Series object to the chart's series array and set its DataSource property to a different array of objects that have 'x' and 'y' properties.
+    Alternatively, we could have set the bindingX and binding properties on the Series objects instead of setting then on the chart.In this case this was not necessary because the binding names are the same for all series.</value>
+  </data>
+  <data name="SeriesBindingTitle" xml:space="preserve">
+    <value>Series Binding</value>
+  </data>
+  <data name="TreeMapDesc" xml:space="preserve">
+    <value>TreeMap</value>
+  </data>
+  <data name="TreeMapNodeColorDesc" xml:space="preserve">
+    <value>TreeMap Node Color</value>
+  </data>
+  <data name="TreeMapNodeColorTag" xml:space="preserve">
+    <value>TreeMaps can be used to display two quantitive variables simultaneously, one represented by each rectangle's size and the other represented by its colour. 
+    This view demonstrates how you can use TreeMap.NodeRendering event to specify color of each node.</value>
+  </data>
+  <data name="TreeMapNodeColorTitle" xml:space="preserve">
+    <value>TreeMap Node Color</value>
+  </data>
+  <data name="TreeMapTag" xml:space="preserve">
+    <value>This view shows main functionality of TreeMap control. 
+    TreeMap charts are compact way of visualizing hierarchical data in form of nested rectangles with area of each rectangle depicting the quantity of each category.</value>
+  </data>
+  <data name="TreeMapTitle" xml:space="preserve">
+    <value>TreeMap</value>
+  </data>
+  <data name="TrendLineDesc" xml:space="preserve">
+    <value>Trend Line</value>
+  </data>
+  <data name="TrendLineTag" xml:space="preserve">
+    <value>This view shows TrendLine in FlexChart.
+    You can use different trendline types by setting the FitType property of TrendLine. The points on the plot can be dragged by mouse which updates the trend line and its equation automatically.</value>
+  </data>
+  <data name="TrendLineTitle" xml:space="preserve">
+    <value>Trend Line</value>
+  </data>
+  <data name="WaterfallDesc" xml:space="preserve">
+    <value>Waterfall</value>
+  </data>
+  <data name="WaterfallTag" xml:space="preserve">
+    <value>This view shows Waterfall Series in FlexChart.
+    The Waterfall series is normally used to demonstrate how the starting position either increases or decreases through a series of changes.</value>
+  </data>
+  <data name="WaterfallTitle" xml:space="preserve">
+    <value>Waterfall</value>
+  </data>
+  <data name="ZonesDesc" xml:space="preserve">
+    <value>Zones</value>
+  </data>
+  <data name="ZonesTag" xml:space="preserve">
+    <value>The view creates a scatter chart of student grades, highlighting each grade range using zones.
+    The zones are drawn in rendering event of FlexChart. Statistic values are calculated and plotted.</value>
+  </data>
+  <data name="ZonesTitle" xml:space="preserve">
+    <value>Zones</value>
+  </data>
+  <data name="ZoomDesc" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="ZoomTag" xml:space="preserve">
+    <value>This view shows how to implement a custom zoom for the FlexChart control.
+    Use the mouse or touch to select a rectangular area on the plot area.The chart will zoom in on the selected area.When you are done, click the 'Reset Zoom' button below the chart to return to the original view.</value>
+  </data>
+  <data name="ZoomTitle" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>FlexChartExplorer</value>
+  </data>
+  <data name="BreakEvenDesc" xml:space="preserve">
+    <value>Break-Even Chart</value>
+  </data>
+  <data name="BreakEvenTag" xml:space="preserve">
+    <value>Break-Even chart is a chart that shows the sales volume level at which total costs equal sales.</value>
+  </data>
+  <data name="BreakEvenTitle" xml:space="preserve">
+    <value>Break-Even</value>
+  </data>
+  <data name="C1CopyRight" xml:space="preserve">
+    <value>copyright (c) ComponentOne</value>
+  </data>
+  <data name="ChartFooter" xml:space="preserve">
+    <value>Chart Footer</value>
+  </data>
+  <data name="ChartHeader" xml:space="preserve">
+    <value>Chart Header</value>
+  </data>
+  <data name="MonthlySale" xml:space="preserve">
+    <value>Monthly Sales Summary</value>
+  </data>
+  <data name="WorldGDPRanking" xml:space="preserve">
+    <value>World GDP Ranking</value>
+  </data>
+  <data name="Factors" xml:space="preserve">
+    <value>Factors Influencing Purchase Decisions</value>
+  </data>
+  <data name="HeatmapDesc" xml:space="preserve">
+    <value>Heatmap Plot</value>
+  </data>
+  <data name="HeatmapTag" xml:space="preserve">
+    <value>Shows Heatmap plot with gradient color scale. The data from two-dimensional array is shown as a table. The color of table's cell depends on the corresponding data value.</value>
+  </data>
+  <data name="HeatmapTitle" xml:space="preserve">
+    <value>Heatmap</value>
+  </data>
+  <data name="AxisMarkersTitle" xml:space="preserve">
+    <value>Axis Markers</value>
+  </data>
+  <data name="AxisMarkersDesc" xml:space="preserve">
+    <value>Axis Markers</value>
+  </data>
+  <data name="AxisMarkersTag" xml:space="preserve">
+    <value>This view shows how to display line markers over the axes. Both axes have markers which follow the pointer and display its position in data coordinates.</value>
+  </data>
+  <data name="ColumnHeatmapTitle" xml:space="preserve">
+    <value>Column &amp; Heatmap</value>
+  </data>
+  <data name="ColumnHeatmapDesc" xml:space="preserve">
+    <value>Combination of range column and heatmap plots</value>
+  </data>
+  <data name="ColumnHeatmapTag" xml:space="preserve">
+    <value>This view shows combination of ranged column chart and heatmap. The heatmap displayed simplified presentation of the same data on the time axis.</value>
+  </data>
+  <data name="AxisBreakDesc" xml:space="preserve">
+    <value>FlexChart with axis break</value>
+  </data>
+  <data name="AxisBreakTag" xml:space="preserve">
+    <value>Display the same data on two plot areas simulating axis break. Custom axis appearance and 'break area' are drawn in chart Rendered event handler.</value>
+  </data>
+  <data name="AxisBreakTitle" xml:space="preserve">
+    <value>Axis Break</value>
+  </data>
+</root>

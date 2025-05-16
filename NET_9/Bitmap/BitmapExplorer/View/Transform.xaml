@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" 
+             x:Class="BitmapExplorer.TransformDemo" av:DesignWidth="400" av:DesignHeight="300">
+    <UserControl.Resources>
+        <SolidColorBrush Color="#66FFFFFF" x:Key="MaskBrush" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10,0,16,0">
+            <c1:C1Button Content="Load Image" Click="Load_Clicked" Width="120" Height="30" />
+            <c1:C1Button Content="Export Image" Click="Export_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Restart" Click="Restart_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Crop to Selection" Click="Crop_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Rotate CCW" Click="RotateCCW_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Rotate CW" Click="RotateCW_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Flip Horizontal" Click="FlipH_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Flip Vertical" Click="FlipV_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Scale to 160%" Click="ScaleIn_Clicked" Margin="0 20 0 0" Width="120" Height="30" />
+            <c1:C1Button Content="Scale to 62.5%" Click="ScaleOut_Clicked" Margin="0 10 0 0" Width="120" Height="30" />
+        </StackPanel>
+        <Grid Name="imageGrid" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Name="image" Grid.RowSpan="3" Grid.ColumnSpan="3" Stretch="Uniform" />
+            <Grid Name="topMask" Grid.ColumnSpan="2" Background="{StaticResource MaskBrush}" />
+            <Grid Name="bottomMask" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Background="{StaticResource MaskBrush}" />
+            <Grid Name="leftMask" Grid.RowSpan="2" Grid.Row="1" Background="{StaticResource MaskBrush}" />
+            <Grid Name="rightMask" Grid.Column="2" Grid.RowSpan="2" Background="{StaticResource MaskBrush}" />
+        </Grid>
+    </Grid>
+</UserControl>

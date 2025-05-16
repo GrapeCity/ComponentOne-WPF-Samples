@@ -1139,35 +1139,6 @@
                     <c1:C1FlexViewer x:Name="fv" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ZoomMode="PageWidth" DocumentListVisible="True" />
                 </c1:C1TabItem>
 
-                <!-- Report Viewer -->
-                <c1:C1TabItem Header="Report Viewer">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-
-                        <Border BorderThickness="1 1 1 0" BorderBrush="{DynamicResource BorderBrush}">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-
-                                <TextBlock Text="Select a PDF or HTML file, then print/preview/save with the C1ReportViewer." VerticalAlignment="Center" Margin="4 0" />
-                                <Button Grid.Column="1" Content="Load..." Padding="4 2" Click="ButtonLoadPdf_Click" Margin="10 5 0 5" Height="32" Width="80" HorizontalAlignment="Left" />
-                            </Grid>
-                        </Border>
-
-                        <c1:C1ReportViewer x:Name="_c1RptViewer" Grid.Row="1" />
-                    </Grid>
-                </c1:C1TabItem>
-
-                <!--C1PdfViewer-->
-                <c1:C1TabItem Header="Pdf Viewer">
-                    <c1:C1PdfViewer ViewMode="FitWidth" OpenButtonVisibility="Visible" x:Name="pdfViewer" RenderMode="Default" />
-                </c1:C1TabItem>
-
             </c1:C1TabControl>
         </c1:C1TabItem>
 

@@ -1,0 +1,22 @@
+﻿<Window x:Class="LabelSamples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:LabelSamples"
+        Title="Labels demo" Height="480" Width="640">
+    <Grid>
+    <TabControl>
+      <TabItem Header="Decimating arranger">
+        <local:DecimatingArrangerSample />
+      </TabItem>
+      <TabItem Header="Optimal arranger">
+        <local:OptimalArrangerSample />
+      </TabItem>
+      <TabItem Header="Simple arranger">
+        <local:SimpleArrangerSample />
+      </TabItem>
+      <TabItem Header="Pie arranger">
+        <local:PieArrangerSample />
+      </TabItem>
+    </TabControl>
+  </Grid>
+</Window>

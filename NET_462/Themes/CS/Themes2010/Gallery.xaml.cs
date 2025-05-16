@@ -198,12 +198,6 @@ namespace Themes
                 ExtractC1NWind();
                 LoadReportList();
                 #endregion
-                #region PdfViewer
-                using (var pdfStream = Application.GetResourceStream(new Uri("/" + _asmName + ";component/Resources/Sales.pdf", UriKind.Relative)).Stream)
-                {
-                    pdfViewer.LoadDocument(pdfStream);
-                }
-                #endregion
             }
         }
 
@@ -362,21 +356,6 @@ namespace Themes
         private void flexSheet_Loaded(object sender, RoutedEventArgs e)
         {
             formulaBar.FlexSheet = flexSheet;
-        }
-
-        public void ButtonLoadPdf_Click(object sender, RoutedEventArgs e)
-        {
-            var dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.Filter = "All report files (*.pdf;*.htm;*.html)|*.pdf;*.htm;*.html|" +
-                         "PDF files (*.pdf)|*.pdf|" +
-                         "Html files (*.htm;*.html)|*.htm;*.html";
-            if (dlg.ShowDialog().Value)
-            {
-                using (var s = new FileStream(dlg.FileName, FileMode.Open))
-                {
-                    _c1RptViewer.LoadDocument(s);
-                }
-            }
         }
 
         #region OutlookBar
