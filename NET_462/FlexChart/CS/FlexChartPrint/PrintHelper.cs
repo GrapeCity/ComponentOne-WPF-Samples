@@ -79,7 +79,11 @@ namespace FlexChartPrint
         public Canvas ChartToCanvas(FlexChartBase chart, Rect rect)
         {
             // save chart position
-            var chartRect = chart.TransformToVisual(Window.GetWindow(chart)).TransformBounds(new Rect(0, 0, chart.ActualWidth, chart.ActualHeight));
+            var visualParent = chart.Parent as Visual;
+            var chartRect = new Rect(0, 0, chart.ActualWidth, chart.ActualHeight);
+            if (visualParent != null)
+                chartRect = chart.TransformToVisual(visualParent).TransformBounds(chartRect);
+
             chartRect.X -= chart.Margin.Left;
             chartRect.Y -= chart.Margin.Top;
             chartRect.Width += chart.Margin.Left + chart.Margin.Right;
@@ -89,9 +93,9 @@ namespace FlexChartPrint
             chart.Arrange(rect);
             chart.UpdateLayout();
 
-            var canvas = FindVisualChild<Canvas>(chart);
+            var canvasChild = FindVisualChild<Canvas>(chart);
 
-            var clone = Clone(canvas);
+            var clone = Clone(canvasChild);
             Canvas.SetLeft(clone, rect.Left);
             Canvas.SetTop(clone, rect.Top);
 

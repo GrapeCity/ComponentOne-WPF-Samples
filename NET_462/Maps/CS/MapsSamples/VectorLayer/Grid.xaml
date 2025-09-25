@@ -5,7 +5,11 @@
   </UserControl.Resources>
   <Grid x:Name="LayoutRoot">
     <Border BorderBrush="{StaticResource CE_SampleBorder}" BorderThickness="3">
-      <c1:C1Maps x:Name="maps" Zoom="2" />
+            <c1:C1Maps x:Name="maps" Zoom="2" >
+                <c1:C1Maps.Source>
+                    <c1:OpenStreetMapTileSource/>
+                </c1:C1Maps.Source>
+            </c1:C1Maps>
     </Border>
     </Grid>
 </UserControl>

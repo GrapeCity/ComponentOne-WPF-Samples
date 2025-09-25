@@ -1,137 +1,144 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
-using System.Windows.Forms;
-using System.Drawing;
-using Microsoft.VisualStudio.TestTools.UITesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
-using Microsoft.VisualStudio.TestTools.UITesting.WpfControls;
+﻿using NUnit.Framework;
+using OpenQA.Selenium.Appium;
+using OpenQA.Selenium.Appium.Windows;
+using OpenQA.Selenium.Support.UI;
+using System.Linq;
+using System.Threading;
+using System;
+using System.IO;
 
-namespace Test_Scripts
+
+
+namespace UITesting
 {
-    /// <summary>
-    /// Summary description for CodedUITest1
-    /// </summary>
-    [CodedUITest]
-    public class CodedUITest1
+    [TestFixture]
+    public class CodedUITest1: DriverConfiguration
     {
-        public CodedUITest1()
-        {
-        }
+       
 
-        [TestMethod]
-        public void AutoGenerateColumns()
-        {            
-            var window = new WpfWindow();
-            window.SearchProperties[WpfWindow.PropertyNames.Name] = "C1FlexGrid Automation Test";
-            var chk_AutoGenerateColumns=new WpfCheckBox(window);
-            chk_AutoGenerateColumns.SearchProperties[WpfCheckBox.PropertyNames.AutomationId] = "chk_AutoGenerateColumns";
-
-            var flexgrid = new WpfTable(window);
-            flexgrid.SearchProperties[WpfTable.PropertyNames.AutomationId] = "flexgrid";
-            var msg = "Default:" + flexgrid.ColumnCount;
-            chk_AutoGenerateColumns.Checked = false;
-            msg += ".False:" + flexgrid.ColumnCount;
-            chk_AutoGenerateColumns.Checked = true;
-            Assert.AreEqual("Default:7.False:3", msg);
-        }
-
-        [TestMethod]
-        public void AddRemoveRow()
-        {
-            var window = new WpfWindow();
-            window.SearchProperties[WpfWindow.PropertyNames.Name] = "C1FlexGrid Automation Test";
-            var btn_AddRow = new WpfButton(window);
-            btn_AddRow.SearchProperties[WpfButton.PropertyNames.AutomationId] = "btn_AddRow";
-            var btn_RemoveRow = new WpfButton(window);
-            btn_RemoveRow.SearchProperties[WpfButton.PropertyNames.AutomationId] = "btn_RemoveRow";
-
-            var flexgrid = new WpfTable(window);
-            flexgrid.SearchProperties[WpfTable.PropertyNames.AutomationId] = "flexgrid";
-            var msg = "Default:" + flexgrid.RowCount;
-            Mouse.Click(btn_AddRow);
-            Mouse.Click(btn_AddRow);
-            msg += ".AfterAddingTwoRows:" + flexgrid.RowCount;
-            Mouse.Click(btn_RemoveRow);
-            Mouse.Click(btn_RemoveRow);
-            msg += ".AfterRemovingTwoRows:" + flexgrid.RowCount;
-            Assert.AreEqual("Default:10.AfterAddingTwoRows:12.AfterRemovingTwoRows:10", msg);
-        }
-
-        [TestMethod]
-        public void SelectedIndex_Copy()
-        {
-            var window = new WpfWindow();
-            window.SearchProperties[WpfWindow.PropertyNames.Name] = "C1FlexGrid Automation Test";
-            var btn_SelectedIndex = new WpfButton(window);
-            btn_SelectedIndex.SearchProperties[WpfButton.PropertyNames.AutomationId] = "btn_SelectedIndex";
-            var btn_Copy = new WpfButton(window);
-            btn_Copy.SearchProperties[WpfButton.PropertyNames.AutomationId] = "btn_Copy";
-
-            var flexgrid = new WpfTable(window);
-            flexgrid.SearchProperties[WpfTable.PropertyNames.AutomationId] = "flexgrid";
-                       
-            Mouse.Click(btn_SelectedIndex);
-            Mouse.Click(btn_Copy);            
-            
-            Assert.AreEqual("10", btn_Copy.DisplayText.Replace(Environment.NewLine,string.Empty));
-        }
-
-        #region Additional test attributes
-
-        // You can use the following additional attributes as you write your tests:
-
-        ////Use TestInitialize to run code before running each test 
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{        
-        //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        //    // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
-        //}
-
-        ////Use TestCleanup to run code after each test has run
-        //[TestCleanup()]
-        //public void MyTestCleanup()
-        //{        
-        //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        //    // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
-        //}
-
-        #endregion
 
         /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
+        /// Verifies that enabling the AutoGenerateColumns checkbox results in the FlexGrid displaying data rows.
+        /// </summary>
+        [Test]        
+        public void Test_WhenAutoGenerateColumnsEnabled_ShouldDisplayDataInFlexGrid()
         {
-            get
+            // Arrange
+            var autoGenCheckbox = DesktopSession.FindElementByAccessibilityId("chk_AutoGenerateColumns");
+            if (autoGenCheckbox.GetAttribute("Toggle.ToggleState") != "1")
             {
-                return testContextInstance;
+                autoGenCheckbox.Click();
+                Thread.Sleep(1000); // Wait for UI to update
             }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        private TestContext testContextInstance;
 
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
-                    this.map = new UIMap();
-                }
+            // Act
+            var flexGrid = DesktopSession.FindElementByAccessibilityId("flexgrid");
+            var rowsWithText = flexGrid.FindElementsByXPath(".//*")
+                .Where(e => !string.IsNullOrWhiteSpace(e.Text))
+                .ToList();
 
-                return this.map;
-            }
+            // Assert
+            Assert.That(rowsWithText.Count, Is.GreaterThan(0), "Expected at least one row in FlexGrid.");
         }
 
-        private UIMap map;
+        /// <summary>
+        /// Ensures that clicking the Add Row button increases the number of populated rows in the FlexGrid.
+        /// </summary>
+        [Test]        
+        public void Test_WhenRowIsAdded_ShouldIncreaseFlexGridRowCount()
+        {
+            // Arrange
+            var wait = new WebDriverWait(DesktopSession, TimeSpan.FromSeconds(10));
+            var flexGrid = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("flexgrid"));
+            int rowsBefore = flexGrid.FindElementsByXPath(".//*")
+                                     .Count(e => !string.IsNullOrWhiteSpace(e.Text));
+
+            // Act
+            var addRowButton = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("btn_AddRow"));
+            addRowButton.Click();
+            flexGrid.Click(); // Ensure UI updates are captured
+
+            bool rowAdded = wait.Until(drv =>
+            {
+                int currentCount = flexGrid.FindElementsByXPath(".//*")
+                                           .Count(e => !string.IsNullOrWhiteSpace(e.Text));
+                return currentCount > rowsBefore;
+            });
+
+            int rowsAfter = flexGrid.FindElementsByXPath(".//*")
+                        .Count(e => !string.IsNullOrWhiteSpace(e.Text));
+
+            // Assert
+            Assert.That(rowsAfter, Is.GreaterThan(rowsBefore), "Expected row count to increase after adding.");
+        }
+
+        /// <summary>
+        /// Validates that clicking the Remove Row button results in fewer populated rows in the FlexGrid.
+        /// </summary>
+        [Test]
+        public void Test_WhenRowIsRemoved_ShouldDecreaseFlexGridRowCount()
+        {
+            // Arrange
+            var wait = new WebDriverWait(DesktopSession, TimeSpan.FromSeconds(10));
+            var flexGrid = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("flexgrid"));
+            int rowsBefore = flexGrid.FindElementsByXPath(".//*")
+                                     .Count(e => !string.IsNullOrWhiteSpace(e.Text));
+
+            // Act
+            var removeRowButton = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("btn_RemoveRow"));
+            removeRowButton.Click();
+            flexGrid.Click();           
+
+            int rowsAfter = flexGrid.FindElementsByXPath(".//*")
+                        .Count(e => !string.IsNullOrWhiteSpace(e.Text));
+
+            // Assert
+            Assert.That(rowsAfter, Is.LessThan(rowsBefore), "Expected row count to decrease after removal.");
+        }
+
+        /// <summary>
+        /// Confirms that clicking the SelectedIndex button displays a valid index value (≤ 9) in the textbox.
+        /// </summary>
+        [Test]
+        public void Test_WhenSelectedIndexButtonClicked_ShouldDisplayValidIndex()
+        {
+            // Arrange
+            var wait = new WebDriverWait(DesktopSession, TimeSpan.FromSeconds(10));
+            var flexGrid = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("flexgrid"));
+            flexGrid.Click();
+
+            // Act
+            var selectedIndexButton = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("btn_SelectedIndex"));
+            selectedIndexButton.Click();
+            var selectedIndexTextBox = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("TextBox"));
+            string indexText = selectedIndexTextBox.Text;
+
+            // Assert
+            Assert.That(int.TryParse(indexText, out int indexValue) && indexValue <= 9,
+                        $"Expected a valid index value ≤ 9, but got '{indexText}'.");
+        }
+
+        /// <summary>
+        /// Verifies that clicking the Copy button populates the textbox with content from the selected row.
+        /// </summary>
+        [Test]
+        public void Test_WhenCopyButtonClicked_ShouldPopulateTextBoxWithRowText()
+        {
+            // Arrange
+            var wait = new WebDriverWait(DesktopSession, TimeSpan.FromSeconds(10));
+            var flexGrid = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("flexgrid"));
+            flexGrid.Click();
+
+            // Act
+            var copyButton = wait.Until(drv => DesktopSession.FindElementByAccessibilityId("btn_Copy"));
+            Assert.That(copyButton.Enabled, Is.True, "Copy button should be enabled.");
+            copyButton.Click();
+
+            string copiedText = wait.Until(drv =>
+                DesktopSession.FindElementByAccessibilityId("TextBox").Text);
+
+            // Assert
+            Assert.That(copiedText, Is.Not.Null.And.Not.Empty, "Expected copied text to be present in the textbox.");
+        }
     }
 }

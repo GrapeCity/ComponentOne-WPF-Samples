@@ -24,6 +24,7 @@
                                 <TextBlock Text="{Binding Converter={StaticResource typeNameConverter}}" />
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
+                        <c1:OpenStreetMapTileSource/>
                         <c1:VirtualEarthAerialSource />
                         <c1:VirtualEarthRoadSource />
                         <c1:VirtualEarthHybridSource />
@@ -45,7 +46,11 @@
         </Border>
         <!-- Control instance -->
         <Border Grid.Row="1">
-            <c1:C1Maps Name="maps" Zoom="1" Angle="{Binding Path=Value, ElementName=angle}" RenderTransformOrigin="0.5,0.5" />
+            <c1:C1Maps Name="maps" Zoom="1" Angle="{Binding Path=Value, ElementName=angle}" RenderTransformOrigin="0.5,0.5" >
+                <c1:C1Maps.Source>
+                    <c1:OpenStreetMapTileSource/>
+                </c1:C1Maps.Source>
+            </c1:C1Maps>
         </Border>
 
 

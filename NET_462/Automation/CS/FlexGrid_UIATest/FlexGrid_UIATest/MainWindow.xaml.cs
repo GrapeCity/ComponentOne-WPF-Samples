@@ -16,20 +16,32 @@ namespace FlexGrid_UIATest
             var data = new ObservableCollection<WorkItem>();
             Enumerable.Range(1, 10).ToList().ForEach(p => data.Add(new WorkItem(p)));
             DataContext = data;
-            btn_AddRow.Click += (o, e) => data.Insert(data.Count, new WorkItem(data.Count + 1));
-            btn_RemoveRow.Click += (o, e) => data.RemoveAt(flexgrid.Rows.Count - 1);
-            btn_SelectedIndex.Click += (o, e) => flexgrid.SelectedIndex = flexgrid.Rows.Count - 1;
-            btn_Copy.Click += (o, e) => 
-                { 
-                    flexgrid.Copy();
-                    try
-                    {
-                        btn_Copy.Content = Clipboard.GetText();
-                    }
-                    catch
-                    {// Clipboard operation might fail if there are no permissions
-                    }
-                };
+            btn_AddRow.Click += (o, e) =>
+            {
+                data.Insert(data.Count, new WorkItem(data.Count + 1));
+                TextBox.Clear();
+            };
+            btn_RemoveRow.Click += (o, e) =>
+            {
+                data.RemoveAt(flexgrid.Rows.Count - 1);
+                TextBox.Clear();
+            };
+            btn_SelectedIndex.Click += (o, e) =>
+            {
+                flexgrid.SelectedIndex = flexgrid.Rows.Count - 1;
+                TextBox.Text = flexgrid.SelectedIndex.ToString();
+            };
+            btn_Copy.Click += (o, e) =>
+            {
+                flexgrid.Copy();
+                try
+                {
+                    TextBox.Text = Clipboard.GetText();
+                }
+                catch
+                {// Clipboard operation might fail if there are no permissions
+                }
+            };
             flexgrid.ClipboardCopyMode = C1.WPF.FlexGrid.ClipboardCopyMode.ExcludeHeader;
         }
     }

@@ -28,7 +28,7 @@
     <Grid Background="#FF010413">
         <c1:C1Maps x:Name="map" Zoom="2" Center="-45, 30">
             <c1:C1Maps.Source>
-            	<c1:VirtualEarthHybridSource />
+                <c1:OpenStreetMapTileSource/>
             </c1:C1Maps.Source>
         </c1:C1Maps>
     </Grid>

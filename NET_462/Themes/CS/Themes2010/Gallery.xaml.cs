@@ -514,7 +514,7 @@ namespace Themes
             ListBoxItem item = panelList.SelectedItem as ListBoxItem;
             if (item == null)
                 return;
-            Style style = Resources.Contains(item.Tag) ? Resources[item.Tag] as Style : null;
+            Style style = LayoutRoot.Resources.Contains(item.Tag) ? LayoutRoot.Resources[item.Tag] as Style : null;
             if (style != null)
             {
                 C1CarouselPanel.ClearCarouselProperties(carouselListBox);

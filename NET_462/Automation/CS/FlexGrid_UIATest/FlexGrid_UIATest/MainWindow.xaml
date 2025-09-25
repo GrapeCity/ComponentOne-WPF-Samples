@@ -24,6 +24,7 @@
                     <Button Content="Remove Row" Name="btn_RemoveRow" />
                     <Button Content="SelectedIndex" Name="btn_SelectedIndex" />
                     <Button Content="Copy" Name="btn_Copy" />
+                    <TextBox TextWrapping="Wrap" Width="150" BorderBrush="Blue" Name="TextBox"  />
                 </ToolBar>
 
             </ToolBarTray>
