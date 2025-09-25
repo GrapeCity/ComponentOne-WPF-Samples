@@ -1008,7 +1008,7 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shows how to implement pin/unpin columns so they become frozen at the left edge of the grid while scrolling horizontally..
+        ///   Looks up a localized string similar to Shows how to implement pin/unpin columns so they become frozen at the left or right edges of the grid while scrolling horizontally..
         /// </summary>
         public static string PinColumnDescription {
             get {

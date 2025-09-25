@@ -1,5 +1,5 @@
 ## C1SpellChecker Sample
-#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_9/SpellChecker/SpellCheckerExplorer)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WPF-Samples/tree/master/NET_6/SpellChecker/SpellCheckerExplorer)
 ____
 #### Shows how to use the C1SpellChecker object to check TextBox and C1RichTextBox controls.
 ____
@@ -32,7 +32,4 @@ private void _plainTextBox_LostFocus(object sender, RoutedEventArgs e)
     e.Handled = true;
 }
 ```
-
-
-
-
+![screenshot](screenshot.png)

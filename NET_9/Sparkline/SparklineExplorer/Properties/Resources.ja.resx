@@ -157,24 +157,31 @@
     <value>Display DateAxis:</value>
   </data>
   <data name="NewDataButtonText" xml:space="preserve">
-    <value>New Data</value>
+    <value>新しいデータ</value>
+    <comment>New Data</comment>
   </data>
   <data name="RegionColumnHeader" xml:space="preserve">
-    <value>Region</value>
+    <value>地域</value>
+    <comment>Region</comment>
   </data>
   <data name="TotalSalesColumnHeader" xml:space="preserve">
-    <value>Total Sales</value>
+    <value>総売上高</value>
+    <comment>Total Sales</comment>
   </data>
   <data name="NetSalesColumnHeader" xml:space="preserve">
-    <value>Net Sales</value>
+    <value>売上高</value>
+    <comment>Net Sales</comment>
   </data>
   <data name="SalesTrendColumnHeader" xml:space="preserve">
-    <value>Sales Trend</value>
+    <value>売上動向</value>
+    <comment>Sales Trend</comment>
   </data>
   <data name="WinLossColumnHeader" xml:space="preserve">
-    <value>Win/Loss</value>
+    <value>勝敗</value>
+    <comment>Win/Loss</comment>
   </data>
   <data name="ProfitTrendColumnHeader" xml:space="preserve">
-    <value>Profit Trend</value>
+    <value>利益動向</value>
+    <comment>Profit Trend</comment>
   </data>
 </root>

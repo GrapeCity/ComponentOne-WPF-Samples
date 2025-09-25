@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 
 using C1.Schedule;
-using C1.WPF;
 using C1.WPF.DateTimeEditors;
 using C1.WPF.Schedule;
 using System.Windows.Input;
 using C1.WPF.Core;
 using C1.WPF.Docking;
-using C1.WPF.Localization;
-using C1.Schedule;
 
 namespace SchedulerExplorer
 {

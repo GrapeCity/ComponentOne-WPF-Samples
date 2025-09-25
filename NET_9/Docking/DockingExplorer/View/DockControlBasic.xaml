@@ -38,7 +38,7 @@
                 </c1:C1DockTabControl>
             </c1:C1DockGroup>
             <c1:C1DockGroup>
-                <c1:C1DockTabControl Dock="Top" DockWidth="500" DockHeight="500" TabItemShape="Sloped" IndicatorVisibility="Collapsed">
+                <c1:C1DockTabControl Dock="Top" DockWidth="500" DockHeight="500" TabItemShape="Sloped" IndicatorVisibility="Collapsed" SelectedIndex="1">
                     <c1:C1DockTabItem Header="Tab 4">
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
@@ -46,7 +46,7 @@
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>
-                <c1:C1DockTabControl TabItemShape="Sloped" IndicatorVisibility="Collapsed">
+                <c1:C1DockTabControl TabItemShape="Sloped" IndicatorVisibility="Collapsed" >
                     <c1:C1DockTabItem Header="Tab 6">
                         <!--Your Content Here-->
                     </c1:C1DockTabItem>

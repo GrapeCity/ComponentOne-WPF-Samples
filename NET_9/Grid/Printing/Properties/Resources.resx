@@ -150,4 +150,51 @@
   <data name="PrintingTitle" xml:space="preserve">
     <value>FlexGrid printing example</value>
   </data>
+  <data name="ActualSize" xml:space="preserve">
+    <value>Actual Size</value>
+  </data>
+  <data name="DefaultOrientation" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="FreezeClick" xml:space="preserve">
+    <value>Freeze Panes</value>
+    <comment>Freeze Panes</comment>
+  </data>
+  <data name="LandscapeOrientation" xml:space="preserve">
+    <value>Landscape</value>
+  </data>
+  <data name="Margin025" xml:space="preserve">
+    <value>0.25 inch</value>
+  </data>
+  <data name="Margin05" xml:space="preserve">
+    <value>0.5 inch</value>
+  </data>
+  <data name="Margin1" xml:space="preserve">
+    <value>1 inch</value>
+  </data>
+  <data name="Margins" xml:space="preserve">
+    <value>Margins</value>
+  </data>
+  <data name="MergeClick" xml:space="preserve">
+    <value>Merge</value>
+    <comment>Merge</comment>
+  </data>
+  <data name="Orientation" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="PageWidth" xml:space="preserve">
+    <value>Page Width</value>
+  </data>
+  <data name="PortraitOrientation" xml:space="preserve">
+    <value>Portrait</value>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="SinglePage" xml:space="preserve">
+    <value>Single Page</value>
+  </data>
+  <data name="Zoom" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
 </root>

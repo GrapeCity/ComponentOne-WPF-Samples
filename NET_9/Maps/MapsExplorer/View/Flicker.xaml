@@ -35,6 +35,9 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <c1:C1Maps x:Name="maps" Opacity="0.5" Grid.Row="1" BorderBrush="#FF8FB4CC" BorderThickness="3">
+            <c1:C1Maps.Source>
+                <c1:OpenStreetMapTileSource />
+            </c1:C1Maps.Source>
             <c1:VectorLayer x:Name="vl" LabelVisibility="Visible" ItemStyle="{StaticResource style}" />
         </c1:C1Maps>
         <TextBlock x:Name="txt" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />

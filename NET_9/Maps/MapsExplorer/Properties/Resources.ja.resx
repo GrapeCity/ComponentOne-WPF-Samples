@@ -206,27 +206,35 @@
     <comment>Airports</comment>
   </data>
   <data name="SourceLabel" xml:space="preserve">
-    <value>Source: </value>
+    <value>ソース: </value>
+    <comment>Source:</comment>
   </data>
   <data name="ShowToolsLabel" xml:space="preserve">
-    <value>ShowTools: </value>
+    <value>ツールの表示: </value>
+    <comment>ShowTools:</comment>
   </data>
   <data name="AngleLabel" xml:space="preserve">
-    <value>Angle: </value>
+    <value>角度: </value>
+    <comment>Angle:</comment>
   </data>
   <data name="ShowLabelsLabel" xml:space="preserve">
-    <value>Show Labels</value>
+    <value>ラベルの表示</value>
+    <comment>Show Labels</comment>
   </data>
   <data name="CountryLabel" xml:space="preserve">
-    <value>Country:</value>
+    <value>地域:</value>
+    <comment>Country:</comment>
   </data>
   <data name="MarksDemoDescription" xml:space="preserve">
-    <value>Ctrl+Click to add mark, Shift+Drag to move mark, Alt+Click on mark to remove.</value>
+    <value>Ctrl+Click でマークを追加、Shift+Drag でマークを移動、Alt+Click でマークを削除します。</value>
+    <comment>Ctrl+Click to add mark, Shift+Drag to move mark, Alt+Click on mark to remove.</comment>
   </data>
   <data name="KMLTitle" xml:space="preserve">
-    <value>Gross Domain Product(Purchasing Power Parity)</value>
+    <value>総ドメイン生産（購買力平価）</value>
+    <comment>Gross Domain Product(Purchasing Power Parity)</comment>
   </data>
   <data name="PricesLabel" xml:space="preserve">
-    <value>US$ Million</value>
+    <value>百万米ドル</value>
+    <comment>US$ Million</comment>
   </data>
 </root>

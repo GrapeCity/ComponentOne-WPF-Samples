@@ -159,4 +159,64 @@
     <value>FlexGrid の印刷例</value>
     <comment>FlexGrid printing example</comment>
   </data>
+  <data name="FreezeClick" xml:space="preserve">
+    <value>ペインの固定</value>
+    <comment>Freeze Panes</comment>
+  </data>
+  <data name="MergeClick" xml:space="preserve">
+    <value>マージ</value>
+    <comment>Merge Click</comment>
+  </data>
+  <data name="Zoom" xml:space="preserve">
+    <value>ズーム</value>
+    <comment>Zoom</comment>
+  </data>
+  <data name="ActualSize" xml:space="preserve">
+    <value>実サイズ</value>
+    <comment>Actual Size</comment>
+  </data>
+  <data name="PageWidth" xml:space="preserve">
+    <value>ページ幅</value>
+    <comment>Page Width</comment>
+  </data>
+  <data name="SinglePage" xml:space="preserve">
+    <value>単一ページ</value>
+    <comment>Single Page</comment>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>選択範囲</value>
+    <comment>Selection</comment>
+  </data>
+  <data name="Margins" xml:space="preserve">
+    <value>マージン</value>
+    <comment>Margins</comment>
+  </data>
+  <data name="Margin025" xml:space="preserve">
+    <value>0.25 インチ</value>
+    <comment>0.25 inch</comment>
+  </data>
+  <data name="Margin05" xml:space="preserve">
+    <value>0.5 インチ</value>
+    <comment>0.5 inch</comment>
+  </data>
+  <data name="Margin1" xml:space="preserve">
+    <value>1 インチ</value>
+    <comment>1 inch</comment>
+  </data>
+  <data name="Orientation" xml:space="preserve">
+    <value>方向</value>
+    <comment>Orientation</comment>
+  </data>
+  <data name="DefaultOrientation" xml:space="preserve">
+    <value>既定</value>
+    <comment>Default</comment>
+  </data>
+  <data name="PortraitOrientation" xml:space="preserve">
+    <value>縦向き</value>
+    <comment>Portrait</comment>
+  </data>
+  <data name="LandscapeOrientation" xml:space="preserve">
+    <value>横向き</value>
+    <comment>Landscape</comment>
+  </data>
 </root>

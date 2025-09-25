@@ -48,7 +48,7 @@
             </c1:C1ListView.ItemTemplate>
         </c1:C1ListView>
         <c1:C1Expander Header="RulesManager" ExpandDirection="Left" ExpandIconAlignment="Left" HorizontalContentAlignment="Right" BorderThickness="0" Grid.Column="1">
-            <c1:C1RulesManager Engine="{StaticResource rulesEngine}" Width="400"/>
+            <c1:C1RulesManager Engine="{StaticResource rulesEngine}" RulesVisibility="ColorScale,Segments,Expression" Width="400"/>
         </c1:C1Expander>
     </Grid>
 </UserControl>

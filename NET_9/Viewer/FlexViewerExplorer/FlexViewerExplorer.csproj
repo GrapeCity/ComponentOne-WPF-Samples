@@ -401,61 +401,61 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.BarCode">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Bitmap">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Chart">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Document">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DX">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ImportServices">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Rendering">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Report">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TreeView">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Viewer">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

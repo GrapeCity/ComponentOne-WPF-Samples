@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -28,6 +29,7 @@ namespace ThemeExplorer
         List<string> _treeLinesModes;
         ObservableCollection<Person> _persons;
         List<ProjectTask> _tasks;
+        public IEnumerable<C1.WPF.Schedule.ViewType> ViewTypeOptions => Enum.GetValues(typeof(C1.WPF.Schedule.ViewType)).Cast<C1.WPF.Schedule.ViewType>();
 
         public Gallery()
         {
@@ -58,14 +60,15 @@ namespace ThemeExplorer
             pager.Source = pagedPersons;
             listView2.ItemsSource = pagedPersons;
 
-            var viewTypes = new List<string>
+            var viewTypes = new List<C1.WPF.Schedule.ViewType>       
             {
-                Properties.Resources.ViewType_Month,
-                Properties.Resources.ViewType_Day,
-                Properties.Resources.ViewType_Week,
-                Properties.Resources.ViewType_WorkingWeek,
-                Properties.Resources.ViewType_TimeLine
+                C1.WPF.Schedule.ViewType.Month,
+                C1.WPF.Schedule.ViewType.Day,
+                C1.WPF.Schedule.ViewType.Week,
+                C1.WPF.Schedule.ViewType.WorkingWeek,
+                C1.WPF.Schedule.ViewType.TimeLine
             };
+
             ViewType.ItemsSource = viewTypes;
         }
 
@@ -137,7 +140,7 @@ namespace ThemeExplorer
                 return;
             var item = e.AddedItems[0] as C1TabItem;
             #region Filter Editor
-            if (item.Header.Equals("Filter Editor") && filterEditor.ItemsSource == null)
+            if (item.Header.Equals(Properties.Resources.FilterEditor) && filterEditor.ItemsSource == null)
             {
                 C1DataCollection<Person> data = new C1DataCollection<Person>(Person.Generate(150));
                 filterEditor.ItemsSource = data;
@@ -146,7 +149,7 @@ namespace ThemeExplorer
             }
             #endregion
             #region Pivot
-            if (item.Header.Equals("FlexPivot") && pivot.DataSource == null)
+            if (item.Header.Equals(Properties.Resources.FlexPivot) && pivot.DataSource == null)
             {
                 var persons = Person.Generate(80);
                 pivot.DataSource = persons;
@@ -156,7 +159,7 @@ namespace ThemeExplorer
             }
             #endregion
             #region DataFilter
-            if (item.Header.Equals("Data Filter") && c1DataFilter1.ItemsSource == null)
+            if (item.Header.Equals(Properties.Resources.DataFilter) && c1DataFilter1.ItemsSource == null)
             {
                 var persons = Person.Generate(150);
                 occupationFilter.ItemsSource = Person.Occupations;

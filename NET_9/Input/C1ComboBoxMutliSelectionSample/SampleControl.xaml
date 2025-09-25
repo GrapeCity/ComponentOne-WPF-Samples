@@ -55,14 +55,14 @@
                 <TextBlock Style="{StaticResource SampleTextBlockStyle}" Text="{x:Static res:Resources.NormalStyleLabel}" />
 
                 <c1:C1ComboBox x:Name="NormalStyleComboBox" Style="{StaticResource SampleComboBoxStyle}" SelectionMode="Multiple"
-                               ItemTemplate="{StaticResource ComboBoxItemTemplate}" IsEditable="True" IsTextSearchEnabled="True"
+                               IsEditable="True" IsTextSearchEnabled="True"
                                Grid.Row="1" SelectionChanged="OnSelectionChanged" VerticalAlignment="Top"/>
 
                 <TextBlock Style="{StaticResource SampleTextBlockStyle}" Text="{x:Static res:Resources.CheckBoxStyleLabel}" Grid.Row="2" />
 
                 <c1:C1ComboBox x:Name="CheckBoxStyleComboBox" Style="{StaticResource SampleComboBoxStyle}" Grid.Row="3"
                                ShowCheckBoxes="True" SelectedItems="{Binding SelectedItems, ElementName=NormalStyleComboBox}"
-                               SelectionMode="Multiple" ItemTemplate="{StaticResource ComboBoxItemTemplate}"
+                               SelectionMode="Multiple"
                                VerticalAlignment="Top"/>
             </Grid>
         </Grid>

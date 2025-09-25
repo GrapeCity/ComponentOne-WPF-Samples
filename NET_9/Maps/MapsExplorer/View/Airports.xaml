@@ -12,7 +12,11 @@
             <CheckBox x:Name="cbLabels" Content="{x:Static res:Resources.ShowLabelsLabel}" Checked="cbLabels_Checked" Unchecked="cbLabels_Checked"/>
         </Border>
     <Border Grid.Row="1" BorderBrush="#FF8FB4CC" BorderThickness="3">
-      <c1:C1Maps x:Name="maps" Zoom="1" />
+            <c1:C1Maps x:Name="maps" Zoom="1" >
+                <c1:C1Maps.Source>
+                    <c1:OpenStreetMapTileSource />
+                </c1:C1Maps.Source>
+            </c1:C1Maps>
     </Border>
   </Grid>
 </UserControl>

@@ -534,46 +534,46 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="9.0.20242.209" />
+    <PackageReference Include="C1.DataCollection" Version="9.0.20251.213" />
     <PackageReference Include="C1.WPF.Chart">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
-    <PackageReference Include="C1.WPF.DataCollection" Version="9.0.20242.209" />
+    <PackageReference Include="C1.WPF.DataCollection" Version="9.0.20251.213" />
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DX">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid.Excel">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.GridControl">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>

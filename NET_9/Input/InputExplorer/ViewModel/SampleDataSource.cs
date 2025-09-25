@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using C1.WPF.Input;
+using System.Collections.ObjectModel;
 
 namespace InputExplorer
 {
@@ -11,6 +12,11 @@ namespace InputExplorer
                 new SampleItem(Properties.Resources.InputTitle,
                                 Properties.Resources.InputTitle,
                                 new InputView()),
+
+                new SampleItem(Properties.Resources.ComboBoxTitle,
+                                Properties.Resources.ComboBoxTitle,
+                                new C1ComboBox()),
+
                 new SampleItem(Properties.Resources.RangeSliderTitle,
                                 Properties.Resources.RangeSliderTitle,
                                 new RangeSlider()),

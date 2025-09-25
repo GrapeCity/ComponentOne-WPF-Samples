@@ -61,6 +61,24 @@ namespace Printing.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Actual Size.
+        /// </summary>
+        public static string ActualSize {
+            get {
+                return ResourceManager.GetString("ActualSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default.
+        /// </summary>
+        public static string DefaultOrientation {
+            get {
+                return ResourceManager.GetString("DefaultOrientation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to FlexGrid Settings.
         /// </summary>
         public static string FlexGridSetting {
@@ -70,11 +88,101 @@ namespace Printing.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Freeze Panes.
+        /// </summary>
+        public static string FreezeClick {
+            get {
+                return ResourceManager.GetString("FreezeClick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Landscape.
+        /// </summary>
+        public static string LandscapeOrientation {
+            get {
+                return ResourceManager.GetString("LandscapeOrientation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.25 inch.
+        /// </summary>
+        public static string Margin025 {
+            get {
+                return ResourceManager.GetString("Margin025", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.5 inch.
+        /// </summary>
+        public static string Margin05 {
+            get {
+                return ResourceManager.GetString("Margin05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 inch.
+        /// </summary>
+        public static string Margin1 {
+            get {
+                return ResourceManager.GetString("Margin1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Margins.
+        /// </summary>
+        public static string Margins {
+            get {
+                return ResourceManager.GetString("Margins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merge.
+        /// </summary>
+        public static string MergeClick {
+            get {
+                return ResourceManager.GetString("MergeClick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orientation.
+        /// </summary>
+        public static string Orientation {
+            get {
+                return ResourceManager.GetString("Orientation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Page Width.
+        /// </summary>
+        public static string PageWidth {
+            get {
+                return ResourceManager.GetString("PageWidth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Print Parameters.
         /// </summary>
         public static string ParameterTitle {
             get {
                 return ResourceManager.GetString("ParameterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portrait.
+        /// </summary>
+        public static string PortraitOrientation {
+            get {
+                return ResourceManager.GetString("PortraitOrientation", resourceCulture);
             }
         }
         
@@ -115,6 +223,15 @@ namespace Printing.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Selection.
+        /// </summary>
+        public static string Selection {
+            get {
+                return ResourceManager.GetString("Selection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string SettingTitle {
@@ -129,6 +246,15 @@ namespace Printing.Properties {
         public static string ShowPrintDialog {
             get {
                 return ResourceManager.GetString("ShowPrintDialog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Single Page.
+        /// </summary>
+        public static string SinglePage {
+            get {
+                return ResourceManager.GetString("SinglePage", resourceCulture);
             }
         }
         
@@ -156,6 +282,15 @@ namespace Printing.Properties {
         public static string TypeTextToFindPlaceholder {
             get {
                 return ResourceManager.GetString("TypeTextToFindPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zoom.
+        /// </summary>
+        public static string Zoom {
+            get {
+                return ResourceManager.GetString("Zoom", resourceCulture);
             }
         }
     }

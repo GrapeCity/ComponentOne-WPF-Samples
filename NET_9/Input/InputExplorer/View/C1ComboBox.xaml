@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="InputExplorer.C1ComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:InputExplorer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+        <local:EmployeeTypeConverter x:Key="EmployeeConverter" />
+
+        <local:ItemStyleSelector x:Key="StyleSelector">
+            <local:ItemStyleSelector.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="Common" TargetType="{x:Type ContentControl}">
+                        <Setter Property="Background" Value="AliceBlue"/>
+                        <Setter Property="Foreground" Value="BlueViolet"/>
+                    </Style>
+                    <Style x:Key="Alternate" TargetType="{x:Type ContentControl}">
+                        <Setter Property="Background" Value="LightPink"/>
+                        <Setter Property="Foreground" Value="IndianRed"/>
+                    </Style>
+                </ResourceDictionary>
+            </local:ItemStyleSelector.Resources>
+        </local:ItemStyleSelector>
+
+        <local:ItemTemplateSelector x:Key="TemplateSelector" />
+        <DataTemplate x:Key="Template1">
+            <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="CornflowerBlue" VerticalAlignment="Center"/>
+        </DataTemplate>
+        <DataTemplate x:Key="Template2">
+            <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="IndianRed" VerticalAlignment="Center"/>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="ItemContainerStyle:"/>
+        <c1:C1ComboBox Grid.Row="1"
+               MinWidth="120" Margin="10">
+            <c1:C1ComboBox.ItemContainerStyle>
+                <Style TargetType="ContentControl">
+                    <Setter Property="Background" Value="AliceBlue"/>
+                    <Setter Property="Foreground" Value="BlueViolet"/>
+                </Style>
+            </c1:C1ComboBox.ItemContainerStyle>
+            <c1:C1ComboBoxItem Content="item 1"/>
+            <c1:C1ComboBoxItem Content="item 2"/>
+            <c1:C1ComboBoxItem Content="item 3"/>
+            <c1:C1ComboBoxItem Content="item 4"/>
+            <c1:C1ComboBoxItem Content="item 5"/>
+        </c1:C1ComboBox>
+
+        <Label Content="ItemContainerStyleSelector:" Grid.Column="1"/>
+        <c1:C1ComboBox Grid.Column="1" Grid.Row="1"
+               MinWidth="120" Margin="10"
+               ItemContainerStyleSelector="{StaticResource StyleSelector}">
+            <c1:C1ComboBoxItem Content="item 1"/>
+            <c1:C1ComboBoxItem Content="item 2"/>
+            <c1:C1ComboBoxItem Content="item 3"/>
+            <c1:C1ComboBoxItem Content="item 4"/>
+            <c1:C1ComboBoxItem Content="item 5"/>
+        </c1:C1ComboBox>
+
+        <Label Content="ItemTemplate:" Grid.Column="2"/>
+        <c1:C1ComboBox Name="ComboBox1" 
+               Grid.Column="2" Grid.Row="1"
+               MinWidth="120" Margin="10"
+               ItemConverter="{StaticResource EmployeeConverter}">
+            <c1:C1ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" Foreground="BlueViolet"/>
+                </DataTemplate>
+            </c1:C1ComboBox.ItemTemplate>
+        </c1:C1ComboBox>
+
+        <Label Content="ItemTemplateSelector:" Grid.Column="3" />
+        <c1:C1ComboBox Name="ComboBox2" 
+               Grid.Column="3" Grid.Row="1"
+               MinWidth="120" Margin="10"
+               ItemConverter="{StaticResource EmployeeConverter}"
+               ItemTemplateSelector ="{StaticResource TemplateSelector}"/>
+    </Grid>
+</UserControl>

@@ -32,10 +32,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>9.0.20251.1069</Version>
+      <Version>9.0.20251.1133</Version>
     </PackageReference>
     <PackageReference Include="C1.Zip" Version="9.0.20251.10" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />

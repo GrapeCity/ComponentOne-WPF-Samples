@@ -177,7 +177,7 @@
     <comment>AddItems</comment>
   </data>
   <data name="CheckListDes" xml:space="preserve">
-    <value>C1CheckListの使用方法を示します</value>
+    <value>C1CheckList の使用方法を示します</value>
     <comment>Shows how to use C1CheckList</comment>
   </data>
   <data name="CheckListTitle" xml:space="preserve">
@@ -319,48 +319,67 @@
     <comment>Stops Slider</comment>
   </data>
   <data name="ClickMeText" xml:space="preserve">
-    <value>Click me</value>
+    <value>クリックしてください</value>
+    <comment>Click me</comment>
   </data>
   <data name="DefaultButtonText" xml:space="preserve">
-    <value>Default Button</value>
+    <value>デフォルトボタン</value>
+    <comment>Default Button</comment>
   </data>
   <data name="ToggleMeText" xml:space="preserve">
-    <value>Toggle me</value>
+    <value>トグルしてください</value>
+    <comment>Toggle me</comment>
   </data>
   <data name="CheckMeText" xml:space="preserve">
-    <value>Check me</value>
+    <value>チェックしてください</value>
+    <comment>Check me</comment>
   </data>
   <data name="FollowMeText" xml:space="preserve">
-    <value>Follow me!</value>
+    <value>フォローしてください！</value>
+    <comment>Follow me!</comment>
   </data>
   <data name="EnterTimePlaceholderText" xml:space="preserve">
-    <value>Enter time</value>
+    <value>時刻を入力</value>
+    <comment>Enter time</comment>
   </data>
   <data name="EnterDatePlaceholderText" xml:space="preserve">
-    <value>Enter date</value>
+    <value>日付を入力</value>
+    <comment>Enter date</comment>
   </data>
   <data name="EnterNumberPlaceholderText" xml:space="preserve">
-    <value>Enter number here</value>
+    <value>ここに番号を入力してください</value>
+    <comment>Enter number here</comment>
   </data>
   <data name="MaskedTextBoxLabel" xml:space="preserve">
-    <value>Masked TextBox</value>
+    <value>マスクテキストボックス</value>
+    <comment>Masked TextBox</comment>
   </data>
   <data name="RawValueLabel" xml:space="preserve">
-    <value>Raw Value</value>
+    <value>実際の値</value>
+    <comment>Raw Value</comment>
   </data>
   <data name="MaskTemplatesLabel" xml:space="preserve">
-    <value>Mask templates</value>
+    <value>マスクテンプレート</value>
+    <comment>Mask templates</comment>
   </data>
   <data name="CustomMaskLabel" xml:space="preserve">
-    <value>Custom Mask</value>
+    <value>カスタムマスク</value>
+    <comment>Custom Mask</comment>
   </data>
   <data name="MaskFormatLabel" xml:space="preserve">
-    <value>Mask Format</value>
+    <value>マスク書式</value>
+    <comment>Mask Format</comment>
   </data>
   <data name="OnContent" xml:space="preserve">
     <value>On</value>
   </data>
   <data name="OffContent" xml:space="preserve">
     <value>Off</value>
+  </data>
+  <data name="ComboBoxTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="C1ComboBoxDes" xml:space="preserve">
+    <value />
   </data>
 </root>

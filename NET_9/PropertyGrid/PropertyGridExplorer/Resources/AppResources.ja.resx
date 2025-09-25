@@ -169,12 +169,23 @@
     <comment>Dynamic Binding</comment>
   </data>
   <data name="ChangePropsText" xml:space="preserve">
-    <value>Change my properties!!!</value>
+    <value>プロパティを変更してください！</value>
+    <comment>Change my properties!!!</comment>
   </data>
   <data name="ContentText" xml:space="preserve">
-    <value>Content</value>
+    <value>コンテンツ</value>
+    <comment>Content</comment>
   </data>
   <data name="ChangeContentText" xml:space="preserve">
-    <value>click to change content</value>
+    <value>クリックしてコンテンツを変更</value>
+    <comment>click to change content</comment>
+  </data>
+  <data name="AttachedPropertiesTitle" xml:space="preserve">
+    <value>添付プロパティ</value>
+    <comment>Attached Properties</comment>
+  </data>
+  <data name="AttachedPropertiesDesc" xml:space="preserve">
+    <value>プロパティグリッドから添付プロパティを変更する方法を示します</value>
+    <comment>Shows how to change attached properties from the property grid</comment>
   </data>
 </root>

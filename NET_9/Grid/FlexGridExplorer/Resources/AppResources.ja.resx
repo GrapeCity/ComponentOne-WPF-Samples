@@ -691,48 +691,71 @@
     <comment>Tree Indent Mode</comment>
   </data>
   <data name="RowExportOptionsLabel" xml:space="preserve">
-    <value>Row(s) Export Options:</value>
+    <value>行のエクスポート オプション:</value>
+    <comment>Row(s) Export Options:</comment>
   </data>
   <data name="ExportOptionsLabel" xml:space="preserve">
-    <value>Export Options</value>
+    <value>エクスポートオプション</value>
+    <comment>Export Options</comment>
   </data>
   <data name="ColumnExportOptionsLabel" xml:space="preserve">
-    <value>Column(s) Export Options:</value>
+    <value>列のエクスポートオプション:</value>
+    <comment>Column(s) Export Options:</comment>
   </data>
   <data name="SpecificRangesLabel" xml:space="preserve">
-    <value>Specific Ranges:</value>
+    <value>具体的な範囲:</value>
+    <comment>Specific Ranges:</comment>
   </data>
   <data name="GridHeaderVisibilityOptionsLabel" xml:space="preserve">
-    <value>Grid Header Visibility Options:</value>
+    <value>グリッドヘッダーの表示オプション:</value>
+    <comment>Grid Header Visibility Options:</comment>
   </data>
   <data name="OtherOptionsLabel" xml:space="preserve">
-    <value>Other Options:</value>
+    <value>その他のオプション:</value>
+    <comment>Other Options:</comment>
   </data>
   <data name="ShowcasePlaygroundHeader" xml:space="preserve">
-    <value>Showcase Playground</value>
+    <value>ショーケース・プレイグラウンド</value>
+    <comment>Showcase Playground</comment>
   </data>
   <data name="PickDifferentThemeLabel" xml:space="preserve">
-    <value>Pick a different theme to showcase style export:</value>
+    <value>スタイルのエクスポートを展示するには、別のテーマを選択してください:</value>
+    <comment>Pick a different theme to showcase style export:</comment>
   </data>
   <data name="GroupingOptionsLabel" xml:space="preserve">
-    <value>Grouping Options:</value>
+    <value>グループ化オプション:</value>
+    <comment>Grouping Options:</comment>
   </data>
   <data name="AddGroupTooltip" xml:space="preserve">
-    <value>Add another group</value>
+    <value>別のグループを追加</value>
+    <comment>Add another group</comment>
   </data>
   <data name="ClearGroupingButtonText" xml:space="preserve">
-    <value>Clear Grouping(s)</value>
+    <value>グループ化のクリア</value>
+    <comment>Clear Grouping(s)</comment>
   </data>
   <data name="RenderMergedRangesCheckBoxText" xml:space="preserve">
-    <value>Render Merged Ranges</value>
+    <value>結合された範囲をレンダリングする</value>
+    <comment>Render Merged Ranges</comment>
   </data>
   <data name="RenderFormattedValuesCheckBoxText" xml:space="preserve">
-    <value>Render Formatted Values</value>
+    <value>フォーマットされた値をレンダリングする</value>
+    <comment>Render Formatted Values</comment>
   </data>
   <data name="RenderImagesCheckBoxText" xml:space="preserve">
-    <value>Render Images</value>
+    <value>イメージをレンダリングする</value>
+    <comment>Render Images</comment>
   </data>
   <data name="GroupByLabel" xml:space="preserve">
-    <value>Group By</value>
+    <value>グループ化</value>
+    <comment>Group By</comment>
+  </data>
+  <data name="SaveRules" xml:space="preserve">
+    <value>ルールの保存</value>
+    <comment>Save Rules</comment>
+  </data>
+  <data name="LoadRules" xml:space="preserve">
+    <value>ルールの読み込み</value>
+    <comment>Load Rules</comment>
   </data>
 </root>

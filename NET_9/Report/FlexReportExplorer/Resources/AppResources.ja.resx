@@ -138,21 +138,27 @@
     <comment>FlexReport Explorer</comment>
   </data>
   <data name="ReportLabel" xml:space="preserve">
-    <value>Report:</value>
+    <value>レポート:</value>
+    <comment>Report:</comment>
   </data>
   <data name="ExportFilterLabel" xml:space="preserve">
-    <value>Export Filter:</value>
+    <value>エクスポートフィルター:</value>
+    <comment>Export Filter:</comment>
   </data>
   <data name="ExportText" xml:space="preserve">
-    <value>Export...</value>
+    <value>エクスポート...</value>
+    <comment>Export...</comment>
   </data>
   <data name="OpenDocumentCheckBoxText" xml:space="preserve">
-    <value>Open document after export</value>
+    <value>エクスポート後にドキュメントを開く</value>
+    <comment>Open document after export</comment>
   </data>
   <data name="PrintLabel" xml:space="preserve">
-    <value>Printer:</value>
+    <value>プリンター:</value>
+    <comment>Printer:</comment>
   </data>
   <data name="PrintText" xml:space="preserve">
-    <value>Print...</value>
+    <value>印刷...</value>
+    <comment>Print...</comment>
   </data>
 </root>

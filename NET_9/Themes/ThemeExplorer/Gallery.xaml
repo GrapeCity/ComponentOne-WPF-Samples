@@ -8,7 +8,13 @@
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
     <UserControl.Resources>
-        <ResourceDictionary Source="pack://application:,,,/C1.WPF.Core;component/themes/Common.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/C1.WPF.Core;component/themes/Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <!-- Scheduler Dropdown local converter -->
+            <local:ScheduleStringConverter x:Key="ScheduleStringConverter"/>
+        </ResourceDictionary>
     </UserControl.Resources>
 
     <Grid x:Name="LayoutRoot">
@@ -21,7 +27,7 @@
             <c1:C1ComboBox x:Name="themes" IsEditable="False" SelectedItemChanged="themes_SelectedItemChanged" Width="200" Margin="5" Height="30" />
         </StackPanel>
 
-        <c1:C1TabControl CanUserReorder="True" Grid.Row="1" UnselectedContentMode="OutsideVisualTree" TabStripMenuVisibility="Visible" >
+        <c1:C1TabControl CanUserReorder="True" Grid.Row="1" UnselectedContentMode="OutsideVisualTree" TabStripMenuVisibility="Visible"  >
             <c1:C1TabItem Header="{x:Static p:Resources.DataManagement}" UnselectedContentMode="OutsideVisualTree" >
                 <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" 
                              SelectionChanged="DataManagement_SelectionChanged" UnselectedContentMode="OutsideVisualTree" SelectedIndex="0">
@@ -67,12 +73,12 @@
 
                             <c1:C1DataFilter x:Name="c1DataFilter1" AutoGenerateFilters="False" ExpandMode="Any">
                                 <c1:C1DataFilter.Filters>
-                                    <c1:ChecklistFilter x:Name="occupationFilter" PropertyName="{x:Static p:Resources.Occupation}"/>
-                                    <c1:RangeFilter PropertyName="{x:Static p:Resources.Age}" Format="N0" Minimum="0" Maximum="115" UpperValue="70"/>
-                                    <c1:NumericFilter PropertyName="{x:Static p:Resources.Age}" />
-                                    <c1:DateRangeFilter PropertyName="{x:Static p:Resources.DOB}" Minimum="01/01/1950" Maximum="01/01/2100"/>
-                                    <c1:FullTextFilter PropertyName="{x:Static p:Resources.Name}"/>
-                                    <c1:ThreeStateFilter PropertyName="{x:Static p:Resources.Male}" HeaderText="{x:Static p:Resources.Gender}" TrueLabel="Male" FalseLabel="Female" NullLabel="Unknown"/>
+                                    <c1:ChecklistFilter x:Name="occupationFilter" PropertyName="Occupation" HeaderText="{x:Static p:Resources.Occupation}"/>
+                                    <c1:RangeFilter PropertyName="Age" HeaderText="{x:Static p:Resources.Age}" Format="N0" Minimum="0" Maximum="115" UpperValue="70"/>
+                                    <c1:NumericFilter PropertyName="Age" HeaderText="{x:Static p:Resources.Age}"  />
+                                    <c1:DateRangeFilter PropertyName="DOB" HeaderText="{x:Static p:Resources.DOB}" Minimum="01/01/1950" Maximum="01/01/2100"/>
+                                    <c1:FullTextFilter PropertyName="Name" HeaderText="{x:Static p:Resources.Name}"/>
+                                    <c1:ThreeStateFilter PropertyName="Male" HeaderText="{x:Static p:Resources.Gender}" TrueLabel="Male" FalseLabel="Female" NullLabel="Unknown"/>
                                 </c1:C1DataFilter.Filters>
                             </c1:C1DataFilter>
                             <c1:FlexGrid Grid.Column="1" AutoGenerateColumns="True" x:Name="dataFilterFlexGrid" />
@@ -160,7 +166,7 @@
                 </c1:C1TabControl>
             </c1:C1TabItem>
             <c1:C1TabItem Header="{x:Static p:Resources.Scheduling}" >
-                <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree" >
+                <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree"  >
                     <c1:C1TabItem Header="Calendar" BorderThickness="0">
                         <c1:C1Calendar SelectionMode="Extended" MaxSelectionCount="21" MinHeight="280" MinWidth="280" Margin="5"
                                    HorizontalAlignment="Left" VerticalAlignment="Top" ShowAdjacentDay="True" />
@@ -178,7 +184,14 @@
 
                             <c1:C1ToolStrip Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
                                 <TextBlock Margin="2" Text="{x:Static p:Resources.SchedulerView}" VerticalAlignment="Center"/>
-                                <c1:C1ComboBox x:Name="ViewType" VerticalAlignment="Center" SelectedItem="{Binding ViewType, ElementName=sched1}" Margin="2" MinWidth="120"/>
+                                <c1:C1ComboBox x:Name="ViewType" VerticalAlignment="Center"  SelectedItem="{Binding ViewType, ElementName=sched1}"
+                                               ItemsSource="{Binding ViewTypeOptions}" Margin="2" MinWidth="120">
+                                    <c1:C1ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Converter={StaticResource ScheduleStringConverter}}"/>
+                                        </DataTemplate>
+                                    </c1:C1ComboBox.ItemTemplate>
+                                </c1:C1ComboBox>
                                 <c1:C1CheckBox x:Name="Grouping" Content="{x:Static p:Resources.EnableGrouping}" Checked="Grouping_Checked" Unchecked="Grouping_Unchecked" />
                                 <c1:C1CheckBox Content="{x:Static p:Resources.Showweektabs}" IsChecked="{Binding ShowWeekTabs, ElementName=sched1, Mode=TwoWay}" />
                             </c1:C1ToolStrip>

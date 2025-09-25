@@ -152,7 +152,7 @@
     <comment>Overview</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Schedulerエクスプローラー</value>
+    <value>Scheduler エクスプローラー</value>
     <comment>SchedulerExplorer</comment>
   </data>
   <data name="AddNew" xml:space="preserve">
@@ -168,57 +168,75 @@
     <value>保存…</value>
   </data>
   <data name="View" xml:space="preserve">
-    <value>View:</value>
+    <value>表示:</value>
+    <comment>View:</comment>
   </data>
   <data name="Day" xml:space="preserve">
-    <value>Day</value>
+    <value>日</value>
+    <comment>Day</comment>
   </data>
   <data name="WorkWeek" xml:space="preserve">
-    <value>Work Week</value>
+    <value>稼働日</value>
+    <comment>Work Week</comment>
   </data>
   <data name="Week" xml:space="preserve">
-    <value>Week</value>
+    <value>週</value>
+    <comment>Week</comment>
   </data>
   <data name="Month" xml:space="preserve">
-    <value>Month</value>
+    <value>月</value>
+    <comment>Month</comment>
   </data>
   <data name="TimeLine" xml:space="preserve">
-    <value>Time Line</value>
+    <value>タイムライン</value>
+    <comment>Time Line</comment>
   </data>
   <data name="TimeScale" xml:space="preserve">
-    <value>Time Scale:</value>
+    <value>時間スケール:</value>
+    <comment>Time Scale:</comment>
   </data>
   <data name="ChangeTimeScale" xml:space="preserve">
-    <value>Change Time Scale</value>
+    <value>時間スケールの変更</value>
+    <comment>Change Time Scale</comment>
   </data>
   <data name="ShowWorkTimeOnly" xml:space="preserve">
-    <value>Show work time only</value>
+    <value>勤務時間のみ表示</value>
+    <comment>Show work time only</comment>
   </data>
   <data name="ShowWeekTabs" xml:space="preserve">
-    <value>Show week tabs</value>
+    <value>週タブの表示</value>
+    <comment>Show week tabs</comment>
   </data>
   <data name="LoadDataFromFile" xml:space="preserve">
-    <value>Load data from file</value>
+    <value>ファイルからデータを読み込む</value>
+    <comment>Load data from file</comment>
   </data>
   <data name="ChangeView" xml:space="preserve">
-    <value>Change View</value>
+    <value>ビューの変更</value>
+    <comment>Change View</comment>
   </data>
   <data name="SaveDataToFile" xml:space="preserve">
-    <value>Save data to file</value>
+    <value>データをファイルに保存</value>
+    <comment>Save data to file</comment>
   </data>
   <data name="GroupBy" xml:space="preserve">
-    <value>Group by:</value>
+    <value>グループ化:</value>
+    <comment>Group by:</comment>
   </data>
   <data name="GroupNavigation" xml:space="preserve">
-    <value>Group navigation:</value>
+    <value>グループ操作:</value>
+    <comment>Group navigation:</comment>
   </data>
   <data name="GroupPageSize" xml:space="preserve">
-    <value>Group page size:</value>
+    <value>グループページサイズ:</value>
+    <comment>Group page size:</comment>
   </data>
   <data name="ClearsTheAppointmentsList" xml:space="preserve">
-    <value>Clears the Appointments list.</value>
+    <value>予定リストをクリアします。</value>
+    <comment>Clears the Appointments list.</comment>
   </data>
   <data name="AddsAppointment" xml:space="preserve">
-    <value>Adds a new AppointmentBusinessObject to the Appointments list.</value>
+    <value>新しい AppointmentBusinessObject を Appointments リストに追加します。</value>
+    <comment>Adds a new AppointmentBusinessObject to the Appointments list.</comment>
   </data>
 </root>

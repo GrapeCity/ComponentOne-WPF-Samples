@@ -23,3 +23,4 @@ Shows the following controls
         - C1CheckBox
 	- C1RadioButton
 	- C1StopsSlider
+        - C1ToggleSwitch

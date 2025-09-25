@@ -123,21 +123,21 @@ namespace SchedulerExplorer
             {
                 return;
             }
-            switch (views.SelectedValue)
+            switch (views.SelectedIndex)
             {
-                case "Day":
+                case 0:
                     SetStyle(sched1.OneDayStyle);
                     break;
-                case "Work Week":
+                case 1:
                     SetStyle(sched1.WorkingWeekStyle);
                     break;
-                case "Week":
+                case 2:
                     SetStyle(sched1.WeekStyle);
                     break;
-                case "Month":
+                case 3:
                     SetStyle(sched1.MonthStyle);
                     break;
-                case "Time Line":
+                case 4:
                     SetStyle(sched1.TimeLineStyle);
                     break;
             }

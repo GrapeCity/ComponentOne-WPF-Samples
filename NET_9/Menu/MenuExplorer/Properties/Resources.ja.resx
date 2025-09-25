@@ -158,294 +158,406 @@
     <comment>Custom Context Menu</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Menuエクスプローラー</value>
+    <value>Menu エクスプローラー</value>
   </data>
   <data name="MenuItem_File" xml:space="preserve">
-    <value>File</value>
+    <value>ファイル</value>
+    <comment>File</comment>
   </data>
   <data name="SubMenuItem_New" xml:space="preserve">
-    <value>New</value>
+    <value>新規</value>
+    <comment>New</comment>
   </data>
   <data name="SubMenuItem_WebSite" xml:space="preserve">
-    <value>Web Site...</value>
+    <value>Web サイト...</value>
+    <comment>Web Site...</comment>
   </data>
   <data name="SubMenuItem_TeamProject" xml:space="preserve">
-    <value>Team Project...</value>
+    <value>チームプロジェクト...</value>
+    <comment>Team Project...</comment>
   </data>
   <data name="SubMenuItem_File" xml:space="preserve">
-    <value>File...</value>
+    <value>ファイル...</value>
+    <comment>File...</comment>
   </data>
   <data name="MenuItem_Open" xml:space="preserve">
-    <value>Open</value>
+    <value>開く</value>
+    <comment>Open</comment>
   </data>
   <data name="SubMenuItem_Project" xml:space="preserve">
-    <value>Project...</value>
+    <value>プロジェクト...</value>
+    <comment>Project...</comment>
   </data>
   <data name="MenuItem_Close" xml:space="preserve">
-    <value>Close</value>
+    <value>閉じる</value>
+    <comment>Close</comment>
   </data>
   <data name="SubMenuItem_CloseSolution" xml:space="preserve">
-    <value>Close Solution</value>
+    <value>ソリューションを閉じる</value>
+    <comment>Close Solution</comment>
   </data>
   <data name="MenuItem_Save" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
+    <comment>Save</comment>
   </data>
   <data name="MenuItem_SaveAll" xml:space="preserve">
-    <value>Save All</value>
+    <value>すべて保存</value>
+    <comment>Save All</comment>
   </data>
   <data name="MenuItem_PageSetup" xml:space="preserve">
-    <value>Page Setup</value>
+    <value>ページ設定</value>
+    <comment>Page Setup</comment>
   </data>
   <data name="MenuItem_Print" xml:space="preserve">
-    <value>Print</value>
+    <value>印刷</value>
+    <comment>Print</comment>
   </data>
   <data name="MenuItem_Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>終了</value>
+    <comment>Exit</comment>
   </data>
   <data name="MenuItem_Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>編集</value>
+    <comment>Edit</comment>
   </data>
   <data name="MenuItem_Undo" xml:space="preserve">
-    <value>Undo</value>
+    <value>元に戻す</value>
+    <comment>Undo</comment>
   </data>
   <data name="MenuItem_Redo" xml:space="preserve">
-    <value>Redo</value>
+    <value>やり直し</value>
+    <comment>Redo</comment>
   </data>
   <data name="SubMenuItem_Cut" xml:space="preserve">
-    <value>Cut</value>
+    <value>切り取り</value>
+    <comment>Cut</comment>
   </data>
   <data name="SubMenuItem_Copy" xml:space="preserve">
-    <value>Copy</value>
+    <value>コピー</value>
+    <comment>Copy</comment>
   </data>
   <data name="SubMenuItem_Paste" xml:space="preserve">
-    <value>Paste</value>
+    <value>貼り付け</value>
+    <comment>Paste</comment>
   </data>
   <data name="SubMenuItem_Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>削除</value>
+    <comment>Delete</comment>
   </data>
   <data name="MenuItem_Window" xml:space="preserve">
-    <value>Window</value>
+    <value>ウィンドウ</value>
+    <comment>Window</comment>
   </data>
   <data name="Document1" xml:space="preserve">
-    <value>Document 1</value>
+    <value>文書 1</value>
+    <comment>Document 1</comment>
   </data>
   <data name="Document2" xml:space="preserve">
-    <value>Document 2</value>
+    <value>文書 1</value>
+    <comment>Document 2</comment>
   </data>
   <data name="Document3" xml:space="preserve">
-    <value>Document 3</value>
+    <value>文書 1</value>
+    <comment>Document 3</comment>
   </data>
   <data name="Document4" xml:space="preserve">
-    <value>Document 4</value>
+    <value>文書 1</value>
+    <comment>Document 4</comment>
   </data>
   <data name="Exclusive1" xml:space="preserve">
-    <value>Exclusive 1</value>
+    <value>排他 1</value>
+    <comment>Exclusive 1</comment>
   </data>
   <data name="Exclusive2" xml:space="preserve">
-    <value>Exclusive 2</value>
+    <value>排他 2</value>
+    <comment>Exclusive 2</comment>
   </data>
   <data name="Exclusive3" xml:space="preserve">
-    <value>Exclusive 3</value>
+    <value>排他 3</value>
+    <comment>Exclusive 3</comment>
   </data>
   <data name="MenuItem_Deep" xml:space="preserve">
-    <value>Deep</value>
+    <value>深層</value>
+    <comment>Deep</comment>
   </data>
   <data name="Deep1" xml:space="preserve">
-    <value>Deep1</value>
+    <value>深層1</value>
+    <comment>Deep1</comment>
   </data>
   <data name="Deep2" xml:space="preserve">
-    <value>Deep2</value>
+    <value>深層2</value>
+    <comment>Deep2</comment>
   </data>
   <data name="Deep3" xml:space="preserve">
-    <value>Deep3</value>
+    <value>深層3</value>
+    <comment>Deep3</comment>
   </data>
   <data name="Deep4" xml:space="preserve">
-    <value>Deep4</value>
+    <value>深層4</value>
+    <comment>Deep4</comment>
   </data>
   <data name="Deep5" xml:space="preserve">
-    <value>Deep5</value>
+    <value>深層5</value>
+    <comment>Deep5</comment>
   </data>
   <data name="Clipboard" xml:space="preserve">
-    <value>Clipboard</value>
+    <value>クリップボード</value>
+    <comment>Clipboard</comment>
   </data>
   <data name="Color" xml:space="preserve">
-    <value>Color</value>
+    <value>色</value>
+    <comment>Color</comment>
   </data>
   <data name="FontColor" xml:space="preserve">
-    <value>Font Color</value>
+    <value>フォント色</value>
+    <comment>Font Color</comment>
   </data>
   <data name="TextHighlightColor" xml:space="preserve">
-    <value>Text Highlight Color</value>
+    <value>テキストハイライト色</value>
+    <comment>Text Highlight Color</comment>
   </data>
   <data name="FontSize" xml:space="preserve">
-    <value>Font Size</value>
+    <value>フォントサイズ</value>
+    <comment>Font Size</comment>
   </data>
   <data name="Format" xml:space="preserve">
-    <value>Format</value>
+    <value>書式</value>
+    <comment>Format</comment>
   </data>
   <data name="Bold" xml:space="preserve">
-    <value>Bold</value>
+    <value>太字</value>
+    <comment>Bold</comment>
   </data>
   <data name="Italic" xml:space="preserve">
-    <value>Italic</value>
+    <value>斜体</value>
+    <comment>Italic</comment>
   </data>
   <data name="Underline" xml:space="preserve">
-    <value>Underline</value>
+    <value>下線</value>
+    <comment>Underline</comment>
   </data>
   <data name="Strike" xml:space="preserve">
-    <value>Strike</value>
+    <value>取り消し線</value>
+    <comment>Strike</comment>
   </data>
   <data name="Superscript" xml:space="preserve">
-    <value>Superscript</value>
+    <value>上付き</value>
+    <comment>Superscript</comment>
   </data>
   <data name="Subscript" xml:space="preserve">
-    <value>Subscript</value>
+    <value>下付き</value>
+    <comment>Subscript</comment>
   </data>
   <data name="Align" xml:space="preserve">
-    <value>Align</value>
+    <value>配置</value>
+    <comment>Align</comment>
   </data>
   <data name="AlignLeft" xml:space="preserve">
-    <value>Align Left</value>
+    <value>左揃え</value>
+    <comment>Align Left</comment>
   </data>
   <data name="AlignCenter" xml:space="preserve">
-    <value>Align Center</value>
+    <value>中央揃え</value>
+    <comment>Align Center</comment>
   </data>
   <data name="Left" xml:space="preserve">
-    <value>Left</value>
+    <value>左揃え</value>
+    <comment>Left</comment>
   </data>
   <data name="Center" xml:space="preserve">
-    <value>Center</value>
+    <value>中心</value>
+    <comment>Center</comment>
   </data>
   <data name="AlignRight" xml:space="preserve">
-    <value>Align Right</value>
+    <value>右揃え</value>
+    <comment>Align Right</comment>
   </data>
   <data name="Right" xml:space="preserve">
-    <value>Right</value>
+    <value>右揃え</value>
+    <comment>Right</comment>
   </data>
   <data name="Justify" xml:space="preserve">
-    <value>Justify</value>
+    <value>両端揃え</value>
+    <comment>Justify</comment>
   </data>
   <data name="Lists" xml:space="preserve">
-    <value>Lists</value>
+    <value>リスト</value>
+    <comment>Lists</comment>
   </data>
   <data name="Bulleted" xml:space="preserve">
-    <value>Bulleted</value>
+    <value>箇条書き</value>
+    <comment>Bulleted</comment>
   </data>
   <data name="Numbered" xml:space="preserve">
-    <value>Numbered</value>
+    <value>番号付き</value>
+    <comment>Numbered</comment>
   </data>
   <data name="Insert" xml:space="preserve">
-    <value>Insert</value>
+    <value>挿入</value>
+    <comment>Insert</comment>
   </data>
   <data name="InsertObject" xml:space="preserve">
-    <value>Insert Object</value>
+    <value>オブジェクトの挿入</value>
+    <comment>Insert Object</comment>
   </data>
   <data name="FormatPainter" xml:space="preserve">
-    <value>Format Painter</value>
+    <value>書式ペインター</value>
+    <comment>Format Painter</comment>
   </data>
   <data name="ClearFormat" xml:space="preserve">
-    <value>Clear Format</value>
+    <value>書式のクリア</value>
+    <comment>Clear Format</comment>
   </data>
   <data name="ClearTextFormatting" xml:space="preserve">
-    <value>Clear Text Formatting</value>
+    <value>テキスト書式のクリア</value>
+    <comment>Clear Text Formatting</comment>
   </data>
   <data name="Delete Table" xml:space="preserve">
-    <value>Delete Table</value>
+    <value>テーブルの削除</value>
+    <comment>Delete Table</comment>
   </data>
   <data name="DeleteCells" xml:space="preserve">
-    <value>Delete Cells</value>
+    <value>セルの削除</value>
+    <comment>Delete Cells</comment>
   </data>
   <data name="DeleteColumns" xml:space="preserve">
-    <value>Delete Columns</value>
+    <value>列の削除</value>
+    <comment>Delete Columns</comment>
   </data>
   <data name="DeleteRows" xml:space="preserve">
-    <value>Delete Rows</value>
+    <value>行の削除</value>
+    <comment>Delete Rows</comment>
   </data>
   <data name="InsertTable" xml:space="preserve">
-    <value>Insert Table</value>
+    <value>表の挿入</value>
+    <comment>Insert Table</comment>
   </data>
   <data name="InsertLeft" xml:space="preserve">
-    <value>Insert Left</value>
+    <value>左に挿入</value>
+    <comment>Insert Left</comment>
   </data>
   <data name="InsertRight" xml:space="preserve">
-    <value>Insert Right</value>
+    <value>右に挿入</value>
+    <comment>Insert Right</comment>
   </data>
   <data name="InsertAbove" xml:space="preserve">
-    <value>Insert Above</value>
+    <value>上に挿入</value>
+    <comment>Insert Above</comment>
   </data>
   <data name="InsertBelow" xml:space="preserve">
-    <value>Insert Below</value>
+    <value>下に挿入</value>
+    <comment>Insert Below</comment>
   </data>
   <data name="Alignment" xml:space="preserve">
-    <value>Alignment</value>
+    <value>配置</value>
+    <comment>Alignment</comment>
   </data>
   <data name="AlignCenterHorizontal" xml:space="preserve">
-    <value>Align Center (Horizontal)</value>
+    <value>中央揃え（水平）</value>
+    <comment>Align Center (Horizontal)</comment>
   </data>
   <data name="AlignTop" xml:space="preserve">
-    <value>Align Top</value>
+    <value>上揃え</value>
+    <comment>Align Top</comment>
   </data>
   <data name="Top" xml:space="preserve">
-    <value>Top</value>
+    <value>上揃え</value>
+    <comment>Top</comment>
   </data>
   <data name="AlignCenterVertical" xml:space="preserve">
-    <value>Align Center (Vertical)</value>
+    <value>中央揃え（垂直）</value>
+    <comment>Align Center (Vertical)</comment>
   </data>
   <data name="AlignBottom" xml:space="preserve">
-    <value>Align Bottom</value>
+    <value>下揃え</value>
+    <comment>Align Bottom</comment>
   </data>
   <data name="Bottom" xml:space="preserve">
-    <value>Bottom</value>
+    <value>下</value>
+    <comment>Bottom</comment>
   </data>
   <data name="MergeCells" xml:space="preserve">
-    <value>Merge Cells</value>
+    <value>セルの結合</value>
+    <comment>Merge Cells</comment>
   </data>
   <data name="UnmergeCells" xml:space="preserve">
-    <value>Unmerge Cells</value>
+    <value>セルの結合解除</value>
+    <comment>Unmerge Cells</comment>
   </data>
   <data name="RadialMenu_UndoRedo" xml:space="preserve">
-    <value>_UndoRedo</value>
+    <value>元に戻す/やり直し</value>
+    <comment>_UndoRedo</comment>
   </data>
   <data name="UndoRedo" xml:space="preserve">
-    <value>Undo/Redo</value>
+    <value>元に戻す/やり直し</value>
+    <comment>Undo/Redo</comment>
   </data>
   <data name="RadialMenu_Undo" xml:space="preserve">
-    <value>_Undo</value>
+    <value>元に戻す</value>
+    <comment>_Undo</comment>
   </data>
   <data name="RadialMenu_Redo" xml:space="preserve">
-    <value>_Redo</value>
+    <value>やり直し</value>
+    <comment>_Redo</comment>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Add</value>
+    <value>追加</value>
+    <comment>Add</comment>
   </data>
   <data name="NewItem" xml:space="preserve">
-    <value>New Item</value>
+    <value>新規項目</value>
+    <comment>New Item</comment>
   </data>
   <data name="Existing" xml:space="preserve">
-    <value>Existing</value>
+    <value>既存</value>
+    <comment>Existing</comment>
   </data>
   <data name="ExistingItem" xml:space="preserve">
-    <value>Existing Item</value>
+    <value>既存の項目</value>
+    <comment>Existing Item</comment>
   </data>
   <data name="Folder" xml:space="preserve">
-    <value>Folder</value>
+    <value>フォルダー</value>
+    <comment>Folder</comment>
   </data>
   <data name="Class" xml:space="preserve">
-    <value>Class</value>
+    <value>クラス</value>
+    <comment>Class</comment>
   </data>
   <data name="Exclude" xml:space="preserve">
-    <value>Exclude</value>
+    <value>除外</value>
+    <comment>Exclude</comment>
   </data>
   <data name="ExcludeFromProject" xml:space="preserve">
-    <value>Exclude From Project</value>
+    <value>プロジェクトから除外</value>
+    <comment>Exclude From Project</comment>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Rename</value>
+    <value>名前の変更</value>
+    <comment>Rename</comment>
   </data>
   <data name="Properties" xml:space="preserve">
-    <value>Properties</value>
+    <value>プロパティ</value>
+    <comment>Properties</comment>
   </data>
   <data name="RadialMenu_Table" xml:space="preserve">
-    <value>Table</value>
+    <value>表</value>
+    <comment>Table</comment>
+  </data>
+  <data name="TilesTitle" xml:space="preserve">
+    <value>TileView メニュー項目</value>
+    <comment>TileView Menu Item</comment>
+  </data>
+  <data name="TilesDesc" xml:space="preserve">
+    <value>ヘッダーがタイルリストビューであるメニュー項目を表示する方法を示します</value>
+    <comment>Show how to display a menu item whose header is a tile list view</comment>
+  </data>
+  <data name="GroupingDesc" xml:space="preserve">
+    <value>メニュー項目間のグループラベルを表示する方法を示します</value>
+    <comment>Shows how to display group labels between menu-items</comment>
+  </data>
+  <data name="GroupingTitle" xml:space="preserve">
+    <value>グループ化</value>
+    <comment>Grouping</comment>
   </data>
 </root>

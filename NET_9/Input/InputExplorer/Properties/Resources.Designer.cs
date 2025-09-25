@@ -106,6 +106,15 @@ namespace InputExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shows how to customize the appearance of C1ComboBox items..
+        /// </summary>
+        public static string C1ComboBoxDes {
+            get {
+                return ResourceManager.GetString("C1ComboBoxDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can not work more than 8 hours.
         /// </summary>
         public static string CanNotWorkMoreThan {
@@ -156,6 +165,15 @@ namespace InputExplorer.Properties {
         public static string ClickMeText {
             get {
                 return ResourceManager.GetString("ClickMeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ComboBox.
+        /// </summary>
+        public static string ComboBoxTitle {
+            get {
+                return ResourceManager.GetString("ComboBoxTitle", resourceCulture);
             }
         }
         

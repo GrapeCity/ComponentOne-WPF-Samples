@@ -118,19 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddOperationFormat" xml:space="preserve">
-    <value>Add {0}</value>
+    <value>{0} を追加</value>
+    <comment>Add {0}</comment>
   </data>
   <data name="CheckBoxStyleLabel" xml:space="preserve">
-    <value>CheckBox Style</value>
+    <value>チェックボックススタイル</value>
+    <comment>CheckBox Style</comment>
   </data>
   <data name="NormalStyleLabel" xml:space="preserve">
-    <value>Normal Style</value>
+    <value>通常スタイル</value>
+    <comment>Normal Style</comment>
   </data>
   <data name="OperationsLabel" xml:space="preserve">
-    <value>Operations Information</value>
+    <value>運用情報</value>
+    <comment>Operations Information</comment>
   </data>
   <data name="RemoveOperationFormat" xml:space="preserve">
-    <value>Remove {0}</value>
+    <value>{0} を削除</value>
+    <comment>Remove {0}</comment>
   </data>
   <data name="Sample" xml:space="preserve">
     <value>複数選択</value>
@@ -139,6 +144,7 @@
     <value>複数選択</value>
   </data>
   <data name="SelectedItemsLabel" xml:space="preserve">
-    <value>Selected Items</value>
+    <value>選択した項目</value>
+    <comment>Selected Items</comment>
   </data>
 </root>

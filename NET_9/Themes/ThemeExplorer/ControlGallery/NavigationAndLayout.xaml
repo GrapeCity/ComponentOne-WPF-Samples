@@ -48,12 +48,12 @@
                             <c1:C1DockTabItem Header="Tab 4"/>
                             <c1:C1DockTabItem Header="Tab 5"/>
                         </c1:C1DockTabControl>
-                        <c1:C1DockTabControl>
+                        <c1:C1DockTabControl >
                             <c1:C1DockTabItem Header="Tab 6"/>
                         </c1:C1DockTabControl>
                     </c1:C1DockGroup>
 
-                    <c1:C1DockTabControl>
+                    <c1:C1DockTabControl >
                         <c1:C1DockTabItem Header="Tab 7"/>
                         <c1:C1DockTabItem Header="Tab 8"/>
                     </c1:C1DockTabControl>

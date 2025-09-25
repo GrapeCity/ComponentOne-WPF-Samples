@@ -134,99 +134,130 @@
     <comment>Toolstrip</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Ribbonエクスプローラー</value>
+    <value>Ribbon エクスプローラー</value>
   </data>
   <data name="Paste" xml:space="preserve">
-    <value>Paste</value>
+    <value>貼り付け</value>
+    <comment>Paste</comment>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>ホーム</value>
+    <comment>Home</comment>
   </data>
   <data name="Copy" xml:space="preserve">
-    <value>Copy</value>
+    <value>コピー</value>
+    <comment>Copy</comment>
   </data>
   <data name="Cut" xml:space="preserve">
-    <value>Cut</value>
+    <value>切り取り</value>
+    <comment>Cut</comment>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>削除</value>
+    <comment>Delete</comment>
   </data>
   <data name="Undo" xml:space="preserve">
-    <value>Undo</value>
+    <value>元に戻す</value>
+    <comment>Undo</comment>
   </data>
   <data name="Redo" xml:space="preserve">
-    <value>Redo</value>
+    <value>やり直し</value>
+    <comment>Redo</comment>
   </data>
   <data name="Scale" xml:space="preserve">
-    <value>Scale</value>
+    <value>スケール</value>
+    <comment>Scale</comment>
   </data>
   <data name="ZoomIn" xml:space="preserve">
-    <value>Zoom In</value>
+    <value>ズームイン</value>
+    <comment>Zoom In</comment>
   </data>
   <data name="Zoomout" xml:space="preserve">
-    <value>Zoom out</value>
+    <value>ズームアウト</value>
+    <comment>Zoom out</comment>
   </data>
   <data name="Search" xml:space="preserve">
-    <value>Search</value>
+    <value>検索</value>
+    <comment>Search</comment>
   </data>
   <data name="Find" xml:space="preserve">
-    <value>Find</value>
+    <value>検索</value>
+    <comment>Find</comment>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>Help</value>
+    <value>ヘルプ</value>
+    <comment>Help</comment>
   </data>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>バージョン情報</value>
+    <comment>About</comment>
   </data>
   <data name="Toolstripoptions" xml:space="preserve">
-    <value>Toolstrip options</value>
+    <value>ツールストリップオプション</value>
+    <comment>Toolstrip options</comment>
   </data>
   <data name="Isvertical" xml:space="preserve">
-    <value>Is vertical</value>
+    <value>垂直</value>
+    <comment>Is vertical</comment>
   </data>
   <data name="Overflow" xml:space="preserve">
-    <value>Overflow:</value>
+    <value>オーバーフロー:</value>
+    <comment>Overflow:</comment>
   </data>
   <data name="None" xml:space="preserve">
-    <value>None</value>
+    <value>なし</value>
+    <comment>None</comment>
   </data>
   <data name="Menu" xml:space="preserve">
-    <value>Menu</value>
+    <value>メニュー</value>
+    <comment>Menu</comment>
   </data>
   <data name="New" xml:space="preserve">
-    <value>New</value>
+    <value>新規</value>
+    <comment>New</comment>
   </data>
   <data name="TeamProject" xml:space="preserve">
-    <value>Team Project...</value>
+    <value>チームプロジェクト...</value>
+    <comment>Team Project...</comment>
   </data>
   <data name="Project" xml:space="preserve">
-    <value>Project...</value>
+    <value>プロジェクト...</value>
+    <comment>Project...</comment>
   </data>
   <data name="WebSite" xml:space="preserve">
-    <value>Web Site...</value>
+    <value>Web サイト...</value>
+    <comment>Web Site...</comment>
   </data>
   <data name="File" xml:space="preserve">
-    <value>File...</value>
+    <value>ファイル...</value>
+    <comment>File...</comment>
   </data>
   <data name="Open" xml:space="preserve">
-    <value>Open</value>
+    <value>開く</value>
+    <comment>Open</comment>
   </data>
   <data name="Closesolution" xml:space="preserve">
-    <value>Close solution</value>
+    <value>ソリューションを閉じる</value>
+    <comment>Close solution</comment>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
+    <comment>Save</comment>
   </data>
   <data name="SaveAll" xml:space="preserve">
-    <value>Save All</value>
+    <value>すべて保存</value>
+    <comment>Save All</comment>
   </data>
   <data name="Pagesetup" xml:space="preserve">
-    <value>Page setup</value>
+    <value>ページ設定</value>
+    <comment>Page setup</comment>
   </data>
   <data name="Print" xml:space="preserve">
-    <value>Print</value>
+    <value>印刷</value>
+    <comment>Print</comment>
   </data>
   <data name="Popup" xml:space="preserve">
-    <value>Popup</value>
+    <value>ポップアップ</value>
+    <comment>Popup</comment>
   </data>
 </root>

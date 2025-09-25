@@ -1,9 +1,12 @@
 ﻿using FlexGridExplorer.Resources;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Markup;
 
 namespace FlexGridExplorer
 {
@@ -14,6 +17,7 @@ namespace FlexGridExplorer
     {
         public MainWindow()
         {
+            this.Language = XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag);
             InitializeComponent();
             this.Title = AppResources.Title;
         }

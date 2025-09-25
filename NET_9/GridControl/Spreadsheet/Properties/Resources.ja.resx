@@ -122,6 +122,7 @@
     <comment>Spreadsheet</comment>
   </data>
   <data name="Tag" xml:space="preserve">
-    <value>Spreadsheet</value>
+    <value>スプレッドシート</value>
+    <comment>Spreadsheet</comment>
   </data>
 </root>

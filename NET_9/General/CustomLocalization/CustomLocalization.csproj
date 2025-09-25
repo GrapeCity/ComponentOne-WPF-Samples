@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Calendar">
+      <Version>9.0.20251.1133</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>9.0.20251.1133</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Docking">
+      <Version>9.0.20251.1133</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid">
+      <Version>9.0.20251.1133</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Schedule">
+      <Version>9.0.20251.1133</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TabControl">
+      <Version>9.0.20251.1133</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

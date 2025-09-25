@@ -12,7 +12,7 @@
             <c1:C1MenuItem Header="Unread" HotKey="Ctrl+Shift+O"/>
             <c1:C1MenuItem Header="Flag" />
             <c1:C1MenuItem Header="To me" />
-            <c1:C1MenuItem Header="Has attachements" HotKey="Ctrl+Shift+A"/>
+            <c1:C1MenuItem Header="Has attachments" HotKey="Ctrl+Shift+A"/>
             <c1:C1MenuSeparator />
             <c1:C1MenuGroup Header="Filter By"/>
             <c1:C1MenuItem Header="Date"/>

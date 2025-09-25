@@ -355,4 +355,12 @@
     <value>Off</value>
     <comment>Off</comment>
   </data>
+  <data name="ComboBoxTitle" xml:space="preserve">
+    <value>ComboBox</value>
+    <comment>ComboBox</comment>
+  </data>
+  <data name="C1ComboBoxDes" xml:space="preserve">
+    <value>Shows how to customize the appearance of C1ComboBox items.</value>
+    <comment>Shows how to customize the appearance of C1ComboBox items.</comment>
+  </data>
 </root>

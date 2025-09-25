@@ -118,36 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataGridIntegrationDescription" xml:space="preserve">
-    <value>This view shows how to apply conditional formatting to a DataGrid control. The DataGrid control lets users apply conditional formatting to an individual cell or a range of cells to let them visualize data more clearly for analysis and comparison.</value>
+    <value>このビューは、DataGrid コントロールに条件付き書式を適用する方法を示します。DataGrid コントロールを使用すると、個々のセルまたはセル範囲に条件付き書式を適用して、データをより明確に視覚化し、分析や比較を行うことができます。</value>
+    <comment>This view shows how to apply conditional formatting to a DataGrid control. The DataGrid control lets users apply conditional formatting to an individual cell or a range of cells to let them visualize data more clearly for analysis and comparison.</comment>
   </data>
   <data name="DataGridIntegrationTitle" xml:space="preserve">
-    <value>DataGrid Integration</value>
+    <value>DataGrid との統合</value>
     <comment>DataGrid Integration</comment>
   </data>
   <data name="ListViewIntegrationDescription" xml:space="preserve">
-    <value>This view shows how to apply conditional formatting to a C1ListView control. This sample supports changing style for Background, Foreground, IconTemplate and IconBrush.</value>
+    <value>このビューは、C1ListView コントロールに条件付き書式を適用する方法を示します。このサンプルでは、​​背景、前景、アイコンテンプレート、アイコンブラシのスタイル変更をサポートしています。</value>
     <comment>This view shows how to apply conditional formatting to a C1ListView control. This sample supports changing style for Background, Foreground, IconTemplate and IconBrush.</comment>
   </data>
   <data name="ListViewIntegrationTitle" xml:space="preserve">
-    <value>ListView Integration</value>
-    <comment>FlexChart Integration</comment>
+    <value>ListView との統合</value>
+    <comment>ListView Integration</comment>
   </data>
   <data name="FlexGridIntegrationDescription" xml:space="preserve">
-    <value>FlexGrid contains built-in integration with RulesManager. FlexGrid uses Behavior and CellFactory to apply conditional formatting.</value>
-    <comment>Uses a CellFactory to apply conditional formatting.</comment>
+    <value>FlexGrid には、RulesManager との統合機能が組み込まれています。FlexGrid は、Behavior と CellFactory を使用して条件付き書式を適用します。</value>
+    <comment>FlexGrid contains built-in integration with RulesManager. FlexGrid uses Behavior and CellFactory to apply conditional formatting.</comment>
   </data>
   <data name="FlexGridIntegrationTitle" xml:space="preserve">
-    <value>FlexGrid Integration</value>
+    <value>FlexGrid との統合</value>
     <comment>FlexGrid Integration</comment>
   </data>
   <data name="GettingStartedDescription" xml:space="preserve">
-    <value>Conditional formatting enables users to highlight cells with a certain color, depending upon the cell's value.</value>
+    <value>条件付き書式を使用すると、セルの値に応じて特定の色でセルを強調表示できます。</value>
+    <comment>Conditional formatting enables users to highlight cells with a certain color, depending upon the cell's value.</comment>
   </data>
   <data name="GettingStartedTitle" xml:space="preserve">
-    <value>Getting Started</value>
+    <value>はじめに</value>
+    <comment>Getting Started</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>RulesManagerExplorer</value>
+    <value>RulesManager エクスプローラ</value>
     <comment>RulesManagerExplorer</comment>
   </data>
 </root>

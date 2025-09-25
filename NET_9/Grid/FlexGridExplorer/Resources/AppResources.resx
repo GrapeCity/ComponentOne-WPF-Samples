@@ -449,7 +449,7 @@
     <value>Pin Column</value>
   </data>
   <data name="PinColumnDescription" xml:space="preserve">
-    <value>Shows how to implement pin/unpin columns so they become frozen at the left edge of the grid while scrolling horizontally.</value>
+    <value>Shows how to implement pin/unpin columns so they become frozen at the left or right edges of the grid while scrolling horizontally.</value>
   </data>
   <data name="PinColumnTitle" xml:space="preserve">
     <value>Pin Column</value>

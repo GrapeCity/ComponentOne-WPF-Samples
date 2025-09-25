@@ -20,7 +20,7 @@ namespace FlexGridExplorer
             grid.Columns[4].DataMap = new GridDataMap() { ItemsSource = Customer.GetCountries(), DisplayMemberPath = "Value", SelectedValuePath = "Key" };
             //grid.CellFactory = new MyCellFactory();
             grid.MinColumnWidth = 85;
-            
+
             LoadData();
         }
 
@@ -42,7 +42,12 @@ namespace FlexGridExplorer
         {
             try
             {
-                var saveDialog = new SaveFileDialog() { DefaultExt = ".xml", FileName = "rules" };
+                var saveDialog = new SaveFileDialog()
+                {
+                    DefaultExt = ".xml",
+                    FileName = "rules",
+                    Filter = "Xml Files (*.xml)|*.xml",
+                };
                 if (saveDialog.ShowDialog() ?? false)
                 {
                     using (var file = File.Create(saveDialog.FileName))
@@ -62,7 +67,12 @@ namespace FlexGridExplorer
             try
             {
 
-                var openDialog = new OpenFileDialog() { DefaultExt = ".xml", FileName = "rules" };
+                var openDialog = new OpenFileDialog()
+                {
+                    DefaultExt = ".xml",
+                    FileName = "rules",
+                    Filter = "Xml Files (*.xml)|*.xml",
+                };
                 if (openDialog.ShowDialog() ?? false)
                 {
                     using (var file = openDialog.OpenFile())

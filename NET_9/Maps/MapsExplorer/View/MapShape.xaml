@@ -19,7 +19,11 @@
                                    Margin="5 0 0 0" Width="200" Height="30" SelectionChanged="countriesCombo_SelectionChanged"
                                    DisplayMemberPath="Value"/>
                 </StackPanel>
-                <c1:C1Maps x:Name="maps" Center="-115, 50" Grid.Row="1"/>
+                <c1:C1Maps x:Name="maps" Center="-115, 50" Grid.Row="1">
+                    <c1:C1Maps.Source>
+                        <c1:OpenStreetMapTileSource />
+                    </c1:C1Maps.Source>
+                </c1:C1Maps>
             </Grid>
         </Border>
     </Grid>

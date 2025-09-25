@@ -142,7 +142,7 @@
     <comment>Formatting</comment>
   </data>
   <data name="ToolStrip" xml:space="preserve">
-    <value>このサンプルは、よりシンプルな編集ツールストリップを備えたC1RichTextBoxを示しています。</value>
+    <value>このサンプルは、よりシンプルな編集ツールストリップを備えた C1RichTextBox を示しています。</value>
     <comment>This sample shows C1RichTextBox with a simpler editing toolstrip.</comment>
   </data>
   <data name="ToolStripTitle" xml:space="preserve">
@@ -153,48 +153,63 @@
     <value>RichTextBoxエクスプローラー</value>
   </data>
   <data name="Menu_Home" xml:space="preserve">
-    <value>Home</value>
+    <value>ホーム</value>
+    <comment>Home</comment>
   </data>
   <data name="Menu_Tables" xml:space="preserve">
-    <value>Tables</value>
+    <value>表</value>
+    <comment>Tables</comment>
   </data>
   <data name="SubMenu_Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>編集</value>
+    <comment>Edit</comment>
   </data>
   <data name="SubMenu_Font" xml:space="preserve">
-    <value>Font</value>
+    <value>フォント</value>
+    <comment>Font</comment>
   </data>
   <data name="SubMenu_Paragraph" xml:space="preserve">
-    <value>Paragraph</value>
+    <value>段落</value>
+    <comment>Paragraph</comment>
   </data>
   <data name="SubMenu_Insert" xml:space="preserve">
-    <value>Insert</value>
+    <value>挿入</value>
+    <comment>Insert</comment>
   </data>
   <data name="SubMenu_Tools" xml:space="preserve">
-    <value>Tools</value>
+    <value>ツール</value>
+    <comment>Tools</comment>
   </data>
   <data name="SubMenu_Table" xml:space="preserve">
-    <value>Table</value>
+    <value>表</value>
+    <comment>Table</comment>
   </data>
   <data name="SubMenu_RowsAndColumns" xml:space="preserve">
-    <value>Rows And Columns</value>
+    <value>行と列</value>
+    <comment>Rows And Columns</comment>
   </data>
   <data name="SubMenu_Merge" xml:space="preserve">
-    <value>Merge</value>
+    <value>結合</value>
+    <comment>Merge</comment>
   </data>
   <data name="SubMenu_Cell" xml:space="preserve">
-    <value>Cell</value>
+    <value>セル</value>
+    <comment>Cell</comment>
   </data>
   <data name="Menu_View" xml:space="preserve">
-    <value>View</value>
+    <value>表示</value>
+    <comment>View</comment>
   </data>
   <data name="SubMenu_Document" xml:space="preserve">
-    <value>Document</value>
+    <value>文書</value>
+    <comment>Document</comment>
   </data>
   <data name="SubMenu_Zoom" xml:space="preserve">
-    <value>Zoom</value>
+    <value>ズーム</value>
+    <comment>Zoom</comment>
   </data>
   <data name="SubMenu_LineNumber" xml:space="preserve">
-    <value>Line Number</value>
+    <value>行番号</value>
+    <comment>Line Number</comment>
   </data>
 </root>

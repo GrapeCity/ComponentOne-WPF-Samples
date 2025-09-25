@@ -251,6 +251,7 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
     <value>国別および個人別売上高</value>
   </data>
   <data name="Views" xml:space="preserve">
-    <value>Views</value>
+    <value>表示</value>
+    <comment>Views</comment>
   </data>
 </root>

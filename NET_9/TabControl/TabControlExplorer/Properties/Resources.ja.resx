@@ -118,30 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ChartsTabHeader" xml:space="preserve">
-    <value>Charts</value>
+    <value>チャート</value>
+    <comment>Charts</comment>
   </data>
   <data name="EmployeesTabHeader" xml:space="preserve">
-    <value>Employees</value>
+    <value>従業員</value>
+    <comment>Employees</comment>
   </data>
   <data name="Indicator" xml:space="preserve">
     <value>新しいインジケータータブスタイルは Office365 をモデルにしています。タブの外観はすっきりしており、選択したタブの下にインジケーターの線が表示されます。</value>
     <comment>The new indicator tab style is modeled after Office 365. The tabs have a clean look with an indicator line displayed below the selected tab.</comment>
   </data>
   <data name="IndicatorBrushLabel" xml:space="preserve">
-    <value>Indicator Brush:</value>
+    <value>インジケータブラシ:</value>
+    <comment>Indicator Brush:</comment>
   </data>
   <data name="IndicatorPlacementLabel" xml:space="preserve">
-    <value>Indicator Placement:</value>
+    <value>インジケーターの配置:</value>
+    <comment>Indicator Placement:</comment>
   </data>
   <data name="IndicatorTitle" xml:space="preserve">
     <value>簡略化されたインジケーター</value>
     <comment>Simplified Indicator</comment>
   </data>
   <data name="IndicatorVisibleLabel" xml:space="preserve">
-    <value>Indicator Visible:</value>
+    <value>インジケーターの表示:</value>
+    <comment>Indicator Visible:</comment>
   </data>
   <data name="LandingTabHeader" xml:space="preserve">
-    <value>Landing</value>
+    <value>着地予想</value>
+    <comment>Landing</comment>
   </data>
   <data name="Overview" xml:space="preserve">
     <value>TabControl for WPF を使用して、効率的で整理された方法でコンテンツを配置します。 タブのスクロール、タブストリップの配置オプション、タブの固定と終了を利用します。</value>
@@ -152,28 +158,36 @@
     <comment>Overview</comment>
   </data>
   <data name="ReportsTabHeader" xml:space="preserve">
-    <value>Reports</value>
+    <value>レポート</value>
+    <comment>Reports</comment>
   </data>
   <data name="ReportSummaryTabHeader" xml:space="preserve">
-    <value>Report Summary</value>
+    <value>レポート要約</value>
+    <comment>Report Summary</comment>
   </data>
   <data name="SalesAgentsTabHeader" xml:space="preserve">
-    <value>Sales Agents</value>
+    <value>販売代理店</value>
+    <comment>Sales Agents</comment>
   </data>
   <data name="SalesPerMonthTabHeader" xml:space="preserve">
-    <value>Sales Per Month</value>
+    <value>月間売上高</value>
+    <comment>Sales Per Month</comment>
   </data>
   <data name="SalesPerSalesAgentTabHeader" xml:space="preserve">
-    <value>Sales Per Sales Agent</value>
+    <value>販売代理店あたりの売上高</value>
+    <comment>Sales Per Sales Agent</comment>
   </data>
   <data name="SummaryTabHeader" xml:space="preserve">
-    <value>Summary</value>
+    <value>要約</value>
+    <comment>Summary</comment>
   </data>
   <data name="TabContentText" xml:space="preserve">
-    <value>Tab item content</value>
+    <value>タブ項目の内容</value>
+    <comment>Tab item content</comment>
   </data>
   <data name="TabItemRotationLabel" xml:space="preserve">
-    <value>Tab item rotation:</value>
+    <value>タブ項目の回転:</value>
+    <comment>Tab item rotation:</comment>
   </data>
   <data name="TabPosition" xml:space="preserve">
     <value>タブは、コントロールの上部、下部、左側、または右側に配置できます。タブの内容を回転させ、タブの形状をカスタマイズします。</value>
@@ -184,12 +198,14 @@
     <comment>Tab Positions</comment>
   </data>
   <data name="TabShapeLabel" xml:space="preserve">
-    <value>Tab Shape</value>
+    <value>タブの形状</value>
+    <comment>Tab Shape</comment>
   </data>
   <data name="TabStripPlacementLabel" xml:space="preserve">
-    <value>Tab Strip Placement:</value>
+    <value>タブストリップの配置:</value>
+    <comment>Tab Strip Placement:</comment>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>TabControlエクスプローラー</value>
+    <value>TabControl エクスプローラー</value>
   </data>
 </root>
