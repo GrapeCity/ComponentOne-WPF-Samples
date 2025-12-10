@@ -25,7 +25,7 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Image Margin="20" Source="/AxisScrollbar.4;component/Resources/C1.png" Width="80" Height="80" Grid.RowSpan="2"/>
+                <Image Margin="20" Source="/AxisScrollbar;component/Resources/C1.png" Width="80" Height="80" Grid.RowSpan="2"/>
                 <TextBlock Text="Axis Scrollbar" FontWeight="Bold" FontSize="25" VerticalAlignment="Bottom" Grid.Column="1"/>
                 <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" />
             </Grid>

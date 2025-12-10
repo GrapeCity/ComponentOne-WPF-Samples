@@ -1,6 +1,6 @@
-﻿using C1.WPF.Document;
-using C1.WPF.ImportServices.ReportingServiceWPF;
-using C1.WPF.Ssrs;
+﻿using C1.ImportServices.ReportingService4;
+using C1.Ssrs;
+using C1.WPF.Document;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -123,7 +123,7 @@ namespace SSRSViewerSample
             if (index >= 0 && index < _catalogItems.Count)
             {
                 fv.DocumentSource = null;
-                _ssrsDocSource.DocumentLocation = new SSRSReportLocation(_ssrsServerUrl, _catalogItems[index].Path);
+                _ssrsDocSource.DocumentLocation = new C1.Document.SSRSReportLocation(_ssrsServerUrl, _catalogItems[index].Path);
                 fv.DocumentSource = _ssrsDocSource;
                 fv.FocusPane();
             }

@@ -6,6 +6,23 @@
         xmlns:local="clr-namespace:C1TreeViewDragDropSample2010"
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
         mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style x:Key="CustomSourceMarkerStyle" TargetType="Border">
+            <Setter Property="Background" Value="#80D3D3D3"/>
+            <Setter Property="BorderBrush" Value="#80808080"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="3"/>
+        </Style>
+
+        <Style x:Key="CustomTargetMarkerStyle" TargetType="Border">
+            <Setter Property="Background" Value="#40A020F0"/>
+            <Setter Property="BorderBrush" Value="#80A020F0"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="3"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -35,16 +52,17 @@
                 </c1:C1TreeView>
             </Grid>
         </GroupBox>
-        <c1:C1TreeView x:Name="treeView" Grid.Column="1" Margin="10" AllowDragDrop="True" AllowDrop="True" Width="400" Grid.RowSpan="2">
-            <c1:C1TreeViewItem Header="Engineering" IsExpanded="True">
-                <c1:C1TreeViewItem Header="Chris Paul"></c1:C1TreeViewItem>
-                <c1:C1TreeViewItem Header="Kobe Byant"></c1:C1TreeViewItem>
-                <c1:C1TreeViewItem Header="Leborn James"></c1:C1TreeViewItem>
-            </c1:C1TreeViewItem>
-            <c1:C1TreeViewItem Header="Sales" IsExpanded="True">
-                <c1:C1TreeViewItem Header="James Hardon"></c1:C1TreeViewItem>
-                <c1:C1TreeViewItem Header="Kevin Love"></c1:C1TreeViewItem>
-                <c1:C1TreeViewItem Header="Eric Gorden"></c1:C1TreeViewItem>
+        <c1:C1TreeView x:Name="treeView" Grid.Column="1" Margin="10" AllowDragDrop="True" AllowDrop="True" Width="400" Grid.RowSpan="2"
+            DragSourceStyle="{StaticResource CustomSourceMarkerStyle}" DragTargetStyle="{StaticResource CustomTargetMarkerStyle}">      
+                <c1:C1TreeViewItem Header="Engineering" IsExpanded="True">
+                    <c1:C1TreeViewItem Header="Chris Paul"></c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem Header="Kobe Byant"></c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem Header="Leborn James"></c1:C1TreeViewItem>
+                </c1:C1TreeViewItem>
+                <c1:C1TreeViewItem Header="Sales" IsExpanded="True">
+                    <c1:C1TreeViewItem Header="James Hardon"></c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem Header="Kevin Love"></c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem Header="Eric Gorden"></c1:C1TreeViewItem>
             </c1:C1TreeViewItem>
         </c1:C1TreeView>
     </Grid>

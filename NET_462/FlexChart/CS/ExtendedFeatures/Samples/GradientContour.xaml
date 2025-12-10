@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="ExtendedFeatures.Samples.GradientContour"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExtendedFeatures.Samples"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" >
+            <Label Content="Contour Lines: " Margin="10, 0, 0,0"/>
+            <c1:C1NumericBox x:Name="ContourLinesNumericBox" Maximum="30" Minimum="1" Margin="0 3 0 0" ValueChanged="ContourLinesNumericBox_ValueChanged"/>
+            <Label Content="Stroke Pattern: " Margin="10, 0, 0,0"/>
+            <c1:C1NumericBox x:Name="StrokePattern1NumericBox" Maximum="30" Minimum="0" Margin="0 3 0 0" ValueChanged="StrokePatternNumericBox_ValueChanged"/>
+            <c1:C1NumericBox x:Name="StrokePattern2NumericBox" Maximum="30" Minimum="0" Margin="10 3 0 0" ValueChanged="StrokePatternNumericBox_ValueChanged"/>
+            <Label Content="ContourLine Thickness: " Margin="10, 0, 0,0"/>
+            <c1:C1NumericBox x:Name="ContourThicknessNumericBox" Maximum="10" Minimum="1" Margin="0 3 0 0" ValueChanged="ContourThicknessNumericBox_ValueChanged" Height="22" Padding="0"/>
+            <Label Content="Stroke Color: " Margin="10, 0, 0,0"/>
+            <ComboBox x:Name="StrokeColorComboBox" ItemsSource="{Binding StrokeColor}" Width="120" Margin="0 3 0 0" SelectionChanged="StrokeColorComboBox_SelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Rectangle Width="16" Height="16" Margin="0,0,5,0">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding Color}"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+
+        <c1:C1FlexChart x:Name="chart" Grid.Row="1" Header="Saddle Point">
+            <c1:C1FlexChart.HeaderStyle>
+                <c1:ChartStyle FontSize="20"/>
+            </c1:C1FlexChart.HeaderStyle>
+        </c1:C1FlexChart>
+    </Grid>
+</UserControl>

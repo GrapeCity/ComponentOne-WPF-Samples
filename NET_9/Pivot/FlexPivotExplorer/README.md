@@ -39,6 +39,12 @@ The FlexPivotChart has been removed from the TabPanel at the top of the page and
 * DataEngine: This sample shows how to get data to C1 DataEngine to perform analytics. C1DataEngine is capable of handling large amount of data, millions of rows in seconds or less. Data is retrieved from a database.
 
 
+* CubeAnalysis: Shows how to work with cube data source.
+
+
+* TopNDemo: Shows how to work with TopN filter.
+
+
 * GroupRanges: This sample shows how to use ranges to group data.
 
 

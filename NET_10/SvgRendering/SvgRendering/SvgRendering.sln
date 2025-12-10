@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvgRendering", "SvgRendering.csproj", "{B063F761-E528-4E4E-8DB8-BB9DC99DCD1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B063F761-E528-4E4E-8DB8-BB9DC99DCD1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B063F761-E528-4E4E-8DB8-BB9DC99DCD1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B063F761-E528-4E4E-8DB8-BB9DC99DCD1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B063F761-E528-4E4E-8DB8-BB9DC99DCD1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D376504-AB27-464F-AFFF-4C8EE64781F6}
+	EndGlobalSection
+EndGlobal

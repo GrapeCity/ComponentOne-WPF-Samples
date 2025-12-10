@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Expander" xml:space="preserve">
+    <value>C1Expander を使用すると、テキスト、画像、およびコントロールを含めることができる、展開可能で折りたたみ可能な情報パネルを作成できます。4つの展開方向と展開ボタンの位置から選択します。</value>
+    <comment>C1Expander allows you to create an expandable and collapsible information panel that can include text, images, and controls. Choose from four expand directions and position of the expand button.</comment>
+  </data>
+  <data name="ExpanderTitle" xml:space="preserve">
+    <value>展開・折りたたみ</value>
+  </data>
+  <data name="Input" xml:space="preserve">
+    <value>このライブラリには、データ入力シナリオ用のいくつかの WPF 入力コントロールが含まれています。数値、日付、色、およびマスクされたテキストをフォーマットして解析します。チェックリストから複数の項目を選択するか、タグエディタなどの項目を入力します。スライダーを使用して数値範囲を視覚的に編集します。カスタムドロップダウンUIを簡単に設計します。 ユーザーのマシンからファイルを選択します。</value>
+    <comment>This library includes several WPF input controls for any data entry scenario. Format and parse numbers, dates, colors, and masked text. Select multiple items from a checklist or enter items like a tag editor. Edit a numeric range visually using a slider. Design a custom drop-down UI with ease. Select files from the user's machine.</comment>
+  </data>
+  <data name="InputTitle" xml:space="preserve">
+    <value>概要</value>
+  </data>
+  <data name="RangeSlider" xml:space="preserve">
+    <value>C1RangeSlider コントロールは、基本的なスライダーコントロールを拡張し、2つの親指を提供して、ユーザーが範囲を選択できるようにします。ユーザーは、各親指を個別にドラッグするか、中央をドラッグして両方を同時に変更できます。</value>
+    <comment>The C1RangeSlider control extends the basic slider control and provides two thumbs, making it possible for users to select a range. Users can drag each thumb individually or drag the center to modify both at the same time.</comment>
+  </data>
+  <data name="RangeSliderTitle" xml:space="preserve">
+    <value>範囲スライダー</value>
+  </data>
+  <data name="MaskedDemoDes" xml:space="preserve">
+    <value>Mask と TextMaskFormat のさまざまな設定で C1MaskedTextBox を使用する方法を示します。</value>
+  </data>
+  <data name="MaskedDemoTitle" xml:space="preserve">
+    <value>マスクテキストボックス</value>
+  </data>
+  <data name="AddTag" xml:space="preserve">
+    <value>タグの追加</value>
+    <comment>Add Tag</comment>
+  </data>
+  <data name="AddTagButton" xml:space="preserve">
+    <value>AddTag</value>
+    <comment>AddTag</comment>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>テキストの追加</value>
+    <comment>Add Text</comment>
+  </data>
+  <data name="InputTagContent" xml:space="preserve">
+    <value>タグのコンテンツを入力:</value>
+    <comment>Input tag's content:</comment>
+  </data>
+  <data name="InputText" xml:space="preserve">
+    <value>テキストを入力:</value>
+  </data>
+  <data name="TagEditorDemoDes" xml:space="preserve">
+    <value>C1TagEditor の使用方法を示します。</value>
+  </data>
+  <data name="TagEditorDemoTitle" xml:space="preserve">
+    <value>タグエディタ</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Input エクスプローラー</value>
+  </data>
+  <data name="AddItemsEvent" xml:space="preserve">
+    <value>AddItems</value>
+    <comment>AddItems</comment>
+  </data>
+  <data name="CheckListDes" xml:space="preserve">
+    <value>C1CheckList の使用方法を示します</value>
+    <comment>Shows how to use C1CheckList</comment>
+  </data>
+  <data name="CheckListTitle" xml:space="preserve">
+    <value>CheckList</value>
+    <comment>CheckList</comment>
+  </data>
+  <data name="EventsTabHeader" xml:space="preserve">
+    <value>イベント</value>
+    <comment>Events</comment>
+  </data>
+  <data name="MethodsTabHeader" xml:space="preserve">
+    <value>メソッド</value>
+    <comment>Methods</comment>
+  </data>
+  <data name="PropertiesTabHeader" xml:space="preserve">
+    <value>プロパティ</value>
+    <comment>Properties</comment>
+  </data>
+  <data name="RemoveItemsEvent" xml:space="preserve">
+    <value>RemoveItems</value>
+    <comment>RemoveItems</comment>
+  </data>
+  <data name="SelectAllMethod" xml:space="preserve">
+    <value>すべて選択</value>
+    <comment>Select All</comment>
+  </data>
+  <data name="SelectedItemsEvent" xml:space="preserve">
+    <value>SelectedItems</value>
+    <comment>SelectedItems</comment>
+  </data>
+  <data name="SelectionChangedEventExpenderHeader" xml:space="preserve">
+    <value>SelectionChangedEvent</value>
+    <comment>SelectionChangedEvent</comment>
+  </data>
+  <data name="UnselectAllMethod" xml:space="preserve">
+    <value>すべて選択解除</value>
+    <comment>Unselect All</comment>
+  </data>
+  <data name="MultiSelect" xml:space="preserve">
+    <value>MultiSelect</value>
+  </data>
+  <data name="MultiSelectDes" xml:space="preserve">
+    <value>C1MultiSelect の使用方法を示します</value>
+    <comment>Shows how to use C1MultiSelect</comment>
+  </data>
+  <data name="EnterTag" xml:space="preserve">
+    <value>タグの入力</value>
+  </data>
+  <data name="ValidationFormDescription" xml:space="preserve">
+    <value>標準の INotifyDataErrorInfo を介して組み込みの検証を使用する方法を示します。</value>
+    <comment>Show how to use built-in validation through standard INotifyDataErrorInfo</comment>
+  </data>
+  <data name="ValidationFormTitle" xml:space="preserve">
+    <value>検証フォーム</value>
+    <comment>Validation Form</comment>
+  </data>
+  <data name="AgeRequirement" xml:space="preserve">
+    <value>{0} は {1} 歳以上である必要があります。</value>
+    <comment>{0} must be someone at least {1} years of age</comment>
+  </data>
+  <data name="CanNotWorkMoreThan" xml:space="preserve">
+    <value>勤務時間を８時間以上にすることはできません。</value>
+    <comment>Can not work more than 8 hours</comment>
+  </data>
+  <data name="CharactersNotAllowed" xml:space="preserve">
+    <value>文字は使用できません。</value>
+    <comment>Characters are not allowed.</comment>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>生年月日</value>
+    <comment>Date Of Birth</comment>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>e-mail</value>
+    <comment>e-mail</comment>
+  </data>
+  <data name="FavoriteColor" xml:space="preserve">
+    <value>お気に入りの色</value>
+    <comment>Favorite Color</comment>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>女性</value>
+    <comment>Female</comment>
+  </data>
+  <data name="FieldMustBeBetween" xml:space="preserve">
+    <value>{0} フィールドは {1} から {2} の間でなければなりません。</value>
+    <comment>The field {0} must be between {1} and {2}</comment>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>{0} フィールドは必須項目です。</value>
+    <comment>The {0} field is required.</comment>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>名</value>
+    <comment>First Name</comment>
+  </data>
+  <data name="FormWasValidated" xml:space="preserve">
+    <value>フォームは検証されました！</value>
+    <comment>The form was validated!</comment>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>性別</value>
+    <comment>Gender</comment>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>姓</value>
+    <comment>Last Name</comment>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>男性</value>
+    <comment>Male</comment>
+  </data>
+  <data name="OtherGender" xml:space="preserve">
+    <value>その他</value>
+    <comment>Other</comment>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>画像</value>
+    <comment>Picture</comment>
+  </data>
+  <data name="Stars" xml:space="preserve">
+    <value>星</value>
+    <comment>Stars</comment>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>件名</value>
+    <comment>Submit</comment>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>勤務時間</value>
+    <comment>Working hours</comment>
+  </data>
+  <data name="StopsSliderDescription" xml:space="preserve">
+    <value>つまみをドラッグしたり、トラック内をクリックして新しいつまみを追加したり、Del キーでつまみを削除したりできる、ストップスライダーコントロールを示します。</value>
+    <comment>Shows a stops slider control allowing to drag the thumbs as well as adding new ones by clicking in the track and remove them with Del key.</comment>
+  </data>
+  <data name="StopsSliderTitle" xml:space="preserve">
+    <value>ストップスライダー</value>
+    <comment>Stops Slider</comment>
+  </data>
+  <data name="ClickMeText" xml:space="preserve">
+    <value>クリックしてください</value>
+    <comment>Click me</comment>
+  </data>
+  <data name="DefaultButtonText" xml:space="preserve">
+    <value>デフォルトボタン</value>
+    <comment>Default Button</comment>
+  </data>
+  <data name="ToggleMeText" xml:space="preserve">
+    <value>トグルしてください</value>
+    <comment>Toggle me</comment>
+  </data>
+  <data name="CheckMeText" xml:space="preserve">
+    <value>チェックしてください</value>
+    <comment>Check me</comment>
+  </data>
+  <data name="FollowMeText" xml:space="preserve">
+    <value>フォローしてください！</value>
+    <comment>Follow me!</comment>
+  </data>
+  <data name="EnterTimePlaceholderText" xml:space="preserve">
+    <value>時刻を入力</value>
+    <comment>Enter time</comment>
+  </data>
+  <data name="EnterDatePlaceholderText" xml:space="preserve">
+    <value>日付を入力</value>
+    <comment>Enter date</comment>
+  </data>
+  <data name="EnterNumberPlaceholderText" xml:space="preserve">
+    <value>ここに番号を入力してください</value>
+    <comment>Enter number here</comment>
+  </data>
+  <data name="MaskedTextBoxLabel" xml:space="preserve">
+    <value>マスクテキストボックス</value>
+    <comment>Masked TextBox</comment>
+  </data>
+  <data name="RawValueLabel" xml:space="preserve">
+    <value>実際の値</value>
+    <comment>Raw Value</comment>
+  </data>
+  <data name="MaskTemplatesLabel" xml:space="preserve">
+    <value>マスクテンプレート</value>
+    <comment>Mask templates</comment>
+  </data>
+  <data name="CustomMaskLabel" xml:space="preserve">
+    <value>カスタムマスク</value>
+    <comment>Custom Mask</comment>
+  </data>
+  <data name="MaskFormatLabel" xml:space="preserve">
+    <value>マスク書式</value>
+    <comment>Mask Format</comment>
+  </data>
+  <data name="OnContent" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="OffContent" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="ComboBoxTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="C1ComboBoxDes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CheckMe" xml:space="preserve">
+    <value />
+  </data>
+</root>

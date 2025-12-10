@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="FlexGridExplorer.OnDemand"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+      xmlns:e="http://schemas.microsoft.com/xaml/behaviors"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <c1:C1TextBox x:Name="search" Margin="4" TextChanged="search_TextChanged"/>
+        <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" HeadersVisibility="Column" IsReadOnly="True" Grid.Row="1">
+            <c1:FlexGrid.Columns>
+                <c1:GridImageColumn Binding="Thumbnail" Header=" " Width="62" Placeholder="/FlexGridExplorer;component/Images/default.png"/>
+                <c1:GridHyperlinkColumn Binding="Link" ContentBinding="Title" Header="Title" TargetName="_blank" MinWidth="300" Width="*"/>
+                <c1:GridColumn Binding="ChannelTitle" Header="Channel"/>
+            </c1:FlexGrid.Columns>
+            <e:Interaction.Behaviors>
+                <c1:EmptyGridBehavior EmptyView="{Binding ElementName=emptyListLabel}" />
+            </e:Interaction.Behaviors>
+        </c1:FlexGrid>
+        <TextBlock x:Name="emptyListLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1"/>
+        <c1:C1ActivityIndicator x:Name="activityIndicator" VerticalAlignment="Center" Grid.Row="1" Width="30" Height="30"/>
+    </Grid>
+</UserControl>

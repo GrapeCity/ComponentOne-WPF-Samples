@@ -66,7 +66,7 @@ namespace PdfDocumentSourceSamples
                         pdfDocumentSource.LoadFromFile(fpFile.SelectedFile.FullName);
                     break;
                 }
-                catch (PdfPasswordException)
+                catch (C1.Document.PdfPasswordException)
                 {
                     var password = PasswordWindow.DoEnterPassword(fpFile.SelectedFile.FullName);
                     if (password == null)
@@ -81,12 +81,12 @@ namespace PdfDocumentSourceSamples
             }
 
             //
-            OutputRange outputRange;
+            C1.Document.OutputRange outputRange;
             if (rbtnPagesAll.IsChecked.Value)
-                outputRange = OutputRange.All;
+                outputRange = C1.Document.OutputRange.All;
             else
             {
-                if (!OutputRange.TryParse(tbPagesRange.Text, out outputRange))
+                if (!C1.Document.OutputRange.TryParse(tbPagesRange.Text, out outputRange))
                 {
                     MessageBox.Show("Invalid range of pages.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;

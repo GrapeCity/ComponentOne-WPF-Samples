@@ -1,0 +1,262 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>FlexGridExplorer.App</StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <Company>
+    </Company>
+    <Authors>
+    </Authors>
+    <Platforms>AnyCPU;x86</Platforms>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <NoWarn>1701;1702;CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <NoWarn>1701;1702;CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Images\Album.png" />
+    <None Remove="Images\Artist.png" />
+    <None Remove="Images\Collapsed.png" />
+    <None Remove="Images\default.png" />
+    <None Remove="Images\Expanded.png" />
+    <None Remove="Images\input_form.png" />
+    <None Remove="Images\retro_TV_filled-50_light.png" />
+    <None Remove="Images\Song.png" />
+    <None Remove="Images\star.png" />
+    <None Remove="Properties\Licenses.licx" />
+    <None Remove="Resources\bug-fill.svg" />
+    <None Remove="Resources\cars.xml" />
+    <None Remove="Resources\circle.svg" />
+    <None Remove="Resources\cross.svg" />
+    <None Remove="Resources\data.zip" />
+    <None Remove="Resources\exclamation-octagon.svg" />
+    <None Remove="Resources\exclamation-triangle.svg" />
+    <None Remove="Resources\filter.svg" />
+    <None Remove="Resources\Roboto-Regular.ttf" />
+    <None Remove="Resources\sort-ascending.svg" />
+    <None Remove="Resources\sort2-ascending.svg" />
+    <None Remove="Resources\sort2-descending.svg" />
+    <None Remove="Resources\sort2.svg" />
+    <None Remove="Resources\Stores.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Album.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Artist.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Collapsed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Expanded.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\input_form.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\retro_TV_filled-50_light.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Song.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\star.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cars.xml" />
+    <EmbeddedResource Include="Resources\data.zip" />
+    <PackageReference Include="C1.DataCollection.BindingList" Version="10.0.20252.3" />
+    <PackageReference Include="C1.WPF.Accordion">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ColorPicker">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DataFilter">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DataPager">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DateTimeEditors">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid.ConditionalFormatting">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid.Excel">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.GridControl">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Maps">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Menu">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.PropertyGrid">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Ribbon">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.RulesManager">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TabControl">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TreeView">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.8" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <EmbeddedResource Include="Resources\Stores.txt" />
+    <Resource Include="Resources\bug-fill.svg" />
+    <Resource Include="Resources\circle.svg" />
+    <Resource Include="Resources\cross.svg" />
+    <Resource Include="Resources\exclamation-octagon.svg" />
+    <Resource Include="Resources\exclamation-triangle.svg" />
+    <Resource Include="Resources\filter.svg" />
+    <Resource Include="Resources\Roboto-Regular.ttf" />
+    <Resource Include="Resources\sort-ascending.svg" />
+    <Resource Include="Resources\sort2-descending.svg" />
+    <Resource Include="Resources\sort2-ascending.svg" />
+    <Resource Include="Resources\sort2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\CellFreezing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\ColumnDefinitions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\ColumnLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\ColumnLayoutForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\ConditionalFormatting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\CustomAppearance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\CustomCells.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\CustomMerging.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\CustomSortIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\EditConfirmation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\EditCustomerForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\EditingForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Filter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Financial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\FullTextFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\VirtualMode.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="View\MouseHover.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="View\GettingStarted.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Grouping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\NewRow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\RowDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\SelectionModes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\StarSizing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Unbound.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FlexGridExplorer.gclicx" />
+  </ItemGroup>
+</Project>

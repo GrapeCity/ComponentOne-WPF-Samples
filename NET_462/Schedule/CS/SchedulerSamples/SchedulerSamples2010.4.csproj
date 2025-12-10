@@ -62,22 +62,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Carousel">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Schedule">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Schedule.Themes.Legacy">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>

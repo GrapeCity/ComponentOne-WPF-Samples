@@ -1,0 +1,235 @@
+﻿<UserControl x:Class="ThemeExplorer.NavigationAndLayout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:sys="clr-namespace:System;assembly=netstandard" xmlns:p="clr-namespace:ThemeExplorer.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree" >
+        <c1:C1TabItem Header="Accordion" BorderThickness="0">
+            <StackPanel Orientation="Vertical" Margin="5">
+                <TextBlock Text="C1Accordion" Margin="0,5,0,10"/>
+                <c1:C1Accordion Width="400" HorizontalAlignment="Left" Margin="10">
+                    <c1:C1Expander Header="Expander Region 1" IsExpanded="True">
+                        <TextBlock Text="Lorem Ipsum" />
+                    </c1:C1Expander>
+                    <c1:C1Expander Header="Expander Region 2">
+                        <TextBlock Text="Lorem Ipsum" />
+                    </c1:C1Expander>
+                    <c1:C1Expander Header="Expander Region 3">
+                        <TextBlock Text="Lorem Ipsum" />
+                    </c1:C1Expander>
+                </c1:C1Accordion>
+                <TextBlock Text="C1Expander" Margin="0,15,0,10"/>
+                <c1:C1Expander Header="C1Expander" Width="400" HorizontalAlignment="Left" Margin="10">
+                    <TextBlock Text="Lorem Ipsum" />
+                </c1:C1Expander>
+            </StackPanel>
+        </c1:C1TabItem>
+        <c1:C1TabItem Header="Docking" BorderThickness="0">
+            <Grid>
+                <c1:C1DockControl x:Name="dockControl">
+                    <c1:C1DockGroup>
+                        <c1:C1DockTabControl Dock="Top">
+                            <c1:C1DockTabItem Header="Tab 1">
+                                <TextBlock>This is text inside C1DockTabControl</TextBlock>
+                            </c1:C1DockTabItem>
+                            <c1:C1DockTabItem Header="Tab 2"/>
+                        </c1:C1DockTabControl>
+                        <c1:C1DockTabControl>
+                            <c1:C1DockTabItem Header="Tab 3"/>
+                        </c1:C1DockTabControl>
+                    </c1:C1DockGroup>
+
+                    <c1:C1DockGroup>
+                        <c1:C1DockTabControl Dock="Top" DockWidth="500" DockHeight="500">
+                            <c1:C1DockTabItem Header="Tab 4"/>
+                            <c1:C1DockTabItem Header="Tab 5"/>
+                        </c1:C1DockTabControl>
+                        <c1:C1DockTabControl >
+                            <c1:C1DockTabItem Header="Tab 6"/>
+                        </c1:C1DockTabControl>
+                    </c1:C1DockGroup>
+
+                    <c1:C1DockTabControl >
+                        <c1:C1DockTabItem Header="Tab 7"/>
+                        <c1:C1DockTabItem Header="Tab 8"/>
+                    </c1:C1DockTabControl>
+                </c1:C1DockControl>
+            </Grid>
+        </c1:C1TabItem>
+        <c1:C1TabItem Header="Menu" BorderThickness="0">
+            <Grid Margin="10">
+                <Border Background="#10888888">
+                    <c1:C1ContextMenuService.ContextMenu>
+                        <c1:C1RadialMenu SectorCount="6">
+                            <c1:C1RadialMenuItem Header="File">
+                                <c1:C1RadialMenuItem Header="Open"/>
+                                <c1:C1RadialMenuItem Header="New">
+                                    <!--  <c1:C1RadialMenuItem.Icon> todo
+                                        <Image Source="/Resources/newFile.png" Height="18" Width="18"/>
+                                    </c1:C1RadialMenuItem.Icon>-->
+                                </c1:C1RadialMenuItem>
+                                <c1:C1RadialMenuItem Header="Close"/>
+                                <c1:C1RadialMenuItem Header="Exit"/>
+                            </c1:C1RadialMenuItem>
+                            <c1:C1RadialMenuItem Header="Help"/>
+                            <c1:C1RadialNumericItem Header="Font size" >
+                                <sys:Double>9</sys:Double>
+                                <sys:Double>11</sys:Double>
+                                <sys:Double>13</sys:Double>
+                                <sys:Double>16</sys:Double>
+                                <sys:Double>20</sys:Double>
+                                <sys:Double>36</sys:Double>
+                                <sys:Double>72</sys:Double>
+                            </c1:C1RadialNumericItem>
+                            <c1:C1RadialMenuItem Header="Color" ShowSelectedItem="True" AutoSelect="True" SelectedIndex="1" >
+                                <c1:C1RadialColorItem x:Name="rainbowItem" ShowSelectedItem="True" AutoSelect="True" IsSelectable="False" >
+                                    <SolidColorBrush Color="Red"/>
+                                    <SolidColorBrush Color="Orange"/>
+                                    <SolidColorBrush Color="Yellow"/>
+                                    <SolidColorBrush Color="Green"/>
+                                    <SolidColorBrush Color="Blue"/>
+                                    <SolidColorBrush Color="Indigo"/>
+                                    <SolidColorBrush Color="Violet"/>
+                                </c1:C1RadialColorItem>
+
+                                <c1:C1RadialMenuItem ToolTip="Font Color" Tag="Red" x:Name="fontColorItem" Header="Color"/>
+
+                                <c1:C1RadialColorItem x:Name="orangeItem" SelectedIndex="2"
+                                      ShowSelectedItem="True" AutoSelect="True" IsSelectable="False">
+                                    <c1:C1RadialColorItem ToolTip="Yellow" Brush="Yellow" IsCheckable="True" GroupName="Orange"/>
+                                    <c1:C1RadialColorItem ToolTip="Brown" Brush="Brown" IsCheckable="True" GroupName="Orange"/>
+                                    <c1:C1RadialColorItem ToolTip="Orange" Brush="#FFD46224" IsCheckable="True" GroupName="Orange"/>
+                                    <c1:C1RadialColorItem ToolTip="Orange" Brush="#FFF37D1F" IsCheckable="True" GroupName="Orange"/>
+                                    <c1:C1RadialColorItem ToolTip="Orange" Brush="Orange" IsCheckable="True" GroupName="Orange"/>
+                                    <c1:C1RadialColorItem ToolTip="Gold" Brush="Gold" IsCheckable="True" GroupName="Orange"/>
+                                    <c1:C1RadialColorItem ToolTip="Light Yellow" Brush="#FFF5DD43" IsCheckable="True" GroupName="Orange" />
+                                    <c1:C1RadialColorItem ToolTip="Light Yellow" Brush="#FFF3F393" IsCheckable="True" GroupName="Orange"/>
+                                </c1:C1RadialColorItem>
+
+                                <c1:C1RadialColorItem x:Name="redItem" SelectedIndex="5"
+                                      ShowSelectedItem="True" AutoSelect="True" IsSelectable="False">
+                                    <c1:C1RadialColorItem ToolTip="Rose" Brush="#FFFFC7CE" GroupName="Red"/>
+                                    <c1:C1RadialColorItem ToolTip="Pink" Brush="#FFF77A90" GroupName="Red"/>
+                                    <c1:C1RadialColorItem ToolTip="Plum" Brush="#FFDE05DE" GroupName="Red"/>
+                                    <c1:C1RadialColorItem ToolTip="Purple" Brush="#FF811681" GroupName="Red"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Red" Brush="DarkRed" GroupName="Red"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Red" Brush="#FFC00000" GroupName="Red"/>
+                                    <c1:C1RadialColorItem ToolTip="Red" Brush="Red" GroupName="Red"/>
+                                    <c1:C1RadialColorItem ToolTip="Rose" Brush="#FFF6A2A4" GroupName="Red"/>
+                                </c1:C1RadialColorItem>
+
+                                <c1:C1RadialColorItem x:Name="greenItem" SelectedIndex="5"
+                                      ShowSelectedItem="True" AutoSelect="True" IsSelectable="False">
+                                    <c1:C1RadialColorItem ToolTip="Lime" Brush="#FF92D050" GroupName="Green"/>
+                                    <c1:C1RadialColorItem ToolTip="Light Green" Brush="#FFC6EFCE" GroupName="Green"/>
+                                    <c1:C1RadialColorItem ToolTip="Green" Brush="#FF00FF00" GroupName="Green"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Green" Brush="#FF1D421E" GroupName="Green"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Green" Brush="#FF1D5A2D" GroupName="Green"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Green" Brush="Green" GroupName="Green"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Green" Brush="#FF008000" GroupName="Green"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Green" Brush="#FF00B050" GroupName="Green"/>
+                                </c1:C1RadialColorItem>
+
+                                <c1:C1RadialColorItem x:Name="blueItem" SelectedIndex="0"
+                                      ShowSelectedItem="True" AutoSelect="True" IsSelectable="False">
+                                    <c1:C1RadialColorItem ToolTip="Blue" Brush="Blue" GroupName="Blue"/>
+                                    <c1:C1RadialColorItem ToolTip="Slate Blue" Brush="MediumSlateBlue" GroupName="Blue"/>
+                                    <c1:C1RadialColorItem ToolTip="Turquoise" Brush="Turquoise" GroupName="Blue"/>
+                                    <c1:C1RadialColorItem ToolTip="Aqua" Brush="Aqua" GroupName="Blue"/>
+                                    <c1:C1RadialColorItem ToolTip="Sky Blue" Brush="SkyBlue" GroupName="Blue"/>
+                                    <c1:C1RadialColorItem ToolTip="Purple" Brush="#FFAC38AC" AccentBrush="#FF801C80" GroupName="Blue"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Purple" Brush="Purple" GroupName="Blue"/>
+                                    <c1:C1RadialColorItem ToolTip="Dark Blue" Brush="DarkBlue" GroupName="Blue"/>
+                                </c1:C1RadialColorItem>
+                            </c1:C1RadialMenuItem>
+                        </c1:C1RadialMenu>
+                    </c1:C1ContextMenuService.ContextMenu>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Right-click to open context menu"/>
+                </Border>
+                <c1:C1Menu VerticalAlignment="Top">
+                    <c1:C1MenuItem Header="File" >
+                        <c1:C1MenuItem Header="New">
+                            <!-- <c1:C1MenuItem.Icon> todo
+                                <Image Source="/Resources/newFile.png" Height="20" Width="20"/>
+                            </c1:C1MenuItem.Icon>-->
+                        </c1:C1MenuItem>
+                        <c1:C1MenuItem Header="Open"/>
+                        <c1:C1MenuItem Header="Close"/>
+                        <c1:C1MenuSeparator />
+                        <c1:C1MenuItem Header="Exit"/>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="Window" >
+                        <c1:C1MenuItem Header="Document 1" IsCheckable="True" IsChecked="True"/>
+                        <c1:C1MenuItem Header="Document 2" IsCheckable="True" IsChecked="True"  />
+                        <c1:C1MenuItem Header="Document 3" IsCheckable="True"  />
+                        <c1:C1MenuItem Header="Document 4" IsCheckable="True"  />
+                        <c1:C1MenuSeparator />
+                        <c1:C1MenuItem Header="Exclusive 1" GroupName="Exclusives" IsCheckable="True" IsChecked="True"  />
+                        <c1:C1MenuItem Header="Exclusive 2" GroupName="Exclusives" IsCheckable="True" IsChecked="True"  />
+                        <c1:C1MenuItem Header="Exclusive 3" GroupName="Exclusives" IsCheckable="True"  />
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="Deep" >
+                        <c1:C1MenuItem Header="Deep1" >
+                            <c1:C1MenuItem Header="Deep2" >
+                                <c1:C1MenuItem Header="Deep3" >
+                                    <c1:C1MenuItem Header="Deep4" >
+                                        <c1:C1MenuItem Header="Deep5" >
+                                        </c1:C1MenuItem>
+                                    </c1:C1MenuItem>
+                                </c1:C1MenuItem>
+                            </c1:C1MenuItem>
+                        </c1:C1MenuItem>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="Help"/>
+                </c1:C1Menu>
+            </Grid>
+        </c1:C1TabItem>
+        <c1:C1TabItem Header="TreeView" BorderThickness="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <c1:C1CheckBox x:Name="ShowHideCheckBoxes" Grid.Row="0" Margin="10,5,0,0" VerticalAlignment="Center" Content="Show/Hide CheckBoxes"/>
+                <c1:C1TreeView ShowCheckboxes="{Binding IsChecked, ElementName=ShowHideCheckBoxes}" Grid.Row="1" Margin="10">
+                    <c1:C1TreeViewItem Header="Item 1" IsExpanded="True"/>
+                    <c1:C1TreeViewItem Header="WPF Edition" IsExpanded="True">
+                        <c1:C1TreeViewItem Header="Data Managenment" />
+                        <c1:C1TreeViewItem Header="Data Visualization" />
+                        <c1:C1TreeViewItem Header="Input &amp; Editing" />
+                        <c1:C1TreeViewItem Header="Reporting &amp; Documents" />
+                        <c1:C1TreeViewItem Header="Utilities" />
+                        <c1:C1TreeViewItem Header="Scheduling" />
+                        <c1:C1TreeViewItem Header="Navigation &amp; Layout" />
+                    </c1:C1TreeViewItem>
+                    <c1:C1TreeViewItem Header="XapOptimizer" IsExpanded="True">
+                        <c1:C1TreeViewItem Header="Pruning" />
+                        <c1:C1TreeViewItem Header="Obfuscation" />
+                        <c1:C1TreeViewItem Header="Strong Signing" />
+                        <c1:C1TreeViewItem Header="Deploy architecture" />
+                    </c1:C1TreeViewItem>
+                </c1:C1TreeView>
+            </Grid>
+        </c1:C1TabItem>
+        <c1:C1TabItem Header="Activity Indicators" BorderThickness="0">
+            <StackPanel Orientation="Vertical" Margin="20,10,10,10" MaxWidth="500" HorizontalAlignment="Left">
+                <TextBlock Text="Activity Indicator:" Margin="5"/>
+                <c1:C1ActivityIndicator Margin="5"/>
+                <TextBlock Text="Progress Bar:" Margin="5,10,5,5"/>
+                <c1:C1ProgressBar Width="200" Height="12" Value="50" Margin="5" />
+                <TextBlock Text="Indeterminate Progress Bar:" Margin="5,10,5,5"/>
+                <c1:C1ProgressBar Width="200" Height="12" IsIndeterminate="True" Margin="5"/>
+            </StackPanel>
+        </c1:C1TabItem>
+        <c1:C1TabItem Header="{x:Static p:Resources.C1Window}" BorderThickness="0">
+            <c1:C1Window Margin="20" Header="{x:Static p:Resources.C1Window}" Canvas.ZIndex="117" Padding="20" MinWidth="500" MaxWidth="900" MaxHeight="800" 
+                         HorizontalAlignment="Left" VerticalAlignment="Top" IsActive="True" IsEnabled="True" x:Name="c1Window" >
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Static p:Resources.C1WindowText}"/> 
+            </c1:C1Window>
+        </c1:C1TabItem>
+    </c1:C1TabControl>
+</UserControl>

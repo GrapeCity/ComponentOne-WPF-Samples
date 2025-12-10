@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.DataCollection.EntityFrameworkCore" Version="10.0.20252.3" />
+    <PackageReference Include="C1.WPF.Accordion">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DataFilter">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLiteDataBase.gclicx" />
+  </ItemGroup>
+</Project>

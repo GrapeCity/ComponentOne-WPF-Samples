@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexRadarIntro", "FlexRadarIntro.csproj", "{BF880B7E-6800-4760-8420-488CF6AAA190}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF880B7E-6800-4760-8420-488CF6AAA190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF880B7E-6800-4760-8420-488CF6AAA190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF880B7E-6800-4760-8420-488CF6AAA190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF880B7E-6800-4760-8420-488CF6AAA190}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

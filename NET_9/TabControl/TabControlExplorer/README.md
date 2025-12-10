@@ -5,5 +5,5 @@ ____
 ____
 Shows basic samples of the following controls
 
-* C1Tab
+* C1TabControl
 * C1TabItem

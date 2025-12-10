@@ -55,7 +55,7 @@ namespace PrintAndExport
                 po.PrintQueue = printDialog.PrintQueue;
                 po.PrintTicket = printDialog.PrintTicket;
                 if (printDialog.PageRangeSelection == PageRangeSelection.UserPages)
-                    po.OutputRange = new OutputRange(printDialog.PageRange.PageFrom, printDialog.PageRange.PageTo);
+                    po.OutputRange = new C1.Document.OutputRange(printDialog.PageRange.PageFrom, printDialog.PageRange.PageTo);
                 pds.Print(po);
                 MessageBox.Show(this, "Document was successfully printed.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -65,7 +65,7 @@ namespace PrintAndExport
             }
         }
 
-        private void DoExport(C1PdfDocumentSource pds, ExportProvider ep)
+        private void DoExport(C1PdfDocumentSource pds, C1.Document.Export.ExportProvider ep)
         {
             saveFileDialog.DefaultExt = "." + ep.DefaultExtension;
             saveFileDialog.FileName = System.IO.Path.GetFileNameWithoutExtension(fpFile.SelectedFile.FullName) + "." + ep.DefaultExtension;
@@ -105,7 +105,7 @@ namespace PrintAndExport
                     pdfDocumentSource.LoadFromFile(fpFile.SelectedFile.FullName);
                     break;
                 }
-                catch (PdfPasswordException)
+                catch (C1.Document.PdfPasswordException)
                 {
                     var password = PasswordWindow.DoEnterPassword(fpFile.SelectedFile.FullName);
                     if (password == null)
@@ -123,7 +123,7 @@ namespace PrintAndExport
             if (cbAction.SelectedIndex == 0)
                 DoPrint(pdfDocumentSource);
             else
-                DoExport(pdfDocumentSource, (ExportProvider)((C1ComboBoxItem)cbAction.SelectedItem).Tag);
+                DoExport(pdfDocumentSource, (C1.Document.Export.ExportProvider)((C1ComboBoxItem)cbAction.SelectedItem).Tag);
         }
     }
 }

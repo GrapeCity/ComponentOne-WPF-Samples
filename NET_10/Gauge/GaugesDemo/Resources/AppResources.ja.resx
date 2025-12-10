@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutomaticScalingDescription" xml:space="preserve">
+    <value>大きさを変えた円形ゲージを調整して表示</value>
+    <comment>Shows a radial gauge with different sweep angles.</comment>
+  </data>
+  <data name="AutomaticScalingTitle" xml:space="preserve">
+    <value>自動スケーリング</value>
+    <comment>Automatic Scaling</comment>
+  </data>
+  <data name="Bad" xml:space="preserve">
+    <value>不良値：</value>
+    <comment>Bad</comment>
+  </data>
+  <data name="BulletGraphDescription" xml:space="preserve">
+    <value>「良値/不良値/目標値」の範囲を設定</value>
+    <comment>Shows a bulletgraph with good, bad and target ranges.</comment>
+  </data>
+  <data name="BulletGraphTitle" xml:space="preserve">
+    <value>ブレットグラフ</value>
+    <comment>BulletGraph</comment>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>ポインタの方向</value>
+    <comment>Direction</comment>
+  </data>
+  <data name="DirectionDescription" xml:space="preserve">
+    <value>方向が異なる線形ゲージを表示</value>
+    <comment>Shows linear gauges at different directions.</comment>
+  </data>
+  <data name="DirectionTitle" xml:space="preserve">
+    <value>方向</value>
+    <comment>Direction</comment>
+  </data>
+  <data name="DisplayingValuesDescription" xml:space="preserve">
+    <value>値ラベルをゲージに表示</value>
+    <comment>Shows value labels on the gauges.</comment>
+  </data>
+  <data name="DisplayingValuesTitle" xml:space="preserve">
+    <value>値の表示</value>
+    <comment>Displaying Values</comment>
+  </data>
+  <data name="GettingStartedDescription" xml:space="preserve">
+    <value>インタラクション機能を持つゲージ</value>
+    <comment>Shows simple gauge controls with interaction.</comment>
+  </data>
+  <data name="GettingStartedTitle" xml:space="preserve">
+    <value>Gaugeの基本機能</value>
+    <comment>Getting Started</comment>
+  </data>
+  <data name="Good" xml:space="preserve">
+    <value>良値：</value>
+    <comment>Good</comment>
+  </data>
+  <data name="ImageSavedDescription" xml:space="preserve">
+    <value>画像をデバイスに保存しました</value>
+    <comment>The image has been saved to your device's picture album.</comment>
+  </data>
+  <data name="ImageSavedTitle" xml:space="preserve">
+    <value>画像の保存</value>
+    <comment>Image Saved</comment>
+  </data>
+  <data name="OKTitle" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+    <comment>Save</comment>
+  </data>
+  <data name="ShowRanges" xml:space="preserve">
+    <value>範囲を表示</value>
+    <comment>Show Ranges</comment>
+  </data>
+  <data name="ShowText" xml:space="preserve">
+    <value>表示するテキスト</value>
+    <comment>Show Text</comment>
+  </data>
+  <data name="StartAngle" xml:space="preserve">
+    <value>開始角度：</value>
+    <comment>Start Angle</comment>
+  </data>
+  <data name="SweepAngle" xml:space="preserve">
+    <value>移動角度：</value>
+    <comment>Sweep Angle</comment>
+  </data>
+  <data name="Take" xml:space="preserve">
+    <value>取得</value>
+    <comment>Take</comment>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>目標値：</value>
+    <comment>Target</comment>
+  </data>
+  <data name="UsingRangesDescription" xml:space="preserve">
+    <value>カスタマイズされた範囲を背後に表示</value>
+    <comment>Shows customized ranges behind the pointer.</comment>
+  </data>
+  <data name="UsingRangesTitle" xml:space="preserve">
+    <value>範囲の使用</value>
+    <comment>Using Ranges</comment>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>現在の値：</value>
+    <comment>Value</comment>
+  </data>
+  <data name="Reversed" xml:space="preserve">
+    <value>反転</value>
+    <comment>Reversed</comment>
+  </data>
+</root>

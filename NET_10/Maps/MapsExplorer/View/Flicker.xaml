@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="MapsExplorer.Flicker" Background="#FF374F5D" mc:Ignorable="d"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MapsExplorer"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:res="clr-namespace:MapsExplorer.Properties">
+    <UserControl.Resources>
+        <c1:XElementConverter x:Key="xcnv" />
+        <local:ImageConverter x:Key="icnv" />
+        <Style x:Key="style" TargetType="c1:VectorPlacemark">
+            <Setter Property="Stroke" Value="#FF8FB4CC" />
+            <Setter Property="StrokeThickness" Value="2" />
+            <Setter Property="LabelTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Border MouseLeftButtonDown="Border_MouseLeftButtonDown" Background="#70ffffff" BorderBrush="BurlyWood" BorderThickness="1" CornerRadius="3">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock x:Name="txt" Visibility="Collapsed" FontSize="8" MaxWidth="100" TextWrapping="Wrap" Text="{Binding Converter={StaticResource xcnv}, ConverterParameter=title}" />
+                                <Image x:Name="img" MaxWidth="50" MaxHeight="50" Opacity="0.8" Source="{Binding Converter={StaticResource icnv}}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Geometry" Value="M3,0 A 3,3 180 1 0 -3,0 A 3,3 180 1 0 3,0 Z" />
+        </Style>
+
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1:C1Maps x:Name="maps" Opacity="0.5" Grid.Row="1" BorderBrush="#FF8FB4CC" BorderThickness="3">
+            <c1:C1Maps.Source>
+                <c1:OpenStreetMapTileSource />
+            </c1:C1Maps.Source>
+            <c1:VectorLayer x:Name="vl" LabelVisibility="Visible" ItemStyle="{StaticResource style}" />
+        </c1:C1Maps>
+        <TextBlock x:Name="txt" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />
+        <Border CornerRadius="2" BorderThickness="0" Margin="0,0,0,10" Background="#304756">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Margin="3" Text="{x:Static res:Resources.SearchLabel}" Foreground="#FFF0F8FE" />
+                <c1:C1TextBox Margin="3" x:Name="tb" IsEnabled="False" Text="London" MinWidth="200" KeyDown="tb_KeyDown" Foreground="{Binding Foreground, ElementName=maps}"/>
+                <c1:C1Button x:Name="btnLoad" Margin="3" IsEnabled="False" Content="Load" Width="80" Click="Button_Click" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

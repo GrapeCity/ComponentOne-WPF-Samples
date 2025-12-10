@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlexChartCustomization</RootNamespace>
+    <AssemblyName>FlexChartCustomization</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <Resource Include="Resources\apple-50.png" />
+    <Resource Include="Resources\huawei-50.png" />
+    <Resource Include="Resources\lenovo-50.png" />
+    <Resource Include="Resources\lg-50.png" />
+    <Resource Include="Resources\oppo-50.png" />
+    <Resource Include="Resources\samsung-50.png" />
+    <Resource Include="Resources\vivo-50.png" />
+    <Resource Include="Resources\xiaomi-50.png" />
+    <Resource Include="Resources\zte-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexChart">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
+</Project>

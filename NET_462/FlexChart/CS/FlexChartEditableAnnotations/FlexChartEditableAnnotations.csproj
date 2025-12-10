@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlexChartEditableAnnotations</RootNamespace>
+    <AssemblyName>FlexChartEditableAnnotations</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <Resource Include="Resources\16X16_Absolute.png" />
+    <Resource Include="Resources\16X16_DataCoordinates.png" />
+    <Resource Include="Resources\16X16_Relative.png" />
+    <Resource Include="Resources\AllowMove.png" />
+    <Resource Include="Resources\Circle.png" />
+    <Resource Include="Resources\Delete.png" />
+    <Resource Include="Resources\Ellipse.png" />
+    <Resource Include="Resources\Line.png" />
+    <Resource Include="Resources\Rectangle.png" />
+    <Resource Include="Resources\Square.png" />
+    <Resource Include="Resources\Text.png" />
+    <Resource Include="Resources\Triangle.png" />
+    <Resource Include="Resources\cancel.png" />
+    <Resource Include="Resources\cb_down26.png" />
+    <Resource Include="Resources\cb_up26.png" />
+    <Resource Include="Resources\ok.png" />
+    <Resource Include="screenshot.png" />
+    <Resource Include="readme.txt" />
+    <EmbeddedResource Include="Localization\SampleConfiguration_CH.xml" />
+    <EmbeddedResource Include="Localization\SampleConfiguration_EN.xml" />
+    <EmbeddedResource Include="Localization\SampleConfiguration_JP.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexChart">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
+</Project>

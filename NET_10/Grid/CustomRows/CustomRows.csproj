@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomRows.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Accordion">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DataFilter">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DateTimeEditors">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.GridControl">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Menu">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TreeView">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

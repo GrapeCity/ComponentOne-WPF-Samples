@@ -36,7 +36,7 @@
             <c1:C1ComboBox x:Name="cbCurrencies" ItemsSource="{Binding Currencies}" DisplayMemberPath="DisplayName" SelectedValuePath="Symbol" SelectedItemChanged="HandleCurrenciesSelectedItemChanged" />
             <TextBlock Text="Measure:" />
             <c1:C1ComboBox x:Name="cbMeasureModes" ItemsSource="{Binding DictMeasureMode}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedItemChanged="HandleMeasureModesSelectedItemChanged"/>
-            <Image Source="/CurrencyComparison.4;component/Resources/ImgLegend.png" />
+            <Image Source="/CurrencyComparison;component/Resources/ImgLegend.png" />
             <TextBlock x:Name="tbPeriod" Margin="20 0"/>
         </StackPanel>
         <c1:C1FlexChart x:Name="mainChart" Background="White" ChartType="Line" LegendToggle="True" LegendPosition="Top" BindingX="Date" Grid.Row="1" Rendered="HandleMainChartRendered" MouseMove="HandleMainChartMouseMove">

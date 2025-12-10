@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="FlexChartExplorer.ErrorBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FlexChartExplorer"
+             xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <DataTemplate x:Key="cboChartTypeTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="Chart type: "/>
+                        <Run Text="{Binding .}"/>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cboErrorAmountTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="Error amount: " />
+                        <Run Text="{Binding .}" />
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cboDirectionTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="Direction: " />
+                        <Run Text="{Binding .}" />
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cboEndStyleTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="End style: " />
+                        <Run Text="{Binding .}" />
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10 0">
+            <Chart:C1ComboBox ItemsSource="{Binding DataContext.ChartTypes}"
+                      x:Name="cboChartType" SelectedIndex="0" MinWidth="180"
+                      ItemTemplate="{StaticResource cboChartTypeTemplate}"
+                      SelectedValue="{Binding ElementName=errorBarSeries, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}"/>
+            <Chart:C1ComboBox ItemsSource="{Binding DataContext.ErrorAmounts}"
+                      x:Name="cboErrorAmounts" Margin="10 0 0 0" SelectedIndex="0" MinWidth="180"
+                      ItemTemplate="{StaticResource cboErrorAmountTemplate}"
+                      SelectionChanged="cboErrorAmounts_SelectionChanged"
+                      SelectedValue="{Binding ElementName=errorBarSeries,Path=ErrorAmount,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
+            <Chart:C1ComboBox ItemsSource="{Binding DataContext.Directions}"
+                      x:Name="cboDirections"  Margin="10 0 0 0" SelectedIndex="0" MinWidth="120"
+                      ItemTemplate="{StaticResource cboDirectionTemplate}"
+                      SelectedValue="{Binding ElementName=errorBarSeries,Path=Direction,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
+            <Chart:C1ComboBox ItemsSource="{Binding DataContext.EndStyles}"
+                      x:Name="cboEndStyle"  Margin="10 0 0 0" SelectedIndex="0"  MinWidth="120"
+                      ItemTemplate="{StaticResource cboEndStyleTemplate}"
+                      SelectedValue="{Binding ElementName=errorBarSeries,Path=EndStyle,Mode=TwoWay,Converter={StaticResource enumConverter}}"></Chart:C1ComboBox>
+            <Chart:C1CheckBox VerticalAlignment="Center" Margin="10,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated}">Rotate</Chart:C1CheckBox>
+        </StackPanel>
+        <Chart:FlexChart BindingX="Country" ItemsSource="{Binding DataContext.Data}" Grid.Row="1" x:Name="flexChart" ToolTipContent="{}{y}">
+            <Chart:ErrorBar x:Name="errorBarSeries" Binding="Sales" ErrorValue="5">
+                <Chart:ErrorBar.ErrorBarStyle>
+                    <Chart:ChartStyle Stroke="Black"></Chart:ChartStyle>
+                </Chart:ErrorBar.ErrorBarStyle>
+            </Chart:ErrorBar>
+        </Chart:FlexChart>
+    </Grid>
+</UserControl>

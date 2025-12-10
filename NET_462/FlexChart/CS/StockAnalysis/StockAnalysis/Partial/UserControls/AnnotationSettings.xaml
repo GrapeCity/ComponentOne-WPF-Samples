@@ -7,7 +7,6 @@
              xmlns:cc="clr-namespace:StockAnalysis.Partial.CustomControls"
              xmlns:cvt="clr-namespace:StockAnalysis.Converter"
              xmlns:local="clr-namespace:StockAnalysis.Partial.UserControls"
-             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
              xmlns:System="clr-namespace:System;assembly=mscorlib"
              x:Class="StockAnalysis.Partial.UserControls.AnnotationSettings"
              mc:Ignorable="d" 

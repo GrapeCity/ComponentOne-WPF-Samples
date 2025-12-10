@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="TreeViewExplorer.DemoTreeViewDragDrop" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:local="clr-namespace:TreeViewExplorer" xmlns:res="clr-namespace:TreeViewExplorer.Properties">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Resources>
+            <Style x:Key="CustomSourceMarkerStyle" TargetType="Border">
+                <Setter Property="Background" Value="#80D3D3D3"/>
+                <Setter Property="BorderBrush" Value="#80808080"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="CornerRadius" Value="3"/>
+            </Style>
+
+            <Style x:Key="CustomTargetMarkerStyle" TargetType="Border">
+                <Setter Property="Background" Value="#40A020F0"/>
+                <Setter Property="BorderBrush" Value="#80A020F0"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="CornerRadius" Value="3"/>
+            </Style>
+            <Style x:Key="CE_SampleText" TargetType="TextBlock">
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="TextWrapping" Value="Wrap" />
+                <Setter Property="FontFamily" Value="Portable User Interface" />
+            </Style>
+            <local:CustomTemplateSelector x:Key="CustomTemplateSelector">
+                <local:CustomTemplateSelector.Resources>
+                    <ResourceDictionary>
+                        <HierarchicalDataTemplate x:Key="DepartmentTemplate" ItemsSource="{Binding Employees}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="../Resources/group.png" Height="14" Width="14" />
+                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Padding="4 0 4 0" />
+                            </StackPanel>
+                        </HierarchicalDataTemplate>
+                        <DataTemplate x:Key="MaleEmployeeTemplate">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="../Resources/manager.png" Height="14" Width="14" />
+                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Padding="4 0 4 0" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate x:Key="FemaleEmployeeTemplate">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="../Resources/assistant.png" Height="14" Width="14" />
+                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Padding="4 0 4 0" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ResourceDictionary>
+                </local:CustomTemplateSelector.Resources>
+            </local:CustomTemplateSelector>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Margin="0 0 0 10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Static res:Resources.DragDropAction}" Style="{StaticResource CE_SampleText}" Margin="0 4 5 0" />
+                <c1:C1RadioButton x:Name="Move" Content="{x:Static res:Resources.Move}" IsChecked="True" GroupName="DragDropEffect" Checked="OnButtonChecked" Grid.Column="1" Margin="0,4,5,0" />
+                <c1:C1RadioButton x:Name="Copy" Content="{x:Static res:Resources.Copy}" GroupName="DragDropEffect" Checked="OnButtonChecked" Grid.Row="1" Grid.Column="2" Margin="0,4,0,0" />
+            </StackPanel>
+        </Border>
+        <c1:C1TreeView x:Name="SampleTreeView" Grid.Row="1" Grid.ColumnSpan="2" Width="355" BorderThickness="0" ItemTemplateSelector="{StaticResource CustomTemplateSelector}" Padding="10" 
+                        DragSourceStyle="{StaticResource CustomSourceMarkerStyle}" DragTargetStyle="{StaticResource CustomTargetMarkerStyle}"/>
+    </Grid>
+</UserControl>

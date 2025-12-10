@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="FlexChartExplorer.PlotAreas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="http://schemas.componentone.com/winfx/2006/xaml"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Chart:FlexChart BindingX="Time" ChartType="Area" x:Name="flexChart" ItemsSource="{Binding DataContext.Data}">
+            <Chart:FlexChart.PlotAreas>
+                <Chart:PlotArea PlotAreaName ="plot1" Row="0"></Chart:PlotArea>
+                <Chart:PlotArea PlotAreaName ="spacing1" Height="20" Row="1"></Chart:PlotArea>
+                <Chart:PlotArea PlotAreaName ="plot2" Row="2"></Chart:PlotArea>
+                <Chart:PlotArea PlotAreaName ="spacing2" Height="20" Row="3"></Chart:PlotArea>
+                <Chart:PlotArea PlotAreaName ="plot3" Row="4"></Chart:PlotArea>
+            </Chart:FlexChart.PlotAreas>
+            <Chart:Series x:Name="acceleration" SeriesName="Acceleration" Binding="Acceleration"/>
+            <Chart:Series x:Name="velocity" SeriesName="Velocity" Binding="Velocity">
+                <Chart:Series.AxisY>
+                    <Chart:Axis Position="Left" MajorGrid="True" PlotAreaName="plot2"></Chart:Axis>
+                </Chart:Series.AxisY>
+            </Chart:Series>
+            <Chart:Series x:Name="distance" SeriesName="Distance" Binding="Distance">
+                <Chart:Series.AxisY>
+                    <Chart:Axis Position="Left" MajorGrid="True" PlotAreaName="plot3"></Chart:Axis>
+                </Chart:Series.AxisY>
+            </Chart:Series>
+        </Chart:FlexChart>
+    </Grid>
+</UserControl>

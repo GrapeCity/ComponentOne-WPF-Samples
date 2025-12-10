@@ -1,0 +1,24 @@
+﻿<Window x:Class="DynamicBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:resources="clr-namespace:DynamicBinding.Resources"
+        mc:Ignorable="d"
+        Title="{x:Static Member=resources:Resource.Title}" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Margin="4" Text="{x:Static Member=resources:Resource.Description}"/>
+        <c1:FlexGrid x:Name="grid" Grid.Row="1" NewRowPosition="Top" NewRowPlaceholder="{x:Static Member=resources:Resource.Placeholder}" HeadersVisibility="All">
+            <c1:FlexGrid.Columns>
+                <c1:GridColumn Binding="[Name]" Header="Name" FilterLoading="OnFilterLoading"/>
+                <c1:GridColumn Binding="[Age]" Header="Age" FilterLoading="OnFilterLoading"/>
+                <c1:GridColumn Binding="[Instrument]" Header="Instrument" FilterLoading="OnFilterLoading"/>
+            </c1:FlexGrid.Columns>
+        </c1:FlexGrid>
+    </Grid>
+</Window>

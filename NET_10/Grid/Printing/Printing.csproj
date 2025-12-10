@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <SignAssembly>false</SignAssembly>
+    <Company>
+    </Company>
+    <Authors>
+    </Authors>
+    <Platforms>AnyCPU;x86</Platforms>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+    <AssemblyName>Printing</AssemblyName>
+    <RootNamespace>Printing</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.ja.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="PrintingControl.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Printing.gclicx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.WPF.Accordion">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DateTimeEditors">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Ribbon">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

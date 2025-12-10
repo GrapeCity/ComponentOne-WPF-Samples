@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="FlexGridExplorer.ConditionalFormatting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:res="clr-namespace:FlexGridExplorer.Resources"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+
+        <c1:C1IconTemplate x:Key="OpenIconTemplate">
+            <c1:C1PathIcon Data="M540.743,281.356c-4.179-8.754-10.568-15.464-19.123-20.12c-8.566-4.665-17.987-6.995-28.264-6.995h-54.819v-45.683
+		c0-17.511-6.283-32.548-18.843-45.111c-12.566-12.562-27.604-18.842-45.111-18.842H219.268v-9.136
+		c0-17.511-6.283-32.548-18.842-45.107c-12.564-12.562-27.6-18.846-45.111-18.846H63.953c-17.511,0-32.548,6.283-45.111,18.846
+		C6.28,102.922,0,117.959,0,135.47v274.088c0,17.508,6.28,32.545,18.842,45.104c12.563,12.565,27.6,18.849,45.111,18.849h310.636
+		c12.748,0,26.07-3.285,39.971-9.855c13.895-6.563,24.928-14.894,33.113-24.981L531.9,335.037
+		c8.754-11.037,13.127-22.453,13.127-34.26C545.031,293.923,543.603,287.458,540.743,281.356z M36.547,135.474
+		c0-7.611,2.663-14.084,7.993-19.414c5.326-5.327,11.799-7.993,19.414-7.993h91.365c7.615,0,14.084,2.663,19.414,7.993
+		c5.327,5.33,7.993,11.803,7.993,19.414v18.274c0,7.616,2.667,14.087,7.994,19.414s11.798,7.994,19.412,7.994h164.452
+		c7.611,0,14.089,2.666,19.418,7.993c5.324,5.326,7.99,11.799,7.99,19.414v45.682H182.725c-12.941,0-26.269,3.284-39.973,9.851
+		c-13.706,6.567-24.744,14.893-33.12,24.986l-73.085,89.931V135.474z M503.345,311.917l-83.939,103.637
+		c-4.753,5.899-11.512,10.943-20.272,15.125c-8.754,4.189-16.939,6.283-24.551,6.283H63.953c-10.088,0-15.131-3.333-15.131-9.992
+		c0-3.046,1.713-6.852,5.14-11.427l83.938-103.633c4.949-5.903,11.75-10.896,20.413-14.989c8.658-4.093,16.796-6.14,24.411-6.14
+		h310.631c10.088,0,15.129,3.333,15.129,9.993C508.485,304.019,506.778,307.728,503.345,311.917z" />
+        </c1:C1IconTemplate>
+
+        <c1:C1IconTemplate x:Key="SaveIconTemplate">
+            <c1:C1PathIcon Data="M14.9,3.9l-3-2.8C11.8,1,11.6,1,11.5,1H10H5H1.5C1.2,1,1,1.2,1,1.5v13.1C1,14.8,1.2,15,1.5,15h13
+	                                            c0.3,0,0.5-0.2,0.5-0.5V4.3C15,4.1,15,4,14.9,3.9z M9.5,1.9v1.9h-4V1.9H9.5z M14,14.1H2V1.9h2.5v2.3c0,0.3,0.2,0.5,0.5,0.5h5
+	                                            c0.3,0,0.5-0.2,0.5-0.5V1.9h0.8L14,4.5V14.1z M4,7.1v4.7c0,0.3,0.2,0.5,0.5,0.5h7c0.3,0,0.5-0.2,0.5-0.5V7.1c0-0.3-0.2-0.5-0.5-0.5
+	                                            h-7C4.2,6.6,4,6.8,4,7.1z M5,7.5h6v3.7H5V7.5z" />
+        </c1:C1IconTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <c1:C1ToolStrip ToolLabelVisibility="Visible" Grid.ColumnSpan="2">
+            <c1:C1ButtonTool Label="{x:Static res:AppResources.LoadRules}" IconTemplate="{StaticResource OpenIconTemplate}" Click="OnLoadRules"/>
+            <c1:C1ButtonTool Label="{x:Static res:AppResources.SaveRules}" IconTemplate="{StaticResource SaveIconTemplate}" Click="OnSaveRules"/>
+            <c1:C1CheckBox IsChecked="{Binding ElementName=rulesManager, Path=AutoApply}" Content="AutoApply" Margin="2"/>
+            <c1:C1CheckBox IsChecked="{Binding ElementName=rulesManager, Path=IsAddButtonVisible}" Content="IsAddButtonVisible" Margin="2"/>
+            <c1:C1CheckBox IsChecked="{Binding ElementName=rulesManager, Path=IsRemoveButtonVisible}" Content="IsRemoveButtonVisible" Margin="2"/>
+            <c1:C1CheckBox IsChecked="{Binding ElementName=rulesManager, Path=IsRuleNameVisible}" Content="IsRuleNameVisible" Margin="2"/>
+        </c1:C1ToolStrip>
+
+        <c1:C1Expander Header="Rules" ExpandDirection="Left" ExpandIconAlignment="Left" HorizontalContentAlignment="Right" BorderThickness="0" Grid.Row="1" Grid.Column="1">
+            <c1:C1RulesManager x:Name="rulesManager" Width="400">
+                <c1:C1RulesEngine>
+                    <!--<c1:RulesEngineColorScaleRule Ranges="[OrderCount]">
+                        <c1:RulesEngineColorScaleStop Value="0" ValueType="Percent" Color="#FFFDE7E9"/>
+                        <c1:RulesEngineColorScaleStop Value="1" ValueType="Percent" Color="#FFDFF6DD"/>
+                    </c1:RulesEngineColorScaleRule>-->
+                    <!--<c1:RulesEngineExpressionRule Ranges="[OrderCount]" Expression="[OrderCount] &lt; 50">
+                        <c1:RulesEngineStyle Background="#FFFDE7E9"/>
+                    </c1:RulesEngineExpressionRule>
+                    <c1:RulesEngineExpressionRule Ranges="[OrderCount]" Expression="[OrderCount] &gt;= 50">
+                        <c1:RulesEngineStyle Background="#FFDFF6DD"/>
+                    </c1:RulesEngineExpressionRule>-->
+                    <c1:RulesEngineSegmentsRule Ranges="[OrderCount]">
+                        <c1:RulesEngineSegment Value="50">
+                            <c1:RulesEngineStyle Background="#FFFDE7E9"/>
+                        </c1:RulesEngineSegment>
+                        <c1:RulesEngineSegment>
+                            <c1:RulesEngineStyle Background="#FFDFF6DD"/>
+                        </c1:RulesEngineSegment>
+                    </c1:RulesEngineSegmentsRule>
+                    <!--<c1:RulesEngineDataBarRule Name="Order Count Bars" Ranges="[OrderCount]" Color="#FFA8A8F5" IsGradient="True" />-->
+                    <!--<c1:RulesEngineSegmentsRule Name="Order Count Icons" Ranges="[OrderCount]">
+                        <c1:RulesEngineSegment ValueType="Percent" Value="0.33">
+                            <c1:RulesEngineStyle IconTemplate="{x:Static c1:C1IconTemplate.TriangleSouth}" Foreground="Red"/>
+                        </c1:RulesEngineSegment>
+                        <c1:RulesEngineSegment ValueType="Percent" Value="0.66">
+                            <c1:RulesEngineStyle IconTemplate="{x:Static c1:C1IconTemplate.TriangleEast}" Foreground="Goldenrod"/>
+                        </c1:RulesEngineSegment>
+                        <c1:RulesEngineSegment>
+                            <c1:RulesEngineStyle IconTemplate="{x:Static c1:C1IconTemplate.TriangleNorth}" Foreground="Green"/>
+                        </c1:RulesEngineSegment>
+                    </c1:RulesEngineSegmentsRule>-->
+                    <!--<c1:RulesEngineExpressionRule Ranges="[OrderTotal]" Expression="[OrderTotal] &lt; 5000">
+                        <c1:RulesEngineStyle Foreground="#FFC42B1C"/>
+                    </c1:RulesEngineExpressionRule>
+                    <c1:RulesEngineExpressionRule Ranges="[OrderTotal]" Expression="[OrderTotal] &gt;= 5000">
+                        <c1:RulesEngineStyle Foreground="#FF0F7B0F"/>
+                    </c1:RulesEngineExpressionRule>-->
+                    <!--<c1:RulesEngineCustomRule Name="First Name Length Bars" Func="GetFirstNameStyle" Ranges="[FirstName]"/>-->
+                </c1:C1RulesEngine>
+            </c1:C1RulesManager>
+        </c1:C1Expander>
+
+        <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" Grid.Row="1">
+            <c1:FlexGrid.Columns>
+                <c1:GridColumn Binding="FirstName"/>
+                <c1:GridColumn Binding="LastName"/>
+                <c1:GridColumn Binding="OrderTotal" Format="C2" HorizontalAlignment="Right"/>
+                <c1:GridColumn Binding="OrderCount" Format="N1" HorizontalAlignment="Right"/>
+                <c1:GridColumn Binding="CountryId" Header="Country"/>
+                <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Date"/>
+                <c1:GridDateTimeColumn Binding="LastOrderDate" Header="Last Order Time" Mode="Time"/>
+            </c1:FlexGrid.Columns>
+            <i:Interaction.Behaviors>
+                <c1:ConditionalFormattingBehavior Engine="{Binding ElementName=rulesManager,Path=Engine}"/>
+            </i:Interaction.Behaviors>
+        </c1:FlexGrid>
+    </Grid>
+</UserControl>

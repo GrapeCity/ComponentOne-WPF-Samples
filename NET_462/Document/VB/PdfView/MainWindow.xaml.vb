@@ -45,7 +45,7 @@ Class MainWindow
                 pdfDocumentSource.LoadFromFile(openFileDialog.FileName)
                 fv.CloseActionEnabled = True
                 Return
-            Catch pex As PdfPasswordException
+            Catch pex As C1.Document.PdfPasswordException
                 Dim password As String = PasswordWindow.DoEnterPassword(openFileDialog.FileName)
                 If (password Is Nothing) Then
                     Return

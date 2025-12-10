@@ -1,0 +1,617 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <SignAssembly>false</SignAssembly>
+    <Company>
+    </Company>
+    <Authors>
+    </Authors>
+    <Platforms>AnyCPU;x86</Platforms>
+    <ApplicationIcon>C1-ball.ico</ApplicationIcon>
+    <AssemblyName>GridShowCase</AssemblyName>
+    <RootNamespace>GridShowCase</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\countries.json" />
+    <None Remove="Resources\flags\AE.png" />
+    <None Remove="Resources\flags\AF.png" />
+    <None Remove="Resources\flags\AG.png" />
+    <None Remove="Resources\flags\AI.png" />
+    <None Remove="Resources\flags\AL.png" />
+    <None Remove="Resources\flags\AM.png" />
+    <None Remove="Resources\flags\AN.png" />
+    <None Remove="Resources\flags\AO.png" />
+    <None Remove="Resources\flags\AQ.png" />
+    <None Remove="Resources\flags\AR.png" />
+    <None Remove="Resources\flags\AT.png" />
+    <None Remove="Resources\flags\AU.png" />
+    <None Remove="Resources\flags\AW.png" />
+    <None Remove="Resources\flags\AZ.png" />
+    <None Remove="Resources\flags\BA.png" />
+    <None Remove="Resources\flags\BB.png" />
+    <None Remove="Resources\flags\BD.png" />
+    <None Remove="Resources\flags\BE.png" />
+    <None Remove="Resources\flags\BF.png" />
+    <None Remove="Resources\flags\BG.png" />
+    <None Remove="Resources\flags\BH.png" />
+    <None Remove="Resources\flags\BI.png" />
+    <None Remove="Resources\flags\BJ.png" />
+    <None Remove="Resources\flags\BM.png" />
+    <None Remove="Resources\flags\BN.png" />
+    <None Remove="Resources\flags\BO.png" />
+    <None Remove="Resources\flags\BR.png" />
+    <None Remove="Resources\flags\BS.png" />
+    <None Remove="Resources\flags\BT.png" />
+    <None Remove="Resources\flags\BW.png" />
+    <None Remove="Resources\flags\BY.png" />
+    <None Remove="Resources\flags\BZ.png" />
+    <None Remove="Resources\flags\CA.png" />
+    <None Remove="Resources\flags\CC.png" />
+    <None Remove="Resources\flags\CD.png" />
+    <None Remove="Resources\flags\CF.png" />
+    <None Remove="Resources\flags\CG.png" />
+    <None Remove="Resources\flags\CH.png" />
+    <None Remove="Resources\flags\CI.png" />
+    <None Remove="Resources\flags\CK.png" />
+    <None Remove="Resources\flags\CL.png" />
+    <None Remove="Resources\flags\CM.png" />
+    <None Remove="Resources\flags\CN.png" />
+    <None Remove="Resources\flags\CO.png" />
+    <None Remove="Resources\flags\CR.png" />
+    <None Remove="Resources\flags\CU.png" />
+    <None Remove="Resources\flags\CV.png" />
+    <None Remove="Resources\flags\CX.png" />
+    <None Remove="Resources\flags\CY.png" />
+    <None Remove="Resources\flags\CZ.png" />
+    <None Remove="Resources\flags\DE.png" />
+    <None Remove="Resources\flags\DJ.png" />
+    <None Remove="Resources\flags\DK.png" />
+    <None Remove="Resources\flags\DM.png" />
+    <None Remove="Resources\flags\DO.png" />
+    <None Remove="Resources\flags\DZ.png" />
+    <None Remove="Resources\flags\EC.png" />
+    <None Remove="Resources\flags\EE.png" />
+    <None Remove="Resources\flags\EG.png" />
+    <None Remove="Resources\flags\EH.png" />
+    <None Remove="Resources\flags\ER.png" />
+    <None Remove="Resources\flags\ES.png" />
+    <None Remove="Resources\flags\ET.png" />
+    <None Remove="Resources\flags\EU.png" />
+    <None Remove="Resources\flags\FI.png" />
+    <None Remove="Resources\flags\FJ.png" />
+    <None Remove="Resources\flags\FK.png" />
+    <None Remove="Resources\flags\FM.png" />
+    <None Remove="Resources\flags\FO.png" />
+    <None Remove="Resources\flags\FR.png" />
+    <None Remove="Resources\flags\GA.png" />
+    <None Remove="Resources\flags\GB.png" />
+    <None Remove="Resources\flags\GD.png" />
+    <None Remove="Resources\flags\GE.png" />
+    <None Remove="Resources\flags\GF.png" />
+    <None Remove="Resources\flags\GG.png" />
+    <None Remove="Resources\flags\GH.png" />
+    <None Remove="Resources\flags\GI.png" />
+    <None Remove="Resources\flags\GL.png" />
+    <None Remove="Resources\flags\GM.png" />
+    <None Remove="Resources\flags\GN.png" />
+    <None Remove="Resources\flags\GP.png" />
+    <None Remove="Resources\flags\GQ.png" />
+    <None Remove="Resources\flags\GR.png" />
+    <None Remove="Resources\flags\GT.png" />
+    <None Remove="Resources\flags\GU.png" />
+    <None Remove="Resources\flags\GW.png" />
+    <None Remove="Resources\flags\GY.png" />
+    <None Remove="Resources\flags\GZ.png" />
+    <None Remove="Resources\flags\HK.png" />
+    <None Remove="Resources\flags\HN.png" />
+    <None Remove="Resources\flags\HR.png" />
+    <None Remove="Resources\flags\HT.png" />
+    <None Remove="Resources\flags\HU.png" />
+    <None Remove="Resources\flags\ID.png" />
+    <None Remove="Resources\flags\IE.png" />
+    <None Remove="Resources\flags\IL.png" />
+    <None Remove="Resources\flags\IM.png" />
+    <None Remove="Resources\flags\IN.png" />
+    <None Remove="Resources\flags\IO.png" />
+    <None Remove="Resources\flags\IQ.png" />
+    <None Remove="Resources\flags\IR.png" />
+    <None Remove="Resources\flags\IS.png" />
+    <None Remove="Resources\flags\IT.png" />
+    <None Remove="Resources\flags\JE.png" />
+    <None Remove="Resources\flags\JM.png" />
+    <None Remove="Resources\flags\JO.png" />
+    <None Remove="Resources\flags\JP.png" />
+    <None Remove="Resources\flags\JT.png" />
+    <None Remove="Resources\flags\KE.png" />
+    <None Remove="Resources\flags\KG.png" />
+    <None Remove="Resources\flags\KH.png" />
+    <None Remove="Resources\flags\KI.png" />
+    <None Remove="Resources\flags\KM.png" />
+    <None Remove="Resources\flags\KN.png" />
+    <None Remove="Resources\flags\KP.png" />
+    <None Remove="Resources\flags\KR.png" />
+    <None Remove="Resources\flags\KW.png" />
+    <None Remove="Resources\flags\KY.png" />
+    <None Remove="Resources\flags\KZ.png" />
+    <None Remove="Resources\flags\LA.png" />
+    <None Remove="Resources\flags\LB.png" />
+    <None Remove="Resources\flags\LC.png" />
+    <None Remove="Resources\flags\LK.png" />
+    <None Remove="Resources\flags\LR.png" />
+    <None Remove="Resources\flags\LS.png" />
+    <None Remove="Resources\flags\LT.png" />
+    <None Remove="Resources\flags\LU.png" />
+    <None Remove="Resources\flags\LV.png" />
+    <None Remove="Resources\flags\LY.png" />
+    <None Remove="Resources\flags\MA.png" />
+    <None Remove="Resources\flags\MD.png" />
+    <None Remove="Resources\flags\ME.png" />
+    <None Remove="Resources\flags\MG.png" />
+    <None Remove="Resources\flags\MH.png" />
+    <None Remove="Resources\flags\MI.png" />
+    <None Remove="Resources\flags\MK.png" />
+    <None Remove="Resources\flags\ML.png" />
+    <None Remove="Resources\flags\MM.png" />
+    <None Remove="Resources\flags\MN.png" />
+    <None Remove="Resources\flags\MO.png" />
+    <None Remove="Resources\flags\MP.png" />
+    <None Remove="Resources\flags\MQ.png" />
+    <None Remove="Resources\flags\MR.png" />
+    <None Remove="Resources\flags\MS.png" />
+    <None Remove="Resources\flags\MT.png" />
+    <None Remove="Resources\flags\MU.png" />
+    <None Remove="Resources\flags\MV.png" />
+    <None Remove="Resources\flags\MW.png" />
+    <None Remove="Resources\flags\MX.png" />
+    <None Remove="Resources\flags\MY.png" />
+    <None Remove="Resources\flags\MZ.png" />
+    <None Remove="Resources\flags\NA.png" />
+    <None Remove="Resources\flags\NC.png" />
+    <None Remove="Resources\flags\NE.png" />
+    <None Remove="Resources\flags\NF.png" />
+    <None Remove="Resources\flags\NG.png" />
+    <None Remove="Resources\flags\NI.png" />
+    <None Remove="Resources\flags\NL.png" />
+    <None Remove="Resources\flags\NO.png" />
+    <None Remove="Resources\flags\NP.png" />
+    <None Remove="Resources\flags\NR.png" />
+    <None Remove="Resources\flags\NU.png" />
+    <None Remove="Resources\flags\NZ.png" />
+    <None Remove="Resources\flags\OM.png" />
+    <None Remove="Resources\flags\PA.png" />
+    <None Remove="Resources\flags\PE.png" />
+    <None Remove="Resources\flags\PF.png" />
+    <None Remove="Resources\flags\PG.png" />
+    <None Remove="Resources\flags\PH.png" />
+    <None Remove="Resources\flags\PK.png" />
+    <None Remove="Resources\flags\PL.png" />
+    <None Remove="Resources\flags\PM.png" />
+    <None Remove="Resources\flags\PR.png" />
+    <None Remove="Resources\flags\PS.png" />
+    <None Remove="Resources\flags\PT.png" />
+    <None Remove="Resources\flags\PW.png" />
+    <None Remove="Resources\flags\PY.png" />
+    <None Remove="Resources\flags\QA.png" />
+    <None Remove="Resources\flags\RE.png" />
+    <None Remove="Resources\flags\RO.png" />
+    <None Remove="Resources\flags\RS.png" />
+    <None Remove="Resources\flags\RU.png" />
+    <None Remove="Resources\flags\RW.png" />
+    <None Remove="Resources\flags\SA.png" />
+    <None Remove="Resources\flags\SB.png" />
+    <None Remove="Resources\flags\SC.png" />
+    <None Remove="Resources\flags\SD.png" />
+    <None Remove="Resources\flags\SE.png" />
+    <None Remove="Resources\flags\SG.png" />
+    <None Remove="Resources\flags\SH.png" />
+    <None Remove="Resources\flags\SI.png" />
+    <None Remove="Resources\flags\SJ.png" />
+    <None Remove="Resources\flags\SK.png" />
+    <None Remove="Resources\flags\SL.png" />
+    <None Remove="Resources\flags\SN.png" />
+    <None Remove="Resources\flags\SO.png" />
+    <None Remove="Resources\flags\SR.png" />
+    <None Remove="Resources\flags\SS.png" />
+    <None Remove="Resources\flags\ST.png" />
+    <None Remove="Resources\flags\SV.png" />
+    <None Remove="Resources\flags\SY.png" />
+    <None Remove="Resources\flags\SZ.png" />
+    <None Remove="Resources\flags\TC.png" />
+    <None Remove="Resources\flags\TD.png" />
+    <None Remove="Resources\flags\TG.png" />
+    <None Remove="Resources\flags\TH.png" />
+    <None Remove="Resources\flags\TJ.png" />
+    <None Remove="Resources\flags\TL.png" />
+    <None Remove="Resources\flags\TM.png" />
+    <None Remove="Resources\flags\TN.png" />
+    <None Remove="Resources\flags\TO.png" />
+    <None Remove="Resources\flags\TR.png" />
+    <None Remove="Resources\flags\TT.png" />
+    <None Remove="Resources\flags\TV.png" />
+    <None Remove="Resources\flags\TW.png" />
+    <None Remove="Resources\flags\TZ.png" />
+    <None Remove="Resources\flags\UA.png" />
+    <None Remove="Resources\flags\UG.png" />
+    <None Remove="Resources\flags\US.png" />
+    <None Remove="Resources\flags\UY.png" />
+    <None Remove="Resources\flags\UZ.png" />
+    <None Remove="Resources\flags\VC.png" />
+    <None Remove="Resources\flags\VE.png" />
+    <None Remove="Resources\flags\VG.png" />
+    <None Remove="Resources\flags\VI.png" />
+    <None Remove="Resources\flags\VN.png" />
+    <None Remove="Resources\flags\VU.png" />
+    <None Remove="Resources\flags\WF.png" />
+    <None Remove="Resources\flags\WK.png" />
+    <None Remove="Resources\flags\WS.png" />
+    <None Remove="Resources\flags\YE.png" />
+    <None Remove="Resources\flags\YT.png" />
+    <None Remove="Resources\flags\ZA.png" />
+    <None Remove="Resources\flags\ZM.png" />
+    <None Remove="Resources\flags\ZW.png" />
+    <None Remove="Resources\Images\Columns.png" />
+    <None Remove="Resources\Images\ConditionalFormating.png" />
+    <None Remove="Resources\Images\csv.png" />
+    <None Remove="Resources\Images\datetime.png" />
+    <None Remove="Resources\Images\Excel.png" />
+    <None Remove="Resources\Images\Filter.png" />
+    <None Remove="Resources\Images\Html.png" />
+    <None Remove="Resources\Images\Ico-Filters.png" />
+    <None Remove="Resources\Images\noflag.png" />
+    <None Remove="Resources\Images\Text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\countries.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\flags\AE.png" />
+    <Resource Include="Resources\flags\AF.png" />
+    <Resource Include="Resources\flags\AG.png" />
+    <Resource Include="Resources\flags\AI.png" />
+    <Resource Include="Resources\flags\AL.png" />
+    <Resource Include="Resources\flags\AM.png" />
+    <Resource Include="Resources\flags\AN.png" />
+    <Resource Include="Resources\flags\AO.png" />
+    <Resource Include="Resources\flags\AQ.png" />
+    <Resource Include="Resources\flags\AR.png" />
+    <Resource Include="Resources\flags\AT.png" />
+    <Resource Include="Resources\flags\AU.png" />
+    <Resource Include="Resources\flags\AW.png" />
+    <Resource Include="Resources\flags\AZ.png" />
+    <Resource Include="Resources\flags\BA.png" />
+    <Resource Include="Resources\flags\BB.png" />
+    <Resource Include="Resources\flags\BD.png" />
+    <Resource Include="Resources\flags\BE.png" />
+    <Resource Include="Resources\flags\BF.png" />
+    <Resource Include="Resources\flags\BG.png" />
+    <Resource Include="Resources\flags\BH.png" />
+    <Resource Include="Resources\flags\BI.png" />
+    <Resource Include="Resources\flags\BJ.png" />
+    <Resource Include="Resources\flags\BM.png" />
+    <Resource Include="Resources\flags\BN.png" />
+    <Resource Include="Resources\flags\BO.png" />
+    <Resource Include="Resources\flags\BR.png" />
+    <Resource Include="Resources\flags\BS.png" />
+    <Resource Include="Resources\flags\BT.png" />
+    <Resource Include="Resources\flags\BW.png" />
+    <Resource Include="Resources\flags\BY.png" />
+    <Resource Include="Resources\flags\BZ.png" />
+    <Resource Include="Resources\flags\CA.png" />
+    <Resource Include="Resources\flags\CC.png" />
+    <Resource Include="Resources\flags\CD.png" />
+    <Resource Include="Resources\flags\CF.png" />
+    <Resource Include="Resources\flags\CG.png" />
+    <Resource Include="Resources\flags\CH.png" />
+    <Resource Include="Resources\flags\CI.png" />
+    <Resource Include="Resources\flags\CK.png" />
+    <Resource Include="Resources\flags\CL.png" />
+    <Resource Include="Resources\flags\CM.png" />
+    <Resource Include="Resources\flags\CN.png" />
+    <Resource Include="Resources\flags\CO.png" />
+    <Resource Include="Resources\flags\CR.png" />
+    <Resource Include="Resources\flags\CU.png" />
+    <Resource Include="Resources\flags\CV.png" />
+    <Resource Include="Resources\flags\CX.png" />
+    <Resource Include="Resources\flags\CY.png" />
+    <Resource Include="Resources\flags\CZ.png" />
+    <Resource Include="Resources\flags\DE.png" />
+    <Resource Include="Resources\flags\DJ.png" />
+    <Resource Include="Resources\flags\DK.png" />
+    <Resource Include="Resources\flags\DM.png" />
+    <Resource Include="Resources\flags\DO.png" />
+    <Resource Include="Resources\flags\DZ.png" />
+    <Resource Include="Resources\flags\EC.png" />
+    <Resource Include="Resources\flags\EE.png" />
+    <Resource Include="Resources\flags\EG.png" />
+    <Resource Include="Resources\flags\EH.png" />
+    <Resource Include="Resources\flags\ER.png" />
+    <Resource Include="Resources\flags\ES.png" />
+    <Resource Include="Resources\flags\ET.png" />
+    <Resource Include="Resources\flags\EU.png" />
+    <Resource Include="Resources\flags\FI.png" />
+    <Resource Include="Resources\flags\FJ.png" />
+    <Resource Include="Resources\flags\FK.png" />
+    <Resource Include="Resources\flags\FM.png" />
+    <Resource Include="Resources\flags\FO.png" />
+    <Resource Include="Resources\flags\FR.png" />
+    <Resource Include="Resources\flags\GA.png" />
+    <Resource Include="Resources\flags\GB.png" />
+    <Resource Include="Resources\flags\GD.png" />
+    <Resource Include="Resources\flags\GE.png" />
+    <Resource Include="Resources\flags\GF.png" />
+    <Resource Include="Resources\flags\GG.png" />
+    <Resource Include="Resources\flags\GH.png" />
+    <Resource Include="Resources\flags\GI.png" />
+    <Resource Include="Resources\flags\GL.png" />
+    <Resource Include="Resources\flags\GM.png" />
+    <Resource Include="Resources\flags\GN.png" />
+    <Resource Include="Resources\flags\GP.png" />
+    <Resource Include="Resources\flags\GQ.png" />
+    <Resource Include="Resources\flags\GR.png" />
+    <Resource Include="Resources\flags\GT.png" />
+    <Resource Include="Resources\flags\GU.png" />
+    <Resource Include="Resources\flags\GW.png" />
+    <Resource Include="Resources\flags\GY.png" />
+    <Resource Include="Resources\flags\GZ.png" />
+    <Resource Include="Resources\flags\HK.png" />
+    <Resource Include="Resources\flags\HN.png" />
+    <Resource Include="Resources\flags\HR.png" />
+    <Resource Include="Resources\flags\HT.png" />
+    <Resource Include="Resources\flags\HU.png" />
+    <Resource Include="Resources\flags\ID.png" />
+    <Resource Include="Resources\flags\IE.png" />
+    <Resource Include="Resources\flags\IL.png" />
+    <Resource Include="Resources\flags\IM.png" />
+    <Resource Include="Resources\flags\IN.png" />
+    <Resource Include="Resources\flags\IO.png" />
+    <Resource Include="Resources\flags\IQ.png" />
+    <Resource Include="Resources\flags\IR.png" />
+    <Resource Include="Resources\flags\IS.png" />
+    <Resource Include="Resources\flags\IT.png" />
+    <Resource Include="Resources\flags\JE.png" />
+    <Resource Include="Resources\flags\JM.png" />
+    <Resource Include="Resources\flags\JO.png" />
+    <Resource Include="Resources\flags\JP.png" />
+    <Resource Include="Resources\flags\JT.png" />
+    <Resource Include="Resources\flags\KE.png" />
+    <Resource Include="Resources\flags\KG.png" />
+    <Resource Include="Resources\flags\KH.png" />
+    <Resource Include="Resources\flags\KI.png" />
+    <Resource Include="Resources\flags\KM.png" />
+    <Resource Include="Resources\flags\KN.png" />
+    <Resource Include="Resources\flags\KP.png" />
+    <Resource Include="Resources\flags\KR.png" />
+    <Resource Include="Resources\flags\KW.png" />
+    <Resource Include="Resources\flags\KY.png" />
+    <Resource Include="Resources\flags\KZ.png" />
+    <Resource Include="Resources\flags\LA.png" />
+    <Resource Include="Resources\flags\LB.png" />
+    <Resource Include="Resources\flags\LC.png" />
+    <Resource Include="Resources\flags\LK.png" />
+    <Resource Include="Resources\flags\LR.png" />
+    <Resource Include="Resources\flags\LS.png" />
+    <Resource Include="Resources\flags\LT.png" />
+    <Resource Include="Resources\flags\LU.png" />
+    <Resource Include="Resources\flags\LV.png" />
+    <Resource Include="Resources\flags\LY.png" />
+    <Resource Include="Resources\flags\MA.png" />
+    <Resource Include="Resources\flags\MD.png" />
+    <Resource Include="Resources\flags\ME.png" />
+    <Resource Include="Resources\flags\MG.png" />
+    <Resource Include="Resources\flags\MH.png" />
+    <Resource Include="Resources\flags\MI.png" />
+    <Resource Include="Resources\flags\MK.png" />
+    <Resource Include="Resources\flags\ML.png" />
+    <Resource Include="Resources\flags\MM.png" />
+    <Resource Include="Resources\flags\MN.png" />
+    <Resource Include="Resources\flags\MO.png" />
+    <Resource Include="Resources\flags\MP.png" />
+    <Resource Include="Resources\flags\MQ.png" />
+    <Resource Include="Resources\flags\MR.png" />
+    <Resource Include="Resources\flags\MS.png" />
+    <Resource Include="Resources\flags\MT.png" />
+    <Resource Include="Resources\flags\MU.png" />
+    <Resource Include="Resources\flags\MV.png" />
+    <Resource Include="Resources\flags\MW.png" />
+    <Resource Include="Resources\flags\MX.png" />
+    <Resource Include="Resources\flags\MY.png" />
+    <Resource Include="Resources\flags\MZ.png" />
+    <Resource Include="Resources\flags\NA.png" />
+    <Resource Include="Resources\flags\NC.png" />
+    <Resource Include="Resources\flags\NE.png" />
+    <Resource Include="Resources\flags\NF.png" />
+    <Resource Include="Resources\flags\NG.png" />
+    <Resource Include="Resources\flags\NI.png" />
+    <Resource Include="Resources\flags\NL.png" />
+    <Resource Include="Resources\flags\NO.png" />
+    <Resource Include="Resources\flags\NP.png" />
+    <Resource Include="Resources\flags\NR.png" />
+    <Resource Include="Resources\flags\NU.png" />
+    <Resource Include="Resources\flags\NZ.png" />
+    <Resource Include="Resources\flags\OM.png" />
+    <Resource Include="Resources\flags\PA.png" />
+    <Resource Include="Resources\flags\PE.png" />
+    <Resource Include="Resources\flags\PF.png" />
+    <Resource Include="Resources\flags\PG.png" />
+    <Resource Include="Resources\flags\PH.png" />
+    <Resource Include="Resources\flags\PK.png" />
+    <Resource Include="Resources\flags\PL.png" />
+    <Resource Include="Resources\flags\PM.png" />
+    <Resource Include="Resources\flags\PR.png" />
+    <Resource Include="Resources\flags\PS.png" />
+    <Resource Include="Resources\flags\PT.png" />
+    <Resource Include="Resources\flags\PW.png" />
+    <Resource Include="Resources\flags\PY.png" />
+    <Resource Include="Resources\flags\QA.png" />
+    <Resource Include="Resources\flags\RE.png" />
+    <Resource Include="Resources\flags\RO.png" />
+    <Resource Include="Resources\flags\RS.png" />
+    <Resource Include="Resources\flags\RU.png" />
+    <Resource Include="Resources\flags\RW.png" />
+    <Resource Include="Resources\flags\SA.png" />
+    <Resource Include="Resources\flags\SB.png" />
+    <Resource Include="Resources\flags\SC.png" />
+    <Resource Include="Resources\flags\SD.png" />
+    <Resource Include="Resources\flags\SE.png" />
+    <Resource Include="Resources\flags\SG.png" />
+    <Resource Include="Resources\flags\SH.png" />
+    <Resource Include="Resources\flags\SI.png" />
+    <Resource Include="Resources\flags\SJ.png" />
+    <Resource Include="Resources\flags\SK.png" />
+    <Resource Include="Resources\flags\SL.png" />
+    <Resource Include="Resources\flags\SN.png" />
+    <Resource Include="Resources\flags\SO.png" />
+    <Resource Include="Resources\flags\SR.png" />
+    <Resource Include="Resources\flags\SS.png" />
+    <Resource Include="Resources\flags\ST.png" />
+    <Resource Include="Resources\flags\SV.png" />
+    <Resource Include="Resources\flags\SY.png" />
+    <Resource Include="Resources\flags\SZ.png" />
+    <Resource Include="Resources\flags\TC.png" />
+    <Resource Include="Resources\flags\TD.png" />
+    <Resource Include="Resources\flags\TG.png" />
+    <Resource Include="Resources\flags\TH.png" />
+    <Resource Include="Resources\flags\TJ.png" />
+    <Resource Include="Resources\flags\TL.png" />
+    <Resource Include="Resources\flags\TM.png" />
+    <Resource Include="Resources\flags\TN.png" />
+    <Resource Include="Resources\flags\TO.png" />
+    <Resource Include="Resources\flags\TR.png" />
+    <Resource Include="Resources\flags\TT.png" />
+    <Resource Include="Resources\flags\TV.png" />
+    <Resource Include="Resources\flags\TW.png" />
+    <Resource Include="Resources\flags\TZ.png" />
+    <Resource Include="Resources\flags\UA.png" />
+    <Resource Include="Resources\flags\UG.png" />
+    <Resource Include="Resources\flags\US.png" />
+    <Resource Include="Resources\flags\UY.png" />
+    <Resource Include="Resources\flags\UZ.png" />
+    <Resource Include="Resources\flags\VC.png" />
+    <Resource Include="Resources\flags\VE.png" />
+    <Resource Include="Resources\flags\VG.png" />
+    <Resource Include="Resources\flags\VI.png" />
+    <Resource Include="Resources\flags\VN.png" />
+    <Resource Include="Resources\flags\VU.png" />
+    <Resource Include="Resources\flags\WF.png" />
+    <Resource Include="Resources\flags\WK.png" />
+    <Resource Include="Resources\flags\WS.png" />
+    <Resource Include="Resources\flags\YE.png" />
+    <Resource Include="Resources\flags\YT.png" />
+    <Resource Include="Resources\flags\ZA.png" />
+    <Resource Include="Resources\flags\ZM.png" />
+    <Resource Include="Resources\flags\ZW.png" />
+    <Resource Include="Resources\Images\Columns.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\ConditionalFormating.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\csv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\datetime.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Excel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Filter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Html.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Ico-Filters.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\noflag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Text.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.DataCollection" Version="10.0.20252.3" />
+    <PackageReference Include="C1.WPF.Chart">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ColorPicker">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Core">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DataCollection" Version="10.0.20252.3" />
+    <PackageReference Include="C1.WPF.DateTimeEditors">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.DX">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Grid.Excel">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.GridControl">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Input">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.ListView">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Menu">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Ribbon">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.TabControl">
+      <Version>10.0.20252.1221</Version>
+    </PackageReference>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.8" />
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations">
+      <Version>5.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.ja.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GridShowCase.gclicx" />
+  </ItemGroup>
+</Project>

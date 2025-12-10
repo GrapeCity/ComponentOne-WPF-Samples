@@ -1,0 +1,86 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Spreadsheet">
+
+
+    <Style TargetType="{x:Type local:ColumnHeaderCell}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ColumnHeaderCell}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="#ababab"
+                            BorderThickness="0 0 0 1">
+                        <Border BorderThickness="0 0 1 0">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStop Color="#efefef" Offset="0"/>
+                                        <GradientStop Color="#d5d5d5" Offset="1"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <TextBlock Text="{TemplateBinding Header}" TextAlignment="Center"/>
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:RowHeaderCell}">
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:RowHeaderCell}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="#ababab"
+                            BorderThickness="0 0 1 0">
+                        <Border BorderThickness="0 0 0 1">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStop Color="#efefef" Offset="0"/>
+                                        <GradientStop Color="#d5d5d5" Offset="1"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <TextBlock Text="{TemplateBinding Header}" TextAlignment="Center" VerticalAlignment="Bottom" Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:TopLeftCell}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:TopLeftCell}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderThickness="0 0 1 0">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#efefef" Offset="0"/>
+                                    <GradientStop Color="#d5d5d5" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <Border BorderThickness="0 0 0 1">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStop Color="#efefef" Offset="0"/>
+                                        <GradientStop Color="#d5d5d5" Offset="1"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Polygon Stretch="UniformToFill" Points="122.87,0 122.88,122.86 0,122.87 122.87,0" Width="12" Height="12" Fill="#dfdfdf" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="2"/>
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

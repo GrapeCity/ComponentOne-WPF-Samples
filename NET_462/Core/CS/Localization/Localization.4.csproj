@@ -83,55 +83,55 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.C1Chart">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DataGrid">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Docking">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.MediaPlayer">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Olap">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.PdfViewer">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.ReportViewer">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.RichTextBox">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.RichTextBox.Toolbar">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Schedule">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.SpellChecker">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Toolbar">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

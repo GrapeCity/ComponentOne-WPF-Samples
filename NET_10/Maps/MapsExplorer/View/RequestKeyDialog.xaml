@@ -1,0 +1,29 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MapsExplorer.Sources"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        x:Class="MapsExplorer.Sources.RequestKeyDialog"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Title="RequestKeyDialog" Height="153" Width="684">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <c1:C1TextBox Placeholder="Enter your map API key..." Margin="2" Grid.ColumnSpan="3" Text="{Binding ApiKey, Mode=OneWayToSource}"/>
+
+        <Button Content="OK" Width="50" Margin="2" Grid.Row="1" Click="OnOkButtonClick" IsDefault="true" Grid.Column="1" />
+        <Button Content="Cancel" Width="50" Margin="2" Grid.Row="1" Click="OnCancelButtonClick" IsCancel="True" Grid.Column="2"/>
+
+    </Grid>
+</Window>

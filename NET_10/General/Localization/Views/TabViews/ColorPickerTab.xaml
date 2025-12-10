@@ -1,0 +1,23 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Localization.Views.TabViews"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" x:Class="Localization.Views.TabViews.ColorPickerTab"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="{Binding ColorPicker, Source={StaticResource UIStrings}}"/>
+                <c1:C1ColorPicker VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,0,0,0">
+                <Label Content="{Binding BrushPicker, Source={StaticResource UIStrings}}"/>
+                <c1:C1BrushPicker Width="97" Height="35"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

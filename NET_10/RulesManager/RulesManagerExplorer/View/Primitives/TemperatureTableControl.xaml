@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="RulesManagerExplorer.TemperatureTableControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RulesManagerExplorer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:TemperatureControlValueToBrushConverter x:Key="valueConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <DataGrid x:Name="grid" IsReadOnly="True" MinColumnWidth="50" RowHeight="50">
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="Background">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:TemperatureTableControl}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Foreground">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="Foreground">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:TemperatureTableControl}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="FontSize">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="FontSize">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:TemperatureTableControl}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="FontFamily">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="FontFamily">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:TemperatureTableControl}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="FontWeight">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="FontWeight">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:TemperatureTableControl}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="FontStyle">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="FontStyle">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:TemperatureTableControl}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource valueConverter}" ConverterParameter="BorderBrush">
+                                <Binding RelativeSource="{RelativeSource Self}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:TemperatureTableControl}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="RulesManagerExplorer.FlexGridIntegrationDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" Grid.Column="0">
+            <c1:FlexGrid.Columns>
+                <c1:GridColumn Binding="FirstName"/>
+                <c1:GridColumn Binding="LastName"/>
+                <c1:GridColumn Binding="OrderTotal" Format="C2" HorizontalAlignment="Right"/>
+                <c1:GridColumn Binding="OrderCount" Format="N1" HorizontalAlignment="Right"/>
+                <c1:GridColumn Binding="CountryId" Header="Country"/>
+                <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Date"/>
+                <c1:GridDateTimeColumn Binding="LastOrderDate" Header="Last Order Time" Mode="Time"/>
+            </c1:FlexGrid.Columns>
+            <i:Interaction.Behaviors>
+                <c1:ConditionalFormattingBehavior Engine="{Binding ElementName=rulesManager, Path=Engine}"/>
+            </i:Interaction.Behaviors>
+        </c1:FlexGrid>
+        <c1:C1Expander Header="RulesManager" ExpandDirection="Left" ExpandIconAlignment="Left" HorizontalContentAlignment="Right" BorderThickness="0" Grid.Column="1">
+            <c1:C1RulesManager x:Name="rulesManager" Width="400" RulesVisibility="All">
+                <c1:C1RulesManager.Engine>
+                    <c1:C1RulesEngine>
+                        <c1:RulesEngineCustomRule Func="GetFirstNameStyle" Ranges="[FirstName]"/>
+                        <c1:RulesEngineExpressionRule Ranges="[OrderCount]" Expression="[OrderCount] &lt; 50">
+                            <c1:RulesEngineStyle Background="#FFFDE7E9"/>
+                        </c1:RulesEngineExpressionRule>
+                        <c1:RulesEngineExpressionRule Ranges="[OrderCount]" Expression="[OrderCount] &gt;= 50">
+                            <c1:RulesEngineStyle Background="#FFDFF6DD"/>
+                        </c1:RulesEngineExpressionRule>
+                        <c1:RulesEngineExpressionRule Ranges="[OrderTotal]" Expression="[OrderTotal] &lt; 5000">
+                            <c1:RulesEngineStyle Foreground="#FFC42B1C"/>
+                        </c1:RulesEngineExpressionRule>
+                        <c1:RulesEngineExpressionRule Ranges="[OrderTotal]" Expression="[OrderTotal] &gt;= 5000">
+                            <c1:RulesEngineStyle Foreground="#FF0F7B0F"/>
+                        </c1:RulesEngineExpressionRule>
+                    </c1:C1RulesEngine>
+                </c1:C1RulesManager.Engine>
+            </c1:C1RulesManager>
+        </c1:C1Expander>
+    </Grid>
+</UserControl>

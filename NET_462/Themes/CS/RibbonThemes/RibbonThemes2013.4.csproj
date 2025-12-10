@@ -385,34 +385,34 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Cosmopolitan">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.CosmopolitanDark">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Material">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.MaterialDark">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2013">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2016">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2016Black">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Ribbon">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

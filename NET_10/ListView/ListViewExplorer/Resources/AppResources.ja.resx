@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FlickrTitle" xml:space="preserve">
+    <value>Flickr</value>
+  </data>
+  <data name="FlickrDescription" xml:space="preserve">
+    <value>Flickr から写真をロードする方法を示し、写真がまだ完全にロードされていない場合のプレビューを表示します。</value>
+    <comment>Shows how to load photos from Flickr, shows preview when photo is not fully loaded yet</comment>
+  </data>
+  <data name="CustomTemplateDescription" xml:space="preserve">
+    <value>C1ListView でカスタム DataTemplate を使用する方法を示します。</value>
+    <comment>Shows how to use custom DataTemplate with C1ListView.</comment>
+  </data>
+  <data name="CustomTemplateTitle" xml:space="preserve">
+    <value>カスタムテンプレート</value>
+    <comment>Custom Template</comment>
+  </data>
+  <data name="FilterDescription" xml:space="preserve">
+    <value>テキストボックスに入力するだけでリストまたはアイテムをフィルタリングする方法を示します。</value>
+    <comment>Shows how to filter a list or item just by tying in a text box.</comment>
+  </data>
+  <data name="FilterTitle" xml:space="preserve">
+    <value>フィルタリング</value>
+    <comment>Filtering</comment>
+  </data>
+  <data name="GroupDescription" xml:space="preserve">
+    <value>アイテムのグループ化されたリストを表示します。</value>
+    <comment>Display a grouped list of items.</comment>
+  </data>
+  <data name="GroupTitle" xml:space="preserve">
+    <value>グループ化</value>
+    <comment>Grouping</comment>
+  </data>
+  <data name="SortDescription" xml:space="preserve">
+    <value>C1DataCollection を使用して、C1ListView をどちらの方向にも非同期で簡単に並べ替えることができます。</value>
+    <comment>You can easily sort the C1ListView asynchronously in either direction through the C1DataCollection.</comment>
+  </data>
+  <data name="SortTitle" xml:space="preserve">
+    <value>ソート</value>
+    <comment>Sorting</comment>
+  </data>
+  <data name="PagingDescription" xml:space="preserve">
+    <value>C1ListView、C1DataPager、および C1DataCollection を使用して、ページングを使用して ListView を取得します。仮想モードやオンデマンドロードと同様に、ページングは C1DataCollection の助けを借りて C1ListView でサポートされています。</value>
+    <comment>Get a ListView with paging using C1ListView, C1DataPager and C1DataCollection. Like the virtual mode and on-demand loading, paging is supported in C1ListView by the help of C1DataCollection.</comment>
+  </data>
+  <data name="PagingTitle" xml:space="preserve">
+    <value>ページ化</value>
+    <comment>Paging</comment>
+  </data>
+  <data name="VirtualModeDescription" xml:space="preserve">
+    <value>C1ListView は、ユーザーがスクロールするときにチャンクまたはページで大きなデータセットをロードするためのデータ仮想化をサポートします。リストは行の総数を知っていますが、ユーザーに表示されている行のみをロードして表示します。この仮想化手法は、C1DataCollection の助けを借りてサポートされています。</value>
+    <comment>C1ListView supports data virtualization for loading large data sets in chunks or pages as the user scrolls. The list knows the total number of rows but only loads and displays those that are visible to the user. This virtualization technique is supported by the help of C1DataCollection.</comment>
+  </data>
+  <data name="VirtualModeTitle" xml:space="preserve">
+    <value>仮想モード</value>
+    <comment>Virtual Mode</comment>
+  </data>
+  <data name="OnDemandDescription" xml:space="preserve">
+    <value>オンデマンドロードでは、C1ListView はユーザーがスクロールするとアイテムをロードします。リストには行の総数がわからないため、ビューに読み込まれるデータが増えると、スクロールバーのサイズと位置が変わります。 この仮想化手法は、C1DataCollection の助けを借りてサポートされています。</value>
+    <comment>With on-demand loading, C1ListView loads items as the user scrolls. Since the list does not know the total number of rows, the scroll bar size and position changes as more data is loaded into view. This virtualization technique is supported by the help of C1DataCollection.</comment>
+  </data>
+  <data name="OnDemandTitle" xml:space="preserve">
+    <value>オンデマンド</value>
+    <comment>On Demand</comment>
+  </data>
+  <data name="Unbound" xml:space="preserve">
+    <value>アンバウンド</value>
+    <comment>Unbound</comment>
+  </data>
+  <data name="UnbounDesc" xml:space="preserve">
+    <value>xaml に ListViewItem を直接追加する方法を示します。</value>
+    <comment>Shows how to add ListViewItem on xaml directly.</comment>
+  </data>
+  <data name="TileListView" xml:space="preserve">
+    <value>タイルリストビュー</value>
+    <comment>Tile List View</comment>
+  </data>
+  <data name="TileListViewTag" xml:space="preserve">
+    <value>タイルリストビューがどのように機能するかを示します。</value>
+    <comment>Shows how Tile List View works.</comment>
+  </data>
+  <data name="StylingDesc" xml:space="preserve">
+    <value>ItemContainerStyle を使用して項目のスタイルをカスタマイズする方法を示します。</value>
+    <comment>Shows how to customize style of items using ItemContainerStyle</comment>
+  </data>
+  <data name="StylingTitle" xml:space="preserve">
+    <value>項目コンテナスタイル</value>
+    <comment>Item Container Style</comment>
+  </data>
+  <data name="TemplateSelectorDesc" xml:space="preserve">
+    <value>テンプレートセレクタを使用して項目のテンプレートをカスタマイズする方法を示します。</value>
+    <comment>Shows how to customize templete of items using TemplateSelector</comment>
+  </data>
+  <data name="TemplateSelectorTitle" xml:space="preserve">
+    <value>テンプレートセレクタ</value>
+    <comment>Template Selector</comment>
+  </data>
+  <data name="StyleSelectorDesc" xml:space="preserve">
+    <value>ItemContainerStyleSelector がどのように機能するかを示します。</value>
+    <comment>Shows how ItemContainerStyleSelector works</comment>
+  </data>
+  <data name="StyleSelectorTitle" xml:space="preserve">
+    <value>スタイルセレクタ</value>
+    <comment>Style Selector</comment>
+  </data>
+  <data name="MainTitle" xml:space="preserve">
+    <value>C1ListView エクスプローラ</value>
+    <comment>C1ListView Explorer</comment>
+  </data>
+  <data name="CustomAppearanceDescription" xml:space="preserve">
+    <value>リストのアイテムのスタイルを設定する方法を示します。</value>
+    <comment>Shows how to style the items of the list.</comment>
+  </data>
+  <data name="CustomAppearanceTitle" xml:space="preserve">
+    <value>カスタム外観</value>
+    <comment>Custom Appearance</comment>
+  </data>
+  <data name="FlickrRetrievingData" xml:space="preserve">
+    <value>Flickr からデータを取得しています...</value>
+    <comment>Retrieving data from Flickr...</comment>
+  </data>
+  <data name="GroupByBorn" xml:space="preserve">
+    <value>Born によるグループ化</value>
+  </data>
+  <data name="GroupByResident" xml:space="preserve">
+    <value>Resident によるグループ化</value>
+  </data>
+  <data name="Orientation" xml:space="preserve">
+    <value>方向：</value>
+    <comment>Orientation:</comment>
+  </data>
+  <data name="Placeholder" xml:space="preserve">
+    <value>ここにフィルターを入力</value>
+    <comment>Type here to filter</comment>
+  </data>
+  <data name="SelectionMode" xml:space="preserve">
+    <value>選択モード</value>
+    <comment>Selection Mode</comment>
+  </data>
+  <data name="ShowCheckBox" xml:space="preserve">
+    <value>チェックボックスの表示</value>
+    <comment>Show Check Box</comment>
+  </data>
+  <data name="ShowSelectAll" xml:space="preserve">
+    <value>全て選択の表示</value>
+    <comment>Show Select All</comment>
+  </data>
+  <data name="SortAscendingly" xml:space="preserve">
+    <value>昇順でソート</value>
+    <comment>Sort ascendingly</comment>
+  </data>
+  <data name="SortDescendingly" xml:space="preserve">
+    <value>降順でソート</value>
+    <comment>Sort descendingly</comment>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>再試行</value>
+    <comment>Retry</comment>
+  </data>
+  <data name="RemoveGrouping" xml:space="preserve">
+    <value>グループ化を解除</value>
+    <comment>Remove Grouping</comment>
+  </data>
+</root>

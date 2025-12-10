@@ -10,6 +10,7 @@
     <AssemblyName>PdfView</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <MyType>Custom</MyType>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -133,39 +134,40 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="C1.Document" Version="8.0.20252.104" />
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.BarCode">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Bitmap">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Document">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexChart">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexViewer">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.ImportServices">
+      <Version>4.6.20252.900</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\DocumentWarning.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.BarCode">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Bitmap">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Document">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.DX">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.FlexChart">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.FlexViewer">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.ImportServices">
-      <Version>4.6.20251.887</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

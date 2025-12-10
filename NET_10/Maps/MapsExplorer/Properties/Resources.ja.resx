@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Demo" xml:space="preserve">
+    <value>ComponentOne Maps for WPF を使用して、画面と地理座標間のスムーズなズーム、パン、およびマッピングを取得します。</value>
+    <comment>Get smooth zooming, panning, and mapping between screen and geographical coordinates with ComponentOne Maps for WPF.</comment>
+  </data>
+  <data name="DemoTitle" xml:space="preserve">
+    <value>デモ</value>
+    <comment>Demo</comment>
+  </data>
+  <data name="Earthquakes" xml:space="preserve">
+    <value>カスタムデータテンプレートを使用して地震データを視覚化するデータバインドされた C1VectorLayer を表示します。</value>
+    <comment>Shows a databound C1VectorLayer that visualizes earthquake data with a custom data template.</comment>
+  </data>
+  <data name="EarthquakesTitle" xml:space="preserve">
+    <value>地震</value>
+    <comment>Earthquakes</comment>
+  </data>
+  <data name="Factories" xml:space="preserve">
+    <value>C1MapItemsLayer を使用してマップ上にアイテムを表示し、C1MapVirtualLayer を使用してアイテムの仮想化を提供します。</value>
+    <comment>Display items on the map using C1MapItemsLayer and provide item virtualization using C1MapVirtualLayer.</comment>
+  </data>
+  <data name="FactoriesTitle" xml:space="preserve">
+    <value>工場</value>
+    <comment>Factories</comment>
+  </data>
+  <data name="Flicker" xml:space="preserve">
+    <value>C1Maps の C1VectorLayer にバインドされた GeoRSS フィードからロードされたデータ項目を表示します。</value>
+    <comment>Shows data items loaded from a GeoRSS feed bound to a C1VectorLayer in C1Maps.</comment>
+  </data>
+  <data name="FlickerTitle" xml:space="preserve">
+    <value>GeoRSS</value>
+    <comment>GeoRSS</comment>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>正確な地理座標でベクトルの形状と線を描画する方法を示します。</value>
+    <comment>Shows how you can draw vector shapes and lines at exact geographic coordinates.</comment>
+  </data>
+  <data name="GridTitle" xml:space="preserve">
+    <value>グリッド</value>
+    <comment>Grid</comment>
+  </data>
+  <data name="MapChart" xml:space="preserve">
+    <value>KML ファイルからベクターデータを読み込んで表示し、マップ上にシェイプをレンダリングしたり、ベクター図面で作成された完全なマップを提供したりします。</value>
+    <comment>Load and display vector data from KML files to render shapes on the map, or to provide a complete map created by vector drawings.</comment>
+  </data>
+  <data name="MapChartTitle" xml:space="preserve">
+    <value>KML</value>
+    <comment>KML</comment>
+  </data>
+  <data name="MapShape" xml:space="preserve">
+    <value>Shape ファイルからベクターデータを読み込んで表示し、マップ上にシェイプをレンダリングします。</value>
+    <comment>Load and display vector data from Shapefiles to render shapes on the map.</comment>
+  </data>
+  <data name="MapShapeTitle" xml:space="preserve">
+    <value>Shape ファイル</value>
+    <comment>ShapeFile</comment>
+  </data>
+  <data name="Marks" xml:space="preserve">
+    <value>指定された座標でマップ上に C1VectorMarks を生成して表示します。</value>
+    <comment>Generate and display C1VectorMarks on the map at specified coordinates.</comment>
+  </data>
+  <data name="MarksTitle" xml:space="preserve">
+    <value>マーク</value>
+    <comment>Marks</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Maps エクスプローラ</value>
+    <comment>Maps Explorer</comment>
+  </data>
+  <data name="LoadingData" xml:space="preserve">
+    <value>データのロード...</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>検索するテキストを入力</value>
+  </data>
+  <data name="CannotLoadData" xml:space="preserve">
+    <value>データをロードできません</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>読み込み</value>
+  </data>
+  <data name="Airports" xml:space="preserve">
+    <value>このビューは、GeoJSON データをインポートしてマップに表示する方法を示しています。サンプルは２つの GeoJSON ファイルを読み込みます。１つは土地を表示し、もう１つは空港の場所を表示します。</value>
+    <comment>This view shows how to import GeoJSON data and display it on the map. The sample loads two GeoJSON files, one to show the land and second for the airport locations.</comment>
+  </data>
+  <data name="AirportsTitle" xml:space="preserve">
+    <value>空港</value>
+    <comment>Airports</comment>
+  </data>
+  <data name="SourceLabel" xml:space="preserve">
+    <value>ソース: </value>
+    <comment>Source:</comment>
+  </data>
+  <data name="ShowToolsLabel" xml:space="preserve">
+    <value>ツールの表示: </value>
+    <comment>ShowTools:</comment>
+  </data>
+  <data name="AngleLabel" xml:space="preserve">
+    <value>角度: </value>
+    <comment>Angle:</comment>
+  </data>
+  <data name="ShowLabelsLabel" xml:space="preserve">
+    <value>ラベルの表示</value>
+    <comment>Show Labels</comment>
+  </data>
+  <data name="CountryLabel" xml:space="preserve">
+    <value>地域:</value>
+    <comment>Country:</comment>
+  </data>
+  <data name="MarksDemoDescription" xml:space="preserve">
+    <value>Ctrl+Click でマークを追加、Shift+Drag でマークを移動、Alt+Click でマークを削除します。</value>
+    <comment>Ctrl+Click to add mark, Shift+Drag to move mark, Alt+Click on mark to remove.</comment>
+  </data>
+  <data name="KMLTitle" xml:space="preserve">
+    <value>総ドメイン生産（購買力平価）</value>
+    <comment>Gross Domain Product(Purchasing Power Parity)</comment>
+  </data>
+  <data name="PricesLabel" xml:space="preserve">
+    <value>百万米ドル</value>
+    <comment>US$ Million</comment>
+  </data>
+</root>

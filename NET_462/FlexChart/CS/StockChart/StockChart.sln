@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockChart", "StockChart\StockChart.csproj", "{6093AAD0-2EFB-4F29-AD74-31BE4ADDA207}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockChart", "StockChart.csproj", "{6093AAD0-2EFB-4F29-AD74-31BE4ADDA207}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,10 @@
+﻿<Application x:Class="Localization.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Localization"
+             xmlns:localization = "clr-namespace:Localization.ViewModel" 
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <localization:LocalizationViewModel x:Key="UIStrings"/>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             x:Class="CalendarExplorer.MultiMonths">
+
+    <!-- Control instance -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.Resources>
+                <Style TargetType="{x:Type StackPanel}">
+                    <Setter Property="Margin" Value="5" />
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <WrapPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Text="Min Date" />
+                    <c1:C1DatePicker Placeholder="Enter Min Date" x:Name="dpMinDate" AllowNull="True" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Max Date" />
+                    <c1:C1DatePicker Placeholder="Enter Max Date" x:Name="dpMaxDate" AllowNull="True" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Day of Week" />
+                    <c1:C1ComboBox Placeholder="Select Day of Week" x:Name="cbDayOfWeek" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Month Header format" />
+                    <c1:C1ComboBox Placeholder="Select Month Headern Format" x:Name="cbHeaderFormat" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Day of Week format" />
+                    <c1:C1ComboBox Placeholder="Select Day of Week Format" x:Name="cbDayOfWeekFormat" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Month Orientation" />
+                    <c1:C1ComboBox Placeholder="Select Orientation" x:Name="cbOrientation" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Calendar Type" />
+                    <c1:C1ComboBox Placeholder="Select Calendar Type" x:Name="cbCalendarType" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Selection Mode" />
+                    <c1:C1ComboBox Placeholder="Select Selection Mode" x:Name="cbSelectionMode" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Max Selection Count" />
+                    <c1:C1NumericBox Placeholder="Set Selection Count" x:Name="txtMaxSelectionCount" Value="{Binding MaxSelectionCount, ElementName=calendar, Mode=TwoWay}"/>
+                </StackPanel>
+                
+                <StackPanel>
+                    <TextBlock Text="Month Count" />
+                    <c1:C1NumericBox Placeholder="Month Count" x:Name="txtMonthCount" Minimum="1"
+                                     Value="{Binding MonthCount, ElementName=calendar, Mode=TwoWay}"/>
+                </StackPanel>
+            </WrapPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Margin" Value="5" />
+                    </Style>
+                </StackPanel.Resources>
+                <Border>
+                    <c1:C1CheckBox Content="Show navigation Buttons" x:Name="cbkShowNavigationButton" />
+                </Border>
+                <Border>
+                    <c1:C1CheckBox Content="Show Header" x:Name="cbkShowHeader" />
+                </Border>
+                <Border>
+                    <c1:C1CheckBox Content="Show Adjacent Days" x:Name="cbkShowAdjacentDay" />
+                </Border>
+            </StackPanel>
+        </Grid>
+        <c1:C1MultiMonthCalendar x:Name="calendar" Grid.Row="1" Margin="5" MonthCount="12"
+                        SelectionMode="Multiple" MaxSelectionCount="14"/>
+    </Grid>
+</UserControl>

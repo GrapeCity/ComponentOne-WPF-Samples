@@ -15,6 +15,7 @@
     <WarningLevel>4</WarningLevel>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -120,43 +121,43 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.BarCode">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Bitmap">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Document">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DX">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Excel">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexChart">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexReport">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexViewer">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.ImportServices">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Pdf">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Word">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Data.Services.Client">
       <Version>5.6.4</Version>

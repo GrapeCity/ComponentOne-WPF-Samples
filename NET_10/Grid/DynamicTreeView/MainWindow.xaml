@@ -1,0 +1,40 @@
+﻿<Window x:Class="DynamicTreeView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DynamicTreeView"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        mc:Ignorable="d"
+        Title="{x:Static local:AppResources.ApplicationName}" Height="450" Width="800">
+    <Window.Resources>
+        <local:FileSizeConverter x:Key="fileSizeConverter" />
+        <c1:C1IconTemplate x:Key="CollapsedIcon">
+            <c1:C1SvgIcon Source="/Images/plus-square.svg" Width="9" Height="9"/>
+        </c1:C1IconTemplate>
+        <c1:C1IconTemplate x:Key="ExpandedIcon">
+            <c1:C1SvgIcon Source="/Images/dash-square.svg" Width="9" Height="9"/>
+        </c1:C1IconTemplate>
+    </Window.Resources>
+    <Window.DataContext>
+        <local:FileExplorerItemViewCollection />
+    </Window.DataContext>
+    <Grid>
+        <c1:FlexGrid AutoGenerateColumns="False" 
+                     ItemsSource="{Binding}" 
+                     ChildItemsPath="Items"
+                     GridLinesVisibility="None" DefaultGroupRowHeight="30" CellPadding="2 6"
+                     TreeLinesMode="Connected" 
+                     TreeIndentMode="AllCells" 
+                     TreeLinesDashArray="2 2"
+                     GroupCollapsedIconTemplate="{StaticResource CollapsedIcon}"
+                     GroupExpandedIconTemplate="{StaticResource ExpandedIcon}">
+            <c1:FlexGrid.Columns>
+                <local:GridBitmapIconColumn Binding="Item.Name" Header="{x:Static local:AppResources.Name}" BitmapSourceBinding="Icon" IconWidth="19" Width="*"/>
+                <c1:GridColumn Binding="Item.ModifiedDate" Header="{x:Static local:AppResources.ModifiedDate}"/>
+                <c1:GridColumn Binding="Type" Header="{x:Static local:AppResources.Type}"/>
+                <c1:GridColumn Binding="Item.Size" Header="{x:Static local:AppResources.Size}" ValueConverter="{StaticResource fileSizeConverter}"/>
+            </c1:FlexGrid.Columns>
+        </c1:FlexGrid>
+    </Grid>
+</Window>

@@ -115,7 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.LiveLinq.4.6.2">
-      <Version>4.6.20251.887</Version>
+      <Version>4.6.20252.900</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

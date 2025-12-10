@@ -57,7 +57,7 @@ namespace PdfDocumentSourceSamples
                     pdfDocumentSource.LoadFromFile(openFileDialog.FileName);
                     break;
                 }
-                catch (PdfPasswordException)
+                catch (C1.Document.PdfPasswordException)
                 {
                     var password = PasswordWindow.DoEnterPassword(openFileDialog.FileName);
                     if (password == null)

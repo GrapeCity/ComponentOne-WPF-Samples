@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTreeView", "DynamicTreeView.csproj", "{B67F5BE7-A002-409F-9890-624A1C2E651D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B67F5BE7-A002-409F-9890-624A1C2E651D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67F5BE7-A002-409F-9890-624A1C2E651D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67F5BE7-A002-409F-9890-624A1C2E651D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67F5BE7-A002-409F-9890-624A1C2E651D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64256377-EFB1-44F9-822C-5016AEAF8EEE}
+	EndGlobalSection
+EndGlobal

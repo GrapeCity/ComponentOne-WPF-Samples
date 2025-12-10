@@ -90,14 +90,14 @@ namespace FlexReportSamples
             }
 
             // prepare ExportFilter object
-            ExportProvider ep = _report.SupportedExportProviders[cbExportFilter.SelectedIndex];
+            var ep = _report.SupportedExportProviders[cbExportFilter.SelectedIndex];
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.FileName = string.Format("{0}.{1}", selectedReport, ep.DefaultExtension);
             sfd.Filter = string.Format("{0} Files (*.{1})|*.{1}", ep.FormatName, ep.DefaultExtension);
             sfd.CheckPathExists = true;
             if (!sfd.ShowDialog().Value)
                 return;
-            ExportFilter ef = ep.NewExporter() as ExportFilter;
+            var ef = ep.NewExporter();
             ef.FileName = sfd.FileName;
             ef.Preview = cbOpenDocument.IsChecked.Value;
 

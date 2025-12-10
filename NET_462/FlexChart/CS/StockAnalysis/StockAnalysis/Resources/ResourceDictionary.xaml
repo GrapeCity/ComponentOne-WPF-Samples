@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:chartbase ="clr-namespace:C1.Chart;assembly=C1.WPF.FlexChart.4.6.2"
+    xmlns:chartbase ="clr-namespace:C1.Chart;assembly=C1.Chart"
                     xmlns:cvt="clr-namespace:StockAnalysis.Converter"
     xmlns:wnd="clr-namespace:System.Windows;assembly=PresentationFramework"
     xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.6.2"

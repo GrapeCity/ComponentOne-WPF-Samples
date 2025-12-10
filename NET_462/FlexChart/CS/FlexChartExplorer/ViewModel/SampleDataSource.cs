@@ -75,7 +75,7 @@ namespace FlexChartExplorer
             _allItems.Add(new SampleItem("Financial Chart",
                 "Financial Chart",
                 "This view shows how to create financial charts with the FlexChart control.\r" +
-                "The FlexChart supports two types of financial chart: Candlestick and HiLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source.",
+                "The FlexChart supports two types of financial chart: Candlestick and HighLowOpenClose.To use them, set the chartType property to the type you want, and set the series binding property to a string that specifies the fields that contain the high, low, open, and close values in the data source.",
                 new Financial()));
             _allItems.Add(new SampleItem("Axes",
                 "Multiple axes",

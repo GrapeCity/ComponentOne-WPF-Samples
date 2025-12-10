@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="MenuExplorer.Tools.InsertTableTool"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Width="200" Height="140" >
+    <Border BorderBrush='Black' BorderThickness="1">
+        <Grid Width="200" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Number of columns:" Margin="10 0 0 0" VerticalAlignment="Center" />
+                <c1:C1NumericBox x:Name="numColsBox" Padding="0" Grid.Column="1" Minimum="1" Value="2" Height="24"  Margin="10 10 10 5"/>
+                <TextBlock Text="Number of rows:" Margin="10 0 0 0" VerticalAlignment="Center" Grid.Row="1" />
+                <c1:C1NumericBox x:Name="numRowsBox" Padding="0" Grid.Row="1" Minimum="1" Value="2"  Height="24" Margin="10 5 10 10"  Grid.Column="1"/>
+            </Grid>
+            <Grid Background="#FFF0F0F0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Margin="0,0,5,0">
+                    <c1:C1Button  x:Name="btnInsertTable"  Content="OK" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0,5,0" MinWidth="75" Click="btnInsertTable_Click" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
+

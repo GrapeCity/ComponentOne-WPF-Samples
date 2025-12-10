@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="MenuExplorer.DropDownMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400"
+             xmlns:res="clr-namespace:MenuExplorer.Properties">
+    <Grid>
+        <c1:C1DropDownButton DropDownWidth="176" HorizontalAlignment="Center" VerticalAlignment="Center" Header="Click here to see menu">
+            <c1:C1MenuList AutoClose="True" DetectBoundaries="True" BorderThickness="0">
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_File}">
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_New}" IconTemplate="{StaticResource FileNewIconTemplate}">
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Project}" IconTemplate="{StaticResource ProjectIconTemplate}"/>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_WebSite}" IconTemplate="{StaticResource WebProjectIconTemplate}"/>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_TeamProject}" IconTemplate="{StaticResource TeamProjectIconTemplate}"/>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_File}" HotKey="Ctrl+N" IconTemplate="{StaticResource FileIconTemplate}"/>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Open}" IconTemplate="{StaticResource OpenIconTemplate}">
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Project}" HotKey="Ctrl+O" IconTemplate="{StaticResource ProjectIconTemplate}"/>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_WebSite}" IconTemplate="{StaticResource WebProjectIconTemplate}"/>
+                        <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_File}" IconTemplate="{StaticResource FileIconTemplate}"/>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Close}" IconTemplate="{StaticResource CloseIconTemplate}"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_CloseSolution}" IconTemplate="{StaticResource CloseIconTemplate}"/>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Save}" HotKey="Ctrl+S" IconTemplate="{StaticResource SaveIconTemplate}"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_SaveAll}" IconTemplate="{StaticResource SaveAllIconTemplate}"/>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_PageSetup}" IconTemplate="{StaticResource PageSetupIconTemplate}"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Print}" HotKey="Ctrl+P" IconTemplate="{StaticResource PrintIconTemplate}"/>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Exit}" HotKey="Alt+F4" IconTemplate="{StaticResource ExitIconTemplate}"/>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Edit}">
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Undo}"  IconTemplate="{StaticResource UndoIconTemplate}"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Redo}" IconTemplate="{StaticResource RedoIconTemplate}"/>
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Cut}" IconTemplate="{StaticResource CutIconTemplate}"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Copy}" IconTemplate="{StaticResource CopyIconTemplate}"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Paste}" IconTemplate="{StaticResource PasteIconTemplate}"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.SubMenuItem_Delete}" IconTemplate="{StaticResource DeleteIconTemplate}"/>
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Window}">
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Document1}" IsCheckable="True" IsChecked="True"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Document2}" IsCheckable="True" IsChecked="True"/>
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Document3}" IsCheckable="True" />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Document4}" IsCheckable="True" />
+                    <c1:C1MenuSeparator />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive1}" GroupName="Exclusives" IsCheckable="True" IsChecked="True" />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive2}" GroupName="Exclusives" IsCheckable="True" IsChecked="True" />
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Exclusive3}" GroupName="Exclusives" IsCheckable="True" />
+                </c1:C1MenuItem>
+                <c1:C1MenuItem Header="{x:Static res:Resources.MenuItem_Deep}">
+                    <c1:C1MenuItem Header="{x:Static res:Resources.Deep1}">
+                        <c1:C1MenuItem Header="{x:Static res:Resources.Deep2}">
+                            <c1:C1MenuItem Header="{x:Static res:Resources.Deep3}">
+                                <c1:C1MenuItem Header="{x:Static res:Resources.Deep4}">
+                                    <c1:C1MenuItem Header="{x:Static res:Resources.Deep5}"/>
+                                </c1:C1MenuItem>
+                            </c1:C1MenuItem>
+                        </c1:C1MenuItem>
+                    </c1:C1MenuItem>
+                </c1:C1MenuItem>
+            </c1:C1MenuList>
+        </c1:C1DropDownButton>
+    </Grid>
+</UserControl>

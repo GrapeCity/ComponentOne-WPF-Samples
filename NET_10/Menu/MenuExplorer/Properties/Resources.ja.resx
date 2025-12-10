@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CustomMenuAppearanceDesc" xml:space="preserve">
+    <value>このデモは、カスタムスタイルを C1Menu コントロールに適用する方法を示します。</value>
+    <comment>This demo shows how to apply a custom style to the C1Menu control.</comment>
+  </data>
+  <data name="CustomMenuAppearanceTitle" xml:space="preserve">
+    <value>カスタム外観</value>
+    <comment>Custom Appearance</comment>
+  </data>
+  <data name="DropDownMenuDesc" xml:space="preserve">
+    <value>C1Menu を使用してカスタムドロップダウンを作成します。このデモは、C1DropDownButton コントロール内で C1Menu を使用してドロップダウンメニューを作成する方法を示します。</value>
+    <comment>Create custom drop-downs using C1Menu. This demo shows how to create a dropdown menu using C1Menu inside a C1DropDownButton control.</comment>
+  </data>
+  <data name="DropDownMenuTitle" xml:space="preserve">
+    <value>ドロップダウンメニュー</value>
+    <comment>Drop Down Menu</comment>
+  </data>
+  <data name="DemoMenuDesc" xml:space="preserve">
+    <value>C1Menu コントロールを使用してメニューを作成し、C1ContextMenu コントロールを使用してポップアップメニューをインターフェイスにアタッチします。メニューを任意の深さにネストし、メニューラベルとともに各メニュー項目のアイコンを使用し、メニュー項目をチェック可能にすることもできます。</value>
+    <comment>Use the C1Menu control to create menu and C1ContextMenu control to attach pop-up menu to your interface. Nest menus to any depth, use an icon for each menu item along with the menu label, and even make menu items checkable.</comment>
+  </data>
+  <data name="DemoMenuTitle" xml:space="preserve">
+    <value>C1Menu デモ</value>
+    <comment>Demo C1Menu</comment>
+  </data>
+  <data name="DemoRadialMenuDesc" xml:space="preserve">
+    <value>C1RadialMenu の使用方法を示します</value>
+    <comment>Shows how to use C1RadialMenu</comment>
+  </data>
+  <data name="DemoRadialMenuTitle" xml:space="preserve">
+    <value>C1RadialMenu デモ</value>
+    <comment>Demo C1RadialMenu</comment>
+  </data>
+  <data name="CustomRadialContextMenuDesc" xml:space="preserve">
+    <value>C1RadialMenu を C1RichTextBox で使用する方法を示します。</value>
+    <comment>Shows how to use C1RadialMenu with C1RichTextBox</comment>
+  </data>
+  <data name="CustomRadialContextMenuTitle" xml:space="preserve">
+    <value>カスタムコンテキストメニュー</value>
+    <comment>Custom Context Menu</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Menu エクスプローラー</value>
+  </data>
+  <data name="MenuItem_File" xml:space="preserve">
+    <value>ファイル</value>
+    <comment>File</comment>
+  </data>
+  <data name="SubMenuItem_New" xml:space="preserve">
+    <value>新規</value>
+    <comment>New</comment>
+  </data>
+  <data name="SubMenuItem_WebSite" xml:space="preserve">
+    <value>Web サイト...</value>
+    <comment>Web Site...</comment>
+  </data>
+  <data name="SubMenuItem_TeamProject" xml:space="preserve">
+    <value>チームプロジェクト...</value>
+    <comment>Team Project...</comment>
+  </data>
+  <data name="SubMenuItem_File" xml:space="preserve">
+    <value>ファイル...</value>
+    <comment>File...</comment>
+  </data>
+  <data name="MenuItem_Open" xml:space="preserve">
+    <value>開く</value>
+    <comment>Open</comment>
+  </data>
+  <data name="SubMenuItem_Project" xml:space="preserve">
+    <value>プロジェクト...</value>
+    <comment>Project...</comment>
+  </data>
+  <data name="MenuItem_Close" xml:space="preserve">
+    <value>閉じる</value>
+    <comment>Close</comment>
+  </data>
+  <data name="SubMenuItem_CloseSolution" xml:space="preserve">
+    <value>ソリューションを閉じる</value>
+    <comment>Close Solution</comment>
+  </data>
+  <data name="MenuItem_Save" xml:space="preserve">
+    <value>保存</value>
+    <comment>Save</comment>
+  </data>
+  <data name="MenuItem_SaveAll" xml:space="preserve">
+    <value>すべて保存</value>
+    <comment>Save All</comment>
+  </data>
+  <data name="MenuItem_PageSetup" xml:space="preserve">
+    <value>ページ設定</value>
+    <comment>Page Setup</comment>
+  </data>
+  <data name="MenuItem_Print" xml:space="preserve">
+    <value>印刷</value>
+    <comment>Print</comment>
+  </data>
+  <data name="MenuItem_Exit" xml:space="preserve">
+    <value>終了</value>
+    <comment>Exit</comment>
+  </data>
+  <data name="MenuItem_Edit" xml:space="preserve">
+    <value>編集</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="MenuItem_Undo" xml:space="preserve">
+    <value>元に戻す</value>
+    <comment>Undo</comment>
+  </data>
+  <data name="MenuItem_Redo" xml:space="preserve">
+    <value>やり直し</value>
+    <comment>Redo</comment>
+  </data>
+  <data name="SubMenuItem_Cut" xml:space="preserve">
+    <value>切り取り</value>
+    <comment>Cut</comment>
+  </data>
+  <data name="SubMenuItem_Copy" xml:space="preserve">
+    <value>コピー</value>
+    <comment>Copy</comment>
+  </data>
+  <data name="SubMenuItem_Paste" xml:space="preserve">
+    <value>貼り付け</value>
+    <comment>Paste</comment>
+  </data>
+  <data name="SubMenuItem_Delete" xml:space="preserve">
+    <value>削除</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="MenuItem_Window" xml:space="preserve">
+    <value>ウィンドウ</value>
+    <comment>Window</comment>
+  </data>
+  <data name="Document1" xml:space="preserve">
+    <value>文書 1</value>
+    <comment>Document 1</comment>
+  </data>
+  <data name="Document2" xml:space="preserve">
+    <value>文書 1</value>
+    <comment>Document 2</comment>
+  </data>
+  <data name="Document3" xml:space="preserve">
+    <value>文書 1</value>
+    <comment>Document 3</comment>
+  </data>
+  <data name="Document4" xml:space="preserve">
+    <value>文書 1</value>
+    <comment>Document 4</comment>
+  </data>
+  <data name="Exclusive1" xml:space="preserve">
+    <value>排他 1</value>
+    <comment>Exclusive 1</comment>
+  </data>
+  <data name="Exclusive2" xml:space="preserve">
+    <value>排他 2</value>
+    <comment>Exclusive 2</comment>
+  </data>
+  <data name="Exclusive3" xml:space="preserve">
+    <value>排他 3</value>
+    <comment>Exclusive 3</comment>
+  </data>
+  <data name="MenuItem_Deep" xml:space="preserve">
+    <value>深層</value>
+    <comment>Deep</comment>
+  </data>
+  <data name="Deep1" xml:space="preserve">
+    <value>深層1</value>
+    <comment>Deep1</comment>
+  </data>
+  <data name="Deep2" xml:space="preserve">
+    <value>深層2</value>
+    <comment>Deep2</comment>
+  </data>
+  <data name="Deep3" xml:space="preserve">
+    <value>深層3</value>
+    <comment>Deep3</comment>
+  </data>
+  <data name="Deep4" xml:space="preserve">
+    <value>深層4</value>
+    <comment>Deep4</comment>
+  </data>
+  <data name="Deep5" xml:space="preserve">
+    <value>深層5</value>
+    <comment>Deep5</comment>
+  </data>
+  <data name="Clipboard" xml:space="preserve">
+    <value>クリップボード</value>
+    <comment>Clipboard</comment>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>色</value>
+    <comment>Color</comment>
+  </data>
+  <data name="FontColor" xml:space="preserve">
+    <value>フォント色</value>
+    <comment>Font Color</comment>
+  </data>
+  <data name="TextHighlightColor" xml:space="preserve">
+    <value>テキストハイライト色</value>
+    <comment>Text Highlight Color</comment>
+  </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>フォントサイズ</value>
+    <comment>Font Size</comment>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>書式</value>
+    <comment>Format</comment>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>太字</value>
+    <comment>Bold</comment>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>斜体</value>
+    <comment>Italic</comment>
+  </data>
+  <data name="Underline" xml:space="preserve">
+    <value>下線</value>
+    <comment>Underline</comment>
+  </data>
+  <data name="Strike" xml:space="preserve">
+    <value>取り消し線</value>
+    <comment>Strike</comment>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>上付き</value>
+    <comment>Superscript</comment>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>下付き</value>
+    <comment>Subscript</comment>
+  </data>
+  <data name="Align" xml:space="preserve">
+    <value>配置</value>
+    <comment>Align</comment>
+  </data>
+  <data name="AlignLeft" xml:space="preserve">
+    <value>左揃え</value>
+    <comment>Align Left</comment>
+  </data>
+  <data name="AlignCenter" xml:space="preserve">
+    <value>中央揃え</value>
+    <comment>Align Center</comment>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>左揃え</value>
+    <comment>Left</comment>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>中心</value>
+    <comment>Center</comment>
+  </data>
+  <data name="AlignRight" xml:space="preserve">
+    <value>右揃え</value>
+    <comment>Align Right</comment>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>右揃え</value>
+    <comment>Right</comment>
+  </data>
+  <data name="Justify" xml:space="preserve">
+    <value>両端揃え</value>
+    <comment>Justify</comment>
+  </data>
+  <data name="Lists" xml:space="preserve">
+    <value>リスト</value>
+    <comment>Lists</comment>
+  </data>
+  <data name="Bulleted" xml:space="preserve">
+    <value>箇条書き</value>
+    <comment>Bulleted</comment>
+  </data>
+  <data name="Numbered" xml:space="preserve">
+    <value>番号付き</value>
+    <comment>Numbered</comment>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>挿入</value>
+    <comment>Insert</comment>
+  </data>
+  <data name="InsertObject" xml:space="preserve">
+    <value>オブジェクトの挿入</value>
+    <comment>Insert Object</comment>
+  </data>
+  <data name="FormatPainter" xml:space="preserve">
+    <value>書式ペインター</value>
+    <comment>Format Painter</comment>
+  </data>
+  <data name="ClearFormat" xml:space="preserve">
+    <value>書式のクリア</value>
+    <comment>Clear Format</comment>
+  </data>
+  <data name="ClearTextFormatting" xml:space="preserve">
+    <value>テキスト書式のクリア</value>
+    <comment>Clear Text Formatting</comment>
+  </data>
+  <data name="Delete Table" xml:space="preserve">
+    <value>テーブルの削除</value>
+    <comment>Delete Table</comment>
+  </data>
+  <data name="DeleteCells" xml:space="preserve">
+    <value>セルの削除</value>
+    <comment>Delete Cells</comment>
+  </data>
+  <data name="DeleteColumns" xml:space="preserve">
+    <value>列の削除</value>
+    <comment>Delete Columns</comment>
+  </data>
+  <data name="DeleteRows" xml:space="preserve">
+    <value>行の削除</value>
+    <comment>Delete Rows</comment>
+  </data>
+  <data name="InsertTable" xml:space="preserve">
+    <value>表の挿入</value>
+    <comment>Insert Table</comment>
+  </data>
+  <data name="InsertLeft" xml:space="preserve">
+    <value>左に挿入</value>
+    <comment>Insert Left</comment>
+  </data>
+  <data name="InsertRight" xml:space="preserve">
+    <value>右に挿入</value>
+    <comment>Insert Right</comment>
+  </data>
+  <data name="InsertAbove" xml:space="preserve">
+    <value>上に挿入</value>
+    <comment>Insert Above</comment>
+  </data>
+  <data name="InsertBelow" xml:space="preserve">
+    <value>下に挿入</value>
+    <comment>Insert Below</comment>
+  </data>
+  <data name="Alignment" xml:space="preserve">
+    <value>配置</value>
+    <comment>Alignment</comment>
+  </data>
+  <data name="AlignCenterHorizontal" xml:space="preserve">
+    <value>中央揃え（水平）</value>
+    <comment>Align Center (Horizontal)</comment>
+  </data>
+  <data name="AlignTop" xml:space="preserve">
+    <value>上揃え</value>
+    <comment>Align Top</comment>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>上揃え</value>
+    <comment>Top</comment>
+  </data>
+  <data name="AlignCenterVertical" xml:space="preserve">
+    <value>中央揃え（垂直）</value>
+    <comment>Align Center (Vertical)</comment>
+  </data>
+  <data name="AlignBottom" xml:space="preserve">
+    <value>下揃え</value>
+    <comment>Align Bottom</comment>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>下</value>
+    <comment>Bottom</comment>
+  </data>
+  <data name="MergeCells" xml:space="preserve">
+    <value>セルの結合</value>
+    <comment>Merge Cells</comment>
+  </data>
+  <data name="UnmergeCells" xml:space="preserve">
+    <value>セルの結合解除</value>
+    <comment>Unmerge Cells</comment>
+  </data>
+  <data name="RadialMenu_UndoRedo" xml:space="preserve">
+    <value>元に戻す/やり直し</value>
+    <comment>_UndoRedo</comment>
+  </data>
+  <data name="UndoRedo" xml:space="preserve">
+    <value>元に戻す/やり直し</value>
+    <comment>Undo/Redo</comment>
+  </data>
+  <data name="RadialMenu_Undo" xml:space="preserve">
+    <value>元に戻す</value>
+    <comment>_Undo</comment>
+  </data>
+  <data name="RadialMenu_Redo" xml:space="preserve">
+    <value>やり直し</value>
+    <comment>_Redo</comment>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>追加</value>
+    <comment>Add</comment>
+  </data>
+  <data name="NewItem" xml:space="preserve">
+    <value>新規項目</value>
+    <comment>New Item</comment>
+  </data>
+  <data name="Existing" xml:space="preserve">
+    <value>既存</value>
+    <comment>Existing</comment>
+  </data>
+  <data name="ExistingItem" xml:space="preserve">
+    <value>既存の項目</value>
+    <comment>Existing Item</comment>
+  </data>
+  <data name="Folder" xml:space="preserve">
+    <value>フォルダー</value>
+    <comment>Folder</comment>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>クラス</value>
+    <comment>Class</comment>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>除外</value>
+    <comment>Exclude</comment>
+  </data>
+  <data name="ExcludeFromProject" xml:space="preserve">
+    <value>プロジェクトから除外</value>
+    <comment>Exclude From Project</comment>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>名前の変更</value>
+    <comment>Rename</comment>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>プロパティ</value>
+    <comment>Properties</comment>
+  </data>
+  <data name="RadialMenu_Table" xml:space="preserve">
+    <value>表</value>
+    <comment>Table</comment>
+  </data>
+  <data name="TilesTitle" xml:space="preserve">
+    <value>TileView メニュー項目</value>
+    <comment>TileView Menu Item</comment>
+  </data>
+  <data name="TilesDesc" xml:space="preserve">
+    <value>ヘッダーがタイルリストビューであるメニュー項目を表示する方法を示します</value>
+    <comment>Show how to display a menu item whose header is a tile list view</comment>
+  </data>
+  <data name="GroupingDesc" xml:space="preserve">
+    <value>メニュー項目間のグループラベルを表示する方法を示します</value>
+    <comment>Shows how to display group labels between menu-items</comment>
+  </data>
+  <data name="GroupingTitle" xml:space="preserve">
+    <value>グループ化</value>
+    <comment>Grouping</comment>
+  </data>
+</root>

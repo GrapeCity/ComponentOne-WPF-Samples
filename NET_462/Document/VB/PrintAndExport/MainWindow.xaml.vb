@@ -37,7 +37,7 @@ Class MainWindow
             po.PrintQueue = printDialog.PrintQueue
             po.PrintTicket = printDialog.PrintTicket
             If printDialog.PageRangeSelection = PageRangeSelection.UserPages Then
-                po.OutputRange = New OutputRange(printDialog.PageRange.PageFrom, printDialog.PageRange.PageTo)
+                po.OutputRange = New C1.Document.OutputRange(printDialog.PageRange.PageFrom, printDialog.PageRange.PageTo)
             End If
             pds.Print(po)
             MessageBox.Show(Me, "Document was successfully printed.", "Information", MessageBoxButton.OK, MessageBoxImage.Information)
@@ -46,7 +46,7 @@ Class MainWindow
         End Try
     End Sub
 
-    Private Sub DoExport(pds As C1PdfDocumentSource, ep As ExportProvider)
+    Private Sub DoExport(pds As C1PdfDocumentSource, ep As C1.Document.Export.ExportProvider)
         saveFileDialog.DefaultExt = "." + ep.DefaultExtension
         saveFileDialog.FileName = Path.GetFileName(fpFile.SelectedFile.FullName) + "." + ep.DefaultExtension
         saveFileDialog.Filter = String.Format("{0} (*.{1})|*.{1}|All files (*.*)|*.*", ep.FormatName, ep.DefaultExtension)
@@ -77,7 +77,7 @@ Class MainWindow
             Try
                 pdfDocumentSource.LoadFromFile(fpFile.SelectedFile.FullName)
                 Exit While
-            Catch pex As PdfPasswordException
+            Catch pex As C1.Document.PdfPasswordException
                 Dim password As String = PasswordWindow.DoEnterPassword(fpFile.SelectedFile.FullName)
                 If (password Is Nothing) Then
                     Return
