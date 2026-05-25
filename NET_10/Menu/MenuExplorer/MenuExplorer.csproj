@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
@@ -136,7 +136,7 @@
     <Folder Include="Tools\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MenuExplorer.gclicx" />
+    <EmbeddedResource Include="MenuExplorer.sa3licx" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\Settings.settings">
@@ -146,22 +146,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.SpellChecker">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

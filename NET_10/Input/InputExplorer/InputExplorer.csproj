@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
@@ -6,6 +6,9 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Data\countries.json" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="C1-ball.ico" />
   </ItemGroup>
@@ -52,7 +55,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="InputExplorer.gclicx" />
+    <EmbeddedResource Include="InputExplorer.sa3licx" />
+    <EmbeddedResource Include="Data\countries.json" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\Settings.settings">
@@ -62,34 +66,34 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

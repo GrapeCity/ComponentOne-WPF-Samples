@@ -17,16 +17,9 @@ namespace InputExplorer
 
         public override Style SelectStyle(object item, DependencyObject container)
         {
-            if(item is C1ComboBoxItem comboBoxItem && container is ListViewPanel panel)
+            if (item is C1.WPF.ListView.ListViewItem comboBoxItem)
             {
-                for (int i = 0; i < panel.Children.Count; i++)
-                {
-                    ListViewItemView child = (ListViewItemView)panel.Children[i];
-                    if (child.Content == comboBoxItem.Content)
-                    {
-                        return panel.Children.IndexOf(child) % 2 == 0 ? Common : Alternate;
-                    }
-                }
+                return comboBoxItem.Index % 2 == 0 ? Common : Alternate;
             }
             return null;
         }

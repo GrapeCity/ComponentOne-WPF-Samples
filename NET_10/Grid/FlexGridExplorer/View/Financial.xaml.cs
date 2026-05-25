@@ -53,8 +53,7 @@ namespace FlexGridExplorer
         {
             var view = _flexFinancial.ItemsSource as ICollectionView;
             var companies = view.OfType<FinancialData>();
-            _txtCompanies.Text = string.Format("{0:n0} companies.",
-                (from c in companies select c.Symbol).Distinct().Count());
+            statusMessage.Text = string.Format(AppResources.FinancialInfoMessage, (from c in companies select c.Symbol).Distinct().Count());
         }
 
         // control update frequency

@@ -46,7 +46,7 @@ namespace FlexGridExplorer
                 {
                     DefaultExt = ".xml",
                     FileName = "rules",
-                    Filter = "Xml Files (*.xml)|*.xml",
+                    Filter = AppResources.XmlFilterMessage + "|*.xml",
                 };
                 if (saveDialog.ShowDialog() ?? false)
                 {
@@ -71,7 +71,7 @@ namespace FlexGridExplorer
                 {
                     DefaultExt = ".xml",
                     FileName = "rules",
-                    Filter = "Xml Files (*.xml)|*.xml",
+                    Filter = AppResources.XmlFilterMessage + "|*.xml",
                 };
                 if (openDialog.ShowDialog() ?? false)
                 {

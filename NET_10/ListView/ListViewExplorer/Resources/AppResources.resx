@@ -240,4 +240,13 @@
   <data name="RemoveGrouping" xml:space="preserve">
     <value>Remove Grouping</value>
   </data>
+  <data name="LiveUpdatesDescription" xml:space="preserve">
+    <value>Show how the list is updated automatically when the source changes at runtime</value>
+  </data>
+  <data name="LiveUpdatesTitle" xml:space="preserve">
+    <value>Live Updates</value>
+  </data>
+  <data name="CanSelectAll" xml:space="preserve">
+    <value>CanSelectAll</value>
+  </data>
 </root>

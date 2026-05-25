@@ -13,16 +13,16 @@
     <ApplicationIcon>C1-ball.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;CS1591</NoWarn>
+    <NoWarn>$(NoWarn);1701;1702;CS1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <NoWarn>1701;1702;CS1591</NoWarn>
+    <NoWarn>$(NoWarn);1701;1702;CS1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;CS1591</NoWarn>
+    <NoWarn>$(NoWarn);1701;1702;CS1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <NoWarn>1701;1702;CS1591</NoWarn>
+    <NoWarn>$(NoWarn);1701;1702;CS1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Images\Album.png" />
@@ -82,63 +82,63 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\cars.xml" />
     <EmbeddedResource Include="Resources\data.zip" />
-    <PackageReference Include="C1.DataCollection.BindingList" Version="10.0.20252.3" />
+    <PackageReference Include="C1.DataCollection.BindingList" Version="10.0.20261.3" />
     <PackageReference Include="C1.WPF.Accordion">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DateTimeEditors">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid.ConditionalFormatting">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid.Excel">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.GridControl">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Maps">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Menu">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RulesManager">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TreeView">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="System.Drawing.Common" Version="8.0.8" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
@@ -257,6 +257,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FlexGridExplorer.gclicx" />
+    <EmbeddedResource Include="FlexGridExplorer.sa3licx" />
   </ItemGroup>
 </Project>

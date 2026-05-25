@@ -49,7 +49,7 @@ namespace MapsExplorer
         /// <summary>
         /// Gets title for <see cref="RequestKeyDialog"/>.
         /// </summary>
-        protected virtual string DialogTitle { get; } = "Requesting maps API key";
+        protected virtual string DialogTitle { get; } = Properties.Resources.RequestAPITitle;
 
         private string GetMapsAPIKey()
         {

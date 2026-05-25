@@ -13,7 +13,6 @@ namespace GaugesDemo
             this.lblBad.Content = AppResources.Bad;
             this.lblGood.Content = AppResources.Good;
             this.lblTarget.Content = AppResources.Target;
-            DataContext = new SampleViewModel() { Value = 72, ShowText = GaugeTextVisibility.All };
         }
     }
 }

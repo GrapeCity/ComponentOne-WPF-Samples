@@ -20,7 +20,7 @@ Shows the following samples
 	- AdvancedFiltering
 	- ColumnLayout
 	- StarSizing
-	- CellFreezing
+	- CellFreezing&Merging
 	- CustomMerging
 	- Unbound
 	- OnDemand

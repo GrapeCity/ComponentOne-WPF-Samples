@@ -1,0 +1,159 @@
+﻿<Page x:Class="DashboardWPF.Dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DashboardWPF"
+      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+      xmlns:flexChart="clr-namespace:C1.WPF.Chart;assembly=C1.WPF.FlexChart.4.6.2"
+      xmlns:res="clr-namespace:DashboardWPF.Strings"
+      mc:Ignorable="d" ShowsNavigationUI="False"
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Dashboard" Loaded="OnLoaded">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DashboardWPF;component/Style/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Style="{DynamicResource RootGrid}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3.5*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="3">
+            <TextBlock Margin="0,0,0,5" Style="{DynamicResource Tilte}" Text="{x:Static res:Resource.DashboardPage_Title}" />
+            <Border BorderBrush="{DynamicResource DividerLineColor}" BorderThickness="0.5" VerticalAlignment="Bottom" />
+        </Grid>
+        <Border Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,10,5,5" Style="{DynamicResource TileBorder}">
+            <c1:C1FlexChart x:Name="CurrentProfitVSPriorProfit" Style="{DynamicResource TilePanelTitleChart}" BindingX="Date" ChartType="LineSymbols" LegendPosition="Top" Header="{x:Static res:Resource.BudgetVSProfit_Header}">
+                <c1:Series SeriesName="{x:Static res:Resource.CurrentYear_Series}" Binding="Profit" />
+                <c1:Series SeriesName="{x:Static res:Resource.PriorYear_Series}" Binding="ProirProfit" />
+                <c1:C1FlexChart.AxisX>
+                    <flexChart:Axis AxisLine="True" MajorGrid="True" Position="Bottom" MajorTickMarks="None"/>
+                </c1:C1FlexChart.AxisX>
+                <c1:C1FlexChart.AxisY>
+                    <flexChart:Axis AxisLine="True" MajorGrid="True" Format="#,##0,,.##M" Position="Left" MajorTickMarks="None"/>
+                </c1:C1FlexChart.AxisY>
+            </c1:C1FlexChart>
+        </Border>
+        <Border Style="{DynamicResource TileBorder}" Margin="0,5,5,5" Grid.Row="3">
+            <c1:C1FlexChart x:Name="TopSaleProducts" Style="{DynamicResource TilePanelTitleChart}" BindingX="Name" ChartType="Column" LegendPosition="None" Header="{x:Static res:Resource.TopSaleProducts_Header}">
+                <c1:Series SeriesName="{x:Static res:Resource.Sale_Series}" Binding="Sales" />
+                <c1:C1FlexChart.AxisY>
+                    <flexChart:Axis MajorTickMarks="None" AxisLine="False" Format="#,##0,,.##M" MajorGrid="True" />
+                </c1:C1FlexChart.AxisY>
+            </c1:C1FlexChart>
+        </Border>
+        <Border Style="{DynamicResource TileBorder}" Grid.Row="3" Grid.Column="1" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="10" Style="{DynamicResource TilePanelTitleText}" Text="{x:Static res:Resource.TopSaleCustomer_Header}"/>
+                <c1:C1FlexGrid x:Name="TopSaleCustomer" Margin="10,5" IsReadOnly="True" Grid.Row="1" AutoGenerateColumns="False" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                    <c1:C1FlexGrid.Columns>
+                        <c1:Column ColumnName="Name" Width="4*" Binding="{Binding Name}"/>
+                        <c1:Column ColumnName="Sales" Width="3*" Format="C0" Binding="{Binding Sales}"/>
+                        <c1:Column ColumnName="Profit" Width="3*" Format="C0" Binding="{Binding Profit}"/>
+                    </c1:C1FlexGrid.Columns>
+                </c1:C1FlexGrid>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="3" Margin="5,5,0,5" Style="{DynamicResource TileBorder}">
+            <c1:C1FlexChart x:Name="SalesAndProfits" Style="{DynamicResource TilePanelTitleChart}" ChartType="Column" Palette="Midnight" BindingX="Date" LegendPosition="Right" Header="{x:Static res:Resource.SalesVsProfit_Header}" >
+                <c1:Series Binding="Sales,Sales" SeriesName="{x:Static res:Resource.Sale_Series}" ChartType="Column">
+                    <c1:Series.AxisY>
+                        <flexChart:Axis Position="Right" Format="#,##0,,.##M" Title="Sales" MajorGrid="False"/>
+                    </c1:Series.AxisY>
+                </c1:Series>
+                <c1:Series Binding="Profit,Profit" SeriesName="{x:Static res:Resource.Profit_Series}" ChartType="Line"/>
+                <c1:C1FlexChart.AxisX>
+                    <flexChart:Axis AxisLine="False" />
+                </c1:C1FlexChart.AxisX>
+                <c1:C1FlexChart.AxisY>
+                    <flexChart:Axis AxisLine="True" Format="#,##0,,.##M" MajorGrid="True" Title="Profit" />
+                </c1:C1FlexChart.AxisY>
+            </c1:C1FlexChart>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="3" Margin="5,10,0,5" Style="{DynamicResource TileBorder}">
+            <Grid Margin="0,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="10" Style="{DynamicResource TilePanelTitleText}" Text="{x:Static res:Resource.CategorySales_Header}"></TextBlock>
+                <TextBlock Margin="10" Style="{DynamicResource TilePanelTitleText}" Text="{x:Static res:Resource.Unit_Text}" HorizontalAlignment="Right"></TextBlock>
+                <ItemsControl  x:Name="CategortySales" Margin="10,0,0,0" Grid.Row="1">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,5,0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center"></TextBlock>
+                                <c1:C1LinearGauge Grid.Column="1" Height="15" Background="Transparent" Value="{Binding Goal, Converter={StaticResource UnitConverter}}" Maximum="100" BorderBrush="Transparent" PointerStroke="Black" PointerLength="0.8" PointerWidth="0.004" PointerOffset="0.1">
+                                    <c1:C1GaugeRange Width="1" Fill="#4C000000" From="0" To="{Binding Goal, Converter={StaticResource GoodValueConverter}}"/>
+                                    <c1:C1GaugeRange Width="1" Fill="#26000000" From="0" To="{Binding Goal, Converter={StaticResource BadValueConverter}}"/>
+                                    <c1:C1GaugeRange Width="0.4" Fill="{Binding CompletePrecent,Converter={StaticResource BarColorConverter}}" From="0" To="{Binding Sales, Converter={StaticResource UnitConverter}}" Location="0.3"/>
+                                </c1:C1LinearGauge>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <c1:C1LinearGauge Grid.Row="2" Margin="90,0,0,0" Height="20" Background="Transparent" Maximum="100" BorderBrush="Transparent" PointerLength="0" VerticalAlignment="Top">
+                    <c1:C1GaugeMark Location="0.5" Interval="20" From="0" To="100"/>
+                    <c1:C1GaugeLabel Location="1" Interval="20" Format="C0" Foreground="#FF4E7383" AlignmentOffset="-9" From="0" To="100"/>
+                </c1:C1LinearGauge>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Margin="5,5,0,5" Grid.Column="3" Style="{DynamicResource TileBorder}">
+            <Grid Margin="0,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="10" Style="{DynamicResource TilePanelTitleText}" Text="{x:Static res:Resource.RegionSales_Header}"></TextBlock>
+                <TextBlock Margin="10" Style="{DynamicResource TilePanelTitleText}" Text="{x:Static res:Resource.Unit_Text}" HorizontalAlignment="Right"></TextBlock>
+                <ItemsControl  x:Name="RegionSales" Margin="10,0,0,0" Grid.Row="1">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,5,0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center"></TextBlock>
+                                <c1:C1LinearGauge Grid.Column="1" Height="15" Background="Transparent" Value="{Binding Goal, Converter={StaticResource UnitConverter}}" Maximum="100" BorderBrush="Transparent" PointerStroke="Black" PointerLength="0.8" PointerWidth="0.004" PointerOffset="0.1">
+                                    <c1:C1GaugeRange Width="1" Fill="#4C000000" From="0" To="{Binding Goal, Converter={StaticResource GoodValueConverter}}"/>
+                                    <c1:C1GaugeRange Width="1" Fill="#26000000" From="0" To="{Binding Goal, Converter={StaticResource BadValueConverter}}"/>
+                                    <c1:C1GaugeRange Width="0.4" Fill="{Binding CompletePrecent,Converter={StaticResource BarColorConverter}}" From="0" To="{Binding Sales, Converter={StaticResource UnitConverter}}" Location="0.3"/>
+                                </c1:C1LinearGauge>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <c1:C1LinearGauge Grid.Row="2" Margin="90,0,0,0"  Height="20" Background="Transparent" Maximum="100" BorderBrush="Transparent" PointerLength="0" VerticalAlignment="Top">
+                    <c1:C1GaugeMark Location="0.5" Interval="20" From="0" To="100" />
+                    <c1:C1GaugeLabel Location="1" Interval="20" Format="C0" Foreground="#FF4E7383" AlignmentOffset="-9" From="0" To="100"/>
+                </c1:C1LinearGauge>
+            </Grid>
+        </Border>
+        <Border Margin="0,5,0,0" Grid.Row="4" Grid.ColumnSpan="3" Style="{DynamicResource TileBorder}">
+            <local:RangeSelector DateRangeChanged="OnDateRangeChanged" />
+        </Border>
+    </Grid>
+</Page>

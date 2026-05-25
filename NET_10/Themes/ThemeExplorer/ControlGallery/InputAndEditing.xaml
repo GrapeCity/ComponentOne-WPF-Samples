@@ -25,31 +25,31 @@
                     <c1:C1ToggleSwitch Margin="10 20 10 20" OnContent="{x:Static res:Resources.On}" OffContent="{x:Static res:Resources.Off}"/>
 
                     <c1:C1ComboBox Width="200" MaxDropDownHeight="100" Margin="10 20 10 20" VerticalAlignment="Center"> 
-                        <c1:C1ComboBoxItem Content="Accordion" />
-                        <c1:C1ComboBoxItem Content="BarCode" />
-                        <c1:C1ComboBoxItem Content="Bitmap" />
-                        <c1:C1ComboBoxItem Content="Calendar" />
-                        <c1:C1ComboBoxItem Content="Chart" />
-                        <c1:C1ComboBoxItem Content="Color Picker" />
-                        <c1:C1ComboBoxItem Content="Data Filter" />
-                        <c1:C1ComboBoxItem Content="Data Pager" />
-                        <c1:C1ComboBoxItem Content="DateTime Editors" />
-                        <c1:C1ComboBoxItem Content="Docking" />
-                        <c1:C1ComboBoxItem Content="Document" />
-                        <c1:C1ComboBoxItem Content="Gantt View" />
-                        <c1:C1ComboBoxItem Content="Grid" />
-                        <c1:C1ComboBoxItem Content="Input" />
-                        <c1:C1ComboBoxItem Content="ListView" />
-                        <c1:C1ComboBoxItem Content="Maps" />
-                        <c1:C1ComboBoxItem Content="Menu" />
-                        <c1:C1ComboBoxItem Content="Pivot" />
-                        <c1:C1ComboBoxItem Content="Property Grid" />
-                        <c1:C1ComboBoxItem Content="RichTextBox" />
-                        <c1:C1ComboBoxItem Content="Ribbon" />
-                        <c1:C1ComboBoxItem Content="Scheduler" />
-                        <c1:C1ComboBoxItem Content="Tab Control" />
-                        <c1:C1ComboBoxItem Content="TreeView" />
-                        <c1:C1ComboBoxItem Content="Viewer" />
+                        <c1:ComboBoxItem Content="Accordion" />
+                        <c1:ComboBoxItem Content="BarCode" />
+                        <c1:ComboBoxItem Content="Bitmap" />
+                        <c1:ComboBoxItem Content="Calendar" />
+                        <c1:ComboBoxItem Content="Chart" />
+                        <c1:ComboBoxItem Content="Color Picker" />
+                        <c1:ComboBoxItem Content="Data Filter" />
+                        <c1:ComboBoxItem Content="Data Pager" />
+                        <c1:ComboBoxItem Content="DateTime Editors" />
+                        <c1:ComboBoxItem Content="Docking" />
+                        <c1:ComboBoxItem Content="Document" />
+                        <c1:ComboBoxItem Content="Gantt View" />
+                        <c1:ComboBoxItem Content="Grid" />
+                        <c1:ComboBoxItem Content="Input" />
+                        <c1:ComboBoxItem Content="ListView" />
+                        <c1:ComboBoxItem Content="Maps" />
+                        <c1:ComboBoxItem Content="Menu" />
+                        <c1:ComboBoxItem Content="Pivot" />
+                        <c1:ComboBoxItem Content="Property Grid" />
+                        <c1:ComboBoxItem Content="RichTextBox" />
+                        <c1:ComboBoxItem Content="Ribbon" />
+                        <c1:ComboBoxItem Content="Scheduler" />
+                        <c1:ComboBoxItem Content="Tab Control" />
+                        <c1:ComboBoxItem Content="TreeView" />
+                        <c1:ComboBoxItem Content="Viewer" />
                     </c1:C1ComboBox>
 
                     <c1:C1FilePicker Width="120" VerticalAlignment="Center" Margin="10 20 10 20"/>
@@ -92,20 +92,20 @@
                     <c1:C1RadioButton GroupName="test" IsEnabled="False" VerticalAlignment="Center" Width="120" Margin="10 20 10 20" Content="{x:Static res:Resources.CheckMe}"  />
 
                     <c1:C1ComboBox Width="200" VerticalAlignment="Center" MaxDropDownHeight="100" Margin="10 20 10 20" IsEnabled="False">
-                        <c1:C1ComboBoxItem Content="Studio for Silverlight" />
-                        <c1:C1ComboBoxItem Content="Studio for WPF" />
-                        <c1:C1ComboBoxItem Content="Studio for ASP.NET" />
-                        <c1:C1ComboBoxItem Content="Studio for iPhone" />
-                        <c1:C1ComboBoxItem Content="Studio for WinForms" />
-                        <c1:C1ComboBoxItem Content="Studio for ActiveX" />
-                        <c1:C1ComboBoxItem Content="Studio for Mobile" />
-                        <c1:C1ComboBoxItem Content="Studio for Silverlight" />
-                        <c1:C1ComboBoxItem Content="Studio for WPF" />
-                        <c1:C1ComboBoxItem Content="Studio for ASP.NET" />
-                        <c1:C1ComboBoxItem Content="Studio for iPhone" />
-                        <c1:C1ComboBoxItem Content="Studio for WinForms" />
-                        <c1:C1ComboBoxItem Content="Studio for ActiveX" />
-                        <c1:C1ComboBoxItem Content="Studio for Mobile" />
+                        <c1:ComboBoxItem Content="Studio for Silverlight" />
+                        <c1:ComboBoxItem Content="Studio for WPF" />
+                        <c1:ComboBoxItem Content="Studio for ASP.NET" />
+                        <c1:ComboBoxItem Content="Studio for iPhone" />
+                        <c1:ComboBoxItem Content="Studio for WinForms" />
+                        <c1:ComboBoxItem Content="Studio for ActiveX" />
+                        <c1:ComboBoxItem Content="Studio for Mobile" />
+                        <c1:ComboBoxItem Content="Studio for Silverlight" />
+                        <c1:ComboBoxItem Content="Studio for WPF" />
+                        <c1:ComboBoxItem Content="Studio for ASP.NET" />
+                        <c1:ComboBoxItem Content="Studio for iPhone" />
+                        <c1:ComboBoxItem Content="Studio for WinForms" />
+                        <c1:ComboBoxItem Content="Studio for ActiveX" />
+                        <c1:ComboBoxItem Content="Studio for Mobile" />
                     </c1:C1ComboBox>
 
                     <c1:C1FilePicker VerticalAlignment="Center" IsEnabled="False" Width="120" Margin="10 20 10 20"/>

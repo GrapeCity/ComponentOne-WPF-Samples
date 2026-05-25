@@ -225,4 +225,22 @@
     <value>反転</value>
     <comment>Reversed</comment>
   </data>
+  <data name="ResumeAnimationLabel" xml:space="preserve">
+    <value>Resume Animation</value>
+  </data>
+  <data name="PauseAnimationLabel" xml:space="preserve">
+    <value>Pause Animation</value>
+  </data>
+  <data name="MarksAndLabelsTitle" xml:space="preserve">
+    <value>Marks and Labels</value>
+  </data>
+  <data name="MarksAndLabelsDescription" xml:space="preserve">
+    <value>Show how to use Marks and Labels in gauges</value>
+  </data>
+  <data name="PointerTitle" xml:space="preserve">
+    <value>Pointer</value>
+  </data>
+  <data name="PointerDescription" xml:space="preserve">
+    <value>Shows how to display a gauge pointer</value>
+  </data>
 </root>

@@ -15,7 +15,7 @@ namespace InputExplorer
 
                 new SampleItem(Properties.Resources.ComboBoxTitle,
                                 Properties.Resources.ComboBoxTitle,
-                                new C1ComboBox()),
+                                new ComboBoxDemo()),
 
                 new SampleItem(Properties.Resources.RangeSliderTitle,
                                 Properties.Resources.RangeSliderTitle,

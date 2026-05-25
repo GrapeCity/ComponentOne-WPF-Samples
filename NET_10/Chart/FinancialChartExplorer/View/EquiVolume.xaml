@@ -22,7 +22,7 @@
         <StackPanel Orientation="Horizontal" Margin="10">
             <TextBlock Text="Symbol" VerticalAlignment="Center"/>
             <c1:C1ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}" ItemsSource="{Binding Companies}"
-                           SelectionChanged="OnSymbolSelectionChanged" SelectedIndex="0"/>
+                           SelectionChanged="OnSymbolSelectionChanged" />
         </StackPanel>
         <c1:C1FinancialChart x:Name="financialChart" ToolTipContent="{}Date: {Date}&#x000A;Open: {Open}&#x000A;High: {High}&#x000A;Low: {Low}&#x000A;Close: {Close}&#x000A;Volume: {Volume}" ChartType="EquiVolume" BindingX="Date" Binding="High,Low,Open,Close,Volume" Grid.Row="1">
             <c1:FinancialSeries />

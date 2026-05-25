@@ -237,4 +237,10 @@
     <value>百万米ドル</value>
     <comment>US$ Million</comment>
   </data>
+  <data name="RequestAPIPlaceholder" xml:space="preserve">
+    <value>Enter your map API key...</value>
+  </data>
+  <data name="RequestAPITitle" xml:space="preserve">
+    <value>Requesting maps API key</value>
+  </data>
 </root>

@@ -124,7 +124,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\Licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -137,7 +136,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\AppResources.zh-Hans.resx" />
     <None Include="app.config" />
-    <EmbeddedResource Include="C1DataCollection101.gclicx" />
+    <EmbeddedResource Include="C1DataCollection101.sa3licx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,10 +147,10 @@
       <Version>1.0.20232.164</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

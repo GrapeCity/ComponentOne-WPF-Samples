@@ -8,8 +8,13 @@
              d:DesignHeight="300" d:DesignWidth="400"
               xmlns:res="clr-namespace:MenuExplorer.Properties">
     <UserControl.Resources>
-        <Style TargetType="Image" x:Key="MenuIcon">
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>            
+            <Style TargetType="Image" x:Key="MenuIcon">
+            </Style>
+        </ResourceDictionary>
     </UserControl.Resources>
     <c1:C1DockPanel LastChildFill="False">
         <!-- Visual Studio menu sample -->

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
@@ -32,12 +32,12 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
-    <PackageReference Include="C1.Zip" Version="10.0.20252.11" />
+    <PackageReference Include="C1.Zip" Version="10.0.20261.13" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +111,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FlexPivotExplorer.gclicx" />
+    <EmbeddedResource Include="FlexPivotExplorer.sa3licx" />
   </ItemGroup>
 </Project>

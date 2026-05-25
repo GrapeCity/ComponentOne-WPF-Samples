@@ -213,6 +213,7 @@ namespace CurrencyComparison
             }
             rangeChart.EndUpdate();
             mainChart.EndUpdate();
+
             switch (timeFrame)
             {
                 case TimeFrame.FiveDays:
@@ -254,8 +255,14 @@ namespace CurrencyComparison
 
         void UpdateToFromDates()
         {
-            var from = DateTime.FromOADate(mainChart.AxisX.GetMin()).ToShortDateString();
-            var to = DateTime.FromOADate(mainChart.AxisX.GetMax()).ToShortDateString();
+            var min = mainChart.AxisX.GetMin();
+            var max = mainChart.AxisX.GetMax();
+
+            if (double.IsNaN(min) || double.IsNaN(max))
+                return;
+
+            var from = DateTime.FromOADate(min).ToShortDateString();
+            var to = DateTime.FromOADate(max).ToShortDateString();
             tbPeriod.Text = string.Format("Period:{0} to {1}", from, to);
         }
 
@@ -268,6 +275,11 @@ namespace CurrencyComparison
             SetUpRangeChart();
             cbCurrencies.SelectedIndex = 0;
             cbMeasureModes.SelectedIndex = 2;
+            rbDefaultRange.IsChecked = true;
+            rangeSelector.Minimum = _startPlotDate.ToOADate();
+            rangeSelector.Maximum = _endPlotDate.ToOADate();
+            rangeSelector.LowerValue = mainChart.AxisX.Min;
+            rangeSelector.UpperValue = mainChart.AxisX.Max;
         }
 
         void HandleMainChartSeriesVisibilityChanged(object sender, SeriesEventArgs e)

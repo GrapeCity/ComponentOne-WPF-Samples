@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MapsExplorer.Sources"
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:MapsExplorer.Properties"
         x:Class="MapsExplorer.Sources.RequestKeyDialog"
         mc:Ignorable="d"
         WindowStartupLocation="CenterOwner"
@@ -20,7 +21,7 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <c1:C1TextBox Placeholder="Enter your map API key..." Margin="2" Grid.ColumnSpan="3" Text="{Binding ApiKey, Mode=OneWayToSource}"/>
+        <c1:C1TextBox Placeholder="{x:Static res:Resources.RequestAPIPlaceholder}" Margin="2" Grid.ColumnSpan="3" Text="{Binding ApiKey, Mode=OneWayToSource}"/>
 
         <Button Content="OK" Width="50" Margin="2" Grid.Row="1" Click="OnOkButtonClick" IsDefault="true" Grid.Column="1" />
         <Button Content="Cancel" Width="50" Margin="2" Grid.Row="1" Click="OnCancelButtonClick" IsCancel="True" Grid.Column="2"/>

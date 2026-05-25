@@ -38,7 +38,9 @@ namespace MapsSamples
             if (resource != null)
             {
                 var serializer = new XmlSerializer(typeof(DataBase));
+#pragma warning disable CA3075, CA5369 // Insecure DTD processing in XML
                 database = (DataBase)serializer.Deserialize(resource.Stream);
+#pragma warning restore CA3075, CA5369 // Insecure DTD processing in XML
             }
             else
             {

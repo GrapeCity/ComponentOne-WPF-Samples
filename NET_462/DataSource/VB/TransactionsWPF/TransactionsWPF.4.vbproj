@@ -7,7 +7,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TransactionsWPF</RootNamespace>
-    <AssemblyName>TransactionsWPF</AssemblyName>
+    <AssemblyName>TransactionsWPF.4</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -52,13 +52,13 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.Data.Entity.4.6.2">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.LiveLinq.4.6.2">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Data.Entity">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="EntityFramework" Version="6.4.0" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -196,7 +196,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -232,4 +231,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
 </Project>

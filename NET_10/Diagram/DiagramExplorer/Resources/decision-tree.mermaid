@@ -1,0 +1,34 @@
+﻿flowchart TD
+    Application[Credit Application<br/>Received] --> CreditScore{Credit Score<br/>Assessment}
+    
+    CreditScore -->|Score ≥ 750| IncomeCheck1[Income Verification<br/>High Credit Score Path]
+    CreditScore -->|Score 650-749| IncomeCheck2[Income Verification<br/>Medium Credit Score Path]
+    CreditScore -->|Score < 650| IncomeCheck3[Income Verification<br/>Low Credit Score Path]
+    
+    IncomeCheck1 --> DTI1{Debt-to-Income<br/>Ratio ≤ 36%?}
+    DTI1 -->|Yes| AutoApprove[Automatic Approval<br/>Standard Terms]
+    DTI1 -->|No| ManualReview1[Manual Review<br/>Adjusted Terms]
+    
+    IncomeCheck2 --> DTI2{Debt-to-Income<br/>Ratio ≤ 28%?}
+    DTI2 -->|Yes| AIAnalysis[AI Enhanced Analysis<br/>Alternative Data]
+    DTI2 -->|No| ManualReview2[Manual Review<br/>Higher Interest Rate]
+    
+    AIAnalysis --> AIDecision{AI Risk<br/>Assessment}
+    AIDecision -->|Low Risk| Approve2[Approval with<br/>Standard Terms]
+    AIDecision -->|Medium Risk| Approve3[Approval with<br/>Adjusted Terms]
+    AIDecision -->|High Risk| SpecialProduct[Specialized Product<br/>Offering]
+    
+    IncomeCheck3 --> DTI3{Debt-to-Income<br/>Ratio ≤ 20%?}
+    DTI3 -->|Yes| Collateral{Collateral<br/>Available?}
+    DTI3 -->|No| Reject1[Application Rejected<br/>Alternative Products Suggested]
+    
+    Collateral -->|Yes| SecuredLoan[Secured Loan<br/>Approval]
+    Collateral -->|No| Reject2[Application Rejected<br/>Rebuild Credit Guidance]
+    
+    ManualReview1 --> FinalDecision1{Manual Review<br/>Decision}
+    ManualReview2 --> FinalDecision2{Manual Review<br/>Decision}
+    
+    FinalDecision1 -->|Approve| Approve4[Approved with<br/>Conditions]
+    FinalDecision1 -->|Deny| Reject3[Application Denied]
+    FinalDecision2 -->|Approve| Approve5[Approved with<br/>Higher Rate]
+    FinalDecision2 -->|Deny| Reject4[Application Denied]

@@ -11,33 +11,32 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="FilterStyle.gclicx" />
+    <EmbeddedResource Include="FilterStyle.sa3licx" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>10.0.20252.3</Version>
+      <Version>10.0.20261.*</Version>
     </PackageReference>
     <PackageReference Include="C1.DataCollection.BindingList">
-      <Version>10.0.20252.3</Version>
+      <Version>10.0.20261.*</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataCollection">
-      <Version>10.0.20252.3</Version>
+      <Version>10.0.20261.*</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DataFilter">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />

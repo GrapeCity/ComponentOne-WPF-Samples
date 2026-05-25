@@ -26,13 +26,8 @@ namespace FinancialChartExplorer
         public CandleVolume()
         {
             InitializeComponent();
-            this.Loaded += CandleVolume_Loaded;
+            Loaded += (s,e) => cbSymbol.SelectedIndex = 0;
             Tag = AppResources.CandleVolumeTag;
-        }
-
-        void CandleVolume_Loaded(object sender, RoutedEventArgs e)
-        {
-            cbSymbol.SelectedIndex = 0;
         }
 
         void OnSymbolSelectionChanged(object sender, SelectionChangedEventArgs e)

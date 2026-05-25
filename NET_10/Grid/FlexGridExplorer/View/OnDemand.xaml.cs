@@ -19,7 +19,7 @@ namespace FlexGridExplorer
 
             _dataCollection = new YouTubeCollectionView() { PageSize = 50 };
             grid.ItemsSource = _dataCollection;
-            search.Text = ".Net9";
+            search.Text = ".Net10";
             var task = PerformSearch();
         }
 

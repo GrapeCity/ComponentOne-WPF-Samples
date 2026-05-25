@@ -108,36 +108,32 @@
                 </c1:C1ScrollViewer>
             </c1:C1Expander>
             <c1:C1Expander Header="{x:Static res:AppResources.ShowcasePlaygroundHeader}" IsExpanded="False"  ExpandIconAlignment="Left" MaxHeight="300">
-                <c1:C1ScrollViewer>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
-                            <TextBlock FontSize="14" TextDecorations="Underline" FontWeight="SemiBold" Text="{x:Static res:AppResources.PickDifferentThemeLabel}" />
-                            <c1:C1ComboBox x:Name="Themes" Margin="0,10,20,4" SelectionChanged="Themes_SelectionChanged"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
-                            <StackPanel Orientation="Vertical" Name="GroupingStack" >
-                                <TextBlock TextDecorations="Underline" FontSize="14" FontWeight="SemiBold" Text="{x:Static res:AppResources.GroupingOptionsLabel}"/>
-                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                    <TextBlock Text="{x:Static res:AppResources.GroupByLabel}" VerticalAlignment="Center" Margin="0,0,5,0"/>
-                                    <c1:C1ComboBox x:Name="Grouping_0" Width="200" Margin="0,0,5,0"
-                                               SelectedItemChanged="Grouping_0_SelectedItemChanged"
-                                               PreviewMouseDown="Grouping_PreviewMouseDown" KeyDown="Grouping_KeyDown"/>
-                                    <c1:C1Button MinWidth="20" ToolTip="{x:Static res:AppResources.AddGroupTooltip}" Margin="0,0,5,0" IsEnabled="False" Click="AddGroup_Click">+</c1:C1Button>
-                                </StackPanel>
-                            </StackPanel>
-                            <StackPanel Width="280" HorizontalAlignment="Left" Margin="0,10,0,0">
-                                <c1:C1Button Click="GroupingClear_Click" Content="{x:Static res:AppResources.ClearGroupingButtonText}"/>
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
+                        <TextBlock FontSize="14" TextDecorations="Underline" FontWeight="SemiBold" Text="{x:Static res:AppResources.PickDifferentThemeLabel}" TextWrapping="Wrap" Margin="4"/>
+                        <c1:C1ComboBox x:Name="Themes" Margin="0,10,20,4" SelectionChanged="Themes_SelectionChanged"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
+                        <StackPanel Orientation="Vertical" Name="GroupingStack">
+                            <TextBlock TextDecorations="Underline" FontSize="14" FontWeight="SemiBold" Text="{x:Static res:AppResources.GroupingOptionsLabel}" TextWrapping="Wrap" Margin="4"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <TextBlock Text="{x:Static res:AppResources.GroupByLabel}" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                                <c1:C1ComboBox x:Name="Grouping_0" Width="200" Margin="0,0,5,0"
+                                            SelectedValueChanged="Grouping_0_SelectedValueChanged"
+                                            PreviewMouseDown="Grouping_PreviewMouseDown" KeyDown="Grouping_KeyDown"/>
+                                <c1:C1Button MinWidth="20" ToolTip="{x:Static res:AppResources.AddGroupTooltip}" Margin="0,0,5,0" IsEnabled="False" Click="AddGroup_Click">+</c1:C1Button>
                             </StackPanel>
                         </StackPanel>
-                    </Grid>
-                </c1:C1ScrollViewer>
+                        <c1:C1Button Click="GroupingClear_Click" Content="{x:Static res:AppResources.ClearGroupingButtonText}" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                    </StackPanel>
+                </Grid>
             </c1:C1Expander>
         </c1:C1Accordion>
         <c1:C1ToolStrip ToolIconSize="16" ToolLabelVisibility="Visible" ToolOrientation="Vertical" Grid.Row="0" Grid.Column="0" >
@@ -160,7 +156,7 @@
                 <c1:GridColumn Binding="LastName" MinWidth="100" Width="120"/>
                 <c1:GridColumn Binding="Address" MinWidth="200"/>
                 <c1:GridColumn Binding="City" MinWidth="200"/>
-                <c1:GridColumn Binding="CountryId" Header="Country" MinWidth="150"/>
+                <c1:GridColumn Binding="CountryId" MinWidth="150"/>
                 <c1:GridColumn Binding="Email" MinWidth="200"/>
                 <c1:GridColumn Binding="PostalCode" MinWidth="110"/>
                 <c1:GridColumn Binding="Active" MinWidth="110"/>

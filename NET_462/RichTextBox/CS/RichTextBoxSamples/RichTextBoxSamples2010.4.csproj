@@ -18,7 +18,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <AppDesigner Include="Properties\" />
     <Resource Include="Resources\C1Spell_en-US.dct" />
   </ItemGroup>
@@ -35,25 +34,25 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.RichTextBox">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.RichTextBox.Toolbar">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.SpellChecker">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Theming.Office2016">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Toolbar">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
@@ -61,4 +60,7 @@
     <C1_MSBuildToolsVersion>v4.0</C1_MSBuildToolsVersion>
     <C1_MSBuildToolsVersion Condition="$(VisualStudioVersion) != '10.0' And $(VisualStudioVersion) != '11.0'">v12.0</C1_MSBuildToolsVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
 </Project>

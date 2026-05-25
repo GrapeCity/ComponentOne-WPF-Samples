@@ -10,7 +10,7 @@ namespace MapsExplorer.Sources
         /// <summary>
         /// Creates a new instance of the <see cref="RequestKeyDialog"/> class.
         /// </summary>
-        public RequestKeyDialog() : this(null)
+        public RequestKeyDialog() : this(Properties.Resources.RequestAPITitle)
         {
         }
 

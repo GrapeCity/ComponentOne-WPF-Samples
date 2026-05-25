@@ -18,13 +18,13 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <c1:C1TextBox x:Name="filter" Margin="4" MaxLines="3" Placeholder="{x:Static res:AppResources.FilterPlaceholderText}" HorizontalAlignment="Left" MinWidth="250"/>
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
+        <c1:C1WrapPanel Orientation="Horizontal" Grid.Row="1">
             <c1:C1CheckBox x:Name="matchCaseCheckbox" Content="{x:Static res:AppResources.MatchCase}" Margin="4"/>
             <c1:C1CheckBox x:Name="matchWholeWordCheckBox" Content="{x:Static res:AppResources.MatchWord}" Margin="4" />
             <c1:C1CheckBox x:Name="treatSpacesAsAndOperator" Content="{x:Static res:AppResources.TreatOperator}" Margin="4" />
             <c1:C1CheckBox x:Name="matchNumbers" Content="{x:Static res:AppResources.MatchNumbers}" Margin="4" />
             <c1:C1CheckBox x:Name="matchBooleans" Content="{x:Static res:AppResources.MatchBooleans}" Margin="4"/>
-        </StackPanel>
+        </c1:C1WrapPanel>
         <c1:FlexGrid x:Name="grid" IsReadOnly="True" Grid.Row="2">
             <c1:FlexGrid.Columns>
                 <c1:GridColumn Binding="Active" Width="Auto"/>

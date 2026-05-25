@@ -17,18 +17,21 @@
     <Content Include="C1-ball.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="10.0.20252.3" />
+    <PackageReference Include="C1.DataCollection" Version="10.0.20261.3" />
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataPager">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
+    </PackageReference>
+    <PackageReference Include="C1.WPF.Menu">
+      <Version>10.0.20261.47</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +82,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ListViewExplorer.gclicx" />
+    <EmbeddedResource Include="ListViewExplorer.sa3licx" />
   </ItemGroup>
 </Project>

@@ -66,29 +66,29 @@ namespace GaugesDemo
         public bool AutoScale { get { return _autoScale; } set { _autoScale = value; RaisePropertyChanged("AutoScale"); } }
         public bool IsReadOnly { get { return _isReadOnly; } set { _isReadOnly = value; RaisePropertyChanged("IsReadOnly"); } }
         public GaugeTextVisibility ShowText { get { return _showText; } set { _showText = value; RaisePropertyChanged("ShowText"); } }
-        public IList<string> ShowTextItems
+        public IList<GaugeTextVisibility> ShowTextItems
         {
             get
             {
-                return new List<string>
+                return new List<GaugeTextVisibility>
                 {
-                    GaugeTextVisibility.All.ToString(),
-                    GaugeTextVisibility.MinMax.ToString(),
-                    GaugeTextVisibility.Value.ToString(),
-                    GaugeTextVisibility.None.ToString(),
+                    GaugeTextVisibility.All,
+                    GaugeTextVisibility.MinMax,
+                    GaugeTextVisibility.Value,
+                    GaugeTextVisibility.None,
                 };
             }
         }
-        public IList<string> DirectionItems
+        public IList<LinearGaugeDirection> DirectionItems
         {
             get
             {
-                return new List<string> 
-                { 
-                    LinearGaugeDirection.Right.ToString(),
-                    LinearGaugeDirection.Left.ToString(),
-                    LinearGaugeDirection.Down.ToString(),
-                    LinearGaugeDirection.Up.ToString(),
+                return new List<LinearGaugeDirection>
+                {
+                    LinearGaugeDirection.Right,
+                    LinearGaugeDirection.Left,
+                    LinearGaugeDirection.Down,
+                    LinearGaugeDirection.Up,
                 };
             }
         }
@@ -96,7 +96,7 @@ namespace GaugesDemo
         {
             get
             {
-                return (LinearGaugeDirection)Enum.Parse(typeof(LinearGaugeDirection), DirectionItems[DirectionSelectedIndex]);
+                return DirectionItems[DirectionSelectedIndex];
             }
         }
 
@@ -130,7 +130,7 @@ namespace GaugesDemo
         {
             get
             {
-                return (GaugeTextVisibility)Enum.Parse(typeof(GaugeTextVisibility), ShowTextItems[ShowTextSelectedIndex]);
+                return ShowTextItems[ShowTextSelectedIndex];
             }
         }
 

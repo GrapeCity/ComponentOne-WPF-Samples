@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GaugesDemo"
              mc:Ignorable="d" 
              >
     <UserControl.Resources>
@@ -13,6 +14,9 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
+    <UserControl.DataContext>
+        <local:SampleViewModel Value="72" ShowText="All" />
+    </UserControl.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -27,6 +31,6 @@
             <c1:C1NumericBox x:Name="TargetStepper" Value="{Binding Target,Mode=TwoWay}" Increment="5" VerticalAlignment="Center"/>
         </WrapPanel>
         <c1:C1BulletGraph Value="{Binding Value}" Bad="{Binding Bad}" Good="{Binding Good}" VerticalAlignment="Top" Margin="10, 25, 10, 0"
-                          Target="{Binding Target}" IsReadOnly="{Binding IsReadOnly}" Grid.Row="1"/>
+                          Target="{Binding Target}" IsReadOnly="{Binding IsReadOnly}"  Grid.Row="1"/>
     </Grid>
 </UserControl>

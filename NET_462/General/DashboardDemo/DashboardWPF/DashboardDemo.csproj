@@ -1,0 +1,133 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\Model\Model.projitems" Label="Shared" />
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG;WPF</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE;WPF</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\c1.ico</ApplicationIcon>
+    <RootNamespace>DashboardWPF</RootNamespace>
+    <AssemblyName>DashboardWPF</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.BarCode">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Bitmap">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.C1Chart">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Document">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Excel">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Extended">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexChart">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid.GroupPanel">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexReport">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexViewer">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Gauge">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.ImportServices">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Maps">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Olap">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Pdf">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Word">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="EntityFramework" Version="6.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Reports\CurrentOpportunitiesData.flxr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\ProfitAndSales.flxr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\RegionWiseSalesData.flxr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\24X24_Analysis.png" />
+    <Resource Include="Assets\24X24_Dashboard.png" />
+    <Resource Include="Assets\24X24_Products.png" />
+    <Resource Include="Assets\24X24_Reporting.png" />
+    <Resource Include="Assets\24X24_Tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\AcmeLogo-vertical-100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Model\Context.cs" Link="Model\Context.cs" />
+    <Compile Include="..\Model\DataService.cs" Link="Model\DataService.cs" />
+    <Compile Include="..\Model\Utils\C1MapHelper.cs" Link="Model\Utils\C1MapHelper.cs" />
+    <Compile Include="..\Model\Utils\CellFactory.cs" Link="Model\Utils\CellFactory.cs" />
+    <Compile Include="..\Model\Utils\Commons.cs" Link="Model\Utils\Commons.cs" />
+    <Compile Include="..\Model\Utils\Converters.cs" Link="Model\Utils\Converters.cs" />
+    <Compile Include="..\Model\Utils\Model.cs" Link="Model\Utils\Model.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Model\InitialData.xml" Link="Model\InitialData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\c1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
+</Project>

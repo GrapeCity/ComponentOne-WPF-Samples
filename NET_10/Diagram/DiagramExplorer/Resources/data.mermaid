@@ -1,0 +1,15 @@
+﻿flowchart TB
+    SRC[Data Sources]
+
+    SRC --> INGEST[Ingestion Layer]
+    INGEST --> STREAM[Stream Processing]
+    INGEST --> BATCH[Batch Processing]
+
+    STREAM --> LAKE[(Data Lake)]
+    BATCH --> LAKE
+
+    LAKE --> TRANSFORM[Transformation / ETL]
+    TRANSFORM --> WAREHOUSE[(Data Warehouse)]
+
+    WAREHOUSE --> BI[BI / Dashboards]
+    WAREHOUSE --> ML[ML / Analytics]

@@ -1,0 +1,79 @@
+﻿Africa,Northern Africa,Algeria,DZ
+Africa,Northern Africa,Egypt,EG
+Africa,Northern Africa,Morocco,MA
+Africa,Northern Africa,Tunisia,TN
+Africa,Western Africa,Ghana,GH
+Africa,Western Africa,Nigeria,NG
+Africa,Western Africa,Senegal,SN
+Africa,Western Africa,Ivory Coast,CI
+Africa,Eastern Africa,Kenya,KE
+Africa,Eastern Africa,Ethiopia,ET
+Africa,Eastern Africa,Tanzania,TZ
+Africa,Central Africa,Cameroon,CM
+Africa,Central Africa,Democratic Republic of the Congo,CD
+Africa,Southern Africa,South Africa,ZA
+Africa,Southern Africa,Namibia,NA
+Africa,Southern Africa,Botswana,BW
+
+Asia,Eastern Asia,China,CN
+Asia,Eastern Asia,Japan,JP
+Asia,Eastern Asia,South Korea,KR
+Asia,Eastern Asia,Mongolia,MN
+Asia,Southern Asia,India,IN
+Asia,Southern Asia,Pakistan,PK
+Asia,Southern Asia,Bangladesh,BD
+Asia,Southeast Asia,Singapore,SG
+Asia,Southeast Asia,Indonesia,ID
+Asia,Southeast Asia,Thailand,TH
+Asia,Southeast Asia,Vietnam,VN
+Asia,Western Asia,United Arab Emirates,AE
+Asia,Western Asia,Saudi Arabia,SA
+Asia,Western Asia,Qatar,QA
+Asia,Western Asia,Israel,IL
+Asia,Central Asia,Kazakhstan,KZ
+Asia,Central Asia,Uzbekistan,UZ
+
+Europe,Western Europe,Netherlands,NL
+Europe,Western Europe,Germany,DE
+Europe,Western Europe,France,FR
+Europe,Western Europe,Belgium,BE
+Europe,Western Europe,Austria,AT
+Europe,Northern Europe,United Kingdom,GB
+Europe,Northern Europe,Sweden,SE
+Europe,Northern Europe,Norway,NO
+Europe,Northern Europe,Denmark,DK
+Europe,Southern Europe,Italy,IT
+Europe,Southern Europe,Spain,ES
+Europe,Southern Europe,Greece,GR
+Europe,Southern Europe,Portugal,PT
+Europe,Eastern Europe,Poland,PL
+Europe,Eastern Europe,Czech Republic,CZ
+Europe,Eastern Europe,Hungary,HU
+Europe,Eastern Europe,Romania,RO
+Europe,Eastern Europe,Ukraine,UA
+
+North America,Northern America,United States,US
+North America,Northern America,Canada,CA
+North America,Central America,Mexico,MX
+North America,Central America,Guatemala,GT
+North America,Central America,Panama,PA
+North America,Caribbean,Cuba,CU
+North America,Caribbean,Jamaica,JM
+North America,Caribbean,Dominican Republic,DO
+
+South America,South America,Brazil,BR
+South America,South America,Argentina,AR
+South America,South America,Chile,CL
+South America,South America,Colombia,CO
+South America,South America,Peru,PE
+South America,South America,Venezuela,VE
+South America,South America,Ecuador,EC
+South America,South America,Uruguay,UY
+
+Oceania,Australia and New Zealand,Australia,AU
+Oceania,Australia and New Zealand,New Zealand,NZ
+Oceania,Melanesia,Fiji,FJ
+Oceania,Melanesia,Papua New Guinea,PG
+Oceania,Melanesia,Solomon Islands,SB
+Oceania,Polynesia,Samoa,WS
+Oceania,Micronesia,Micronesia,FM

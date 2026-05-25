@@ -256,6 +256,13 @@
   <data name="Tag" xml:space="preserve">
     <value>このサンプルは、最も重要なグリッド機能を示します。</value>
   </data>
+  <data name="Title" xml:space="preserve">
+    <value>グリッドの機能</value>
+  </data>
+  <data name="WeightField" xml:space="preserve">
+    <value>重量:</value>
+    <comment>Weight:</comment>
+  </data>
   <data name="TextDescription" xml:space="preserve">
     <value>Text にエクスポート</value>
     <comment>Export to Text</comment>
@@ -263,13 +270,6 @@
   <data name="TextLabel" xml:space="preserve">
     <value>Text</value>
     <comment>Text</comment>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>グリッドの機能</value>
-  </data>
-  <data name="WeightField" xml:space="preserve">
-    <value>重量:</value>
-    <comment>Weight:</comment>
   </data>
   <data name="XRowsLabel" xml:space="preserve">
     <value>{0:N0} 行</value>

@@ -15,6 +15,8 @@ namespace FlexGridExplorer
             Random rnd = new Random();
             foreach (DataRow row in carTable.Rows)
             {
+                var transmissAutomaticStr = row.Field<string>("TransmissAutomatic");
+                bool? transmissAutomatic = transmissAutomaticStr?.Equals("Yes");
                 yield return new Car
                 {
                     ID = row.Field<int>("ID"),
@@ -24,7 +26,7 @@ namespace FlexGridExplorer
                     Liter = row.Field<double>("Liter"),
                     Cyl = row.Field<Int16>("Cyl"),
                     TransmissSpeedCount = row.Field<Int16>("TransmissSpeedCount").ToString(),
-                    TransmissAutomatic = row.Field<string>("TransmissAutomatic"),
+                    TransmissAutomatic = transmissAutomatic,
                     MPG_City = row.Field<Int16>("MPG_City"),
                     MPG_Highway = row.Field<Int16>("MPG_Highway"),
                     Category = row.Field<string>("Category"),
@@ -42,7 +44,7 @@ namespace FlexGridExplorer
             var asm = Assembly.GetExecutingAssembly();
             using (var s = asm.GetManifestResourceStream("FlexGridExplorer.Resources.cars.xml"))
             {
-                _= dt.ReadXml(s);
+                _ = dt.ReadXml(s);
             }
             return dt;
         }
@@ -114,6 +116,8 @@ namespace FlexGridExplorer
             var carsTable = GetCarTable();
             foreach (DataRow row in carsTable.Rows)
             {
+                var transmissAutomaticStr = row.Field<string>("TransmissAutomatic");
+                bool? transmissAutomatic = transmissAutomaticStr?.Equals("Yes");
                 yield return new Car
                 {
                     Brand = row.Field<string>("Brand"),
@@ -123,7 +127,7 @@ namespace FlexGridExplorer
                     Model = row.Field<string>("Model"),
                     Picture = row.Field<byte[]>("Picture"),
                     Price = row.Field<double>("Price"),
-                    TransmissAutomatic = row.Field<string>("TransmissAutomatic"),
+                    TransmissAutomatic = transmissAutomatic,
                     ID = row.Field<int>("ID")
                 };
             }

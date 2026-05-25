@@ -7,6 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="400"
              xmlns:res="clr-namespace:MenuExplorer.Properties">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
         <c1:C1DropDownButton DropDownWidth="176" HorizontalAlignment="Center" VerticalAlignment="Center" Header="Click here to see menu">
             <c1:C1MenuList AutoClose="True" DetectBoundaries="True" BorderThickness="0">

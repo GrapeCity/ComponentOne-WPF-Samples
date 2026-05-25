@@ -52,7 +52,7 @@
             <c1:C1CheckBox IsChecked="{Binding ElementName=rulesManager, Path=IsRuleNameVisible}" Content="IsRuleNameVisible" Margin="2"/>
         </c1:C1ToolStrip>
 
-        <c1:C1Expander Header="Rules" ExpandDirection="Left" ExpandIconAlignment="Left" HorizontalContentAlignment="Right" BorderThickness="0" Grid.Row="1" Grid.Column="1">
+        <c1:C1Expander Header="{x:Static res:AppResources.Rules}" ExpandDirection="Left" ExpandIconAlignment="Left" HorizontalContentAlignment="Right" BorderThickness="0" Grid.Row="1" Grid.Column="1">
             <c1:C1RulesManager x:Name="rulesManager" Width="400">
                 <c1:C1RulesEngine>
                     <!--<c1:RulesEngineColorScaleRule Ranges="[OrderCount]">
@@ -102,9 +102,9 @@
                 <c1:GridColumn Binding="LastName"/>
                 <c1:GridColumn Binding="OrderTotal" Format="C2" HorizontalAlignment="Right"/>
                 <c1:GridColumn Binding="OrderCount" Format="N1" HorizontalAlignment="Right"/>
-                <c1:GridColumn Binding="CountryId" Header="Country"/>
+                <c1:GridColumn Binding="CountryId" />
                 <c1:GridDateTimeColumn Binding="LastOrderDate" Mode="Date"/>
-                <c1:GridDateTimeColumn Binding="LastOrderDate" Header="Last Order Time" Mode="Time"/>
+                <c1:GridDateTimeColumn Binding="LastOrderDate" Header="{x:Static res:AppResources.LastOrderTimeLabel}" Mode="Time"/>
             </c1:FlexGrid.Columns>
             <i:Interaction.Behaviors>
                 <c1:ConditionalFormattingBehavior Engine="{Binding ElementName=rulesManager,Path=Engine}"/>

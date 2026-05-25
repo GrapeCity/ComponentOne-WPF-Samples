@@ -67,8 +67,8 @@ namespace FlexGridExplorer
 
     public class MyCustomCell : GridCellView
     {
-        private readonly C1SvgDoc _crossSvg = C1SvgDoc.Parse(Application.GetResourceStream(new Uri("Resources/cross.svg", UriKind.Relative)).Stream);
-        private readonly C1SvgDoc _circleSvg = C1SvgDoc.Parse(Application.GetResourceStream(new Uri("Resources/circle.svg", UriKind.Relative)).Stream);
+        private readonly C1SvgDoc _crossSvg = C1SvgDoc.Parse(Application.GetResourceStream(new Uri("pack://application:,,,/FlexGridExplorer;component/Resources/cross.svg", UriKind.Absolute)).Stream);
+        private readonly C1SvgDoc _circleSvg = C1SvgDoc.Parse(Application.GetResourceStream(new Uri("pack://application:,,,/FlexGridExplorer;component/Resources/circle.svg", UriKind.Absolute)).Stream);
 
         private bool _isCross;
         public bool IsCross

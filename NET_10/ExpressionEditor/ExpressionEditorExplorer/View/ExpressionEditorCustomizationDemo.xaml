@@ -37,6 +37,7 @@
                                    BorderThickness="2 2 2 0"
                                    CornerRadius="5 5 0 0"
                                    MinHeight="80"
+                                   MaxHeight="200" 
                                    Background="AliceBlue"
                                    FunctionsStyle="{StaticResource FunctionsSyntaxStyle}"
                                    FieldsStyle="{StaticResource FieldsSyntaxStyle}"

@@ -1,0 +1,188 @@
+﻿<UserControl x:Class="DataViewDashboard.Views.TileView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c="clr-namespace:DataViewDashboard.Converters"
+             xmlns:vm="clr-namespace:DataViewDashboard.ViewModels"
+             xmlns:v="clr-namespace:DataViewDashboard.Views"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:core="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style TargetType="c1:C1TileView">
+            <Setter Property="Columns" Value="5" />
+            <Setter Property="Rows" Value="4" />
+            <Setter Property="HeaderBackground" Value="{StaticResource HighlightBrush}" />
+            <Setter Property="ItemsSource" Value="{Binding Source.View}" />
+        </Style>
+        
+        
+        <!-- Orders -->
+        <DataTemplate DataType="{x:Type vm:OrdersViewModel}">
+            <c1:C1TileView>
+                <c1:C1TileView.ItemTemplateHeader>
+                    <DataTemplate>
+                        <TextBlock FontSize="14" HorizontalAlignment="Left" Margin="4 2" Foreground="White">
+                            <Run Text="Order: " />
+                            <Run Text="{Binding SalesOrderNumber}" />
+                        </TextBlock>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplateHeader>
+                <c1:C1TileView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="160" Height="120" HorizontalAlignment="Left">
+                            <Grid.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="FontSize" Value="12"/>
+                                </Style>
+                            </Grid.Resources>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="{Binding PurchaseOrderNumber}" />
+                            <TextBlock Text="{Binding Customer.CompanyName}" Grid.Row="1"/>
+                            <TextBlock Text="{Binding OrderDate}" Grid.Row="2"/>
+                            <TextBlock Text="{Binding TotalDue}" Grid.Row="3"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="4">
+                                <Border Margin="0 0 5 0" Width="12" Height="12" CornerRadius="8" Background="{Binding Status, Converter={StaticResource statusColorConverter}}" />
+                                <TextBlock Text="{Binding Status, Converter={StaticResource statusLabelConverter}}" />
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplate>
+                <c1:C1TileView.ItemTemplateMaximized>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <v:OrderTile />
+                            <v:SalesOrderDetailsGrid Grid.Row="2" />
+                        </Grid>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplateMaximized>
+            </c1:C1TileView>
+        </DataTemplate>
+        
+        <!-- Customers -->
+        <DataTemplate DataType="{x:Type vm:CustomersViewModel}">
+            <c1:C1TileView>
+                <c1:C1TileView.ItemTemplateHeader>
+                    <DataTemplate>
+                        <Border>
+                            <TextBlock FontSize="14" HorizontalAlignment="Left" Margin="4 2" Foreground="White">
+                                    <Run Text="{Binding FirstName}" />
+                                    <Run Text="{Binding LastName}" />
+                            </TextBlock>
+                        </Border>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplateHeader>
+                <c1:C1TileView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="160" Height="120" HorizontalAlignment="Left">
+                            <Grid.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="FontSize" Value="12"/>
+                                </Style>
+                            </Grid.Resources>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock HorizontalAlignment="Left" Margin="0 5"  FontSize="12" FontWeight="Bold" Foreground="#3EB3F5">
+                                <Run Text="{Binding FirstName}" />
+                                <Run Text="{Binding LastName}" />
+                            </TextBlock>
+                            <TextBlock Text="{Binding CompanyName}" Grid.Row="1"/>
+                            <TextBlock Text="{Binding EmailAddress}" TextTrimming="CharacterEllipsis" Grid.Row="2"/>
+                            <TextBlock Text="{Binding Phone}" Grid.Row="3"/>
+
+                            <Image Source="../Resources/bar-chart.png" Visibility="{Binding SalesOrderHeaders, Converter={StaticResource hasOrdersVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="16" Height="16" ToolTip="Has sales order data" Grid.Row="4"/>
+                        </Grid>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplate>
+                <c1:C1TileView.ItemTemplateMaximized>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <v:CustomerTile />
+                            <v:SalesOrderHeadersGrid Grid.Row="1" />
+                        </Grid>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplateMaximized>
+            </c1:C1TileView>
+        </DataTemplate>
+
+        <!-- Products -->
+        <DataTemplate DataType="{x:Type vm:ProductsViewModel}">
+            <c1:C1TileView>
+                <c1:C1TileView.ItemTemplateHeader>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" FontSize="14" HorizontalAlignment="Left"  Margin="4 2" Foreground="White"/>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplateHeader>
+                <c1:C1TileView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Image Source="{Binding ThumbNailPhoto, Converter={StaticResource imageFromDBConverter}}" MaxWidth="150" MaxHeight="100"/>
+                            <Image Source="../Resources/bar-chart.png" Visibility="{Binding SalesOrderDetails, Converter={StaticResource hasOrdersVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="16" Height="16" ToolTip="Has sales order data"/>
+                        </Grid>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplate>
+                <c1:C1TileView.ItemTemplateMaximized>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Margin" Value="2" />
+                                     <Setter Property="FontSize" Value="12"/>
+                                </Style>
+                            </Grid.Resources>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <v:ProductTile Grid.ColumnSpan="4"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="2" >
+                                <TextBlock Text="Total Quantity:" />
+                                <TextBlock Text="{Binding SalesOrderDetails, Converter={StaticResource orderQuantityConverter}}" FontWeight="Bold"/>
+                                <TextBlock Text="Total Sale:" Margin="10 2 2 2"/>
+                                <TextBlock Text="{Binding SalesOrderDetails, Converter={StaticResource orderLineTotalConverter}}" FontWeight="Bold" Foreground="Green"/>
+                                <TextBlock Text="Total Cost:" Margin="10 2 2 2"/>
+                                <TextBlock Text="{Binding ., Converter={StaticResource orderCostConverter}}" FontWeight="Bold" Foreground="Red"/>
+                            </StackPanel>
+                            <v:SalesOrderDetailsChart Grid.Row="3" Grid.ColumnSpan="4"/>
+                        </Grid>
+                    </DataTemplate>
+                </c1:C1TileView.ItemTemplateMaximized>
+            </c1:C1TileView>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <ContentControl Content="{Binding SelectedDataView}" />
+    </Grid>
+</UserControl>

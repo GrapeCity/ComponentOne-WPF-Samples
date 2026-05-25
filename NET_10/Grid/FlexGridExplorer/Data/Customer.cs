@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using FlexGridExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -61,7 +62,7 @@ namespace FlexGridExplorer
 
         #region object model
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.IdLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public int Id
         {
@@ -73,6 +74,7 @@ namespace FlexGridExplorer
         }
 
         [Required]
+        [Display(Name =nameof(AppResources.FirstName), ResourceType =typeof(AppResources))]
         public string FirstName
         {
             get { return _first; }
@@ -84,6 +86,7 @@ namespace FlexGridExplorer
         }
 
         [Required]
+        [Display(Name = nameof(AppResources.LastName), ResourceType = typeof(AppResources))]
         public string LastName
         {
             get { return _last; }
@@ -95,6 +98,7 @@ namespace FlexGridExplorer
         }
 
         [MinLength(2)]
+        [Display(Name = nameof(AppResources.Address), ResourceType = typeof(AppResources))]
         public string Address
         {
             get { return _address; }
@@ -104,6 +108,7 @@ namespace FlexGridExplorer
             }
         }
 
+        [Display(Name = nameof(AppResources.City), ResourceType = typeof(AppResources))]
         public string City
         {
             get { return _city; }
@@ -113,7 +118,7 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.CountryLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public int CountryId
         {
@@ -129,6 +134,7 @@ namespace FlexGridExplorer
             }
         }
 
+        [Display(Name = nameof(AppResources.PostalCode), ResourceType = typeof(AppResources))]
         public string PostalCode
         {
             get { return _postalCode; }
@@ -138,8 +144,8 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(Name = "e-mail")]
         [Required, EmailAddress]
+        [Display(Name = nameof(AppResources.EMail), ResourceType = typeof(AppResources))]
         public string Email
         {
             get { return _email; }
@@ -149,7 +155,7 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.LastOrderDateLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public DateTime LastOrderDate
         {
@@ -160,7 +166,7 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.LastOrderTimeLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public TimeSpan LastOrderTime
         {
@@ -170,7 +176,7 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.OrderCountLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public int OrderCount
         {
@@ -181,7 +187,7 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.OrderTotalLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public double OrderTotal
         {
@@ -192,7 +198,7 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.ActiveLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public bool Active
         {
@@ -203,21 +209,21 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.NameLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public string Name
         {
             get { return string.Format("{0} {1}", FirstName, LastName); }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.CountryLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public string Country
         {
             get { return _countries[_countryId].Key; }
         }
 
-        [Display(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false, Name = nameof(AppResources.OrderAverageLabel), ResourceType = typeof(AppResources))]
         [JsonIgnore]
         public double OrderAverage
         {
@@ -311,7 +317,11 @@ namespace FlexGridExplorer
     {
         [Display(AutoGenerateField = false)]
         public bool Selected { get; set; }
+
+        [Display(Name = nameof(AppResources.City), ResourceType = typeof(AppResources))]
         public string Name { get; set; }
+
+        [Display(Name = nameof(AppResources.CountryLabel), ResourceType = typeof(AppResources))]
         public string Country { get; set; }
     }
 }

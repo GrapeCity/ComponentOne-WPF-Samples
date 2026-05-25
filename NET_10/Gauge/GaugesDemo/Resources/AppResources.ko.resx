@@ -123,11 +123,17 @@
   <data name="AutomaticScalingTitle" xml:space="preserve">
     <value>자동 크기 조정</value>
   </data>
+  <data name="Bad" xml:space="preserve">
+    <value>Bad</value>
+  </data>
   <data name="BulletGraphDescription" xml:space="preserve">
     <value>정상 범위, 잘못된 범위 및 대상 범위를 가진 Bulletgraph를 표시합니다.</value>
   </data>
   <data name="BulletGraphTitle" xml:space="preserve">
     <value>블렛그레프</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
   </data>
   <data name="DirectionDescription" xml:space="preserve">
     <value>방향이 다양한 선형 Gauge를 표시합니다.</value>
@@ -147,6 +153,9 @@
   <data name="GettingStartedTitle" xml:space="preserve">
     <value>시작하기</value>
   </data>
+  <data name="Good" xml:space="preserve">
+    <value>Good</value>
+  </data>
   <data name="ImageSavedDescription" xml:space="preserve">
     <value />
   </data>
@@ -158,28 +167,6 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>저장</value>
-  </data>
-  <data name="Take" xml:space="preserve">
-    <value>가져가기</value>
-  </data>
-  <data name="UsingRangesDescription" xml:space="preserve">
-    <value>포인터 뒤에 사용자 지정된 범위를 표시합니다.</value>
-  </data>
-  <data name="UsingRangesTitle" xml:space="preserve">
-    <value>범위 사용</value>
-  </data>
-  <data name="Reversed" xml:space="preserve">
-    <value>Reversed</value>
-    <comment>Reversed</comment>
-  </data>
-  <data name="Bad" xml:space="preserve">
-    <value>Bad</value>
-  </data>
-  <data name="Direction" xml:space="preserve">
-    <value>Direction</value>
-  </data>
-  <data name="Good" xml:space="preserve">
-    <value>Good</value>
   </data>
   <data name="ShowRanges" xml:space="preserve">
     <value>Show Ranges</value>
@@ -193,10 +180,41 @@
   <data name="SweepAngle" xml:space="preserve">
     <value>Sweep Angle</value>
   </data>
+  <data name="Take" xml:space="preserve">
+    <value>가져가기</value>
+  </data>
   <data name="Target" xml:space="preserve">
     <value>Target</value>
   </data>
+  <data name="UsingRangesDescription" xml:space="preserve">
+    <value>포인터 뒤에 사용자 지정된 범위를 표시합니다.</value>
+  </data>
+  <data name="UsingRangesTitle" xml:space="preserve">
+    <value>범위 사용</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Value</value>
+  </data>
+  <data name="Reversed" xml:space="preserve">
+    <value>Reversed</value>
+    <comment>Reversed</comment>
+  </data>
+  <data name="ResumeAnimationLabel" xml:space="preserve">
+    <value>Resume Animation</value>
+  </data>
+  <data name="PauseAnimationLabel" xml:space="preserve">
+    <value>Pause Animation</value>
+  </data>
+  <data name="MarksAndLabelsTitle" xml:space="preserve">
+    <value>Marks and Labels</value>
+  </data>
+  <data name="MarksAndLabelsDescription" xml:space="preserve">
+    <value>Show how to use Marks and Labels in gauges</value>
+  </data>
+  <data name="PointerTitle" xml:space="preserve">
+    <value>Pointer</value>
+  </data>
+  <data name="PointerDescription" xml:space="preserve">
+    <value>Shows how to display a gauge pointer</value>
   </data>
 </root>

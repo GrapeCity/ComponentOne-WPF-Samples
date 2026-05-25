@@ -19,14 +19,14 @@
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <c1:C1RadialGauge x:Name="Gauge" AutoScale="True" 
-                          Min="{Binding Min}" Max="{Binding Max}" Value="{Binding Value}" StartAngle="{Binding StartAngle}" SweepAngle="{Binding SweepAngle}" 
+        <c1:C1RadialGauge x:Name="Gauge" AutoScale="True" MaxHeight="200"
+                          Minimum="{Binding Min}" Maximum="{Binding Max}" Value="{Binding Value}" StartAngle="{Binding StartAngle}" SweepAngle="{Binding SweepAngle}" 
                           IsEnabled="True" TextVisibility="{Binding ShowText}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsReversed="{Binding}"/>
         <WrapPanel Grid.Row="1">
             <Label x:Name="lblStartAngle" Content="Start Angle " VerticalAlignment="Center" Margin="5"/>
-            <c1:C1NumericBox x:Name="StartAngleStepper" Value="{Binding StartAngle, Mode=TwoWay}" Maximum="360" Increment="45" VerticalAlignment="Center" />
+            <c1:C1NumericBox x:Name="StartAngleStepper" Value="{Binding StartAngle, Mode=TwoWay}" Maximum="360" Minimum="-360" Increment="45" VerticalAlignment="Center" ValueChanged="NumericBox_ValueChanged"/>
             <Label x:Name="lblSweepAngle" Content="Sweep Angle " VerticalAlignment="Center"  Margin="5"/>
-            <c1:C1NumericBox x:Name="SweepAngleStepper" Value="{Binding SweepAngle, Mode=TwoWay}" Minimum="45" Maximum="360" Increment="45" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+            <c1:C1NumericBox x:Name="SweepAngleStepper" Value="{Binding SweepAngle, Mode=TwoWay}" Minimum="45" Maximum="360" Increment="45" HorizontalAlignment="Stretch" VerticalAlignment="Center" ValueChanged="NumericBox_ValueChanged"/>
             <StackPanel Orientation="Horizontal" Grid.Column="2"  Margin="5">
                 <c1:C1CheckBox x:Name="chkReversed" IsChecked="{Binding IsReversed, ElementName=Gauge, Mode=TwoWay}" VerticalAlignment="Center"/>
                 <Label x:Name="lblReversed" Content="Reversed " VerticalAlignment="Center" Margin="5"/>

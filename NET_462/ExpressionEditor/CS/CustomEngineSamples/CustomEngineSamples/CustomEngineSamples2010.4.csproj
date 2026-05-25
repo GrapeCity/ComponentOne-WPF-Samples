@@ -91,7 +91,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -106,10 +105,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.ExpressionEditor">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="ManagedEsent">
       <Version>1.9.4</Version>
@@ -119,4 +118,7 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
 </Project>

@@ -12,10 +12,10 @@
     <Grid>
         <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" IsReadOnly="True">
             <c1:FlexGrid.Columns>
-                <c1:GridColumn Header="Store" Binding="Store.ID" AllowGrouping="True" FilterLoading="OnStoreFilterLoading" />
-                <c1:GridColumn Header="Model" Binding="Car.Model" Width="*" FilterLoading="OnModelFilterLoading"/>
-                <c1:GridColumn Header="Price" Binding="Car.Price" FilterLoading="OnPriceFilterLoading"/>
-                <c1:GridColumn Header="Automatic transmission" Binding="Car.TransmissAutomatic" AllowGrouping="True" FilterLoading="OnTransmissionFilterLoading"/>
+                <c1:GridColumn Binding="Store.ID" AllowGrouping="True" FilterLoading="OnStoreFilterLoading" />
+                <c1:GridColumn Binding="Car.Model" Width="*" FilterLoading="OnModelFilterLoading"/>
+                <c1:GridColumn Binding="Car.Price" FilterLoading="OnPriceFilterLoading"/>
+                <c1:GridColumn Binding="Car.TransmissAutomatic" AllowGrouping="True" FilterLoading="OnTransmissionFilterLoading"/>
                 <c1:GridColumn Binding="Color" FilterLoading="OnColorFilterLoading">
                     <c1:GridColumn.CellTemplate>
                         <DataTemplate>

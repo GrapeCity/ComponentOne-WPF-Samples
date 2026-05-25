@@ -36,9 +36,9 @@
             <c1:C1ComboBox x:Name="cbCurrencies" ItemsSource="{Binding Currencies}" DisplayMemberPath="DisplayName" SelectedValuePath="Symbol" SelectedItemChanged="HandleCurrenciesSelectedItemChanged" />
             <TextBlock Text="Measure:" />
             <c1:C1ComboBox x:Name="cbMeasureModes" SelectedIndexChanged="HandleMeasureModesSelectedItemChanged" >
-                <c1:C1ComboBoxItem Content="Exchange Rate"/>
-                <c1:C1ComboBoxItem Content="Currency Rate"/>
-                <c1:C1ComboBoxItem Content="Both"/>
+                <c1:ComboBoxItem Content="Exchange Rate"/>
+                <c1:ComboBoxItem Content="Currency Rate"/>
+                <c1:ComboBoxItem Content="Both"/>
             </c1:C1ComboBox>
             <Image Source="/CurrencyComparison;component/Resources/ImgLegend.png" />
             <TextBlock x:Name="tbPeriod" Margin="20 0"/>
@@ -52,7 +52,7 @@
             <c1:C1RadioButton Margin="4,0" Content="5 Days" Tag="5D" Checked="HandleRadioButtonChecked" />
             <c1:C1RadioButton Margin="4,0" Content="10 Days" Tag="10D" Checked="HandleRadioButtonChecked"/>
             <c1:C1RadioButton Margin="4,0" Content="1 Month" Tag="1M" Checked="HandleRadioButtonChecked"/>
-            <c1:C1RadioButton Margin="4,0" Content="6 Months" IsChecked="True" Tag="6M" Checked="HandleRadioButtonChecked"/>
+            <c1:C1RadioButton x:Name="rbDefaultRange" Margin="4,0" Content="6 Months" Tag="6M" Checked="HandleRadioButtonChecked"/>
             <c1:C1RadioButton Margin="4,0" Content="1 Year" Tag="1Y" Checked="HandleRadioButtonChecked"/>
             <c1:C1RadioButton Margin="4,0" Content="5 Years" Tag="5Y" Checked="HandleRadioButtonChecked"/>
             <c1:C1RadioButton Margin="4,0" Content="10 Years" Tag="10Y" Checked="HandleRadioButtonChecked"/>

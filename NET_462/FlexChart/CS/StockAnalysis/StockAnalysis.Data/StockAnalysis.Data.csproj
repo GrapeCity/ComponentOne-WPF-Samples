@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
     <OutputType>Library</OutputType>
@@ -48,4 +48,7 @@
   <ItemGroup>
     <ProjectReference Include="..\StockAnalysis.Object\StockAnalysis.Object.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include=".sa3licx" />
+	</ItemGroup>
 </Project>

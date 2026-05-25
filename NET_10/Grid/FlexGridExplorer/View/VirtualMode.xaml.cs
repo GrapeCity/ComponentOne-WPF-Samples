@@ -1,7 +1,6 @@
 ﻿using C1.WPF.Grid;
 using FlexGridExplorer.Resources;
 using System;
-using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -49,40 +48,47 @@ namespace FlexGridExplorer
             }
         }
 
+        public override bool AllowCustomCell(GridCellType cellType, GridCellRange range)
+        {
+            return true;
+        }
 
-        public override object GetCellContentType(GridCellType cellType, GridCellRange range)
+        public override object GetCellKind(GridCellType cellType, GridCellRange range)
         {
             if (cellType == GridCellType.RowHeader)
             {
                 if (!UseDataIndex || Grid.Rows[range.Row] is GridBoundRow)
                     return typeof(RowHeaderNumbersCellFactory);
             }
-            return base.GetCellContentType(cellType, range);
+            return base.GetCellKind(cellType, range);
         }
 
-        public override FrameworkElement CreateCellContent(GridCellType cellType, GridCellRange range, object cellContentType)
+        public override GridCellView CreateCell(GridCellType cellType, GridCellRange range, object cellKind)
         {
-            if (cellType == GridCellType.RowHeader && cellContentType as Type == typeof(RowHeaderNumbersCellFactory))
+            if (cellType == GridCellType.RowHeader && cellKind as Type == typeof(RowHeaderNumbersCellFactory))
             {
-                return new TextBlock() { Margin = new Thickness(4), VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center };
+                return new GridTextCellView() 
+                { 
+                    HorizontalTextAlignment = HorizontalAlignment.Center, 
+                    VerticalTextAlignment = VerticalAlignment.Center 
+                };
             }
-            return base.CreateCellContent(cellType, range, cellContentType);
+            return base.CreateCell(cellType, range, cellKind);
         }
 
-        public override void BindCellContent(GridCellType cellType, GridCellRange range, FrameworkElement cellContent)
+        public override void BindCell(GridCellType cellType, GridCellRange range, GridCellView cell)
         {
-            if (cellType == GridCellType.RowHeader && cellContent is TextBlock textBlock)
+            if (cellType == GridCellType.RowHeader && cell is GridTextCellView textCellView)
             {
                 var index = range.Row;
                 if (UseDataIndex)
-                    index = (Grid.Rows[index]as GridBoundRow).DataIndex;
-                textBlock.Text = (index + (UseZeroBasedIndex ? 0 : 1)).ToString("N0");
+                    index = (Grid.Rows[index] as GridBoundRow).DataIndex;
+                textCellView.Text = (index + (UseZeroBasedIndex ? 0 : 1)).ToString("N0");
             }
             else
             {
-                base.BindCellContent(cellType, range, cellContent);
+                base.BindCell(cellType, range, cell);
             }
         }
     }
-
 }

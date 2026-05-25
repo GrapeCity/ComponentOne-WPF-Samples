@@ -22,18 +22,18 @@
     <EmbeddedResource Include="Resources\FlexCommonTasks_XML.flxr" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="10.0.20252.3" />
+    <PackageReference Include="C1.DataCollection" Version="10.0.20261.3" />
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Report">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +55,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FlexReportExplorer.gclicx" />
+    <EmbeddedResource Include="FlexReportExplorer.sa3licx" />
   </ItemGroup>
 </Project>

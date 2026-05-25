@@ -260,4 +260,8 @@
     <value>ポップアップ</value>
     <comment>Popup</comment>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編集</value>
+    <comment>Edit</comment>
+  </data>
 </root>

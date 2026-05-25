@@ -111,7 +111,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -131,29 +130,6 @@
     <Resource Include="Resources\France.png" />
     <Resource Include="Resources\USA.png" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.DataGrid">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.RichTextBox">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.RichTextBox.Toolbar">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.SpellChecker">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Toolbar">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -162,4 +138,30 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DataGrid">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.RichTextBox">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.RichTextBox.Toolbar">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.SpellChecker">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+  </ItemGroup>
 </Project>

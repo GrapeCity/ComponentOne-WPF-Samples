@@ -16,10 +16,10 @@
                 <c1:C1DockTabControl Dock="Right">
                     <c1:C1DockTabItem Background="Yellow" Header="Yellow Item" />
                 </c1:C1DockTabControl>
-                <c1:C1DockTabControl Dock="Bottom">
+                <c1:C1DockTabControl Dock="Bottom" HorizontalFill="True">
                     <c1:C1DockTabItem Background="Green" Header="Green Item" />
                 </c1:C1DockTabControl>
-                <c1:C1DockTabControl>
+                <c1:C1DockTabControl HorizontalFill="True">
                     <c1:C1DockTabItem Background="Blue" Header="Blue Item">
                     </c1:C1DockTabItem>
                 </c1:C1DockTabControl>

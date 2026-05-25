@@ -14,7 +14,7 @@ namespace FinancialChartExplorer
         public HeikinAshi()
         {
             InitializeComponent();
-
+            Loaded += (s, e) => cbSymbol.SelectedIndex = 0;
             Tag = AppResources.HeikinAshiTag;
         }
         void OnSymbolSelectionChanged(object sender, SelectionChangedEventArgs e)

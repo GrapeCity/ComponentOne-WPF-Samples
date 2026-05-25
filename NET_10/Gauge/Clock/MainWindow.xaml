@@ -1,0 +1,97 @@
+﻿<Window x:Class="Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Clock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <Window.Resources>
+        <local:HoursConverter x:Key="hoursConverter" ShowRomanNumbers="True"/>
+        <Style x:Key="DefaultGaugeStyle" TargetType="c1:C1RadialGauge">
+            <Setter Property="StartAngle" Value="90"/>
+            <Setter Property="SweepAngle" Value="360"/>
+            <Setter Property="Thickness" Value="1"/>
+            <Setter Property="TextVisibility" Value="None"/>
+            <Setter Property="ShowRangePointer" Value="False"/>
+            <Setter Property="FaceBrush" Value="Transparent"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="12">
+        <c1:C1RadialGauge Style="{StaticResource DefaultGaugeStyle}"
+                          ShowRanges="True">
+            <c1:C1RadialGauge.FaceBrush>
+                <RadialGradientBrush Center="0.55,0.55" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad">
+                    <GradientStop Color="#FFDFDFDF" Offset="0.843"/>
+                    <GradientStop Color="#FF777777" Offset="1"/>
+                </RadialGradientBrush>
+            </c1:C1RadialGauge.FaceBrush>
+            <c1:GaugeRange From="0" To="100" Thickness=".01" Location="0.99">
+                <c1:GaugeRange.Brush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="#FFFBFBFB"/>
+                        <GradientStop Color="#FFAEAEAE" Offset="1"/>
+                    </LinearGradientBrush>
+                </c1:GaugeRange.Brush>
+            </c1:GaugeRange>
+            <c1:GaugeRange From="0" To="100" Brush="#FFE0E0E0" Thickness=".06" Location="0.93"/>
+            <c1:GaugeRange From="0" To="100" Thickness=".01" Location="0.92">
+                <c1:GaugeRange.Brush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="#FF7D7D7D"/>
+                        <GradientStop Color="#FFFEFEFE" Offset="1"/>
+                    </LinearGradientBrush>
+                </c1:GaugeRange.Brush>
+            </c1:GaugeRange>
+            <c1:GaugeRange From="0" To="100" Brush="#FF9A9A9A" Thickness=".005" Location="0.45"/>
+            <c1:C1RadialGauge.Effect>
+                <DropShadowEffect Opacity="0.2" BlurRadius="40"/>
+            </c1:C1RadialGauge.Effect>
+        </c1:C1RadialGauge>
+
+        <c1:C1RadialGauge Style="{StaticResource DefaultGaugeStyle}"
+                          Minimum="0" 
+                          Maximum="720" MarkBrush="#FF303030">
+            <c1:GaugeMark From="0" To="720" Interval="60" Location="0.85" Alignment="Center" Thickness=".10" Source="pack://application:,,,/Clock;component/Icons/dot.svg"/>
+            <c1:GaugeMark From="0" To="720" Interval="12" Location="0.85" Alignment="Center" Thickness=".05" Source="pack://application:,,,/Clock;component/Icons/dot.svg"/>
+            <c1:GaugeLabel From="1" To="720" Interval="60" Location="0.65" IsRotated="True" Thickness=".21" Converter="{StaticResource hoursConverter}" FontFamily="Times New Roman" />
+            <c1:C1RadialGauge.Effect>
+                <DropShadowEffect Opacity="0.2" />
+            </c1:C1RadialGauge.Effect>
+        </c1:C1RadialGauge>
+
+        <c1:C1RadialGauge x:Name="clockHours" Style="{StaticResource DefaultGaugeStyle}"
+                          Value="600"
+                          Minimum="0" 
+                          Maximum="720" MarkBrush="#FF303030">
+            <c1:GaugePointer Source="pack://application:,,,/Clock;component/Icons/hours.svg" StartPoint="5.04 31.46" EndPoint="5.04 2.36" Thickness=".55" />
+            <c1:C1RadialGauge.Effect>
+                <DropShadowEffect ShadowDepth="10" BlurRadius="15" Opacity="0.3"/>
+            </c1:C1RadialGauge.Effect>
+        </c1:C1RadialGauge>
+
+        <!-- Minutes -->
+        <c1:C1RadialGauge x:Name="clockMins" Style="{StaticResource DefaultGaugeStyle}"
+                          Value="9" 
+                          Minimum="0" 
+                          Maximum="60">
+            <c1:C1RadialGauge.Effect>
+                <DropShadowEffect ShadowDepth="14" BlurRadius="15" Opacity="0.3"/>
+            </c1:C1RadialGauge.Effect>
+            <c1:GaugePointer Source="pack://application:,,,/Clock;component/Icons/minutes.svg" StartPoint="5.04 46.73" EndPoint="5.26 1.42" Thickness=".75"  />
+        </c1:C1RadialGauge>
+
+        <!-- Seconds -->
+        <c1:C1RadialGauge x:Name="clockSecs" Style="{StaticResource DefaultGaugeStyle}"
+                          Value="33" 
+                          Minimum="0" 
+                          Maximum="60">
+            <c1:C1RadialGauge.Effect>
+                <DropShadowEffect ShadowDepth="17" BlurRadius="15" Opacity="0.3"/>
+            </c1:C1RadialGauge.Effect>
+            <c1:GaugePointer Source="pack://application:,,,/Clock;component/Icons/seconds.svg" StartPoint="5.08 50.1" EndPoint="5.15 1.55" Thickness=".85" />
+        </c1:C1RadialGauge>
+
+    </Grid>
+</Window>

@@ -1,6 +1,7 @@
 ﻿using C1.DataCollection;
 using C1.WPF.DataFilter;
 using C1.WPF.Input;
+using FlexGridExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,8 @@ namespace FlexGridExplorer
                 var expr = new CombinationExpression() { FilterCombination = FilterCombination.Or };
                 foreach (var tag in tags)
                 {
-                    expr.Expressions.Add(new OperationExpression() { Value = tag, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
+                    var value = GetValue(tag);
+                    expr.Expressions.Add(new OperationExpression() { Value = value, FilterOperation = FilterOperation.Equal, PropertyName = PropertyName });
                 }
                 return expr;
             }
@@ -35,6 +37,15 @@ namespace FlexGridExplorer
                 var selectedValues = GetSelectedValues(value).ToList();
                 _transmissionFilterPresenter.SetSelectedValues(selectedValues);
             }
+        }
+
+        private bool? GetValue(string tag)
+        {
+            if (tag == AppResources.NoLabel)
+                return false;
+            if (tag == AppResources.YesLabel)
+                return true;
+            return null;
         }
 
         private IEnumerable<string> GetSelectedValues(Expression expression)
@@ -71,9 +82,9 @@ namespace FlexGridExplorer
             }
             Items.Clear();
 
-            CreateItem("All");
-            CreateItem("Yes");
-            CreateItem("No");
+            CreateItem(AppResources.AllLabel);
+            CreateItem(AppResources.YesLabel);
+            CreateItem(AppResources.NoLabel);
         }
 
         private void CreateItem(string content)
@@ -84,7 +95,7 @@ namespace FlexGridExplorer
                 GroupName = "G",
                 Margin = new System.Windows.Thickness(2)
             };
-            if (content == "All")
+            if (content == AppResources.AllLabel)
             {
                 rb.IsChecked = true;
             }
@@ -105,7 +116,7 @@ namespace FlexGridExplorer
             {
                 if (rb.IsChecked ?? false)
                 {
-                    if (rb.Content.ToString() == "All")
+                    if (rb.Content.ToString() == AppResources.AllLabel)
                     {
                         continue;
                     }
@@ -123,7 +134,7 @@ namespace FlexGridExplorer
             {
                 _isInitializing = true;
                 if (selectedValues.Count == 0)
-                    selectedValues.Add("All");
+                    selectedValues.Add(AppResources.AllLabel);
                 foreach (var radioButton in Items.OfType<RadioButton>())
                 {
                     radioButton.IsChecked = selectedValues?.Contains((string)radioButton.Content) ?? false;

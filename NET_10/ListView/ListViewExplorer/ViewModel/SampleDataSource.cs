@@ -61,6 +61,10 @@ namespace ListViewExplorer
                     AppResources.VirtualModeTitle,
                     AppResources.VirtualModeTitle,
                     new VirtualMode()),
+                new SampleItem(
+                    AppResources.LiveUpdatesTitle,
+                    AppResources.LiveUpdatesTitle,
+                    new LiveUpdates()),
             ];
 
         }

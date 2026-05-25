@@ -19,7 +19,7 @@ namespace GaugesDemo.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class AppResources {
@@ -196,11 +196,65 @@ namespace GaugesDemo.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show how to use Marks and Labels in gauges.
+        /// </summary>
+        public static string MarksAndLabelsDescription {
+            get {
+                return ResourceManager.GetString("MarksAndLabelsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marks and Labels.
+        /// </summary>
+        public static string MarksAndLabelsTitle {
+            get {
+                return ResourceManager.GetString("MarksAndLabelsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string OKTitle {
             get {
                 return ResourceManager.GetString("OKTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pause Animation.
+        /// </summary>
+        public static string PauseAnimationLabel {
+            get {
+                return ResourceManager.GetString("PauseAnimationLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to display a gauge pointer.
+        /// </summary>
+        public static string PointerDescription {
+            get {
+                return ResourceManager.GetString("PointerDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pointer.
+        /// </summary>
+        public static string PointerTitle {
+            get {
+                return ResourceManager.GetString("PointerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resume Animation.
+        /// </summary>
+        public static string ResumeAnimationLabel {
+            get {
+                return ResourceManager.GetString("ResumeAnimationLabel", resourceCulture);
             }
         }
         

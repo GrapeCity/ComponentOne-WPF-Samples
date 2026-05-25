@@ -1,4 +1,9 @@
-﻿using ListViewExplorer.Resources;
+﻿using C1.DataCollection;
+using C1.WPF.Core;
+using C1.WPF.Menu;
+using ListViewExplorer.Resources;
+using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ListViewExplorer
@@ -36,10 +41,10 @@ namespace ListViewExplorer
             if (C1ListView == null) return;
             if (e.NewValue == 0)
                 C1ListView.SelectionMode = C1.WPF.Core.C1SelectionMode.Single;
-            
+
             if (e.NewValue == 1)
                 C1ListView.SelectionMode = C1.WPF.Core.C1SelectionMode.Extended;
-            
+
             if (e.NewValue == 2)
                 C1ListView.SelectionMode = C1.WPF.Core.C1SelectionMode.Multiple;
         }
@@ -52,6 +57,24 @@ namespace ListViewExplorer
 
             if (e.NewValue == 1)
                 C1ListView.Orientation = Orientation.Vertical;
+        }
+
+        private void OnItemTapped(object sender, C1.WPF.Core.C1TappedEventArgs e)
+        {
+            if (e.IsRightTapped)
+            {
+                var menu = new C1ContextMenu();
+                var removeMenuItem = new C1MenuItem() { IconTemplate = C1IconTemplate.Delete, Header = "Remove item" };
+                removeMenuItem.Click += OnRemoveMenuItem;
+                menu.Items.Add(removeMenuItem);
+                menu.Show(sender as FrameworkElement);
+            }
+        }
+
+        private async void OnRemoveMenuItem(object sender, SourcedEventArgs e)
+        {
+            if (C1ListView.SelectedIndex >= 0)
+                await C1ListView.DataCollection.RemoveAsync(C1ListView.SelectedIndex);
         }
     }
 }

@@ -36,8 +36,8 @@ namespace FlexGridExplorer
                 AllowAccessKey =true,
                 ItemsSource = new[]
                 {
-                    new { Value = true, Display = AppResources.ActiveLabel },
-                    new { Value = false, Display = AppResources.InactiveLabel }
+                    new { Value = true, Display = AppResources.ActiveAccessLabel },
+                    new { Value = false, Display = AppResources.InactiveAccessLabel }
                 },
                 DisplayMemberPath = "Display",
                 ValueMemberPath = "Value"

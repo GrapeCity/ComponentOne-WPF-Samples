@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
@@ -21,11 +21,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Spreadsheet.gclicx" />
+    <EmbeddedResource Include="Spreadsheet.sa3licx" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.GridControl">
-      <Version>10.0.20252.1221</Version>
+      <Version>10.0.20261.47</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

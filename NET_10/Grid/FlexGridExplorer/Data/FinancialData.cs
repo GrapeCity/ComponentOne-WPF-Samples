@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlexGridExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -20,21 +21,21 @@ namespace FlexGridExplorer
         List<decimal> _bidHistory = new List<decimal>();
         List<decimal> _saleHistory = new List<decimal>();
 
-        [Display(Name = "Symbol")]
+        [Display(Name = nameof(AppResources.SymbolLabel), ResourceType = typeof(AppResources))]
         public string Symbol
         {
             get { return (string)GetProp("Symbol"); }
             set { SetProp("Symbol", value); }
         }
 
-        [Display(Name = "Name")]
+        [Display(Name = nameof(AppResources.NameLabel), ResourceType = typeof(AppResources))]
         public string Name
         {
             get { return (string)GetProp("Name"); }
             set { SetProp("Name", value); }
         }
 
-        [Display(Name = "Bid")]
+        [Display(Name = nameof(AppResources.BidLabel), ResourceType = typeof(AppResources))]
         public decimal Bid
         {
             get { return (decimal)GetProp("Bid"); }
@@ -45,7 +46,7 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(Name = "Ask")]
+        [Display(Name = nameof(AppResources.AskLabel), ResourceType = typeof(AppResources))]
         public decimal Ask
         {
             get { return (decimal)GetProp("Ask"); }
@@ -56,7 +57,7 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(Name = "LastSale")]
+        [Display(Name = nameof(AppResources.LastSaleLabel), ResourceType = typeof(AppResources))]
         public decimal LastSale
         {
             get { return (decimal)GetProp("LastSale"); }
@@ -67,42 +68,42 @@ namespace FlexGridExplorer
             }
         }
 
-        [Display(Name = "BidSize")]
+        [Display(Name = nameof(AppResources.BidSizeLabel), ResourceType = typeof(AppResources))]
         public int BidSize
         {
             get { return (int)GetProp("BidSize"); }
             set { SetProp("BidSize", value); }
         }
 
-        [Display(Name = "AskSize")]
+        [Display(Name = nameof(AppResources.AskSizeLabel), ResourceType = typeof(AppResources))]
         public int AskSize
         {
             get { return (int)GetProp("AskSize"); }
             set { SetProp("AskSize", value); }
         }
 
-        [Display(Name = "LastSize")]
+        [Display(Name = nameof(AppResources.LastSizeLabel), ResourceType = typeof(AppResources))]
         public int LastSize
         {
             get { return (int)GetProp("LastSize"); }
             set { SetProp("LastSize", value); }
         }
 
-        [Display(Name = "Volume")]
+        [Display(Name = nameof(AppResources.VolumeLabel), ResourceType = typeof(AppResources))]
         public int Volume
         {
             get { return (int)GetProp("Volume"); }
             set { SetProp("Volume", value); }
         }
 
-        [Display(Name = "QuoteTime")]
+        [Display(Name = nameof(AppResources.QuoteTimeLabel), ResourceType = typeof(AppResources))]
         public DateTime QuoteTime
         {
             get { return (DateTime)GetProp("QuoteTime"); }
             set { SetProp("QuoteTime", value); }
         }
 
-        [Display(Name = "TradeTime")]
+        [Display(Name = nameof(AppResources.TradeTimeLabel), ResourceType = typeof(AppResources))]
         public DateTime TradeTime
         {
             get { return (DateTime)GetProp("TradeTime"); }

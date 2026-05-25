@@ -3,7 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+      xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+      xmlns:res="clr-namespace:FlexGridExplorer.Resources"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
 
@@ -16,7 +17,7 @@
         </Grid.RowDefinitions>
         <c1:C1ComboBox x:Name="selectionMode" SelectionChanged="selectionMode_SelectionChanged" HorizontalAlignment="Left"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <TextBlock x:Name="lblShowMarquee" Text="ShowMarquee" VerticalAlignment="Center" />
+            <TextBlock x:Name="lblShowMarquee" Text="{x:Static res:AppResources.ShowMarquee}" VerticalAlignment="Center" />
             <c1:C1CheckBox Margin="5,0" x:Name="switchMarquee" IsChecked="{Binding ElementName=grid, Path=ShowMarquee, Mode=TwoWay}" VerticalAlignment="Center"/>
         </StackPanel>
         <TextBlock x:Name="lblSelection" Grid.Row="2"/>

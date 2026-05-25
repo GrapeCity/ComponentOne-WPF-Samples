@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -81,7 +81,27 @@
     <Compile Include="UndoStack\UndoStack.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Bitmap">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DX">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Excel">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Collapsed.png" />
@@ -127,29 +147,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\MergeCells_small.png" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Bitmap">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.DX">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Excel">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -158,4 +155,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,12 @@
+﻿flowchart TB
+    U[User Browser / Device]
+
+    U --> CDN[CDN / Static Hosting]
+    CDN --> APP[Frontend App (SPA / SSR)]
+
+    APP --> ROUTER[Router]
+    APP --> UI[UI Components]
+    APP --> STATE[State Management]
+    APP --> API[API Client]
+
+    API --> BACKEND[(Backend API)]

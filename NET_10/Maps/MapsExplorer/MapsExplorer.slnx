@@ -1,0 +1,14 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="Mixed Platforms" />
+    <Platform Name="x86" />
+  </Configurations>
+
+  <Project Path="MapsExplorer.csproj">
+    <Platform Solution="*|x86" Project="x86" />
+    <Platform Solution="Debug|Any CPU" Project="x86" />
+    <Platform Solution="Debug|Mixed Platforms" Project="x86" />
+    <Build Solution="Debug|Any CPU" Project="false" />
+  </Project>
+</Solution>

@@ -10,3 +10,5 @@ Shows the following samples
 	- AutomaticScaling
 	- Direction
 	- BulletGraph
+	- Marks and Labels
+	- Pointer

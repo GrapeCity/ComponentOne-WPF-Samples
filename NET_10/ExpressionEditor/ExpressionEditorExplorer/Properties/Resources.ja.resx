@@ -118,21 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CustomizationSampleDescription" xml:space="preserve">
-    <value>Customization sample shows how you can customize the appearance of C1ExpressionEditor and C1ExpressionEditorPanel controls.</value>
+    <value>カスタマイズサンプルでは、​​C1ExpressionEditor コントロールと C1ExpressionEditorPanel コントロールの外観をカスタマイズする方法を示します。</value>
+    <comment>Customization sample shows how you can customize the appearance of C1ExpressionEditor and C1ExpressionEditorPanel controls.</comment>
   </data>
   <data name="CustomizationSampleTitle" xml:space="preserve">
-    <value>Customization</value>
+    <value>カスタマイズ</value>
+    <comment>Customization</comment>
   </data>
   <data name="DataGridDemoDescription" xml:space="preserve">
-    <value>ExpressionEditor sample with DataGrid</value>
+    <value>DataGrid を使用した ExpressionEditor サンプル</value>
+    <comment>ExpressionEditor sample with DataGrid</comment>
   </data>
   <data name="DataGridDemoTitle" xml:space="preserve">
     <value>DataGrid</value>
+    <comment>DataGrid</comment>
+  </data>
+  <data name="DataGridIntegrationLabel" xml:space="preserve">
+    <value>Set an expression for the 'Expression Result' column in DataGrid using C1ExpressionEditor.</value>
   </data>
   <data name="FlexGridDemoDescription" xml:space="preserve">
-    <value>ExpressionEditor sample with C1FlexGrid</value>
+    <value>C1FlexGrid を使用した ExpressionEditor サンプル</value>
+    <comment>ExpressionEditor sample with C1FlexGrid</comment>
   </data>
   <data name="FlexGridDemoTitle" xml:space="preserve">
-    <value>Overview</value>
+    <value>概要</value>
+  </data>
+  <data name="FlexGridIntegrationLabel" xml:space="preserve">
+    <value>Set an expression for the 'Calculated Exp.' column in FlexGrid using C1ExpressionEditor, column options, or by editing a specific cell.</value>
   </data>
 </root>

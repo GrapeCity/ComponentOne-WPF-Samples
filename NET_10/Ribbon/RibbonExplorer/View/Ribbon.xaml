@@ -43,7 +43,7 @@
 
         <c1:C1Ribbon SelectedIndex="0">
             <c1:RibbonTabItem Header="{x:Static res:Resources.Home}">
-                <c1:RibbonGroup Header="Edit" ShowDialogLauncher="True" DialogLauncherClick="OnHomeDialogLaunched">
+                <c1:RibbonGroup Header="{x:Static res:Resources.Edit}" ShowDialogLauncher="True" DialogLauncherClick="OnHomeDialogLaunched">
                     <c1:RibbonGroup.GroupSizeDefinitions>
                         <c1:RibbonGroupSizeDefinition>
                             <c1:RibbonToolSizeDefinition Size="Large"/>

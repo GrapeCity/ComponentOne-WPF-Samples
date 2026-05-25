@@ -160,7 +160,7 @@
     <value>フィボナッチツールは、株価チャートのトレンド分析に使用されます。範囲セレクタを使用すると、計算対象のデータ範囲を選択できます。</value>
   </data>
   <data name="FinancialChartDescription" xml:space="preserve">
-    <value>新しい WPFFinancialChart のショーケースです。</value>
+    <value>新しい WPF FinancialChart のショーケースです。</value>
   </data>
   <data name="FinancialChartTitle" xml:space="preserve">
     <value>FinancialChart エクスプローラー</value>

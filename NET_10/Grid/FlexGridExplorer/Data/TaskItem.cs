@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlexGridExplorer.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,14 +15,25 @@ namespace FlexGridExplorer
         static string[] _lastNames = "Ambers|Bishop|Cole|Danson|Evers|Frommer|Griswold|Heath|Jammers|Krause|Lehman|Myers|Neiman|Orsted|Paulson|Quaid|Richards|Stevens|Trask|Ulam".Split('|');
         static string[] _subjects = "Winter tires for free|20 car washes for free|Mobile App|Photo Contests|Multi Utility".Split('|');
 
+        [Display(Name = nameof(AppResources.SubjectLabel), ResourceType = typeof(AppResources))]
         public string Subject { get; set; }
-        [Display(AutoGenerateFilter = false)]
+        
+        [Display(AutoGenerateFilter = false, Name = nameof(AppResources.AssignToLabel), ResourceType = typeof(AppResources))]
         public string AssignTo { get; set; }
+
+        [Display(Name = nameof(AppResources.OwnedByLabel), ResourceType = typeof(AppResources))]
         public string OwnedBy { get; set; }
+
+        [Display(Name = nameof(AppResources.DueDateLabel), ResourceType = typeof(AppResources))]
         public DateTime DueDate { get; set; }
-        [Display(Name = "Complete %")]
+        
+        [Display(Name = nameof(AppResources.CompleteLabel), ResourceType = typeof(AppResources))]
         public double Complete { get; set; }
+
+        [Display(Name = nameof(AppResources.DeferredLabel), ResourceType = typeof(AppResources))]
         public bool Deferred { get; set; }
+
+        [Display(Name = nameof(AppResources.UrgentLabel), ResourceType = typeof(AppResources))]
         public bool Urgent { get; set; }
 
         public static IEnumerable<TaskItem> GetRandomList(int count)

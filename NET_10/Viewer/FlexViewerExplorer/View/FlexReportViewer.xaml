@@ -54,7 +54,7 @@
         <DockPanel>
             <c1:C1DockControl DockPanel.Dock="Left" Margin="0" x:Name="dockControl"  HorizontalAlignment="Left" Width="380" MaxWidth="380" SlidingOpened="DockControl_SlidingOpened">
                 <c1:C1DockGroup >
-                    <c1:C1DockTabControl x:Name="sliding" DockMode="Docked" Dock="Left" ShowMenu="False" ShowSingleTab="False" ShowHeader="False" >
+                    <c1:C1DockTabControl x:Name="sliding" HorizontalFill="True" DockMode="Docked" Dock="Left" ShowMenu="False" ShowSingleTab="False" ShowHeader="False" >
                         <c1:C1DockTabItem x:Name="tabItem" Header="Reports" Visibility="Visible" TabShape="Rounded" >
                             <Grid>
                                 <Grid.RowDefinitions>

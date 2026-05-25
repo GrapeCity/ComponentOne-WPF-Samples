@@ -218,4 +218,12 @@
     <value>US$ Million</value>
     <comment>US$ Million</comment>
   </data>
+  <data name="RequestAPIPlaceholder" xml:space="preserve">
+    <value>Enter your map API key...</value>
+    <comment>Enter your map API key...</comment>
+  </data>
+  <data name="RequestAPITitle" xml:space="preserve">
+    <value>Requesting maps API key</value>
+    <comment>Requesting maps API key</comment>
+  </data>
 </root>

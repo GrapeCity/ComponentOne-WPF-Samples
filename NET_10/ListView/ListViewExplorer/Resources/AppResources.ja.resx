@@ -278,4 +278,10 @@
     <value>グループ化を解除</value>
     <comment>Remove Grouping</comment>
   </data>
+  <data name="LiveUpdatesDescription" xml:space="preserve">
+    <value>Show how the list is updated automatically when the source changes at runtime</value>
+  </data>
+  <data name="LiveUpdatesTitle" xml:space="preserve">
+    <value>Live Updates</value>
+  </data>
 </root>

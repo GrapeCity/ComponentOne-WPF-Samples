@@ -92,40 +92,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.ScheduleCore" Version="*" />
-    <PackageReference Include="C1.WPF.ScheduleCore" Version="*" />
-    <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Schedule">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Theming">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Theming.Office2016">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Theming.Office2016Black">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Toolbar">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\next7Button.LargeImage.png" />
     <Resource Include="Resources\todayButton.LargeImage.png" />
   </ItemGroup>
@@ -191,4 +157,36 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Schedule">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Office2016">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Office2016Black">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+  </ItemGroup>
 </Project>

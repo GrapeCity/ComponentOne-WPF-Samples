@@ -18,10 +18,10 @@
                 <c1:GridFilterRow Placeholder="{x:Static res:AppResources.FilterPlaceholderText}" AutoComplete="True"/>
             </c1:FlexGrid.Rows>
             <c1:FlexGrid.Columns>
-                <c1:GridColumn Header="Store" Binding="Store.ID" AllowGrouping="True"/>
-                <c1:GridColumn Header="Model" Binding="Car.Model" Width="*"/>
-                <c1:GridColumn Header="Price" Binding="Car.Price"/>
-                <c1:GridColumn Header="Automatic transmission" Binding="Car.TransmissAutomatic" AllowGrouping="True"/>
+                <c1:GridColumn Binding="Store.ID" AllowGrouping="True"/>
+                <c1:GridColumn Binding="Car.Model" Width="*"/>
+                <c1:GridColumn Binding="Car.Price"/>
+                <c1:GridColumn Binding="Car.TransmissAutomatic" AllowGrouping="True"/>
             </c1:FlexGrid.Columns>
         </c1:FlexGrid>
     </Grid>

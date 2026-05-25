@@ -170,7 +170,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <c1:C1Expander Header="Settings" ExpandDirection="Left" ExpandIconAlignment="Left" BorderThickness="0" Grid.Column="1" Grid.Row="1">
+        <c1:C1Expander Header="{x:Static res:AppResources.Settings}" ExpandDirection="Left" ExpandIconAlignment="Left" BorderThickness="0" Grid.Column="1" Grid.Row="1">
             <StackPanel Orientation="Vertical" Width="200" Margin="10,0,1,0">
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                     <TextBlock Text="Custom Cells:" VerticalAlignment="Center" Width="95" Margin="0,0,5,0" />
@@ -184,18 +184,18 @@
                     <TextBlock Text="Update Interval:" VerticalAlignment="Center" Width="95" Margin="0,0,5,0"/>
                     <c1:C1ComboBox x:Name="_cmbUpdateInterval" Width="90" VerticalAlignment="Center"
                                    SelectionChanged="_cmbUpdateInterval_SelectionChanged">
-                        <c1:C1ComboBoxItem Content="1000 ms" />
-                        <c1:C1ComboBoxItem Content="500 ms" />
+                        <c1:ComboBoxItem Content="1000 ms" />
+                        <c1:ComboBoxItem Content="500 ms" />
                     </c1:C1ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                     <TextBlock Text="Batch Size: " VerticalAlignment="Center" Width="95" Margin="0,0,5,0" />
                     <c1:C1ComboBox x:Name="_cmbBatchSize" Width="90" VerticalAlignment="Center"
                                    SelectionChanged="_cmbBatchSize_SelectionChanged" >
-                        <c1:C1ComboBoxItem Content="500 items" />
-                        <c1:C1ComboBoxItem Content="100 items" />
-                        <c1:C1ComboBoxItem Content="10 items" />
-                        <c1:C1ComboBoxItem Content="1 item" />
+                        <c1:ComboBoxItem Content="500 items" />
+                        <c1:ComboBoxItem Content="100 items" />
+                        <c1:ComboBoxItem Content="10 items" />
+                        <c1:ComboBoxItem Content="1 item" />
                     </c1:C1ComboBox>
                 </StackPanel>
             </StackPanel>
@@ -229,11 +229,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
+            <TextBlock x:Name="statusMessage" VerticalAlignment="Center"/>
             <c1:C1TextBox Style="{DynamicResource SearchBoxStyle}" x:Name="_srchCompanies" Width="200" HorizontalAlignment="Right" Grid.Column="0" Placeholder="{x:Static res:AppResources.Filter}" />
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
-                <TextBlock Text="Financial Info: " VerticalAlignment="Center"/>
-                <TextBlock x:Name="_txtCompanies" Text="Companies" VerticalAlignment="Center"/>
-            </StackPanel>
         </Grid>
     </Grid>
 </UserControl>

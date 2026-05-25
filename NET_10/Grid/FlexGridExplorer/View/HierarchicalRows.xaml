@@ -43,12 +43,12 @@
             <c1:C1ComboBox SelectedItem="{Binding ElementName=grid,Path=TreeIndentMode}" ItemsSource="{Binding DataContext.TreeIndentModes}" Margin="4 0" MinWidth="80"/>
         </StackPanel>
         <c1:C1TextBox Grid.Row="5" x:Name="filter" Margin="4" MaxLines="3" Placeholder="{x:Static res:AppResources.FilterPlaceholderText}" HorizontalAlignment="Left" MinWidth="250"/>
-        <StackPanel Grid.Row="6" Margin="4" Orientation="Horizontal">
-            <c1:C1CheckBox x:Name="matchCaseCheckbox" Content="Match case" Margin="4"/>
-            <c1:C1CheckBox x:Name="matchWholeWordCheckBox" Content="Match whole word" Margin="4" />
-            <c1:C1CheckBox x:Name="treatSpacesAsAndOperator" Content="Treat Spaces As And Operator" Margin="4" />
-            <c1:C1CheckBox x:Name="matchNumbers" Content="Match Numbers" Margin="4" />
-        </StackPanel>
+        <WrapPanel Grid.Row="6" Margin="4" Orientation="Horizontal">
+            <c1:C1CheckBox x:Name="matchCaseCheckbox" Content="{x:Static res:AppResources.MatchCase}" Margin="4"/>
+            <c1:C1CheckBox x:Name="matchWholeWordCheckBox" Content="{x:Static res:AppResources.MatchWholeWordLabel}" Margin="4" />
+            <c1:C1CheckBox x:Name="treatSpacesAsAndOperator" Content="{x:Static res:AppResources.TreatOperator}" Margin="4" />
+            <c1:C1CheckBox x:Name="matchNumbers" Content="{x:Static res:AppResources.MatchNumbers}" Margin="4" />
+        </WrapPanel>
         <c1:FlexGrid x:Name="grid" AutoGeneratingColumn="OnAutoGeneratingColumn" ChildItemsPath="SubTasks" TreeColumnIndex="1" Grid.Row="7">
             <i:Interaction.Behaviors>
                 <c1:FullTextFilterBehavior FilterEntry="{Binding Source={x:Reference filter}}" 

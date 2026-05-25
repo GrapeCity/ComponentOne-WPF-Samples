@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="DataViewDashboard.Views.SalesOrderDetailsChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+    <Grid>
+        <c1:C1Chart Palette="Flow">
+            <c1:C1Chart.Data>
+                <c1:ChartData ItemsSource="{Binding SalesOrderDetails}">
+                    <c1:DataSeries Label="Quantity" ChartType="Column" ValueBinding="{Binding OrderQty}" />
+                    <c1:DataSeries Label="Line Total" AxisY="Y2" ValueBinding="{Binding LineTotal}" />
+                </c1:ChartData>
+            </c1:C1Chart.Data>
+            <c1:C1Chart.View>
+                <c1:ChartView>
+                    <c1:ChartView.AxisX>
+                        <c1:Axis AnnoPosition="None" AxisType="X" MajorTickThickness="0" MinorTickThickness="0"/>
+                    </c1:ChartView.AxisX>
+                    <c1:ChartView.AxisY>
+                        <c1:Axis Min="0" Title="Units" AxisType="Y"/>
+                    </c1:ChartView.AxisY>
+                    <c1:ChartView.Axes>
+                        <c1:Axis Name="Y2" Min="0" Title="US Dollars" AnnoFormat="c0" Position="Far" MajorGridStrokeThickness="0" AxisType="Y"/>
+                    </c1:ChartView.Axes>
+                </c1:ChartView>
+            </c1:C1Chart.View>
+            <c1:C1ChartLegend Position="BottomLeft" Orientation="Horizontal" />
+        </c1:C1Chart>
+    </Grid>
+</UserControl>

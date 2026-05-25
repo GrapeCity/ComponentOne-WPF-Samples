@@ -21,26 +21,26 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="0">
             <Label x:Name="lblShowText" Content="Show text" VerticalAlignment="Center"/>
-            <c1:C1ComboBox x:Name="showItemsPicker" SelectedIndex="{Binding ShowTextSelectedIndex,Mode=TwoWay}" ItemsSource="{Binding ShowTextItems}" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <c1:C1ComboBox x:Name="showItemsPicker" ItemsSource="{Binding ShowTextItems}" SelectedIndex="{Binding ShowTextSelectedIndex,Mode=TwoWay}" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
             <Label x:Name="lblValue" Content="Value" VerticalAlignment="Center" Margin="10,0,0,0"/>
             <c1:C1NumericBox Minimum="{Binding Min}" Maximum="{Binding Max}" Value="{Binding Value}" Increment="25" HorizontalAlignment="Center" Format="P0" />
         </StackPanel>
-        <c1:C1LinearGauge Min="{Binding Min}" Max="{Binding Max}" Value="{Binding Value,Mode=TwoWay}" Grid.Row="1"
+        <c1:C1LinearGauge IsEnabled="True" Minimum="{Binding Min}" Maximum="{Binding Max}" Value="{Binding Value,Mode=TwoWay}" Grid.Row="1"
                           Step="{Binding Step}" Format="{Binding Format}" TextVisibility="{Binding ShowTextViaSelectedIndex}" 
                           ShowRanges="{Binding ShowRanges}" IsReadOnly="False" >
             <c1:C1LinearGauge.Ranges>
-                <c1:GaugeRange Min="0" Max="40" Color="#22B14C"/>
-                <c1:GaugeRange Min="40" Max="80" Color="#FF8080"/>
-                <c1:GaugeRange Min="80" Max="100" Color="#00A2E8"/>
+                <c1:GaugeRange From="0" To="40" Brush="#22B14C"/>
+                <c1:GaugeRange From="40" To="80" Brush="#FF8080"/>
+                <c1:GaugeRange From="80" To="100" Brush="#00A2E8"/>
             </c1:C1LinearGauge.Ranges>
         </c1:C1LinearGauge>
-        <c1:C1RadialGauge Min="{Binding Min}" Max="{Binding Max}" Value="{Binding Value,Mode=TwoWay}" Grid.Row="2"
+        <c1:C1RadialGauge IsEnabled="True" Minimum="{Binding Min}" Maximum="{Binding Max}" Value="{Binding Value,Mode=TwoWay}" Grid.Row="2"
                           Step="{Binding Step}" Format="{Binding Format}" TextVisibility="{Binding ShowTextViaSelectedIndex}" 
-                          ShowRanges="{Binding ShowRanges}" IsReadOnly="False" AutoScale="True" VerticalAlignment="Stretch" >
+                          ShowRanges="{Binding ShowRanges}" IsReadOnly="False" AutoScale="True" VerticalAlignment="Top" >
             <c1:C1RadialGauge.Ranges>
-                <c1:GaugeRange Min="0" Max="40" Color="#22B14C"/>
-                <c1:GaugeRange Min="40" Max="80" Color="#FF8080"/>
-                <c1:GaugeRange Min="80" Max="100" Color="#00A2E8"/>
+                <c1:GaugeRange From="0" To="40" Brush="#22B14C"/>
+                <c1:GaugeRange From="40" To="80" Brush="#FF8080"/>
+                <c1:GaugeRange From="80" To="100" Brush="#00A2E8"/>
             </c1:C1RadialGauge.Ranges>
         </c1:C1RadialGauge>
     </Grid>

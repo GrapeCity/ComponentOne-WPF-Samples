@@ -16,7 +16,7 @@
         </StackPanel>
         
         <c1:C1DockControl Grid.Row="1">
-            <c1:C1DockTabControl SelectedIndex="0">
+            <c1:C1DockTabControl SelectedIndex="0" HorizontalFill="True">
                 <c1:C1DockTabItem Header="Scheduler" >
                     <Grid>
                         <Grid.ColumnDefinitions>

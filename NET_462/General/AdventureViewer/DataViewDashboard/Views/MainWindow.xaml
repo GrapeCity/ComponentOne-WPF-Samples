@@ -1,0 +1,83 @@
+﻿<Window xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"  x:Class="DataViewDashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:DataViewDashboard.ViewModels"
+        xmlns:v="clr-namespace:DataViewDashboard.Views"
+        Title="Adventure Viewer" Height="650" Width="900"
+        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+        Foreground="White"
+        Icon="../Resources/WPF-AdventureViewer.ico"
+        x:Name="root">
+    <Window.Resources>
+        <vm:MainViewModel x:Key="viewmodel" />
+        <DataTemplate DataType="{x:Type vm:DataGridViewTypeViewModel}">
+            <v:GridView DataContext="{StaticResource viewmodel}" />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PropertyGridViewTypeViewModel}">
+            <v:PropertyGridView DataContext="{StaticResource viewmodel}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:TileViewTypeViewModel}">
+            <v:TileView DataContext="{StaticResource viewmodel}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:CarouselViewTypeViewModel}">
+            <v:CarouselView DataContext="{StaticResource viewmodel}"/>
+        </DataTemplate>
+        <!--<DataTemplate DataType="{x:Type vm:BookViewTypeViewModel}">
+            <v:BookView DataContext="{StaticResource viewmodel}"/>
+        </DataTemplate>-->
+
+    </Window.Resources>
+    <Grid DataContext="{StaticResource viewmodel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1:C1SimplifiedRibbon MarqueeBrush="#2196F3" BorderBrush="Transparent">
+            <c1:C1SimplifiedTabItem Header="Home" MouseOverBrush="#E3F2FD" >
+                <c1:C1SimplifiedRibbonGroup Header="Data" BorderBrush="Transparent">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarToggleButton PressedBrush="#BBDEFB" LabelTitle="Customers" IsChecked="True" GroupName="Data" LargeImageSource="/Resources/Business Cards.png" SmallImageSource="/Resources/Business Cards-small.png" Command="{Binding ChangeDataCommand}" CommandParameter="Customers"/>
+                    <c1:C1ToolbarToggleButton PressedBrush="#BBDEFB" LabelTitle="Products" GroupName="Data" LargeImageSource="/Resources/Box-Closed.png" SmallImageSource="/Resources/Box-Closed-small.png" Command="{Binding ChangeDataCommand}" CommandParameter="Products"/>
+                    <c1:C1ToolbarToggleButton PressedBrush="#BBDEFB" LabelTitle="Orders" GroupName="Data" LargeImageSource="/Resources/Notebook-Blue.png" SmallImageSource="/Resources/Notebook-Blue-small.png" Command="{Binding ChangeDataCommand}" CommandParameter="Orders"/>
+                </c1:C1SimplifiedRibbonGroup>
+                <c1:C1SimplifiedRibbonGroup Header="View" Margin="3 0">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarToggleButton PressedBrush="#BBDEFB" LabelTitle="Grid" IsChecked="True" GroupName="View" LargeImageSource="/Resources/Datasheet View.png" SmallImageSource="/Resources/Datasheet View-small.png" Command="{Binding ChangeViewCommand}" CommandParameter="DataGrid"/>
+                    <c1:C1ToolbarToggleButton PressedBrush="#BBDEFB" LabelTitle="Details" GroupName="View" LargeImageSource="/Resources/Form.png" SmallImageSource="/Resources/Form-small.png" Command="{Binding ChangeViewCommand}" CommandParameter="PropertyGrid"/>
+                    <c1:C1ToolbarToggleButton PressedBrush="#BBDEFB" LabelTitle="Tiles" GroupName="View" LargeImageSource="/Resources/Thumbnails.png" SmallImageSource="/Resources/Thumbnails-small.png" Command="{Binding ChangeViewCommand}" CommandParameter="TileView"/>
+                    <c1:C1ToolbarToggleButton PressedBrush="#BBDEFB" LabelTitle="Carousel" GroupName="View" LargeImageSource="/Resources/Window-New Window.png" SmallImageSource="/Resources/Window-New Window-small.png" Command="{Binding ChangeViewCommand}" CommandParameter="Carousel"/>
+
+                </c1:C1SimplifiedRibbonGroup>
+                <c1:C1SimplifiedRibbonGroup Header="View" Margin="3 0">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarToggleButton PressedBrush="Transparent"  LabelTitle="Refresh" GroupName="View" LargeImageSource="/Resources/Refresh-data.png" SmallImageSource="/Resources/Refresh-data-small.png" Command="{Binding RefreshCommand}" CommandParameter="DataGrid"/>
+                </c1:C1SimplifiedRibbonGroup>
+            </c1:C1SimplifiedTabItem>
+            <c1:C1SimplifiedTabItem Header="Data" MouseOverBrush="#BBDEFB">
+                <c1:C1SimplifiedRibbonGroup Header="Filter">
+                    <c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                        <c1:C1ToolbarGroupSizeDefinition>
+                            <c1:C1ToolbarControlSize>Large</c1:C1ToolbarControlSize>
+                        </c1:C1ToolbarGroupSizeDefinition>
+                    </c1:C1SimplifiedRibbonGroup.GroupSizeDefinitions>
+                    <c1:C1ToolbarButton PressedBrush="#BBDEFB" LabelTitle="Clear Filter" LargeImageSource="/Resources/Filter-Delete.png" SmallImageSource="/Resources/Filter-Delete-small.png" Command="{Binding ClearFilterCommand}" />
+                </c1:C1SimplifiedRibbonGroup>
+            </c1:C1SimplifiedTabItem>
+        </c1:C1SimplifiedRibbon>
+
+        <ContentControl Grid.Row="1" Content="{Binding SelectedView}" />
+        <c1:C1ProgressBar Grid.Row="1" IsIndeterminate="True" Visibility="{Binding SelectedDataView.IsLoading, Converter={StaticResource boolVisibilityConverter}}" />
+    </Grid>
+</Window>

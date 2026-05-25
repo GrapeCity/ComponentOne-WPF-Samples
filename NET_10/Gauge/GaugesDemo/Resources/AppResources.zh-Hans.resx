@@ -123,11 +123,17 @@
   <data name="AutomaticScalingTitle" xml:space="preserve">
     <value>自动缩放</value>
   </data>
+  <data name="Bad" xml:space="preserve">
+    <value>Bad</value>
+  </data>
   <data name="BulletGraphDescription" xml:space="preserve">
     <value>显示了一个具有好坏和目标范围的子弹图。</value>
   </data>
   <data name="BulletGraphTitle" xml:space="preserve">
     <value>子弹图</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
   </data>
   <data name="DirectionDescription" xml:space="preserve">
     <value>显示不同方向的线性仪表盘。</value>
@@ -147,6 +153,9 @@
   <data name="GettingStartedTitle" xml:space="preserve">
     <value>开始使用</value>
   </data>
+  <data name="Good" xml:space="preserve">
+    <value>Good</value>
+  </data>
   <data name="ImageSavedDescription" xml:space="preserve">
     <value>图片已经保存到设备中。</value>
   </data>
@@ -158,28 +167,6 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>保存</value>
-  </data>
-  <data name="Take" xml:space="preserve">
-    <value>获取</value>
-  </data>
-  <data name="UsingRangesDescription" xml:space="preserve">
-    <value>显示指针后自定义的范围。</value>
-  </data>
-  <data name="UsingRangesTitle" xml:space="preserve">
-    <value>使用范围</value>
-  </data>
-  <data name="Reversed" xml:space="preserve">
-    <value>Reversed</value>
-    <comment>Reversed</comment>
-  </data>
-  <data name="Bad" xml:space="preserve">
-    <value>Bad</value>
-  </data>
-  <data name="Direction" xml:space="preserve">
-    <value>Direction</value>
-  </data>
-  <data name="Good" xml:space="preserve">
-    <value>Good</value>
   </data>
   <data name="ShowRanges" xml:space="preserve">
     <value>Show Ranges</value>
@@ -193,10 +180,41 @@
   <data name="SweepAngle" xml:space="preserve">
     <value>Sweep Angle</value>
   </data>
+  <data name="Take" xml:space="preserve">
+    <value>获取</value>
+  </data>
   <data name="Target" xml:space="preserve">
     <value>Target</value>
   </data>
+  <data name="UsingRangesDescription" xml:space="preserve">
+    <value>显示指针后自定义的范围。</value>
+  </data>
+  <data name="UsingRangesTitle" xml:space="preserve">
+    <value>使用范围</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Value</value>
+  </data>
+  <data name="Reversed" xml:space="preserve">
+    <value>Reversed</value>
+    <comment>Reversed</comment>
+  </data>
+  <data name="ResumeAnimationLabel" xml:space="preserve">
+    <value>Resume Animation</value>
+  </data>
+  <data name="PauseAnimationLabel" xml:space="preserve">
+    <value>Pause Animation</value>
+  </data>
+  <data name="MarksAndLabelsTitle" xml:space="preserve">
+    <value>Marks and Labels</value>
+  </data>
+  <data name="MarksAndLabelsDescription" xml:space="preserve">
+    <value>Show how to use Marks and Labels in gauges</value>
+  </data>
+  <data name="PointerTitle" xml:space="preserve">
+    <value>Pointer</value>
+  </data>
+  <data name="PointerDescription" xml:space="preserve">
+    <value>Shows how to display a gauge pointer</value>
   </data>
 </root>

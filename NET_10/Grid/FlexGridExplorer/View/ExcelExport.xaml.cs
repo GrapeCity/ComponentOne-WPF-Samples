@@ -172,6 +172,7 @@ namespace FlexGridExplorer
                                     merged: checkMerged.IsChecked ?? false,
                                     formatted: checkFormatted.IsChecked ?? false,
                                     renderImages: checkRenderImages.IsChecked ?? false);
+                                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = dlg.FileName, UseShellExecute = true });
                                 break;
                             }
                         case ".htm" or ".html":
@@ -185,6 +186,7 @@ namespace FlexGridExplorer
                                     merged: checkMerged.IsChecked ?? false,
                                     formatted: checkFormatted.IsChecked ?? false,
                                     renderImages: checkRenderImages.IsChecked ?? false);
+                                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = dlg.FileName, UseShellExecute = true });
                                 break;
                             }
                         case ".pdf":
@@ -198,6 +200,7 @@ namespace FlexGridExplorer
                                     merged: checkMerged.IsChecked ?? false,
                                     formatted: checkFormatted.IsChecked ?? false,
                                     renderImages: checkRenderImages.IsChecked ?? false);
+                                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = dlg.FileName, UseShellExecute = true });
                                 break;
                             }
                         case ".xlsx":
@@ -211,6 +214,7 @@ namespace FlexGridExplorer
                                     merged: checkMerged.IsChecked ?? false,
                                     formatted: checkFormatted.IsChecked ?? false,
                                     renderImages: checkRenderImages.IsChecked ?? false);
+                                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = dlg.FileName, UseShellExecute = true });
                                 break;
                             }
                         case ".xlsm":
@@ -224,6 +228,7 @@ namespace FlexGridExplorer
                                     merged: checkMerged.IsChecked ?? false,
                                     formatted: checkFormatted.IsChecked ?? false,
                                     renderImages: checkRenderImages.IsChecked ?? false);
+                                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = dlg.FileName, UseShellExecute = true });
                                 break;
                             }
                         default:
@@ -300,12 +305,12 @@ namespace FlexGridExplorer
             }
 
             var newStack = new StackPanel() { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 10, 0, 0) };
-            var textBlock = new TextBlock() { Text = "Group By", VerticalAlignment = System.Windows.VerticalAlignment.Center, Margin = new Thickness(0, 0, 5, 0) };
+            var textBlock = new TextBlock() { Text = AppResources.GroupByLabel, VerticalAlignment = System.Windows.VerticalAlignment.Center, Margin = new Thickness(0, 0, 5, 0) };
             var comboBox = new C1ComboBox() { Width = 200, Margin = new Thickness(0, 0, 5, 0) };
             var items = new List<string>(ValidColumns);
             items.RemoveAll(x => Groupings.Contains(x));
             comboBox.ItemsSource = items;
-            comboBox.SelectedItemChanged += Grouping_0_SelectedItemChanged;
+            comboBox.SelectedValueChanged += Grouping_0_SelectedValueChanged;
             comboBox.KeyDown += Grouping_KeyDown;
             comboBox.PreviewMouseDown += Grouping_PreviewMouseDown;
             var addButton = new Button()
@@ -413,7 +418,7 @@ namespace FlexGridExplorer
 
             var textBlock = new TextBlock()
             {
-                Text = "Group By",
+                Text = AppResources.GroupByLabel,
                 VerticalAlignment = System.Windows.VerticalAlignment.Center,
                 Margin = new Thickness(0, 0, 5, 0),
             };
@@ -430,7 +435,7 @@ namespace FlexGridExplorer
             ValidColumns = columns;
 
             comboBox.ItemsSource = columns;
-            comboBox.SelectedItemChanged += Grouping_0_SelectedItemChanged;
+            comboBox.SelectedValueChanged += Grouping_0_SelectedValueChanged;
             comboBox.KeyDown += Grouping_KeyDown;
             comboBox.PreviewMouseDown += Grouping_PreviewMouseDown;
             stackPanel.Children.Add(comboBox);
@@ -462,7 +467,7 @@ namespace FlexGridExplorer
 
         #endregion
 
-        private void Grouping_0_SelectedItemChanged(object sender, C1.WPF.Core.PropertyChangedEventArgs<object> e)
+        private void Grouping_0_SelectedValueChanged(object sender, C1.WPF.Core.PropertyChangedEventArgs<object> e)
         {
             if (IsGroupingClicked && e.NewValue != null)
             {

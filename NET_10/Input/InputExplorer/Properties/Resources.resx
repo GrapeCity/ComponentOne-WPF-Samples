@@ -367,4 +367,7 @@
     <value>Check_me</value>
     <comment>Check_me</comment>
   </data>
+  <data name="EnterItemPlaceholderText" xml:space="preserve">
+    <value>Enter item name here</value>
+  </data>
 </root>

@@ -12,8 +12,8 @@
             <ColumnDefinition Width="2*" MinWidth="250"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="listView" ItemsSource="{Binding}" SelectionChanged="OnSelectionChanged" VerticalAlignment="Stretch" Grid.Column="0" SelectedIndex="0">
-            <ListView.ItemTemplate>
+        <c1:C1ListView x:Name="listView" ItemsSource="{Binding}" SelectionChanged="OnSelectionChanged" VerticalAlignment="Stretch" Grid.Column="0" SelectedIndex="0">
+            <c1:C1ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <Image Source="{Binding ThumbnailImageSource}" Width="40" Height="40" VerticalAlignment="Center"/>
@@ -23,8 +23,8 @@
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </c1:C1ListView.ItemTemplate>
+        </c1:C1ListView>
         <DockPanel Grid.Column="1">
             <Grid>
                 <Grid.RowDefinitions>

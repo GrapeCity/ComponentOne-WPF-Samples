@@ -1,0 +1,14 @@
+﻿flowchart TB
+    CLIENT[API Client / Frontend]
+
+    CLIENT --> GW[API Gateway / Controller Layer]
+
+    GW --> APP[Application Layer]
+    APP --> DOMAIN[Domain / Business Logic]
+    DOMAIN --> REPO[Repository Layer]
+
+    REPO --> DB[(Database)]
+    DOMAIN --> CACHE[(Cache)]
+    DOMAIN --> MQ[(Message Broker)]
+
+    APP --> EXT[External Services]

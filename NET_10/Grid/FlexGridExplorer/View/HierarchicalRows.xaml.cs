@@ -103,33 +103,36 @@ namespace FlexGridExplorer
                 e.Column.Format = "ddd d/M/yyyy";
         }
 
-        List<string> _treeExpandModes, _treeLinesModes, _treeIndentModes;
-        public List<string> TreeExpandModes
+        List<GridTreeExpandMode> _treeExpandModes;
+        List<GridTreeLinesMode> _treeLinesModes;
+        List<GridTreeIndentMode> _treeIndentModes;
+
+        public List<GridTreeExpandMode> TreeExpandModes
         {
             get
             {
                 if (_treeExpandModes == null)
-                    _treeExpandModes = Enum.GetNames(typeof(GridTreeExpandMode)).ToList();
+                    _treeExpandModes = Enum.GetValues<GridTreeExpandMode>().ToList();
                 return _treeExpandModes;
             }
         }
 
-        public List<string> TreeLinesModes
+        public List<GridTreeLinesMode> TreeLinesModes
         {
             get
             {
                 if (_treeLinesModes == null)
-                    _treeLinesModes = Enum.GetNames(typeof(GridTreeLinesMode)).ToList();
+                    _treeLinesModes = Enum.GetValues<GridTreeLinesMode>().ToList();
                 return _treeLinesModes;
             }
         }
 
-        public List<string> TreeIndentModes
+        public List<GridTreeIndentMode> TreeIndentModes
         {
             get
             {
                 if (_treeIndentModes == null)
-                    _treeIndentModes = Enum.GetNames(typeof(GridTreeIndentMode)).ToList();
+                    _treeIndentModes = Enum.GetValues<GridTreeIndentMode>().ToList();
                 return _treeIndentModes;
             }
         }

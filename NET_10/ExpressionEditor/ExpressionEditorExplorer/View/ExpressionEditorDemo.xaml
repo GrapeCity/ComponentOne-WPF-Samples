@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ExpressionEditorExplorer"
-             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"          
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:ExpressionEditorExplorer.Properties"  
              mc:Ignorable="d" 
              d:DesignHeight="450"
              d:DesignWidth="800">
@@ -20,7 +21,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" MaxWidth="600" Margin="10">
-            <TextBlock Text="Set an expression for the 'Calculated Exp.' column in FlexGrid using C1ExpressionEditor, column options, or by editing a specific cell." TextWrapping="Wrap"/>
+            <TextBlock Text="{x:Static res:Resources.FlexGridIntegrationLabel}" TextWrapping="Wrap"/>
             <c1:C1ExpressionEditor x:Name="expressionEditor" MaxHeight="200" ShowErrorBox="True" Engine="{StaticResource currentEngine}" />
             <c1:C1ExpressionEditorPanel MaxHeight="300" Margin="0 5 0 0" Editor="{Binding ElementName=expressionEditor}"/>
         </StackPanel>

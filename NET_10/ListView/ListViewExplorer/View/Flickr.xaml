@@ -19,8 +19,6 @@
                       ItemWidth="240" 
                       ItemHeight="192" 
                       ZoomMode="Enabled" 
-                      ViewportGap="0" 
-                      ViewportPreviewGap="0" 
                       RefreshWhileScrolling="False">
             <c1:C1ListView.PreviewItemTemplate>
                 <DataTemplate>

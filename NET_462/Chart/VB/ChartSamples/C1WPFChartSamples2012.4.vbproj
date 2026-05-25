@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>
     </RootNamespace>
-    <AssemblyName>C1WPFChartSamples2010.4</AssemblyName>
+    <AssemblyName>C1WPFChartSamples2012.4</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <MyType>Custom</MyType>
+    <DisableSA3>True</DisableSA3>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -180,7 +181,6 @@
       <SubType>Code</SubType>
     </Compile>
     <AppDesigner Include="My Project\" />
-    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="Resources\weather.csv" />
   </ItemGroup>
   <ItemGroup>
@@ -303,16 +303,19 @@
     <Resource Include="Resources\zoom_in.png" />
     <Resource Include="Resources\zoom_out.png" />
   </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.C1Chart">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.C1Chart.Extended">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

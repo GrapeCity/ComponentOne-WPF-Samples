@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="0">
             <Label x:Name="lblDir" Content="Direction" VerticalAlignment="Center"/>
-            <c1:C1ComboBox x:Name="directionPicker" SelectedIndex="{Binding DirectionSelectedIndex,Mode=TwoWay}" ItemsSource="{Binding DirectionItems}" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <c1:C1ComboBox x:Name="directionPicker" ItemsSource="{Binding DirectionItems}" SelectedIndex="{Binding DirectionSelectedIndex,Mode=TwoWay}" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
         </StackPanel>
         <StackPanel Orientation="{Binding DirectionOrientation}" VerticalAlignment="Center" Grid.Row="1">
             <c1:C1LinearGauge Value="{Binding Value,Mode=TwoWay}" Direction="{Binding Direction}" TextVisibility="All" IsReadOnly="False" />

@@ -22,7 +22,7 @@ namespace ExpressionEditorExplorer.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ExpressionEditorExplorer.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExpressionEditorExplorer.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace ExpressionEditorExplorer.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ExpressionEditorExplorer.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Customization sample shows how you can customize the appearance of C1ExpressionEditor and C1ExpressionEditorPanel controls..
         /// </summary>
-        internal static string CustomizationSampleDescription {
+        public static string CustomizationSampleDescription {
             get {
                 return ResourceManager.GetString("CustomizationSampleDescription", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace ExpressionEditorExplorer.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Customization.
         /// </summary>
-        internal static string CustomizationSampleTitle {
+        public static string CustomizationSampleTitle {
             get {
                 return ResourceManager.GetString("CustomizationSampleTitle", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace ExpressionEditorExplorer.Properties {
         /// <summary>
         ///   Looks up a localized string similar to ExpressionEditor sample with DataGrid.
         /// </summary>
-        internal static string DataGridDemoDescription {
+        public static string DataGridDemoDescription {
             get {
                 return ResourceManager.GetString("DataGridDemoDescription", resourceCulture);
             }
@@ -90,16 +90,25 @@ namespace ExpressionEditorExplorer.Properties {
         /// <summary>
         ///   Looks up a localized string similar to DataGrid.
         /// </summary>
-        internal static string DataGridDemoTitle {
+        public static string DataGridDemoTitle {
             get {
                 return ResourceManager.GetString("DataGridDemoTitle", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set an expression for the &apos;Expression Result&apos; column in DataGrid using C1ExpressionEditor..
+        /// </summary>
+        public static string DataGridIntegrationLabel {
+            get {
+                return ResourceManager.GetString("DataGridIntegrationLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ExpressionEditor sample with C1FlexGrid.
         /// </summary>
-        internal static string FlexGridDemoDescription {
+        public static string FlexGridDemoDescription {
             get {
                 return ResourceManager.GetString("FlexGridDemoDescription", resourceCulture);
             }
@@ -108,9 +117,18 @@ namespace ExpressionEditorExplorer.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Overview.
         /// </summary>
-        internal static string FlexGridDemoTitle {
+        public static string FlexGridDemoTitle {
             get {
                 return ResourceManager.GetString("FlexGridDemoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set an expression for the &apos;Calculated Exp.&apos; column in FlexGrid using C1ExpressionEditor, column options, or by editing a specific cell..
+        /// </summary>
+        public static string FlexGridIntegrationLabel {
+            get {
+                return ResourceManager.GetString("FlexGridIntegrationLabel", resourceCulture);
             }
         }
     }

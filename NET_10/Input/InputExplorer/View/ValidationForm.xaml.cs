@@ -110,6 +110,15 @@ namespace InputExplorer
             _errors.Clear();
             Validator.TryValidateObject(this, new ValidationContext(this), _errors, true);
 
+            if(propertyName == nameof(WorkingFrom))
+            {
+                ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(nameof(WorkingTo)));
+            }
+            else if(propertyName == nameof(WorkingTo))
+            {
+                ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(nameof(WorkingFrom)));
+            }
+
             ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
@@ -147,7 +156,7 @@ namespace InputExplorer
             int result = WorkingTo - WorkingFrom;
             if (result > 8)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult( Properties.Resources.CanNotWorkMoreThan, new[] { nameof(WorkingFrom), nameof(WorkingTo) });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult( Properties.Resources.CanNotWorkMoreThan, new[] { nameof(WorkingFrom),  nameof(WorkingTo) });
             }
         }
     }

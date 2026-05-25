@@ -225,4 +225,8 @@
   <data name="Popup" xml:space="preserve">
     <value>Popup</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Edit</comment>
+  </data>
 </root>

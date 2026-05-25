@@ -19,7 +19,7 @@ namespace FlexGridExplorer.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class AppResources {
@@ -63,6 +63,15 @@ namespace FlexGridExplorer.Resources {
         /// <summary>
         ///   Looks up a localized string similar to _Active.
         /// </summary>
+        public static string ActiveAccessLabel {
+            get {
+                return ResourceManager.GetString("ActiveAccessLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Active.
+        /// </summary>
         public static string ActiveLabel {
             get {
                 return ResourceManager.GetString("ActiveLabel", resourceCulture);
@@ -75,6 +84,15 @@ namespace FlexGridExplorer.Resources {
         public static string AddGroupTooltip {
             get {
                 return ResourceManager.GetString("AddGroupTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
             }
         }
         
@@ -115,11 +133,29 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Album.
+        /// </summary>
+        public static string AlbumLabel {
+            get {
+                return ResourceManager.GetString("AlbumLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All customers.
         /// </summary>
         public static string AllCustomersLabel {
             get {
                 return ResourceManager.GetString("AllCustomersLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        public static string AllLabel {
+            get {
+                return ResourceManager.GetString("AllLabel", resourceCulture);
             }
         }
         
@@ -133,11 +169,83 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Artist.
+        /// </summary>
+        public static string ArtistLabel {
+            get {
+                return ResourceManager.GetString("ArtistLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ask.
+        /// </summary>
+        public static string AskLabel {
+            get {
+                return ResourceManager.GetString("AskLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ask Size.
+        /// </summary>
+        public static string AskSizeLabel {
+            get {
+                return ResourceManager.GetString("AskSizeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assign To.
+        /// </summary>
+        public static string AssignToLabel {
+            get {
+                return ResourceManager.GetString("AssignToLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bid.
+        /// </summary>
+        public static string BidLabel {
+            get {
+                return ResourceManager.GetString("BidLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bid Size.
+        /// </summary>
+        public static string BidSizeLabel {
+            get {
+                return ResourceManager.GetString("BidSizeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brand.
+        /// </summary>
+        public static string BrandLabel {
+            get {
+                return ResourceManager.GetString("BrandLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string CategoryLabel {
+            get {
+                return ResourceManager.GetString("CategoryLabel", resourceCulture);
             }
         }
         
@@ -180,6 +288,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Channel.
+        /// </summary>
+        public static string ChannelLabel {
+            get {
+                return ResourceManager.GetString("ChannelLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show how to select flexgrid rows through checkboxes..
         /// </summary>
         public static string CheckListDescription {
@@ -194,6 +311,15 @@ namespace FlexGridExplorer.Resources {
         public static string CheckListTitle {
             get {
                 return ResourceManager.GetString("CheckListTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
             }
         }
         
@@ -297,7 +423,16 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uses a CellFactory to apply conditional formatting..
+        ///   Looks up a localized string similar to Complete %.
+        /// </summary>
+        public static string CompleteLabel {
+            get {
+                return ResourceManager.GetString("CompleteLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to apply conditional formatting..
         /// </summary>
         public static string ConditionalFormattingDescription {
             get {
@@ -311,6 +446,15 @@ namespace FlexGridExplorer.Resources {
         public static string ConditionalFormattingTitle {
             get {
                 return ResourceManager.GetString("ConditionalFormattingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string CountryLabel {
+            get {
+                return ResourceManager.GetString("CountryLabel", resourceCulture);
             }
         }
         
@@ -450,11 +594,38 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deferred.
+        /// </summary>
+        public static string DeferredLabel {
+            get {
+                return ResourceManager.GetString("DeferredLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DetailsVisibiltyMode.
         /// </summary>
         public static string DetailsVisibiltyMode {
             get {
                 return ResourceManager.GetString("DetailsVisibiltyMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Due Date.
+        /// </summary>
+        public static string DueDateLabel {
+            get {
+                return ResourceManager.GetString("DueDateLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duration.
+        /// </summary>
+        public static string DurationLabel {
+            get {
+                return ResourceManager.GetString("DurationLabel", resourceCulture);
             }
         }
         
@@ -536,6 +707,15 @@ namespace FlexGridExplorer.Resources {
         public static string EditRow {
             get {
                 return ResourceManager.GetString("EditRow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e-mail.
+        /// </summary>
+        public static string EMail {
+            get {
+                return ResourceManager.GetString("EMail", resourceCulture);
             }
         }
         
@@ -675,11 +855,47 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Financial Info: {0:N0} companies.
+        /// </summary>
+        public static string FinancialInfoMessage {
+            get {
+                return ResourceManager.GetString("FinancialInfoMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Financial.
         /// </summary>
         public static string FinancialTitle {
             get {
                 return ResourceManager.GetString("FinancialTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finish.
+        /// </summary>
+        public static string FinishLabel {
+            get {
+                return ResourceManager.GetString("FinishLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Name.
+        /// </summary>
+        public static string FirstName {
+            get {
+                return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Formatted.
+        /// </summary>
+        public static string Formatted {
+            get {
+                return ResourceManager.GetString("Formatted", resourceCulture);
             }
         }
         
@@ -765,24 +981,6 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create groups by dragging column headers into the grouping areas..
-        /// </summary>
-        public static string GroupingPanelDescription {
-            get {
-                return ResourceManager.GetString("GroupingPanelDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Grouping Panel.
-        /// </summary>
-        public static string GroupingPanelTitle {
-            get {
-                return ResourceManager.GetString("GroupingPanelTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Grouping.
         /// </summary>
         public static string GroupingTitle {
@@ -837,11 +1035,74 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Id.
+        /// </summary>
+        public static string IdLabel {
+            get {
+                return ResourceManager.GetString("IdLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _Inactive.
+        /// </summary>
+        public static string InactiveAccessLabel {
+            get {
+                return ResourceManager.GetString("InactiveAccessLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inactive.
         /// </summary>
         public static string InactiveLabel {
             get {
                 return ResourceManager.GetString("InactiveLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        public static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Order Date.
+        /// </summary>
+        public static string LastOrderDateLabel {
+            get {
+                return ResourceManager.GetString("LastOrderDateLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Order Time.
+        /// </summary>
+        public static string LastOrderTimeLabel {
+            get {
+                return ResourceManager.GetString("LastOrderTimeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Sale.
+        /// </summary>
+        public static string LastSaleLabel {
+            get {
+                return ResourceManager.GetString("LastSaleLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Size.
+        /// </summary>
+        public static string LastSizeLabel {
+            get {
+                return ResourceManager.GetString("LastSizeLabel", resourceCulture);
             }
         }
         
@@ -869,6 +1130,15 @@ namespace FlexGridExplorer.Resources {
         public static string LoadRules {
             get {
                 return ResourceManager.GetString("LoadRules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        public static string LocationLabel {
+            get {
+                return ResourceManager.GetString("LocationLabel", resourceCulture);
             }
         }
         
@@ -927,6 +1197,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Model.
+        /// </summary>
+        public static string ModelLabel {
+            get {
+                return ResourceManager.GetString("ModelLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Monday.
         /// </summary>
         public static string Monday {
@@ -950,6 +1229,15 @@ namespace FlexGridExplorer.Resources {
         public static string MouseHoverTitle {
             get {
                 return ResourceManager.GetString("MouseHoverTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string NameLabel {
+            get {
+                return ResourceManager.GetString("NameLabel", resourceCulture);
             }
         }
         
@@ -990,6 +1278,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        public static string NoLabel {
+            get {
+                return ResourceManager.GetString("NoLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string OK {
@@ -1017,11 +1314,47 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Order Average.
+        /// </summary>
+        public static string OrderAverageLabel {
+            get {
+                return ResourceManager.GetString("OrderAverageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Count.
+        /// </summary>
+        public static string OrderCountLabel {
+            get {
+                return ResourceManager.GetString("OrderCountLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Total.
+        /// </summary>
+        public static string OrderTotalLabel {
+            get {
+                return ResourceManager.GetString("OrderTotalLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Other Options:.
         /// </summary>
         public static string OtherOptionsLabel {
             get {
                 return ResourceManager.GetString("OtherOptionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owned By.
+        /// </summary>
+        public static string OwnedByLabel {
+            get {
+                return ResourceManager.GetString("OwnedByLabel", resourceCulture);
             }
         }
         
@@ -1076,6 +1409,42 @@ namespace FlexGridExplorer.Resources {
         public static string PinColumnTitle {
             get {
                 return ResourceManager.GetString("PinColumnTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PostalCode.
+        /// </summary>
+        public static string PostalCode {
+            get {
+                return ResourceManager.GetString("PostalCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string PriceLabel {
+            get {
+                return ResourceManager.GetString("PriceLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quote Time.
+        /// </summary>
+        public static string QuoteTimeLabel {
+            get {
+                return ResourceManager.GetString("QuoteTimeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rating.
+        /// </summary>
+        public static string RatingLabel {
+            get {
+                return ResourceManager.GetString("RatingLabel", resourceCulture);
             }
         }
         
@@ -1188,6 +1557,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rules.
+        /// </summary>
+        public static string Rules {
+            get {
+                return ResourceManager.GetString("Rules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Saturday.
         /// </summary>
         public static string Saturday {
@@ -1202,6 +1580,15 @@ namespace FlexGridExplorer.Resources {
         public static string SaveColumnLayout {
             get {
                 return ResourceManager.GetString("SaveColumnLayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Headers.
+        /// </summary>
+        public static string SaveHeaders {
+            get {
+                return ResourceManager.GetString("SaveHeaders", resourceCulture);
             }
         }
         
@@ -1287,6 +1674,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Showcase Playground.
         /// </summary>
         public static string ShowcasePlaygroundHeader {
@@ -1314,7 +1710,7 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ShowMarquee.
+        ///   Looks up a localized string similar to Show Marquee.
         /// </summary>
         public static string ShowMarquee {
             get {
@@ -1328,6 +1724,15 @@ namespace FlexGridExplorer.Resources {
         public static string ShowSort {
             get {
                 return ResourceManager.GetString("ShowSort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size.
+        /// </summary>
+        public static string SizeLabel {
+            get {
+                return ResourceManager.GetString("SizeLabel", resourceCulture);
             }
         }
         
@@ -1395,6 +1800,33 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        public static string StartLabel {
+            get {
+                return ResourceManager.GetString("StartLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Store.
+        /// </summary>
+        public static string StoreLabel {
+            get {
+                return ResourceManager.GetString("StoreLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subject.
+        /// </summary>
+        public static string SubjectLabel {
+            get {
+                return ResourceManager.GetString("SubjectLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows a row that summarizes the values in the columns.
         /// </summary>
         public static string SummaryRowDescription {
@@ -1422,6 +1854,33 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Symbol.
+        /// </summary>
+        public static string SymbolLabel {
+            get {
+                return ResourceManager.GetString("SymbolLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task Name.
+        /// </summary>
+        public static string TaskNameLabel {
+            get {
+                return ResourceManager.GetString("TaskNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theme.
+        /// </summary>
+        public static string ThemeLabel {
+            get {
+                return ResourceManager.GetString("ThemeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Thursday.
         /// </summary>
         public static string Thursday {
@@ -1436,6 +1895,42 @@ namespace FlexGridExplorer.Resources {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string TitleLabel {
+            get {
+                return ResourceManager.GetString("TitleLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trade Time.
+        /// </summary>
+        public static string TradeTimeLabel {
+            get {
+                return ResourceManager.GetString("TradeTimeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transmiss Automatic.
+        /// </summary>
+        public static string TransmissAutomaticLabel {
+            get {
+                return ResourceManager.GetString("TransmissAutomaticLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transmiss Speed Count.
+        /// </summary>
+        public static string TransmissSpeedCountLabel {
+            get {
+                return ResourceManager.GetString("TransmissSpeedCountLabel", resourceCulture);
             }
         }
         
@@ -1548,6 +2043,15 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Urgent.
+        /// </summary>
+        public static string UrgentLabel {
+            get {
+                return ResourceManager.GetString("UrgentLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bug.
         /// </summary>
         public static string ValidationBugIcon {
@@ -1647,6 +2151,42 @@ namespace FlexGridExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Visible Columns.
+        /// </summary>
+        public static string VisibleColumns {
+            get {
+                return ResourceManager.GetString("VisibleColumns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visible Rows.
+        /// </summary>
+        public static string VisibleRows {
+            get {
+                return ResourceManager.GetString("VisibleRows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Volume.
+        /// </summary>
+        public static string VolumeLabel {
+            get {
+                return ResourceManager.GetString("VolumeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WBS.
+        /// </summary>
+        public static string WBSLabel {
+            get {
+                return ResourceManager.GetString("WBSLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Wednesday.
         /// </summary>
         public static string Wednesday {
@@ -1670,6 +2210,24 @@ namespace FlexGridExplorer.Resources {
         public static string Weekend {
             get {
                 return ResourceManager.GetString("Weekend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xml Files (*.xml).
+        /// </summary>
+        public static string XmlFilterMessage {
+            get {
+                return ResourceManager.GetString("XmlFilterMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string YesLabel {
+            get {
+                return ResourceManager.GetString("YesLabel", resourceCulture);
             }
         }
     }

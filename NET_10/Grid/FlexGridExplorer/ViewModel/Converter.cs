@@ -17,7 +17,7 @@ namespace FlexGridExplorer
         {
             if (value == null) return null;
             string strVal = null;
-            if (value is C1ComboBoxItem cbItem)
+            if (value is ComboBoxItem cbItem)
             {
                 strVal = cbItem.Content.ToString();
             }

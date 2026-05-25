@@ -36,7 +36,7 @@ namespace SQLiteDataBase
                 if (count == 0)
                 {
                     var total = 100_000;
-                    message.Text = $"Creating {total} records...";
+                    message.Text = string.Format(AppResources.CreatinRecordsMessage, total);
                     await Task.Delay(100);
                     for (int i = 0; i < total; i++)
                     {
@@ -66,7 +66,7 @@ namespace SQLiteDataBase
 
         private void OnAutoGeneratingColumn(object sender, GridAutoGeneratingColumnEventArgs e)
         {
-            if (e.Property.Name == "FirstName" || e.Property.Name == "LastName")
+            if (e.Property.Name == nameof(Person.FirstName) || e.Property.Name == nameof(Person.LastName))
             {
                 e.Column.Width = new GridLength(1, GridUnitType.Star);
                 e.Column.FilterLoading += OnFilterLoading;

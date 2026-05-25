@@ -134,7 +134,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -172,17 +171,20 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
     <C1_MSBuildToolsVersion>v4.0</C1_MSBuildToolsVersion>
     <C1_MSBuildToolsVersion Condition="$(VisualStudioVersion) != '10.0' And $(VisualStudioVersion) != '11.0'">v12.0</C1_MSBuildToolsVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+  </ItemGroup>
 </Project>

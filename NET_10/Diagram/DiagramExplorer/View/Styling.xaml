@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="DiagramExplorer.View.Styling"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DiagramExplorer.View"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        
+        <Style TargetType="c1:Node">
+            <Setter Property="Shape" Value="RoundedRectangle" />
+            <Setter Property="NodeStyle">
+                <Setter.Value>
+                    <c1:ChartStyle Fill="LightBlue" Stroke="Red" StrokeThickness="2" 
+                                   FontFamily="Segoe Script"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="TitleStyle">
+                <Setter.Value>
+                    <c1:ChartStyle FontFamily="Segoe Script"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="c1:Edge">
+            <Setter Property="TargetArrow" Value="Normal" />
+            <Setter Property="EdgeStyle">
+                <Setter.Value>
+                    <c1:ChartStyle Stroke="Red" StrokeThickness="3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    <Grid>
+        <c1:FlexDiagram x:Name="diagram" >
+            
+            <c1:Node Title="Start" ID="start" />
+            <c1:Node Title="Decision" ID="decision" />
+            <c1:Node Title="Option A" ID="optionA" />
+            <c1:Node Title="Option B" ID="optionB" />
+            <c1:Node Title="Option C" ID="optionC" />
+
+            <c1:FlexDiagram.Edges>
+                <c1:Edge SourceID="start" TargetID="decision" />
+                <c1:Edge SourceID="decision" TargetID="optionA" />
+                <c1:Edge SourceID="decision" TargetID="optionB" />
+                <c1:Edge SourceID="decision" TargetID="optionC" />
+            </c1:FlexDiagram.Edges>
+            
+        </c1:FlexDiagram>
+    </Grid>
+</UserControl>

@@ -102,7 +102,9 @@ namespace FilterEditor
             var xmlSerializer = new XmlSerializer(typeof(CombinationExpression));
             using (var fs = File.Open(filePath, FileMode.Open))
             {
+#pragma warning disable CA3075, CA5369 // Insecure DTD processing in XML
                 filterExpression = xmlSerializer.Deserialize(fs) as CombinationExpression;
+#pragma warning restore CA3075, CA5369 // Insecure DTD processing in XML
             }
 
             return filterExpression;

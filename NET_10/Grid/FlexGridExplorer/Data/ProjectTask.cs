@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using FlexGridExplorer.Resources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,22 +16,22 @@ namespace FlexGridExplorer
         }
 
         [ObservableProperty]
-        [Display(Order = 0)]
+        [Display(Name = nameof(AppResources.WBSLabel), ResourceType = typeof(AppResources), Order = 0)]
         public string wBS;
 
-        [Display(Name = "Task Name", Order = 1)]
+        [Display(Name = nameof(AppResources.TaskNameLabel), ResourceType = typeof(AppResources), Order = 1)]
         [ObservableProperty]
         public string name;
 
         [ObservableProperty]
-        [Display(Order = 2)]
+        [Display(Name = nameof(AppResources.DurationLabel), ResourceType = typeof(AppResources), Order = 2)]
         public TimeSpan duration;
 
         [ObservableProperty]
-        [Display(Order = 3)]
+        [Display(Name = nameof(AppResources.StartLabel), ResourceType = typeof(AppResources), Order = 3)]
         public DateTime start;
 
-        [Display(Order = 4)]
+        [Display(Name = nameof(AppResources.FinishLabel), ResourceType = typeof(AppResources), Order = 4)]
         public DateTime Finish
         {
             get

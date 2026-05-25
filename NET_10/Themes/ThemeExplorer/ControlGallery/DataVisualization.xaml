@@ -13,7 +13,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
     
-    <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree" >
+    <c1:C1TabControl TabStripPlacement="Left" Margin="5" IndicatorPlacement="Right" UnselectedContentMode="OutsideVisualTree">
         <c1:C1TabItem Header="{x:Static p:Resources.BarCode}" BorderThickness="0" >
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
                 <TextBlock Text="{x:Static p:Resources.BarcodeType}" Margin="0,5,0,5"/>
@@ -59,7 +59,7 @@
             </c1:FlexPie>
         </c1:C1TabItem>
         <c1:C1TabItem Header="{x:Static p:Resources.Gauge}" BorderThickness="0">
-            <Grid Margin="10">
+            <Grid Margin="10" MaxWidth="700">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -72,7 +72,7 @@
                 <StackPanel Orientation="Horizontal" Grid.Row="0">
                     <Label Content="Value" VerticalAlignment="Center"/>
                     <c1:C1NumericBox Value="{Binding DataContext.GaugeValue, Mode=TwoWay}" Minimum="0" Maximum="100" Increment="25" Width="50" />
-                    <c1:C1CheckBox Content="Allow user interaction" IsChecked="{Binding Path=DataContext.IsGaugeReadOnly, Converter={StaticResource IsReadOnlyConverter}}"/>
+                    <c1:C1CheckBox Content="Allow user interaction" IsChecked="{Binding Path=DataContext.IsGaugeReadOnly, Converter={StaticResource IsReadOnlyConverter}}" Margin="8 0"/>
                 </StackPanel>
                 <Label Content="LinearGauge" Margin="0 5 0 0" Grid.Row="1"/>
                 <c1:C1LinearGauge Value="{Binding DataContext.GaugeValue,Mode=TwoWay}" IsReadOnly="{Binding DataContext.IsGaugeReadOnly}" IsEnabled="True" TextVisibility="All" Grid.Row="2"/>
@@ -80,8 +80,7 @@
                 <c1:C1BulletGraph Value="{Binding DataContext.GaugeValue,Mode=TwoWay}" IsReadOnly="{Binding DataContext.IsGaugeReadOnly}" IsEnabled="True" TextVisibility="All" Grid.Row="4" 
                           Good="80" Bad="45" Target="90"/>
                 <Label Content="RadialGauge" Margin="0 5 0 0" Grid.Row="5"/>
-                <c1:C1RadialGauge Value="{Binding DataContext.GaugeValue,Mode=TwoWay}" IsReadOnly="{Binding DataContext.IsGaugeReadOnly}" IsEnabled="True" TextVisibility="All" Grid.Row="6"
-                          HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+                <c1:C1RadialGauge Value="{Binding DataContext.GaugeValue,Mode=TwoWay}" IsReadOnly="{Binding DataContext.IsGaugeReadOnly}" IsEnabled="True" TextVisibility="All" Grid.Row="6" VerticalAlignment="Top" />
             </Grid>
         </c1:C1TabItem>
         <!-- Maps -->

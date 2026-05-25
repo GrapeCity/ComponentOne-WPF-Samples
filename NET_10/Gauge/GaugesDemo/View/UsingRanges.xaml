@@ -27,17 +27,17 @@
         </StackPanel>
         <c1:C1LinearGauge x:Name="linearGauge" Value="{Binding Value,Mode=TwoWay}" ShowRanges="{Binding ShowRanges}" IsReadOnly="False" Grid.Row="1">
             <c1:C1LinearGauge.Ranges>
-                <c1:GaugeRange Min="0" Max="40" Color="#22B14C"/>
-                <c1:GaugeRange Min="40" Max="80" Color="#FF8080"/>
-                <c1:GaugeRange Min="80" Max="100" Color="#EEE04A"/>
+                <c1:GaugeRange From="0" To="40" Brush="#22B14C"/>
+                <c1:GaugeRange From="40" To="80" Brush="#FF8080"/>
+                <c1:GaugeRange From="80" To="100" Brush="#EEE04A"/>
             </c1:C1LinearGauge.Ranges>
         </c1:C1LinearGauge>
         <c1:C1RadialGauge x:Name="radialGauge" Value="{Binding Value,Mode=TwoWay}" ShowRanges="{Binding ShowRanges}" Grid.Row="2"
-                          IsReadOnly="False" AutoScale="True" VerticalAlignment="Stretch">
+                          IsReadOnly="False" AutoScale="True" VerticalAlignment="Top">
             <c1:C1RadialGauge.Ranges>
-                <c1:GaugeRange Min="0" Max="40" Color="#22B14C"/>
-                <c1:GaugeRange Min="40" Max="80" Color="#FF8080"/>
-                <c1:GaugeRange Min="80" Max="100" Color="#EEE04A"/>
+                <c1:GaugeRange From="0" To="40" Brush="#22B14C"/>
+                <c1:GaugeRange From="40" To="80" Brush="#FF8080"/>
+                <c1:GaugeRange From="80" To="100" Brush="#EEE04A"/>
             </c1:C1RadialGauge.Ranges>
         </c1:C1RadialGauge>
     </Grid>

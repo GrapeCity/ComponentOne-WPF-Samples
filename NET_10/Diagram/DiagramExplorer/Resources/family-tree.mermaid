@@ -1,0 +1,103 @@
+﻿graph TD
+    %% Targaryen Dynasty
+    AerysII["🔥 Aerys II 'The Mad King'<br/>Targaryen 👑"]
+    Rhaella["🔥 Rhaella Targaryen<br/>(sister-wife) 👸"]
+    Rhaegar["🔥 Rhaegar Targaryen 🤴"]
+    Viserys["🔥 Viserys Targaryen 👑"]
+    Daenerys["🔥 Daenerys Targaryen<br/>🐉 Mother of Dragons 👸"]
+    
+    %% Stark Family
+    Rickard["🐺 Rickard Stark ⚔️"]
+    Lyanna["🐺 Lyanna Stark 🌹"]
+    Ned["🐺 Eddard 'Ned' Stark<br/>🗡️ Lord of Winterfell"]
+    Catelyn["🐺 Catelyn Tully 👩‍👧‍👦"]
+    Robb["🐺 Robb Stark<br/>👑 King in the North"]
+    Sansa["🐺 Sansa Stark 👸"]
+    Arya["🐺 Arya Stark 🗡️"]
+    Bran["🐺 Bran Stark<br/>👁️ The Three-Eyed Raven"]
+    Rickon["🐺 Rickon Stark 🏃‍♂️"]
+    Jon["🐺❄️ Jon Snow<br/>(Aegon Targaryen) 🗡️"]
+    
+    %% Lannister Family
+    Tywin["🦁 Tywin Lannister<br/>💰 The Great Lion"]
+    Joanna["🦁 Joanna Lannister 👸"]
+    Jaime["🦁 Jaime Lannister<br/>⚔️ Kingslayer"]
+    Cersei["🦁 Cersei Lannister<br/>👑 Queen Mother"]
+    Tyrion["🦁 Tyrion Lannister<br/>🍷 The Imp"]
+    Joffrey["👑 Joffrey Baratheon<br/>(actually Lannister) 😈"]
+    Myrcella["👸 Myrcella Baratheon<br/>(actually Lannister) 🌸"]
+    Tommen["👑 Tommen Baratheon<br/>(actually Lannister) 🐱"]
+    
+    %% Baratheon Family
+    Steffon["🦌 Steffon Baratheon ⚰️"]
+    Robert["🦌 Robert Baratheon<br/>👑 The Usurper 🍺"]
+    Stannis["🦌 Stannis Baratheon<br/>⚖️ The Just"]
+    Renly["🦌 Renly Baratheon<br/>🌹 Lord of Storm's End"]
+    Shireen["🦌 Shireen Baratheon<br/>📚 Princess"]
+    Gendry["🦌 Gendry<br/>(Robert's bastard) 🔨"]
+    
+    %% Tully Family
+    Hoster["🐟 Hoster Tully<br/>🏰 Lord of Riverrun"]
+    Lysa["🐟 Lysa Tully<br/>🦅 Lady of the Vale"]
+    Edmure["🐟 Edmure Tully<br/>🎣 Heir of Riverrun"]
+    RobinArryn["🦅 Robin Arryn<br/>(Sweetrobin) 🍼"]
+    
+    %% Connections - Targaryens
+    AerysII <-.->|married| Rhaella
+    AerysII --> Rhaegar
+    AerysII --> Viserys
+    AerysII --> Daenerys
+    Rhaegar <-.->|secret marriage| Lyanna
+    Rhaegar --> Jon
+    
+    %% Connections - Starks
+    Rickard --> Lyanna
+    Rickard --> Ned
+    Ned <-.->|married| Catelyn
+    Ned --> Robb
+    Ned --> Sansa
+    Ned --> Arya
+    Ned --> Bran
+    Ned --> Rickon
+    Lyanna --> Jon
+    
+    %% Connections - Lannisters
+    Tywin <-.->|married| Joanna
+    Tywin --> Jaime
+    Tywin --> Cersei
+    Tywin --> Tyrion
+    Jaime <-.->|affair| Cersei
+    Cersei --> Joffrey
+    Cersei --> Myrcella
+    Cersei --> Tommen
+    
+    %% Connections - Baratheons
+    Steffon --> Robert
+    Steffon --> Stannis
+    Steffon --> Renly
+    Robert <-.->|married| Cersei
+    Robert --> Gendry
+    Stannis --> Shireen
+    
+    %% Cross-family marriages
+    %%  Catelyn -.->|married| Ned
+    %%  Cersei -.->|married| Robert
+    
+    %% Tully connections
+    Hoster --> Catelyn
+    Hoster --> Lysa
+    Hoster --> Edmure
+    Lysa --> RobinArryn
+    
+    %% Styling
+    classDef targaryen fill:#8B0000,stroke:#FFD700,stroke-width:3px,color:#FFD700
+    classDef stark fill:#708090,stroke:#FFFFFF,stroke-width:2px,color:#FFFFFF
+    classDef lannister fill:#FFD700,stroke:#8B0000,stroke-width:2px,color:#8B0000
+    classDef baratheon fill:#000000,stroke:#FFD700,stroke-width:2px,color:#FFD700
+    classDef tully fill:#4682B4,stroke:#FF6347,stroke-width:2px,color:#FFFFFF
+    
+    class AerysII,Rhaella,Rhaegar,Viserys,Daenerys,Jon targaryen
+    class Rickard,Lyanna,Ned,Robb,Sansa,Arya,Bran,Rickon stark
+    class Tytos,Tywin,Joanna,Jaime,Cersei,Tyrion,Joffrey,Myrcella,Tommen lannister
+    class Steffon,Robert,Stannis,Renly,Shireen,Gendry baratheon
+    class Hoster,CatelynT,Catelyn,Lysa,Edmure,RobinArryn tully

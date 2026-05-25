@@ -43,7 +43,9 @@ namespace BasicControls
                 try
                 {
                     #region ** parse flickr data
+#pragma warning disable CA3075 // Insecure DTD processing in XML
                     var doc = XDocument.Load(new XmlTextReader(e.Result));
+#pragma warning restore CA3075 // Insecure DTD processing in XML
                     foreach (var entry in doc.Descendants(XName.Get("entry", AtomNS)))
                     {
                         var title = entry.Element(XName.Get("title", AtomNS)).Value;

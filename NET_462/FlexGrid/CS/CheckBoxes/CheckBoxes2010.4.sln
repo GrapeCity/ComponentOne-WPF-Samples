@@ -55,6 +55,7 @@ Global
 		SolutionGuid = {E6FB9C99-B660-4BCA-B95A-75B6A75E36B5}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\..\..\..\Shared\GCLicensing\GcWPF452Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+		..\..\..\..\Shared\Licensing\Licensing.projitems*{1855a88f-0a0b-418a-b1c8-01eed7b796d5}*SharedItemsImports = 5
+		..\..\..\..\Shared\Licensing\Licensing.projitems*{5a1e5d6e-790d-448c-bd56-b7dff3d5bbd0}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

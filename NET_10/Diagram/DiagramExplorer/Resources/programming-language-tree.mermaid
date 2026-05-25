@@ -1,0 +1,110 @@
+graph TD
+    %% Root - Machine Code
+    MC("Machine Code<br/>(1940s)") --> ASM("Assembly<br/>(1949)")
+    
+    %% Early High-Level Languages
+    ASM --> FORTRAN("FORTRAN<br/>(1957)")
+    ASM --> LISP("LISP<br/>(1958)")
+    ASM --> ALGOL("ALGOL<br/>(1958)")
+    ASM --> COBOL("COBOL<br/>(1959)")
+    
+    %% FORTRAN lineage
+    FORTRAN --> F90("Fortran 90+<br/>(1990s)")
+    FORTRAN --> BASIC("BASIC<br/>(1964)")
+    BASIC --> VB("Visual Basic<br/>(1991)")
+    
+    %% ALGOL family
+    ALGOL --> CPL("CPL<br/>(1963)")
+    ALGOL --> SIMULA("Simula<br/>(1967)")
+    ALGOL --> PASCAL("Pascal<br/>(1970)")
+    ALGOL --> C("C<br/>(1972)")
+    
+    CPL --> BCPL("BCPL<br/>(1967)")
+    BCPL --> B("B<br/>(1969)")
+    B --> C
+    
+    PASCAL --> MODULA("Modula-2<br/>(1978)")
+    PASCAL --> ADA("Ada<br/>(1983)")
+    PASCAL --> DELPHI("Delphi<br/>(1995)")
+    
+    %% C family - the big one
+    C --> CPP("C++<br/>(1983)")
+    C --> OBJC("Objective-C<br/>(1984)")
+    C --> PERL("Perl<br/>(1987)")
+    C --> PYTHON("Python<br/>(1991)")
+    C --> RUBY("Ruby<br/>(1995)")
+    C --> PHP("PHP<br/>(1995)")
+    C --> JS("JavaScript<br/>(1995)")
+    C --> JAVA("Java<br/>(1995)")
+    C --> CSHARP("C#<br/>(2000)")
+    C --> GO("Go<br/>(2009)")
+    C --> RUST("Rust<br/>(2010)")
+    C --> SWIFT("Swift<br/>(2014)")
+    
+    CPP --> JAVA
+    CPP --> CSHARP
+    CPP --> RUST
+    
+    JAVA --> SCALA("Scala<br/>(2003)")
+    JAVA --> KOTLIN("Kotlin<br/>(2011)")
+    
+    JS --> TS("TypeScript<br/>(2012)")
+    
+    OBJC --> SWIFT
+    
+    %% LISP family
+    LISP --> SCHEME("Scheme<br/>(1975)")
+    LISP --> CL("Common Lisp<br/>(1984)")
+    LISP --> ELISP("Emacs Lisp<br/>(1985)")
+    LISP --> CLOJURE("Clojure<br/>(2007)")
+    
+    SCHEME --> RACKET("Racket<br/>(1995)")
+    
+    %% ML/Functional family
+    LISP --> ML("ML<br/>(1973)")
+    ML --> SML("Standard ML<br/>(1983)")
+    ML --> OCAML("OCaml<br/>(1996)")
+    ML --> FSHARP("F#<br/>(2005)")
+    
+    ML --> MIRANDA("Miranda<br/>(1985)")
+    MIRANDA --> HASKELL("Haskell<br/>(1990)")
+    HASKELL --> ELM("Elm<br/>(2012)")
+    HASKELL --> PURESCRIPT("PureScript<br/>(2013)")
+    
+    %% Smalltalk/OOP lineage
+    SIMULA --> SMALLTALK("Smalltalk<br/>(1972)")
+    SMALLTALK --> OBJC
+    SMALLTALK --> RUBY
+    SMALLTALK --> JAVA
+    
+    %% Prolog/Logic programming
+    ALGOL --> PROLOG("Prolog<br/>(1972)")
+    PROLOG --> ERLANG("Erlang<br/>(1986)")
+    ERLANG --> ELIXIR("Elixir<br/>(2011)")
+    
+    %% SQL/Database
+    COBOL --> SQL("SQL<br/>(1974)")
+    
+    %% Shell/Scripting
+    ASM --> SH("Shell (sh)<br/>(1971)")
+    SH --> AWK("AWK<br/>(1977)")
+    AWK --> PERL
+    SH --> BASH("Bash<br/>(1989)")
+    
+    %% Styling
+    classDef root fill:#ff6b6b,stroke:#333,stroke-width:3px,color:#fff
+    classDef ancient fill:#4ecdc4,stroke:#333,stroke-width:2px,color:#fff
+    classDef sixties fill:#7fcdbb,stroke:#333,stroke-width:2px,color:#fff
+    classDef classic fill:#45b7d1,stroke:#333,stroke-width:2px,color:#fff
+    classDef eighties fill:#6baed6,stroke:#333,stroke-width:2px,color:#fff
+    classDef modern fill:#96ceb4,stroke:#333,stroke-width:2px,color:#fff
+    classDef recent fill:#dda15e,stroke:#333,stroke-width:2px,color:#fff
+    
+    class MC root
+    class ASM ancient
+    class FORTRAN,LISP,ALGOL,COBOL ancient
+    class CPL,BASIC,SIMULA,BCPL,B sixties
+    class C,PASCAL,SMALLTALK,ML,PROLOG,SQL,SH,SCHEME,AWK classic
+    class MODULA,ADA,CPP,OBJC,CL,ELISP,MIRANDA,ERLANG,PERL,BASH,SML eighties
+    class F90,VB,PYTHON,RUBY,PHP,JS,JAVA,HASKELL,RACKET,OCAML,DELPHI modern
+    class CSHARP,SCALA,FSHARP,CLOJURE,GO,RUST,SWIFT,KOTLIN,TS,ELIXIR,ELM,PURESCRIPT recent

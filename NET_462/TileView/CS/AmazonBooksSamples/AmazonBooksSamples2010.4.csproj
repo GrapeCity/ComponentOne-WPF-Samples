@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,7 +54,18 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.BarCode">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Extended">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.TileView">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -75,20 +86,7 @@
     </Compile>
     <Compile Include="Books.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.BarCode">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Xaml.WPF.TileView">
-      <Version>4.6.20252.900</Version>
-    </PackageReference>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Amazon.xml" />
   </ItemGroup>
@@ -104,4 +102,7 @@
     <C1_MSBuildToolsVersion>v4.0</C1_MSBuildToolsVersion>
     <C1_MSBuildToolsVersion Condition="$(VisualStudioVersion) != '10.0' And $(VisualStudioVersion) != '11.0'">v12.0</C1_MSBuildToolsVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
 </Project>

@@ -16,8 +16,8 @@
         <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" HeadersVisibility="Column" IsReadOnly="True" Grid.Row="1">
             <c1:FlexGrid.Columns>
                 <c1:GridImageColumn Binding="Thumbnail" Header=" " Width="62" Placeholder="/FlexGridExplorer;component/Images/default.png"/>
-                <c1:GridHyperlinkColumn Binding="Link" ContentBinding="Title" Header="Title" TargetName="_blank" MinWidth="300" Width="*"/>
-                <c1:GridColumn Binding="ChannelTitle" Header="Channel"/>
+                <c1:GridHyperlinkColumn Binding="Link" ContentBinding="Title" TargetName="_blank" MinWidth="300" Width="*"/>
+                <c1:GridColumn Binding="ChannelTitle"/>
             </c1:FlexGrid.Columns>
             <e:Interaction.Behaviors>
                 <c1:EmptyGridBehavior EmptyView="{Binding ElementName=emptyListLabel}" />

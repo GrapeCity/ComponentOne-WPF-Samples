@@ -85,7 +85,9 @@ namespace FlexGridExplorer
                 var col = Grid.Columns[range.Column];
                 var row = Grid.Rows[range.Row];
                 var cellValue = Grid.GetCellValue(range);
-                ratingCell.Rating = Convert.ToInt32(cellValue);
+                var rating = 0;
+                try { rating = Convert.ToInt32(cellValue); } catch { }
+                ratingCell.Rating = rating;
                 ratingCell.Range = range;
                 if (row.DataItem is Song)
                     ratingCell.PropertyChanged += RatingCellOnPropertyChanged;

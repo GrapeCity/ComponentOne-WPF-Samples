@@ -5,5 +5,5 @@
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
         xmlns:local="clr-namespace:TabControlExplorer">
 
-    <local:TabControlExplorerView />
+    <local:TabControlExplorerView c1:AutomationProperties.Enabled="True"/>
 </Window>

@@ -129,10 +129,18 @@
   <data name="DataGridDemoTitle" xml:space="preserve">
     <value>DataGrid</value>
   </data>
+  <data name="DataGridIntegrationLabel" xml:space="preserve">
+    <value>Set an expression for the 'Expression Result' column in DataGrid using C1ExpressionEditor.</value>
+    <comment>Set an expression for the 'Expression Result' column in DataGrid using C1ExpressionEditor.</comment>
+  </data>
   <data name="FlexGridDemoDescription" xml:space="preserve">
     <value>ExpressionEditor sample with C1FlexGrid</value>
   </data>
   <data name="FlexGridDemoTitle" xml:space="preserve">
     <value>Overview</value>
+  </data>
+  <data name="FlexGridIntegrationLabel" xml:space="preserve">
+    <value>Set an expression for the 'Calculated Exp.' column in FlexGrid using C1ExpressionEditor, column options, or by editing a specific cell.</value>
+    <comment>Set an expression for the 'Calculated Exp.' column in FlexGrid using C1ExpressionEditor, column options, or by editing a specific cell.</comment>
   </data>
 </root>

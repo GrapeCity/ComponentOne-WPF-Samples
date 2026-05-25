@@ -29,7 +29,9 @@ namespace MainTestApplication
                     using (var stream = zip.Entries["songs.xml"].OpenReader())
                     {
                         var xmls = new XmlSerializer(typeof(List<Song>));
+#pragma warning disable CA3075, CA5369 // Insecure DTD processing in XML
                         return (List<Song>)xmls.Deserialize(stream);
+#pragma warning restore CA3075, CA5369 // Insecure DTD processing in XML
                     }
                 }
             }

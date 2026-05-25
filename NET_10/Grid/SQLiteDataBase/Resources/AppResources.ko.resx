@@ -124,4 +124,22 @@
   <data name="LoadingMessage" xml:space="preserve">
     <value>Loading data from database...</value>
   </data>
+  <data name="CreatinRecordsMessage" xml:space="preserve">
+    <value>Creating {0} records...</value>
+  </data>
+  <data name="FilterPlaceholderText" xml:space="preserve">
+    <value>Enter text to filter</value>
+  </data>
+  <data name="FirstNameLabel" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="IdLabel" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="LastNameLabel" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>SQLite data base</value>
+  </data>
 </root>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlexGridExplorer.Resources;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -6,13 +7,23 @@ namespace FlexGridExplorer
 {
     public class Car
     {
-        
+        [Display(Name = nameof(AppResources.BrandLabel), ResourceType = typeof(AppResources))]
         public string Brand { get; set; }
+
+        [Display(Name = nameof(AppResources.ModelLabel), ResourceType = typeof(AppResources))]
         public string Model { get; set; }
+
+        [Display(Name = nameof(AppResources.PriceLabel), ResourceType = typeof(AppResources))]
         public double Price { get; set; }
+
+        [Display(Name = nameof(AppResources.CategoryLabel), ResourceType = typeof(AppResources))]
         public string Category { get; set; }
+
+        [Display(Name = nameof(AppResources.TransmissSpeedCountLabel), ResourceType = typeof(AppResources))]
         public string TransmissSpeedCount { get; set; }
-        public string TransmissAutomatic { get; set; }
+
+        [Display(Name = nameof(AppResources.TransmissAutomaticLabel), ResourceType = typeof(AppResources))]
+        public bool? TransmissAutomatic { get; set; }
 
         [Browsable(false)]
         public int ID { get; set; }

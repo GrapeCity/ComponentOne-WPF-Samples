@@ -20,8 +20,8 @@
         <c1:C1BulletGraph x:Name="bullGauge" Margin="10,10,10,10" Value="{Binding Value, Mode=TwoWay}" TextVisibility="{Binding TextVisibility, Mode=TwoWay}" Good="80" Bad="45" Target="90" IsEnabled="True" Grid.Row="1"/>
 
         <c1:C1RadialGauge x:Name="radGauge" Margin="10,10,10,10" Value="{Binding Value, Mode=TwoWay}" TextVisibility="{Binding TextVisibility, Mode=TwoWay}" IsEnabled="True" AutoScale="True" StartAngle="-20" SweepAngle="220"  Grid.Row="2"/>
-        
-        <c1:C1CheckBox Grid.Row="3" Margin="20,10,10,10" Content="Reversed" IsChecked="{Binding IsReversed, ElementName=radGauge, Mode=TwoWay}" FontSize="16" />
+
+        <c1:C1CheckBox Grid.Row="3" HorizontalAlignment="Left" Margin="20,10,10,10" Content="Reversed" IsChecked="{Binding IsReversed, ElementName=radGauge, Mode=TwoWay}" FontSize="16" />
 
     </Grid>
 </UserControl>

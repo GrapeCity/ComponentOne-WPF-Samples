@@ -1,5 +1,5 @@
-﻿using GaugesDemo.Resources;
-using System;
+﻿using C1.WPF.ListView;
+using GaugesDemo.Resources;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,15 +25,18 @@ namespace GaugesDemo
                 new Sample() { Name = AppResources.AutomaticScalingTitle, Description = AppResources.AutomaticScalingDescription, SampleViewType = 4 , Thumbnail="gauge_scaling.png"},
                 new Sample() { Name = AppResources.DirectionTitle, Description = AppResources.DirectionDescription, SampleViewType = 5 , Thumbnail="gauge_linear.png"},
                 new Sample() { Name = AppResources.BulletGraphTitle, Description = AppResources.BulletGraphDescription, SampleViewType = 6 , Thumbnail="gauge_bullet.png"},
+                new Sample() { Name = AppResources.MarksAndLabelsTitle, Description = AppResources.MarksAndLabelsDescription, SampleViewType = 7 , Thumbnail="gauge_radial.png"},
+                new Sample() { Name = AppResources.PointerTitle, Description = AppResources.PointerDescription, SampleViewType = 8 , Thumbnail="gauge_radial.png"},
             };
         }
 
-        private void OnSelectionChanged(object sender, System.Windows.RoutedEventArgs e)
+
+        private void OnSelectionChanged(object sender, C1.WPF.Core.SelectionChangedEventArgs<int> e)
         {
             try
             {
                 listView.IsEnabled = false;
-                var sample = (sender as ListView)?.SelectedItem as Sample;
+                var sample = (sender as C1ListView)?.SelectedItem as Sample;
                 if (sample == null)
                     return;
                 var sampleControl = GetSample(sample.SampleViewType);
@@ -57,6 +60,8 @@ namespace GaugesDemo
                 case 4: return new AutomaticScaling();
                 case 5: return new Direction();
                 case 6: return new BulletGraph();
+                case 7: return new MarksAndLabels();
+                case 8: return new Pointer();
             }
             return null;
         }

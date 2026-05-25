@@ -26,7 +26,7 @@ namespace FinancialChartExplorer
         public LineBreak()
         {
             InitializeComponent();
-            Loaded += LineBreak_Loaded;
+            Loaded += (s, e) => cbSymbol.SelectedIndex = 0;
             Tag = AppResources.LineBreakTag;
         }
 
@@ -36,11 +36,6 @@ namespace FinancialChartExplorer
             {
                 return dataService.GetCompanies();
             }
-        }
-
-        void LineBreak_Loaded(object sender, RoutedEventArgs e)
-        {
-            cbSymbol.SelectedIndex = 0;
         }
 
         void OnSymbolSelectionChanged(object sender, SelectionChangedEventArgs e)

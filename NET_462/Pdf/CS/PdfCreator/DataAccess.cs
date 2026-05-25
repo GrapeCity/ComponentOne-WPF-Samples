@@ -38,7 +38,9 @@ namespace PdfCreator
                 var zip = new C1.Zip.C1ZipFile(s);
                 using (var zr = zip.Entries[0].OpenReader())
                 {
+#pragma warning disable CA3075, CA5366 // Insecure DTD processing in XML
                     ds.ReadXml(zr);
+#pragma warning restore CA3075, CA5366 // Insecure DTD processing in XML
                 }
             }
             return ds;

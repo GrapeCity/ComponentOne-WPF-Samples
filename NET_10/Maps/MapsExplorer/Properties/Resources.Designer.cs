@@ -295,6 +295,24 @@ namespace MapsExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter your map API key....
+        /// </summary>
+        public static string RequestAPIPlaceholder {
+            get {
+                return ResourceManager.GetString("RequestAPIPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requesting maps API key.
+        /// </summary>
+        public static string RequestAPITitle {
+            get {
+                return ResourceManager.GetString("RequestAPITitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter the tags:.
         /// </summary>
         public static string SearchLabel {

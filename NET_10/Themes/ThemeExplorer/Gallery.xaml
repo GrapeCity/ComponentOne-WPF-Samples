@@ -76,7 +76,7 @@
                                     <c1:ChecklistFilter x:Name="occupationFilter" PropertyName="Occupation" HeaderText="{x:Static p:Resources.Occupation}"/>
                                     <c1:RangeFilter PropertyName="Age" HeaderText="{x:Static p:Resources.Age}" Format="N0" Minimum="0" Maximum="115" UpperValue="70"/>
                                     <c1:NumericFilter PropertyName="Age" HeaderText="{x:Static p:Resources.Age}"  />
-                                    <c1:DateRangeFilter PropertyName="DOB" HeaderText="{x:Static p:Resources.DOB}" Minimum="01/01/1950" Maximum="01/01/2100"/>
+                                    <c1:DateOnlyRangeFilter PropertyName="DOB" HeaderText="{x:Static p:Resources.DOB}"/>
                                     <c1:FullTextFilter PropertyName="Name" HeaderText="{x:Static p:Resources.Name}"/>
                                     <c1:ThreeStateFilter PropertyName="Male" HeaderText="{x:Static p:Resources.Gender}" TrueLabel="Male" FalseLabel="Female" NullLabel="Unknown"/>
                                 </c1:C1DataFilter.Filters>
@@ -153,12 +153,12 @@
                                 <ColumnDefinition MinWidth="500" MaxWidth="800" Width="*"/>
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition />
-                            </Grid.ColumnDefinitions>                            
+                            </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition MinHeight="60" MaxHeight="100" Height="1*"/>
                                 <RowDefinition Height="3*"/>
                             </Grid.RowDefinitions>
-                            
+
                             <c1:C1ExpressionEditor x:Name="expressionEditor" Margin="5" ShowErrorBox="True" >
                                 <c1:C1ExpressionEditor.Engine>
                                     <c1:C1ExpressionEngine CurrentIndex="0" Expression="sqrt([Age])" />

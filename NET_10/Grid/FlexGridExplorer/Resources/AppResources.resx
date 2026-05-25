@@ -209,7 +209,7 @@
     <value>Sort</value>
   </data>
   <data name="ConditionalFormattingDescription" xml:space="preserve">
-    <value>Uses a CellFactory to apply conditional formatting.</value>
+    <value>Shows how to apply conditional formatting.</value>
   </data>
   <data name="ConditionalFormattingTitle" xml:space="preserve">
     <value>Conditional Formatting</value>
@@ -317,7 +317,7 @@
     <value>Weekend</value>
   </data>
   <data name="ShowMarquee" xml:space="preserve">
-    <value>ShowMarquee</value>
+    <value>Show Marquee</value>
   </data>
   <data name="NewRowDescription" xml:space="preserve">
     <value>Shows adding new rows.</value>
@@ -345,12 +345,6 @@
   </data>
   <data name="FinancialTitle" xml:space="preserve">
     <value>Financial</value>
-  </data>
-  <data name="GroupingPanelDescription" xml:space="preserve">
-    <value>Create groups by dragging column headers into the grouping areas.</value>
-  </data>
-  <data name="GroupingPanelTitle" xml:space="preserve">
-    <value>Grouping Panel</value>
   </data>
   <data name="CollectionViewDescription" xml:space="preserve">
     <value>Supports C1CollectionView to provide live sorting, filtering and grouping.</value>
@@ -419,10 +413,11 @@
     <value>Column Options</value>
   </data>
   <data name="ActiveLabel" xml:space="preserve">
-    <value>_Active</value>
+    <value>Active</value>
+    <comment>For Grid Column Name</comment>
   </data>
   <data name="InactiveLabel" xml:space="preserve">
-    <value>_Inactive</value>
+    <value>Inactive</value>
   </data>
   <data name="AdvancedFilteringTitle" xml:space="preserve">
     <value>Advanced Filtering</value>
@@ -674,5 +669,198 @@
   </data>
   <data name="ValidationDataGridStyle" xml:space="preserve">
     <value>DataGrid</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>PostalCode</value>
+  </data>
+  <data name="EMail" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Rules" xml:space="preserve">
+    <value>Rules</value>
+  </data>
+  <data name="FinancialInfoMessage" xml:space="preserve">
+    <value>Financial Info: {0:N0} companies</value>
+  </data>
+  <data name="SaveHeaders" xml:space="preserve">
+    <value>Save Headers</value>
+  </data>
+  <data name="VisibleRows" xml:space="preserve">
+    <value>Visible Rows</value>
+  </data>
+  <data name="VisibleColumns" xml:space="preserve">
+    <value>Visible Columns</value>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>Formatted</value>
+  </data>
+  <data name="IdLabel" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="LastOrderDateLabel" xml:space="preserve">
+    <value>Last Order Date</value>
+  </data>
+  <data name="LastOrderTimeLabel" xml:space="preserve">
+    <value>Last Order Time</value>
+  </data>
+  <data name="OrderCountLabel" xml:space="preserve">
+    <value>Order Count</value>
+  </data>
+  <data name="OrderTotalLabel" xml:space="preserve">
+    <value>Order Total</value>
+  </data>
+  <data name="NameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CountryLabel" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="OrderAverageLabel" xml:space="preserve">
+    <value>Order Average</value>
+  </data>
+  <data name="AlbumLabel" xml:space="preserve">
+    <value>Album</value>
+  </data>
+  <data name="ArtistLabel" xml:space="preserve">
+    <value>Artist</value>
+  </data>
+  <data name="DurationLabel" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="SizeLabel" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="RatingLabel" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="SubjectLabel" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="AssignToLabel" xml:space="preserve">
+    <value>Assign To</value>
+  </data>
+  <data name="OwnedByLabel" xml:space="preserve">
+    <value>Owned By</value>
+  </data>
+  <data name="DueDateLabel" xml:space="preserve">
+    <value>Due Date</value>
+  </data>
+  <data name="CompleteLabel" xml:space="preserve">
+    <value>Complete %</value>
+  </data>
+  <data name="DeferredLabel" xml:space="preserve">
+    <value>Deferred</value>
+  </data>
+  <data name="UrgentLabel" xml:space="preserve">
+    <value>Urgent</value>
+  </data>
+  <data name="BrandLabel" xml:space="preserve">
+    <value>Brand</value>
+  </data>
+  <data name="ModelLabel" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="CategoryLabel" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="TransmissSpeedCountLabel" xml:space="preserve">
+    <value>Transmiss Speed Count</value>
+  </data>
+  <data name="TransmissAutomaticLabel" xml:space="preserve">
+    <value>Transmiss Automatic</value>
+  </data>
+  <data name="StoreLabel" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="LocationLabel" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="ChannelLabel" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="TitleLabel" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="SymbolLabel" xml:space="preserve">
+    <value>Symbol</value>
+  </data>
+  <data name="BidLabel" xml:space="preserve">
+    <value>Bid</value>
+  </data>
+  <data name="AskLabel" xml:space="preserve">
+    <value>Ask</value>
+  </data>
+  <data name="LastSaleLabel" xml:space="preserve">
+    <value>Last Sale</value>
+  </data>
+  <data name="BidSizeLabel" xml:space="preserve">
+    <value>Bid Size</value>
+  </data>
+  <data name="AskSizeLabel" xml:space="preserve">
+    <value>Ask Size</value>
+  </data>
+  <data name="LastSizeLabel" xml:space="preserve">
+    <value>Last Size</value>
+  </data>
+  <data name="VolumeLabel" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="QuoteTimeLabel" xml:space="preserve">
+    <value>Quote Time</value>
+  </data>
+  <data name="TradeTimeLabel" xml:space="preserve">
+    <value>Trade Time</value>
+  </data>
+  <data name="WBSLabel" xml:space="preserve">
+    <value>WBS</value>
+  </data>
+  <data name="TaskNameLabel" xml:space="preserve">
+    <value>Task Name</value>
+  </data>
+  <data name="StartLabel" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="FinishLabel" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="XmlFilterMessage" xml:space="preserve">
+    <value>Xml Files (*.xml)</value>
+  </data>
+  <data name="AllLabel" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="YesLabel" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="NoLabel" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ThemeLabel" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="ActiveAccessLabel" xml:space="preserve">
+    <value>_Active</value>
+    <comment>For Filter</comment>
+  </data>
+  <data name="InactiveAccessLabel" xml:space="preserve">
+    <value>_Inactive</value>
   </data>
 </root>

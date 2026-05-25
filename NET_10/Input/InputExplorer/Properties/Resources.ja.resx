@@ -377,12 +377,15 @@
     <value>Off</value>
   </data>
   <data name="ComboBoxTitle" xml:space="preserve">
-    <value />
+    <value>ComboBox</value>
   </data>
   <data name="C1ComboBoxDes" xml:space="preserve">
-    <value />
+    <value>Shows how to customize the appearance of C1ComboBox items.</value>
   </data>
   <data name="CheckMe" xml:space="preserve">
-    <value />
+    <value>Check_me</value>
+  </data>
+  <data name="EnterItemPlaceholderText" xml:space="preserve">
+    <value>Enter item name here</value>
   </data>
 </root>

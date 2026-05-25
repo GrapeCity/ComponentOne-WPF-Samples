@@ -11,7 +11,6 @@
     <Reference Include="System.Printing" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Licenses.licx" />
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
@@ -22,16 +21,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Automation">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Bitmap">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DX">
-      <Version>4.6.20252.900</Version>
+      <Version>4.6.20261.8</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
@@ -42,4 +41,7 @@
   <Target Name="WarpEffectTarget" BeforeTargets="PreBuildEvent">
     <Exec Command="&quot;$(ProjectDir)\Fxc\fxc.exe&quot; /Tvs_4_0_level_9_1 /Emain /Fo &quot;$(ProjectDir)Resources\WarpEffect.cso&quot; &quot;$(ProjectDir)Effects\WarpEffect.hlsl&quot;" />
   </Target>
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
 </Project>

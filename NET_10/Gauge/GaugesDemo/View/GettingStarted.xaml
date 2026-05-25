@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:GaugesDemo.Resources"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
@@ -11,6 +12,32 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <Storyboard x:Key="AnimateGauges" AutoReverse="True" RepeatBehavior="Forever">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="c1LinearGauge" Storyboard.TargetProperty="(c1:C1Gauge.Value)">
+                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="00:00:02" Value="100">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <QuadraticEase EasingMode="EaseInOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="c1BulletGraph" Storyboard.TargetProperty="(c1:C1Gauge.Value)">
+                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="00:00:02" Value="100">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <QuadraticEase EasingMode="EaseInOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="c1RadialGauge" Storyboard.TargetProperty="(c1:C1Gauge.Value)">
+                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="00:00:02" Value="100">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <QuadraticEase EasingMode="EaseInOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -23,17 +50,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <Label x:Name="lblValue" Content="Value" VerticalAlignment="Center"/>
-            <c1:C1NumericBox x:Name="ValueStepper" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Min}" Maximum="{Binding Max}" Increment="25" />
-        </StackPanel>
+        <c1:C1Button x:Name="AnimationButton" Content="{x:Static res:AppResources.PauseAnimationLabel}" Click="AnimationButton_Click" Margin="4" HorizontalAlignment="Right"/>
         <Label Content="LinearGauge" Margin="0 5 0 0" Grid.Row="1"/>
-        <c1:C1LinearGauge Value="{Binding Value,Mode=TwoWay}" IsReadOnly="{Binding IsReadOnly}" IsEnabled="True" TextVisibility="{Binding ShowText}" Grid.Row="2"/>
+        <c1:C1LinearGauge x:Name="c1LinearGauge" Step="0" Value="{Binding Value,Mode=TwoWay}" IsReadOnly="{Binding IsReadOnly}" IsEnabled="True" IsAnimated="False" TextVisibility="{Binding ShowText}" Grid.Row="2"/>
         <Label Content="BulletGraph" Margin="0 5 0 0" Grid.Row="3"/>
-        <c1:C1BulletGraph Value="{Binding Value,Mode=TwoWay}" IsReadOnly="{Binding IsReadOnly}" IsEnabled="True" TextVisibility="{Binding ShowText}" Grid.Row="4" 
+        <c1:C1BulletGraph x:Name="c1BulletGraph" Step="0" Value="{Binding Value,Mode=TwoWay}" IsReadOnly="{Binding IsReadOnly}" IsEnabled="True" IsAnimated="False" TextVisibility="{Binding ShowText}" Grid.Row="4" 
                           Good="80" Bad="45" Target="90"/>
         <Label Content="RadialGauge" Margin="0 5 0 0" Grid.Row="5"/>
-        <c1:C1RadialGauge Value="{Binding Value,Mode=TwoWay}" IsReadOnly="{Binding IsReadOnly}" IsEnabled="True" TextVisibility="{Binding ShowText}" 
-                          HorizontalAlignment="Left" VerticalAlignment="Stretch" Grid.Row="6"/>
+        <c1:C1RadialGauge x:Name="c1RadialGauge" Step="0" Value="{Binding Value,Mode=TwoWay}" IsReadOnly="{Binding IsReadOnly}" IsEnabled="True" IsAnimated="False" TextVisibility="{Binding ShowText}" AutoScale="True" VerticalAlignment="Top" Grid.Row="6"/>
     </Grid>
 </UserControl>

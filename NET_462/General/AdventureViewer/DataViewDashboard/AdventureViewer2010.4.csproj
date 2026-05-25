@@ -1,0 +1,190 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DataViewDashboard</RootNamespace>
+    <AssemblyName>AdventureViewer</AssemblyName>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\WPF-AdventureViewer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Service References\AdventureWorksService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.datasvcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DB-First.png" />
+    <Resource Include="Resources\DB-Last.png" />
+    <Resource Include="Resources\DB-Next.png" />
+    <Resource Include="Resources\DB-Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bar-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Filter-Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Box-Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Business Cards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Datasheet View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Window-New Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Form-Nav Vert Tabs Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Thumbnails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Notebook-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceReferenceMetadataStorage Include="Service References\AdventureWorksService\">
+      <Type>datasvcmap</Type>
+    </ServiceReferenceMetadataStorage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Service References\AdventureWorksService\Reference.datasvcmap">
+      <Generator>DataServiceClientGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Resources\AdventureWorks_SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Book-Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WPF-AdventureViewer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Box-Closed-small.png" />
+    <Resource Include="Resources\Business Cards-small.png" />
+    <Resource Include="Resources\Datasheet View-small.png" />
+    <Resource Include="Resources\Filter-Delete-small.png" />
+    <Resource Include="Resources\Form-small.png" />
+    <Resource Include="Resources\Notebook-Blue-small.png" />
+    <Resource Include="Resources\Thumbnails-small.png" />
+    <Resource Include="Resources\Window-New Window-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Refresh-data.png" />
+    <Resource Include="Resources\Refresh-data-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xaml.WPF">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Binding">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.C1Chart">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Carousel">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.DateTimeEditors">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Extended">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGrid.GroupPanel">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.FlexGridFilter">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Cosmopolitan">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Theming.Ribbon">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.TileView">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xaml.WPF.Toolbar">
+      <Version>4.6.20261.8</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".sa3licx" />
+  </ItemGroup>
+</Project>

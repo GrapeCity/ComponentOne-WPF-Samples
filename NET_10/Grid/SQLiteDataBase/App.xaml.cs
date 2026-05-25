@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using System.Windows;
+using System.Windows.Markup;
 
 namespace SQLiteDataBase
 {
@@ -13,5 +9,15 @@ namespace SQLiteDataBase
     /// </summary>
     public partial class App : Application
     {
+        ///<inheritdoc/>
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var culture = CultureInfo.CurrentUICulture;
+            FrameworkElement.LanguageProperty.OverrideMetadata(
+                typeof(FrameworkElement),
+                new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(culture.Name)));
+        }
     }
 }

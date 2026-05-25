@@ -26,13 +26,8 @@ namespace FinancialChartExplorer
         public EquiVolume()
         {
             InitializeComponent();
-            this.Loaded += EquiVolume_Loaded;
+            Loaded += (s,e) => cbSymbol.SelectedIndex = 0;
             Tag = AppResources.EquiVolumeTag;
-        }
-
-        void EquiVolume_Loaded(object sender, RoutedEventArgs e)
-        {
-            cbSymbol.SelectedIndex = 0;
         }
 
         void OnSymbolSelectionChanged(object sender, SelectionChangedEventArgs e)

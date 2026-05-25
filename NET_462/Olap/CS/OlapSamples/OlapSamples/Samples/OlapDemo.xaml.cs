@@ -40,7 +40,9 @@ namespace OlapSamples
                 using (var zr = zip.Entries[0].OpenReader())
                 {
                     // load data
+#pragma warning disable CA3075, CA5366 // Insecure DTD processing in XML
                     ds.ReadXml(zr);
+#pragma warning restore CA3075, CA5366 // Insecure DTD processing in XML
                 }
             }
 

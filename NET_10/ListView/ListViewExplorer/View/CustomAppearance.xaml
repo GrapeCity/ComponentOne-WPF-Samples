@@ -35,9 +35,10 @@
                     </Style>
                 </Setter.Value>
             </Setter>
+            <Setter Property="SelectedBackground" Value="#44FFFFFF"/>
         </Style>
     </UserControl.Resources>
     <Grid>
-        <c1:C1ListView x:Name="listView" DisplayMemberPath="Name" Style="{StaticResource ListViewStyle}" ItemHeight="43"/>
+        <c1:C1ListView x:Name="listView" DisplayMemberPath="Name" Style="{StaticResource ListViewStyle}" SelectionMode="Extended" ItemHeight="43"/>
     </Grid>
 </UserControl>

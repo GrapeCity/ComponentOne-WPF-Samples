@@ -7,5 +7,5 @@
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
         mc:Ignorable="d"
         Title="ExpressionEditor Demo" Height="450" Width="800" WindowState="Maximized">
-    <local:ExpressionEditorView/>
+    <local:ExpressionEditorView c1:AutomationProperties.Enabled="True"/>
 </Window>

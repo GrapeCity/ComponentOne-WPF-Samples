@@ -1,11 +1,13 @@
-﻿using System;
+﻿using C1.DataCollection;
+using FlexGridExplorer.Resources;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using C1.DataCollection;
 
 namespace FlexGridExplorer
 {
@@ -159,10 +161,15 @@ namespace FlexGridExplorer
     [DataContract]
     public class YouTubeVideo
     {
+        [Display(Name = nameof(AppResources.TitleLabel), ResourceType = typeof(AppResources))]
         public string Title { get; set; }
         public string Description { get; set; }
         public string Thumbnail { get; set; }
+
+        [Display(Name = nameof(AppResources.TitleLabel), ResourceType = typeof(AppResources))]
         public string Link { get; set; }
+
+        [Display(Name = nameof(AppResources.ChannelLabel), ResourceType = typeof(AppResources))]
         public string ChannelTitle { get; set; }
     }
 }
