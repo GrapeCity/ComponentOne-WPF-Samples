@@ -4,8 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Xml.Linq;
+using System.Xml;
 
 namespace StockChart
 {
@@ -108,7 +107,8 @@ namespace StockChart
             // not in cache, get now
             if (dataStream == null)
             {
-                var fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full";
+                // using outputsize = compact (free tier)
+                var fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=compact";
                 var url = string.Format(fmt, symbol);
                 try
                 {
@@ -242,8 +242,10 @@ namespace StockChart
 
                 using (var stream = wc.OpenRead(url))
                 {
-                    var doc = new System.Xml.XmlDocument();
-                    doc.Load(stream);
+                    var doc = new XmlDocument();
+                    var sreader = new StreamReader(stream);
+                    var reader = XmlReader.Create(sreader, new XmlReaderSettings() { XmlResolver = null });
+                    doc.Load(reader);
 
                     var items = doc.GetElementsByTagName("item");
                     int i = 0;

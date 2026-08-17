@@ -34,10 +34,11 @@
                                 </TextBlock.Style>
                             </TextBlock>
 
-                            <Expander Header="{Binding Title}">
+                            <Expander Header="{Binding Title}" >
                                 <Expander.Style>
-                                    <Style TargetType="Expander">
+                                    <Style TargetType="Expander" >
                                         <Setter Property="Visibility" Value="Visible"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}"/>
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding ID}" Value="system">
                                                 <Setter Property="Visibility" Value="Collapsed"/>
@@ -46,8 +47,8 @@
                                     </Style>
                                 </Expander.Style>
 
-                                <c1:FlexDiagram Loaded="FlexDiagram_Loaded" ScaleMode="ScaleToFit" InteractionMode="None" Width="360" Height="360">
-                                </c1:FlexDiagram>
+                                <c1:FlexDiagram Loaded="FlexDiagram_Loaded" ScaleMode="ScaleToFit" InteractionMode="None" Width="360" Height="360"/>
+
                             </Expander>
                         </StackPanel>
                     </Border>

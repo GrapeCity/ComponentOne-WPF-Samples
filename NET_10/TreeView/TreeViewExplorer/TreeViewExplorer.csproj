@@ -60,16 +60,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ListView">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TreeView">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="System.Linq" Version="4.3.0" />
   </ItemGroup>

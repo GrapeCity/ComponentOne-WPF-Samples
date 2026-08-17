@@ -249,4 +249,16 @@
   <data name="CanSelectAll" xml:space="preserve">
     <value>CanSelectAll</value>
   </data>
+  <data name="AllCustomersLabel" xml:space="preserve">
+    <value>All Customers</value>
+  </data>
+  <data name="SelectedCustomersLabel" xml:space="preserve">
+    <value>Selected Customers</value>
+  </data>
+  <data name="SelectedItemsDescription" xml:space="preserve">
+    <value>Shows how to display the selected items of the first list in the second.</value>
+  </data>
+  <data name="SelectedItemsTitle" xml:space="preserve">
+    <value>Selected Items</value>
+  </data>
 </root>

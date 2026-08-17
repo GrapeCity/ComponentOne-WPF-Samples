@@ -14,22 +14,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Calendar">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Docking">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Schedule">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

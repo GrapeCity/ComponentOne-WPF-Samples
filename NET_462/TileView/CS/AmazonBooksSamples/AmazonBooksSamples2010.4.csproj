@@ -55,16 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.BarCode">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Extended">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.TileView">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

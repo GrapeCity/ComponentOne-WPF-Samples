@@ -1,18 +1,26 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 
 namespace ListViewExplorer
 {
     public class SampleItem
     {
-        public SampleItem(string name, string title, Control sample)
+        Lazy<Control> _getSample;
+        public SampleItem(string name, string title, Func<Control> sample)
         {
             Name = name;
             Title = title;
-            Sample = sample;
+            _getSample = new Lazy<Control>(sample);
         }
         public string Name { get; set; }
         public string Title { get; set; }
+        public Control Sample
+        {
+            get
+            {
+                return _getSample.Value;
+            }
+        }
         public string Description => Sample.Tag?.ToString();
-        public Control Sample { get; set; }
     }
 }

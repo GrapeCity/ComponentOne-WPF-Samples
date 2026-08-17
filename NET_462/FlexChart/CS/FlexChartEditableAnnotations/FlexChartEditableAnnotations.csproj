@@ -28,23 +28,22 @@
     <Resource Include="Resources\cb_up26.png" />
     <Resource Include="Resources\ok.png" />
     <Resource Include="screenshot.png" />
-    <Resource Include="readme.txt" />
     <EmbeddedResource Include="Localization\SampleConfiguration_CH.xml" />
     <EmbeddedResource Include="Localization\SampleConfiguration_EN.xml" />
     <EmbeddedResource Include="Localization\SampleConfiguration_JP.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DX">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexChart">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Toolbar">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>

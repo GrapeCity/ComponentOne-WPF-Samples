@@ -61,6 +61,15 @@ namespace ListViewExplorer.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Customers.
+        /// </summary>
+        public static string AllCustomersLabel {
+            get {
+                return ResourceManager.GetString("AllCustomersLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CanSelectAll.
         /// </summary>
         public static string CanSelectAll {
@@ -282,6 +291,33 @@ namespace ListViewExplorer.Resources {
         public static string Retry {
             get {
                 return ResourceManager.GetString("Retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selected Customers.
+        /// </summary>
+        public static string SelectedCustomersLabel {
+            get {
+                return ResourceManager.GetString("SelectedCustomersLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows how to display the selected items of the first list in the second..
+        /// </summary>
+        public static string SelectedItemsDescription {
+            get {
+                return ResourceManager.GetString("SelectedItemsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selected Items.
+        /// </summary>
+        public static string SelectedItemsTitle {
+            get {
+                return ResourceManager.GetString("SelectedItemsTitle", resourceCulture);
             }
         }
         

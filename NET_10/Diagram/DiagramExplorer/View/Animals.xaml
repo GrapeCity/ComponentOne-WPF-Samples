@@ -57,7 +57,7 @@
                 </Style>
             </c1:FlexDiagram.Resources>
         </c1:FlexDiagram>
-        <CheckBox x:Name="checkBoxTemplate" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                  Width="120" Height="20" Content="Use Node Template" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
+        <CheckBox x:Name="checkBoxTemplate" HorizontalAlignment="Left" VerticalAlignment="Top"
+                  Width="140" Height="20" Content="Use Node Template" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
     </Grid>
 </UserControl>

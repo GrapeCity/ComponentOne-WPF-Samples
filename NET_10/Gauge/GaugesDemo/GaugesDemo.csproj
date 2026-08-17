@@ -42,22 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20261.47</Version>
-    </PackageReference>
-    <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Gauge">
-      <Version>10.0.20261.47</Version>
-    </PackageReference>
-    <PackageReference Include="C1.WPF.Gauge">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Input">
-      <Version>10.0.20261.47</Version>
-    </PackageReference>
-    <PackageReference Include="C1.WPF.Input">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -50,9 +50,9 @@ namespace FlexGridExplorer
                 Active = data.Active,
                 LastOrderDate = data.LastOrderDate,
                 OrderTotal = data.OrderTotal,
-                SampleHyperlink = "https://media-exp1.licdn.com/dms/image/C560BAQE2UbhekqtLAg/company-logo_200_200/0/1519856432286?e=2159024400&v=beta&t=HP2cnfQvlv4mYMh2ouJShTcs4bsKyMQErk2u_kLDjtM",
+                SampleHyperlink = "https://cdn.mescius.io/umb/media/bwwpxdr1/logo-c1.png",
                 SampleHyperlinkContent = $"Hyperlink - {data.Id}",
-                SampledImage = "https://media-exp1.licdn.com/dms/image/C560BAQE2UbhekqtLAg/company-logo_200_200/0/1519856432286?e=2159024400&v=beta&t=HP2cnfQvlv4mYMh2ouJShTcs4bsKyMQErk2u_kLDjtM"
+                SampledImage = "https://cdn.mescius.io/umb/media/bwwpxdr1/logo-c1.png"
             }).ToList();
             ListCollectionView = new ListCollectionView(actualData);
 

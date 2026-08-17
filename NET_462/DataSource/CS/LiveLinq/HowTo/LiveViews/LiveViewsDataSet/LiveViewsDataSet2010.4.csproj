@@ -139,7 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.LiveLinq.4.6.2">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

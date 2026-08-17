@@ -29,19 +29,19 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Chart">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid.ConditionalFormatting">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.PropertyGrid">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RulesManager">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
   </ItemGroup>

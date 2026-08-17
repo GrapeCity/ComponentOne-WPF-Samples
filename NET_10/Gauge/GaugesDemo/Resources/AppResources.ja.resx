@@ -226,21 +226,27 @@
     <comment>Reversed</comment>
   </data>
   <data name="ResumeAnimationLabel" xml:space="preserve">
-    <value>Resume Animation</value>
+    <value>アニメーションを再開</value>
+    <comment>Resume Animation</comment>
   </data>
   <data name="PauseAnimationLabel" xml:space="preserve">
-    <value>Pause Animation</value>
+    <value>アニメーションを一時停止</value>
+    <comment>Pause Animation</comment>
   </data>
   <data name="MarksAndLabelsTitle" xml:space="preserve">
-    <value>Marks and Labels</value>
+    <value>マークとラベル</value>
+    <comment>Marks and Labels</comment>
   </data>
   <data name="MarksAndLabelsDescription" xml:space="preserve">
-    <value>Show how to use Marks and Labels in gauges</value>
+    <value>ゲージにおけるマークとラベルの使用方法を示します。</value>
+    <comment>Show how to use Marks and Labels in gauges</comment>
   </data>
   <data name="PointerTitle" xml:space="preserve">
-    <value>Pointer</value>
+    <value>ポインター</value>
+    <comment>Pointer</comment>
   </data>
   <data name="PointerDescription" xml:space="preserve">
-    <value>Shows how to display a gauge pointer</value>
+    <value>ゲージポインターの表示方法を示します</value>
+    <comment>Shows how to display a gauge pointer</comment>
   </data>
 </root>

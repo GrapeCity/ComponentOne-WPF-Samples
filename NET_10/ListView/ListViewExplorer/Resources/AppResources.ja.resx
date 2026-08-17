@@ -279,9 +279,11 @@
     <comment>Remove Grouping</comment>
   </data>
   <data name="LiveUpdatesDescription" xml:space="preserve">
-    <value>Show how the list is updated automatically when the source changes at runtime</value>
+    <value>実行時にソースが変更されたときにリストが自動的に更新される方法を示します。</value>
+    <comment>Show how the list is updated automatically when the source changes at runtime</comment>
   </data>
   <data name="LiveUpdatesTitle" xml:space="preserve">
-    <value>Live Updates</value>
+    <value>ライブアップデート</value>
+    <comment>Live Updates</comment>
   </data>
 </root>

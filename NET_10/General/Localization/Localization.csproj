@@ -28,40 +28,40 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.WPF.Calendar">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.ColorPicker">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Core">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.DataFilter">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.GanttView">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Grid">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Pivot">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Ribbon">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.RichTextBox.Ribbon">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.Schedule">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
     <PackageReference Include="C1.WPF.TabControl">
-      <Version>10.0.20261.47</Version>
+      <Version>10.0.20261.125</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

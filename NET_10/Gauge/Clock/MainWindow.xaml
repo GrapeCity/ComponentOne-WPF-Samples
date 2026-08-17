@@ -6,7 +6,7 @@
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Clock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        Title="Clock" Height="450" Width="800" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
     <Window.Resources>
         <local:HoursConverter x:Key="hoursConverter" ShowRomanNumbers="True"/>
         <Style x:Key="DefaultGaugeStyle" TargetType="c1:C1RadialGauge">

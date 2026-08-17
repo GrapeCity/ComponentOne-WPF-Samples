@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnimalsDescription" xml:space="preserve">
+    <value>動物の分類は、フラットなデータ収集に制約されます。</value>
+    <comment>Animal classification bound to flat data collection.</comment>
+  </data>
+  <data name="AnimalsTitle" xml:space="preserve">
+    <value>🦁 動物</value>
+    <comment>🦁 Animals</comment>
+  </data>
+  <data name="DecisionTreeTitle" xml:space="preserve">
+    <value>🌳 決定木</value>
+    <comment>🌳 Decision Tree</comment>
+  </data>
+  <data name="DecisionTreeDescription" xml:space="preserve">
+    <value>サンプルとなるツリーダイアグラムを表示します。この図は Mermaid.js グラフから読み込まれています。</value>
+    <comment>Shows sample decision tree diagram. The diagram is loaded from Mermaid.js graph.</comment>
+  </data>
+  <data name="DynamicTitle" xml:space="preserve">
+    <value>⏩ 動的グラフ</value>
+  </data>
+  <data name="DynamicDescription" xml:space="preserve">
+    <value>動的なダイアグラム生成とアダプティブレイアウト。ダイアグラムをクリックすると、生成を一時停止／開始します。</value>
+  </data>
+  <data name="FamilyTreeTitle" xml:space="preserve">
+    <value>👪 相関図</value>
+    <comment>👪 Family Tree</comment>
+  </data>
+  <data name="FamilyTreeDescription" xml:space="preserve">
+    <value>Games of Thrones の主要登場人物間の関係性を示す図です。この図は Mermaid.js グラフから読み込まれています。</value>
+    <comment>Shows relations between main characters of Games of Thrones. The diagram is loaded from Mermaid.js graph.</comment>
+  </data>
+  <data name="HitTestingTitle" xml:space="preserve">
+    <value>🎯 ヒットテスト</value>
+    <comment>🎯 HitTesting</comment>
+  </data>
+  <data name="HitTestingDescription" xml:space="preserve">
+    <value>ノードとエッジの上にマウスカーソルを移動すると、それらがハイライト表示されます。クリックするとグラフが再作成されます。</value>
+    <comment>Move mouse over nodes and edges to highlight. Click to recreate graph.</comment>
+  </data>
+  <data name="IntroDescription" xml:space="preserve">
+    <value>XAMLによって完全に定義されたフローチャート</value>
+  </data>
+  <data name="IntroTitle" xml:space="preserve">
+    <value>➡️ はじめに</value>
+  </data>
+  <data name="LiteratureTitle" xml:space="preserve">
+    <value>📚 文学</value>
+    <comment>📚 Literature</comment>
+  </data>
+  <data name="LiteratureDescription" xml:space="preserve">
+    <value>文学ジャンルのツリー構造を示します。この図は Mermaid.js グラフから読み込まれています。</value>
+    <comment>Shows literature genre tree. The diagram is loaded from Mermaid.js graph.</comment>
+  </data>
+  <data name="OrgChartTitle" xml:space="preserve">
+    <value>👥 組織図</value>
+    <comment>👥 OrgChart</comment>
+  </data>
+  <data name="OrgChartDescription" xml:space="preserve">
+    <value>階層構造のデータを用いて作成された組織図です。</value>
+    <comment>Organizational chart created with hierarchical data.</comment>
+  </data>
+  <data name="ProgrammingLanguagesTitle" xml:space="preserve">
+    <value>💻 プログラミング言語</value>
+    <comment>💻 Programming Languages</comment>
+  </data>
+  <data name="ProgrammingLanguagesDescription" xml:space="preserve">
+    <value>プログラミング言語の関係性と歴史を示します。この図は Mermaid.js グラフから読み込まれています。</value>
+    <comment>Shows relationship and history of programming languages. The diagram is loaded from Mermaid.js graph.</comment>
+  </data>
+  <data name="SelectionTitle" xml:space="preserve">
+    <value>✔️ 選択</value>
+  </data>
+  <data name="SelectionDescription" xml:space="preserve">
+    <value>FlexDiagramは、カスタマイズ可能な選択スタイルによるノード選択をサポートしています。ノードをクリックして選択します。</value>
+  </data>
+  <data name="TooltipsTitle" xml:space="preserve">
+    <value>💬 ツールチップ</value>
+    <comment>💬 Tooltips</comment>
+  </data>
+  <data name="TooltipsDescription" xml:space="preserve">
+    <value>FlexDiagram を作成する際に、ノードとエッジのツールチップを指定できます。</value>
+    <comment>You can specify node and edge tooltips when creating FlexDiagram.</comment>
+  </data>
+  <data name="ClockTitle" xml:space="preserve">
+    <value>🕐 ダイアグラムクロック</value>
+  </data>
+  <data name="ClockDescription" xml:space="preserve">
+    <value>現在時刻を示す動的グラフ</value>
+  </data>
+  <data name="FlexChartFamilyTitle" xml:space="preserve">
+    <value>📈 FlexChartファミリー</value>
+  </data>
+  <data name="FlexChartFamilyDescription" xml:space="preserve">
+    <value>FlexChart可視化コンポーネントのダイアグラムを表示します。ノードには、対応するコンポーネントによって生成された画像が含まれています。</value>
+  </data>
+  <data name="NodeTemplateTitle" xml:space="preserve">
+    <value>📑 ノードテンプレート</value>
+    <comment>📑 Node Template</comment>
+  </data>
+  <data name="NodeTemplateDescription" xml:space="preserve">
+    <value>カスタム XAML テンプレートを使用した図を表示します。</value>
+    <comment>Shows diagram with custom XAML template.</comment>
+  </data>
+  <data name="NestedTitle" xml:space="preserve">
+    <value>🗃 ネストされたダイアグラム</value>
+    <comment>🗃 Nested Diagrams</comment>
+  </data>
+  <data name="NestedDescription" xml:space="preserve">
+    <value>子ノードを持つ図を表示し、その子ノードには別の図が含まれています。</value>
+    <comment>Shows diagram with child nodes which include another diagrams.</comment>
+  </data>
+  <data name="CollapsibleTitle" xml:space="preserve">
+    <value>➕ 折りたたみ式</value>
+  </data>
+  <data name="CollapsibleDescription" xml:space="preserve">
+    <value>ノードの折りたたみ／展開が可能なFlexDiagram。ノードをクリックしてください。</value>
+  </data>
+  <data name="CustomShapeTitle" xml:space="preserve">
+    <value>💧 カスタムシェイプ</value>
+  </data>
+  <data name="CustomShapeDescription" xml:space="preserve">
+    <value>カスタム形状のノードを持つFlexDiagram</value>
+  </data>
+</root>

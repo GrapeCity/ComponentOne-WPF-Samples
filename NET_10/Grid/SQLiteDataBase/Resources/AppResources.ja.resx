@@ -125,21 +125,27 @@
     <value>データベースからデータをロードしています...</value>
   </data>
   <data name="CreatinRecordsMessage" xml:space="preserve">
-    <value>Creating {0} records...</value>
+    <value>{0} 件のレコードを作成しています...</value>
+    <comment>Creating {0} records...</comment>
   </data>
   <data name="FilterPlaceholderText" xml:space="preserve">
-    <value>Enter text to filter</value>
+    <value>フィルターするテキストを入力してください</value>
+    <comment>Enter text to filter</comment>
   </data>
   <data name="FirstNameLabel" xml:space="preserve">
-    <value>First Name</value>
+    <value>名</value>
+    <comment>First Name</comment>
   </data>
   <data name="IdLabel" xml:space="preserve">
     <value>Id</value>
+    <comment>Id</comment>
   </data>
   <data name="LastNameLabel" xml:space="preserve">
-    <value>Last Name</value>
+    <value>姓</value>
+    <comment>Last Name</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>SQLite data base</value>
+    <value>SQLite データベース</value>
+    <comment>SQLite data base</comment>
   </data>
 </root>

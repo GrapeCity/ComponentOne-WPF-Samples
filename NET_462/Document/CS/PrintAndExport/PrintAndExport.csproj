@@ -101,25 +101,25 @@
   <ItemGroup>
     <PackageReference Include="C1.Document" Version="10.0.20261.*" />
     <PackageReference Include="C1.Xaml.WPF">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.BarCode">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Bitmap">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.Document">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.DX">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.FlexChart">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
     <PackageReference Include="C1.Xaml.WPF.ImportServices">
-      <Version>4.6.20261.8</Version>
+      <Version>4.6.20261.19</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

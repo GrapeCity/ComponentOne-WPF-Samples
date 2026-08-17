@@ -54,8 +54,8 @@ namespace DynamicTreeView
                 return;
             }
             var grid = cellContent as Grid;
-            var bitmapIcon = grid.Children[0] as C1BitmapIcon;
-            var textBlock = grid.Children[1] as TextBlock;
+            var bitmapIcon = (grid.Children[0] as C1BitmapIcon)!;
+            var textBlock = (grid.Children[1] as TextBlock)!;
             TrySetBitmapSource(bitmapIcon, cellType, row);
             textBlock.Text = Grid.GetCellText(cellType, row, this);
         }
@@ -97,9 +97,9 @@ namespace DynamicTreeView
 
                 try
                 {
-                    Uri imageSourceUrl = value as Uri;
-                    if (value is string)
-                        imageSourceUrl = new Uri(value as string);
+                    var imageSourceUrl = value as Uri;
+                    if (value is string valueStr)
+                        imageSourceUrl = new Uri(valueStr);
                     var responseStream = await _httpClient.GetStreamAsync(imageSourceUrl);
 
                     if (!(bitmapIcon.Tag is Guid) || ((Guid)bitmapIcon.Tag) != tag)

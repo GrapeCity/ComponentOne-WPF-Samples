@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ListViewExplorer.SelectedItems" mc:Ignorable="d"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:res="clr-namespace:ListViewExplorer.Resources"
+             xmlns:local="clr-namespace:ListViewExplorer" d:DesignHeight="600" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <local:DefaultViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="{x:Static res:AppResources.AllCustomersLabel}" Margin="4" HorizontalAlignment="Center" />
+        <TextBlock Text="{x:Static res:AppResources.SelectedCustomersLabel}" Margin="4" HorizontalAlignment="Center" Grid.Column="1"/>
+
+        <c1:C1ListView x:Name="listView" ItemsSource="{Binding People}" ItemTemplate="{StaticResource StudentTemplate}" SelectionMode="Extended" Grid.Row="1"/>
+
+        <c1:C1ListView ItemsSource="{Binding ElementName=listView,Path=Selection.Items}" ItemTemplate="{StaticResource StudentTemplate}" Grid.Row="1" Grid.Column="1"/>
+    </Grid>
+</UserControl>
