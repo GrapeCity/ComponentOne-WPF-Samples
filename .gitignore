@@ -2,3 +2,9 @@ _Scripts/
 bin/
 obj/
 _Build/
+
+packages
+
+# Visual Studio cache/options directory
+.vs/
+.vscode/
